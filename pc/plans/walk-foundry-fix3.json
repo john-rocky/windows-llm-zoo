@@ -1,0 +1,23 @@
+{
+ "sitting": "walk-foundry-fix3",
+ "probe": "Foundry WebGPU fix 3 of 3: the catalog package registered as a local model without execution provider metadata",
+ "units": [
+  {
+   "model": "gemma-4-E2B-it",
+   "cell": "gemma-4-E2B-it\\foundry_auto_webgpu",
+   "kind": "foundry",
+   "venv": "genai",
+   "model_id": "z2-gemma-4-e2b-it-webgpu:1",
+   "path": "/catalogs/local/v1",
+   "runs": 1,
+   "engines_gate": true,
+   "timeout_min": 15,
+   "ram_need_gb": 10.2,
+   "pre_foundry": [
+    ["model", "unregister", "z2-gemma-4-e2b-it-webgpu:1"],
+    ["model", "register", "{HOME}\\.foundry\\cache\\models\\Microsoft\\gemma-4-e2b-it-generic-gpu-3\\v3", "z2-gemma-4-e2b-it-webgpu:1", "--task", "vision-language-chat", "--display-name", "z2-gemma-4-e2b-it-webgpu", "--device", "gpu"]
+   ],
+   "note": "The files of Foundry Local catalog variant gemma-4-e2b-it-generic-gpu:3; fix 3 of 3 after its load error (WebGPU and CUDA): registered as a local model with no execution provider metadata"
+  }
+ ]
+}

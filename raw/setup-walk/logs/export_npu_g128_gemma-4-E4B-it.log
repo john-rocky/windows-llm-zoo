@@ -1,0 +1,10 @@
+[2026-11-08T02:09:00.3991116+09:00] export_npu start (group 128, only 'gemma-4-E4B-it')
+[2026-11-08T02:09:05.5440210+09:00]   Using Python 3.12.10 environment at: C:\src\llmzoo-walk\.venv-ovexport
+[2026-11-08T02:09:05.9636803+09:00]   Checked 10 packages in 477ms
+[2026-11-08T02:09:05.9756544+09:00] venv ovexport: uv pip install exit 0
+[2026-11-08T02:10:33.9911470+09:00] fetch exit 0
+[2026-11-08T02:10:34.8297653+09:00] gemma-4-E4B-it waits for at most 30 GB of commit in use (now 50.1 GB) and no Z2 lock
+[2026-11-08T02:12:21.3260467+09:00] gemma-4-E4B-it start: optimum-cli export openvino --model C:\src\llmzoo-walk\hf\google__gemma-4-E4B-it --task image-text-to-text --weight-format int4 --sym --ratio 1.0 --group-size 128 C:\src\llmzoo-walk\models\z2-npu\gemma-4-E4B-it-int4-sym-g128-ov (available RAM 20.9 GB, running-time limit 180 min)
+[2026-11-08T02:28:19.2769697+09:00]   ir_info: 20 files, 6.00 GiB
+[2026-11-08T02:28:19.2939456+09:00] gemma-4-E4B-it end: exit 0, 556 s running, peak working set 20920 MB, private 31768 MB, lowest available RAM 1.1 GB, highest commit in use 60.1 GB, 6 xml
+[2026-11-08T02:28:19.5234693+09:00] export_npu done

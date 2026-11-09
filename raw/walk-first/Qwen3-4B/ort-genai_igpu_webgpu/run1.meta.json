@@ -1,0 +1,77 @@
+{
+    "cell":  "Qwen3-4B\\ort-genai_igpu_webgpu",
+    "run":  1,
+    "mode":  "first",
+    "sitting":  "walk-first",
+    "start":  "2026-11-07T23:51:55.7690470+09:00",
+    "osBuild":  "26200.9711",
+    "gate":  null,
+    "before":  {
+                   "load":  {
+                                "cpu":  72.8,
+                                "build_ms":  0,
+                                "top":  [
+                                            "python 31964 8.52 core",
+                                            "MsMpEng 5548 0.54 core",
+                                            "powershell 11556 0.42 core",
+                                            "python 33828 0.42 core",
+                                            "System 4 0.36 core"
+                                        ]
+                            },
+                   "nvidia":  "P4, 240 MHz, 9001 MHz, 16.60 W, 3 %, 5223 MiB, 60",
+                   "availGB":  12.8
+               },
+    "command":  "C:\\src\\llmzoo-walk\\.venv-genai\\Scripts\\python.exe -u C:\\src\\llmzoo-walk\\pc\\run_genai.py --model-dir C:\\src\\llmzoo-walk\\models\\onnx-community__Qwen3-4B-ONNX\\onnxruntime\\webgpu\\webgpu-int4-kld-block-32 --ep webgpu --ep-option adapterIndex=1 --prompt-file C:\\src\\llmzoo-walk\\pc\\short-chat.txt --out C:\\src\\llmzoo-walk\\runs\\walk-first\\Qwen3-4B\\ort-genai_igpu_webgpu\\run1.json",
+    "engine":  {
+                   "exitCode":  0,
+                   "timedOut":  false,
+                   "yielded":  false,
+                   "suspendedSeconds":  0,
+                   "suspensions":  0,
+                   "enginePid":  22548,
+                   "elapsedSeconds":  31.52,
+                   "peakWorkingSetBytes":  4396412928,
+                   "gpuMiBPeak":  {
+                                      "0x00000000_0x00012C48":  {
+                                                                    "shared":  9,
+                                                                    "dedicated":  13
+                                                                },
+                                      "0x00000000_0x0001260E":  {
+                                                                    "shared":  3878,
+                                                                    "dedicated":  0
+                                                                },
+                                      "0x00000000_0x00012BB8":  {
+                                                                    "shared":  0,
+                                                                    "dedicated":  0
+                                                                }
+                                  },
+                   "watchPeakWorkingSetBytes":  0,
+                   "watchGpuMiBPeak":  {
+
+                                       },
+                   "nvidiaSamples":  [
+                                         "5s P2, 1845 MHz, 11001 MHz, 70.89 W, 55 %, 5236 MiB, 66",
+                                         "10s P2, 1740 MHz, 11001 MHz, 80.02 W, 55 %, 5236 MiB, 67",
+                                         "15s P2, 1710 MHz, 11001 MHz, 74.41 W, 52 %, 5236 MiB, 68",
+                                         "20s P2, 1537 MHz, 11001 MHz, 64.21 W, 43 %, 5236 MiB, 69",
+                                         "25s P2, 1770 MHz, 11001 MHz, 74.99 W, 57 %, 5236 MiB, 70",
+                                         "30s P2, 1777 MHz, 11001 MHz, 72.37 W, 44 %, 5236 MiB, 71"
+                                     ]
+               },
+    "after":  {
+                  "load":  {
+                               "cpu":  16.4,
+                               "build_ms":  0,
+                               "top":  [
+                                           "python 33828 1.02 core",
+                                           "chrome 25156 0.75 core",
+                                           "chrome 19332 0.23 core",
+                                           "conhost 15204 0.19 core",
+                                           "MsMpEng 5548 0.16 core"
+                                       ]
+                           },
+                  "nvidia":  "P4, 1710 MHz, 9001 MHz, 85.80 W, 94 %, 5223 MiB, 73"
+              },
+    "end":  "2026-11-07T23:52:28.3815446+09:00",
+    "tries":  1
+}

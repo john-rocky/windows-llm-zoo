@@ -1,0 +1,14 @@
+# The NPU-form export (pc/export_npu.ps1): optimum-intel 2.2.0 with the OpenVINO of the runtime venv (2026.4.1) and the
+# transformers / torch versions recorded in OpenVINO's own gemma-4-E2B-it-int4-cw-ov IR (rt_info: transformers 5.5.4,
+# torch 2.14.0, nncf 3.4.0.dev0, optimum-intel 2.2.0.dev0); torch on PyPI for Windows is the CPU build; numpy < 2.5 for nncf 3.4.0
+optimum-intel==2.2.0
+optimum==2.3.0
+transformers==5.5.4
+nncf==3.4.0
+openvino==2026.4.1
+openvino-tokenizers==2026.4.1.0
+torch==2.14.0
+torchvision==0.29.0
+numpy==2.4.6
+# pc/onnx_quant.py: the quantization of the ONNX Runtime GenAI packages, read from their graphs
+onnx==1.23.2

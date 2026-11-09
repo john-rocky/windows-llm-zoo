@@ -1,0 +1,7 @@
+■ Downloading model (qwen3-0.6b-generic-gpu:2, 529.0 MB)
+qwen3-0.6b-generic-gpu:2: 0%
+qwen3-0.6b-generic-gpu:2: 26%
+qwen3-0.6b-generic-gpu:2: 51%
+qwen3-0.6b-generic-gpu:2: 84%
+qwen3-0.6b-generic-gpu:2: 97%
+● success: Downloaded 'qwen3-0.6b-generic-gpu:2' to the local cache.

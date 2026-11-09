@@ -1,0 +1,81 @@
+{
+    "cell":  "Qwen3-0.6B\\ort-genai_igpu_openvino",
+    "run":  1,
+    "mode":  "first",
+    "sitting":  "z2-first-a",
+    "start":  "2026-11-07T15:49:45.7601084+09:00",
+    "gate":  null,
+    "before":  {
+                   "load":  {
+                                "cpu":  42.4,
+                                "build_ms":  0,
+                                "top":  [
+                                            "python 21800 5.97 core",
+                                            "System 4 0.53 core",
+                                            "foundrylocald 27524 0.22 core",
+                                            "curl 20292 0.03 core",
+                                            "WmiPrvSE 7560 0.02 core"
+                                        ]
+                            },
+                   "nvidia":  "P0, 3225 MHz, 14001 MHz, 18.15 W, 0 %, 0 MiB, 50",
+                   "availGB":  20.9
+               },
+    "command":  "C:\\src\\llmzoo\\.venv-genai\\Scripts\\python.exe -u C:\\src\\llmzoo\\pc\\run_genai.py --model-dir C:\\src\\llmzoo\\models\\onnx-community__Qwen3-0.6B-ONNX\\onnxruntime\\cpu_and_mobile\\cpu-int4-kld-block-128 --ep openvino --ov-device GPU --prompt-file C:\\src\\llmzoo\\pc\\short-chat.txt --out C:\\src\\llmzoo\\runs\\z2-first-a\\Qwen3-0.6B\\ort-genai_igpu_openvino\\run1.json",
+    "engine":  {
+                   "exitCode":  0,
+                   "timedOut":  false,
+                   "yielded":  false,
+                   "enginePid":  24800,
+                   "elapsedSeconds":  67.15,
+                   "peakWorkingSetBytes":  2143367168,
+                   "gpuMiBPeak":  {
+                                      "0x00000000_0x00012C48":  {
+                                                                    "shared":  0,
+                                                                    "dedicated":  0
+                                                                },
+                                      "0x00000000_0x0001260E":  {
+                                                                    "shared":  770,
+                                                                    "dedicated":  0
+                                                                },
+                                      "0x00000000_0x00013E4C":  {
+                                                                    "shared":  0,
+                                                                    "dedicated":  0
+                                                                }
+                                  },
+                   "watchPeakWorkingSetBytes":  0,
+                   "watchGpuMiBPeak":  {
+
+                                       },
+                   "nvidiaSamples":  [
+                                         "5s P0, 1072 MHz, 14001 MHz, 18.28 W, 0 %, 0 MiB, 50",
+                                         "10s P0, 2190 MHz, 14001 MHz, 18.30 W, 0 %, 0 MiB, 51",
+                                         "15s P0, 150 MHz, 14001 MHz, 18.27 W, 0 %, 0 MiB, 51",
+                                         "20s P0, 2040 MHz, 14001 MHz, 18.34 W, 0 %, 0 MiB, 51",
+                                         "25s P0, 15832 MHz, 14001 MHz, 18.36 W, 0 %, 0 MiB, 51",
+                                         "30s P0, 1942 MHz, 14001 MHz, 18.35 W, 0 %, 0 MiB, 51",
+                                         "35s P0, 472 MHz, 14001 MHz, 18.30 W, 0 %, 0 MiB, 51",
+                                         "40s P0, 1087 MHz, 14001 MHz, 18.38 W, 0 %, 0 MiB, 51",
+                                         "45s P0, 3690 MHz, 14001 MHz, 18.39 W, 0 %, 0 MiB, 51",
+                                         "50s P0, 195 MHz, 14001 MHz, 18.34 W, 0 %, 0 MiB, 51",
+                                         "55s P0, 517 MHz, 14001 MHz, 18.33 W, 0 %, 0 MiB, 52",
+                                         "60s P0, 915 MHz, 14001 MHz, 18.48 W, 0 %, 0 MiB, 52",
+                                         "65s P0, 1410 MHz, 14001 MHz, 18.62 W, 0 %, 0 MiB, 52"
+                                     ]
+               },
+    "after":  {
+                  "load":  {
+                               "cpu":  15.1,
+                               "build_ms":  0,
+                               "top":  [
+                                           "System 4 0.41 core",
+                                           "MsMpEng 5548 0.36 core",
+                                           "backgroundTaskHost 23288 0.36 core",
+                                           "sihost 10336 0.3 core",
+                                           "foundrylocald 27524 0.11 core"
+                                       ]
+                           },
+                  "nvidia":  "P0, 817 MHz, 14001 MHz, 18.63 W, 0 %, 0 MiB, 52"
+              },
+    "end":  "2026-11-07T15:50:54.8388677+09:00",
+    "tries":  1
+}

@@ -1,0 +1,942 @@
+{
+    "gemma-4-e2b-it-cuda-gpu:3":  {
+                                      "folder":  "C:\\Users\\USER\\.foundry\\cache\\models\\Microsoft\\gemma-4-e2b-it-cuda-gpu-3\\v3",
+                                      "files":  [
+                                                    {
+                                                        "name":  "audio_encoder\\model.onnx",
+                                                        "size":  1215832,
+                                                        "sha256":  "866aa42e1669bb45c91b9029542540cc78e029232e8edbea37b8e13f19900160"
+                                                    },
+                                                    {
+                                                        "name":  "audio_encoder\\model.onnx.data",
+                                                        "size":  336527360,
+                                                        "sha256":  "5e95ea9dd80809cf35ac1efd1c54a73c7bbea55634754d7a4c3db676c218cd84"
+                                                    },
+                                                    {
+                                                        "name":  "audio_encoder\\model_config.json",
+                                                        "size":  413,
+                                                        "sha256":  "e24ed8fec99ff559b19b4f246fb77b43c0640c8803ca9dfc0c0135e3d7d7019f"
+                                                    },
+                                                    {
+                                                        "name":  "audio_feature_extraction.json",
+                                                        "size":  923,
+                                                        "sha256":  "b3ccfc6e00691c9accbda59543db9a4e6e91cb78b0ce62339c97d4c7f44e1672"
+                                                    },
+                                                    {
+                                                        "name":  "chat_template.jinja",
+                                                        "size":  18453,
+                                                        "sha256":  "ec5d7464d9b41dce7567886b172f0c768402503d54b4847c03982ce82ee80785"
+                                                    },
+                                                    {
+                                                        "name":  "decoder\\model.onnx",
+                                                        "size":  876984,
+                                                        "sha256":  "06dcfe72e1dab4177e7ebe604d9dec5d0e792ee86973df35b58cdb1b37a276a2"
+                                                    },
+                                                    {
+                                                        "name":  "decoder\\model.onnx.data",
+                                                        "size":  2590441472,
+                                                        "sha256":  "9d74f34b4995a781da56944c0b68b4f08d303826ac817e4b7c424d528f1d4ea2"
+                                                    },
+                                                    {
+                                                        "name":  "decoder\\model_config.json",
+                                                        "size":  407,
+                                                        "sha256":  "dfb3dc82bbee19db1f3dd691b08588574b9bff49b6c361b289b1c0d98754cc6a"
+                                                    },
+                                                    {
+                                                        "name":  "embedding\\model.onnx",
+                                                        "size":  15527,
+                                                        "sha256":  "dc8a185911868713bb7cae73c79bf861f11d0067923071502e1d37348c06c43c"
+                                                    },
+                                                    {
+                                                        "name":  "embedding\\model.onnx.data",
+                                                        "size":  3024486400,
+                                                        "sha256":  "b8d9d112aae38b29abd616875375ed3f37af468ca524c129c42484e4c92ebe15"
+                                                    },
+                                                    {
+                                                        "name":  "embedding\\model_config.json",
+                                                        "size":  409,
+                                                        "sha256":  "5a672c964e285a79fa45e59c755b76305ef142b394a7085d82ec504272560275"
+                                                    },
+                                                    {
+                                                        "name":  "genai_config.json",
+                                                        "size":  4160,
+                                                        "sha256":  "4152b953bf3b842c4f2616482a05bc9723914ebe11bec51eae7bfff41bfcd871"
+                                                    },
+                                                    {
+                                                        "name":  "image_processor.json",
+                                                        "size":  744,
+                                                        "sha256":  "02b37f9a41347d2921917ba902dfba8d66db156311e8fd914239acf25f0a19f7"
+                                                    },
+                                                    {
+                                                        "name":  "inference_model.json",
+                                                        "size":  70,
+                                                        "sha256":  "2cbcedb241b6270b1f2c8196860e5160aa61aab740fad2c15a2a470cc5bc049e"
+                                                    },
+                                                    {
+                                                        "name":  "model_config.json",
+                                                        "size":  50648,
+                                                        "sha256":  "08e917e34abf1bb805ec419b7399d3014be8431b001dfb6a4fbb68c598c5a8f5"
+                                                    },
+                                                    {
+                                                        "name":  "tokenizer.json",
+                                                        "size":  32169626,
+                                                        "sha256":  "cc8d3a0ce36466ccc1278bf987df5f71db1719b9ca6b4118264f45cb627bfe0f"
+                                                    },
+                                                    {
+                                                        "name":  "tokenizer_config.json",
+                                                        "size":  3082,
+                                                        "sha256":  "9f4fec4b1dc6ecddf8f4a92e9caea5971c0e67d81309f3f9066a2bee8c362633"
+                                                    },
+                                                    {
+                                                        "name":  "vision_encoder\\model.onnx",
+                                                        "size":  1182022,
+                                                        "sha256":  "fb2ddf7c71bc87d6a884f90f167b296cf9b953a0dd39ce46b15cb3cc16f291ee"
+                                                    },
+                                                    {
+                                                        "name":  "vision_encoder\\model.onnx.data",
+                                                        "size":  195887104,
+                                                        "sha256":  "471c3f994c3c7a332aa8bc95c7f85d804ca75bfffb4b2f63806c4029b9e8043b"
+                                                    },
+                                                    {
+                                                        "name":  "vision_encoder\\model_config.json",
+                                                        "size":  414,
+                                                        "sha256":  "415a63e004a154253d4444470f50f9e816a22097f83bd97c45ba29ea3d021af4"
+                                                    }
+                                                ],
+                                      "source":  "foundry-catalog",
+                                      "executionProvider":  "CUDAExecutionProvider",
+                                      "license":  "apache-2.0"
+                                  },
+    "gemma-4-e2b-it-generic-gpu:3":  {
+                                         "folder":  "C:\\Users\\USER\\.foundry\\cache\\models\\Microsoft\\gemma-4-e2b-it-generic-gpu-3\\v3",
+                                         "files":  [
+                                                       {
+                                                           "name":  "audio_encoder\\model.onnx",
+                                                           "size":  1234533,
+                                                           "sha256":  "d522616e38456a3c0d65cdd3475f234ac812a0d8afa346415e3f93adebdbcbc9"
+                                                       },
+                                                       {
+                                                           "name":  "audio_encoder\\model.onnx.data",
+                                                           "size":  178257920,
+                                                           "sha256":  "2c49dc4dde56786bed9bdc977c272a8c45f00d30ba7304635b0907c8ff5676d1"
+                                                       },
+                                                       {
+                                                           "name":  "audio_feature_extraction.json",
+                                                           "size":  952,
+                                                           "sha256":  "092637a5c78f8d912568107951dde5a7a3e929c203c17c06b8c972eaf50e8a42"
+                                                       },
+                                                       {
+                                                           "name":  "chat_template.jinja",
+                                                           "size":  18453,
+                                                           "sha256":  "ec5d7464d9b41dce7567886b172f0c768402503d54b4847c03982ce82ee80785"
+                                                       },
+                                                       {
+                                                           "name":  "decoder\\model.onnx",
+                                                           "size":  901454,
+                                                           "sha256":  "af567ed5933774d568fb11720456939b1f39b773f8819ac11f64a1017c9a64bb"
+                                                       },
+                                                       {
+                                                           "name":  "decoder\\model.onnx.data",
+                                                           "size":  6217400320,
+                                                           "sha256":  "e3fac63b87ec52f9f681c6fb62553e53e690b5245cf83293be4c2f295b46f52a"
+                                                       },
+                                                       {
+                                                           "name":  "embedding\\model.onnx",
+                                                           "size":  8873,
+                                                           "sha256":  "e464489f9b3e837b205edc722a364effb6589028dc2c271f63acb9a1850113ed"
+                                                       },
+                                                       {
+                                                           "name":  "embedding\\model.onnx.data",
+                                                           "size":  805371904,
+                                                           "sha256":  "42fdb920082605869a85d6a55b042de82e1c2ac61122f43153bc28018c06e6af"
+                                                       },
+                                                       {
+                                                           "name":  "genai_config.json",
+                                                           "size":  4178,
+                                                           "sha256":  "280aadbbb28d1a4f425132c27005f70794eb9a43a88168b396bf0c0bb2fe2234"
+                                                       },
+                                                       {
+                                                           "name":  "image_processor.json",
+                                                           "size":  770,
+                                                           "sha256":  "11a1658a552746e37e5e7912736dae9957d5d54de396fde42864d4672f4cb32b"
+                                                       },
+                                                       {
+                                                           "name":  "inference_model.json",
+                                                           "size":  73,
+                                                           "sha256":  "ec443bfb9d17451232404ab1bb53e1b2769d2d5923538c03fe1e17484a42fda3"
+                                                       },
+                                                       {
+                                                           "name":  "model_config.json",
+                                                           "size":  13208,
+                                                           "sha256":  "7164fb03d8f59eb0907b65a3b6e1e5d0524a4c986d84951ffe0252d9698f694d"
+                                                       },
+                                                       {
+                                                           "name":  "tokenizer.json",
+                                                           "size":  32169626,
+                                                           "sha256":  "cc8d3a0ce36466ccc1278bf987df5f71db1719b9ca6b4118264f45cb627bfe0f"
+                                                       },
+                                                       {
+                                                           "name":  "tokenizer_config.json",
+                                                           "size":  3082,
+                                                           "sha256":  "9f4fec4b1dc6ecddf8f4a92e9caea5971c0e67d81309f3f9066a2bee8c362633"
+                                                       },
+                                                       {
+                                                           "name":  "vision_encoder\\model.onnx",
+                                                           "size":  1186495,
+                                                           "sha256":  "d61d46fe2c485a5a24f1fd6b968c00eb80f23be40be40456eaef56a5020b3e82"
+                                                       },
+                                                       {
+                                                           "name":  "vision_encoder\\model.onnx.data",
+                                                           "size":  140902400,
+                                                           "sha256":  "10aeb48f5ac556aaeffd7903580d997a4bacb095c2ed8d431c3c016101d451c1"
+                                                       }
+                                                   ],
+                                         "source":  "foundry-catalog",
+                                         "executionProvider":  "WebGPUExecutionProvider",
+                                         "license":  "apache-2.0"
+                                     },
+    "gemma-4-e2b-it-generic-cpu:3":  {
+                                         "folder":  "C:\\Users\\USER\\.foundry\\cache\\models\\Microsoft\\gemma-4-e2b-it-generic-cpu-3\\v3",
+                                         "files":  [
+                                                       {
+                                                           "name":  "audio_encoder\\model.onnx",
+                                                           "size":  1143765,
+                                                           "sha256":  "ce7083e440a419296dc5a7c8da8b0c7b60e59033403c145cd0c168cb9eeedb9f"
+                                                       },
+                                                       {
+                                                           "name":  "audio_encoder\\model.onnx.data",
+                                                           "size":  318111744,
+                                                           "sha256":  "b3367bf25aa60b399021c7eee72d07894bd5a7641ac0887bb786c5909ec5e49f"
+                                                       },
+                                                       {
+                                                           "name":  "audio_encoder\\model_config.json",
+                                                           "size":  412,
+                                                           "sha256":  "5125b8597f1322ea000471c77d0e5f3d40913483a074eb4c6b4b0f510a29443c"
+                                                       },
+                                                       {
+                                                           "name":  "audio_feature_extraction.json",
+                                                           "size":  923,
+                                                           "sha256":  "b3ccfc6e00691c9accbda59543db9a4e6e91cb78b0ce62339c97d4c7f44e1672"
+                                                       },
+                                                       {
+                                                           "name":  "chat_template.jinja",
+                                                           "size":  18453,
+                                                           "sha256":  "ec5d7464d9b41dce7567886b172f0c768402503d54b4847c03982ce82ee80785"
+                                                       },
+                                                       {
+                                                           "name":  "decoder\\model.onnx",
+                                                           "size":  856437,
+                                                           "sha256":  "8ffb549504b53821187b2a97d6632024ee2bbaba84a1b5a152478f4a8a99274b"
+                                                       },
+                                                       {
+                                                           "name":  "decoder\\model.onnx.data",
+                                                           "size":  2933915648,
+                                                           "sha256":  "5a5bc867bd853845593655f4991717a4f548fd7f55be16100f443e8686c506e1"
+                                                       },
+                                                       {
+                                                           "name":  "decoder\\model_config.json",
+                                                           "size":  406,
+                                                           "sha256":  "56cada88d3ea8aba944293091f1451be22df711392ce0d0b0213be7ffab022a5"
+                                                       },
+                                                       {
+                                                           "name":  "embedding\\model.onnx",
+                                                           "size":  15016,
+                                                           "sha256":  "bba75fd789188b693226a84d95daafe5e8d3a6d2aa1b6bdab75525c152779908"
+                                                       },
+                                                       {
+                                                           "name":  "embedding\\model.onnx.data",
+                                                           "size":  2851667968,
+                                                           "sha256":  "9934a1e5206415e5db05f95814c21b66051b70bc38db41737722d24d11b71f53"
+                                                       },
+                                                       {
+                                                           "name":  "embedding\\model_config.json",
+                                                           "size":  408,
+                                                           "sha256":  "c54ee98305a3f036e76158178812c5d5c3139e75fc67eaf6edc907b817619d9e"
+                                                       },
+                                                       {
+                                                           "name":  "genai_config.json",
+                                                           "size":  3180,
+                                                           "sha256":  "cd27b642604f5e4327e3de3e8ec0046f616dc277174bedd8b2a11da30fada20e"
+                                                       },
+                                                       {
+                                                           "name":  "image_processor.json",
+                                                           "size":  744,
+                                                           "sha256":  "02b37f9a41347d2921917ba902dfba8d66db156311e8fd914239acf25f0a19f7"
+                                                       },
+                                                       {
+                                                           "name":  "inference_model.json",
+                                                           "size":  73,
+                                                           "sha256":  "5bceb080edefeea9c7fb50d77a95552ae32b81f11b997f7315ae87cea75429a1"
+                                                       },
+                                                       {
+                                                           "name":  "model_config.json",
+                                                           "size":  50637,
+                                                           "sha256":  "ec52e6918ddca322ea14a03d8881b1f9bc6bff7c3f84bf5de39ddf96601a9657"
+                                                       },
+                                                       {
+                                                           "name":  "tokenizer.json",
+                                                           "size":  32169626,
+                                                           "sha256":  "cc8d3a0ce36466ccc1278bf987df5f71db1719b9ca6b4118264f45cb627bfe0f"
+                                                       },
+                                                       {
+                                                           "name":  "tokenizer_config.json",
+                                                           "size":  3082,
+                                                           "sha256":  "9f4fec4b1dc6ecddf8f4a92e9caea5971c0e67d81309f3f9066a2bee8c362633"
+                                                       },
+                                                       {
+                                                           "name":  "vision_encoder\\model.onnx",
+                                                           "size":  1156089,
+                                                           "sha256":  "0bf30c0ccf7491c7f174a36027309b85e823bbf7a43671897ade1f9d2d1c2c25"
+                                                       },
+                                                       {
+                                                           "name":  "vision_encoder\\model.onnx.data",
+                                                           "size":  185794560,
+                                                           "sha256":  "0e8ee27516628ee96ff5c4babdc6af6a59a90c67f49075b4ffea41fbf65760a4"
+                                                       },
+                                                       {
+                                                           "name":  "vision_encoder\\model_config.json",
+                                                           "size":  413,
+                                                           "sha256":  "04d4d4409d2c6a700cccb8cffca6d5d4b083d781bc1986ca44a4fbf3ad10af45"
+                                                       }
+                                                   ],
+                                         "source":  "foundry-catalog",
+                                         "executionProvider":  "CPUExecutionProvider",
+                                         "license":  "apache-2.0"
+                                     },
+    "qwen3-0.6b-cuda-gpu:2":  {
+                                  "folder":  "C:\\Users\\USER\\.foundry\\cache\\models\\Microsoft\\qwen3-0.6b-cuda-gpu-2\\v2",
+                                  "files":  [
+                                                {
+                                                    "name":  "chat_template.jinja",
+                                                    "size":  4168,
+                                                    "sha256":  "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8"
+                                                },
+                                                {
+                                                    "name":  "config.json",
+                                                    "size":  8957,
+                                                    "sha256":  "136fdc6ed4513075b60c40cd6e2ed6b302c7baee595c6fa82c46b1fbf72d6cf2"
+                                                },
+                                                {
+                                                    "name":  "genai_config.json",
+                                                    "size":  1765,
+                                                    "sha256":  "025ca9a08e1b50f85572b51839f1b5dc0ad7c00e762c801f0c9ceeda5b414f73"
+                                                },
+                                                {
+                                                    "name":  "inference_model.json",
+                                                    "size":  66,
+                                                    "sha256":  "7310f340fabc4e5a02a528992e8bf6891aa44a86676d103991717b0602bcb476"
+                                                },
+                                                {
+                                                    "name":  "model.onnx",
+                                                    "size":  504660045,
+                                                    "sha256":  "40d04ddc791196a0be2a8a17a88e7a9cdc3fde42ff6c6412b9170bd11208e03a"
+                                                },
+                                                {
+                                                    "name":  "model_config.json",
+                                                    "size":  36941,
+                                                    "sha256":  "0b94a02b90c3d6dc82c89203fa8af62c813193b5f6652bff53ba440a50fac265"
+                                                },
+                                                {
+                                                    "name":  "tokenizer.json",
+                                                    "size":  11422647,
+                                                    "sha256":  "3e05b27d4118f4732de05f09d38b4db015a01977cbcb74a4d750646700751de2"
+                                                },
+                                                {
+                                                    "name":  "tokenizer_config.json",
+                                                    "size":  663,
+                                                    "sha256":  "bfd13b57b2e0c2cb582f311c0895f077d16a868c0dc61e4dbbba544a835341d6"
+                                                }
+                                            ],
+                                  "source":  "foundry-catalog",
+                                  "executionProvider":  "CUDAExecutionProvider",
+                                  "license":  "apache-2.0"
+                              },
+    "qwen3-0.6b-generic-gpu:2":  {
+                                     "folder":  "C:\\Users\\USER\\.foundry\\cache\\models\\Microsoft\\qwen3-0.6b-generic-gpu-2\\v2",
+                                     "files":  [
+                                                   {
+                                                       "name":  "chat_template.jinja",
+                                                       "size":  4168,
+                                                       "sha256":  "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8"
+                                                   },
+                                                   {
+                                                       "name":  "config.json",
+                                                       "size":  9033,
+                                                       "sha256":  "b7b2ac003e14aea8ea0e79c8f83a6033c9fb05e75baaf23661c7724afbf3e71b"
+                                                   },
+                                                   {
+                                                       "name":  "genai_config.json",
+                                                       "size":  1752,
+                                                       "sha256":  "5d6913e5bc4172ae1349e6f7fd36107fdee3bdded0e0ce48e85f90475f56cdb5"
+                                                   },
+                                                   {
+                                                       "name":  "inference_model.json",
+                                                       "size":  69,
+                                                       "sha256":  "9494dd8fa84429909c06daaa23712c70aa014057f486b4f95996776ed26024af"
+                                                   },
+                                                   {
+                                                       "name":  "model.onnx",
+                                                       "size":  543321042,
+                                                       "sha256":  "5e9fb386cb1a14009b02b43b0e0f0043e248ad5a6d3c3521c9a516062509909a"
+                                                   },
+                                                   {
+                                                       "name":  "model_config.json",
+                                                       "size":  37177,
+                                                       "sha256":  "cbe113c077160cbcc3a2e95d73df37300e77ee588a66765341da9b29a082099f"
+                                                   },
+                                                   {
+                                                       "name":  "tokenizer.json",
+                                                       "size":  11422647,
+                                                       "sha256":  "3e05b27d4118f4732de05f09d38b4db015a01977cbcb74a4d750646700751de2"
+                                                   },
+                                                   {
+                                                       "name":  "tokenizer_config.json",
+                                                       "size":  663,
+                                                       "sha256":  "bfd13b57b2e0c2cb582f311c0895f077d16a868c0dc61e4dbbba544a835341d6"
+                                                   }
+                                               ],
+                                     "source":  "foundry-catalog",
+                                     "executionProvider":  "WebGPUExecutionProvider",
+                                     "license":  "apache-2.0"
+                                 },
+    "qwen3-0.6b-generic-cpu:4":  {
+                                     "folder":  "C:\\Users\\USER\\.foundry\\cache\\models\\Microsoft\\qwen3-0.6b-generic-cpu-4\\v4",
+                                     "files":  [
+                                                   {
+                                                       "name":  "chat_template.jinja",
+                                                       "size":  4168,
+                                                       "sha256":  "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8"
+                                                   },
+                                                   {
+                                                       "name":  "config.json",
+                                                       "size":  8957,
+                                                       "sha256":  "136fdc6ed4513075b60c40cd6e2ed6b302c7baee595c6fa82c46b1fbf72d6cf2"
+                                                   },
+                                                   {
+                                                       "name":  "genai_config.json",
+                                                       "size":  1520,
+                                                       "sha256":  "67348085a5b994a6b6d94e56e395e675d8ef4732c3c46ff75de30a541489fd3f"
+                                                   },
+                                                   {
+                                                       "name":  "inference_model.json",
+                                                       "size":  69,
+                                                       "sha256":  "29be18a638d0b30db7cb6d11fc1cd0b31295daa29c250e17a90ebba73a2e5c19"
+                                                   },
+                                                   {
+                                                       "name":  "model.onnx",
+                                                       "size":  524589133,
+                                                       "sha256":  "35fe34321ea9b1eaa43dfa648dd199903d01d93f97dc2b24fe1d16079ebea957"
+                                                   },
+                                                   {
+                                                       "name":  "model_config.json",
+                                                       "size":  36934,
+                                                       "sha256":  "a66c03862209acb66e454aa5829b0ae54e951e035ef43fba7f9ab8a3303ae403"
+                                                   },
+                                                   {
+                                                       "name":  "tokenizer.json",
+                                                       "size":  11422647,
+                                                       "sha256":  "3e05b27d4118f4732de05f09d38b4db015a01977cbcb74a4d750646700751de2"
+                                                   },
+                                                   {
+                                                       "name":  "tokenizer_config.json",
+                                                       "size":  663,
+                                                       "sha256":  "bfd13b57b2e0c2cb582f311c0895f077d16a868c0dc61e4dbbba544a835341d6"
+                                                   }
+                                               ],
+                                     "source":  "foundry-catalog",
+                                     "executionProvider":  "CPUExecutionProvider",
+                                     "license":  "apache-2.0"
+                                 },
+    "qwen3-1.7b-cuda-gpu:2":  {
+                                  "folder":  "C:\\Users\\USER\\.foundry\\cache\\models\\Microsoft\\qwen3-1.7b-cuda-gpu-2\\v2",
+                                  "files":  [
+                                                {
+                                                    "name":  "chat_template.jinja",
+                                                    "size":  4168,
+                                                    "sha256":  "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8"
+                                                },
+                                                {
+                                                    "name":  "config.json",
+                                                    "size":  8697,
+                                                    "sha256":  "14c4e163fc54e5c7301a7f26054386ac77734401355fecd530ce4a98233f070c"
+                                                },
+                                                {
+                                                    "name":  "genai_config.json",
+                                                    "size":  1765,
+                                                    "sha256":  "28115426b38dd1bd35b4a0ea8312fab338ecd69a5e6140b1be20c719c2cac711"
+                                                },
+                                                {
+                                                    "name":  "inference_model.json",
+                                                    "size":  66,
+                                                    "sha256":  "7713d5a53c0d08fbcf1f7ef393d472cefba417a67b9ad1586c84e65979deda95"
+                                                },
+                                                {
+                                                    "name":  "model.onnx",
+                                                    "size":  1371328073,
+                                                    "sha256":  "94ee37f1fabe304cd3046803830724f9be8b520dd0400bcd421185c644041096"
+                                                },
+                                                {
+                                                    "name":  "model_config.json",
+                                                    "size":  35721,
+                                                    "sha256":  "bd23dc02b7cd3471726c4f5d27a9993c428ae226df46a4f35109dbc59818dbc3"
+                                                },
+                                                {
+                                                    "name":  "tokenizer.json",
+                                                    "size":  11422647,
+                                                    "sha256":  "3e05b27d4118f4732de05f09d38b4db015a01977cbcb74a4d750646700751de2"
+                                                },
+                                                {
+                                                    "name":  "tokenizer_config.json",
+                                                    "size":  663,
+                                                    "sha256":  "bfd13b57b2e0c2cb582f311c0895f077d16a868c0dc61e4dbbba544a835341d6"
+                                                }
+                                            ],
+                                  "source":  "foundry-catalog",
+                                  "executionProvider":  "CUDAExecutionProvider",
+                                  "license":  "apache-2.0"
+                              },
+    "qwen3-1.7b-generic-gpu:2":  {
+                                     "folder":  "C:\\Users\\USER\\.foundry\\cache\\models\\Microsoft\\qwen3-1.7b-generic-gpu-2\\v2",
+                                     "files":  [
+                                                   {
+                                                       "name":  "chat_template.jinja",
+                                                       "size":  4168,
+                                                       "sha256":  "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8"
+                                                   },
+                                                   {
+                                                       "name":  "config.json",
+                                                       "size":  8707,
+                                                       "sha256":  "37e5d15050e28c9464735024ebcc981f8c87af70535c2273eea884f66bb7c582"
+                                                   },
+                                                   {
+                                                       "name":  "genai_config.json",
+                                                       "size":  1752,
+                                                       "sha256":  "8e98992590df1dc5f938890c9f2b43f6a5c3eb7c362ec1ffd474a1793af6210b"
+                                                   },
+                                                   {
+                                                       "name":  "inference_model.json",
+                                                       "size":  69,
+                                                       "sha256":  "812fb16404c83ac81e2034f91f9e2a12fe5b9d12bf2fb01dc966d3b7fb8c26ba"
+                                                   },
+                                                   {
+                                                       "name":  "model.onnx",
+                                                       "size":  1478657378,
+                                                       "sha256":  "46d813105b1ae677c28f2e83a79de0d2db1b84ec6a5e344a6fcfa8ce3eba90bf"
+                                                   },
+                                                   {
+                                                       "name":  "model_config.json",
+                                                       "size":  35655,
+                                                       "sha256":  "124b9b12bd2d0ad661fda5aa2f29be803386eba6132831514399b25b575836f9"
+                                                   },
+                                                   {
+                                                       "name":  "tokenizer.json",
+                                                       "size":  11422647,
+                                                       "sha256":  "3e05b27d4118f4732de05f09d38b4db015a01977cbcb74a4d750646700751de2"
+                                                   },
+                                                   {
+                                                       "name":  "tokenizer_config.json",
+                                                       "size":  663,
+                                                       "sha256":  "bfd13b57b2e0c2cb582f311c0895f077d16a868c0dc61e4dbbba544a835341d6"
+                                                   }
+                                               ],
+                                     "source":  "foundry-catalog",
+                                     "executionProvider":  "WebGPUExecutionProvider",
+                                     "license":  "apache-2.0"
+                                 },
+    "qwen3-1.7b-generic-cpu:2":  {
+                                     "folder":  "C:\\Users\\USER\\.foundry\\cache\\models\\Microsoft\\qwen3-1.7b-generic-cpu-2\\v2",
+                                     "files":  [
+                                                   {
+                                                       "name":  "chat_template.jinja",
+                                                       "size":  4168,
+                                                       "sha256":  "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8"
+                                                   },
+                                                   {
+                                                       "name":  "config.json",
+                                                       "size":  8697,
+                                                       "sha256":  "14c4e163fc54e5c7301a7f26054386ac77734401355fecd530ce4a98233f070c"
+                                                   },
+                                                   {
+                                                       "name":  "genai_config.json",
+                                                       "size":  1520,
+                                                       "sha256":  "d328d2ad4cbd7915eee3ad047eabfc562d8daf7307b202c1e6aaef4e8a236ba2"
+                                                   },
+                                                   {
+                                                       "name":  "inference_model.json",
+                                                       "size":  69,
+                                                       "sha256":  "1c9fbcbeee97d1809ae0ca8142ea332790b9a0a42d3ae8bd04e3c819398c63bd"
+                                                   },
+                                                   {
+                                                       "name":  "model.onnx",
+                                                       "size":  1408943689,
+                                                       "sha256":  "9fddc5a0a7f9c51132c376db8fe44774b17a8e42d721c4d289ade16af87da0bd"
+                                                   },
+                                                   {
+                                                       "name":  "model_config.json",
+                                                       "size":  35714,
+                                                       "sha256":  "8772eddcea0b9eb3463addd269459fd72eb1ed542f9f3fe82771098392c91efb"
+                                                   },
+                                                   {
+                                                       "name":  "tokenizer.json",
+                                                       "size":  11422647,
+                                                       "sha256":  "3e05b27d4118f4732de05f09d38b4db015a01977cbcb74a4d750646700751de2"
+                                                   },
+                                                   {
+                                                       "name":  "tokenizer_config.json",
+                                                       "size":  663,
+                                                       "sha256":  "bfd13b57b2e0c2cb582f311c0895f077d16a868c0dc61e4dbbba544a835341d6"
+                                                   }
+                                               ],
+                                     "source":  "foundry-catalog",
+                                     "executionProvider":  "CPUExecutionProvider",
+                                     "license":  "apache-2.0"
+                                 },
+    "qwen3-4b-cuda-gpu:2":  {
+                                "folder":  "C:\\Users\\USER\\.foundry\\cache\\models\\Microsoft\\qwen3-4b-cuda-gpu-2\\v2",
+                                "files":  [
+                                              {
+                                                  "name":  "chat_template.jinja",
+                                                  "size":  4168,
+                                                  "sha256":  "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8"
+                                              },
+                                              {
+                                                  "name":  "config.json",
+                                                  "size":  9567,
+                                                  "sha256":  "0bfeedcfa808cb8404e75d32cef3cdb6c566631acdb7c0edbe9e6945763c6989"
+                                              },
+                                              {
+                                                  "name":  "genai_config.json",
+                                                  "size":  1765,
+                                                  "sha256":  "481b5b09371642a8d2c2a651fa39b7229e6007affaaf12b249c5e2f3ce84eb55"
+                                              },
+                                              {
+                                                  "name":  "inference_model.json",
+                                                  "size":  64,
+                                                  "sha256":  "28df88d2486fd1757052cb8d7b1dbe57f5c1e726691acbf50c0e64fb3980e43d"
+                                              },
+                                              {
+                                                  "name":  "model.onnx",
+                                                  "size":  501109,
+                                                  "sha256":  "b074fc8192970b977761284deb5c7d3db3e47ab92bccbbad44c552f9c2370b29"
+                                              },
+                                              {
+                                                  "name":  "model.onnx.data",
+                                                  "size":  2811727360,
+                                                  "sha256":  "35d01a337b4ec19f5a7e363c6260cf6ddd53102e17169f96099bd29d3fbcd24a"
+                                              },
+                                              {
+                                                  "name":  "model_config.json",
+                                                  "size":  39307,
+                                                  "sha256":  "a7a9db004b6d40e77ad3d29f15f94acdc77ec8944fe5bd4aa360fba396e8223a"
+                                              },
+                                              {
+                                                  "name":  "tokenizer.json",
+                                                  "size":  11422647,
+                                                  "sha256":  "3e05b27d4118f4732de05f09d38b4db015a01977cbcb74a4d750646700751de2"
+                                              },
+                                              {
+                                                  "name":  "tokenizer_config.json",
+                                                  "size":  663,
+                                                  "sha256":  "bfd13b57b2e0c2cb582f311c0895f077d16a868c0dc61e4dbbba544a835341d6"
+                                              }
+                                          ],
+                                "source":  "foundry-catalog",
+                                "executionProvider":  "CUDAExecutionProvider",
+                                "license":  "apache-2.0"
+                            },
+    "qwen3-4b-generic-gpu:2":  {
+                                   "folder":  "C:\\Users\\USER\\.foundry\\cache\\models\\Microsoft\\qwen3-4b-generic-gpu-2\\v2",
+                                   "files":  [
+                                                 {
+                                                     "name":  "chat_template.jinja",
+                                                     "size":  4168,
+                                                     "sha256":  "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8"
+                                                 },
+                                                 {
+                                                     "name":  "config.json",
+                                                     "size":  9347,
+                                                     "sha256":  "875d4ceeae11784f5ee27f4977ae999e1c7ed485fdd4d6d3e567bc178923b4c9"
+                                                 },
+                                                 {
+                                                     "name":  "genai_config.json",
+                                                     "size":  1752,
+                                                     "sha256":  "8756bac715c6f1493436e77ea744485eb818f221decc4046abbc74e9274ffc22"
+                                                 },
+                                                 {
+                                                     "name":  "inference_model.json",
+                                                     "size":  67,
+                                                     "sha256":  "c3a84b7035a878935bef603ea326ba024ff7dd6aa71ffabfd90bc6636b6713ec"
+                                                 },
+                                                 {
+                                                     "name":  "model.onnx",
+                                                     "size":  501431,
+                                                     "sha256":  "bcaf3e1fc7ee93a7dc2eb4d973ea2fbdcabe8f3fb00b589b86d07ab46ab7245a"
+                                                 },
+                                                 {
+                                                     "name":  "model.onnx.data",
+                                                     "size":  3070704640,
+                                                     "sha256":  "18bef60545f9e8703ac0471a433d15ff0a527e172d967e6441283ac08520f9ce"
+                                                 },
+                                                 {
+                                                     "name":  "model_config.json",
+                                                     "size":  38248,
+                                                     "sha256":  "3d3a5b637c849a8b6194d63612b90d78a5b07619acd695a072ae5d4c20c18eb0"
+                                                 },
+                                                 {
+                                                     "name":  "tokenizer.json",
+                                                     "size":  11422647,
+                                                     "sha256":  "3e05b27d4118f4732de05f09d38b4db015a01977cbcb74a4d750646700751de2"
+                                                 },
+                                                 {
+                                                     "name":  "tokenizer_config.json",
+                                                     "size":  663,
+                                                     "sha256":  "bfd13b57b2e0c2cb582f311c0895f077d16a868c0dc61e4dbbba544a835341d6"
+                                                 }
+                                             ],
+                                   "source":  "foundry-catalog",
+                                   "executionProvider":  "WebGPUExecutionProvider",
+                                   "license":  "apache-2.0"
+                               },
+    "qwen3-4b-generic-cpu:3":  {
+                                   "folder":  "C:\\Users\\USER\\.foundry\\cache\\models\\Microsoft\\qwen3-4b-generic-cpu-3\\v3",
+                                   "files":  [
+                                                 {
+                                                     "name":  "chat_template.jinja",
+                                                     "size":  4168,
+                                                     "sha256":  "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8"
+                                                 },
+                                                 {
+                                                     "name":  "config.json",
+                                                     "size":  9567,
+                                                     "sha256":  "0bfeedcfa808cb8404e75d32cef3cdb6c566631acdb7c0edbe9e6945763c6989"
+                                                 },
+                                                 {
+                                                     "name":  "genai_config.json",
+                                                     "size":  1520,
+                                                     "sha256":  "dcb9aa8dd93b1acc17a2df193811c200ab540932c20a98ce4d4d23ce88a69b7d"
+                                                 },
+                                                 {
+                                                     "name":  "inference_model.json",
+                                                     "size":  67,
+                                                     "sha256":  "3dfc1b8e9033d6e67302e3e5533c50ed48fd5892d906aab7dcb53e586b88f6b7"
+                                                 },
+                                                 {
+                                                     "name":  "model.onnx",
+                                                     "size":  519634,
+                                                     "sha256":  "b4547cf9327bd532cb81703cf013f958117ba5a3e5a81c7c79a33aba534ff337"
+                                                 },
+                                                 {
+                                                     "name":  "model.onnx.data",
+                                                     "size":  2885434880,
+                                                     "sha256":  "d6003acd70841b99a44ce4c21d13dc42244e3ec3b7c12d70919f9b55440bbc45"
+                                                 },
+                                                 {
+                                                     "name":  "model_config.json",
+                                                     "size":  39300,
+                                                     "sha256":  "e0fe490d55f4816472874925a476e200c973134465a945923d1906444f7f9b0d"
+                                                 },
+                                                 {
+                                                     "name":  "tokenizer.json",
+                                                     "size":  11422647,
+                                                     "sha256":  "3e05b27d4118f4732de05f09d38b4db015a01977cbcb74a4d750646700751de2"
+                                                 },
+                                                 {
+                                                     "name":  "tokenizer_config.json",
+                                                     "size":  663,
+                                                     "sha256":  "bfd13b57b2e0c2cb582f311c0895f077d16a868c0dc61e4dbbba544a835341d6"
+                                                 }
+                                             ],
+                                   "source":  "foundry-catalog",
+                                   "executionProvider":  "CPUExecutionProvider",
+                                   "license":  "apache-2.0"
+                               },
+    "z2-gemma-4-e4b-it-cuda-int4-8k:1":  {
+                                             "folder":  "C:\\src\\llmzoo\\models\\mlboydaisuke__gemma-4-E4B-it-Foundry-Local\\cuda-int4-8k",
+                                             "files":  [
+                                                           {
+                                                               "name":  "audio_encoder\\model.onnx",
+                                                               "size":  1235179,
+                                                               "sha256":  "76c47e0ebb34950d0a8095dc3f8bd05723ecfab0f40a834b54616983e8a3f293"
+                                                           },
+                                                           {
+                                                               "name":  "audio_encoder\\model.onnx.data",
+                                                               "size":  338212096,
+                                                               "sha256":  "c36365010ba042705451761b595231412dda89091defa935db829393cab38bf7"
+                                                           },
+                                                           {
+                                                               "name":  "audio_feature_extraction.json",
+                                                               "size":  952,
+                                                               "sha256":  "092637a5c78f8d912568107951dde5a7a3e929c203c17c06b8c972eaf50e8a42"
+                                                           },
+                                                           {
+                                                               "name":  "chat_template.jinja",
+                                                               "size":  18569,
+                                                               "sha256":  "0a2c8073c878ab1da004bee933a998606537bbb62016310352c7285c3f01c5b5"
+                                                           },
+                                                           {
+                                                               "name":  "decoder\\model.onnx",
+                                                               "size":  1028264,
+                                                               "sha256":  "5d2c060565572be342b96fd603f76c1c7b60696f5c6d3cc8d97f8425b05cb457"
+                                                           },
+                                                           {
+                                                               "name":  "decoder\\model.onnx.data",
+                                                               "size":  2799146496,
+                                                               "sha256":  "ae39387ffa60e38abda3c5992dadf91ceab905f5384aa10f7c6b94edc12a5de4"
+                                                           },
+                                                           {
+                                                               "name":  "embedding\\model.onnx",
+                                                               "size":  15765,
+                                                               "sha256":  "48fe2af851404a0f4a0783f5110f254edb2fb7a644df1e596ab33a6eedbd87a5"
+                                                           },
+                                                           {
+                                                               "name":  "embedding\\model.onnx.data",
+                                                               "size":  3846932992,
+                                                               "sha256":  "57ce316b0cae4b23032234ecfcd2534d60f575aa121a7787079d0110c245da99"
+                                                           },
+                                                           {
+                                                               "name":  "export_info.json",
+                                                               "size":  555,
+                                                               "sha256":  "863b659cce9bc6b14da8aae90deda390584b7f4ba4d315da30c3780dd9beef0d"
+                                                           },
+                                                           {
+                                                               "name":  "genai_config.json",
+                                                               "size":  4283,
+                                                               "sha256":  "a3175631530cff5dbda6741e8caf361616dd4f0713a712f49c95faa3a39df3c7"
+                                                           },
+                                                           {
+                                                               "name":  "image_processor.json",
+                                                               "size":  770,
+                                                               "sha256":  "11a1658a552746e37e5e7912736dae9957d5d54de396fde42864d4672f4cb32b"
+                                                           },
+                                                           {
+                                                               "name":  "quant_info.json",
+                                                               "size":  2011,
+                                                               "sha256":  "463a0a370564eb078cb4a44968a92d4ab91d76d11906e5592b0a870c054a295f"
+                                                           },
+                                                           {
+                                                               "name":  "tokenizer.json",
+                                                               "size":  32156428,
+                                                               "sha256":  "91d9cf86906f78e197021fda88214d448e5c120665d0243a8e776e046986c6bc"
+                                                           },
+                                                           {
+                                                               "name":  "tokenizer_config.json",
+                                                               "size":  22216,
+                                                               "sha256":  "13eea4cb65714c57f05c6e1cf04e18d29246bee5b37529045f34f7f9b6ac0476"
+                                                           },
+                                                           {
+                                                               "name":  "vision_encoder\\model.onnx",
+                                                               "size":  1182945,
+                                                               "sha256":  "e93e62590d563bfebedf54429a20ee8e3cb5cab05a7b267a575fbc9ec4487c23"
+                                                           },
+                                                           {
+                                                               "name":  "vision_encoder\\model.onnx.data",
+                                                               "size":  196718080,
+                                                               "sha256":  "d237bf91d2c20d40d7758cf59d6f38653828101b35f3474c3423018b2f3b560b"
+                                                           }
+                                                       ],
+                                             "source":  "hub:mlboydaisuke/gemma-4-E4B-it-Foundry-Local",
+                                             "executionProvider":  "CUDAExecutionProvider"
+                                         },
+    "z2-gemma-4-e4b-it-cpu-int4:1":  {
+                                         "folder":  "C:\\src\\llmzoo\\models\\mlboydaisuke__gemma-4-E4B-it-Foundry-Local\\cpu-int4",
+                                         "files":  [
+                                                       {
+                                                           "name":  "audio_encoder\\model.onnx",
+                                                           "size":  1162623,
+                                                           "sha256":  "f69ce49a821a837189fbe393216878c4089c0a3edd12acdc0a2b1f38aa835047"
+                                                       },
+                                                       {
+                                                           "name":  "audio_encoder\\model.onnx.data",
+                                                           "size":  319677440,
+                                                           "sha256":  "f8f84acbfce388ad2977c57a14885f8cc00933167c52f3ee57c35f0ac8d36503"
+                                                       },
+                                                       {
+                                                           "name":  "audio_feature_extraction.json",
+                                                           "size":  952,
+                                                           "sha256":  "092637a5c78f8d912568107951dde5a7a3e929c203c17c06b8c972eaf50e8a42"
+                                                       },
+                                                       {
+                                                           "name":  "chat_template.jinja",
+                                                           "size":  18569,
+                                                           "sha256":  "0a2c8073c878ab1da004bee933a998606537bbb62016310352c7285c3f01c5b5"
+                                                       },
+                                                       {
+                                                           "name":  "decoder\\model.onnx",
+                                                           "size":  1007847,
+                                                           "sha256":  "a8975d3be0889b398e619d27a6b746d131810e5d1d95d851fffcdec06525fa3b"
+                                                       },
+                                                       {
+                                                           "name":  "decoder\\model.onnx.data",
+                                                           "size":  3290115072,
+                                                           "sha256":  "a4aea9eb6d8b31086d3d98f3c644172d5c0796bf7325f4060216d64e76e33c99"
+                                                       },
+                                                       {
+                                                           "name":  "embedding\\model.onnx",
+                                                           "size":  15252,
+                                                           "sha256":  "7451ed7795e45be9b60a1259e6cb1ccd191530d3923d9c62b1946c4e72234266"
+                                                       },
+                                                       {
+                                                           "name":  "embedding\\model.onnx.data",
+                                                           "size":  3627119616,
+                                                           "sha256":  "799e08a6216c39b1d75584abf886a768467e0ea3f2ba99ebf8ad696a2fcfcfde"
+                                                       },
+                                                       {
+                                                           "name":  "export_info.json",
+                                                           "size":  584,
+                                                           "sha256":  "104d80600988cb7d6e850ce068a4fd3d419d6093972ad9676387180fc08207bc"
+                                                       },
+                                                       {
+                                                           "name":  "export_info_audio_encoder_vision_encoder.json",
+                                                           "size":  479,
+                                                           "sha256":  "26215cdd6b078ec8489a722d479fbc43d38b31412e2a2ed624659f4f11c49f10"
+                                                       },
+                                                       {
+                                                           "name":  "export_info_decoder.json",
+                                                           "size":  454,
+                                                           "sha256":  "cc0cee6f7c5840358d95428516ccf2df24973f0b0038f3b605fd665fc5e1cd99"
+                                                       },
+                                                       {
+                                                           "name":  "export_info_embedding.json",
+                                                           "size":  454,
+                                                           "sha256":  "f77b1a3dabf3fcba7537136e1f364f18d4b82c65b5dd00d52ec1e08e5f0163de"
+                                                       },
+                                                       {
+                                                           "name":  "genai_config.json",
+                                                           "size":  3279,
+                                                           "sha256":  "db77d220158b0a35ade5b3eae458d8aa7d00ae186c8308e01f5861edbb28466c"
+                                                       },
+                                                       {
+                                                           "name":  "image_processor.json",
+                                                           "size":  770,
+                                                           "sha256":  "11a1658a552746e37e5e7912736dae9957d5d54de396fde42864d4672f4cb32b"
+                                                       },
+                                                       {
+                                                           "name":  "quant_info.json",
+                                                           "size":  2112,
+                                                           "sha256":  "0829ed0075fbbc40e6e98b549e8048f3a695462646444a9cdb4631af54e62a1e"
+                                                       },
+                                                       {
+                                                           "name":  "tokenizer.json",
+                                                           "size":  32156428,
+                                                           "sha256":  "91d9cf86906f78e197021fda88214d448e5c120665d0243a8e776e046986c6bc"
+                                                       },
+                                                       {
+                                                           "name":  "tokenizer_config.json",
+                                                           "size":  22216,
+                                                           "sha256":  "13eea4cb65714c57f05c6e1cf04e18d29246bee5b37529045f34f7f9b6ac0476"
+                                                       },
+                                                       {
+                                                           "name":  "vision_encoder\\model.onnx",
+                                                           "size":  1156819,
+                                                           "sha256":  "a5fe2e2cd45872b1900510261fd784c1763ba37c4201f4f41b7a02911f6d4b36"
+                                                       },
+                                                       {
+                                                           "name":  "vision_encoder\\model.onnx.data",
+                                                           "size":  186565632,
+                                                           "sha256":  "7af7bdc07583e02b45a22733642816378e37cddb86a0aee7077a250fafc530c7"
+                                                       }
+                                                   ],
+                                         "source":  "hub:mlboydaisuke/gemma-4-E4B-it-Foundry-Local",
+                                         "executionProvider":  "CPUExecutionProvider"
+                                     }
+}

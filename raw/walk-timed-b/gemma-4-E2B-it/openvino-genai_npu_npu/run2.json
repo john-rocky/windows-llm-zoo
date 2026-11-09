@@ -1,0 +1,72 @@
+{
+ "runner": "run_ovgenai.py",
+ "started": "2026-11-09T00:44:16.630337+09:00",
+ "argv": [
+  "--model-dir",
+  "C:\\src\\llmzoo-walk\\models\\OpenVINO__gemma-4-E2B-it-int4-cw-ov",
+  "--device",
+  "NPU",
+  "--cache-dir",
+  "C:\\src\\llmzoo-walk\\ovcache\\gemma-4-E2B-it_npu",
+  "--prompt-file",
+  "C:\\src\\llmzoo-walk\\pc\\short-chat.txt",
+  "--out",
+  "C:\\src\\llmzoo-walk\\runs\\walk-timed-b\\gemma-4-E2B-it\\openvino-genai_npu_npu\\run2.json"
+ ],
+ "pid": 10956,
+ "versions": {
+  "python": "3.12.10",
+  "openvino": "2026.4.1",
+  "openvino-genai": "2026.4.1.0",
+  "openvino-tokenizers": "2026.4.1.0",
+  "numpy": "2.5.4"
+ },
+ "available_devices": {
+  "CPU": "Intel(R) Core(TM) Ultra 9 386H",
+  "GPU.0": "Intel(R) Graphics (iGPU)",
+  "GPU.1": "NVIDIA GeForce RTX 5080 Laptop GPU (dGPU)",
+  "NPU": "Intel(R) AI Boost"
+ },
+ "prompt_sha256": "870aafb98e570e8fa1343ec051180237f4587233f49c0cc1391724e086d42d50",
+ "pipeline": "vlm",
+ "load_s": 3.5700226000044495,
+ "pipeline_errors_before": [],
+ "templated_prompt": "<bos><|turn>user\nExplain what on-device AI means in simple terms.<turn|>\n<|turn>model\n",
+ "templated_prompt_sha256": "70b30bff1ab92ec74814a888864b33ac65c53a053b6d35e8dfa13b353830ffb2",
+ "gens": [
+  {
+   "gen": 1,
+   "regime": "cold",
+   "prompt_tokens": 20,
+   "generated_tokens": 128,
+   "stop": "length",
+   "ttft_ms": 788.4613037109375,
+   "tpot_ms": 54.58279800415039,
+   "prefill_tps": 25.365861210777087,
+   "decode_tps": 18.32079036922881,
+   "generate_duration_ms": 7721.60302734375,
+   "generation_wall_s": 7.721930200001225,
+   "text": "Imagine you have a calculator. You can use it right there on your phone or computer without needing to call a separate calculator app or a website.\n\n**On-device AI is essentially putting the \"smart\" intelligence of Artificial Intelligence (AI) directly onto your device.**\n\nHere's the breakdown using simple terms:\n\n### The Traditional Way (Cloud AI)\n\nWith traditional AI (like Siri or Google Assistant), when you want something smart to happen, your phone has to send the data to a powerful remote server (a big data center in the cloud) to do the heavy lifting.\n\n* **Example:** Your phone sends your",
+   "text_sha256": "ae2262752291fb4a843de761c2f8a91a8014b086d40ab2efd2e639cdb25e8b0d"
+  },
+  {
+   "gen": 2,
+   "regime": "warm",
+   "prompt_tokens": 20,
+   "generated_tokens": 128,
+   "stop": "length",
+   "ttft_ms": 462.2427978515625,
+   "tpot_ms": 53.222103118896484,
+   "prefill_tps": 43.26730474321525,
+   "decode_tps": 18.789186097475927,
+   "generate_duration_ms": 7222.4228515625,
+   "generation_wall_s": 7.222578900022199,
+   "text": "Imagine you have a calculator. You can use it right there on your phone or computer without needing to call a separate calculator app or a website.\n\n**On-device AI is essentially putting the \"smart\" intelligence of Artificial Intelligence (AI) directly onto your device.**\n\nHere's the breakdown using simple analogies:\n\n### The Traditional Way (Cloud-Based AI)\n\nThink of this like using **Google Maps** or **Google Photos**.\n\n* **The Brain (AI):** Lives on Google's massive servers (the cloud).\n* **The Action:** Your phone sends a picture to Google's servers, the",
+   "text_sha256": "ca715e898bd1109328747f51fb5fbbe6c884867e7e54674b8a3bc1f872c72768"
+  }
+ ],
+ "status": "OK",
+ "peak_working_set_bytes": 4322516992,
+ "peak_pagefile_bytes": 2077810688,
+ "ended": "2026-11-09T00:44:36.987768+09:00"
+}

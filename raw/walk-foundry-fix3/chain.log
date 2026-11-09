@@ -1,0 +1,5 @@
+[2026-11-08T05:50:44.1875555+09:00] chain start: plan C:\src\llmzoo-walk\pc\plans\walk-foundry-fix3.json mode first, 1 units, pid 27552
+[2026-11-08T05:50:49.3023783+09:00] adapters: 0x00000000_0x00012C48=nvidia, 0x00000000_0x0001260E=intel-gpu, 0x00000000_0x00012BB8=?, 0x00000000_0x00013E4C=npu?
+[2026-11-08T05:51:34.3708461+09:00] gemma-4-E2B-it\foundry_auto_webgpu run 1 start (daemon 13940, load exit 0 in 33.169 s)
+[2026-11-08T05:51:59.8124478+09:00] gemma-4-E2B-it\foundry_auto_webgpu run 1 end: exit 0, OK, 16.305 s
+[2026-11-08T05:51:59.8185248+09:00] chain done: OK

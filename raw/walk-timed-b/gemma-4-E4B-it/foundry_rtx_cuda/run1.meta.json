@@ -1,0 +1,116 @@
+{
+    "cell":  "gemma-4-E4B-it\\foundry_rtx_cuda",
+    "run":  1,
+    "mode":  "timed",
+    "sitting":  "walk-timed-b",
+    "start":  "2026-11-08T20:50:02.7158818+09:00",
+    "osBuild":  "26200.9711",
+    "gate":  {
+                 "quietGate":  "quiet",
+                 "cpuReads":  [
+                                  2.9,
+                                  0.3,
+                                  0.6
+                              ],
+                 "nvidiaMiB":  0,
+                 "availGB":  24.5,
+                 "ramNeedGB":  10.1,
+                 "gpuEngines":  null
+             },
+    "before":  {
+                   "load":  {
+                                "cpu":  2.8,
+                                "build_ms":  0,
+                                "top":  [
+                                            "System 4 0.39 core",
+                                            "WmiPrvSE 7560 0.02 core",
+                                            "powershell 16780 0.02 core",
+                                            "lsass 1500 0.02 core",
+                                            "NVDisplay.Container 3412 0.02 core"
+                                        ]
+                            },
+                   "nvidia":  "P0, 675 MHz, 14001 MHz, 17.87 W, 0 %, 0 MiB, 48",
+                   "availGB":  24.5
+               },
+    "foreignDaemon":  "none",
+    "daemonStop0":  "stopped",
+    "serverStart":  {
+                        "code":  0,
+                        "s":  9.064,
+                        "text":  "笆 Starting Foundry Local server\nOpenVINOExecutionProvider: 0%\nNvTensorRTRTXExecutionProvider: 0%\nCUDAExecutionProvider: 0%\nWebGpuExecutionProvider: 0%\n笳・success: Server ready (http://127.0.0.1:59348)\n  Public API: http://127.0.0.1:59348/v1/\n  Local API (BYOM): http://127.0.0.1:59348/catalogs/local/v1/"
+                    },
+    "daemonPid":  13396,
+    "modelLoad":  {
+                      "code":  0,
+                      "s":  41.924,
+                      "text":  "笆 Loading model (z2-gemma-4-e4b-it-cuda-int4-8k:1)\n笳・success: Loaded \u0027z2-gemma-4-e4b-it-cuda-int4-8k\u0027 (GPU variant \n\u0027z2-gemma-4-e4b-it-cuda-int4-8k:1\u0027) into memory."
+                  },
+    "daemonPeakAfterLoadBytes":  3560738816,
+    "gpuAfterLoad":  {
+                         "0x00000000_0x00012C48":  {
+                                                       "shared":  74,
+                                                       "dedicated":  8132
+                                                   },
+                         "0x00000000_0x0001260E":  {
+                                                       "shared":  23,
+                                                       "dedicated":  0
+                                                   },
+                         "0x00000000_0x00013E4C":  {
+                                                       "shared":  0,
+                                                       "dedicated":  0
+                                                   }
+                     },
+    "command":  "C:\\src\\llmzoo-walk\\.venv-genai\\Scripts\\python.exe -u C:\\src\\llmzoo-walk\\pc\\run_foundry.py --model z2-gemma-4-e4b-it-cuda-int4-8k:1 --path /catalogs/local/v1 --prompt-file C:\\src\\llmzoo-walk\\pc\\short-chat.txt --out C:\\src\\llmzoo-walk\\runs\\walk-timed-b\\gemma-4-E4B-it\\foundry_rtx_cuda\\run1.json",
+    "engine":  {
+                   "exitCode":  0,
+                   "timedOut":  false,
+                   "yielded":  false,
+                   "suspendedSeconds":  0,
+                   "suspensions":  0,
+                   "enginePid":  2540,
+                   "elapsedSeconds":  10.922,
+                   "peakWorkingSetBytes":  24240128,
+                   "gpuMiBPeak":  {
+
+                                  },
+                   "watchPeakWorkingSetBytes":  3560738816,
+                   "watchGpuMiBPeak":  {
+                                           "0x00000000_0x00012C48":  {
+                                                                         "shared":  76,
+                                                                         "dedicated":  8218
+                                                                     },
+                                           "0x00000000_0x0001260E":  {
+                                                                         "shared":  23,
+                                                                         "dedicated":  0
+                                                                     },
+                                           "0x00000000_0x00013E4C":  {
+                                                                         "shared":  0,
+                                                                         "dedicated":  0
+                                                                     }
+                                       },
+                   "nvidiaSamples":  [
+                                         "5s P4, 2775 MHz, 9001 MHz, 67.93 W, 37 %, 8218 MiB, 52",
+                                         "10s P0, 2767 MHz, 14001 MHz, 73.80 W, 33 %, 8218 MiB, 54"
+                                     ]
+               },
+    "daemonPeakWorkingSetBytes":  3560738816,
+    "modelUnload":  {
+                        "code":  0,
+                        "s":  0.968,
+                        "text":  "笳・success: Unloaded \u0027z2-gemma-4-e4b-it-cuda-int4-8k:1\u0027 from memory."
+                    },
+    "daemonStop":  "stopped",
+    "after":  {
+                  "load":  {
+                               "cpu":  0.4,
+                               "build_ms":  0,
+                               "top":  [
+                                           "svchost 5480 0.05 core",
+                                           "System 4 0.02 core"
+                                       ]
+                           },
+                  "nvidia":  "P0, 3112 MHz, 14001 MHz, 18.02 W, 0 %, 0 MiB, 49"
+              },
+    "end":  "2026-11-08T20:51:10.8371648+09:00",
+    "tries":  1
+}

@@ -1,0 +1,680 @@
+{
+ "model": "gemma-4-E2B-it",
+ "cell": "ort-genai_cpu_openvino",
+ "runtime": "ort-genai",
+ "runtime_detail": "ONNX Runtime GenAI 0.19.0 (Python, pc/run_genai.py)",
+ "device": "cpu",
+ "device_name": "Intel(R) Core(TM) Ultra 9 386H",
+ "backend": "openvino",
+ "backend_detail": "OpenVINO EP 1.8.1 plugin, device_type CPU, on the CPU package",
+ "source": "windows-llm-zoo (Z2)",
+ "shelf": {
+  "repo": "Foundry Local catalog",
+  "folder": "gemma-4-e2b-it-generic-cpu:3 (its package files)",
+  "quant": "MatMulNBits b32 asym accNone: int8 x141, int4 x135 [decoder/model.onnx]",
+  "quant_source": "the graph (pc/onnx_quant.py)"
+ },
+ "unit": {
+  "kind": "python",
+  "venv": "genai",
+  "script": "run_genai.py",
+  "args": [
+   "--model-dir",
+   "{HOME}\\.foundry\\cache\\models\\Microsoft\\gemma-4-e2b-it-generic-cpu-3\\v3",
+   "--ep",
+   "openvino",
+   "--ov-device",
+   "CPU"
+  ],
+  "model_id": null,
+  "path": null,
+  "engines_gate": false
+ },
+ "workload": {
+  "task": "short-chat",
+  "prompt": "prompts/text/short-chat.txt of edge-llm-bench (pc/short-chat.txt)",
+  "chat_template": "the package's own, one user turn",
+  "output_budget_tokens": 128,
+  "sampling": "greedy",
+  "regime": "cold (first generation of a fresh engine process; Foundry: of a fresh daemon)",
+  "counting": "runs=3 per sitting; run 1 of a GPU or NPU cell is not counted; a text-check failure is not counted"
+ },
+ "status": "measured",
+ "table": {
+  "sitting": "walk-timed-b",
+  "decode_tps": 9.04,
+  "cold_spread_pct": 3.0,
+  "cold_n": 3,
+  "prefill_tps": 12.1,
+  "ttft_ms": 1657.4,
+  "peak_working_set_mb": 8455,
+  "text_check": "6/6 PASS",
+  "decode_tps_warm": 9.1,
+  "gpu_adapter_used": [],
+  "generated_tokens": [
+   128
+  ],
+  "stop": [
+   "length"
+  ],
+  "same_cold_text": true,
+  "os_build": [
+   "26200.9711"
+  ]
+ },
+ "first_error": null,
+ "why_not_measured": null,
+ "sittings": [
+  {
+   "sitting": "walk-first",
+   "mode": "first",
+   "runs": [
+    {
+     "run": 1,
+     "status": "OK",
+     "counted": false,
+     "why": "first pass (untimed)",
+     "exit_code": 0,
+     "timed_out": false,
+     "elapsed_s": 74.431,
+     "suspended_s": 0,
+     "gate": null,
+     "before": {
+      "load": {
+       "cpu": 43.2,
+       "build_ms": 0,
+       "top": [
+        "python 19760 5.2 core",
+        "python 5644 0.84 core",
+        "System 4 0.43 core",
+        "Memory Compression 3708 0.34 core",
+        "svchost 5480 0.05 core"
+       ]
+      },
+      "nvidia": "P0, 1845 MHz, 14001 MHz, 19.84 W, 0 %, 0 MiB, 59",
+      "availGB": 17.1
+     },
+     "start": "2026-11-08T02:39:46.4581453+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 0,
+       "dedicated": 0
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 23,
+       "dedicated": 0
+      },
+      "0x00000000_0x00013E4C (npu?)": {
+       "shared": 0,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": null,
+     "peak_working_set_mb": 8452,
+     "gens": [
+      {
+       "regime": "cold",
+       "prompt_tokens": 20,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 6.11296660235163,
+       "prefill_tps": 8.213717985024807,
+       "ttft_ms": 2435.3210999979638,
+       "text_sha256": "a654127bdb11991c46b5fdf975cf4498ec82319571ee06c4865aa1b6ebfb97cc",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "Imagine a computer or a device (like your smartphone, a smart camera, or a smart speaker) that can **think and learn right there on itself, without needing to constantly send everything to a big, distant internet server.**\n\nThat's essentially what **on-device AI** means.\n\nHere’s a breakdown using simple analogies:\n\n---\n\n### The Traditional Way (Cloud AI)\n\nThink of this like asking a very smart, very knowledgeable **professor** (the cloud server) for an answer.\n\n* **You ask a question:** \"What is this picture?\"\n* **You send the picture:** You upload"
+      },
+      {
+       "regime": "warm",
+       "prompt_tokens": 20,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 7.633660695351988,
+       "prefill_tps": 33.76924361480699,
+       "ttft_ms": 592.5868999911472,
+       "text_sha256": "a654127bdb11991c46b5fdf975cf4498ec82319571ee06c4865aa1b6ebfb97cc",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "Imagine a computer or a device (like your smartphone, a smart camera, or a smart speaker) that can **think and learn right there on itself, without needing to constantly send everything to a big, distant internet server.**\n\nThat's essentially what **on-device AI** means.\n\nHere’s a breakdown using simple analogies:\n\n---\n\n### The Traditional Way (Cloud AI)\n\nThink of this like asking a very smart, very knowledgeable **professor** (the cloud server) for an answer.\n\n* **You ask a question:** \"What is this picture?\"\n* **You send the picture:** You upload"
+      }
+     ],
+     "load_s": 27.02867499999411,
+     "versions": {
+      "python": "3.12.10",
+      "onnxruntime-genai": "0.19.0",
+      "onnxruntime": "1.31.1",
+      "onnxruntime-ep-openvino": "1.8.1",
+      "onnxruntime-ep-webgpu": "0.5.0",
+      "numpy": "2.5.4"
+     }
+    }
+   ],
+   "cold_n": 0,
+   "text_check": "2/2 PASS",
+   "host_env": [
+    {
+     "read": "2026-11-07T19:36:14.0602178+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    },
+    {
+     "read": "2026-11-07T23:47:21.5196137+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    },
+    {
+     "read": "2026-11-08T02:07:11.6245753+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    },
+    {
+     "read": "2026-11-08T03:03:36.6039915+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    },
+    {
+     "read": "2026-11-08T03:42:51.6052743+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    },
+    {
+     "read": "2026-11-08T04:40:06.6871579+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    }
+   ],
+   "counts": false,
+   "unit_args": [
+    "--model-dir",
+    "{HOME}\\.foundry\\cache\\models\\Microsoft\\gemma-4-e2b-it-generic-cpu-3\\v3",
+    "--ep",
+    "openvino",
+    "--ov-device",
+    "CPU"
+   ],
+   "unit_note": "OpenVINO EP 1.8.1 plugin, device_type CPU, on the CPU package"
+  },
+  {
+   "sitting": "walk-timed-b",
+   "mode": "timed",
+   "runs": [
+    {
+     "run": 1,
+     "status": "OK",
+     "counted": true,
+     "why": "",
+     "exit_code": 0,
+     "timed_out": false,
+     "elapsed_s": 48.023,
+     "suspended_s": 0,
+     "gate": {
+      "quietGate": "quiet",
+      "cpuReads": [
+       3,
+       0.5,
+       1
+      ],
+      "nvidiaMiB": 0,
+      "availGB": 24.3,
+      "ramNeedGB": 9.1,
+      "gpuEngines": null
+     },
+     "before": {
+      "load": {
+       "cpu": 3.4,
+       "build_ms": 0,
+       "top": [
+        "System 4 0.42 core",
+        "powershell 16780 0.03 core",
+        "NVDisplay.Container 3412 0.03 core",
+        "svchost 5260 0.02 core",
+        "MsMpEng 5548 0.02 core"
+       ]
+      },
+      "nvidia": "P0, 2467 MHz, 14001 MHz, 17.93 W, 0 %, 0 MiB, 49",
+      "availGB": 24.3
+     },
+     "start": "2026-11-08T19:45:17.6287754+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 0,
+       "dedicated": 0
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 23,
+       "dedicated": 0
+      },
+      "0x00000000_0x00013E4C (npu?)": {
+       "shared": 0,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": null,
+     "peak_working_set_mb": 8437,
+     "gens": [
+      {
+       "regime": "cold",
+       "prompt_tokens": 20,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 9.041012989275915,
+       "prefill_tps": 12.069764931093253,
+       "ttft_ms": 1657.3906000121497,
+       "text_sha256": "a654127bdb11991c46b5fdf975cf4498ec82319571ee06c4865aa1b6ebfb97cc",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "Imagine a computer or a device (like your smartphone, a smart camera, or a smart speaker) that can **think and learn right there on itself, without needing to constantly send everything to a big, distant internet server.**\n\nThat's essentially what **on-device AI** means.\n\nHere’s a breakdown using simple analogies:\n\n---\n\n### The Traditional Way (Cloud AI)\n\nThink of this like asking a very smart, very knowledgeable **professor** (the cloud server) for an answer.\n\n* **You ask a question:** \"What is this picture?\"\n* **You send the picture:** You upload"
+      },
+      {
+       "regime": "warm",
+       "prompt_tokens": 20,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 9.103593257064055,
+       "prefill_tps": 44.794960029044276,
+       "ttft_ms": 446.9639000017196,
+       "text_sha256": "a654127bdb11991c46b5fdf975cf4498ec82319571ee06c4865aa1b6ebfb97cc",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "Imagine a computer or a device (like your smartphone, a smart camera, or a smart speaker) that can **think and learn right there on itself, without needing to constantly send everything to a big, distant internet server.**\n\nThat's essentially what **on-device AI** means.\n\nHere’s a breakdown using simple analogies:\n\n---\n\n### The Traditional Way (Cloud AI)\n\nThink of this like asking a very smart, very knowledgeable **professor** (the cloud server) for an answer.\n\n* **You ask a question:** \"What is this picture?\"\n* **You send the picture:** You upload"
+      }
+     ],
+     "load_s": 12.734689599979902,
+     "versions": {
+      "python": "3.12.10",
+      "onnxruntime-genai": "0.19.0",
+      "onnxruntime": "1.31.1",
+      "onnxruntime-ep-openvino": "1.8.1",
+      "onnxruntime-ep-webgpu": "0.5.0",
+      "numpy": "2.5.4"
+     }
+    },
+    {
+     "run": 2,
+     "status": "OK",
+     "counted": true,
+     "why": "",
+     "exit_code": 0,
+     "timed_out": false,
+     "elapsed_s": 48.586,
+     "suspended_s": 0,
+     "gate": {
+      "quietGate": "quiet",
+      "cpuReads": [
+       2.8,
+       1.1,
+       0.5
+      ],
+      "nvidiaMiB": 0,
+      "availGB": 24.3,
+      "ramNeedGB": 9.1,
+      "gpuEngines": null
+     },
+     "before": {
+      "load": {
+       "cpu": 2.7,
+       "build_ms": 0,
+       "top": [
+        "System 4 0.34 core",
+        "svchost 1740 0.02 core",
+        "svchost 16096 0.02 core",
+        "LEDKeeper2 8936 0.02 core",
+        "NVDisplay.Container 3412 0.02 core"
+       ]
+      },
+      "nvidia": "P0, 720 MHz, 14001 MHz, 17.32 W, 0 %, 0 MiB, 45",
+      "availGB": 24.3
+     },
+     "start": "2026-11-08T19:46:50.1433418+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 0,
+       "dedicated": 0
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 23,
+       "dedicated": 0
+      },
+      "0x00000000_0x00013E4C (npu?)": {
+       "shared": 0,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": null,
+     "peak_working_set_mb": 8455,
+     "gens": [
+      {
+       "regime": "cold",
+       "prompt_tokens": 20,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 8.937037361413156,
+       "prefill_tps": 11.765702506620661,
+       "ttft_ms": 1700.2296000136994,
+       "text_sha256": "a654127bdb11991c46b5fdf975cf4498ec82319571ee06c4865aa1b6ebfb97cc",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "Imagine a computer or a device (like your smartphone, a smart camera, or a smart speaker) that can **think and learn right there on itself, without needing to constantly send everything to a big, distant internet server.**\n\nThat's essentially what **on-device AI** means.\n\nHere’s a breakdown using simple analogies:\n\n---\n\n### The Traditional Way (Cloud AI)\n\nThink of this like asking a very smart, very knowledgeable **professor** (the cloud server) for an answer.\n\n* **You ask a question:** \"What is this picture?\"\n* **You send the picture:** You upload"
+      },
+      {
+       "regime": "warm",
+       "prompt_tokens": 20,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 9.101360214823979,
+       "prefill_tps": 41.10203601104731,
+       "ttft_ms": 487.0270999672357,
+       "text_sha256": "a654127bdb11991c46b5fdf975cf4498ec82319571ee06c4865aa1b6ebfb97cc",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "Imagine a computer or a device (like your smartphone, a smart camera, or a smart speaker) that can **think and learn right there on itself, without needing to constantly send everything to a big, distant internet server.**\n\nThat's essentially what **on-device AI** means.\n\nHere’s a breakdown using simple analogies:\n\n---\n\n### The Traditional Way (Cloud AI)\n\nThink of this like asking a very smart, very knowledgeable **professor** (the cloud server) for an answer.\n\n* **You ask a question:** \"What is this picture?\"\n* **You send the picture:** You upload"
+      }
+     ],
+     "load_s": 12.307900899992092,
+     "versions": {
+      "python": "3.12.10",
+      "onnxruntime-genai": "0.19.0",
+      "onnxruntime": "1.31.1",
+      "onnxruntime-ep-openvino": "1.8.1",
+      "onnxruntime-ep-webgpu": "0.5.0",
+      "numpy": "2.5.4"
+     }
+    },
+    {
+     "run": 3,
+     "status": "OK",
+     "counted": true,
+     "why": "",
+     "exit_code": 0,
+     "timed_out": false,
+     "elapsed_s": 47.393,
+     "suspended_s": 0,
+     "gate": {
+      "quietGate": "quiet",
+      "cpuReads": [
+       0.5,
+       0.5,
+       0.4
+      ],
+      "nvidiaMiB": 0,
+      "availGB": 24.3,
+      "ramNeedGB": 9.1,
+      "gpuEngines": null
+     },
+     "before": {
+      "load": {
+       "cpu": 2.7,
+       "build_ms": 0,
+       "top": [
+        "System 4 0.39 core",
+        "WmiPrvSE 7560 0.02 core",
+        "powershell 16268 0.02 core",
+        "svchost 18472 0.02 core"
+       ]
+      },
+      "nvidia": "P0, 727 MHz, 14001 MHz, 18.27 W, 0 %, 0 MiB, 51",
+      "availGB": 24.3
+     },
+     "start": "2026-11-08T19:48:23.4277813+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 0,
+       "dedicated": 0
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 23,
+       "dedicated": 0
+      },
+      "0x00000000_0x00013E4C (npu?)": {
+       "shared": 0,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": null,
+     "peak_working_set_mb": 8459,
+     "gens": [
+      {
+       "regime": "cold",
+       "prompt_tokens": 20,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 9.208048585623228,
+       "prefill_tps": 12.102306850931278,
+       "ttft_ms": 1652.914200007217,
+       "text_sha256": "a654127bdb11991c46b5fdf975cf4498ec82319571ee06c4865aa1b6ebfb97cc",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "Imagine a computer or a device (like your smartphone, a smart camera, or a smart speaker) that can **think and learn right there on itself, without needing to constantly send everything to a big, distant internet server.**\n\nThat's essentially what **on-device AI** means.\n\nHere’s a breakdown using simple analogies:\n\n---\n\n### The Traditional Way (Cloud AI)\n\nThink of this like asking a very smart, very knowledgeable **professor** (the cloud server) for an answer.\n\n* **You ask a question:** \"What is this picture?\"\n* **You send the picture:** You upload"
+      },
+      {
+       "regime": "warm",
+       "prompt_tokens": 20,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 9.238705967385362,
+       "prefill_tps": 37.294987124614124,
+       "ttft_ms": 536.7320999794174,
+       "text_sha256": "a654127bdb11991c46b5fdf975cf4498ec82319571ee06c4865aa1b6ebfb97cc",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "Imagine a computer or a device (like your smartphone, a smart camera, or a smart speaker) that can **think and learn right there on itself, without needing to constantly send everything to a big, distant internet server.**\n\nThat's essentially what **on-device AI** means.\n\nHere’s a breakdown using simple analogies:\n\n---\n\n### The Traditional Way (Cloud AI)\n\nThink of this like asking a very smart, very knowledgeable **professor** (the cloud server) for an answer.\n\n* **You ask a question:** \"What is this picture?\"\n* **You send the picture:** You upload"
+      }
+     ],
+     "load_s": 12.226534599991282,
+     "versions": {
+      "python": "3.12.10",
+      "onnxruntime-genai": "0.19.0",
+      "onnxruntime": "1.31.1",
+      "onnxruntime-ep-openvino": "1.8.1",
+      "onnxruntime-ep-webgpu": "0.5.0",
+      "numpy": "2.5.4"
+     }
+    }
+   ],
+   "cold_n": 3,
+   "text_check": "6/6 PASS",
+   "host_env": [
+    {
+     "read": "2026-11-08T18:27:37.4700974+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "osCaption": "Microsoft Windows 11 Home",
+     "ramGB": 31.5,
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    }
+   ],
+   "cold_spread_pct": 3.0,
+   "decode_tps": 9.04,
+   "prefill_tps": 12.1,
+   "ttft_ms": 1657.4,
+   "decode_tps_warm": 9.1,
+   "peak_working_set_mb": 8455,
+   "gpu_adapter_used": [],
+   "generated_tokens": [
+    128
+   ],
+   "stop": [
+    "length"
+   ],
+   "same_cold_text": true,
+   "os_build": [
+    "26200.9711"
+   ],
+   "counts": true,
+   "unit_args": [
+    "--model-dir",
+    "{HOME}\\.foundry\\cache\\models\\Microsoft\\gemma-4-e2b-it-generic-cpu-3\\v3",
+    "--ep",
+    "openvino",
+    "--ov-device",
+    "CPU"
+   ],
+   "unit_note": "OpenVINO EP 1.8.1 plugin, device_type CPU, on the CPU package"
+  }
+ ]
+}

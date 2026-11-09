@@ -1,0 +1,122 @@
+{
+ "sitting": "walk-foundry2",
+ "units": [
+  {
+   "model": "Qwen3-0.6B",
+   "cell": "Qwen3-0.6B\\foundry_rtx_cuda",
+   "kind": "foundry",
+   "venv": "genai",
+   "model_id": "qwen3-0.6b-cuda-gpu:2",
+   "path": "/v1",
+   "runs": 1,
+   "engines_gate": false,
+   "timeout_min": 15,
+   "ram_need_gb": 2.6,
+   "note": "Foundry Local catalog variant qwen3-0.6b-cuda-gpu:2"
+  },
+  {
+   "model": "Qwen3-0.6B",
+   "cell": "Qwen3-0.6B\\foundry_auto_webgpu",
+   "kind": "foundry",
+   "venv": "genai",
+   "model_id": "qwen3-0.6b-generic-gpu:2",
+   "path": "/v1",
+   "runs": 1,
+   "engines_gate": true,
+   "timeout_min": 15,
+   "ram_need_gb": 2.6,
+   "note": "Foundry Local catalog variant qwen3-0.6b-generic-gpu:2"
+  },
+  {
+   "model": "Qwen3-0.6B",
+   "cell": "Qwen3-0.6B\\foundry_cpu_cpu",
+   "kind": "foundry",
+   "venv": "genai",
+   "model_id": "qwen3-0.6b-generic-cpu:4",
+   "path": "/v1",
+   "runs": 1,
+   "engines_gate": false,
+   "timeout_min": 15,
+   "ram_need_gb": 2.7,
+   "note": "Foundry Local catalog variant qwen3-0.6b-generic-cpu:4"
+  },
+  {
+   "model": "Qwen3-1.7B",
+   "cell": "Qwen3-1.7B\\foundry_rtx_cuda",
+   "kind": "foundry",
+   "venv": "genai",
+   "model_id": "qwen3-1.7b-cuda-gpu:2",
+   "path": "/v1",
+   "runs": 1,
+   "engines_gate": false,
+   "timeout_min": 15,
+   "ram_need_gb": 3.5,
+   "note": "Foundry Local catalog variant qwen3-1.7b-cuda-gpu:2"
+  },
+  {
+   "model": "Qwen3-1.7B",
+   "cell": "Qwen3-1.7B\\foundry_auto_webgpu",
+   "kind": "foundry",
+   "venv": "genai",
+   "model_id": "qwen3-1.7b-generic-gpu:2",
+   "path": "/v1",
+   "runs": 1,
+   "engines_gate": true,
+   "timeout_min": 15,
+   "ram_need_gb": 3.7,
+   "note": "Foundry Local catalog variant qwen3-1.7b-generic-gpu:2"
+  },
+  {
+   "model": "Qwen3-1.7B",
+   "cell": "Qwen3-1.7B\\foundry_cpu_cpu",
+   "kind": "foundry",
+   "venv": "genai",
+   "model_id": "qwen3-1.7b-generic-cpu:2",
+   "path": "/v1",
+   "runs": 1,
+   "engines_gate": false,
+   "timeout_min": 15,
+   "ram_need_gb": 3.6,
+   "note": "Foundry Local catalog variant qwen3-1.7b-generic-cpu:2"
+  },
+  {
+   "model": "Qwen3-4B",
+   "cell": "Qwen3-4B\\foundry_rtx_cuda",
+   "kind": "foundry",
+   "venv": "genai",
+   "model_id": "qwen3-4b-cuda-gpu:2",
+   "path": "/v1",
+   "runs": 1,
+   "engines_gate": false,
+   "timeout_min": 15,
+   "ram_need_gb": 5.2,
+   "note": "Foundry Local catalog variant qwen3-4b-cuda-gpu:2"
+  },
+  {
+   "model": "Qwen3-4B",
+   "cell": "Qwen3-4B\\foundry_auto_webgpu",
+   "kind": "foundry",
+   "venv": "genai",
+   "model_id": "qwen3-4b-generic-gpu:2",
+   "path": "/v1",
+   "runs": 1,
+   "engines_gate": true,
+   "timeout_min": 15,
+   "ram_need_gb": 5.4,
+   "note": "Foundry Local catalog variant qwen3-4b-generic-gpu:2"
+  },
+  {
+   "model": "Qwen3-4B",
+   "cell": "Qwen3-4B\\foundry_cpu_cpu",
+   "kind": "foundry",
+   "venv": "genai",
+   "model_id": "qwen3-4b-generic-cpu:3",
+   "path": "/v1",
+   "runs": 1,
+   "engines_gate": false,
+   "timeout_min": 15,
+   "ram_need_gb": 5.2,
+   "note": "Foundry Local catalog variant qwen3-4b-generic-cpu:3"
+  }
+ ]
+}

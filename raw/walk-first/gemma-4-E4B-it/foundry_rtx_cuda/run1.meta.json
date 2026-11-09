@@ -1,0 +1,118 @@
+{
+    "cell":  "gemma-4-E4B-it\\foundry_rtx_cuda",
+    "run":  1,
+    "mode":  "first",
+    "sitting":  "walk-first",
+    "start":  "2026-11-08T05:06:40.7282182+09:00",
+    "osBuild":  "26200.9711",
+    "gate":  null,
+    "before":  {
+                   "load":  {
+                                "cpu":  0.7,
+                                "build_ms":  0,
+                                "top":  [
+                                            "System 4 0.03 core",
+                                            "WUDFHost 1836 0.02 core",
+                                            "TextInputHost 7988 0.02 core",
+                                            "NVDisplay.Container 3412 0.02 core",
+                                            "powershell 32260 0.02 core"
+                                        ]
+                            },
+                   "nvidia":  "P8, 180 MHz, 405 MHz, 5.17 W, 0 %, 9833 MiB, 54",
+                   "availGB":  21.6
+               },
+    "foreignDaemon":  "none",
+    "daemonStop0":  "stopped",
+    "serverStart":  {
+                        "code":  0,
+                        "s":  7.311,
+                        "text":  "笆 Starting Foundry Local server\nNvTensorRTRTXExecutionProvider: 0%\nCUDAExecutionProvider: 0%\nWebGpuExecutionProvider: 0%\n笳・success: Server ready (http://127.0.0.1:56128)\n  Public API: http://127.0.0.1:56128/v1/\n  Local API (BYOM): http://127.0.0.1:56128/catalogs/local/v1/"
+                    },
+    "daemonPid":  32348,
+    "modelLoad":  {
+                      "code":  0,
+                      "s":  43.22,
+                      "text":  "笆 Loading model (z2-gemma-4-e4b-it-cuda-int4-8k:1)\n笳・success: Loaded \u0027z2-gemma-4-e4b-it-cuda-int4-8k\u0027 (GPU variant \n\u0027z2-gemma-4-e4b-it-cuda-int4-8k:1\u0027) into memory."
+                  },
+    "daemonPeakAfterLoadBytes":  3597676544,
+    "gpuAfterLoad":  {
+                         "0x00000000_0x00012C48":  {
+                                                       "shared":  202,
+                                                       "dedicated":  9106
+                                                   },
+                         "0x00000000_0x0001260E":  {
+                                                       "shared":  23,
+                                                       "dedicated":  0
+                                                   },
+                         "0x00000000_0x00013E4C":  {
+                                                       "shared":  0,
+                                                       "dedicated":  0
+                                                   }
+                     },
+    "command":  "C:\\src\\llmzoo-walk\\.venv-genai\\Scripts\\python.exe -u C:\\src\\llmzoo-walk\\pc\\run_foundry.py --model z2-gemma-4-e4b-it-cuda-int4-8k:1 --path /catalogs/local/v1 --prompt-file C:\\src\\llmzoo-walk\\pc\\short-chat.txt --out C:\\src\\llmzoo-walk\\runs\\walk-first\\gemma-4-E4B-it\\foundry_rtx_cuda\\run1.json",
+    "engine":  {
+                   "exitCode":  0,
+                   "timedOut":  false,
+                   "yielded":  false,
+                   "suspendedSeconds":  0,
+                   "suspensions":  0,
+                   "enginePid":  31320,
+                   "elapsedSeconds":  60.711,
+                   "peakWorkingSetBytes":  24367104,
+                   "gpuMiBPeak":  {
+
+                                  },
+                   "watchPeakWorkingSetBytes":  3597676544,
+                   "watchGpuMiBPeak":  {
+                                           "0x00000000_0x00012C48":  {
+                                                                         "shared":  290,
+                                                                         "dedicated":  9176
+                                                                     },
+                                           "0x00000000_0x0001260E":  {
+                                                                         "shared":  23,
+                                                                         "dedicated":  0
+                                                                     },
+                                           "0x00000000_0x00013E4C":  {
+                                                                         "shared":  0,
+                                                                         "dedicated":  0
+                                                                     }
+                                       },
+                   "nvidiaSamples":  [
+                                         "5s P0, 2737 MHz, 14001 MHz, 73.54 W, 100 %, 15851 MiB, 69",
+                                         "10s P0, 2407 MHz, 14001 MHz, 66.46 W, 72 %, 15893 MiB, 70",
+                                         "15s P0, 2805 MHz, 14001 MHz, 76.98 W, 100 %, 15553 MiB, 72",
+                                         "20s P0, 2632 MHz, 14001 MHz, 76.61 W, 100 %, 15641 MiB, 72",
+                                         "25s P4, 225 MHz, 9001 MHz, 57.96 W, 70 %, 15713 MiB, 68",
+                                         "30s P0, 2580 MHz, 14001 MHz, 78.57 W, 72 %, 15725 MiB, 72",
+                                         "35s P0, 2505 MHz, 14001 MHz, 80.43 W, 90 %, 15897 MiB, 75",
+                                         "40s P0, 2235 MHz, 14001 MHz, 82.38 W, 100 %, 15883 MiB, 73",
+                                         "45s P0, 2745 MHz, 14001 MHz, 82.55 W, 71 %, 15658 MiB, 73",
+                                         "50s P0, 1297 MHz, 14001 MHz, 64.32 W, 100 %, 15853 MiB, 71",
+                                         "55s P0, 2482 MHz, 14001 MHz, 79.26 W, 92 %, 15745 MiB, 74",
+                                         "60s P0, 2542 MHz, 14001 MHz, 80.50 W, 95 %, 15901 MiB, 73"
+                                     ]
+               },
+    "daemonPeakWorkingSetBytes":  3597676544,
+    "modelUnload":  {
+                        "code":  0,
+                        "s":  2.681,
+                        "text":  "笳・success: Unloaded \u0027z2-gemma-4-e4b-it-cuda-int4-8k:1\u0027 from memory."
+                    },
+    "daemonStop":  "stopped",
+    "after":  {
+                  "load":  {
+                               "cpu":  3.6,
+                               "build_ms":  0,
+                               "top":  [
+                                           "System 4 0.2 core",
+                                           "powershell 33128 0.17 core",
+                                           "python 21700 0.08 core",
+                                           "NVDisplay.Container 3412 0.06 core",
+                                           "WmiPrvSE 7560 0.02 core"
+                                       ]
+                           },
+                  "nvidia":  "P4, 1080 MHz, 9001 MHz, 94.67 W, 100 %, 13897 MiB, 73"
+              },
+    "end":  "2026-11-08T05:08:39.5428536+09:00",
+    "tries":  1
+}

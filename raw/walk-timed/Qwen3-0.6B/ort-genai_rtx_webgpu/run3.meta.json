@@ -1,0 +1,78 @@
+{
+    "cell":  "Qwen3-0.6B\\ort-genai_rtx_webgpu",
+    "run":  3,
+    "mode":  "timed",
+    "sitting":  "walk-timed",
+    "start":  "2026-11-08T07:44:15.1575186+09:00",
+    "osBuild":  "26200.9711",
+    "gate":  {
+                 "quietGate":  "quiet",
+                 "cpuReads":  [
+                                  0.8,
+                                  0.2,
+                                  0.6
+                              ],
+                 "nvidiaMiB":  0,
+                 "availGB":  20.3,
+                 "ramNeedGB":  2.6,
+                 "gpuEngines":  null
+             },
+    "before":  {
+                   "load":  {
+                                "cpu":  2.5,
+                                "build_ms":  0,
+                                "top":  [
+                                            "System 4 0.37 core",
+                                            "WmiPrvSE 7560 0.02 core",
+                                            "powershell 25860 0.02 core"
+                                        ]
+                            },
+                   "nvidia":  "P0, 165 MHz, 14001 MHz, 18.63 W, 0 %, 0 MiB, 52",
+                   "availGB":  20.3
+               },
+    "command":  "C:\\src\\llmzoo-walk\\.venv-genai\\Scripts\\python.exe -u C:\\src\\llmzoo-walk\\pc\\run_genai.py --model-dir C:\\src\\llmzoo-walk\\models\\onnx-community__Qwen3-0.6B-ONNX\\onnxruntime\\webgpu\\webgpu-int4-kld-block-32 --ep webgpu --ep-option adapterIndex=0 --prompt-file C:\\src\\llmzoo-walk\\pc\\short-chat.txt --out C:\\src\\llmzoo-walk\\runs\\walk-timed\\Qwen3-0.6B\\ort-genai_rtx_webgpu\\run3.json",
+    "engine":  {
+                   "exitCode":  0,
+                   "timedOut":  false,
+                   "yielded":  false,
+                   "suspendedSeconds":  0,
+                   "suspensions":  0,
+                   "enginePid":  22904,
+                   "elapsedSeconds":  6.286,
+                   "peakWorkingSetBytes":  1017487360,
+                   "gpuMiBPeak":  {
+                                      "0x00000000_0x00012C48":  {
+                                                                    "shared":  55,
+                                                                    "dedicated":  1015
+                                                                },
+                                      "0x00000000_0x0001260E":  {
+                                                                    "shared":  0,
+                                                                    "dedicated":  0
+                                                                },
+                                      "0x00000000_0x00012BB8":  {
+                                                                    "shared":  0,
+                                                                    "dedicated":  0
+                                                                }
+                                  },
+                   "watchPeakWorkingSetBytes":  0,
+                   "watchGpuMiBPeak":  {
+
+                                       },
+                   "nvidiaSamples":  [
+                                         "5s P4, 2790 MHz, 9001 MHz, 52.36 W, 16 %, 0 MiB, 57"
+                                     ]
+               },
+    "after":  {
+                  "load":  {
+                               "cpu":  1.2,
+                               "build_ms":  0,
+                               "top":  [
+                                           "System 4 0.17 core",
+                                           "powershell 25860 0.02 core"
+                                       ]
+                           },
+                  "nvidia":  "P0, 2032 MHz, 14001 MHz, 18.94 W, 0 %, 0 MiB, 54"
+              },
+    "end":  "2026-11-08T07:44:23.3593210+09:00",
+    "tries":  1
+}

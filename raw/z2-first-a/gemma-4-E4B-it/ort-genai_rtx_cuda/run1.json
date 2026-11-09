@@ -1,0 +1,107 @@
+{
+ "runner": "run_genai.py",
+ "started": "2026-11-07T16:02:16.183592+09:00",
+ "argv": [
+  "--model-dir",
+  "C:\\src\\llmzoo\\models\\mlboydaisuke__gemma-4-E4B-it-Foundry-Local\\cuda-int4-8k",
+  "--ep",
+  "follow_config",
+  "--prompt-file",
+  "C:\\src\\llmzoo\\pc\\short-chat.txt",
+  "--out",
+  "C:\\src\\llmzoo\\runs\\z2-first-a\\gemma-4-E4B-it\\ort-genai_rtx_cuda\\run1.json"
+ ],
+ "pid": 23068,
+ "cuda_dll_dirs": [
+  "C:\\src\\llmzoo\\.venv-genai-cuda\\Lib\\site-packages\\nvidia\\cu13\\bin\\x86_64",
+  "C:\\src\\llmzoo\\.venv-genai-cuda\\Lib\\site-packages\\nvidia\\cudnn\\bin"
+ ],
+ "versions": {
+  "python": "3.12.10",
+  "onnxruntime-genai-cuda": "0.19.0",
+  "onnxruntime-gpu": "1.31.1",
+  "numpy": "2.5.4"
+ },
+ "prompt_sha256": "870aafb98e570e8fa1343ec051180237f4587233f49c0cc1391724e086d42d50",
+ "load_s": 12.689866400003666,
+ "device_type": "CUDA",
+ "chat_template": "tokenizer.apply_chat_template",
+ "templated_prompt": "<bos><|turn>user\nExplain what on-device AI means in simple terms.<turn|>\n<|turn>model\n",
+ "templated_prompt_sha256": "70b30bff1ab92ec74814a888864b33ac65c53a053b6d35e8dfa13b353830ffb2",
+ "genai_config_providers": {
+  "decoder": [
+   {
+    "cuda": {
+     "enable_skip_layer_norm_strict_mode": "1",
+     "enable_cuda_graph": "0"
+    }
+   }
+  ],
+  "vision": [
+   {
+    "cuda": {
+     "enable_skip_layer_norm_strict_mode": "1",
+     "enable_cuda_graph": "0"
+    }
+   }
+  ],
+  "embedding": [
+   {
+    "cuda": {
+     "enable_skip_layer_norm_strict_mode": "1",
+     "enable_cuda_graph": "0"
+    }
+   }
+  ],
+  "speech": [
+   {
+    "cuda": {
+     "enable_skip_layer_norm_strict_mode": "1",
+     "enable_cuda_graph": "0"
+    }
+   }
+  ]
+ },
+ "gens": [
+  {
+   "prompt_tokens": 20,
+   "generated_tokens": 128,
+   "stop": "length",
+   "sequence_length": 148,
+   "generator_s": 0.019342300001881085,
+   "prefill_ms": 1173.2699999993201,
+   "first_step_ms": 85.23029999923892,
+   "ttft_ms": 1258.500299998559,
+   "prefill_tps": 17.04637466227858,
+   "decode_tps": 33.8042522987748,
+   "decode_s": 3.7569237999268807,
+   "generation_wall_s": 5.0278332000016235,
+   "text": "Imagine your smartphone or a smart device (like a smart speaker or fitness tracker) is like a very smart assistant.\n\n**\"On-device AI\" simply means that the \"brain\" or the \"thinking part\" of that assistant is actually *inside* the device itself, not constantly needing to talk to the internet.**\n\nHere is a breakdown using simple analogies:\n\n---\n\n### 🧠 The \"Cloud\" vs. The \"Device\"\n\nTo understand it, it helps to compare it to two places where AI can run:\n\n**1. Cloud AI (The Old Way):**\n* **Analogy:** Sending a",
+   "text_sha256": "cb677b66676546773844ff2dac3c05d2c798649b4d703d16063dbe53fe504964",
+   "gen": 1,
+   "regime": "cold"
+  },
+  {
+   "prompt_tokens": 20,
+   "generated_tokens": 128,
+   "stop": "length",
+   "sequence_length": 148,
+   "generator_s": 0.0018569999956525862,
+   "prefill_ms": 50.4448000137927,
+   "first_step_ms": 0.15539999003522098,
+   "ttft_ms": 50.60020000382792,
+   "prefill_tps": 396.47297629352414,
+   "decode_tps": 37.099593506996015,
+   "decode_s": 3.423218100113445,
+   "generation_wall_s": 3.4836130000039702,
+   "text": "Imagine your smartphone or a smart device (like a smart speaker or fitness tracker) is like a very smart assistant.\n\n**\"On-device AI\" simply means that the \"brain\" or the \"thinking part\" of that assistant is actually *inside* the device itself, not constantly needing to talk to the internet.**\n\nHere is a breakdown using simple analogies:\n\n---\n\n### 🧠 The \"Cloud\" vs. The \"Device\"\n\nTo understand it, it helps to compare it to two places where AI can run:\n\n**1. Cloud AI (The Old Way):**\n* **Analogy:** Sending a",
+   "text_sha256": "cb677b66676546773844ff2dac3c05d2c798649b4d703d16063dbe53fe504964",
+   "gen": 2,
+   "regime": "warm"
+  }
+ ],
+ "status": "OK",
+ "peak_working_set_bytes": 1387630592,
+ "peak_pagefile_bytes": 12318457856,
+ "ended": "2026-11-07T16:02:40.573518+09:00"
+}

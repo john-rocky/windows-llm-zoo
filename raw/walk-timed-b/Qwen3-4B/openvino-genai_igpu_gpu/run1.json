@@ -1,0 +1,72 @@
+{
+ "runner": "run_ovgenai.py",
+ "started": "2026-11-08T19:19:55.267719+09:00",
+ "argv": [
+  "--model-dir",
+  "C:\\src\\llmzoo-walk\\models\\OpenVINO__Qwen3-4B-int4-ov",
+  "--device",
+  "GPU.0",
+  "--cache-dir",
+  "C:\\src\\llmzoo-walk\\ovcache\\Qwen3-4B_gpu0",
+  "--prompt-file",
+  "C:\\src\\llmzoo-walk\\pc\\short-chat.txt",
+  "--out",
+  "C:\\src\\llmzoo-walk\\runs\\walk-timed-b\\Qwen3-4B\\openvino-genai_igpu_gpu\\run1.json"
+ ],
+ "pid": 6388,
+ "versions": {
+  "python": "3.12.10",
+  "openvino": "2026.4.1",
+  "openvino-genai": "2026.4.1.0",
+  "openvino-tokenizers": "2026.4.1.0",
+  "numpy": "2.5.4"
+ },
+ "available_devices": {
+  "CPU": "Intel(R) Core(TM) Ultra 9 386H",
+  "GPU.0": "Intel(R) Graphics (iGPU)",
+  "GPU.1": "NVIDIA GeForce RTX 5080 Laptop GPU (dGPU)",
+  "NPU": "Intel(R) AI Boost"
+ },
+ "prompt_sha256": "870aafb98e570e8fa1343ec051180237f4587233f49c0cc1391724e086d42d50",
+ "pipeline": "llm",
+ "load_s": 4.460095200018259,
+ "pipeline_errors_before": [],
+ "templated_prompt": "<|im_start|>user\nExplain what on-device AI means in simple terms.<|im_end|>\n<|im_start|>assistant\n",
+ "templated_prompt_sha256": "9d2fe60da55b75283dbd26cd6f8db55bf12e5c3c0c1f37670067623f6461074d",
+ "gens": [
+  {
+   "gen": 1,
+   "regime": "cold",
+   "prompt_tokens": 19,
+   "generated_tokens": 128,
+   "stop": "length",
+   "ttft_ms": 445.82958984375,
+   "tpot_ms": 36.14152908325195,
+   "prefill_tps": 42.617180269840176,
+   "decode_tps": 27.669000879749763,
+   "generate_duration_ms": 5039.60302734375,
+   "generation_wall_s": 5.040005599992583,
+   "text": "<think>\nOkay, the user wants me to explain what on-device AI is in simple terms. Let me start by recalling what I know about AI and on-device processing.\n\nFirst, I need to break down the term \"on-device AI.\" The key here is \"on-device,\" which means the AI processing happens on the device itself, not on a remote server. So, the user is probably looking for a clear, non-technical explanation.\n\nI should start by defining AI in general terms. Maybe mention that AI is like a computer program that can learn from data. Then, explain that traditionally, these AI models are trained on powerful servers",
+   "text_sha256": "d44f01c0e0cdd73849d06a6b6523e34482cac8f09462fe0240b2d6c44731fe5b"
+  },
+  {
+   "gen": 2,
+   "regime": "warm",
+   "prompt_tokens": 19,
+   "generated_tokens": 128,
+   "stop": "length",
+   "ttft_ms": 212.65341186523438,
+   "tpot_ms": 34.88505935668945,
+   "prefill_tps": 89.3472615056886,
+   "decode_tps": 28.665566819746374,
+   "generate_duration_ms": 4643.88720703125,
+   "generation_wall_s": 4.643966599978739,
+   "text": "<think>\nOkay, the user wants me to explain what on-device AI is in simple terms. Let me start by recalling what I know about AI and on-device processing.\n\nFirst, I need to break down the term \"on-device AI.\" The key here is \"on-device,\" which means the AI model runs on the user's device, like a smartphone or computer, rather than relying on a cloud server. But how do I explain that in simple terms?\n\nMaybe start with the basics. AI models are like software that helps devices do tasks, like recognizing images or translating text. Normally, these models are trained on powerful computers, but when",
+   "text_sha256": "9c2d8ed34ea221adc3d9c9a8b28fc07190a2dfb393803554def1b376a65612ed"
+  }
+ ],
+ "status": "OK",
+ "peak_working_set_bytes": 2677014528,
+ "peak_pagefile_bytes": 3153182720,
+ "ended": "2026-11-08T19:20:11.354690+09:00"
+}

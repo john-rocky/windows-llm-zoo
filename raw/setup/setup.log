@@ -1,0 +1,59 @@
+[2026-11-07T15:28:18.5502698+09:00] setup start (uv C:\Users\USER\AppData\Local\Microsoft\WinGet\Links\uv.exe)
+[2026-11-07T15:28:18.6456284+09:00]   Using CPython 3.12.10 interpreter at: C:\Users\USER\AppData\Local\Programs\Python\Python312\python.exe
+[2026-11-07T15:28:18.6490964+09:00]   Creating virtual environment at: C:\src\llmzoo\.venv-genai
+[2026-11-07T15:28:18.6511303+09:00]   Activate with: C:\src\llmzoo\.venv-genai\Scripts\activate
+[2026-11-07T15:28:19.0840679+09:00]   Using Python 3.12.10 environment at: C:\src\llmzoo\.venv-genai
+[2026-11-07T15:28:19.4724196+09:00]   Resolved 8 packages in 369ms
+[2026-11-07T15:28:21.4348313+09:00]   Installed 8 packages in 1.86s
+[2026-11-07T15:28:21.4388631+09:00]    + flatbuffers==25.12.19
+[2026-11-07T15:28:21.4408753+09:00]    + numpy==2.5.4
+[2026-11-07T15:28:21.4428950+09:00]    + onnxruntime==1.31.1
+[2026-11-07T15:28:21.4449161+09:00]    + onnxruntime-ep-openvino==1.8.1
+[2026-11-07T15:28:21.4469319+09:00]    + onnxruntime-ep-webgpu==0.5.0
+[2026-11-07T15:28:21.4489521+09:00]    + onnxruntime-genai==0.19.0
+[2026-11-07T15:28:21.4527256+09:00]    + packaging==26.3
+[2026-11-07T15:28:21.4527256+09:00]    + protobuf==7.36.2
+[2026-11-07T15:28:21.4607674+09:00] venv genai ready
+[2026-11-07T15:28:21.4923945+09:00]   Using CPython 3.12.10 interpreter at: C:\Users\USER\AppData\Local\Programs\Python\Python312\python.exe
+[2026-11-07T15:28:21.5000512+09:00]   Creating virtual environment at: C:\src\llmzoo\.venv-genai-cuda
+[2026-11-07T15:28:21.5077034+09:00]   Activate with: C:\src\llmzoo\.venv-genai-cuda\Scripts\activate
+[2026-11-07T15:28:21.9117968+09:00]   Using Python 3.12.10 environment at: C:\src\llmzoo\.venv-genai-cuda
+[2026-11-07T15:28:22.4512754+09:00]   Resolved 10 packages in 536ms
+[2026-11-07T15:28:24.0961437+09:00]   Installed 10 packages in 1.60s
+[2026-11-07T15:28:24.1009412+09:00]    + flatbuffers==25.12.19
+[2026-11-07T15:28:24.1029610+09:00]    + numpy==2.5.4
+[2026-11-07T15:28:24.1029610+09:00]    + nvidia-cublas==13.10.0.20
+[2026-11-07T15:28:24.1029610+09:00]    + nvidia-cuda-nvrtc==13.5.37
+[2026-11-07T15:28:24.1073618+09:00]    + nvidia-cuda-runtime==13.5.37
+[2026-11-07T15:28:24.1113909+09:00]    + nvidia-cudnn-cu13==9.28.0.42
+[2026-11-07T15:28:24.1134062+09:00]    + onnxruntime-genai-cuda==0.19.0
+[2026-11-07T15:28:24.1154227+09:00]    + onnxruntime-gpu==1.31.1
+[2026-11-07T15:28:24.1174385+09:00]    + packaging==26.3
+[2026-11-07T15:28:24.1194522+09:00]    + protobuf==7.36.2
+[2026-11-07T15:28:24.1214650+09:00] venv genai-cuda ready
+[2026-11-07T15:28:24.1727367+09:00]   Using CPython 3.12.10 interpreter at: C:\Users\USER\AppData\Local\Programs\Python\Python312\python.exe
+[2026-11-07T15:28:24.1773191+09:00]   Creating virtual environment at: C:\src\llmzoo\.venv-ovgenai
+[2026-11-07T15:28:24.1832376+09:00]   Activate with: C:\src\llmzoo\.venv-ovgenai\Scripts\activate
+[2026-11-07T15:28:24.5837957+09:00]   Using Python 3.12.10 environment at: C:\src\llmzoo\.venv-ovgenai
+[2026-11-07T15:28:24.7334400+09:00]   Resolved 5 packages in 140ms
+[2026-11-07T15:28:24.7550274+09:00]   Downloading openvino-tokenizers (1.5MiB)
+[2026-11-07T15:28:24.7575858+09:00]   Downloading openvino-genai (3.7MiB)
+[2026-11-07T15:28:24.8505741+09:00]    Downloaded openvino-tokenizers
+[2026-11-07T15:28:24.9160441+09:00]    Downloaded openvino-genai
+[2026-11-07T15:28:24.9160441+09:00]   Prepared 2 packages in 174ms
+[2026-11-07T15:28:26.7400322+09:00]   Installed 5 packages in 1.82s
+[2026-11-07T15:28:26.7400322+09:00]    + numpy==2.5.4
+[2026-11-07T15:28:26.7468590+09:00]    + openvino==2026.4.1
+[2026-11-07T15:28:26.7502915+09:00]    + openvino-genai==2026.4.1.0
+[2026-11-07T15:28:26.7502915+09:00]    + openvino-telemetry==2025.2.0
+[2026-11-07T15:28:26.7502915+09:00]    + openvino-tokenizers==2026.4.1.0
+[2026-11-07T15:28:26.7502915+09:00] venv ovgenai ready
+[2026-11-07T15:28:26.7876084+09:00]   Using CPython 3.12.10 interpreter at: C:\src\llmzoo\.venv-genai\Scripts\python.exe
+[2026-11-07T15:28:26.8645438+09:00]   Resolved 4 packages in 64ms
+[2026-11-07T15:28:28.1357515+09:00]   Installed 4 packages in 1.23s
+[2026-11-07T15:28:28.1379652+09:00]    + nvidia-cublas-cu12==12.9.2.10
+[2026-11-07T15:28:28.1399861+09:00]    + nvidia-cuda-nvrtc-cu12==12.9.86
+[2026-11-07T15:28:28.1440275+09:00]    + nvidia-cuda-runtime-cu12==12.9.79
+[2026-11-07T15:28:28.1460454+09:00]    + nvidia-cudnn-cu12==9.28.0.42
+[2026-11-07T15:28:29.4077429+09:00] cuda12\dll: 17 DLLs
+[2026-11-07T15:28:30.0345517+09:00] setup done

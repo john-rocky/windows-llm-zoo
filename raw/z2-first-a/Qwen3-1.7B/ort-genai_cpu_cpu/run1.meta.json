@@ -1,0 +1,75 @@
+{
+    "cell":  "Qwen3-1.7B\\ort-genai_cpu_cpu",
+    "run":  1,
+    "mode":  "first",
+    "sitting":  "z2-first-a",
+    "start":  "2026-11-07T15:54:15.5370753+09:00",
+    "gate":  null,
+    "before":  {
+                   "load":  {
+                                "cpu":  54.7,
+                                "build_ms":  0,
+                                "top":  [
+                                            "python 28508 5.56 core",
+                                            "System 4 0.99 core",
+                                            "MsMpEng 5548 0.51 core",
+                                            "powershell 28956 0.48 core",
+                                            "python 8100 0.34 core"
+                                        ]
+                            },
+                   "nvidia":  "P0, 2377 MHz, 14001 MHz, 19.26 W, 0 %, 0 MiB, 56",
+                   "availGB":  20.3
+               },
+    "command":  "C:\\src\\llmzoo\\.venv-genai\\Scripts\\python.exe -u C:\\src\\llmzoo\\pc\\run_genai.py --model-dir C:\\src\\llmzoo\\models\\onnx-community__Qwen3-1.7B-ONNX\\onnxruntime\\cpu_and_mobile\\cpu-int4-kld-block-128 --ep follow_config --prompt-file C:\\src\\llmzoo\\pc\\short-chat.txt --out C:\\src\\llmzoo\\runs\\z2-first-a\\Qwen3-1.7B\\ort-genai_cpu_cpu\\run1.json",
+    "engine":  {
+                   "exitCode":  0,
+                   "timedOut":  false,
+                   "yielded":  false,
+                   "enginePid":  22232,
+                   "elapsedSeconds":  36.885,
+                   "peakWorkingSetBytes":  2550398976,
+                   "gpuMiBPeak":  {
+                                      "0x00000000_0x00012C48":  {
+                                                                    "shared":  0,
+                                                                    "dedicated":  0
+                                                                },
+                                      "0x00000000_0x0001260E":  {
+                                                                    "shared":  23,
+                                                                    "dedicated":  0
+                                                                },
+                                      "0x00000000_0x00013E4C":  {
+                                                                    "shared":  0,
+                                                                    "dedicated":  0
+                                                                }
+                                  },
+                   "watchPeakWorkingSetBytes":  0,
+                   "watchGpuMiBPeak":  {
+
+                                       },
+                   "nvidiaSamples":  [
+                                         "5s P0, 502 MHz, 14001 MHz, 19.23 W, 0 %, 0 MiB, 56",
+                                         "10s P0, 802 MHz, 14001 MHz, 19.06 W, 0 %, 0 MiB, 56",
+                                         "15s P0, 1462 MHz, 14001 MHz, 19.16 W, 0 %, 0 MiB, 56",
+                                         "20s P0, 960 MHz, 14001 MHz, 19.16 W, 0 %, 0 MiB, 56",
+                                         "25s P0, 1162 MHz, 14001 MHz, 19.22 W, 0 %, 0 MiB, 56",
+                                         "30s P0, 2130 MHz, 14001 MHz, 19.12 W, 0 %, 0 MiB, 56",
+                                         "35s P0, 5145 MHz, 14001 MHz, 19.35 W, 0 %, 0 MiB, 56"
+                                     ]
+               },
+    "after":  {
+                  "load":  {
+                               "cpu":  47.9,
+                               "build_ms":  0,
+                               "top":  [
+                                           "python 28508 5.99 core",
+                                           "python 12180 0.86 core",
+                                           "System 4 0.22 core",
+                                           "WmiPrvSE 7560 0.13 core",
+                                           "foundrylocald 27524 0.13 core"
+                                       ]
+                           },
+                  "nvidia":  "P0, 14497 MHz, 14001 MHz, 19.36 W, 0 %, 0 MiB, 56"
+              },
+    "end":  "2026-11-07T15:54:54.3955224+09:00",
+    "tries":  1
+}

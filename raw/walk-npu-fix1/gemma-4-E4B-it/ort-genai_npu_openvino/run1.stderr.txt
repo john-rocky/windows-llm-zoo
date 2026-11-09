@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "C:\src\llmzoo-walk\pc\run_genai.py", line 214, in main
+    model = make_model(og, args)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\src\llmzoo-walk\pc\run_genai.py", line 135, in make_model
+    return og.Model(config)
+           ^^^^^^^^^^^^^^^^
+RuntimeError: 'enable_causallm' is enabled, but the model graph has been partitioned into 277 subgraphs. CausalLM mode requires the entire model to be compiled as a single subgraph.
+

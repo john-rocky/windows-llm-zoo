@@ -1,0 +1,415 @@
+{
+ "model": "gemma-4-E2B-it",
+ "cell": "llama.cpp_cpu_cpu",
+ "runtime": "llama.cpp",
+ "device": "cpu",
+ "device_name": "Intel(R) Core(TM) Ultra 9 386H",
+ "backend": "cpu",
+ "backend_detail": "llama.cpp CPU asset, llama-cli default threads (16)",
+ "source": "edge-llm-bench",
+ "bench_arm": "llama.cpp",
+ "bench_commit": "e9be97795e96b82e81ec8608ce1f04c2bf16a88a",
+ "shelf": {
+  "repo": "unsloth/gemma-4-E2B-it-GGUF",
+  "files": [
+   "gemma-4-E2B-it-Q4_K_M.gguf"
+  ],
+  "quant": "Q4_K_M"
+ },
+ "workload": {
+  "task": "short-chat",
+  "prompt": "prompts/text/short-chat.txt of edge-llm-bench",
+  "output_budget_tokens": 128,
+  "context_tokens": 2048,
+  "regime": "cold (first conversation of a fresh engine process)",
+  "counting": "runs=3 per sitting; run 1 of a LiteRT-LM, Vulkan or CUDA row is the cache build (firstEver) and is not counted; a text-check failure is not counted"
+ },
+ "status": "measured",
+ "table": {
+  "sitting": "2026-11-07-windows-wait-session-2",
+  "decode_tps": 37.8,
+  "cold_spread_pct": 2.38,
+  "cold_n": 3,
+  "prefill_tps": 162.6,
+  "ttft_ms": null,
+  "peak_working_set_mb": 2645.046875,
+  "text_check": "3/3 PASS",
+  "decode_tps_warm": null
+ },
+ "sittings": [
+  {
+   "campaign": "2026-11-05-windows-s1",
+   "first_record_jst": "2026-11-05 21:37 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200"
+   ],
+   "engine": "b11721-win-cpu-x64",
+   "runs_in_sitting": 3,
+   "cold_n": 3,
+   "decode_tps_cold_median": 35.6,
+   "cold_spread_pct": 0.28,
+   "counted": true,
+   "prefill_tps_cold_median": 151.8,
+   "ttft_ms_cold_median": null,
+   "peak_working_set_mb_median": 2647.26171875,
+   "decode_tps_warm_median": null,
+   "text_check": "3/3 PASS",
+   "quant": "Q4_K_M",
+   "records": [
+    "results/raw/2026-11-05-windows-s1/llama.cpp_unsloth_gemma-4-E2B-it-GGUF_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-05-windows",
+   "first_record_jst": "2026-11-05 21:50 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200"
+   ],
+   "engine": "b11721-win-cpu-x64",
+   "runs_in_sitting": 3,
+   "cold_n": 3,
+   "decode_tps_cold_median": 35.4,
+   "cold_spread_pct": 1.69,
+   "counted": true,
+   "prefill_tps_cold_median": 152.2,
+   "ttft_ms_cold_median": null,
+   "peak_working_set_mb_median": 2647.12890625,
+   "decode_tps_warm_median": null,
+   "text_check": "3/3 PASS",
+   "quant": "Q4_K_M",
+   "records": [
+    "results/raw/2026-11-05-windows/llama.cpp_unsloth_gemma-4-E2B-it-GGUF_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-06-windows-drift-s1",
+   "first_record_jst": "2026-11-06 17:25 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200"
+   ],
+   "engine": "b11721-win-cpu-x64",
+   "runs_in_sitting": 3,
+   "cold_n": 3,
+   "decode_tps_cold_median": 36.3,
+   "cold_spread_pct": 19.83,
+   "counted": false,
+   "prefill_tps_cold_median": 141.4,
+   "ttft_ms_cold_median": null,
+   "peak_working_set_mb_median": 2645.23828125,
+   "decode_tps_warm_median": null,
+   "text_check": "3/3 PASS",
+   "quant": "Q4_K_M",
+   "records": [
+    "results/raw/2026-11-06-windows-drift-s1/llama.cpp_unsloth_gemma-4-E2B-it-GGUF_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-06-windows-drift2-s1",
+   "first_record_jst": "2026-11-06 18:49 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "b11721-win-cpu-x64",
+   "runs_in_sitting": 3,
+   "cold_n": 3,
+   "decode_tps_cold_median": 37.6,
+   "cold_spread_pct": 7.45,
+   "counted": false,
+   "prefill_tps_cold_median": 156.0,
+   "ttft_ms_cold_median": null,
+   "peak_working_set_mb_median": 2645.484375,
+   "decode_tps_warm_median": null,
+   "text_check": "3/3 PASS",
+   "quant": "Q4_K_M",
+   "records": [
+    "results/raw/2026-11-06-windows-drift2-s1/llama.cpp_unsloth_gemma-4-E2B-it-GGUF_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-06-windows-drift2",
+   "first_record_jst": "2026-11-06 19:04 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "b11721-win-cpu-x64",
+   "runs_in_sitting": 3,
+   "cold_n": 3,
+   "decode_tps_cold_median": 37.8,
+   "cold_spread_pct": 0.53,
+   "counted": true,
+   "prefill_tps_cold_median": 153.2,
+   "ttft_ms_cold_median": null,
+   "peak_working_set_mb_median": 2645.67578125,
+   "decode_tps_warm_median": null,
+   "text_check": "3/3 PASS",
+   "quant": "Q4_K_M",
+   "records": [
+    "results/raw/2026-11-06-windows-drift2/llama.cpp_unsloth_gemma-4-E2B-it-GGUF_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-06-windows-drift3-s1",
+   "first_record_jst": "2026-11-06 21:41 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "b11721-win-cpu-x64",
+   "runs_in_sitting": 3,
+   "cold_n": 3,
+   "decode_tps_cold_median": 37.6,
+   "cold_spread_pct": 0.27,
+   "counted": true,
+   "prefill_tps_cold_median": 154.7,
+   "ttft_ms_cold_median": null,
+   "peak_working_set_mb_median": 2645.6171875,
+   "decode_tps_warm_median": null,
+   "text_check": "3/3 PASS",
+   "quant": "Q4_K_M",
+   "records": [
+    "results/raw/2026-11-06-windows-drift3-s1/llama.cpp_unsloth_gemma-4-E2B-it-GGUF_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-06-windows-drift3",
+   "first_record_jst": "2026-11-06 21:54 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "b11721-win-cpu-x64",
+   "runs_in_sitting": 3,
+   "cold_n": 3,
+   "decode_tps_cold_median": 37.4,
+   "cold_spread_pct": 3.21,
+   "counted": true,
+   "prefill_tps_cold_median": 159.7,
+   "ttft_ms_cold_median": null,
+   "peak_working_set_mb_median": 2645.46484375,
+   "decode_tps_warm_median": null,
+   "text_check": "3/3 PASS",
+   "quant": "Q4_K_M",
+   "records": [
+    "results/raw/2026-11-06-windows-drift3/llama.cpp_unsloth_gemma-4-E2B-it-GGUF_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-06-windows-cuda-s1",
+   "first_record_jst": "2026-11-07 00:11 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "b11721-win-cpu-x64",
+   "runs_in_sitting": 3,
+   "cold_n": 3,
+   "decode_tps_cold_median": 33.7,
+   "cold_spread_pct": 21.07,
+   "counted": false,
+   "prefill_tps_cold_median": 134.9,
+   "ttft_ms_cold_median": null,
+   "peak_working_set_mb_median": 2645.73046875,
+   "decode_tps_warm_median": null,
+   "text_check": "3/3 PASS",
+   "quant": "Q4_K_M",
+   "records": [
+    "results/raw/2026-11-06-windows-cuda-s1/llama.cpp_unsloth_gemma-4-E2B-it-GGUF_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-06-windows-cuda",
+   "first_record_jst": "2026-11-07 00:27 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "b11721-win-cpu-x64",
+   "runs_in_sitting": 3,
+   "cold_n": 3,
+   "decode_tps_cold_median": 36.9,
+   "cold_spread_pct": 16.26,
+   "counted": false,
+   "prefill_tps_cold_median": 127.8,
+   "ttft_ms_cold_median": null,
+   "peak_working_set_mb_median": 2645.6953125,
+   "decode_tps_warm_median": null,
+   "text_check": "3/3 PASS",
+   "quant": "Q4_K_M",
+   "records": [
+    "results/raw/2026-11-06-windows-cuda/llama.cpp_unsloth_gemma-4-E2B-it-GGUF_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-07-windows-qwen3-s1",
+   "first_record_jst": "2026-11-07 03:30 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "b11721-win-cpu-x64",
+   "runs_in_sitting": 3,
+   "cold_n": 3,
+   "decode_tps_cold_median": 36.1,
+   "cold_spread_pct": 11.63,
+   "counted": false,
+   "prefill_tps_cold_median": 158.9,
+   "ttft_ms_cold_median": null,
+   "peak_working_set_mb_median": 2646.12109375,
+   "decode_tps_warm_median": null,
+   "text_check": "3/3 PASS",
+   "quant": "Q4_K_M",
+   "records": [
+    "results/raw/2026-11-07-windows-qwen3-s1/llama.cpp_unsloth_gemma-4-E2B-it-GGUF_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-07-windows-qwen3",
+   "first_record_jst": "2026-11-07 04:34 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "b11721-win-cpu-x64",
+   "runs_in_sitting": 3,
+   "cold_n": 3,
+   "decode_tps_cold_median": 37.4,
+   "cold_spread_pct": 1.87,
+   "counted": true,
+   "prefill_tps_cold_median": 162.1,
+   "ttft_ms_cold_median": null,
+   "peak_working_set_mb_median": 2645.49609375,
+   "decode_tps_warm_median": null,
+   "text_check": "3/3 PASS",
+   "quant": "Q4_K_M",
+   "records": [
+    "results/raw/2026-11-07-windows-qwen3/llama.cpp_unsloth_gemma-4-E2B-it-GGUF_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-07-windows-e4b-s1",
+   "first_record_jst": "2026-11-07 07:26 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "b11721-win-cpu-x64",
+   "runs_in_sitting": 3,
+   "cold_n": 3,
+   "decode_tps_cold_median": 37.7,
+   "cold_spread_pct": 3.18,
+   "counted": true,
+   "prefill_tps_cold_median": 153.1,
+   "ttft_ms_cold_median": null,
+   "peak_working_set_mb_median": 2645.328125,
+   "decode_tps_warm_median": null,
+   "text_check": "3/3 PASS",
+   "quant": "Q4_K_M",
+   "records": [
+    "results/raw/2026-11-07-windows-e4b-s1/llama.cpp_unsloth_gemma-4-E2B-it-GGUF_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-07-windows-e4b",
+   "first_record_jst": "2026-11-07 08:47 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "b11721-win-cpu-x64",
+   "runs_in_sitting": 3,
+   "cold_n": 3,
+   "decode_tps_cold_median": 37.4,
+   "cold_spread_pct": 3.21,
+   "counted": true,
+   "prefill_tps_cold_median": 155.9,
+   "ttft_ms_cold_median": null,
+   "peak_working_set_mb_median": 2645.86328125,
+   "decode_tps_warm_median": null,
+   "text_check": "3/3 PASS",
+   "quant": "Q4_K_M",
+   "records": [
+    "results/raw/2026-11-07-windows-e4b/llama.cpp_unsloth_gemma-4-E2B-it-GGUF_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-07-windows-wait-poll-1",
+   "first_record_jst": "2026-11-07 16:27 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "b11721-win-cpu-x64",
+   "runs_in_sitting": 3,
+   "cold_n": 3,
+   "decode_tps_cold_median": 37.3,
+   "cold_spread_pct": 6.17,
+   "counted": false,
+   "prefill_tps_cold_median": 154.9,
+   "ttft_ms_cold_median": null,
+   "peak_working_set_mb_median": 2645.24609375,
+   "decode_tps_warm_median": null,
+   "text_check": "3/3 PASS",
+   "quant": "Q4_K_M",
+   "records": [
+    "results/raw/2026-11-07-windows-wait-poll-1/llama.cpp_unsloth_gemma-4-E2B-it-GGUF_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-07-windows-wait-session-1",
+   "first_record_jst": "2026-11-07 16:41 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "b11721-win-cpu-x64",
+   "runs_in_sitting": 3,
+   "cold_n": 3,
+   "decode_tps_cold_median": 37.0,
+   "cold_spread_pct": 1.89,
+   "counted": true,
+   "prefill_tps_cold_median": 152.8,
+   "ttft_ms_cold_median": null,
+   "peak_working_set_mb_median": 2645.27734375,
+   "decode_tps_warm_median": null,
+   "text_check": "3/3 PASS",
+   "quant": "Q4_K_M",
+   "records": [
+    "results/raw/2026-11-07-windows-wait-session-1/llama.cpp_unsloth_gemma-4-E2B-it-GGUF_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-07-windows-wait-poll-2",
+   "first_record_jst": "2026-11-07 16:56 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "b11721-win-cpu-x64",
+   "runs_in_sitting": 3,
+   "cold_n": 3,
+   "decode_tps_cold_median": 37.5,
+   "cold_spread_pct": 0.8,
+   "counted": true,
+   "prefill_tps_cold_median": 160.4,
+   "ttft_ms_cold_median": null,
+   "peak_working_set_mb_median": 2645.09765625,
+   "decode_tps_warm_median": null,
+   "text_check": "3/3 PASS",
+   "quant": "Q4_K_M",
+   "records": [
+    "results/raw/2026-11-07-windows-wait-poll-2/llama.cpp_unsloth_gemma-4-E2B-it-GGUF_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-07-windows-wait-session-2",
+   "first_record_jst": "2026-11-07 17:10 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "b11721-win-cpu-x64",
+   "runs_in_sitting": 3,
+   "cold_n": 3,
+   "decode_tps_cold_median": 37.8,
+   "cold_spread_pct": 2.38,
+   "counted": true,
+   "prefill_tps_cold_median": 162.6,
+   "ttft_ms_cold_median": null,
+   "peak_working_set_mb_median": 2645.046875,
+   "decode_tps_warm_median": null,
+   "text_check": "3/3 PASS",
+   "quant": "Q4_K_M",
+   "records": [
+    "results/raw/2026-11-07-windows-wait-session-2/llama.cpp_unsloth_gemma-4-E2B-it-GGUF_short-chat.jsonl"
+   ]
+  }
+ ]
+}

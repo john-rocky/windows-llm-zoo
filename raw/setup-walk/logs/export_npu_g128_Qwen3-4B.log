@@ -1,0 +1,4 @@
+[2026-11-07T23:16:37.3950591+09:00] export_npu start (group 128, only 'Qwen3-4B')
+[2026-11-07T23:16:41.9839679+09:00]   Using Python 3.12.10 environment at: C:\src\llmzoo-walk\.venv-ovexport
+[2026-11-07T23:16:42.3335309+09:00]   Checked 10 packages in 398ms
+[2026-11-07T23:16:42.3459104+09:00] venv ovexport: uv pip install exit 0

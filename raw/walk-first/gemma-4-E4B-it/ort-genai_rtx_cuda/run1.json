@@ -1,0 +1,107 @@
+{
+ "runner": "run_genai.py",
+ "started": "2026-11-08T04:46:26.449848+09:00",
+ "argv": [
+  "--model-dir",
+  "C:\\src\\llmzoo-walk\\models\\mlboydaisuke__gemma-4-E4B-it-Foundry-Local\\cuda-int4-8k",
+  "--ep",
+  "follow_config",
+  "--prompt-file",
+  "C:\\src\\llmzoo-walk\\pc\\short-chat.txt",
+  "--out",
+  "C:\\src\\llmzoo-walk\\runs\\walk-first\\gemma-4-E4B-it\\ort-genai_rtx_cuda\\run1.json"
+ ],
+ "pid": 24088,
+ "cuda_dll_dirs": [
+  "C:\\src\\llmzoo-walk\\.venv-genai-cuda\\Lib\\site-packages\\nvidia\\cu13\\bin\\x86_64",
+  "C:\\src\\llmzoo-walk\\.venv-genai-cuda\\Lib\\site-packages\\nvidia\\cudnn\\bin"
+ ],
+ "versions": {
+  "python": "3.12.10",
+  "onnxruntime-genai-cuda": "0.19.0",
+  "onnxruntime-gpu": "1.31.1",
+  "numpy": "2.5.4"
+ },
+ "prompt_sha256": "870aafb98e570e8fa1343ec051180237f4587233f49c0cc1391724e086d42d50",
+ "load_s": 19.72347230000014,
+ "device_type": "CUDA",
+ "chat_template": "tokenizer.apply_chat_template",
+ "templated_prompt": "<bos><|turn>user\nExplain what on-device AI means in simple terms.<turn|>\n<|turn>model\n",
+ "templated_prompt_sha256": "70b30bff1ab92ec74814a888864b33ac65c53a053b6d35e8dfa13b353830ffb2",
+ "genai_config_providers": {
+  "decoder": [
+   {
+    "cuda": {
+     "enable_skip_layer_norm_strict_mode": "1",
+     "enable_cuda_graph": "0"
+    }
+   }
+  ],
+  "vision": [
+   {
+    "cuda": {
+     "enable_skip_layer_norm_strict_mode": "1",
+     "enable_cuda_graph": "0"
+    }
+   }
+  ],
+  "embedding": [
+   {
+    "cuda": {
+     "enable_skip_layer_norm_strict_mode": "1",
+     "enable_cuda_graph": "0"
+    }
+   }
+  ],
+  "speech": [
+   {
+    "cuda": {
+     "enable_skip_layer_norm_strict_mode": "1",
+     "enable_cuda_graph": "0"
+    }
+   }
+  ]
+ },
+ "gens": [
+  {
+   "prompt_tokens": 20,
+   "generated_tokens": 128,
+   "stop": "length",
+   "sequence_length": 148,
+   "generator_s": 0.03761740001209546,
+   "prefill_ms": 1833.0824000004213,
+   "first_step_ms": 108.24729999876581,
+   "ttft_ms": 1941.3296999991871,
+   "prefill_tps": 10.910584270513645,
+   "decode_tps": 27.350768982002524,
+   "decode_s": 4.64337949999026,
+   "generation_wall_s": 6.5965167000103975,
+   "text": "Imagine your smartphone or a smart device (like a smart speaker or fitness tracker) is like a very smart assistant.\n\n**\"On-device AI\" simply means that the \"brain\" or the \"thinking part\" of that assistant is actually *inside* the device itself, not constantly needing to talk to the internet.**\n\nHere is a breakdown using simple analogies:\n\n---\n\n### 🧠 The \"Cloud\" vs. The \"Device\"\n\nTo understand it, it helps to compare it to two places where AI can run:\n\n**1. Cloud AI (The Old Way):**\n* **Analogy:** Sending a",
+   "text_sha256": "cb677b66676546773844ff2dac3c05d2c798649b4d703d16063dbe53fe504964",
+   "gen": 1,
+   "regime": "cold"
+  },
+  {
+   "prompt_tokens": 20,
+   "generated_tokens": 128,
+   "stop": "length",
+   "sequence_length": 148,
+   "generator_s": 0.001961199988727458,
+   "prefill_ms": 54.568399995332584,
+   "first_step_ms": 0.18810000619851053,
+   "ttft_ms": 54.756500001531094,
+   "prefill_tps": 366.51248711178386,
+   "decode_tps": 32.87841855805492,
+   "decode_s": 3.8627162001648685,
+   "generation_wall_s": 3.9293555000040215,
+   "text": "Imagine your smartphone or a smart device (like a smart speaker or fitness tracker) is like a very smart assistant.\n\n**\"On-device AI\" simply means that the \"brain\" or the \"thinking part\" of that assistant is actually *inside* the device itself, not constantly needing to talk to the internet.**\n\nHere is a breakdown using simple analogies:\n\n---\n\n### 🧠 The \"Cloud\" vs. The \"Device\"\n\nTo understand it, it helps to compare it to two places where AI can run:\n\n**1. Cloud AI (The Old Way):**\n* **Analogy:** Sending a",
+   "text_sha256": "cb677b66676546773844ff2dac3c05d2c798649b4d703d16063dbe53fe504964",
+   "gen": 2,
+   "regime": "warm"
+  }
+ ],
+ "status": "OK",
+ "peak_working_set_bytes": 1388179456,
+ "peak_pagefile_bytes": 12319211520,
+ "ended": "2026-11-08T04:47:02.559761+09:00"
+}

@@ -1,0 +1,76 @@
+{
+ "runner": "run_foundry.py",
+ "started": "2026-11-08T05:21:19.452740+09:00",
+ "argv": [
+  "--model",
+  "qwen3-1.7b-generic-cpu:2",
+  "--path",
+  "/v1",
+  "--prompt-file",
+  "C:\\src\\llmzoo-walk\\pc\\short-chat.txt",
+  "--out",
+  "C:\\src\\llmzoo-walk\\runs\\walk-foundry2\\Qwen3-1.7B\\foundry_cpu_cpu\\run1.json"
+ ],
+ "prompt_sha256": "870aafb98e570e8fa1343ec051180237f4587233f49c0cc1391724e086d42d50",
+ "daemon_json": {
+  "pid": 29304,
+  "web_urls": [
+   "http://127.0.0.1:62961"
+  ],
+  "protocol_version": 3,
+  "daemon_version": "0.13.0",
+  "package_version": "0.13.0",
+  "sdk_version": "2.3.0",
+  "started_at": "2026-11-07T20:21:09.5536412+00:00",
+  "log_file": "C:\\Users\\USER\\.foundry\\logs\\foundrylocald-2026-11-07.log",
+  "sdk_package_version": "2.3.0",
+  "runtime_package_version": "2.3.0",
+  "ort_package_version": "1.31.0",
+  "ort_gen_ai_package_version": "0.18.0",
+  "native_runtime_version": null,
+  "native_ort_version": null,
+  "foundry_local_core_version": "2.3.0",
+  "ort_version": "1.31.0",
+  "ort_gen_ai_version": "0.18.0",
+  "foundry_local_runtime_version": "2.3.0"
+ },
+ "url": "http://127.0.0.1:62961/v1",
+ "gens": [
+  {
+   "prompt_tokens": 19,
+   "generated_tokens": 128,
+   "chunks": 127,
+   "delta_fields": {
+    "reasoning_content": 127
+   },
+   "stop": "length",
+   "ttft_ms": 600.4379999940284,
+   "prefill_tps": 31.643566863171493,
+   "decode_tps": 12.92397444340025,
+   "request_wall_s": 10.351090199997998,
+   "text": "\nOkay, the user wants me to explain what on-device AI means in simple terms. Let me break this down.\n\nFirst, I need to define what on-device AI is. On-device AI refers to AI models that run on the device itself, rather than being cloud-based. \n\nSo, the key points are: running on the device, not relying on the cloud, and the benefits of this approach.\n\nNow, I need to explain this in simple terms. Avoid jargon. Make it easy to understand.\n\nSo, maybe start by explaining what AI is. Then, explain on-device AI as running on the device itself, not",
+   "text_sha256": "0095927ab2a160c8605243ac02ef65a9a6c72e377efac91062d88008bf99bb52",
+   "gen": 1,
+   "regime": "cold"
+  },
+  {
+   "prompt_tokens": 19,
+   "generated_tokens": 128,
+   "chunks": 127,
+   "delta_fields": {
+    "reasoning_content": 127
+   },
+   "stop": "length",
+   "ttft_ms": 436.1834000010276,
+   "prefill_tps": 43.55965862056015,
+   "decode_tps": 15.205506951897519,
+   "request_wall_s": 8.724156200012658,
+   "text": "\nOkay, the user wants me to explain what on-device AI means in simple terms. Let me break this down.\n\nFirst, I need to define what on-device AI is. On-device AI refers to AI models that run on the device itself, rather than being cloud-based. \n\nSo, the key points are: running on the device, not relying on the cloud, and the benefits of this approach.\n\nNow, I need to explain this in simple terms. Avoid jargon. Make it easy to understand.\n\nSo, maybe start by explaining what AI is. Then, explain on-device AI as running on the device itself, not",
+   "text_sha256": "0095927ab2a160c8605243ac02ef65a9a6c72e377efac91062d88008bf99bb52",
+   "gen": 2,
+   "regime": "warm"
+  }
+ ],
+ "status": "OK",
+ "ended": "2026-11-08T05:21:38.580079+09:00"
+}

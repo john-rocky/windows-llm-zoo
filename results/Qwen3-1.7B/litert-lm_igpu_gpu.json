@@ -1,0 +1,107 @@
+{
+ "model": "Qwen3-1.7B",
+ "cell": "litert-lm_igpu_gpu",
+ "runtime": "litert-lm",
+ "device": "igpu",
+ "device_name": "Intel(R) Graphics",
+ "backend": "gpu",
+ "backend_detail": "LiteRT-LM GPU (WebGPU on Direct3D 12), the integrated GPU (Windows' per-app GpuPreference=1;)",
+ "source": "edge-llm-bench",
+ "bench_arm": "litert-lm-gpu-igpu",
+ "bench_commit": "e9be97795e96b82e81ec8608ce1f04c2bf16a88a",
+ "shelf": {
+  "repo": "litert-community/Qwen3-1.7B",
+  "files": [
+   "Qwen3-1.7B_dynamic_wi4b32_afp32.litertlm"
+  ],
+  "quant": "INT4 (dynamic, block-32 weights, FP32 act; GPU-graph build)"
+ },
+ "workload": {
+  "task": "short-chat",
+  "prompt": "prompts/text/short-chat.txt of edge-llm-bench",
+  "output_budget_tokens": 128,
+  "context_tokens": 2048,
+  "regime": "cold (first conversation of a fresh engine process)",
+  "counting": "runs=3 per sitting; run 1 of a LiteRT-LM, Vulkan or CUDA row is the cache build (firstEver) and is not counted; a text-check failure is not counted"
+ },
+ "status": "measured",
+ "table": {
+  "sitting": "2026-11-08-windows-gpu-q17",
+  "decode_tps": 32.5,
+  "cold_spread_pct": 0.55,
+  "cold_n": 2,
+  "prefill_tps": 20.855,
+  "ttft_ms": 1065.0,
+  "peak_working_set_mb": 2275.9765625,
+  "text_check": "5/5 PASS",
+  "decode_tps_warm": 54.85
+ },
+ "sittings": [
+  {
+   "campaign": "2026-11-07-windows-igpu-s1",
+   "first_record_jst": "2026-11-07 13:29 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "v0.19.0",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 32.6,
+   "cold_spread_pct": 0.18,
+   "counted": true,
+   "prefill_tps_cold_median": 16.455000000000002,
+   "ttft_ms_cold_median": 1185.0,
+   "peak_working_set_mb_median": 2273.99609375,
+   "decode_tps_warm_median": 54.99,
+   "text_check": "5/5 PASS",
+   "quant": "INT4 (dynamic, block-32 weights, FP32 act; GPU-graph build)",
+   "records": [
+    "results/raw/2026-11-07-windows-igpu-s1/litert-lm-gpu-igpu_litert-community_Qwen3-1.7B_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-07-windows-igpu",
+   "first_record_jst": "2026-11-07 13:45 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "v0.19.0",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 32.665,
+   "cold_spread_pct": 0.52,
+   "counted": true,
+   "prefill_tps_cold_median": 16.08,
+   "ttft_ms_cold_median": 1210.0,
+   "peak_working_set_mb_median": 2274.37890625,
+   "decode_tps_warm_median": 54.99,
+   "text_check": "5/5 PASS",
+   "quant": "INT4 (dynamic, block-32 weights, FP32 act; GPU-graph build)",
+   "records": [
+    "results/raw/2026-11-07-windows-igpu/litert-lm-gpu-igpu_litert-community_Qwen3-1.7B_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-08-windows-gpu-q17",
+   "first_record_jst": "2026-11-08 16:04 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "v0.19.0",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 32.5,
+   "cold_spread_pct": 0.55,
+   "counted": true,
+   "prefill_tps_cold_median": 20.855,
+   "ttft_ms_cold_median": 1065.0,
+   "peak_working_set_mb_median": 2275.9765625,
+   "decode_tps_warm_median": 54.85,
+   "text_check": "5/5 PASS",
+   "quant": "INT4 (dynamic, block-32 weights, FP32 act; GPU-graph build)",
+   "records": [
+    "results/raw/2026-11-08-windows-gpu-q17/litert-lm-gpu-igpu_litert-community_Qwen3-1.7B_short-chat.jsonl"
+   ]
+  }
+ ]
+}

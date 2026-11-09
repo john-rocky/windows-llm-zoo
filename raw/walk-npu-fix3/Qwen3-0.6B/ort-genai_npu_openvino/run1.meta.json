@@ -1,0 +1,72 @@
+{
+    "cell":  "Qwen3-0.6B\\ort-genai_npu_openvino",
+    "run":  1,
+    "mode":  "first",
+    "sitting":  "walk-npu-fix3",
+    "start":  "2026-11-07T23:18:18.8435888+09:00",
+    "osBuild":  "26200.9711",
+    "gate":  null,
+    "before":  {
+                   "load":  {
+                                "cpu":  87.4,
+                                "build_ms":  7891,
+                                "top":  [
+                                            "cl 30276 6.75 core",
+                                            "python 2768 3.18 core",
+                                            "System 4 1.26 core",
+                                            "python 33828 0.74 core",
+                                            "cl 6116 0.62 core"
+                                        ]
+                            },
+                   "nvidia":  "P0, 40627 MHz, 14001 MHz, 19.08 W, 0 %, 0 MiB, 56",
+                   "availGB":  10.1
+               },
+    "command":  "C:\\src\\llmzoo-walk\\.venv-genai\\Scripts\\python.exe -u C:\\src\\llmzoo-walk\\pc\\run_genai.py --model-dir C:\\src\\llmzoo-walk\\models\\onnx-community__Qwen3-0.6B-ONNX\\onnxruntime\\cpu_and_mobile\\cpu-int4-kld-block-128 --ep openvino --ov-device NPU --ep-option disable_dynamic_shapes=True --prompt-file C:\\src\\llmzoo-walk\\pc\\short-chat.txt --out C:\\src\\llmzoo-walk\\runs\\walk-npu-fix3\\Qwen3-0.6B\\ort-genai_npu_openvino\\run1.json",
+    "engine":  {
+                   "exitCode":  1,
+                   "timedOut":  false,
+                   "yielded":  false,
+                   "suspendedSeconds":  0,
+                   "suspensions":  0,
+                   "enginePid":  22824,
+                   "elapsedSeconds":  4.983,
+                   "peakWorkingSetBytes":  1018572800,
+                   "gpuMiBPeak":  {
+                                      "0x00000000_0x00012C48":  {
+                                                                    "shared":  0,
+                                                                    "dedicated":  0
+                                                                },
+                                      "0x00000000_0x0001260E":  {
+                                                                    "shared":  23,
+                                                                    "dedicated":  0
+                                                                },
+                                      "0x00000000_0x00013E4C":  {
+                                                                    "shared":  0,
+                                                                    "dedicated":  0
+                                                                }
+                                  },
+                   "watchPeakWorkingSetBytes":  0,
+                   "watchGpuMiBPeak":  {
+
+                                       },
+                   "nvidiaSamples":  [
+
+                                     ]
+               },
+    "after":  {
+                  "load":  {
+                               "cpu":  47,
+                               "build_ms":  3000,
+                               "top":  [
+                                           "System 4 1.34 core",
+                                           "python 22180 1.04 core",
+                                           "cl 25592 1.01 core",
+                                           "cl 1464 1 core",
+                                           "python 33828 0.95 core"
+                                       ]
+                           },
+                  "nvidia":  "P0, 9945 MHz, 14001 MHz, 18.85 W, 0 %, 0 MiB, 56"
+              },
+    "end":  "2026-11-07T23:18:25.4695931+09:00",
+    "tries":  1
+}

@@ -1,0 +1,27 @@
+{
+    "group":  -1,
+    "venv_exit":  0,
+    "models":  [
+                   {
+                       "model":  "gemma-4-E4B-it",
+                       "repo":  "google/gemma-4-E4B-it",
+                       "source":  "C:\\src\\llmzoo-walk\\hf\\google__gemma-4-E4B-it",
+                       "out":  "C:\\src\\llmzoo-walk\\models\\z2-npu\\gemma-4-E4B-it-int4-sym-cw-ov",
+                       "group":  -1,
+                       "command":  "optimum-cli export openvino --model C:\\src\\llmzoo-walk\\hf\\google__gemma-4-E4B-it --task image-text-to-text --weight-format int4 --sym --ratio 1.0 --group-size -1 C:\\src\\llmzoo-walk\\models\\z2-npu\\gemma-4-E4B-it-int4-sym-cw-ov",
+                       "exit":  "0",
+                       "attempts":  1,
+                       "running_s":  461.1,
+                       "peak_ws_mb":  22784,
+                       "peak_private_mb":  31770,
+                       "avail_gb_start":  16.2,
+                       "avail_gb_min":  0.1,
+                       "commit_used_gb_max":  50.8,
+                       "stdout":  "C:\\src\\llmzoo-walk\\logs\\export_gemma-4-E4B-it_cw.out.txt",
+                       "stderr":  "C:\\src\\llmzoo-walk\\logs\\export_gemma-4-E4B-it_cw.err.txt",
+                       "ir_info":  "C:\\src\\llmzoo-walk\\logs\\export_gemma-4-E4B-it_cw.ir.json",
+                       "end":  "2026-11-08T03:53:22.7357547+09:00"
+                   }
+               ],
+    "fetch_exit":  0
+}

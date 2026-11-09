@@ -1,0 +1,80 @@
+{
+    "cell":  "Qwen3-4B\\openvino-genai_cpu_cpu",
+    "run":  1,
+    "mode":  "first",
+    "sitting":  "walk-first",
+    "start":  "2026-11-08T00:11:51.9178019+09:00",
+    "osBuild":  "26200.9711",
+    "gate":  null,
+    "before":  {
+                   "load":  {
+                                "cpu":  50.5,
+                                "build_ms":  3031,
+                                "top":  [
+                                            "MsMpEng 5548 1.22 core",
+                                            "python 33828 1.02 core",
+                                            "cl 19712 1.01 core",
+                                            "python 34156 1.01 core",
+                                            "cl 30956 1.01 core"
+                                        ]
+                            },
+                   "nvidia":  "P0, 3690 MHz, 14001 MHz, 18.89 W, 0 %, 0 MiB, 55",
+                   "availGB":  19.1
+               },
+    "command":  "C:\\src\\llmzoo-walk\\.venv-ovgenai\\Scripts\\python.exe -u C:\\src\\llmzoo-walk\\pc\\run_ovgenai.py --model-dir C:\\src\\llmzoo-walk\\models\\OpenVINO__Qwen3-4B-int4-ov --device CPU --prompt-file C:\\src\\llmzoo-walk\\pc\\short-chat.txt --out C:\\src\\llmzoo-walk\\runs\\walk-first\\Qwen3-4B\\openvino-genai_cpu_cpu\\run1.json",
+    "engine":  {
+                   "exitCode":  0,
+                   "timedOut":  false,
+                   "yielded":  false,
+                   "suspendedSeconds":  0,
+                   "suspensions":  0,
+                   "enginePid":  22800,
+                   "elapsedSeconds":  46.699,
+                   "peakWorkingSetBytes":  4986216448,
+                   "gpuMiBPeak":  {
+                                      "0x00000000_0x00012C48":  {
+                                                                    "shared":  0,
+                                                                    "dedicated":  0
+                                                                },
+                                      "0x00000000_0x0001260E":  {
+                                                                    "shared":  21,
+                                                                    "dedicated":  0
+                                                                },
+                                      "0x00000000_0x00013E4C":  {
+                                                                    "shared":  0,
+                                                                    "dedicated":  0
+                                                                }
+                                  },
+                   "watchPeakWorkingSetBytes":  0,
+                   "watchGpuMiBPeak":  {
+
+                                       },
+                   "nvidiaSamples":  [
+                                         "5s P0, 1680 MHz, 14001 MHz, 18.96 W, 0 %, 0 MiB, 55",
+                                         "10s P0, 46447 MHz, 14001 MHz, 19.11 W, 0 %, 0 MiB, 55",
+                                         "15s P0, 12217 MHz, 14001 MHz, 18.84 W, 0 %, 0 MiB, 55",
+                                         "20s P0, 82 MHz, 14001 MHz, 19.01 W, 0 %, 0 MiB, 56",
+                                         "25s P0, 2400 MHz, 14001 MHz, 18.99 W, 0 %, 0 MiB, 56",
+                                         "30s P0, 1740 MHz, 14001 MHz, 18.98 W, 0 %, 0 MiB, 56",
+                                         "35s P0, 1357 MHz, 14001 MHz, 19.04 W, 0 %, 0 MiB, 56",
+                                         "40s P0, 4072 MHz, 14001 MHz, 19.17 W, 0 %, 0 MiB, 57",
+                                         "45s P0, 2752 MHz, 14001 MHz, 19.45 W, 0 %, 0 MiB, 57"
+                                     ]
+               },
+    "after":  {
+                  "load":  {
+                               "cpu":  83.5,
+                               "build_ms":  0,
+                               "top":  [
+                                           "python 11816 7.22 core",
+                                           "python 30160 1.79 core",
+                                           "System 4 1.26 core",
+                                           "python 34156 0.97 core",
+                                           "python 33828 0.93 core"
+                                       ]
+                           },
+                  "nvidia":  "P4, 487 MHz, 9001 MHz, 20.43 W, 0 %, 0 MiB, 57"
+              },
+    "end":  "2026-11-08T00:12:39.8799350+09:00",
+    "tries":  1
+}

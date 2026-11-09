@@ -1,0 +1,31 @@
+
+--- foundry server stop  [2026-11-08T02:42:17.8675267+09:00]
+笳・success: Server stopped.
+[exit=0, 0.73 s]
+
+--- foundry server start  [2026-11-08T02:42:18.6059576+09:00]
+笆 Starting Foundry Local server
+NvTensorRTRTXExecutionProvider: 0%
+CUDAExecutionProvider: 0%
+WebGpuExecutionProvider: 0%
+笳・success: Server ready (http://127.0.0.1:54959)
+  Public API: http://127.0.0.1:54959/v1/
+  Local API (BYOM): http://127.0.0.1:54959/catalogs/local/v1/
+[exit=0, 7.33 s]
+
+--- foundry model load gemma-4-e2b-it-generic-gpu:3  [2026-11-08T02:42:25.9560588+09:00]
+笆 Loading model (gemma-4-e2b-it-generic-gpu:3, 6.9 GB)
+笳・error: The Foundry Local runtime reported an internal error. 
+genai_model_instance.cc:218 fl::GenAIModelInstance::GenAIModelInstance failed to
+load model gemma-4-e2b-it-generic-gpu:3: Running a model with multiple providers
+is not supported. Encountered WebGPU and CUDA
+Hint: Run 'foundry report' to capture diagnostics for a bug report.
+[exit=1, 1.9 s]
+
+--- foundry model unload gemma-4-e2b-it-generic-gpu:3  [2026-11-08T02:42:28.4132813+09:00]
+笳・success: Unloaded 'gemma-4-e2b-it-generic-gpu:3' from memory.
+[exit=0, 0.13 s]
+
+--- foundry server stop  [2026-11-08T02:42:28.5436411+09:00]
+笳・success: Server stopped.
+[exit=0, 2.67 s]

@@ -1,0 +1,5 @@
+[2026-11-08T02:37:39.1219076+09:00] chain start: plan C:\src\llmzoo-walk\pc\plans\walk-npuexp3.json mode first, 1 units, pid 22420
+[2026-11-08T02:37:48.6066251+09:00] adapters: 0x00000000_0x00012C48=nvidia, 0x00000000_0x0001260E=intel-gpu, 0x00000000_0x00012BB8=?, 0x00000000_0x00013E4C=npu?
+[2026-11-08T02:37:51.3106931+09:00] gemma-4-E4B-it\openvino-genai_npu_npu-sym-g128 run 1 start
+[2026-11-08T02:47:31.2719737+09:00] gemma-4-E4B-it\openvino-genai_npu_npu-sym-g128 run 1 end: exit -1073741819, no runner JSON, 577.815 s
+[2026-11-08T02:47:31.2935373+09:00] chain done: OK

@@ -1,0 +1,118 @@
+{
+    "cell":  "Qwen3-4B\\foundry_rtx_cuda",
+    "run":  2,
+    "mode":  "timed",
+    "sitting":  "walk-timed-b",
+    "start":  "2026-11-09T00:29:21.4126872+09:00",
+    "osBuild":  "26200.9711",
+    "gate":  {
+                 "quietGate":  "quiet",
+                 "cpuReads":  [
+                                  3,
+                                  0.3,
+                                  1
+                              ],
+                 "nvidiaMiB":  0,
+                 "availGB":  24.2,
+                 "ramNeedGB":  5.2,
+                 "gpuEngines":  null
+             },
+    "before":  {
+                   "load":  {
+                                "cpu":  2.4,
+                                "build_ms":  0,
+                                "top":  [
+                                            "System 4 0.33 core",
+                                            "WUDFHost 1836 0.02 core",
+                                            "WUDFHost 9528 0.02 core",
+                                            "powershell 16780 0.02 core",
+                                            "WmiPrvSE 7560 0.02 core"
+                                        ]
+                            },
+                   "nvidia":  "P0, 6892 MHz, 14001 MHz, 17.91 W, 0 %, 0 MiB, 49",
+                   "availGB":  24.2
+               },
+    "foreignDaemon":  "none",
+    "daemonStop0":  "stopped",
+    "serverStart":  {
+                        "code":  0,
+                        "s":  11.083,
+                        "text":  "笆 Starting Foundry Local server\nOpenVINOExecutionProvider: 0%\nNvTensorRTRTXExecutionProvider: 0%\nCUDAExecutionProvider: 0%\nWebGpuExecutionProvider: 0%\n笳・success: Server ready (http://127.0.0.1:55393)\n  Public API: http://127.0.0.1:55393/v1/\n  Local API (BYOM): http://127.0.0.1:55393/catalogs/local/v1/"
+                    },
+    "daemonPid":  19056,
+    "modelLoad":  {
+                      "code":  0,
+                      "s":  16.047,
+                      "text":  "笆 Loading model (qwen3-4b-cuda-gpu:2, 2.6 GB)\n笳・success: Loaded \u0027qwen3-4b\u0027 (GPU variant \u0027qwen3-4b-cuda-gpu:2\u0027) into memory."
+                  },
+    "daemonPeakAfterLoadBytes":  1356484608,
+    "gpuAfterLoad":  {
+                         "0x00000000_0x00012C48":  {
+                                                       "shared":  74,
+                                                       "dedicated":  4296
+                                                   },
+                         "0x00000000_0x0001260E":  {
+                                                       "shared":  23,
+                                                       "dedicated":  0
+                                                   },
+                         "0x00000000_0x00013E4C":  {
+                                                       "shared":  0,
+                                                       "dedicated":  0
+                                                   }
+                     },
+    "command":  "C:\\src\\llmzoo-walk\\.venv-genai\\Scripts\\python.exe -u C:\\src\\llmzoo-walk\\pc\\run_foundry.py --model qwen3-4b-cuda-gpu:2 --path /v1 --prompt-file C:\\src\\llmzoo-walk\\pc\\short-chat.txt --out C:\\src\\llmzoo-walk\\runs\\walk-timed-b\\Qwen3-4B\\foundry_rtx_cuda\\run2.json",
+    "engine":  {
+                   "exitCode":  0,
+                   "timedOut":  false,
+                   "yielded":  false,
+                   "suspendedSeconds":  0,
+                   "suspensions":  0,
+                   "enginePid":  6924,
+                   "elapsedSeconds":  6.245,
+                   "peakWorkingSetBytes":  24158208,
+                   "gpuMiBPeak":  {
+
+                                  },
+                   "watchPeakWorkingSetBytes":  1396789248,
+                   "watchGpuMiBPeak":  {
+                                           "0x00000000_0x00012C48":  {
+                                                                         "shared":  76,
+                                                                         "dedicated":  4372
+                                                                     },
+                                           "0x00000000_0x0001260E":  {
+                                                                         "shared":  23,
+                                                                         "dedicated":  0
+                                                                     },
+                                           "0x00000000_0x00013E4C":  {
+                                                                         "shared":  0,
+                                                                         "dedicated":  0
+                                                                     }
+                                       },
+                   "nvidiaSamples":  [
+                                         "5s P0, 2722 MHz, 14001 MHz, 82.29 W, 48 %, 4372 MiB, 60"
+                                     ]
+               },
+    "daemonPeakWorkingSetBytes":  1396789248,
+    "modelUnload":  {
+                        "code":  0,
+                        "s":  0.232,
+                        "text":  "笳・success: Unloaded \u0027qwen3-4b-cuda-gpu:2\u0027 from memory."
+                    },
+    "daemonStop":  "stopped",
+    "after":  {
+                  "load":  {
+                               "cpu":  1,
+                               "build_ms":  0,
+                               "top":  [
+                                           "System 4 0.06 core",
+                                           "WUDFHost 1836 0.02 core",
+                                           "WmiPrvSE 7560 0.02 core",
+                                           "powershell 5476 0.02 core",
+                                           "msedgewebview2 17704 0.02 core"
+                                       ]
+                           },
+                  "nvidia":  "P0, 1837 MHz, 14001 MHz, 19.00 W, 0 %, 0 MiB, 54"
+              },
+    "end":  "2026-11-09T00:30:00.2863870+09:00",
+    "tries":  1
+}

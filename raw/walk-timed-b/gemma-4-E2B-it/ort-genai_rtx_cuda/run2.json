@@ -1,0 +1,107 @@
+{
+ "runner": "run_genai.py",
+ "started": "2026-11-08T19:31:38.724447+09:00",
+ "argv": [
+  "--model-dir",
+  "C:\\Users\\USER\\.foundry\\cache\\models\\Microsoft\\gemma-4-e2b-it-cuda-gpu-3\\v3",
+  "--ep",
+  "follow_config",
+  "--prompt-file",
+  "C:\\src\\llmzoo-walk\\pc\\short-chat.txt",
+  "--out",
+  "C:\\src\\llmzoo-walk\\runs\\walk-timed-b\\gemma-4-E2B-it\\ort-genai_rtx_cuda\\run2.json"
+ ],
+ "pid": 30096,
+ "cuda_dll_dirs": [
+  "C:\\src\\llmzoo-walk\\.venv-genai-cuda\\Lib\\site-packages\\nvidia\\cu13\\bin\\x86_64",
+  "C:\\src\\llmzoo-walk\\.venv-genai-cuda\\Lib\\site-packages\\nvidia\\cudnn\\bin"
+ ],
+ "versions": {
+  "python": "3.12.10",
+  "onnxruntime-genai-cuda": "0.19.0",
+  "onnxruntime-gpu": "1.31.1",
+  "numpy": "2.5.4"
+ },
+ "prompt_sha256": "870aafb98e570e8fa1343ec051180237f4587233f49c0cc1391724e086d42d50",
+ "load_s": 3.027531799976714,
+ "device_type": "CUDA",
+ "chat_template": "tokenizer.apply_chat_template",
+ "templated_prompt": "<bos><|turn>user\nExplain what on-device AI means in simple terms.<turn|>\n<|turn>model\n",
+ "templated_prompt_sha256": "70b30bff1ab92ec74814a888864b33ac65c53a053b6d35e8dfa13b353830ffb2",
+ "genai_config_providers": {
+  "decoder": [
+   {
+    "cuda": {
+     "enable_skip_layer_norm_strict_mode": "1",
+     "enable_cuda_graph": "0"
+    }
+   }
+  ],
+  "vision": [
+   {
+    "cuda": {
+     "enable_skip_layer_norm_strict_mode": "1",
+     "enable_cuda_graph": "0"
+    }
+   }
+  ],
+  "embedding": [
+   {
+    "cuda": {
+     "enable_skip_layer_norm_strict_mode": "1",
+     "enable_cuda_graph": "0"
+    }
+   }
+  ],
+  "speech": [
+   {
+    "cuda": {
+     "enable_skip_layer_norm_strict_mode": "1",
+     "enable_cuda_graph": "0"
+    }
+   }
+  ]
+ },
+ "gens": [
+  {
+   "prompt_tokens": 20,
+   "generated_tokens": 128,
+   "stop": "length",
+   "sequence_length": 148,
+   "generator_s": 0.005781399988336489,
+   "prefill_ms": 468.2083999796305,
+   "first_step_ms": 43.72790001798421,
+   "ttft_ms": 511.9362999976147,
+   "prefill_tps": 42.716021329113495,
+   "decode_tps": 43.11664638421028,
+   "decode_s": 2.9454980999289546,
+   "generation_wall_s": 3.465691899997182,
+   "text": "Imagine a computer or a device (like your smartphone, a smart camera, or a smart speaker) that can **think and learn right there on itself, without needing to constantly send everything to a big, distant internet server.**\n\nThat's essentially what **on-device AI** means.\n\nHere’s a breakdown using simple analogies:\n\n---\n\n### The Traditional Way (Cloud AI)\n\nThink of this like asking a very smart, very powerful **consultant** (the cloud server) for every single question.\n\n* **You ask:** \"What is this picture?\"\n* **Your phone sends the picture** over",
+   "text_sha256": "72775321de91ea7dc14ffa341847c32f70120fd24753c4722d3f7d57c1f8964f",
+   "gen": 1,
+   "regime": "cold"
+  },
+  {
+   "prompt_tokens": 20,
+   "generated_tokens": 128,
+   "stop": "length",
+   "sequence_length": 148,
+   "generator_s": 0.001218299992615357,
+   "prefill_ms": 34.536899998784065,
+   "first_step_ms": 0.1765000051818788,
+   "ttft_ms": 34.713400003965944,
+   "prefill_tps": 579.0907696030662,
+   "decode_tps": 45.61641351980602,
+   "decode_s": 2.7840855999093037,
+   "generation_wall_s": 2.8265989999927115,
+   "text": "Imagine a computer or a device (like your smartphone, a smart camera, or a smart speaker) that can **think and learn right there on itself, without needing to constantly send everything to a big, distant internet server.**\n\nThat's essentially what **on-device AI** means.\n\nHere’s a breakdown using simple analogies:\n\n---\n\n### The Traditional Way (Cloud AI)\n\nThink of this like asking a very smart, very powerful **consultant** (the cloud server) for every single question.\n\n* **You ask:** \"What is this picture?\"\n* **Your phone sends the picture** over",
+   "text_sha256": "72775321de91ea7dc14ffa341847c32f70120fd24753c4722d3f7d57c1f8964f",
+   "gen": 2,
+   "regime": "warm"
+  }
+ ],
+ "status": "OK",
+ "peak_working_set_bytes": 1368846336,
+ "peak_pagefile_bytes": 11767291904,
+ "ended": "2026-11-08T19:31:50.804668+09:00"
+}

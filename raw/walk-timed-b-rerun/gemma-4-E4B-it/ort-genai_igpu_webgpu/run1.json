@@ -1,0 +1,102 @@
+{
+ "runner": "run_genai.py",
+ "started": "2026-11-09T09:00:17.319859+09:00",
+ "argv": [
+  "--model-dir",
+  "C:\\src\\llmzoo-walk\\overlays\\gemma-4-E4B-it_webgpu_a1",
+  "--ep",
+  "follow_config",
+  "--prompt-file",
+  "C:\\src\\llmzoo-walk\\pc\\short-chat.txt",
+  "--out",
+  "C:\\src\\llmzoo-walk\\runs\\walk-timed-b-rerun\\gemma-4-E4B-it\\ort-genai_igpu_webgpu\\run1.json"
+ ],
+ "pid": 4768,
+ "cuda_dll_dirs": [],
+ "versions": {
+  "python": "3.12.10",
+  "onnxruntime-genai": "0.19.0",
+  "onnxruntime": "1.31.1",
+  "onnxruntime-ep-openvino": "1.8.1",
+  "onnxruntime-ep-webgpu": "0.5.0",
+  "numpy": "2.5.4"
+ },
+ "prompt_sha256": "870aafb98e570e8fa1343ec051180237f4587233f49c0cc1391724e086d42d50",
+ "load_s": 31.772144999995362,
+ "device_type": "WebGPU",
+ "chat_template": "tokenizer.apply_chat_template",
+ "templated_prompt": "<bos><|turn>user\nExplain what on-device AI means in simple terms.<turn|>\n<|turn>model\n",
+ "templated_prompt_sha256": "70b30bff1ab92ec74814a888864b33ac65c53a053b6d35e8dfa13b353830ffb2",
+ "genai_config_providers": {
+  "decoder": [
+   {
+    "WebGPU": {
+     "adapterIndex": "1"
+    }
+   }
+  ],
+  "vision": [
+   {
+    "WebGPU": {
+     "adapterIndex": "1"
+    }
+   }
+  ],
+  "embedding": [
+   {
+    "WebGPU": {
+     "adapterIndex": "1"
+    }
+   }
+  ],
+  "speech": [
+   {
+    "WebGPU": {
+     "adapterIndex": "1"
+    }
+   }
+  ]
+ },
+ "gens": [
+  {
+   "prompt_tokens": 20,
+   "generated_tokens": 128,
+   "stop": "length",
+   "sequence_length": 148,
+   "generator_s": 0.1357729000155814,
+   "prefill_ms": 1382.6088999921922,
+   "first_step_ms": 0.41879998752847314,
+   "ttft_ms": 1383.0276999797206,
+   "prefill_tps": 14.465406667144226,
+   "decode_tps": 15.67032150818168,
+   "decode_s": 8.104492299898993,
+   "generation_wall_s": 9.49553789998754,
+   "text": "Imagine your smartphone or tablet is like a very smart assistant, but instead of needing to constantly call up a powerful, distant \"brain\" in the cloud (like Google's or Apple's main servers) for every little task, **On-Device AI means that the \"brain\" is actually built right inside the device itself.**\n\nHere is a breakdown using simple analogies:\n\n---\n\n### 🧠 The \"Cloud AI\" vs. \"On-Device AI\" Analogy\n\n**1. Cloud AI (The Old Way):**\n* **Analogy:** You are sending a letter to a central office (the cloud)",
+   "text_sha256": "af389c8727ad4ff5d6df14b993129e17c316a17379bfa892536711c00b4467e6",
+   "gen": 1,
+   "regime": "cold"
+  },
+  {
+   "prompt_tokens": 20,
+   "generated_tokens": 128,
+   "stop": "length",
+   "sequence_length": 148,
+   "generator_s": 0.003245900006731972,
+   "prefill_ms": 214.02089999173768,
+   "first_step_ms": 0.3999000182375312,
+   "ttft_ms": 214.4208000099752,
+   "prefill_tps": 93.44881738546144,
+   "decode_tps": 17.77185643839529,
+   "decode_s": 7.146130199747859,
+   "generation_wall_s": 7.368837899994105,
+   "text": "Imagine your smartphone or tablet is like a very smart assistant, but instead of needing to constantly call up a powerful, distant \"brain\" in the cloud (like Google's or Apple's main servers) for every little task, **On-Device AI means that the \"brain\" is actually built right inside the device itself.**\n\nHere is a breakdown using simple analogies:\n\n---\n\n### 🧠 The \"Cloud AI\" vs. \"On-Device AI\" Analogy\n\n**1. Cloud AI (The Old Way):**\n* **Analogy:** You are sending a letter to a central office (the cloud)",
+   "text_sha256": "af389c8727ad4ff5d6df14b993129e17c316a17379bfa892536711c00b4467e6",
+   "gen": 2,
+   "regime": "warm"
+  }
+ ],
+ "status": "OK",
+ "peak_working_set_bytes": 10208522240,
+ "peak_pagefile_bytes": 8879452160,
+ "ended": "2026-11-09T09:01:09.179335+09:00"
+}

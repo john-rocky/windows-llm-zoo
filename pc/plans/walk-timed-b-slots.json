@@ -1,0 +1,13 @@
+[
+ {
+  "who": "another lane's timing block (back by 20:56)",
+  "release_at": "2026-11-08T20:30:35+09:00",
+  "give_up_at": "2026-11-08T20:35:00+09:00",
+  "stay_off_after": "2026-11-08T20:55:00+09:00"
+ },
+ {
+  "who": "another lane's two sittings (until 21:57)",
+  "release_at": "2026-11-08T21:07:00+09:00",
+  "give_up_at": "2026-11-08T21:13:00+09:00"
+ }
+]

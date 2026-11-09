@@ -1,0 +1,108 @@
+{
+    "exitCode":  0,
+    "timedOut":  false,
+    "start":  "2026-11-08T07:30:33.8224527+09:00",
+    "elapsedSeconds":  4.18,
+    "peakWorkingSetBytes":  2117529600,
+    "command":  "llama-cli.exe -lv 4 -m C:\\Users\\USER\\models\\gemma-4-E2B-it-Q4_K_M.gguf -c 2048 -f C:\\Users\\USER\\bench\\jobs\\20261108-072256-5240a4\\prompts\\short-chat.txt -n 128 --temp 0 --top-p 1 -st --chat-template-kwargs \"{\\\"enable_thinking\\\":false}\" -ngl 99 -fa on",
+    "before":  {
+                   "quietGate":  "quiet",
+                   "cpuBusyPercent":  7,
+                   "topProcesses":  [
+                                        "System 0.38"
+                                    ],
+                   "gpu":  "NVIDIA GeForce RTX 5080 Laptop GPU, 591.74, P0, 53, 120 MHz, 14001 MHz, 18.71 W, 0 %, 0 MiB"
+               },
+    "after":  {
+                  "cpuBusyPercent":  10,
+                  "topProcesses":  [
+
+                                   ]
+              },
+    "gpuAfter":  "NVIDIA GeForce RTX 5080 Laptop GPU, 591.74, P0, 54, 3232 MHz, 14001 MHz, 18.97 W, 0 %, 0 MiB",
+    "gpuSamples":  [
+
+                   ],
+    "gpuSampleSeconds":  0,
+    "gpuSampleWindows":  [
+
+                         ],
+    "engineStartSeconds":  0.053,
+    "gpuPreference":  null,
+    "gpuPreferenceRemoved":  null,
+    "gpuPreferenceLeftover":  null,
+    "gpuCacheWrite":  null,
+    "gpuCachePurge":  [
+
+                      ],
+    "sshConnections":  {
+                           "accepted":  1,
+                           "atSeconds":  [
+                                             0.2
+                                         ]
+                       },
+    "hostCpu":  {
+                    "seconds":  4.188,
+                    "busyPercent":  {
+                                        "0,0":  27.2,
+                                        "0,1":  7.5,
+                                        "0,2":  62.3,
+                                        "0,3":  6,
+                                        "0,4":  0,
+                                        "0,5":  0.4,
+                                        "0,6":  0,
+                                        "0,7":  0.4,
+                                        "0,8":  0.4,
+                                        "0,9":  0.4,
+                                        "0,10":  2.2,
+                                        "0,11":  0.4,
+                                        "0,12":  0.7,
+                                        "0,13":  0.7,
+                                        "0,14":  25.7,
+                                        "0,15":  2.6,
+                                        "_Total":  8.1
+                                    },
+                    "performancePercent":  {
+                                               "0,0":  174.3,
+                                               "0,1":  142.8,
+                                               "0,2":  220.8,
+                                               "0,3":  143.8,
+                                               "0,4":  171.3,
+                                               "0,5":  200,
+                                               "0,6":  187,
+                                               "0,7":  179.9,
+                                               "0,8":  172.5,
+                                               "0,9":  187.7,
+                                               "0,10":  170.6,
+                                               "0,11":  193.7,
+                                               "0,12":  123.8,
+                                               "0,13":  118.2,
+                                               "0,14":  113.4,
+                                               "0,15":  117.7,
+                                               "_Total":  177.6
+                                           },
+                    "performanceLimitPercent":  {
+                                                    "0,0":  100,
+                                                    "0,1":  100,
+                                                    "0,2":  100,
+                                                    "0,3":  100,
+                                                    "0,4":  100,
+                                                    "0,5":  100,
+                                                    "0,6":  100,
+                                                    "0,7":  100,
+                                                    "0,8":  100,
+                                                    "0,9":  100,
+                                                    "0,10":  100,
+                                                    "0,11":  100,
+                                                    "0,12":  100,
+                                                    "0,13":  100,
+                                                    "0,14":  100,
+                                                    "0,15":  100,
+                                                    "_Total":  100
+                                                },
+                    "performanceLimitFlags":  {
+
+                                              },
+                    "limitReads":  2
+                }
+}

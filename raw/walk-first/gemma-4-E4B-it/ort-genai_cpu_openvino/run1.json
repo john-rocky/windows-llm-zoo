@@ -1,0 +1,80 @@
+{
+ "runner": "run_genai.py",
+ "started": "2026-11-08T04:53:37.778352+09:00",
+ "argv": [
+  "--model-dir",
+  "C:\\src\\llmzoo-walk\\models\\mlboydaisuke__gemma-4-E4B-it-Foundry-Local\\cpu-int4",
+  "--ep",
+  "openvino",
+  "--ov-device",
+  "CPU",
+  "--prompt-file",
+  "C:\\src\\llmzoo-walk\\pc\\short-chat.txt",
+  "--out",
+  "C:\\src\\llmzoo-walk\\runs\\walk-first\\gemma-4-E4B-it\\ort-genai_cpu_openvino\\run1.json"
+ ],
+ "pid": 29516,
+ "cuda_dll_dirs": [],
+ "versions": {
+  "python": "3.12.10",
+  "onnxruntime-genai": "0.19.0",
+  "onnxruntime": "1.31.1",
+  "onnxruntime-ep-openvino": "1.8.1",
+  "onnxruntime-ep-webgpu": "0.5.0",
+  "numpy": "2.5.4"
+ },
+ "prompt_sha256": "870aafb98e570e8fa1343ec051180237f4587233f49c0cc1391724e086d42d50",
+ "load_s": 17.069490800000494,
+ "device_type": "OpenVINO",
+ "chat_template": "tokenizer.apply_chat_template",
+ "templated_prompt": "<bos><|turn>user\nExplain what on-device AI means in simple terms.<turn|>\n<|turn>model\n",
+ "templated_prompt_sha256": "70b30bff1ab92ec74814a888864b33ac65c53a053b6d35e8dfa13b353830ffb2",
+ "genai_config_providers": {
+  "decoder": [],
+  "vision": [],
+  "embedding": [],
+  "speech": []
+ },
+ "gens": [
+  {
+   "prompt_tokens": 20,
+   "generated_tokens": 128,
+   "stop": "length",
+   "sequence_length": 148,
+   "generator_s": 0.07300519999989774,
+   "prefill_ms": 11639.85639999737,
+   "first_step_ms": 0.3357999958097935,
+   "ttft_ms": 11640.19219999318,
+   "prefill_tps": 1.7182342558800399,
+   "decode_tps": 0.19968480790800547,
+   "decode_s": 636.0023145001032,
+   "generation_wall_s": 647.6484938999929,
+   "text": "Imagine your smartphone or a smart device (like a smart speaker or fitness tracker) is like a very smart assistant.\n\n**\"On-device AI\" simply means that the \"brain\" or the \"thinking\" part of that assistant is actually *inside* the device itself, not constantly needing to talk to the internet.**\n\nHere is a breakdown using simple analogies:\n\n---\n\n### 🧠 The \"Cloud\" vs. The \"Device\"\n\nTo understand why this is important, you need to know the two ways AI usually works:\n\n**1. Cloud AI (The Old Way):**\n* **Analogy:** Sending",
+   "text_sha256": "0c6b0adf5124d0a1917b69c90ec4ddc898d629998766de1a5c4361af1a99d4cb",
+   "gen": 1,
+   "regime": "cold"
+  },
+  {
+   "prompt_tokens": 20,
+   "generated_tokens": 128,
+   "stop": "length",
+   "sequence_length": 148,
+   "generator_s": 0.1028022999962559,
+   "prefill_ms": 738.747900002636,
+   "first_step_ms": 0.3304999991087243,
+   "ttft_ms": 739.0784000017447,
+   "prefill_tps": 27.072834995441116,
+   "decode_tps": 6.230590270205012,
+   "decode_s": 20.383301499910885,
+   "generation_wall_s": 21.128236399992602,
+   "text": "Imagine your smartphone or a smart device (like a smart speaker or fitness tracker) is like a very smart assistant.\n\n**\"On-device AI\" simply means that the \"brain\" or the \"thinking\" part of that assistant is actually *inside* the device itself, not constantly needing to talk to the internet.**\n\nHere is a breakdown using simple analogies:\n\n---\n\n### 🧠 The \"Cloud\" vs. The \"Device\"\n\nTo understand why this is important, you need to know the two ways AI usually works:\n\n**1. Cloud AI (The Old Way):**\n* **Analogy:** Sending",
+   "text_sha256": "0c6b0adf5124d0a1917b69c90ec4ddc898d629998766de1a5c4361af1a99d4cb",
+   "gen": 2,
+   "regime": "warm"
+  }
+ ],
+ "status": "OK",
+ "peak_working_set_bytes": 10057588736,
+ "peak_pagefile_bytes": 9184296960,
+ "ended": "2026-11-08T05:05:06.938525+09:00"
+}

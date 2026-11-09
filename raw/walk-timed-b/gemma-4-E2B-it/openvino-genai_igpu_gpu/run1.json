@@ -1,0 +1,72 @@
+{
+ "runner": "run_ovgenai.py",
+ "started": "2026-11-08T20:03:32.808741+09:00",
+ "argv": [
+  "--model-dir",
+  "C:\\src\\llmzoo-walk\\models\\OpenVINO__gemma-4-E2B-it-int4-ov",
+  "--device",
+  "GPU.0",
+  "--cache-dir",
+  "C:\\src\\llmzoo-walk\\ovcache\\gemma-4-E2B-it_gpu0",
+  "--prompt-file",
+  "C:\\src\\llmzoo-walk\\pc\\short-chat.txt",
+  "--out",
+  "C:\\src\\llmzoo-walk\\runs\\walk-timed-b\\gemma-4-E2B-it\\openvino-genai_igpu_gpu\\run1.json"
+ ],
+ "pid": 21508,
+ "versions": {
+  "python": "3.12.10",
+  "openvino": "2026.4.1",
+  "openvino-genai": "2026.4.1.0",
+  "openvino-tokenizers": "2026.4.1.0",
+  "numpy": "2.5.4"
+ },
+ "available_devices": {
+  "CPU": "Intel(R) Core(TM) Ultra 9 386H",
+  "GPU.0": "Intel(R) Graphics (iGPU)",
+  "GPU.1": "NVIDIA GeForce RTX 5080 Laptop GPU (dGPU)",
+  "NPU": "Intel(R) AI Boost"
+ },
+ "prompt_sha256": "870aafb98e570e8fa1343ec051180237f4587233f49c0cc1391724e086d42d50",
+ "pipeline": "vlm",
+ "load_s": 10.298326999996789,
+ "pipeline_errors_before": [],
+ "templated_prompt": "<bos><|turn>user\nExplain what on-device AI means in simple terms.<turn|>\n<|turn>model\n",
+ "templated_prompt_sha256": "70b30bff1ab92ec74814a888864b33ac65c53a053b6d35e8dfa13b353830ffb2",
+ "gens": [
+  {
+   "gen": 1,
+   "regime": "cold",
+   "prompt_tokens": 20,
+   "generated_tokens": 128,
+   "stop": "length",
+   "ttft_ms": 1506.368408203125,
+   "tpot_ms": 33.607200622558594,
+   "prefill_tps": 13.27696457990449,
+   "decode_tps": 29.75552802600158,
+   "generate_duration_ms": 5778.89208984375,
+   "generation_wall_s": 5.782510300021386,
+   "text": "Imagine you have a smart device, like a smartphone, a smart speaker, or even a security camera. **On-device AI** means putting the \"brain\" or the \"thinking part\" of the Artificial Intelligence directly onto that device, instead of sending everything to a giant, remote computer in the cloud.\n\nHere't a simple breakdown:\n\n### The Traditional Way (Cloud AI)\n\nThink of this like sending a photo to a massive central office to be analyzed.\n\n1. **You take a picture** (e.g., a photo of a dog).\n2. **The photo travels over the internet** to",
+   "text_sha256": "1fa7d8907db5fd01a78957de4432afedd852708e3e430061c05f41c3f1f75688"
+  },
+  {
+   "gen": 2,
+   "regime": "warm",
+   "prompt_tokens": 20,
+   "generated_tokens": 128,
+   "stop": "length",
+   "ttft_ms": 912.530517578125,
+   "tpot_ms": 31.368629455566406,
+   "prefill_tps": 21.917075226240563,
+   "decode_tps": 31.878982835909287,
+   "generate_duration_ms": 4897.61376953125,
+   "generation_wall_s": 4.897816100012278,
+   "text": "## Explaining On-Device AI in Simple Terms\n\nImagine the difference between **watching a movie on a streaming service** and **watching a movie you own and can play anytime.**\n\n**Traditional AI (The \"Cloud\" Way):**\n\n* **What it is:** Most powerful AI is like a giant, super-smart computer in the cloud (like a massive server farm).\n* **How it works:** You send your data (photos, text, videos) over the internet to this giant computer. It does all the heavy thinking, learning, and processing.\n* **The Catch:** It takes time and a stable internet",
+   "text_sha256": "5464c89b85e8bc89abda2aad1ad95560d68c9e6dfd9f7dbe1c7d2af988fee6f4"
+  }
+ ],
+ "status": "OK",
+ "peak_working_set_bytes": 4892307456,
+ "peak_pagefile_bytes": 5371686912,
+ "ended": "2026-11-08T20:03:55.859513+09:00"
+}

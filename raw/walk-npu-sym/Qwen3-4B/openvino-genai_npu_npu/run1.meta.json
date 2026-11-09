@@ -1,0 +1,137 @@
+{
+    "cell":  "Qwen3-4B\\openvino-genai_npu_npu",
+    "run":  1,
+    "mode":  "first",
+    "sitting":  "walk-npu-sym",
+    "start":  "2026-11-07T20:11:37.2631704+09:00",
+    "osBuild":  "26200.9711",
+    "gate":  null,
+    "before":  {
+                   "load":  {
+                                "cpu":  97.3,
+                                "build_ms":  0,
+                                "top":  [
+                                            "python 15540 7.59 core",
+                                            "python 35132 4.23 core",
+                                            "System 4 1.37 core",
+                                            "python 15160 0.91 core",
+                                            "MsMpEng 5548 0.59 core"
+                                        ]
+                            },
+                   "nvidia":  "P0, 3127 MHz, 14001 MHz, 18.93 W, 0 %, 0 MiB, 55",
+                   "availGB":  13
+               },
+    "command":  "C:\\src\\llmzoo-walk\\.venv-ovgenai\\Scripts\\python.exe -u C:\\src\\llmzoo-walk\\pc\\run_ovgenai.py --model-dir C:\\src\\llmzoo-walk\\models\\OpenVINO__Qwen3-4B-int4-ov --device NPU --cache-dir C:\\src\\llmzoo-walk\\ovcache\\Qwen3-4B_npu --prompt-file C:\\src\\llmzoo-walk\\pc\\short-chat.txt --out C:\\src\\llmzoo-walk\\runs\\walk-npu-sym\\Qwen3-4B\\openvino-genai_npu_npu\\run1.json",
+    "engine":  {
+                   "exitCode":  0,
+                   "timedOut":  false,
+                   "yielded":  false,
+                   "suspendedSeconds":  315.2,
+                   "suspensions":  2,
+                   "enginePid":  20840,
+                   "elapsedSeconds":  452.013,
+                   "peakWorkingSetBytes":  5542309888,
+                   "gpuMiBPeak":  {
+                                      "0x00000000_0x00012C48":  {
+                                                                    "shared":  0,
+                                                                    "dedicated":  0
+                                                                },
+                                      "0x00000000_0x0001260E":  {
+                                                                    "shared":  21,
+                                                                    "dedicated":  0
+                                                                },
+                                      "0x00000000_0x00013E4C":  {
+                                                                    "shared":  2978,
+                                                                    "dedicated":  0
+                                                                }
+                                  },
+                   "watchPeakWorkingSetBytes":  0,
+                   "watchGpuMiBPeak":  {
+
+                                       },
+                   "nvidiaSamples":  [
+                                         "6s P0, 2430 MHz, 14001 MHz, 19.19 W, 0 %, 0 MiB, 56",
+                                         "10s P0, 2167 MHz, 14001 MHz, 19.24 W, 0 %, 0 MiB, 56",
+                                         "15s P0, 1537 MHz, 14001 MHz, 19.33 W, 0 %, 0 MiB, 56",
+                                         "20s P0, 5542 MHz, 14001 MHz, 19.39 W, 0 %, 0 MiB, 56",
+                                         "25s P0, 1657 MHz, 14001 MHz, 19.39 W, 0 %, 0 MiB, 56",
+                                         "30s P0, 735 MHz, 14001 MHz, 19.31 W, 0 %, 0 MiB, 56",
+                                         "35s P0, 232 MHz, 14001 MHz, 19.40 W, 0 %, 0 MiB, 56",
+                                         "40s P0, 11647 MHz, 14001 MHz, 19.30 W, 0 %, 0 MiB, 56",
+                                         "45s P4, 1432 MHz, 9001 MHz, 16.93 W, 0 %, 0 MiB, 55",
+                                         "50s P0, 3045 MHz, 14001 MHz, 19.24 W, 0 %, 0 MiB, 56",
+                                         "276s P0, 97 MHz, 14001 MHz, 19.58 W, 0 %, 0 MiB, 57",
+                                         "277s P0, 7185 MHz, 14001 MHz, 19.42 W, 0 %, 0 MiB, 56",
+                                         "279s P0, 1290 MHz, 14001 MHz, 19.43 W, 0 %, 0 MiB, 56",
+                                         "280s P0, 2505 MHz, 14001 MHz, 19.44 W, 0 %, 0 MiB, 56",
+                                         "282s P0, 952 MHz, 14001 MHz, 19.43 W, 0 %, 0 MiB, 56",
+                                         "283s P0, 405 MHz, 14001 MHz, 19.41 W, 0 %, 0 MiB, 56",
+                                         "285s P0, 2707 MHz, 14001 MHz, 19.40 W, 0 %, 0 MiB, 56",
+                                         "286s P0, 675 MHz, 14001 MHz, 19.35 W, 0 %, 0 MiB, 56",
+                                         "288s P0, 38640 MHz, 14001 MHz, 19.34 W, 0 %, 0 MiB, 56",
+                                         "290s P0, 2805 MHz, 14001 MHz, 19.25 W, 0 %, 0 MiB, 56",
+                                         "291s P0, 3150 MHz, 14001 MHz, 19.32 W, 0 %, 0 MiB, 56",
+                                         "293s P0, 1275 MHz, 14001 MHz, 19.25 W, 0 %, 0 MiB, 55",
+                                         "294s P0, 2212 MHz, 14001 MHz, 19.22 W, 0 %, 0 MiB, 55",
+                                         "296s P0, 3322 MHz, 14001 MHz, 19.25 W, 0 %, 0 MiB, 55",
+                                         "297s P0, 1177 MHz, 14001 MHz, 19.18 W, 0 %, 0 MiB, 55",
+                                         "299s P0, 60 MHz, 14001 MHz, 19.17 W, 0 %, 0 MiB, 55",
+                                         "300s P0, 4350 MHz, 14001 MHz, 19.15 W, 0 %, 0 MiB, 55",
+                                         "302s P0, 690 MHz, 14001 MHz, 19.07 W, 0 %, 0 MiB, 55",
+                                         "303s P0, 1792 MHz, 14001 MHz, 19.20 W, 0 %, 0 MiB, 55",
+                                         "305s P0, 2917 MHz, 14001 MHz, 19.14 W, 0 %, 0 MiB, 55",
+                                         "306s P0, 2835 MHz, 14001 MHz, 19.29 W, 0 %, 0 MiB, 55",
+                                         "308s P0, 427 MHz, 14001 MHz, 19.13 W, 0 %, 0 MiB, 56",
+                                         "309s P0, 10927 MHz, 14001 MHz, 19.04 W, 0 %, 0 MiB, 56",
+                                         "311s P0, 1852 MHz, 14001 MHz, 19.29 W, 0 %, 0 MiB, 56",
+                                         "312s P4, 1402 MHz, 9001 MHz, 20.20 W, 0 %, 0 MiB, 56",
+                                         "313s P0, 2130 MHz, 14001 MHz, 19.17 W, 0 %, 0 MiB, 56",
+                                         "315s P0, 3352 MHz, 14001 MHz, 19.23 W, 0 %, 0 MiB, 56",
+                                         "316s P0, 990 MHz, 14001 MHz, 19.10 W, 0 %, 0 MiB, 56",
+                                         "318s P0, 945 MHz, 14001 MHz, 19.43 W, 0 %, 0 MiB, 56",
+                                         "320s P0, 2332 MHz, 14001 MHz, 19.13 W, 0 %, 0 MiB, 56",
+                                         "321s P0, 65535 MHz, 14001 MHz, 19.41 W, 0 %, 0 MiB, 56",
+                                         "323s P0, 90 MHz, 14001 MHz, 19.33 W, 0 %, 0 MiB, 56",
+                                         "324s P0, 1567 MHz, 14001 MHz, 19.05 W, 0 %, 0 MiB, 56",
+                                         "326s P0, 3967 MHz, 14001 MHz, 19.17 W, 0 %, 0 MiB, 56",
+                                         "327s P0, 3675 MHz, 14001 MHz, 19.40 W, 0 %, 0 MiB, 56",
+                                         "329s P0, 1042 MHz, 14001 MHz, 19.43 W, 0 %, 0 MiB, 57",
+                                         "331s P0, 60 MHz, 14001 MHz, 19.10 W, 0 %, 0 MiB, 57",
+                                         "332s P0, 1807 MHz, 14001 MHz, 19.25 W, 0 %, 0 MiB, 57",
+                                         "334s P0, 3120 MHz, 14001 MHz, 19.47 W, 0 %, 0 MiB, 57",
+                                         "335s P0, 525 MHz, 14001 MHz, 19.45 W, 0 %, 0 MiB, 57",
+                                         "337s P0, 8685 MHz, 14001 MHz, 19.49 W, 0 %, 0 MiB, 57",
+                                         "339s P0, 1455 MHz, 14001 MHz, 19.42 W, 0 %, 0 MiB, 57",
+                                         "340s P0, 8257 MHz, 14001 MHz, 19.20 W, 0 %, 0 MiB, 57",
+                                         "342s P0, 2587 MHz, 14001 MHz, 19.28 W, 0 %, 0 MiB, 57",
+                                         "344s P0, 825 MHz, 14001 MHz, 19.35 W, 0 %, 0 MiB, 57",
+                                         "345s P0, 660 MHz, 14001 MHz, 19.48 W, 0 %, 0 MiB, 57",
+                                         "347s P0, 1920 MHz, 14001 MHz, 19.30 W, 0 %, 0 MiB, 57",
+                                         "438s P0, 2392 MHz, 14001 MHz, 18.85 W, 0 %, 0 MiB, 53",
+                                         "440s P0, 31995 MHz, 14001 MHz, 18.71 W, 0 %, 0 MiB, 53",
+                                         "441s P0, 2055 MHz, 14001 MHz, 18.60 W, 0 %, 0 MiB, 53",
+                                         "443s P0, 3232 MHz, 14001 MHz, 18.68 W, 0 %, 0 MiB, 53",
+                                         "444s P0, 855 MHz, 14001 MHz, 18.47 W, 0 %, 0 MiB, 53",
+                                         "446s P0, 405 MHz, 14001 MHz, 18.24 W, 0 %, 0 MiB, 53",
+                                         "447s P0, 1552 MHz, 14001 MHz, 18.45 W, 0 %, 0 MiB, 54",
+                                         "449s P0, 135 MHz, 14001 MHz, 18.88 W, 0 %, 0 MiB, 54",
+                                         "450s P0, 5212 MHz, 14001 MHz, 18.82 W, 0 %, 0 MiB, 54"
+                                     ]
+               },
+    "after":  {
+                  "load":  {
+                               "cpu":  63.2,
+                               "build_ms":  0,
+                               "top":  [
+                                           "python 29028 7.77 core",
+                                           "System 4 1.06 core",
+                                           "python 15160 0.96 core",
+                                           "WmiPrvSE 7560 0.09 core",
+                                           "svchost 5260 0.06 core"
+                                       ]
+                           },
+                  "nvidia":  "P0, 82 MHz, 14001 MHz, 18.70 W, 0 %, 0 MiB, 54"
+              },
+    "end":  "2026-11-07T20:19:10.6820894+09:00",
+    "tries":  1
+}

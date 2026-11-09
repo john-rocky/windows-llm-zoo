@@ -1,0 +1,210 @@
+{
+ "Qwen3-0.6B\\ort-genai_rtx_cuda": {
+  "run": 70,
+  "next_run1": 57
+ },
+ "Qwen3-0.6B\\ort-genai_cpu_cpu": {
+  "run": 57,
+  "next_run1": 69
+ },
+ "Qwen3-0.6B\\ort-genai_cpu_openvino": {
+  "run": 69,
+  "next_run1": 116
+ },
+ "Qwen3-0.6B\\openvino-genai_rtx_gpu": {
+  "run": 116,
+  "next_run1": 90
+ },
+ "Qwen3-1.7B\\ort-genai_cpu_openvino": {
+  "run": 90,
+  "next_run1": 117
+ },
+ "Qwen3-1.7B\\openvino-genai_rtx_gpu": {
+  "run": 117,
+  "next_run1": 65
+ },
+ "Qwen3-4B\\ort-genai_rtx_cuda": {
+  "run": 65,
+  "next_run1": 87
+ },
+ "Qwen3-4B\\ort-genai_rtx_webgpu": {
+  "run": 87,
+  "next_run1": 77
+ },
+ "Qwen3-4B\\ort-genai_igpu_webgpu": {
+  "run": 77,
+  "next_run1": 175
+ },
+ "Qwen3-4B\\ort-genai_igpu_openvino": {
+  "run": 175,
+  "next_run1": 169
+ },
+ "Qwen3-4B\\ort-genai_cpu_cpu": {
+  "run": 169,
+  "next_run1": 118
+ },
+ "Qwen3-4B\\ort-genai_cpu_openvino": {
+  "run": 118,
+  "next_run1": 63
+ },
+ "Qwen3-4B\\openvino-genai_igpu_gpu": {
+  "run": 63,
+  "next_run1": 92
+ },
+ "Qwen3-4B\\openvino-genai_cpu_cpu": {
+  "run": 92,
+  "next_run1": 139
+ },
+ "Qwen3-4B\\openvino-genai_rtx_gpu": {
+  "run": 139,
+  "next_run1": 81
+ },
+ "gemma-4-E2B-it\\ort-genai_rtx_cuda": {
+  "run": 81,
+  "next_run1": 123
+ },
+ "gemma-4-E2B-it\\ort-genai_rtx_webgpu": {
+  "run": 123,
+  "next_run1": 150
+ },
+ "gemma-4-E2B-it\\ort-genai_igpu_webgpu": {
+  "run": 150,
+  "next_run1": 198
+ },
+ "gemma-4-E2B-it\\ort-genai_igpu_openvino": {
+  "run": 198,
+  "next_run1": 119
+ },
+ "gemma-4-E2B-it\\ort-genai_cpu_openvino": {
+  "run": 119,
+  "next_run1": 91
+ },
+ "gemma-4-E2B-it\\foundry_rtx_cuda": {
+  "run": 91,
+  "next_run1": 157
+ },
+ "gemma-4-E2B-it\\openvino-genai_igpu_gpu": {
+  "run": 157,
+  "next_run1": 87
+ },
+ "gemma-4-E2B-it\\openvino-genai_cpu_cpu": {
+  "run": 87,
+  "next_run1": 244
+ },
+ "gemma-4-E2B-it\\openvino-genai_rtx_gpu": {
+  "run": 244,
+  "next_run1": 93
+ },
+ "gemma-4-E4B-it\\ort-genai_rtx_cuda": {
+  "run": 93,
+  "next_run1": 114
+ },
+ "gemma-4-E4B-it\\ort-genai_rtx_webgpu": {
+  "run": 114,
+  "next_run1": 122
+ },
+ "gemma-4-E4B-it\\ort-genai_igpu_webgpu": {
+  "run": 122,
+  "next_run1": 300
+ },
+ "gemma-4-E4B-it\\ort-genai_igpu_openvino": {
+  "run": 300,
+  "next_run1": 158
+ },
+ "gemma-4-E4B-it\\ort-genai_cpu_cpu": {
+  "run": 158,
+  "next_run1": 525
+ },
+ "gemma-4-E4B-it\\ort-genai_cpu_openvino": {
+  "run": 525,
+  "next_run1": 141
+ },
+ "gemma-4-E4B-it\\foundry_rtx_cuda": {
+  "run": 141,
+  "next_run1": 111
+ },
+ "gemma-4-E4B-it\\foundry_cpu_cpu": {
+  "run": 111,
+  "next_run1": 135
+ },
+ "gemma-4-E4B-it\\openvino-genai_igpu_gpu": {
+  "run": 135,
+  "next_run1": 110
+ },
+ "gemma-4-E4B-it\\openvino-genai_cpu_cpu": {
+  "run": 110,
+  "next_run1": 374
+ },
+ "gemma-4-E4B-it\\openvino-genai_rtx_gpu": {
+  "run": 374,
+  "next_run1": 97
+ },
+ "Qwen3-0.6B\\foundry_rtx_cuda": {
+  "run": 97,
+  "next_run1": 93
+ },
+ "Qwen3-0.6B\\foundry_auto_webgpu": {
+  "run": 93,
+  "next_run1": 100
+ },
+ "Qwen3-0.6B\\foundry_cpu_cpu": {
+  "run": 100,
+  "next_run1": 86
+ },
+ "Qwen3-1.7B\\foundry_rtx_cuda": {
+  "run": 86,
+  "next_run1": 84
+ },
+ "Qwen3-1.7B\\foundry_auto_webgpu": {
+  "run": 84,
+  "next_run1": 102
+ },
+ "Qwen3-1.7B\\foundry_cpu_cpu": {
+  "run": 102,
+  "next_run1": 86
+ },
+ "Qwen3-4B\\foundry_rtx_cuda": {
+  "run": 86,
+  "next_run1": 85
+ },
+ "Qwen3-4B\\foundry_auto_webgpu": {
+  "run": 85,
+  "next_run1": 120
+ },
+ "Qwen3-4B\\foundry_cpu_cpu": {
+  "run": 120,
+  "next_run1": 99
+ },
+ "gemma-4-E2B-it\\foundry_auto_webgpu": {
+  "run": 99,
+  "next_run1": 525
+ },
+ "gemma-4-E2B-it\\openvino-genai_npu_npu": {
+  "run": 525,
+  "next_run1": 60
+ },
+ "Qwen3-0.6B\\openvino-genai_npu_npu-sym-g128": {
+  "run": 60,
+  "next_run1": 65
+ },
+ "Qwen3-1.7B\\openvino-genai_npu_npu-sym-g128": {
+  "run": 65,
+  "next_run1": 72
+ },
+ "Qwen3-4B\\openvino-genai_npu_npu-sym-g128": {
+  "run": 72,
+  "next_run1": 525
+ },
+ "gemma-4-E4B-it\\openvino-genai_npu_npu-sym-cw": {
+  "run": 525,
+  "next_run1": 525
+ },
+ "gemma-4-E2B-it\\ort-genai_cpu_cpu": {
+  "run": 525,
+  "next_run1": 320
+ },
+ "gemma-4-E2B-it\\foundry_cpu_cpu": {
+  "run": 320,
+  "next_run1": 0
+ }
+}

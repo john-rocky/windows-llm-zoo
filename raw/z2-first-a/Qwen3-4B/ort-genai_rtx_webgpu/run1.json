@@ -1,0 +1,84 @@
+{
+ "runner": "run_genai.py",
+ "started": "2026-11-07T15:56:08.521410+09:00",
+ "argv": [
+  "--model-dir",
+  "C:\\src\\llmzoo\\models\\onnx-community__Qwen3-4B-ONNX\\onnxruntime\\webgpu\\webgpu-int4-kld-block-32",
+  "--ep",
+  "webgpu",
+  "--ep-option",
+  "adapterIndex=0",
+  "--prompt-file",
+  "C:\\src\\llmzoo\\pc\\short-chat.txt",
+  "--out",
+  "C:\\src\\llmzoo\\runs\\z2-first-a\\Qwen3-4B\\ort-genai_rtx_webgpu\\run1.json"
+ ],
+ "pid": 32728,
+ "cuda_dll_dirs": [],
+ "versions": {
+  "python": "3.12.10",
+  "onnxruntime-genai": "0.19.0",
+  "onnxruntime": "1.31.1",
+  "onnxruntime-ep-openvino": "1.8.1",
+  "onnxruntime-ep-webgpu": "0.5.0",
+  "numpy": "2.5.4"
+ },
+ "prompt_sha256": "870aafb98e570e8fa1343ec051180237f4587233f49c0cc1391724e086d42d50",
+ "load_s": 15.717655700005707,
+ "device_type": "WebGPU",
+ "chat_template": "tokenizer.apply_chat_template",
+ "templated_prompt": "<|im_start|>user\nExplain what on-device AI means in simple terms.<|im_end|>\n<|im_start|>assistant\n",
+ "templated_prompt_sha256": "9d2fe60da55b75283dbd26cd6f8db55bf12e5c3c0c1f37670067623f6461074d",
+ "genai_config_providers": {
+  "decoder": [
+   {
+    "webgpu": {
+     "enableGraphCapture": "0",
+     "validationMode": "basic"
+    }
+   }
+  ]
+ },
+ "gens": [
+  {
+   "prompt_tokens": 19,
+   "generated_tokens": 128,
+   "stop": "length",
+   "sequence_length": 147,
+   "generator_s": 0.11591789999511093,
+   "prefill_ms": 864.6048999944469,
+   "first_step_ms": 0.21040000137872994,
+   "ttft_ms": 864.8152999958256,
+   "prefill_tps": 21.975355448624025,
+   "decode_tps": 20.232405660888976,
+   "decode_s": 6.277058800056693,
+   "generation_wall_s": 7.150271599995904,
+   "text": "<think>\nOkay, the user wants me to explain what on-device AI means in simple terms. Let me start by recalling what on-device AI is. From what I remember, on-device AI refers to using artificial intelligence models directly on a user's device, like a smartphone or a tablet. This is different from using AI in the cloud, where the data is sent to a remote server for processing.\n\nSo, the key points here are that on-device AI processes data locally on the device, rather than sending it to the cloud. This approach has several advantages, such as improved privacy because the data doesn't leave the device, faster processing since",
+   "text_sha256": "b850ee895557e531b27daaff52a90cf8ce531c550e65f6d3c18929394c25851d",
+   "gen": 1,
+   "regime": "cold"
+  },
+  {
+   "prompt_tokens": 19,
+   "generated_tokens": 128,
+   "stop": "length",
+   "sequence_length": 147,
+   "generator_s": 0.003604600002290681,
+   "prefill_ms": 82.05510000698268,
+   "first_step_ms": 0.2930000046035275,
+   "ttft_ms": 82.34810001158621,
+   "prefill_tps": 231.5517255890633,
+   "decode_tps": 17.450889486941787,
+   "decode_s": 7.277566000004299,
+   "generation_wall_s": 7.36745950000477,
+   "text": "<think>\nOkay, the user wants me to explain what on-device AI means in simple terms. Let me start by recalling what on-device AI is. From what I remember, on-device AI refers to using artificial intelligence models directly on a user's device, like a smartphone or a tablet. This is different from using AI in the cloud, where the data is sent to a remote server for processing.\n\nSo, the key points here are that on-device AI processes data locally on the device, rather than sending it to the cloud. This approach has several advantages, such as improved privacy because the data doesn't leave the device, faster processing since",
+   "text_sha256": "b850ee895557e531b27daaff52a90cf8ce531c550e65f6d3c18929394c25851d",
+   "gen": 2,
+   "regime": "warm"
+  }
+ ],
+ "status": "OK",
+ "peak_working_set_bytes": 2128838656,
+ "peak_pagefile_bytes": 4993409024,
+ "ended": "2026-11-07T15:56:40.515455+09:00"
+}

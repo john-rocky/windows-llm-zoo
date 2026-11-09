@@ -1,0 +1,220 @@
+{
+ "sitting": "walk-timed-b-rerun",
+ "units": [
+  {
+   "model": "Qwen3-0.6B",
+   "cell": "Qwen3-0.6B\\ort-genai_cpu_cpu",
+   "kind": "python",
+   "venv": "genai",
+   "script": "run_genai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\onnx-community__Qwen3-0.6B-ONNX\\onnxruntime\\cpu_and_mobile\\cpu-int4-kld-block-128",
+    "--ep",
+    "follow_config"
+   ],
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 15,
+   "ram_need_gb": 2.6,
+   "note": "onnx-community GenAI folder as published; rerun: cold spread 24.78 % in walk-timed; rerun: cold spread 40.23 % in walk-timed-b"
+  },
+  {
+   "model": "Qwen3-0.6B",
+   "cell": "Qwen3-0.6B\\ort-genai_cpu_openvino",
+   "kind": "python",
+   "venv": "genai",
+   "script": "run_genai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\onnx-community__Qwen3-0.6B-ONNX\\onnxruntime\\cpu_and_mobile\\cpu-int4-kld-block-128",
+    "--ep",
+    "openvino",
+    "--ov-device",
+    "CPU"
+   ],
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 15,
+   "ram_need_gb": 2.6,
+   "note": "OpenVINO EP 1.8.1 plugin, device_type CPU, on the CPU package; rerun: cold spread 6.13 % in walk-timed; rerun: cold spread 8.89 % in walk-timed-b"
+  },
+  {
+   "model": "Qwen3-0.6B",
+   "cell": "Qwen3-0.6B\\openvino-genai_rtx_gpu",
+   "kind": "python",
+   "venv": "ovgenai",
+   "script": "run_ovgenai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\OpenVINO__Qwen3-0.6B-int4-ov",
+    "--device",
+    "GPU.1",
+    "--cache-dir",
+    "{ROOT}\\ovcache\\Qwen3-0.6B_gpu1"
+   ],
+   "runs": 3,
+   "engines_gate": true,
+   "timeout_min": 15,
+   "ram_need_gb": 2.5,
+   "note": "OpenVINO GenAI 2026.4.1 on GPU.1 (CACHE_DIR) = the RTX as OpenVINO lists it, outside the GPU plugin's documented Intel GPUs (probe); rerun: cold spread 9.94 % in walk-timed; rerun: cold spread 6.65 % in walk-timed-b"
+  },
+  {
+   "model": "Qwen3-1.7B",
+   "cell": "Qwen3-1.7B\\openvino-genai_rtx_gpu",
+   "kind": "python",
+   "venv": "ovgenai",
+   "script": "run_ovgenai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\OpenVINO__Qwen3-1.7B-int4-ov",
+    "--device",
+    "GPU.1",
+    "--cache-dir",
+    "{ROOT}\\ovcache\\Qwen3-1.7B_gpu1"
+   ],
+   "runs": 3,
+   "engines_gate": true,
+   "timeout_min": 15,
+   "ram_need_gb": 3.4,
+   "note": "OpenVINO GenAI 2026.4.1 on GPU.1 (CACHE_DIR) = the RTX as OpenVINO lists it, outside the GPU plugin's documented Intel GPUs (probe); rerun: cold spread 9.89 % in walk-timed; rerun: cold spread 5.24 % in walk-timed-b"
+  },
+  {
+   "model": "Qwen3-4B",
+   "cell": "Qwen3-4B\\openvino-genai_cpu_cpu",
+   "kind": "python",
+   "venv": "ovgenai",
+   "script": "run_ovgenai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\OpenVINO__Qwen3-4B-int4-ov",
+    "--device",
+    "CPU"
+   ],
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 15,
+   "ram_need_gb": 4.6,
+   "note": "OpenVINO GenAI 2026.4.1 on CPU; rerun: cold spread 5.66 % in walk-timed-b"
+  },
+  {
+   "model": "gemma-4-E2B-it",
+   "cell": "gemma-4-E2B-it\\ort-genai_rtx_webgpu",
+   "kind": "python",
+   "venv": "genai",
+   "script": "run_genai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\overlays\\gemma-4-E2B-it_webgpu_a0",
+    "--ep",
+    "follow_config"
+   ],
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 15,
+   "ram_need_gb": 10.2,
+   "note": "WebGPU EP 0.5.0 plugin, adapterIndex 0; rerun: cold spread 7.78 % in walk-timed-b"
+  },
+  {
+   "model": "gemma-4-E2B-it",
+   "cell": "gemma-4-E2B-it\\ort-genai_igpu_webgpu",
+   "kind": "python",
+   "venv": "genai",
+   "script": "run_genai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\overlays\\gemma-4-E2B-it_webgpu_a1",
+    "--ep",
+    "follow_config"
+   ],
+   "runs": 3,
+   "engines_gate": true,
+   "timeout_min": 15,
+   "ram_need_gb": 10.2,
+   "note": "WebGPU EP 0.5.0 plugin, adapterIndex 1; rerun: cold spread 6.44 % in walk-timed-b"
+  },
+  {
+   "model": "gemma-4-E4B-it",
+   "cell": "gemma-4-E4B-it\\ort-genai_igpu_webgpu",
+   "kind": "python",
+   "venv": "genai",
+   "script": "run_genai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\overlays\\gemma-4-E4B-it_webgpu_a1",
+    "--ep",
+    "follow_config"
+   ],
+   "runs": 3,
+   "engines_gate": true,
+   "timeout_min": 15,
+   "ram_need_gb": 10.1,
+   "note": "WebGPU EP 0.5.0 plugin, adapterIndex 1; rerun: cold spread 5.21 % in walk-timed-b"
+  },
+  {
+   "model": "gemma-4-E4B-it",
+   "cell": "gemma-4-E4B-it\\ort-genai_cpu_cpu",
+   "kind": "python",
+   "venv": "genai",
+   "script": "run_genai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\mlboydaisuke__gemma-4-E4B-it-Foundry-Local\\cpu-int4",
+    "--ep",
+    "follow_config"
+   ],
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 15,
+   "ram_need_gb": 10.3,
+   "note": "mlboydaisuke package as published; rerun: cold spread 10.74 % in walk-timed-b"
+  },
+  {
+   "model": "gemma-4-E4B-it",
+   "cell": "gemma-4-E4B-it\\foundry_cpu_cpu",
+   "kind": "foundry",
+   "venv": "genai",
+   "model_id": "z2-gemma-4-e4b-it-cpu-int4:1",
+   "path": "/catalogs/local/v1",
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 15,
+   "ram_need_gb": 10.3,
+   "note": "local model z2-gemma-4-e4b-it-cpu-int4:1 = mlboydaisuke/gemma-4-E4B-it-Foundry-Local cpu-int4; rerun: cold spread 9.38 % in walk-timed-b",
+   "args": []
+  },
+  {
+   "model": "gemma-4-E4B-it",
+   "cell": "gemma-4-E4B-it\\openvino-genai_cpu_cpu",
+   "kind": "python",
+   "venv": "ovgenai",
+   "script": "run_ovgenai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\OpenVINO__gemma-4-E4B-it-int4-ov",
+    "--device",
+    "CPU"
+   ],
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 15,
+   "ram_need_gb": 9.3,
+   "note": "OpenVINO GenAI 2026.4.1 on CPU; rerun: cold spread 6.97 % in walk-timed-b"
+  },
+  {
+   "model": "Qwen3-4B",
+   "cell": "Qwen3-4B\\foundry_rtx_cuda",
+   "kind": "foundry",
+   "venv": "genai",
+   "model_id": "qwen3-4b-cuda-gpu:2",
+   "path": "/v1",
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 15,
+   "ram_need_gb": 5.2,
+   "note": "Foundry Local catalog variant qwen3-4b-cuda-gpu:2; rerun: cold spread 7.97 % in walk-timed-b",
+   "args": []
+  }
+ ],
+ "rerun_of": "walk-timed-b"
+}

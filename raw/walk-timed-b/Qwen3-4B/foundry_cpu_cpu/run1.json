@@ -1,0 +1,76 @@
+{
+ "runner": "run_foundry.py",
+ "started": "2026-11-09T00:34:44.345616+09:00",
+ "argv": [
+  "--model",
+  "qwen3-4b-generic-cpu:3",
+  "--path",
+  "/v1",
+  "--prompt-file",
+  "C:\\src\\llmzoo-walk\\pc\\short-chat.txt",
+  "--out",
+  "C:\\src\\llmzoo-walk\\runs\\walk-timed-b\\Qwen3-4B\\foundry_cpu_cpu\\run1.json"
+ ],
+ "prompt_sha256": "870aafb98e570e8fa1343ec051180237f4587233f49c0cc1391724e086d42d50",
+ "daemon_json": {
+  "pid": 2692,
+  "web_urls": [
+   "http://127.0.0.1:55468"
+  ],
+  "protocol_version": 3,
+  "daemon_version": "0.13.0",
+  "package_version": "0.13.0",
+  "sdk_version": "2.3.0",
+  "started_at": "2026-11-08T15:34:25.5568668+00:00",
+  "log_file": "C:\\Users\\USER\\.foundry\\logs\\foundrylocald-2026-11-08.log",
+  "sdk_package_version": "2.3.0",
+  "runtime_package_version": "2.3.0",
+  "ort_package_version": "1.31.0",
+  "ort_gen_ai_package_version": "0.18.0",
+  "native_runtime_version": null,
+  "native_ort_version": null,
+  "foundry_local_core_version": "2.3.0",
+  "ort_version": "1.31.0",
+  "ort_gen_ai_version": "0.18.0",
+  "foundry_local_runtime_version": "2.3.0"
+ },
+ "url": "http://127.0.0.1:55468/v1",
+ "gens": [
+  {
+   "prompt_tokens": 19,
+   "generated_tokens": 128,
+   "chunks": 127,
+   "delta_fields": {
+    "reasoning_content": 127
+   },
+   "stop": "length",
+   "ttft_ms": 1027.2602000040933,
+   "prefill_tps": 18.495800771726863,
+   "decode_tps": 10.072340186756497,
+   "request_wall_s": 13.538205599994399,
+   "text": "\nOkay, the user is asking for an explanation of on-device AI in simple terms. Let me start by recalling what on-device AI means. \n\nSo, on-device AI refers to using artificial intelligence models directly on a device, like a smartphone or a tablet. \n\nThe key point here is that the AI processing happens on the device itself, rather than relying on a remote server. \n\nThis is important because it has several implications. First, it can improve privacy because the data doesn't have to be sent to a server. Second, it can reduce latency because the processing is done locally on the device. Third, it can reduce",
+   "text_sha256": "f855250b32f34515d9ce3213e84e025b0b359155c9469e3d9bdd4c47f41dfcc4",
+   "gen": 1,
+   "regime": "cold"
+  },
+  {
+   "prompt_tokens": 19,
+   "generated_tokens": 128,
+   "chunks": 127,
+   "delta_fields": {
+    "reasoning_content": 127
+   },
+   "stop": "length",
+   "ttft_ms": 827.8571999981068,
+   "prefill_tps": 22.95081808800292,
+   "decode_tps": 10.317334515658922,
+   "request_wall_s": 13.041692799975863,
+   "text": "\nOkay, the user is asking for an explanation of on-device AI in simple terms. Let me start by recalling what on-device AI means. \n\nSo, on-device AI refers to using artificial intelligence models directly on a device, like a smartphone or a tablet. \n\nThe key point here is that the AI processing happens on the device itself, rather than relying on a remote server. \n\nThis is important because it has several implications. First, it can improve privacy because the data doesn't have to be sent to a server. Second, it can reduce latency because the processing is done locally on the device. Third, it can reduce",
+   "text_sha256": "f855250b32f34515d9ce3213e84e025b0b359155c9469e3d9bdd4c47f41dfcc4",
+   "gen": 2,
+   "regime": "warm"
+  }
+ ],
+ "status": "OK",
+ "ended": "2026-11-09T00:35:10.997286+09:00"
+}

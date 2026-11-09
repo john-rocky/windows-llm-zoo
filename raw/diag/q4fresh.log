@@ -1,0 +1,9 @@
+[2026-11-07T23:16:16.1922897+09:00] start: q4fresh,models\OpenVINO__Qwen3-4B-int4-ov,NPU,ovcache\diag_Qwen3-4B_fresh
+{"load_s": 131.53561280001304, "pipeline_config": {"eos_token_id": "151645", "stop_token_ids": "{151643, 151645}", "max_new_tokens": "18446744073709551615", "max_length": "18446744073709551615", "do_sample": "True", "apply_chat_template": "True", "ignore_eos": "False"}, "tokenizer": {"eos": 151645, "bos": 151643, "pad": 151643}}
+{"call": "documented: generate(user text, max_new_tokens)", "seconds": 2.7100473000027705, "text": " Highlander Highlander Highlander Highlander Highlander Highlander Highlander Highlander Highlander Highlander Highlander Highlander Highlander Highlander Highlander Highlander Highlander Highlander Highlander Highlander Highlander Highlander Highlander Highlander"}
+{"call": "documented: generate(user text, chat template off)", "seconds": 2.377608800001326, "text": " The The The THE THE THE THE THE THE THE THE THE THE THE THE THE THE THE THE THE THE THE THE THE"}
+{"call": "runner: generate([templated], fresh config)", "seconds": 1.4358843999943929, "text": ""}
+{"call": "tokens: fresh config", "seconds": 1.2127708999905735, "prompt_tokens": 19, "tokens": [151643], "decoded": ""}
+{"call": "tokens: the pipeline's config", "seconds": 1.2096745000017108, "prompt_tokens": 19, "tokens": [151643], "decoded": ""}
+{"call": "tokens: the pipeline's config, ignore_eos", "seconds": 3.1735563999973238, "prompt_tokens": 19, "tokens": [151643, 198, 198, 198, 198, 198, 5134, 5134, 5134, 5134, 5134, 5134, 5134, 5134, 5134, 5134, 5134, 5134, 5134, 5134, 5134, 5134, 5134, 5134], "decoded": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"}
+[2026-11-07T23:18:41.3465149+09:00] end: exit 0

@@ -1,0 +1,130 @@
+{
+    "cell":  "gemma-4-E2B-it\\foundry_auto_webgpu",
+    "run":  3,
+    "mode":  "timed",
+    "sitting":  "walk-timed-b",
+    "start":  "2026-11-09T00:42:01.5638419+09:00",
+    "osBuild":  "26200.9711",
+    "gate":  {
+                 "quietGate":  "quiet",
+                 "cpuReads":  [
+                                  1.2,
+                                  0.6,
+                                  0.3
+                              ],
+                 "nvidiaMiB":  0,
+                 "availGB":  24.2,
+                 "ramNeedGB":  10.2,
+                 "gpuEngines":  0
+             },
+    "before":  {
+                   "load":  {
+                                "cpu":  2.7,
+                                "build_ms":  0,
+                                "top":  [
+                                            "System 4 0.11 core",
+                                            "svchost 5088 0.08 core",
+                                            "svchost 5480 0.05 core",
+                                            "MsMpEng 5548 0.05 core",
+                                            "OmApSvcBroker 11408 0.03 core"
+                                        ]
+                            },
+                   "nvidia":  "P0, 390 MHz, 14001 MHz, 17.47 W, 0 %, 0 MiB, 46",
+                   "availGB":  24.2
+               },
+    "foreignDaemon":  "none",
+    "daemonStop0":  "stopped",
+    "daemonEnv":  {
+                      "CUDA_VISIBLE_DEVICES":  "-1"
+                  },
+    "serverStart":  {
+                        "code":  0,
+                        "s":  7.651,
+                        "text":  "笆 Starting Foundry Local server\nOpenVINOExecutionProvider: 0%\nNvTensorRTRTXExecutionProvider: 0%\nCUDAExecutionProvider: 0%\nWebGpuExecutionProvider: 0%\n笳・success: Server ready (http://127.0.0.1:53358)\n  Public API: http://127.0.0.1:53358/v1/\n  Local API (BYOM): http://127.0.0.1:53358/catalogs/local/v1/"
+                    },
+    "daemonPid":  15448,
+    "modelLoad":  {
+                      "code":  0,
+                      "s":  28.939,
+                      "text":  "笆 Loading model (gemma-4-e2b-it-generic-gpu:3, 6.9 GB)\n笳・success: Loaded \u0027gemma-4-e2b-it\u0027 (GPU variant \u0027gemma-4-e2b-it-generic-gpu:3\u0027) into \nmemory."
+                  },
+    "daemonPeakAfterLoadBytes":  2765619200,
+    "gpuAfterLoad":  {
+                         "0x00000000_0x0001260E":  {
+                                                       "shared":  23,
+                                                       "dedicated":  0
+                                                   },
+                         "0x00000000_0x00012C48":  {
+                                                       "shared":  55,
+                                                       "dedicated":  7301
+                                                   },
+                         "0x00000000_0x00012BB8":  {
+                                                       "shared":  0,
+                                                       "dedicated":  0
+                                                   },
+                         "0x00000000_0x00013E4C":  {
+                                                       "shared":  0,
+                                                       "dedicated":  0
+                                                   }
+                     },
+    "command":  "C:\\src\\llmzoo-walk\\.venv-genai\\Scripts\\python.exe -u C:\\src\\llmzoo-walk\\pc\\run_foundry.py --model gemma-4-e2b-it-generic-gpu:3 --path /v1 --prompt-file C:\\src\\llmzoo-walk\\pc\\short-chat.txt --out C:\\src\\llmzoo-walk\\runs\\walk-timed-b\\gemma-4-E2B-it\\foundry_auto_webgpu\\run3.json",
+    "engine":  {
+                   "exitCode":  0,
+                   "timedOut":  false,
+                   "yielded":  false,
+                   "suspendedSeconds":  0,
+                   "suspensions":  0,
+                   "enginePid":  33692,
+                   "elapsedSeconds":  14.399,
+                   "peakWorkingSetBytes":  24354816,
+                   "gpuMiBPeak":  {
+
+                                  },
+                   "watchPeakWorkingSetBytes":  2765619200,
+                   "watchGpuMiBPeak":  {
+                                           "0x00000000_0x00012C48":  {
+                                                                         "shared":  62,
+                                                                         "dedicated":  7354
+                                                                     },
+                                           "0x00000000_0x0001260E":  {
+                                                                         "shared":  23,
+                                                                         "dedicated":  0
+                                                                     },
+                                           "0x00000000_0x00012BB8":  {
+                                                                         "shared":  0,
+                                                                         "dedicated":  0
+                                                                     },
+                                           "0x00000000_0x00013E4C":  {
+                                                                         "shared":  0,
+                                                                         "dedicated":  0
+                                                                     }
+                                       },
+                   "nvidiaSamples":  [
+                                         "5s P4, 2782 MHz, 9001 MHz, 53.06 W, 22 %, 7353 MiB, 50",
+                                         "10s P4, 2782 MHz, 9001 MHz, 48.04 W, 21 %, 7353 MiB, 52"
+                                     ]
+               },
+    "daemonPeakWorkingSetBytes":  2765619200,
+    "modelUnload":  {
+                        "code":  0,
+                        "s":  0.449,
+                        "text":  "笳・success: Unloaded \u0027gemma-4-e2b-it-generic-gpu:3\u0027 from memory."
+                    },
+    "daemonStop":  "stopped",
+    "after":  {
+                  "load":  {
+                               "cpu":  0.5,
+                               "build_ms":  0,
+                               "top":  [
+                                           "System 4 0.02 core",
+                                           "WUDFHost 1836 0.02 core",
+                                           "powershell 16780 0.02 core",
+                                           "MsMpEng 5548 0.02 core",
+                                           "NVDisplay.Container 3412 0.02 core"
+                                       ]
+                           },
+                  "nvidia":  "P0, 1185 MHz, 14001 MHz, 18.31 W, 0 %, 0 MiB, 51"
+              },
+    "end":  "2026-11-09T00:42:59.3068604+09:00",
+    "tries":  1
+}

@@ -1,0 +1,129 @@
+{
+ "model": "Qwen3-4B",
+ "cell": "litert-lm_cpu_cpu",
+ "runtime": "litert-lm",
+ "device": "cpu",
+ "device_name": "Intel(R) Core(TM) Ultra 9 386H",
+ "backend": "cpu",
+ "backend_detail": "LiteRT-LM CPU (XNNPACK), engine default threads (4)",
+ "source": "edge-llm-bench",
+ "bench_arm": "litert-lm-cpu",
+ "bench_commit": "e9be97795e96b82e81ec8608ce1f04c2bf16a88a",
+ "shelf": {
+  "repo": "litert-community/Qwen3-4B",
+  "files": [
+   "qwen3_4b_mixed_int4.litertlm"
+  ],
+  "quant": "INT4 (dynamic, block-32 weights, FP32 act; GPU-composite export, external weights; Hub file of 2026-10-31)"
+ },
+ "workload": {
+  "task": "short-chat",
+  "prompt": "prompts/text/short-chat.txt of edge-llm-bench",
+  "output_budget_tokens": 128,
+  "context_tokens": 2048,
+  "regime": "cold (first conversation of a fresh engine process)",
+  "counting": "runs=3 per sitting; run 1 of a LiteRT-LM, Vulkan or CUDA row is the cache build (firstEver) and is not counted; a text-check failure is not counted"
+ },
+ "status": "measured",
+ "table": {
+  "sitting": "2026-11-07-windows-e4b",
+  "decode_tps": 5.25,
+  "cold_spread_pct": 0.38,
+  "cold_n": 2,
+  "prefill_tps": 1.18,
+  "ttft_ms": 16335.0,
+  "peak_working_set_mb": 3332.78515625,
+  "text_check": "5/5 PASS",
+  "decode_tps_warm": 5.26
+ },
+ "sittings": [
+  {
+   "campaign": "2026-11-07-windows-qwen3-s1",
+   "first_record_jst": "2026-11-07 03:39 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "v0.19.0",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 5.3149999999999995,
+   "cold_spread_pct": 0.19,
+   "counted": true,
+   "prefill_tps_cold_median": 1.17,
+   "ttft_ms_cold_median": 16375.0,
+   "peak_working_set_mb_median": 3333.328125,
+   "decode_tps_warm_median": 5.26,
+   "text_check": "5/5 PASS",
+   "quant": "INT4 (dynamic, block-32 weights, FP32 act; GPU-composite export, external weights; Hub file of 2026-10-31)",
+   "records": [
+    "results/raw/2026-11-07-windows-qwen3-s1/litert-lm-cpu_litert-community_Qwen3-4B_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-07-windows-qwen3",
+   "first_record_jst": "2026-11-07 04:42 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "v0.19.0",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 5.26,
+   "cold_spread_pct": 0.38,
+   "counted": true,
+   "prefill_tps_cold_median": 1.18,
+   "ttft_ms_cold_median": 16305.0,
+   "peak_working_set_mb_median": 3337.51171875,
+   "decode_tps_warm_median": 5.29,
+   "text_check": "5/5 PASS",
+   "quant": "INT4 (dynamic, block-32 weights, FP32 act; GPU-composite export, external weights; Hub file of 2026-10-31)",
+   "records": [
+    "results/raw/2026-11-07-windows-qwen3/litert-lm-cpu_litert-community_Qwen3-4B_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-07-windows-e4b-s1",
+   "first_record_jst": "2026-11-07 07:33 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "v0.19.0",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 5.220000000000001,
+   "cold_spread_pct": 0.77,
+   "counted": true,
+   "prefill_tps_cold_median": 1.1749999999999998,
+   "ttft_ms_cold_median": 16315.000000000002,
+   "peak_working_set_mb_median": 3334.11328125,
+   "decode_tps_warm_median": 5.22,
+   "text_check": "5/5 PASS",
+   "quant": "INT4 (dynamic, block-32 weights, FP32 act; GPU-composite export, external weights; Hub file of 2026-10-31)",
+   "records": [
+    "results/raw/2026-11-07-windows-e4b-s1/litert-lm-cpu_litert-community_Qwen3-4B_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-07-windows-e4b",
+   "first_record_jst": "2026-11-07 08:56 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "v0.19.0",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 5.25,
+   "cold_spread_pct": 0.38,
+   "counted": true,
+   "prefill_tps_cold_median": 1.18,
+   "ttft_ms_cold_median": 16335.0,
+   "peak_working_set_mb_median": 3332.78515625,
+   "decode_tps_warm_median": 5.26,
+   "text_check": "5/5 PASS",
+   "quant": "INT4 (dynamic, block-32 weights, FP32 act; GPU-composite export, external weights; Hub file of 2026-10-31)",
+   "records": [
+    "results/raw/2026-11-07-windows-e4b/litert-lm-cpu_litert-community_Qwen3-4B_short-chat.jsonl"
+   ]
+  }
+ ]
+}

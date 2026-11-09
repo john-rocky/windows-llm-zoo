@@ -1,0 +1,76 @@
+{
+ "runner": "run_foundry.py",
+ "started": "2026-11-08T20:54:52.685550+09:00",
+ "argv": [
+  "--model",
+  "z2-gemma-4-e4b-it-cpu-int4:1",
+  "--path",
+  "/catalogs/local/v1",
+  "--prompt-file",
+  "C:\\src\\llmzoo-walk\\pc\\short-chat.txt",
+  "--out",
+  "C:\\src\\llmzoo-walk\\runs\\walk-timed-b\\gemma-4-E4B-it\\foundry_cpu_cpu\\run1.json"
+ ],
+ "prompt_sha256": "870aafb98e570e8fa1343ec051180237f4587233f49c0cc1391724e086d42d50",
+ "daemon_json": {
+  "pid": 31792,
+  "web_urls": [
+   "http://127.0.0.1:59405"
+  ],
+  "protocol_version": 3,
+  "daemon_version": "0.13.0",
+  "package_version": "0.13.0",
+  "sdk_version": "2.3.0",
+  "started_at": "2026-11-08T11:54:23.1570324+00:00",
+  "log_file": "C:\\Users\\USER\\.foundry\\logs\\foundrylocald-2026-11-08.log",
+  "sdk_package_version": "2.3.0",
+  "runtime_package_version": "2.3.0",
+  "ort_package_version": "1.31.0",
+  "ort_gen_ai_package_version": "0.18.0",
+  "native_runtime_version": null,
+  "native_ort_version": null,
+  "foundry_local_core_version": "2.3.0",
+  "ort_version": "1.31.0",
+  "ort_gen_ai_version": "0.18.0",
+  "foundry_local_runtime_version": "2.3.0"
+ },
+ "url": "http://127.0.0.1:59405/catalogs/local/v1",
+ "gens": [
+  {
+   "prompt_tokens": 20,
+   "generated_tokens": 128,
+   "chunks": 128,
+   "delta_fields": {
+    "content": 128
+   },
+   "stop": "length",
+   "ttft_ms": 891.580099996645,
+   "prefill_tps": 22.432084341132402,
+   "decode_tps": 12.247163930522678,
+   "request_wall_s": 11.263706199999433,
+   "text": "Imagine your smartphone or tablet is like a very smart assistant, but instead of needing to constantly call up a powerful, distant \"brain\" in the cloud (like Google's or Apple's main servers) for every little task, **On-Device AI means that the \"brain\" is actually built right inside the device itself.**\n\nHere is a breakdown using simple analogies:\n\n---\n\n### 🧠 The \"Cloud AI\" vs. \"On-Device AI\" Analogy\n\n**1. Cloud AI (The Old Way):**\n* **Analogy:** You are sending a letter to a central office (the cloud)",
+   "text_sha256": "af389c8727ad4ff5d6df14b993129e17c316a17379bfa892536711c00b4467e6",
+   "gen": 1,
+   "regime": "cold"
+  },
+  {
+   "prompt_tokens": 20,
+   "generated_tokens": 128,
+   "chunks": 128,
+   "delta_fields": {
+    "content": 128
+   },
+   "stop": "length",
+   "ttft_ms": 871.0094999987632,
+   "prefill_tps": 22.96186206927525,
+   "decode_tps": 12.571546701544545,
+   "request_wall_s": 10.974970599985681,
+   "text": "Imagine your smartphone or tablet is like a very smart assistant, but instead of needing to constantly call up a powerful, distant \"brain\" in the cloud (like Google's or Apple's main servers) for every little task, **On-Device AI means that the \"brain\" is actually built right inside the device itself.**\n\nHere is a breakdown using simple analogies:\n\n---\n\n### 🧠 The \"Cloud AI\" vs. \"On-Device AI\" Analogy\n\n**1. Cloud AI (The Old Way):**\n* **Analogy:** You are sending a letter to a central office (the cloud)",
+   "text_sha256": "af389c8727ad4ff5d6df14b993129e17c316a17379bfa892536711c00b4467e6",
+   "gen": 2,
+   "regime": "warm"
+  }
+ ],
+ "status": "OK",
+ "ended": "2026-11-08T20:55:14.949482+09:00"
+}

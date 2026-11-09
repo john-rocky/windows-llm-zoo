@@ -1,0 +1,1 @@
+HTTP 400 {"error":{"code":null,"message":"Model not loaded: Model 'gemma-4-e2b-it-generic-gpu:3' must be loaded before inference","param":null,"type":"invalid_request_error"}}

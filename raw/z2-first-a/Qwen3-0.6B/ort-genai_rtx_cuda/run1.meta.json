@@ -1,0 +1,61 @@
+{
+    "cell":  "Qwen3-0.6B\\ort-genai_rtx_cuda",
+    "run":  1,
+    "mode":  "first",
+    "sitting":  "z2-first-a",
+    "start":  "2026-11-07T15:48:48.7492992+09:00",
+    "gate":  null,
+    "before":  {
+                   "load":  {
+                                "cpu":  41.3,
+                                "build_ms":  0,
+                                "top":  [
+                                            "python 21800 6.12 core",
+                                            "System 4 0.18 core",
+                                            "foundrylocald 27524 0.11 core",
+                                            "powershell 12920 0.06 core",
+                                            "SearchIndexer 9480 0.03 core"
+                                        ]
+                            },
+                   "nvidia":  "P0, 0 MHz, 14001 MHz, 21.31 W, 0 %, 0 MiB, 46",
+                   "availGB":  20.7
+               },
+    "command":  "C:\\src\\llmzoo\\.venv-genai-cuda\\Scripts\\python.exe -u C:\\src\\llmzoo\\pc\\run_genai.py --model-dir C:\\src\\llmzoo\\models\\onnx-community__Qwen3-0.6B-ONNX\\onnxruntime\\cuda\\cuda-int4-kld-block-128 --ep follow_config --prompt-file C:\\src\\llmzoo\\pc\\short-chat.txt --out C:\\src\\llmzoo\\runs\\z2-first-a\\Qwen3-0.6B\\ort-genai_rtx_cuda\\run1.json",
+    "engine":  {
+                   "exitCode":  0,
+                   "timedOut":  false,
+                   "yielded":  false,
+                   "enginePid":  17396,
+                   "elapsedSeconds":  6.969,
+                   "peakWorkingSetBytes":  1203191808,
+                   "gpuMiBPeak":  {
+                                      "0x00000000_0x00012C48":  {
+                                                                    "shared":  76,
+                                                                    "dedicated":  1642
+                                                                }
+                                  },
+                   "watchPeakWorkingSetBytes":  0,
+                   "watchGpuMiBPeak":  {
+
+                                       },
+                   "nvidiaSamples":  [
+                                         "5s P0, 2797 MHz, 14001 MHz, 60.87 W, 27 %, 1642 MiB, 50"
+                                     ]
+               },
+    "after":  {
+                  "load":  {
+                               "cpu":  40.6,
+                               "build_ms":  0,
+                               "top":  [
+                                           "python 21800 6 core",
+                                           "System 4 0.36 core",
+                                           "foundrylocald 27524 0.05 core",
+                                           "curl 32276 0.03 core",
+                                           "svchost 17248 0.02 core"
+                                       ]
+                           },
+                  "nvidia":  "P0, 427 MHz, 14001 MHz, 17.82 W, 0 %, 0 MiB, 47"
+              },
+    "end":  "2026-11-07T15:48:57.7304027+09:00",
+    "tries":  1
+}

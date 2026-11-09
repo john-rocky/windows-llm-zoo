@@ -1,0 +1,10 @@
+■ Downloading model (qwen3-1.7b-generic-gpu:2, 1.4 GB)
+qwen3-1.7b-generic-gpu:2: 0%
+qwen3-1.7b-generic-gpu:2: 26%
+qwen3-1.7b-generic-gpu:2: 51%
+qwen3-1.7b-generic-gpu:2: 76%
+qwen3-1.7b-generic-gpu:2: 95%
+qwen3-1.7b-generic-gpu:2: 96%
+qwen3-1.7b-generic-gpu:2: 98%
+qwen3-1.7b-generic-gpu:2: 99%
+● success: Downloaded 'qwen3-1.7b-generic-gpu:2' to the local cache.

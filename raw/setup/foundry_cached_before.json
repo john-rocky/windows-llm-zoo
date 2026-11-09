@@ -1,0 +1,98 @@
+{
+    "gemma-4-e2b-it-cuda-gpu":  {
+                                    "variantId":  "gemma-4-e2b-it-cuda-gpu:3",
+                                    "cached":  false,
+                                    "fileSizeMb":  5896,
+                                    "license":  "apache-2.0",
+                                    "executionProvider":  "CUDAExecutionProvider",
+                                    "type":  "Multimodal"
+                                },
+    "gemma-4-e2b-it-generic-gpu":  {
+                                       "variantId":  "gemma-4-e2b-it-generic-gpu:3",
+                                       "cached":  false,
+                                       "fileSizeMb":  7035,
+                                       "license":  "apache-2.0",
+                                       "executionProvider":  "WebGPUExecutionProvider",
+                                       "type":  "Multimodal"
+                                   },
+    "gemma-4-e2b-it-generic-cpu":  {
+                                       "variantId":  "gemma-4-e2b-it-generic-cpu:3",
+                                       "cached":  false,
+                                       "fileSizeMb":  6031,
+                                       "license":  "apache-2.0",
+                                       "executionProvider":  "CPUExecutionProvider",
+                                       "type":  "Multimodal"
+                                   },
+    "qwen3-0.6b-cuda-gpu":  {
+                                "variantId":  "qwen3-0.6b-cuda-gpu:2",
+                                "cached":  false,
+                                "fileSizeMb":  492,
+                                "license":  "apache-2.0",
+                                "executionProvider":  "CUDAExecutionProvider",
+                                "type":  "Chat"
+                            },
+    "qwen3-0.6b-generic-gpu":  {
+                                   "variantId":  "qwen3-0.6b-generic-gpu:2",
+                                   "cached":  false,
+                                   "fileSizeMb":  529,
+                                   "license":  "apache-2.0",
+                                   "executionProvider":  "WebGPUExecutionProvider",
+                                   "type":  "Chat"
+                               },
+    "qwen3-0.6b-generic-cpu":  {
+                                   "variantId":  "qwen3-0.6b-generic-cpu:4",
+                                   "cached":  false,
+                                   "fileSizeMb":  593,
+                                   "license":  "apache-2.0",
+                                   "executionProvider":  "CPUExecutionProvider",
+                                   "type":  "Chat"
+                               },
+    "qwen3-1.7b-cuda-gpu":  {
+                                "variantId":  "qwen3-1.7b-cuda-gpu:2",
+                                "cached":  false,
+                                "fileSizeMb":  1318,
+                                "license":  "apache-2.0",
+                                "executionProvider":  "CUDAExecutionProvider",
+                                "type":  "Chat"
+                            },
+    "qwen3-1.7b-generic-gpu":  {
+                                   "variantId":  "qwen3-1.7b-generic-gpu:2",
+                                   "cached":  false,
+                                   "fileSizeMb":  1421,
+                                   "license":  "apache-2.0",
+                                   "executionProvider":  "WebGPUExecutionProvider",
+                                   "type":  "Chat"
+                               },
+    "qwen3-1.7b-generic-cpu":  {
+                                   "variantId":  "qwen3-1.7b-generic-cpu:2",
+                                   "cached":  false,
+                                   "fileSizeMb":  1354,
+                                   "license":  "apache-2.0",
+                                   "executionProvider":  "CPUExecutionProvider",
+                                   "type":  "Chat"
+                               },
+    "qwen3-4b-cuda-gpu":  {
+                              "variantId":  "qwen3-4b-cuda-gpu:2",
+                              "cached":  false,
+                              "fileSizeMb":  2692,
+                              "license":  "apache-2.0",
+                              "executionProvider":  "CUDAExecutionProvider",
+                              "type":  "Chat"
+                          },
+    "qwen3-4b-generic-gpu":  {
+                                 "variantId":  "qwen3-4b-generic-gpu:2",
+                                 "cached":  false,
+                                 "fileSizeMb":  2939,
+                                 "license":  "apache-2.0",
+                                 "executionProvider":  "WebGPUExecutionProvider",
+                                 "type":  "Chat"
+                             },
+    "qwen3-4b-generic-cpu":  {
+                                 "variantId":  "qwen3-4b-generic-cpu:3",
+                                 "cached":  false,
+                                 "fileSizeMb":  2763,
+                                 "license":  "apache-2.0",
+                                 "executionProvider":  "CPUExecutionProvider",
+                                 "type":  "Chat"
+                             }
+}

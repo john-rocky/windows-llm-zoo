@@ -1,0 +1,18 @@
+{
+ "sitting": "walk-foundry-cpu",
+ "units": [
+  {
+   "model": "gemma-4-E2B-it",
+   "cell": "gemma-4-E2B-it\\foundry_cpu_cpu",
+   "kind": "foundry",
+   "venv": "genai",
+   "model_id": "gemma-4-e2b-it-generic-cpu:3",
+   "path": "/v1",
+   "runs": 1,
+   "engines_gate": false,
+   "timeout_min": 60,
+   "ram_need_gb": 9.1,
+   "note": "Foundry Local catalog variant gemma-4-e2b-it-generic-cpu:3; in the first pass another lane's timing lock stopped it again and again at up to 15 running minutes (not finished): here it is suspended under a lock, limit 60 running minutes"
+  }
+ ]
+}

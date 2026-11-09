@@ -1,0 +1,28 @@
+
+--- foundry server stop  [2026-11-08T23:32:19.0505845+09:00]
+笳・success: Server stopped.
+[exit=0, 0.64 s]
+
+--- foundry server start  [2026-11-08T23:32:19.7018349+09:00]
+笆 Starting Foundry Local server
+OpenVINOExecutionProvider: 0%
+NvTensorRTRTXExecutionProvider: 0%
+CUDAExecutionProvider: 0%
+WebGpuExecutionProvider: 0%
+笳・success: Server ready (http://127.0.0.1:63067)
+  Public API: http://127.0.0.1:63067/v1/
+  Local API (BYOM): http://127.0.0.1:63067/catalogs/local/v1/
+[exit=0, 10.07 s]
+
+--- foundry model load qwen3-0.6b-cuda-gpu:2  [2026-11-08T23:32:29.7764607+09:00]
+笆 Loading model (qwen3-0.6b-cuda-gpu:2, 492 MB)
+笳・success: Loaded 'qwen3-0.6b' (GPU variant 'qwen3-0.6b-cuda-gpu:2') into memory.
+[exit=0, 31.84 s]
+
+--- foundry model unload qwen3-0.6b-cuda-gpu:2  [2026-11-08T23:33:05.7424506+09:00]
+笳・success: Unloaded 'qwen3-0.6b-cuda-gpu:2' from memory.
+[exit=0, 0.17 s]
+
+--- foundry server stop  [2026-11-08T23:33:05.9156443+09:00]
+笳・success: Server stopped.
+[exit=0, 2.64 s]

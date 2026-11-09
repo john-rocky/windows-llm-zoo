@@ -1,0 +1,75 @@
+{
+ "runner": "run_genai.py",
+ "started": "2026-11-07T23:14:47.983977+09:00",
+ "argv": [
+  "--model-dir",
+  "C:\\src\\llmzoo-walk\\models\\onnx-community__Qwen3-1.7B-ONNX\\onnxruntime\\cpu_and_mobile\\cpu-int4-kld-block-128",
+  "--ep",
+  "follow_config",
+  "--prompt-file",
+  "C:\\src\\llmzoo-walk\\pc\\short-chat.txt",
+  "--out",
+  "C:\\src\\llmzoo-walk\\runs\\walk-first\\Qwen3-1.7B\\ort-genai_cpu_cpu\\run1.json"
+ ],
+ "pid": 34988,
+ "cuda_dll_dirs": [],
+ "versions": {
+  "python": "3.12.10",
+  "onnxruntime-genai": "0.19.0",
+  "onnxruntime": "1.31.1",
+  "onnxruntime-ep-openvino": "1.8.1",
+  "onnxruntime-ep-webgpu": "0.5.0",
+  "numpy": "2.5.4"
+ },
+ "prompt_sha256": "870aafb98e570e8fa1343ec051180237f4587233f49c0cc1391724e086d42d50",
+ "load_s": 2.633079599996563,
+ "device_type": "CPU",
+ "chat_template": "tokenizer.apply_chat_template",
+ "templated_prompt": "<|im_start|>user\nExplain what on-device AI means in simple terms.<|im_end|>\n<|im_start|>assistant\n",
+ "templated_prompt_sha256": "9d2fe60da55b75283dbd26cd6f8db55bf12e5c3c0c1f37670067623f6461074d",
+ "genai_config_providers": {
+  "decoder": []
+ },
+ "gens": [
+  {
+   "prompt_tokens": 19,
+   "generated_tokens": 128,
+   "stop": "length",
+   "sequence_length": 147,
+   "generator_s": 0.15052599999762606,
+   "prefill_ms": 352.6392999920063,
+   "first_step_ms": 0.2572000084910542,
+   "ttft_ms": 352.8965000004973,
+   "prefill_tps": 53.87941729815905,
+   "decode_tps": 17.24634975223169,
+   "decode_s": 7.363877100055106,
+   "generation_wall_s": 7.724876199994469,
+   "text": "<think>\nOkay, the user wants me to explain what on-device AI means in simple terms. Let me break this down.\n\nFirst, I need to define what on-device AI is. On-device AI refers to AI models that run on the device itself, rather than being cloud-based. \n\nSo, the key points are: running on the device, not relying on the cloud, and the benefits of this approach.\n\nNow, I need to explain this in simple terms. Avoid jargon. Make it easy to understand.\n\nSo, maybe start by explaining what AI is. Then, explain on-device AI as running on the device itself, not",
+   "text_sha256": "6faf16d40b9813608d5fa2eb15141ecc7e912cb16fa8c0dabd72a3d38fbc4daf",
+   "gen": 1,
+   "regime": "cold"
+  },
+  {
+   "prompt_tokens": 19,
+   "generated_tokens": 128,
+   "stop": "length",
+   "sequence_length": 147,
+   "generator_s": 0.15476439999474678,
+   "prefill_ms": 343.5052999993786,
+   "first_step_ms": 1.003500001388602,
+   "ttft_ms": 344.5088000007672,
+   "prefill_tps": 55.31210144365857,
+   "decode_tps": 16.632881834794844,
+   "decode_s": 7.635477800024091,
+   "generation_wall_s": 7.986900299991248,
+   "text": "<think>\nOkay, the user wants me to explain what on-device AI means in simple terms. Let me break this down.\n\nFirst, I need to define what on-device AI is. On-device AI refers to AI models that run on the device itself, rather than being cloud-based. \n\nSo, the key points are: running on the device, not relying on the cloud, and the benefits of this approach.\n\nNow, I need to explain this in simple terms. Avoid jargon. Make it easy to understand.\n\nSo, maybe start by explaining what AI is. Then, explain on-device AI as running on the device itself, not",
+   "text_sha256": "6faf16d40b9813608d5fa2eb15141ecc7e912cb16fa8c0dabd72a3d38fbc4daf",
+   "gen": 2,
+   "regime": "warm"
+  }
+ ],
+ "status": "OK",
+ "peak_working_set_bytes": 2550718464,
+ "peak_pagefile_bytes": 3039440896,
+ "ended": "2026-11-07T23:15:07.407244+09:00"
+}

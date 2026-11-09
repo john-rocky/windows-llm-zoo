@@ -1,0 +1,42 @@
+{
+ "runner": "run_foundry.py",
+ "started": "2026-11-08T05:50:37.411960+09:00",
+ "argv": [
+  "--model",
+  "z2-gemma-4-e2b-it-webgpu:1",
+  "--path",
+  "/catalogs/local/v1",
+  "--prompt-file",
+  "C:\\src\\llmzoo-walk\\pc\\short-chat.txt",
+  "--out",
+  "C:\\src\\llmzoo-walk\\runs\\walk-foundry-fix2\\gemma-4-E2B-it\\foundry_auto_webgpu\\run1.json"
+ ],
+ "prompt_sha256": "870aafb98e570e8fa1343ec051180237f4587233f49c0cc1391724e086d42d50",
+ "daemon_json": {
+  "pid": 27912,
+  "web_urls": [
+   "http://127.0.0.1:64595"
+  ],
+  "protocol_version": 3,
+  "daemon_version": "0.13.0",
+  "package_version": "0.13.0",
+  "sdk_version": "2.3.0",
+  "started_at": "2026-11-07T20:50:35.5113683+00:00",
+  "log_file": "C:\\Users\\USER\\.foundry\\logs\\foundrylocald-2026-11-07.log",
+  "sdk_package_version": "2.3.0",
+  "runtime_package_version": "2.3.0",
+  "ort_package_version": "1.31.0",
+  "ort_gen_ai_package_version": "0.18.0",
+  "native_runtime_version": null,
+  "native_ort_version": null,
+  "foundry_local_core_version": "2.3.0",
+  "ort_version": "1.31.0",
+  "ort_gen_ai_version": "0.18.0",
+  "foundry_local_runtime_version": "2.3.0"
+ },
+ "url": "http://127.0.0.1:64595/catalogs/local/v1",
+ "gens": [],
+ "status": "ERROR",
+ "error": "HTTP 400 {\"error\":{\"code\":null,\"message\":\"Model not loaded: Model 'z2-gemma-4-e2b-it-webgpu:1' must be loaded before inference\",\"param\":null,\"type\":\"invalid_request_error\"}}",
+ "ended": "2026-11-08T05:50:37.448170+09:00"
+}

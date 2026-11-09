@@ -1,0 +1,108 @@
+{
+    "exitCode":  0,
+    "timedOut":  false,
+    "start":  "2026-11-08T07:25:32.9672680+09:00",
+    "elapsedSeconds":  19.885,
+    "peakWorkingSetBytes":  1256906752,
+    "command":  "litert_lm_advanced_main_windows.exe --backend=cpu --model_path=C:\\Users\\USER\\models\\gemma-4-E2B-it.litertlm --input_prompt_file=C:\\Users\\USER\\bench\\jobs\\20261108-072256-5240a4\\prompts\\short-chat.txt --max_num_tokens=2048 --max_output_tokens=128 --num_iterations=2 --async=false --benchmark --benchmark_prefill_tokens=0 --benchmark_decode_tokens=0 --use_session=false",
+    "before":  {
+                   "quietGate":  "quiet",
+                   "cpuBusyPercent":  0,
+                   "topProcesses":  [
+                                        "System 0.38"
+                                    ],
+                   "gpu":  "NVIDIA GeForce RTX 5080 Laptop GPU, 591.74, P0, 48, 172 MHz, 14001 MHz, 17.64 W, 0 %, 0 MiB"
+               },
+    "after":  {
+                  "cpuBusyPercent":  8,
+                  "topProcesses":  [
+                                       "System 0.09"
+                                   ]
+              },
+    "gpuAfter":  "NVIDIA GeForce RTX 5080 Laptop GPU, 591.74, P0, 50, 0 MHz, 14001 MHz, 22.01 W, 0 %, 0 MiB",
+    "gpuSamples":  [
+
+                   ],
+    "gpuSampleSeconds":  0,
+    "gpuSampleWindows":  [
+
+                         ],
+    "engineStartSeconds":  0.051,
+    "gpuPreference":  null,
+    "gpuPreferenceRemoved":  null,
+    "gpuPreferenceLeftover":  null,
+    "gpuCacheWrite":  null,
+    "gpuCachePurge":  [
+
+                      ],
+    "sshConnections":  {
+                           "accepted":  1,
+                           "atSeconds":  [
+                                             0.5
+                                         ]
+                       },
+    "hostCpu":  {
+                    "seconds":  19.892,
+                    "busyPercent":  {
+                                        "0,0":  38.7,
+                                        "0,1":  38.1,
+                                        "0,2":  44.9,
+                                        "0,3":  50.4,
+                                        "0,4":  14,
+                                        "0,5":  0.6,
+                                        "0,6":  0.1,
+                                        "0,7":  0.2,
+                                        "0,8":  16.3,
+                                        "0,9":  0.2,
+                                        "0,10":  15.4,
+                                        "0,11":  0,
+                                        "0,12":  72.7,
+                                        "0,13":  0.9,
+                                        "0,14":  1.4,
+                                        "0,15":  1,
+                                        "_Total":  18.4
+                                    },
+                    "performancePercent":  {
+                                               "0,0":  111.7,
+                                               "0,1":  111.2,
+                                               "0,2":  122.6,
+                                               "0,3":  105.4,
+                                               "0,4":  128.8,
+                                               "0,5":  218,
+                                               "0,6":  192.5,
+                                               "0,7":  191.9,
+                                               "0,8":  123.5,
+                                               "0,9":  172.8,
+                                               "0,10":  125.2,
+                                               "0,11":  212.3,
+                                               "0,12":  112.4,
+                                               "0,13":  114.5,
+                                               "0,14":  115,
+                                               "0,15":  115,
+                                               "_Total":  115
+                                           },
+                    "performanceLimitPercent":  {
+                                                    "0,0":  100,
+                                                    "0,1":  100,
+                                                    "0,2":  100,
+                                                    "0,3":  100,
+                                                    "0,4":  100,
+                                                    "0,5":  100,
+                                                    "0,6":  100,
+                                                    "0,7":  100,
+                                                    "0,8":  100,
+                                                    "0,9":  100,
+                                                    "0,10":  100,
+                                                    "0,11":  100,
+                                                    "0,12":  100,
+                                                    "0,13":  100,
+                                                    "0,14":  100,
+                                                    "0,15":  100,
+                                                    "_Total":  100
+                                                },
+                    "performanceLimitFlags":  {
+
+                                              },
+                    "limitReads":  5
+                }
+}

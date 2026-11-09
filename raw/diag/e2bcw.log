@@ -1,0 +1,6 @@
+[2026-11-07T23:13:45.6406727+09:00] start: e2bcw,models\OpenVINO__gemma-4-E2B-it-int4-cw-ov,NPU,ovcache\gemma-4-E2B-it_npu,pipeline=vlm
+{"load_s": 21.813497900002403, "pipeline_config": {"eos_token_id": "1", "stop_token_ids": "{1, 50, 106}", "max_new_tokens": "18446744073709551615", "max_length": "18446744073709551615", "do_sample": "True", "apply_chat_template": "True", "ignore_eos": "False"}, "tokenizer": {"eos": 1, "bos": 2, "pad": 0}}
+{"call": "documented: generate(user text, max_new_tokens)", "seconds": 3.162355899999966, "text": "Imagine you have a brilliant friend (the AI) that lives **directly on your phone, computer, or smart device**,"}
+{"call": "documented: generate(user text, chat template off)", "seconds": 0.6010406999994302, "text": ""}
+{"call": "runner: generate(templated, fresh config)", "seconds": 2.020011300002807, "text": "Imagine you have a calculator. You can use it right there on your phone or computer without needing to call a separate calculator"}
+[2026-11-07T23:14:16.3278455+09:00] end: exit 0

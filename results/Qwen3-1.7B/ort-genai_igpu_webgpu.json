@@ -1,0 +1,682 @@
+{
+ "model": "Qwen3-1.7B",
+ "cell": "ort-genai_igpu_webgpu",
+ "runtime": "ort-genai",
+ "runtime_detail": "ONNX Runtime GenAI 0.19.0 (Python, pc/run_genai.py)",
+ "device": "igpu",
+ "device_name": "Intel(R) Graphics",
+ "backend": "webgpu",
+ "backend_detail": "WebGPU EP 0.5.0 plugin, adapterIndex 1",
+ "source": "windows-llm-zoo (Z2)",
+ "shelf": {
+  "repo": "onnx-community/Qwen3-1.7B-ONNX",
+  "folder": "onnxruntime/webgpu/webgpu-int4-kld-block-32",
+  "quant": "MatMulNBits b32 asym acc4: int8 x101, int4 x96; embeddings int8 b32 asym [model.onnx]",
+  "quant_source": "the graph (pc/onnx_quant.py)"
+ },
+ "unit": {
+  "kind": "python",
+  "venv": "genai",
+  "script": "run_genai.py",
+  "args": [
+   "--model-dir",
+   "{ROOT}\\models\\onnx-community__Qwen3-1.7B-ONNX\\onnxruntime\\webgpu\\webgpu-int4-kld-block-32",
+   "--ep",
+   "webgpu",
+   "--ep-option",
+   "adapterIndex=1"
+  ],
+  "model_id": null,
+  "path": null,
+  "engines_gate": true
+ },
+ "workload": {
+  "task": "short-chat",
+  "prompt": "prompts/text/short-chat.txt of edge-llm-bench (pc/short-chat.txt)",
+  "chat_template": "the package's own, one user turn",
+  "output_budget_tokens": 128,
+  "sampling": "greedy",
+  "regime": "cold (first generation of a fresh engine process; Foundry: of a fresh daemon)",
+  "counting": "runs=3 per sitting; run 1 of a GPU or NPU cell is not counted; a text-check failure is not counted"
+ },
+ "status": "measured",
+ "table": {
+  "sitting": "walk-timed",
+  "decode_tps": 34.4,
+  "cold_spread_pct": 0.17,
+  "cold_n": 2,
+  "prefill_tps": 17.9,
+  "ttft_ms": 1059.0,
+  "peak_working_set_mb": 2533,
+  "text_check": "6/6 PASS",
+  "decode_tps_warm": 37.55,
+  "gpu_adapter_used": [
+   "nvidia"
+  ],
+  "generated_tokens": [
+   128
+  ],
+  "stop": [
+   "length"
+  ],
+  "same_cold_text": true,
+  "os_build": [
+   "26200.9711"
+  ]
+ },
+ "first_error": null,
+ "why_not_measured": null,
+ "sittings": [
+  {
+   "sitting": "walk-first",
+   "mode": "first",
+   "runs": [
+    {
+     "run": 1,
+     "status": "OK",
+     "counted": false,
+     "why": "first pass (untimed)",
+     "exit_code": 0,
+     "timed_out": false,
+     "elapsed_s": 17.921,
+     "suspended_s": 0,
+     "gate": null,
+     "before": {
+      "load": {
+       "cpu": 41.5,
+       "build_ms": 1297,
+       "top": [
+        "python 33828 1.99 core",
+        "cicc 25800 1.01 core",
+        "System 4 0.96 core",
+        "cudafe++ 25416 0.7 core",
+        "MsMpEng 5548 0.54 core"
+       ]
+      },
+      "nvidia": "P0, 16755 MHz, 14001 MHz, 20.17 W, 0 %, 0 MiB, 61",
+      "availGB": 14.4
+     },
+     "start": "2026-11-07T23:13:39.7488094+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 9,
+       "dedicated": 13
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 2027,
+       "dedicated": 0
+      },
+      "0x00000000_0x00012BB8 (?)": {
+       "shared": 0,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": "nvidia",
+     "peak_working_set_mb": 2561,
+     "gens": [
+      {
+       "regime": "cold",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 28.564418882663418,
+       "prefill_tps": 33.904481083845845,
+       "ttft_ms": 560.6516999978339,
+       "text_sha256": "7da0dd4e07f863d32052c6fe0860de4853c37473d418fca9cd94d1c12b973b76",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "<think>\nOkay, the user wants an explanation of on-device AI in simple terms. Let me break this down.\n\nFirst, I need to define what on-device AI is. The key terms here are \"on-device\" and \"AI.\"\n\nOn-device AI means that the AI is run on the device itself, rather than being sent to a remote server. So, for example, if you have a smartphone, and you want the AI to process data on the phone, that's on-device AI.\n\nNow, the user wants this in simple terms. So, I need to avoid technical jargon and make it more relatable.\n\nLet me"
+      },
+      {
+       "regime": "warm",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 30.489193345037837,
+       "prefill_tps": 150.42796757570656,
+       "ttft_ms": 126.54969999857713,
+       "text_sha256": "7da0dd4e07f863d32052c6fe0860de4853c37473d418fca9cd94d1c12b973b76",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "<think>\nOkay, the user wants an explanation of on-device AI in simple terms. Let me break this down.\n\nFirst, I need to define what on-device AI is. The key terms here are \"on-device\" and \"AI.\"\n\nOn-device AI means that the AI is run on the device itself, rather than being sent to a remote server. So, for example, if you have a smartphone, and you want the AI to process data on the phone, that's on-device AI.\n\nNow, the user wants this in simple terms. So, I need to avoid technical jargon and make it more relatable.\n\nLet me"
+      }
+     ],
+     "load_s": 6.288635999997496,
+     "versions": {
+      "python": "3.12.10",
+      "onnxruntime-genai": "0.19.0",
+      "onnxruntime": "1.31.1",
+      "onnxruntime-ep-openvino": "1.8.1",
+      "onnxruntime-ep-webgpu": "0.5.0",
+      "numpy": "2.5.4"
+     }
+    }
+   ],
+   "cold_n": 0,
+   "text_check": "2/2 PASS",
+   "host_env": [
+    {
+     "read": "2026-11-07T19:36:14.0602178+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    },
+    {
+     "read": "2026-11-07T23:47:21.5196137+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    },
+    {
+     "read": "2026-11-08T02:07:11.6245753+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    },
+    {
+     "read": "2026-11-08T03:03:36.6039915+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    },
+    {
+     "read": "2026-11-08T03:42:51.6052743+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    },
+    {
+     "read": "2026-11-08T04:40:06.6871579+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    }
+   ],
+   "counts": false,
+   "unit_args": [
+    "--model-dir",
+    "{ROOT}\\models\\onnx-community__Qwen3-1.7B-ONNX\\onnxruntime\\webgpu\\webgpu-int4-kld-block-32",
+    "--ep",
+    "webgpu",
+    "--ep-option",
+    "adapterIndex=1"
+   ],
+   "unit_note": "WebGPU EP 0.5.0 plugin, adapterIndex 1"
+  },
+  {
+   "sitting": "walk-timed",
+   "mode": "timed",
+   "runs": [
+    {
+     "run": 1,
+     "status": "OK",
+     "counted": false,
+     "why": "run 1 of a GPU / NPU cell (first process in the sitting)",
+     "exit_code": 0,
+     "timed_out": false,
+     "elapsed_s": 14.929,
+     "suspended_s": 0,
+     "gate": {
+      "quietGate": "quiet",
+      "cpuReads": [
+       3.1,
+       0.7,
+       1
+      ],
+      "nvidiaMiB": 0,
+      "availGB": 20.2,
+      "ramNeedGB": 3.7,
+      "gpuEngines": 0
+     },
+     "before": {
+      "load": {
+       "cpu": 0.5,
+       "build_ms": 0,
+       "top": [
+        "System 4 0.03 core",
+        "WmiPrvSE 7560 0.02 core",
+        "conhost 28404 0.02 core",
+        "powershell 13760 0.02 core"
+       ]
+      },
+      "nvidia": "P0, 3930 MHz, 14001 MHz, 19.30 W, 0 %, 0 MiB, 57",
+      "availGB": 20.2
+     },
+     "start": "2026-11-08T08:04:30.6812974+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 9,
+       "dedicated": 13
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 2026,
+       "dedicated": 0
+      },
+      "0x00000000_0x00012BB8 (?)": {
+       "shared": 0,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": "nvidia",
+     "peak_working_set_mb": 2507,
+     "gens": [
+      {
+       "regime": "cold",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 34.28081455964523,
+       "prefill_tps": 34.54070676944022,
+       "ttft_ms": 550.3438999585342,
+       "text_sha256": "7da0dd4e07f863d32052c6fe0860de4853c37473d418fca9cd94d1c12b973b76",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "<think>\nOkay, the user wants an explanation of on-device AI in simple terms. Let me break this down.\n\nFirst, I need to define what on-device AI is. The key terms here are \"on-device\" and \"AI.\"\n\nOn-device AI means that the AI is run on the device itself, rather than being sent to a remote server. So, for example, if you have a smartphone, and you want the AI to process data on the phone, that's on-device AI.\n\nNow, the user wants this in simple terms. So, I need to avoid technical jargon and make it more relatable.\n\nLet me"
+      },
+      {
+       "regime": "warm",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 37.691014052070976,
+       "prefill_tps": 203.27334268349256,
+       "ttft_ms": 93.68990003713407,
+       "text_sha256": "7da0dd4e07f863d32052c6fe0860de4853c37473d418fca9cd94d1c12b973b76",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "<think>\nOkay, the user wants an explanation of on-device AI in simple terms. Let me break this down.\n\nFirst, I need to define what on-device AI is. The key terms here are \"on-device\" and \"AI.\"\n\nOn-device AI means that the AI is run on the device itself, rather than being sent to a remote server. So, for example, if you have a smartphone, and you want the AI to process data on the phone, that's on-device AI.\n\nNow, the user wants this in simple terms. So, I need to avoid technical jargon and make it more relatable.\n\nLet me"
+      }
+     ],
+     "load_s": 4.110443299985491,
+     "versions": {
+      "python": "3.12.10",
+      "onnxruntime-genai": "0.19.0",
+      "onnxruntime": "1.31.1",
+      "onnxruntime-ep-openvino": "1.8.1",
+      "onnxruntime-ep-webgpu": "0.5.0",
+      "numpy": "2.5.4"
+     }
+    },
+    {
+     "run": 2,
+     "status": "OK",
+     "counted": true,
+     "why": "",
+     "exit_code": 0,
+     "timed_out": false,
+     "elapsed_s": 16.005,
+     "suspended_s": 0,
+     "gate": {
+      "quietGate": "quiet",
+      "cpuReads": [
+       0.8,
+       0.8,
+       1.1
+      ],
+      "nvidiaMiB": 0,
+      "availGB": 20.2,
+      "ramNeedGB": 3.7,
+      "gpuEngines": 0
+     },
+     "before": {
+      "load": {
+       "cpu": 1.8,
+       "build_ms": 0,
+       "top": [
+        "System 4 0.2 core",
+        "svchost 17248 0.02 core",
+        "WmiPrvSE 31924 0.02 core",
+        "powershell 28276 0.02 core",
+        "svchost 5260 0.02 core"
+       ]
+      },
+      "nvidia": "P0, 180 MHz, 14001 MHz, 18.29 W, 0 %, 0 MiB, 51",
+      "availGB": 20.2
+     },
+     "start": "2026-11-08T08:05:25.3468909+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 9,
+       "dedicated": 13
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 2026,
+       "dedicated": 0
+      },
+      "0x00000000_0x00012BB8 (?)": {
+       "shared": 0,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": "nvidia",
+     "peak_working_set_mb": 2523,
+     "gens": [
+      {
+       "regime": "cold",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 34.423894973625096,
+       "prefill_tps": 17.871476990953955,
+       "ttft_ms": 1063.4038000134751,
+       "text_sha256": "7da0dd4e07f863d32052c6fe0860de4853c37473d418fca9cd94d1c12b973b76",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "<think>\nOkay, the user wants an explanation of on-device AI in simple terms. Let me break this down.\n\nFirst, I need to define what on-device AI is. The key terms here are \"on-device\" and \"AI.\"\n\nOn-device AI means that the AI is run on the device itself, rather than being sent to a remote server. So, for example, if you have a smartphone, and you want the AI to process data on the phone, that's on-device AI.\n\nNow, the user wants this in simple terms. So, I need to avoid technical jargon and make it more relatable.\n\nLet me"
+      },
+      {
+       "regime": "warm",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 37.65513135652608,
+       "prefill_tps": 207.7903897915793,
+       "ttft_ms": 91.68460001819767,
+       "text_sha256": "7da0dd4e07f863d32052c6fe0860de4853c37473d418fca9cd94d1c12b973b76",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "<think>\nOkay, the user wants an explanation of on-device AI in simple terms. Let me break this down.\n\nFirst, I need to define what on-device AI is. The key terms here are \"on-device\" and \"AI.\"\n\nOn-device AI means that the AI is run on the device itself, rather than being sent to a remote server. So, for example, if you have a smartphone, and you want the AI to process data on the phone, that's on-device AI.\n\nNow, the user wants this in simple terms. So, I need to avoid technical jargon and make it more relatable.\n\nLet me"
+      }
+     ],
+     "load_s": 4.804016100009903,
+     "versions": {
+      "python": "3.12.10",
+      "onnxruntime-genai": "0.19.0",
+      "onnxruntime": "1.31.1",
+      "onnxruntime-ep-openvino": "1.8.1",
+      "onnxruntime-ep-webgpu": "0.5.0",
+      "numpy": "2.5.4"
+     }
+    },
+    {
+     "run": 3,
+     "status": "OK",
+     "counted": true,
+     "why": "",
+     "exit_code": 0,
+     "timed_out": false,
+     "elapsed_s": 17.306,
+     "suspended_s": 0,
+     "gate": {
+      "quietGate": "quiet",
+      "cpuReads": [
+       1.3,
+       0.7,
+       0.3
+      ],
+      "nvidiaMiB": 0,
+      "availGB": 20.2,
+      "ramNeedGB": 3.7,
+      "gpuEngines": 0
+     },
+     "before": {
+      "load": {
+       "cpu": 1.8,
+       "build_ms": 0,
+       "top": [
+        "System 4 0.16 core",
+        "svchost 5260 0.02 core",
+        "powershell 25860 0.02 core",
+        "conhost 4476 0.02 core",
+        "svchost 10536 0.02 core"
+       ]
+      },
+      "nvidia": "P0, 172 MHz, 14001 MHz, 17.58 W, 0 %, 0 MiB, 47",
+      "availGB": 20.2
+     },
+     "start": "2026-11-08T08:06:21.0804994+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 9,
+       "dedicated": 13
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 2026,
+       "dedicated": 0
+      },
+      "0x00000000_0x00012BB8 (?)": {
+       "shared": 0,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": "nvidia",
+     "peak_working_set_mb": 2544,
+     "gens": [
+      {
+       "regime": "cold",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 34.36611909637849,
+       "prefill_tps": 18.021386453364226,
+       "ttft_ms": 1054.5538000005763,
+       "text_sha256": "7da0dd4e07f863d32052c6fe0860de4853c37473d418fca9cd94d1c12b973b76",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "<think>\nOkay, the user wants an explanation of on-device AI in simple terms. Let me break this down.\n\nFirst, I need to define what on-device AI is. The key terms here are \"on-device\" and \"AI.\"\n\nOn-device AI means that the AI is run on the device itself, rather than being sent to a remote server. So, for example, if you have a smartphone, and you want the AI to process data on the phone, that's on-device AI.\n\nNow, the user wants this in simple terms. So, I need to avoid technical jargon and make it more relatable.\n\nLet me"
+      },
+      {
+       "regime": "warm",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 37.436514892759334,
+       "prefill_tps": 211.75319388680572,
+       "ttft_ms": 90.01769998576492,
+       "text_sha256": "7da0dd4e07f863d32052c6fe0860de4853c37473d418fca9cd94d1c12b973b76",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "<think>\nOkay, the user wants an explanation of on-device AI in simple terms. Let me break this down.\n\nFirst, I need to define what on-device AI is. The key terms here are \"on-device\" and \"AI.\"\n\nOn-device AI means that the AI is run on the device itself, rather than being sent to a remote server. So, for example, if you have a smartphone, and you want the AI to process data on the phone, that's on-device AI.\n\nNow, the user wants this in simple terms. So, I need to avoid technical jargon and make it more relatable.\n\nLet me"
+      }
+     ],
+     "load_s": 6.639680899999803,
+     "versions": {
+      "python": "3.12.10",
+      "onnxruntime-genai": "0.19.0",
+      "onnxruntime": "1.31.1",
+      "onnxruntime-ep-openvino": "1.8.1",
+      "onnxruntime-ep-webgpu": "0.5.0",
+      "numpy": "2.5.4"
+     }
+    }
+   ],
+   "cold_n": 2,
+   "text_check": "6/6 PASS",
+   "host_env": [
+    {
+     "read": "2026-11-08T07:40:42.2173137+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    }
+   ],
+   "cold_spread_pct": 0.17,
+   "decode_tps": 34.4,
+   "prefill_tps": 17.9,
+   "ttft_ms": 1059.0,
+   "decode_tps_warm": 37.55,
+   "peak_working_set_mb": 2533,
+   "gpu_adapter_used": [
+    "nvidia"
+   ],
+   "generated_tokens": [
+    128
+   ],
+   "stop": [
+    "length"
+   ],
+   "same_cold_text": true,
+   "os_build": [
+    "26200.9711"
+   ],
+   "counts": true,
+   "unit_args": [
+    "--model-dir",
+    "{ROOT}\\models\\onnx-community__Qwen3-1.7B-ONNX\\onnxruntime\\webgpu\\webgpu-int4-kld-block-32",
+    "--ep",
+    "webgpu",
+    "--ep-option",
+    "adapterIndex=1"
+   ],
+   "unit_note": "WebGPU EP 0.5.0 plugin, adapterIndex 1"
+  }
+ ]
+}

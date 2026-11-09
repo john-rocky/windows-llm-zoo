@@ -1,0 +1,29 @@
+
+--- foundry server stop  [2026-11-09T09:07:48.6192371+09:00]
+笳・success: Server stopped.
+[exit=0, 0.71 s]
+
+--- foundry server start  [2026-11-09T09:07:49.3335476+09:00]
+笆 Starting Foundry Local server
+OpenVINOExecutionProvider: 0%
+NvTensorRTRTXExecutionProvider: 0%
+CUDAExecutionProvider: 0%
+WebGpuExecutionProvider: 0%
+笳・success: Server ready (http://127.0.0.1:54514)
+  Public API: http://127.0.0.1:54514/v1/
+  Local API (BYOM): http://127.0.0.1:54514/catalogs/local/v1/
+[exit=0, 9.84 s]
+
+--- foundry model load z2-gemma-4-e4b-it-cpu-int4:1  [2026-11-09T09:07:59.1880184+09:00]
+笆 Loading model (z2-gemma-4-e4b-it-cpu-int4:1)
+笳・success: Loaded 'z2-gemma-4-e4b-it-cpu-int4' (CPU variant 'z2-gemma-4-e4b-it-cpu-int4:1')
+into memory.
+[exit=0, 35.35 s]
+
+--- foundry model unload z2-gemma-4-e4b-it-cpu-int4:1  [2026-11-09T09:08:57.4253203+09:00]
+笳・success: Unloaded 'z2-gemma-4-e4b-it-cpu-int4:1' from memory.
+[exit=0, 1.21 s]
+
+--- foundry server stop  [2026-11-09T09:08:58.6224228+09:00]
+笳・success: Server stopped.
+[exit=0, 3.13 s]

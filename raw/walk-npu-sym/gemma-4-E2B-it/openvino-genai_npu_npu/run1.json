@@ -1,0 +1,42 @@
+{
+ "runner": "run_ovgenai.py",
+ "started": "2026-11-07T20:19:12.402541+09:00",
+ "argv": [
+  "--model-dir",
+  "C:\\src\\llmzoo-walk\\models\\OpenVINO__gemma-4-E2B-it-int4-cw-ov",
+  "--device",
+  "NPU",
+  "--cache-dir",
+  "C:\\src\\llmzoo-walk\\ovcache\\gemma-4-E2B-it_npu",
+  "--prompt-file",
+  "C:\\src\\llmzoo-walk\\pc\\short-chat.txt",
+  "--out",
+  "C:\\src\\llmzoo-walk\\runs\\walk-npu-sym\\gemma-4-E2B-it\\openvino-genai_npu_npu\\run1.json"
+ ],
+ "pid": 34212,
+ "versions": {
+  "python": "3.12.10",
+  "openvino": "2026.4.1",
+  "openvino-genai": "2026.4.1.0",
+  "openvino-tokenizers": "2026.4.1.0",
+  "numpy": "2.5.4"
+ },
+ "available_devices": {
+  "CPU": "Intel(R) Core(TM) Ultra 9 386H",
+  "GPU.0": "Intel(R) Graphics (iGPU)",
+  "GPU.1": "NVIDIA GeForce RTX 5080 Laptop GPU (dGPU)",
+  "NPU": "Intel(R) AI Boost"
+ },
+ "prompt_sha256": "870aafb98e570e8fa1343ec051180237f4587233f49c0cc1391724e086d42d50",
+ "pipeline": "llm",
+ "load_s": 10081.584447400004,
+ "pipeline_errors_before": [],
+ "templated_prompt": "<bos><|turn>user\nExplain what on-device AI means in simple terms.<turn|>\n<|turn>model\n",
+ "templated_prompt_sha256": "70b30bff1ab92ec74814a888864b33ac65c53a053b6d35e8dfa13b353830ffb2",
+ "gens": [],
+ "status": "ERROR",
+ "error": "Traceback (most recent call last):\n  File \"C:\\src\\llmzoo-walk\\pc\\run_ovgenai.py\", line 122, in main\n    res = pipe.generate([prompt], cfg)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Check 'num_inputs == 4 || num_inputs == 3' failed at C:\\Jenkins\\workspace\\private-ci\\ie\\build-windows-vs2022\\b\\repos\\openvino.genai\\src\\cpp\\src\\llm\\pipeline_stateful.cpp:416:\nModel should have 3 or 4 inputs: either (input_ids, attention_mask, beam_idx) or (input_ids, attention_mask, position_ids, beam_idx) but you have '5' inputs\n\n",
+ "peak_working_set_bytes": 3064176640,
+ "peak_pagefile_bytes": 2349756416,
+ "ended": "2026-11-07T23:07:16.938767+09:00"
+}

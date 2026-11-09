@@ -1,0 +1,8 @@
+# ONNX Runtime GenAI 0.19.0 with CUDA, the CUDA 13 runtime from pip (requirements-genai-cuda.txt of john-rocky/gemma-4-e4b-on-foundry-local)
+onnxruntime-genai-cuda==0.19.0
+onnxruntime-gpu==1.31.1
+numpy==2.5.4
+nvidia-cuda-runtime==13.5.37
+nvidia-cuda-nvrtc==13.5.37
+nvidia-cublas==13.10.0.20
+nvidia-cudnn-cu13==9.28.0.42

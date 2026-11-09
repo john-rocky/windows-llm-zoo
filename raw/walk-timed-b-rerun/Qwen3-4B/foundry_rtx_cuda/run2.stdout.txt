@@ -1,0 +1,3 @@
+ENGINE_PID 13824
+{"gen": 1, "generated_tokens": 128, "chunks": 127, "delta_fields": {"reasoning_content": 127}, "stop": "length", "ttft_ms": 951.2180000019725, "decode_tps": 78.77591235094806}
+{"gen": 2, "generated_tokens": 128, "chunks": 127, "delta_fields": {"reasoning_content": 127}, "stop": "length", "ttft_ms": 351.5577999933157, "decode_tps": 80.22967080461646}

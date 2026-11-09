@@ -1,0 +1,63 @@
+[2026-11-07T15:48:39.7811930+09:00] chain start: plan C:\src\llmzoo\pc\plans\z2-first-a.json mode first, 41 units, pid 12920
+[2026-11-07T15:48:45.1559236+09:00] adapters: 0x00000000_0x00012C48=nvidia, 0x00000000_0x0001260E=intel-gpu, 0x00000000_0x00012BB8=?, 0x00000000_0x00013E4C=npu?
+[2026-11-07T15:48:48.7671005+09:00] Qwen3-0.6B\ort-genai_rtx_cuda run 1 start
+[2026-11-07T15:48:57.7816914+09:00] Qwen3-0.6B\ort-genai_rtx_cuda run 1 end: exit 0, OK, 6.969 s
+[2026-11-07T15:48:59.7995010+09:00] Qwen3-0.6B\ort-genai_rtx_webgpu run 1 start
+[2026-11-07T15:49:22.6106816+09:00] Qwen3-0.6B\ort-genai_rtx_webgpu run 1 end: exit 0, OK, 20.829 s
+[2026-11-07T15:49:24.6317600+09:00] Qwen3-0.6B\ort-genai_igpu_webgpu run 1 start
+[2026-11-07T15:49:43.7566664+09:00] Qwen3-0.6B\ort-genai_igpu_webgpu run 1 end: exit 0, OK, 17.107 s
+[2026-11-07T15:49:45.7601084+09:00] Qwen3-0.6B\ort-genai_igpu_openvino run 1 start
+[2026-11-07T15:50:54.8547065+09:00] Qwen3-0.6B\ort-genai_igpu_openvino run 1 end: exit 0, OK, 67.15 s
+[2026-11-07T15:50:56.3527937+09:00] Qwen3-0.6B\ort-genai_npu_openvino run 1 start
+[2026-11-07T15:51:02.4009234+09:00] Qwen3-0.6B\ort-genai_npu_openvino run 1 end: exit 1, ERROR, 4.094 s
+[2026-11-07T15:51:04.3533328+09:00] Qwen3-0.6B\ort-genai_cpu_cpu run 1 start
+[2026-11-07T15:51:16.6440036+09:00] Qwen3-0.6B\ort-genai_cpu_cpu run 1 end: exit 0, OK, 10.251 s
+[2026-11-07T15:51:18.6760227+09:00] Qwen3-0.6B\ort-genai_cpu_openvino run 1 start
+[2026-11-07T15:51:44.8490936+09:00] Qwen3-0.6B\ort-genai_cpu_openvino run 1 end: exit 0, OK, 24.21 s
+[2026-11-07T15:51:46.8049057+09:00] Qwen3-1.7B\ort-genai_rtx_cuda run 1 start
+[2026-11-07T15:52:01.6982725+09:00] Qwen3-1.7B\ort-genai_rtx_cuda run 1 end: exit 0, OK, 12.929 s
+[2026-11-07T15:52:03.6677885+09:00] Qwen3-1.7B\ort-genai_rtx_webgpu run 1 start
+[2026-11-07T15:52:23.1002856+09:00] Qwen3-1.7B\ort-genai_rtx_webgpu run 1 end: exit 0, OK, 17.389 s
+[2026-11-07T15:52:25.1065338+09:00] Qwen3-1.7B\ort-genai_igpu_webgpu run 1 start
+[2026-11-07T15:52:45.3830041+09:00] Qwen3-1.7B\ort-genai_igpu_webgpu run 1 end: exit 0, OK, 18.226 s
+[2026-11-07T15:52:47.3660155+09:00] Qwen3-1.7B\ort-genai_igpu_openvino run 1 start
+[2026-11-07T15:54:05.4856340+09:00] Qwen3-1.7B\ort-genai_igpu_openvino run 1 end: exit 0, OK, 76.108 s
+[2026-11-07T15:54:07.4870042+09:00] Qwen3-1.7B\ort-genai_npu_openvino run 1 start
+[2026-11-07T15:54:13.7413832+09:00] Qwen3-1.7B\ort-genai_npu_openvino run 1 end: exit 1, ERROR, 4.21 s
+[2026-11-07T15:54:15.5390895+09:00] Qwen3-1.7B\ort-genai_cpu_cpu run 1 start
+[2026-11-07T15:54:54.4213027+09:00] Qwen3-1.7B\ort-genai_cpu_cpu run 1 end: exit 0, OK, 36.885 s
+[2026-11-07T15:54:56.4171628+09:00] Qwen3-1.7B\ort-genai_cpu_openvino run 1 start
+[2026-11-07T15:55:43.2117663+09:00] Qwen3-1.7B\ort-genai_cpu_openvino run 1 end: exit 0, OK, 44.728 s
+[2026-11-07T15:55:45.3231827+09:00] Qwen3-4B\ort-genai_rtx_cuda run 1 start
+[2026-11-07T15:56:06.3223475+09:00] Qwen3-4B\ort-genai_rtx_cuda run 1 end: exit 0, OK, 19.057 s
+[2026-11-07T15:56:08.3224866+09:00] Qwen3-4B\ort-genai_rtx_webgpu run 1 start
+[2026-11-07T15:56:43.6499261+09:00] Qwen3-4B\ort-genai_rtx_webgpu run 1 end: exit 0, OK, 33.277 s
+[2026-11-07T15:56:45.7120698+09:00] Qwen3-4B\ort-genai_igpu_webgpu run 1 start
+[2026-11-07T15:57:19.3094004+09:00] Qwen3-4B\ort-genai_igpu_webgpu run 1 end: exit 0, OK, 32.305 s
+[2026-11-07T15:57:21.3220503+09:00] Qwen3-4B\ort-genai_igpu_openvino run 1 start
+[2026-11-07T15:59:33.4415957+09:00] Qwen3-4B\ort-genai_igpu_openvino run 1 end: exit 0, OK, 130.118 s
+[2026-11-07T15:59:35.4565637+09:00] Qwen3-4B\ort-genai_npu_openvino run 1 start
+[2026-11-07T15:59:41.7101894+09:00] Qwen3-4B\ort-genai_npu_openvino run 1 end: exit 1, ERROR, 4.208 s
+[2026-11-07T15:59:42.8258440+09:00] Qwen3-4B\ort-genai_cpu_cpu run 1 start
+[2026-11-07T16:00:56.6888711+09:00] Qwen3-4B\ort-genai_cpu_cpu run 1 end: exit 0, OK, 71.882 s
+[2026-11-07T16:00:58.6833005+09:00] Qwen3-4B\ort-genai_cpu_openvino run 1 start
+[2026-11-07T16:02:13.9485170+09:00] Qwen3-4B\ort-genai_cpu_openvino run 1 end: exit 0, OK, 73.226 s
+[2026-11-07T16:02:15.9215445+09:00] gemma-4-E4B-it\ort-genai_rtx_cuda run 1 start
+[2026-11-07T16:02:54.2429455+09:00] gemma-4-E4B-it\ort-genai_rtx_cuda run 1 end: exit -1073741819, OK, 36.297 s
+[2026-11-07T16:02:56.2517455+09:00] gemma-4-E4B-it\ort-genai_igpu_openvino run 1 start
+[2026-11-07T16:07:12.9205067+09:00] gemma-4-E4B-it\ort-genai_igpu_openvino run 1 end: exit 0, OK, 254.646 s
+[2026-11-07T16:07:14.9278317+09:00] gemma-4-E4B-it\ort-genai_npu_openvino run 1 start
+[2026-11-07T16:07:26.8653262+09:00] gemma-4-E4B-it\ort-genai_npu_openvino run 1 end: exit 1, ERROR, 9.897 s
+[2026-11-07T16:07:28.8702358+09:00] gemma-4-E4B-it\ort-genai_cpu_cpu run 1 start
+[2026-11-07T16:09:23.7608622+09:00] gemma-4-E4B-it\ort-genai_cpu_cpu run 1 end: exit 0, OK, 112.863 s
+[2026-11-07T16:09:25.7709122+09:00] gemma-4-E4B-it\ort-genai_cpu_openvino run 1 start
+[2026-11-07T16:11:47.9819755+09:00] gemma-4-E4B-it\ort-genai_cpu_openvino run 1 end: exit 0, OK, 140.2 s
+[2026-11-07T16:11:50.0047520+09:00] Qwen3-0.6B\openvino-genai_npu_npu run 1 start
+[2026-11-07T16:13:56.1291656+09:00] Qwen3-0.6B\openvino-genai_npu_npu run 1 stopped: another lane took busy.txt; its files removed, taken again when the lock is free
+[2026-11-07T16:13:56.1747673+09:00] another lane holds busy.txt (another lane's lock 2026-11-07T16:13:54.7104463+09:00): waiting before Qwen3-0.6B\openvino-genai_npu_npu run 1
+[2026-11-07T17:15:59.1683465+09:00] Qwen3-0.6B\openvino-genai_npu_npu run 1 start
+[2026-11-07T17:29:21.5408432+09:00] Qwen3-0.6B\openvino-genai_npu_npu run 1 stopped: another lane took busy.txt; its files removed, taken again when the lock is free
+[2026-11-07T17:29:21.5448600+09:00] another lane holds busy.txt (another lane's lock 2026-11-07T17:29:19.5570706+09:00): waiting before Qwen3-0.6B\openvino-genai_npu_npu run 1
+[2026-11-07T17:41:55.1255403+09:00] Qwen3-0.6B\openvino-genai_npu_npu run 1 start
+[2026-11-07T18:00:42.3769915+09:00] Qwen3-0.6B\openvino-genai_npu_npu run 1 stopped: another lane took busy.txt; its files removed, taken again when the lock is free
+[2026-11-07T18:00:42.3857302+09:00] another lane holds busy.txt (another lane's lock 2026-11-07T18:00:40.7352305+09:00): waiting before Qwen3-0.6B\openvino-genai_npu_npu run 1

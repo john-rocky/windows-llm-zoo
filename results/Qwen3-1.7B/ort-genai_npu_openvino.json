@@ -1,0 +1,376 @@
+{
+ "model": "Qwen3-1.7B",
+ "cell": "ort-genai_npu_openvino",
+ "runtime": "ort-genai",
+ "runtime_detail": "ONNX Runtime GenAI 0.19.0 (Python, pc/run_genai.py)",
+ "device": "npu",
+ "device_name": "Intel(R) NPU",
+ "backend": "openvino",
+ "backend_detail": "OpenVINO EP 1.8.1 plugin, device_type NPU, on the CPU package (probe)",
+ "source": "windows-llm-zoo (Z2)",
+ "shelf": {
+  "repo": "onnx-community/Qwen3-1.7B-ONNX",
+  "folder": "onnxruntime/cpu_and_mobile/cpu-int4-kld-block-128",
+  "quant": "MatMulNBits b128 asym acc4: int8 x101, int4 x96; embeddings int8 b128 asym [model.onnx]",
+  "quant_source": "the graph (pc/onnx_quant.py)"
+ },
+ "unit": {
+  "kind": "python",
+  "venv": "genai",
+  "script": "run_genai.py",
+  "args": [
+   "--model-dir",
+   "{ROOT}\\models\\onnx-community__Qwen3-1.7B-ONNX\\onnxruntime\\cpu_and_mobile\\cpu-int4-kld-block-128",
+   "--ep",
+   "openvino",
+   "--ov-device",
+   "NPU"
+  ],
+  "model_id": null,
+  "path": null,
+  "engines_gate": false
+ },
+ "workload": {
+  "task": "short-chat",
+  "prompt": "prompts/text/short-chat.txt of edge-llm-bench (pc/short-chat.txt)",
+  "chat_template": "the package's own, one user turn",
+  "output_budget_tokens": 128,
+  "sampling": "greedy",
+  "regime": "cold (first generation of a fresh engine process; Foundry: of a fresh daemon)",
+  "counting": "runs=3 per sitting; run 1 of a GPU or NPU cell is not counted; a text-check failure is not counted"
+ },
+ "status": "error",
+ "table": null,
+ "first_error": "Traceback (most recent call last):\n  File \"C:\\src\\llmzoo-walk\\pc\\run_genai.py\", line 214, in main\n    model = make_model(og, args)\n            ^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\src\\llmzoo-walk\\pc\\run_genai.py\", line 135, in make_model\n    return og.Model(config)\n           ^^^^^^^^^^^^^^^^\nRuntimeError: Exception from src\\inference\\src\\cpp\\core.cpp:120:\nException from src\\inference\\src\\dev\\plugin.cpp:54:\nException from src\\plugins\\intel_npu\\src\\plugin\\src\\plugin.cpp:560:\nException from src\\plugins\\intel_npu\\src\\compiler_adapter\\src\\compiler_impl.cpp:323:\nCompilation failed. vclAllocatedExecutableCreate4 result: 0x78000004 - [NPU_VCL] Compiler returned msg:\nReshape node '/model/layers.0/attn/q_norm/Reshape_1': expected exactly 1 dynamic output bound dimension, got 2\n\n\n\n\n",
+ "why_not_measured": "2 different errors, the last: RuntimeError: 'enable_causallm' is enabled, but the model graph has been partitioned into 29 subgraphs. CausalLM mode requires the entire model to be compiled a",
+ "sittings": [
+  {
+   "sitting": "walk-first",
+   "mode": "first",
+   "runs": [
+    {
+     "run": 1,
+     "status": "ERROR",
+     "counted": false,
+     "why": "runner error",
+     "exit_code": 1,
+     "timed_out": false,
+     "elapsed_s": 4.734,
+     "suspended_s": 0,
+     "gate": null,
+     "before": {
+      "load": {
+       "cpu": 33.7,
+       "build_ms": 1328,
+       "top": [
+        "python 33828 1.87 core",
+        "System 4 1.05 core",
+        "cicc 25800 0.96 core",
+        "MsMpEng 5548 0.57 core",
+        "cl 308 0.33 core"
+       ]
+      },
+      "nvidia": "P0, 1890 MHz, 14001 MHz, 19.75 W, 0 %, 0 MiB, 58",
+      "availGB": 16.4
+     },
+     "start": "2026-11-07T23:14:40.2623109+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 0,
+       "dedicated": 0
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 23,
+       "dedicated": 0
+      },
+      "0x00000000_0x00013E4C (npu?)": {
+       "shared": 0,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": null,
+     "peak_working_set_mb": 2112,
+     "error": "Traceback (most recent call last):\n  File \"C:\\src\\llmzoo-walk\\pc\\run_genai.py\", line 214, in main\n    model = make_model(og, args)\n            ^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\src\\llmzoo-walk\\pc\\run_genai.py\", line 135, in make_model\n    return og.Model(config)\n           ^^^^^^^^^^^^^^^^\nRuntimeError: Exception from src\\inference\\src\\cpp\\core.cpp:120:\nException from src\\inference\\src\\dev\\plugin.cpp:54:\nException from src\\plugins\\intel_npu\\src\\plugin\\src\\plugin.cpp:560:\nException from src\\plugins\\intel_npu\\src\\compiler_adapter\\src\\compiler_impl.cpp:323:\nCompilation failed. vclAllocatedExecutableCreate4 result: 0x78000004 - [NPU_VCL] Compiler returned msg:\nReshape node '/model/layers.0/attn/q_norm/Reshape_1': expected exactly 1 dynamic output bound dimension, got 2\n\n\n\n\n"
+    }
+   ],
+   "cold_n": 0,
+   "text_check": "0/0 PASS",
+   "host_env": [
+    {
+     "read": "2026-11-07T19:36:14.0602178+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    },
+    {
+     "read": "2026-11-07T23:47:21.5196137+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    },
+    {
+     "read": "2026-11-08T02:07:11.6245753+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    },
+    {
+     "read": "2026-11-08T03:03:36.6039915+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    },
+    {
+     "read": "2026-11-08T03:42:51.6052743+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    },
+    {
+     "read": "2026-11-08T04:40:06.6871579+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    }
+   ],
+   "counts": false,
+   "unit_args": [
+    "--model-dir",
+    "{ROOT}\\models\\onnx-community__Qwen3-1.7B-ONNX\\onnxruntime\\cpu_and_mobile\\cpu-int4-kld-block-128",
+    "--ep",
+    "openvino",
+    "--ov-device",
+    "NPU"
+   ],
+   "unit_note": "OpenVINO EP 1.8.1 plugin, device_type NPU, on the CPU package (probe)"
+  },
+  {
+   "sitting": "walk-npu-fix1",
+   "mode": "first",
+   "runs": [
+    {
+     "run": 1,
+     "status": "ERROR",
+     "counted": false,
+     "why": "runner error",
+     "exit_code": 1,
+     "timed_out": false,
+     "elapsed_s": 6.88,
+     "suspended_s": 0,
+     "gate": null,
+     "before": {
+      "load": {
+       "cpu": 73.2,
+       "build_ms": 4219,
+       "top": [
+        "cl 15484 2.73 core",
+        "foundrylocald 7064 2.7 core",
+        "System 4 1.19 core",
+        "python 2768 0.93 core",
+        "python 33828 0.85 core"
+       ]
+      },
+      "nvidia": "P0, 1132 MHz, 14001 MHz, 18.79 W, 0 %, 0 MiB, 56",
+      "availGB": 11.2
+     },
+     "start": "2026-11-07T23:17:19.7641837+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 0,
+       "dedicated": 0
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 23,
+       "dedicated": 0
+      },
+      "0x00000000_0x00013E4C (npu?)": {
+       "shared": 0,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": null,
+     "peak_working_set_mb": 2112,
+     "error": "Traceback (most recent call last):\n  File \"C:\\src\\llmzoo-walk\\pc\\run_genai.py\", line 214, in main\n    model = make_model(og, args)\n            ^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\src\\llmzoo-walk\\pc\\run_genai.py\", line 135, in make_model\n    return og.Model(config)\n           ^^^^^^^^^^^^^^^^\nRuntimeError: 'enable_causallm' is enabled, but the model graph has been partitioned into 29 subgraphs. CausalLM mode requires the entire model to be compiled as a single subgraph.\n"
+    }
+   ],
+   "cold_n": 0,
+   "text_check": "0/0 PASS",
+   "host_env": [
+    {
+     "read": "2026-11-07T23:16:59.8689719+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    }
+   ],
+   "counts": false,
+   "unit_args": [
+    "--model-dir",
+    "{ROOT}\\models\\onnx-community__Qwen3-1.7B-ONNX\\onnxruntime\\cpu_and_mobile\\cpu-int4-kld-block-128",
+    "--ep",
+    "openvino",
+    "--ov-device",
+    "NPU",
+    "--ep-option",
+    "enable_causallm=True"
+   ],
+   "unit_note": "OpenVINO EP 1.8.1 plugin, device_type NPU, on the CPU package (probe); probe: NPU fix 1 of 3: enable_causallm=True (the EP's stateful LLM mode)"
+  }
+ ]
+}

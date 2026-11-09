@@ -1,0 +1,46 @@
+
+--- foundry server stop  [2026-11-08T05:50:26.9311422+09:00]
+● success: Server stopped.
+[exit=0, 0.67 s]
+
+--- foundry server start  [2026-11-08T05:50:27.6325416+09:00]
+■ Starting Foundry Local server
+OpenVINOExecutionProvider: 0%
+NvTensorRTRTXExecutionProvider: 0%
+CUDAExecutionProvider: 0%
+WebGpuExecutionProvider: 0%
+● success: Server ready (http://127.0.0.1:64595)
+  Public API: http://127.0.0.1:64595/v1/
+  Local API (BYOM): http://127.0.0.1:64595/catalogs/local/v1/
+[exit=0, 7.9 s]
+
+--- foundry model unregister z2-gemma-4-e2b-it-webgpu:1  [2026-11-08T05:50:35.5603434+09:00]
+● error: No local registration matches 'z2-gemma-4-e2b-it-webgpu:1'.
+Hint: Pass a registered local alias or exact canonical model ID.
+[exit=3, 0.84 s]
+
+--- foundry model register C:\Users\USER\.foundry\cache\models\Microsoft\gemma-4-e2b-it-generic-gpu-3\v3 z2-gemma-4-e2b-it-webgpu:1 --task vision-language-chat --display-name z2-gemma-4-e2b-it-webgpu --device gpu --execution-provider WebGpuExecutionProvider  [2026-11-08T05:50:36.4040829+09:00]
+● success: Registered local model.
+■ note: ID: z2-gemma-4-e2b-it-webgpu:1
+■ note: Alias: z2-gemma-4-e2b-it-webgpu
+■ note: Folder: 
+C:\Users\USER\.foundry\cache\models\Microsoft\gemma-4-e2b-it-generic-gpu-3\v3
+■ note: Task: vision-language-chat
+■ note: Files were not copied; the original folder is retained and must remain 
+available.
+■ note: Next: foundry run z2-gemma-4-e2b-it-webgpu:1
+[exit=0, 0.33 s]
+
+--- foundry model load z2-gemma-4-e2b-it-webgpu:1  [2026-11-08T05:50:36.7393280+09:00]
+■ Loading model (z2-gemma-4-e2b-it-webgpu:1)
+● error: model.cc:580 fl::Model::Load unknown execution provider for local model: 
+WebGpuExecutionProvider
+[exit=2, 0.35 s]
+
+--- foundry model unload z2-gemma-4-e2b-it-webgpu:1  [2026-11-08T05:50:37.8363496+09:00]
+● success: Unloaded 'z2-gemma-4-e2b-it-webgpu:1' from memory.
+[exit=0, 0.56 s]
+
+--- foundry server stop  [2026-11-08T05:50:38.4010509+09:00]
+● success: Server stopped.
+[exit=0, 3.17 s]

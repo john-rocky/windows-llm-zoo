@@ -1,0 +1,76 @@
+{
+ "runner": "run_foundry.py",
+ "started": "2026-11-08T05:18:47.860150+09:00",
+ "argv": [
+  "--model",
+  "qwen3-0.6b-cuda-gpu:2",
+  "--path",
+  "/v1",
+  "--prompt-file",
+  "C:\\src\\llmzoo-walk\\pc\\short-chat.txt",
+  "--out",
+  "C:\\src\\llmzoo-walk\\runs\\walk-foundry2\\Qwen3-0.6B\\foundry_rtx_cuda\\run1.json"
+ ],
+ "prompt_sha256": "870aafb98e570e8fa1343ec051180237f4587233f49c0cc1391724e086d42d50",
+ "daemon_json": {
+  "pid": 34012,
+  "web_urls": [
+   "http://127.0.0.1:62880"
+  ],
+  "protocol_version": 3,
+  "daemon_version": "0.13.0",
+  "package_version": "0.13.0",
+  "sdk_version": "2.3.0",
+  "started_at": "2026-11-07T20:18:39.665868+00:00",
+  "log_file": "C:\\Users\\USER\\.foundry\\logs\\foundrylocald-2026-11-07.log",
+  "sdk_package_version": "2.3.0",
+  "runtime_package_version": "2.3.0",
+  "ort_package_version": "1.31.0",
+  "ort_gen_ai_package_version": "0.18.0",
+  "native_runtime_version": null,
+  "native_ort_version": null,
+  "foundry_local_core_version": "2.3.0",
+  "ort_version": "1.31.0",
+  "ort_gen_ai_version": "0.18.0",
+  "foundry_local_runtime_version": "2.3.0"
+ },
+ "url": "http://127.0.0.1:62880/v1",
+ "gens": [
+  {
+   "prompt_tokens": 19,
+   "generated_tokens": 128,
+   "chunks": 127,
+   "delta_fields": {
+    "reasoning_content": 127
+   },
+   "stop": "length",
+   "ttft_ms": 1855.297200003406,
+   "prefill_tps": 10.240946841274335,
+   "decode_tps": 99.77354572526404,
+   "request_wall_s": 3.1219371000042884,
+   "text": "\nOkay, the user is asking for a simple explanation of what on-device AI means. Let me start by breaking down the term \"on-device AI.\"\n\nFirst, I need to explain what on-device AI is. Maybe start with the basic definition. Then, explain what on-device AI means in simple terms.\n\nWait, the user wants it in simple terms. So I need to make sure the explanation is clear and easy to understand.\n\nLet me start by defining on-device AI. Maybe start with the basic definition. Then, explain what on-device AI means in simple terms.\n\nWait, maybe I should look up the term \"on-device",
+   "text_sha256": "3cdf432ad740c8d4872f997776137c1b2f9fd246805ade07a243f90143f959de",
+   "gen": 1,
+   "regime": "cold"
+  },
+  {
+   "prompt_tokens": 19,
+   "generated_tokens": 128,
+   "chunks": 127,
+   "delta_fields": {
+    "reasoning_content": 127
+   },
+   "stop": "length",
+   "ttft_ms": 218.60200000810437,
+   "prefill_tps": 86.91594770082433,
+   "decode_tps": 105.41275241630382,
+   "request_wall_s": 1.4158229000022402,
+   "text": "\nOkay, the user is asking for a simple explanation of what on-device AI means. Let me start by breaking down the term \"on-device AI.\"\n\nFirst, I need to explain what on-device AI is. Maybe start with the basic definition. Then, explain what on-device AI means in simple terms.\n\nWait, the user wants it in simple terms. So I need to make sure the explanation is clear and easy to understand.\n\nLet me start by defining on-device AI. Maybe start with the basic definition. Then, explain what on-device AI means in simple terms.\n\nWait, maybe I should look up the term \"on-device",
+   "text_sha256": "3cdf432ad740c8d4872f997776137c1b2f9fd246805ade07a243f90143f959de",
+   "gen": 2,
+   "regime": "warm"
+  }
+ ],
+ "status": "OK",
+ "ended": "2026-11-08T05:18:52.415053+09:00"
+}

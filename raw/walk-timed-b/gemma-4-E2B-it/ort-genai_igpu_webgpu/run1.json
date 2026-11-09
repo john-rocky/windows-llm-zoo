@@ -1,0 +1,110 @@
+{
+ "runner": "run_genai.py",
+ "started": "2026-11-08T19:36:19.184901+09:00",
+ "argv": [
+  "--model-dir",
+  "C:\\src\\llmzoo-walk\\overlays\\gemma-4-E2B-it_webgpu_a1",
+  "--ep",
+  "follow_config",
+  "--prompt-file",
+  "C:\\src\\llmzoo-walk\\pc\\short-chat.txt",
+  "--out",
+  "C:\\src\\llmzoo-walk\\runs\\walk-timed-b\\gemma-4-E2B-it\\ort-genai_igpu_webgpu\\run1.json"
+ ],
+ "pid": 33936,
+ "cuda_dll_dirs": [],
+ "versions": {
+  "python": "3.12.10",
+  "onnxruntime-genai": "0.19.0",
+  "onnxruntime": "1.31.1",
+  "onnxruntime-ep-openvino": "1.8.1",
+  "onnxruntime-ep-webgpu": "0.5.0",
+  "numpy": "2.5.4"
+ },
+ "prompt_sha256": "870aafb98e570e8fa1343ec051180237f4587233f49c0cc1391724e086d42d50",
+ "load_s": 21.853423499997007,
+ "device_type": "WebGPU",
+ "chat_template": "tokenizer.apply_chat_template",
+ "templated_prompt": "<bos><|turn>user\nExplain what on-device AI means in simple terms.<turn|>\n<|turn>model\n",
+ "templated_prompt_sha256": "70b30bff1ab92ec74814a888864b33ac65c53a053b6d35e8dfa13b353830ffb2",
+ "genai_config_providers": {
+  "decoder": [
+   {
+    "WebGPU": {
+     "enableGraphCapture": "0",
+     "validationMode": "disabled",
+     "adapterIndex": "1"
+    }
+   }
+  ],
+  "vision": [
+   {
+    "WebGPU": {
+     "enableGraphCapture": "0",
+     "validationMode": "disabled",
+     "adapterIndex": "1"
+    }
+   }
+  ],
+  "embedding": [
+   {
+    "WebGPU": {
+     "enableGraphCapture": "0",
+     "validationMode": "disabled",
+     "adapterIndex": "1"
+    }
+   }
+  ],
+  "speech": [
+   {
+    "WebGPU": {
+     "enableGraphCapture": "0",
+     "validationMode": "disabled",
+     "adapterIndex": "1"
+    }
+   }
+  ]
+ },
+ "gens": [
+  {
+   "prompt_tokens": 20,
+   "generated_tokens": 128,
+   "stop": "length",
+   "sequence_length": 148,
+   "generator_s": 0.06647180000436492,
+   "prefill_ms": 1322.8013000043575,
+   "first_step_ms": 0.41229999624192715,
+   "ttft_ms": 1323.2136000005994,
+   "prefill_tps": 15.119428745597784,
+   "decode_tps": 19.260431870940714,
+   "decode_s": 6.593829299934441,
+   "generation_wall_s": 7.923460900026839,
+   "text": "Imagine a computer or a device (like your smartphone or a smart camera) that can **think, learn, and make decisions right there, without needing to constantly send information to a big, distant computer (like a massive cloud server).**\n\n**Here's a breakdown using simple analogies:**\n\n### The Traditional Way (Cloud AI)\n\nThink of asking a super-smart librarian in a distant city.\n\n* **You have a question:** \"What is the capital of France?\"\n* **You send the question:** You have to physically travel (send data over the internet) to the library.\n* **The librarian thinks",
+   "text_sha256": "c8310efb34ed71f90b65634bef88178d81c23789f96bba68b6172d41f52d3471",
+   "gen": 1,
+   "regime": "cold"
+  },
+  {
+   "prompt_tokens": 20,
+   "generated_tokens": 128,
+   "stop": "length",
+   "sequence_length": 148,
+   "generator_s": 0.002538600005209446,
+   "prefill_ms": 150.30599999590777,
+   "first_step_ms": 0.4234999942127615,
+   "ttft_ms": 150.72949999012053,
+   "prefill_tps": 133.06188708730537,
+   "decode_tps": 22.412766029613973,
+   "decode_s": 5.666413499886403,
+   "generation_wall_s": 5.823471099982271,
+   "text": "Imagine a computer or a device (like your smartphone or a smart camera) that can **think, learn, and make decisions right there, without needing to constantly send information to a big, distant computer (like a massive cloud server).**\n\n**Here's a breakdown using simple analogies:**\n\n### The Traditional Way (Cloud AI)\n\nThink of asking a super-smart librarian in a distant city.\n\n* **You have a question:** \"What is the capital of France?\"\n* **You send the question:** You have to physically travel (send data over the internet) to the library.\n* **The librarian thinks",
+   "text_sha256": "c8310efb34ed71f90b65634bef88178d81c23789f96bba68b6172d41f52d3471",
+   "gen": 2,
+   "regime": "warm"
+  }
+ ],
+ "status": "OK",
+ "peak_working_set_bytes": 8401285120,
+ "peak_pagefile_bytes": 8799502336,
+ "ended": "2026-11-08T19:36:58.198227+09:00"
+}

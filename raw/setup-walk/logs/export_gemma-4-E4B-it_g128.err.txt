@@ -1,0 +1,26 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/2076 [00:00<?, ?it/s]Loading weights:  16%|█▌        | 335/2076 [00:00<00:00, 3312.62it/s]Loading weights:  32%|███▏      | 671/2076 [00:00<00:00, 3329.66it/s]Loading weights:  48%|████▊     | 1004/2076 [00:00<00:00, 3100.96it/s]Loading weights:  63%|██████▎   | 1316/2076 [00:00<00:00, 2544.32it/s]Loading weights:  88%|████████▊ | 1822/2076 [00:00<00:00, 3205.82it/s]Loading weights: 100%|██████████| 2076/2076 [00:00<00:00, 3266.42it/s]
+`loss_type=None` was set in the config but it is unrecognized. Using the default loss: `ForCausalLMLoss`.
+C:\src\llmzoo-walk\.venv-ovexport\Lib\site-packages\transformers\models\gemma4\modeling_gemma4.py:834: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if num_rotated_channels_per_dim <= 0:
+C:\src\llmzoo-walk\.venv-ovexport\Lib\site-packages\transformers\integrations\sdpa_attention.py:77: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  is_causal = query.shape[2] > 1 and attention_mask is None and is_causal
+C:\src\llmzoo-walk\.venv-ovexport\Lib\site-packages\transformers\models\gemma4\modeling_gemma4.py:615: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if output_length > hidden_states.shape[1]:
+C:\src\llmzoo-walk\.venv-ovexport\Lib\site-packages\transformers\models\gemma4\modeling_gemma4.py:623: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if hidden_states.shape[1] != output_length:
+C:\src\llmzoo-walk\.venv-ovexport\Lib\site-packages\transformers\models\gemma4\modeling_gemma4.py:590: TracerWarning: Converting a tensor to a Python integer might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  k = int((input_seq_len // length) ** 0.5)
+C:\src\llmzoo-walk\.venv-ovexport\Lib\site-packages\transformers\models\gemma4\modeling_gemma4.py:592: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if k_squared * length != input_seq_len:
+C:\src\llmzoo-walk\.venv-ovexport\Lib\site-packages\transformers\cache_utils.py:131: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if not self.is_initialized or self.keys.numel() == 0:
+`cache_position` is deprecated as an arg, and will be removed in Transformers v5.6. Please use `q_length` and `q_offset` instead, similarly to `kv_length` and `kv_offset`
+C:\src\llmzoo-walk\.venv-ovexport\Lib\site-packages\transformers\masking_utils.py:192: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if (padding_length := kv_length + kv_offset - attention_mask.shape[-1]) > 0:
+C:\src\llmzoo-walk\.venv-ovexport\Lib\site-packages\optimum\exporters\openvino\patching_utils.py:247: TracerWarning: torch.tensor results are registered as constants in the trace. You can safely ignore this warning if you use this function to create tensors out of constant variables that would be the same every time you call this function. In any other case, this might cause the trace to be incorrect.
+  torch.tensor(0.0, device=mask.device, dtype=dtype),
+C:\src\llmzoo-walk\.venv-ovexport\Lib\site-packages\optimum\exporters\openvino\patching_utils.py:248: TracerWarning: torch.tensor results are registered as constants in the trace. You can safely ignore this warning if you use this function to create tensors out of constant variables that would be the same every time you call this function. In any other case, this might cause the trace to be incorrect.
+  torch.tensor(torch.finfo(torch.float16).min, device=mask.device, dtype=dtype),
+Could not infer whether the model was already converted or not to the OpenVINO IR, keeping `export=False`.
+Path.replace() takes 2 positional arguments but 3 were given

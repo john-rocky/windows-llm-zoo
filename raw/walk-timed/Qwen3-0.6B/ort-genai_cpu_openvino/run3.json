@@ -1,0 +1,77 @@
+{
+ "runner": "run_genai.py",
+ "started": "2026-11-08T07:52:34.759441+09:00",
+ "argv": [
+  "--model-dir",
+  "C:\\src\\llmzoo-walk\\models\\onnx-community__Qwen3-0.6B-ONNX\\onnxruntime\\cpu_and_mobile\\cpu-int4-kld-block-128",
+  "--ep",
+  "openvino",
+  "--ov-device",
+  "CPU",
+  "--prompt-file",
+  "C:\\src\\llmzoo-walk\\pc\\short-chat.txt",
+  "--out",
+  "C:\\src\\llmzoo-walk\\runs\\walk-timed\\Qwen3-0.6B\\ort-genai_cpu_openvino\\run3.json"
+ ],
+ "pid": 7108,
+ "cuda_dll_dirs": [],
+ "versions": {
+  "python": "3.12.10",
+  "onnxruntime-genai": "0.19.0",
+  "onnxruntime": "1.31.1",
+  "onnxruntime-ep-openvino": "1.8.1",
+  "onnxruntime-ep-webgpu": "0.5.0",
+  "numpy": "2.5.4"
+ },
+ "prompt_sha256": "870aafb98e570e8fa1343ec051180237f4587233f49c0cc1391724e086d42d50",
+ "load_s": 2.517623200023081,
+ "device_type": "OpenVINO",
+ "chat_template": "tokenizer.apply_chat_template",
+ "templated_prompt": "<|im_start|>user\nExplain what on-device AI means in simple terms.<|im_end|>\n<|im_start|>assistant\n",
+ "templated_prompt_sha256": "9d2fe60da55b75283dbd26cd6f8db55bf12e5c3c0c1f37670067623f6461074d",
+ "genai_config_providers": {
+  "decoder": []
+ },
+ "gens": [
+  {
+   "prompt_tokens": 19,
+   "generated_tokens": 128,
+   "stop": "length",
+   "sequence_length": 147,
+   "generator_s": 0.1413780000002589,
+   "prefill_ms": 717.2976000001654,
+   "first_step_ms": 0.20950002362951636,
+   "ttft_ms": 717.5071000237949,
+   "prefill_tps": 26.488308339517125,
+   "decode_tps": 42.22380057304561,
+   "decode_s": 3.0077822999446653,
+   "generation_wall_s": 3.730779999983497,
+   "text": "<think>\nOkay, the user is asking for a simple explanation of what on-device AI means. Let me start by breaking down the term.\n\nOn-device AI refers to AI systems that run on a device, like a smartphone or a tablet. These systems are designed to run on the device itself, rather than on a server or cloud.\n\nSo, the key points are that on-device AI is designed to run on a device, not on a server or cloud. This makes the AI more accessible and easier to use on a device.\n</think>\n\nOn-device AI (on-device AI) refers to AI systems that run directly on a device, like",
+   "text_sha256": "84bab7e40b9e0fc583672e297aa0fc1d1279a9998df1bc3bdcb85fb61da62f35",
+   "gen": 1,
+   "regime": "cold"
+  },
+  {
+   "prompt_tokens": 19,
+   "generated_tokens": 128,
+   "stop": "length",
+   "sequence_length": 147,
+   "generator_s": 0.15794620002270676,
+   "prefill_ms": 79.95929999742657,
+   "first_step_ms": 0.2044999855570495,
+   "ttft_ms": 80.16379998298362,
+   "prefill_tps": 237.6208896352457,
+   "decode_tps": 50.96171783643063,
+   "decode_s": 2.4920667000988033,
+   "generation_wall_s": 2.577463900001021,
+   "text": "<think>\nOkay, the user is asking for a simple explanation of what on-device AI means. Let me start by breaking down the term.\n\nOn-device AI refers to AI systems that run on a device, like a smartphone or a tablet. These systems are designed to run on the device itself, rather than on a server or cloud.\n\nSo, the key points are that on-device AI is designed to run on a device, not on a server or cloud. This makes the AI more accessible and easier to use on a device.\n</think>\n\nOn-device AI (on-device AI) refers to AI systems that run directly on a device, like",
+   "text_sha256": "84bab7e40b9e0fc583672e297aa0fc1d1279a9998df1bc3bdcb85fb61da62f35",
+   "gen": 2,
+   "regime": "warm"
+  }
+ ],
+ "status": "OK",
+ "peak_working_set_bytes": 2052399104,
+ "peak_pagefile_bytes": 2577387520,
+ "ended": "2026-11-08T07:52:44.317902+09:00"
+}

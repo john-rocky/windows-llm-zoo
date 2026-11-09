@@ -1,0 +1,83 @@
+{
+ "runner": "run_genai.py",
+ "started": "2026-11-08T18:28:44.224765+09:00",
+ "argv": [
+  "--model-dir",
+  "C:\\src\\llmzoo-walk\\models\\onnx-community__Qwen3-0.6B-ONNX\\onnxruntime\\cuda\\cuda-int4-kld-block-128",
+  "--ep",
+  "follow_config",
+  "--prompt-file",
+  "C:\\src\\llmzoo-walk\\pc\\short-chat.txt",
+  "--out",
+  "C:\\src\\llmzoo-walk\\runs\\walk-timed-b\\Qwen3-0.6B\\ort-genai_rtx_cuda\\run2.json"
+ ],
+ "pid": 8792,
+ "cuda_dll_dirs": [
+  "C:\\src\\llmzoo-walk\\.venv-genai-cuda\\Lib\\site-packages\\nvidia\\cu13\\bin\\x86_64",
+  "C:\\src\\llmzoo-walk\\.venv-genai-cuda\\Lib\\site-packages\\nvidia\\cudnn\\bin"
+ ],
+ "versions": {
+  "python": "3.12.10",
+  "onnxruntime-genai-cuda": "0.19.0",
+  "onnxruntime-gpu": "1.31.1",
+  "numpy": "2.5.4"
+ },
+ "prompt_sha256": "870aafb98e570e8fa1343ec051180237f4587233f49c0cc1391724e086d42d50",
+ "load_s": 0.9715948000084609,
+ "device_type": "CUDA",
+ "chat_template": "tokenizer.apply_chat_template",
+ "templated_prompt": "<|im_start|>user\nExplain what on-device AI means in simple terms.<|im_end|>\n<|im_start|>assistant\n",
+ "templated_prompt_sha256": "9d2fe60da55b75283dbd26cd6f8db55bf12e5c3c0c1f37670067623f6461074d",
+ "genai_config_providers": {
+  "decoder": [
+   {
+    "cuda": {
+     "enable_cuda_graph": "0",
+     "enable_skip_layer_norm_strict_mode": "1"
+    }
+   }
+  ]
+ },
+ "gens": [
+  {
+   "prompt_tokens": 19,
+   "generated_tokens": 128,
+   "stop": "length",
+   "sequence_length": 147,
+   "generator_s": 0.004503799980739132,
+   "prefill_ms": 262.3774000094272,
+   "first_step_ms": 17.639199999393895,
+   "ttft_ms": 280.0166000088211,
+   "prefill_tps": 72.41477352591089,
+   "decode_tps": 192.5762609506318,
+   "decode_s": 0.6594790000235662,
+   "generation_wall_s": 0.9418126000091434,
+   "text": "<think>\nOkay, the user is asking for a simple explanation of what on-device AI means. Let me start by breaking down the term \"on-device AI.\"\n\nFirst, I need to explain what on-device AI is. Maybe start with the basic definition. Then, explain what on-device AI means in simple terms.\n\nWait, the user wants it in simple terms. So I need to make sure the explanation is clear and easy to understand.\n\nLet me start by defining on-device AI. Maybe start with the basic definition. Then, explain what on-device AI means in simple terms.\n\nWait, maybe I should look up the term \"on-device",
+   "text_sha256": "e94ec613659a7e223cd84300faa18ce1c240258d8e1192afe472def18c196eb0",
+   "gen": 1,
+   "regime": "cold"
+  },
+  {
+   "prompt_tokens": 19,
+   "generated_tokens": 128,
+   "stop": "length",
+   "sequence_length": 147,
+   "generator_s": 0.0010302999871782959,
+   "prefill_ms": 9.181900008115917,
+   "first_step_ms": 0.06329998723231256,
+   "ttft_ms": 9.24519999534823,
+   "prefill_tps": 2069.2884896596374,
+   "decode_tps": 188.75939297066543,
+   "decode_s": 0.672814200137509,
+   "generation_wall_s": 0.6845629000163171,
+   "text": "<think>\nOkay, the user is asking for a simple explanation of what on-device AI means. Let me start by breaking down the term \"on-device AI.\"\n\nFirst, I need to explain what on-device AI is. Maybe start with the basic definition. Then, explain what on-device AI means in simple terms.\n\nWait, the user wants it in simple terms. So I need to make sure the explanation is clear and easy to understand.\n\nLet me start by defining on-device AI. Maybe start with the basic definition. Then, explain what on-device AI means in simple terms.\n\nWait, maybe I should look up the term \"on-device",
+   "text_sha256": "e94ec613659a7e223cd84300faa18ce1c240258d8e1192afe472def18c196eb0",
+   "gen": 2,
+   "regime": "warm"
+  }
+ ],
+ "status": "OK",
+ "peak_working_set_bytes": 1203838976,
+ "peak_pagefile_bytes": 3393769472,
+ "ended": "2026-11-08T18:28:47.301221+09:00"
+}

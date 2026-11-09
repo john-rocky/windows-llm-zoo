@@ -1,0 +1,25 @@
+{
+ "sitting": "walk-npuexp3",
+ "units": [
+  {
+   "model": "gemma-4-E4B-it",
+   "cell": "gemma-4-E4B-it\\openvino-genai_npu_npu-sym-g128",
+   "kind": "python",
+   "venv": "ovgenai",
+   "script": "run_ovgenai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\z2-npu\\gemma-4-E4B-it-int4-sym-g128-ov",
+    "--device",
+    "NPU",
+    "--cache-dir",
+    "{ROOT}\\ovcache\\gemma-4-E4B-it_npu_sym_g128"
+   ],
+   "runs": 1,
+   "engines_gate": false,
+   "timeout_min": 30,
+   "ram_need_gb": 9.3,
+   "note": "OpenVINO GenAI 2026.4.1 on NPU (CACHE_DIR); the IR exported here by pc/export_npu.ps1 in the NPU form of the OpenVINO GenAI NPU docs (int4, --sym, --ratio 1.0, --group-size 128) from google/gemma-4-E4B-it@4ecc2ba63bca with optimum-intel 2.2.0, nncf 3.4.0, transformers 5.5.4 (OpenVINO's int4-ov is not in the NPU form)"
+  }
+ ]
+}

@@ -1,0 +1,5 @@
+# CUDA 12 runtime + cuDNN 9 DLLs for Foundry Local's CUDA EP (it reads them from PATH and does not download them; step 4 of the john-rocky/gemma-4-e4b-on-foundry-local README)
+nvidia-cuda-runtime-cu12==12.9.79
+nvidia-cuda-nvrtc-cu12==12.9.86
+nvidia-cublas-cu12==12.9.2.10
+nvidia-cudnn-cu12==9.28.0.42

@@ -1,0 +1,129 @@
+{
+ "model": "Qwen3-1.7B",
+ "cell": "llama.cpp_cpu_cpu",
+ "runtime": "llama.cpp",
+ "device": "cpu",
+ "device_name": "Intel(R) Core(TM) Ultra 9 386H",
+ "backend": "cpu",
+ "backend_detail": "llama.cpp CPU asset, llama-cli default threads (16)",
+ "source": "edge-llm-bench",
+ "bench_arm": "llama.cpp",
+ "bench_commit": "e9be97795e96b82e81ec8608ce1f04c2bf16a88a",
+ "shelf": {
+  "repo": "unsloth/Qwen3-1.7B-GGUF",
+  "files": [
+   "Qwen3-1.7B-Q4_K_M.gguf"
+  ],
+  "quant": "Q4_K_M"
+ },
+ "workload": {
+  "task": "short-chat",
+  "prompt": "prompts/text/short-chat.txt of edge-llm-bench",
+  "output_budget_tokens": 128,
+  "context_tokens": 2048,
+  "regime": "cold (first conversation of a fresh engine process)",
+  "counting": "runs=3 per sitting; run 1 of a LiteRT-LM, Vulkan or CUDA row is the cache build (firstEver) and is not counted; a text-check failure is not counted"
+ },
+ "status": "measured",
+ "table": {
+  "sitting": "2026-11-07-windows-e4b",
+  "decode_tps": 55.4,
+  "cold_spread_pct": 2.53,
+  "cold_n": 3,
+  "prefill_tps": 306.2,
+  "ttft_ms": null,
+  "peak_working_set_mb": 2005.0703125,
+  "text_check": "3/3 PASS",
+  "decode_tps_warm": null
+ },
+ "sittings": [
+  {
+   "campaign": "2026-11-07-windows-qwen3-s1",
+   "first_record_jst": "2026-11-07 03:15 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "b11721-win-cpu-x64",
+   "runs_in_sitting": 3,
+   "cold_n": 3,
+   "decode_tps_cold_median": 56.7,
+   "cold_spread_pct": 1.41,
+   "counted": true,
+   "prefill_tps_cold_median": 316.6,
+   "ttft_ms_cold_median": null,
+   "peak_working_set_mb_median": 2004.98828125,
+   "decode_tps_warm_median": null,
+   "text_check": "3/3 PASS",
+   "quant": "Q4_K_M",
+   "records": [
+    "results/raw/2026-11-07-windows-qwen3-s1/llama.cpp_unsloth_Qwen3-1.7B-GGUF_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-07-windows-qwen3",
+   "first_record_jst": "2026-11-07 04:17 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "b11721-win-cpu-x64",
+   "runs_in_sitting": 3,
+   "cold_n": 3,
+   "decode_tps_cold_median": 55.6,
+   "cold_spread_pct": 5.22,
+   "counted": false,
+   "prefill_tps_cold_median": 316.3,
+   "ttft_ms_cold_median": null,
+   "peak_working_set_mb_median": 2005.12890625,
+   "decode_tps_warm_median": null,
+   "text_check": "3/3 PASS",
+   "quant": "Q4_K_M",
+   "records": [
+    "results/raw/2026-11-07-windows-qwen3/llama.cpp_unsloth_Qwen3-1.7B-GGUF_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-07-windows-e4b-s1",
+   "first_record_jst": "2026-11-07 07:11 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "b11721-win-cpu-x64",
+   "runs_in_sitting": 3,
+   "cold_n": 3,
+   "decode_tps_cold_median": 50.6,
+   "cold_spread_pct": 10.67,
+   "counted": false,
+   "prefill_tps_cold_median": 255.1,
+   "ttft_ms_cold_median": null,
+   "peak_working_set_mb_median": 2004.96484375,
+   "decode_tps_warm_median": null,
+   "text_check": "3/3 PASS",
+   "quant": "Q4_K_M",
+   "records": [
+    "results/raw/2026-11-07-windows-e4b-s1/llama.cpp_unsloth_Qwen3-1.7B-GGUF_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-07-windows-e4b",
+   "first_record_jst": "2026-11-07 08:30 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "b11721-win-cpu-x64",
+   "runs_in_sitting": 3,
+   "cold_n": 3,
+   "decode_tps_cold_median": 55.4,
+   "cold_spread_pct": 2.53,
+   "counted": true,
+   "prefill_tps_cold_median": 306.2,
+   "ttft_ms_cold_median": null,
+   "peak_working_set_mb_median": 2005.0703125,
+   "decode_tps_warm_median": null,
+   "text_check": "3/3 PASS",
+   "quant": "Q4_K_M",
+   "records": [
+    "results/raw/2026-11-07-windows-e4b/llama.cpp_unsloth_Qwen3-1.7B-GGUF_short-chat.jsonl"
+   ]
+  }
+ ]
+}

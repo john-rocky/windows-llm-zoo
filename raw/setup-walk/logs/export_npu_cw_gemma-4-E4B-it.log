@@ -1,0 +1,35 @@
+[2026-11-08T02:48:21.0100698+09:00] export_npu start (group -1, only 'gemma-4-E4B-it')
+[2026-11-08T02:48:23.5982485+09:00]   Using Python 3.12.10 environment at: C:\src\llmzoo-walk\.venv-ovexport
+[2026-11-08T02:48:23.6869014+09:00]   Checked 10 packages in 98ms
+[2026-11-08T02:48:23.6926600+09:00] venv ovexport: uv pip install exit 0
+[2026-11-08T02:50:12.3913832+09:00] fetch exit 0
+[2026-11-08T02:50:13.1744833+09:00] gemma-4-E4B-it start: optimum-cli export openvino --model C:\src\llmzoo-walk\hf\google__gemma-4-E4B-it --task image-text-to-text --weight-format int4 --sym --ratio 1.0 --group-size -1 C:\src\llmzoo-walk\models\z2-npu\gemma-4-E4B-it-int4-sym-cw-ov (available RAM 16.9 GB, running-time limit 180 min)
+[2026-11-08T03:02:37.3145322+09:00] gemma-4-E4B-it resume waits for 14 GB of free RAM (now 2.6 GB)
+[2026-11-08T03:06:26.4378538+09:00] export_npu start (group -1, only 'gemma-4-E4B-it')
+[2026-11-08T03:06:29.0888960+09:00]   Using Python 3.12.10 environment at: C:\src\llmzoo-walk\.venv-ovexport
+[2026-11-08T03:06:29.1362664+09:00]   Checked 10 packages in 68ms
+[2026-11-08T03:06:29.1429025+09:00] venv ovexport: uv pip install exit 0
+[2026-11-08T03:06:44.7928247+09:00] fetch stopped: a lock was taken; taken again when it is free (resumes its files)
+[2026-11-08T03:06:44.8889725+09:00] fetch waits: lock True, commit in use 18.1 GB (at most 1000), free RAM 20.9 GB (at least 0)
+[2026-11-08T03:09:33.1530896+09:00] fetch exit 0
+[2026-11-08T03:09:33.4105965+09:00] gemma-4-E4B-it waits: lock False, commit in use 27.9 GB (at most 30), free RAM 8.8 GB (at least 14)
+[2026-11-08T03:10:33.8179679+09:00] gemma-4-E4B-it start (attempt 1): optimum-cli export openvino --model C:\src\llmzoo-walk\hf\google__gemma-4-E4B-it --task image-text-to-text --weight-format int4 --sym --ratio 1.0 --group-size -1 C:\src\llmzoo-walk\models\z2-npu\gemma-4-E4B-it-int4-sym-cw-ov (available RAM 16.7 GB, running-time limit 180 min)
+[2026-11-08T03:19:43.1928848+09:00] gemma-4-E4B-it stopped after 549 s: a lock was taken; taken again when the gate opens
+[2026-11-08T03:19:43.3207687+09:00] gemma-4-E4B-it waits: lock True, commit in use 15.5 GB (at most 30), free RAM 18.5 GB (at least 14)
+[2026-11-08T03:21:43.8741072+09:00] gemma-4-E4B-it start (attempt 2): optimum-cli export openvino --model C:\src\llmzoo-walk\hf\google__gemma-4-E4B-it --task image-text-to-text --weight-format int4 --sym --ratio 1.0 --group-size -1 C:\src\llmzoo-walk\models\z2-npu\gemma-4-E4B-it-int4-sym-cw-ov (available RAM 24.2 GB, running-time limit 180 min)
+[2026-11-08T03:25:22.4395888+09:00] gemma-4-E4B-it stopped after 218 s: a lock was taken; taken again when the gate opens
+[2026-11-08T03:25:22.5696881+09:00] gemma-4-E4B-it waits: lock True, commit in use 45.6 GB (at most 30), free RAM 14.9 GB (at least 14)
+[2026-11-08T03:30:54.0325356+09:00] gemma-4-E4B-it start (attempt 3): optimum-cli export openvino --model C:\src\llmzoo-walk\hf\google__gemma-4-E4B-it --task image-text-to-text --weight-format int4 --sym --ratio 1.0 --group-size -1 C:\src\llmzoo-walk\models\z2-npu\gemma-4-E4B-it-int4-sym-cw-ov (available RAM 21.3 GB, running-time limit 180 min)
+[2026-11-08T03:31:09.1980791+09:00] gemma-4-E4B-it stopped after 15 s: a lock was taken; taken again when the gate opens
+[2026-11-08T03:31:09.3246185+09:00] gemma-4-E4B-it waits: lock True, commit in use 15.2 GB (at most 30), free RAM 20.9 GB (at least 14)
+[2026-11-08T03:42:12.2270787+09:00] gemma-4-E4B-it start (attempt 4): optimum-cli export openvino --model C:\src\llmzoo-walk\hf\google__gemma-4-E4B-it --task image-text-to-text --weight-format int4 --sym --ratio 1.0 --group-size -1 C:\src\llmzoo-walk\models\z2-npu\gemma-4-E4B-it-int4-sym-cw-ov (available RAM 19.7 GB, running-time limit 180 min)
+[2026-11-08T03:43:11.3350719+09:00] export_npu start (group -1, only 'gemma-4-E4B-it')
+[2026-11-08T03:43:14.1142882+09:00]   Using Python 3.12.10 environment at: C:\src\llmzoo-walk\.venv-ovexport
+[2026-11-08T03:43:14.1185916+09:00]   Checked 10 packages in 10ms
+[2026-11-08T03:43:14.1185916+09:00] venv ovexport: uv pip install exit 0
+[2026-11-08T03:44:31.8062177+09:00] fetch exit 0
+[2026-11-08T03:44:31.9513149+09:00] gemma-4-E4B-it waits: lock False, commit in use 19.3 GB (at most 30), free RAM 11.3 GB (at least 14)
+[2026-11-08T03:45:32.1690358+09:00] gemma-4-E4B-it start (attempt 1): optimum-cli export openvino --model C:\src\llmzoo-walk\hf\google__gemma-4-E4B-it --task image-text-to-text --weight-format int4 --sym --ratio 1.0 --group-size -1 C:\src\llmzoo-walk\models\z2-npu\gemma-4-E4B-it-int4-sym-cw-ov (available RAM 16.2 GB, running-time limit 180 min)
+[2026-11-08T03:53:22.6903951+09:00]   ir_info: 20 files, 5.95 GiB
+[2026-11-08T03:53:22.7320008+09:00] gemma-4-E4B-it end: exit 0, attempt 1, 461 s running, peak working set 22784 MB, private 31770 MB, lowest available RAM 0.1 GB, highest commit in use 50.8 GB, 6 xml
+[2026-11-08T03:53:23.0516789+09:00] export_npu done

@@ -1,0 +1,72 @@
+{
+ "runner": "run_ovgenai.py",
+ "started": "2026-11-08T05:10:01.485098+09:00",
+ "argv": [
+  "--model-dir",
+  "C:\\src\\llmzoo-walk\\models\\OpenVINO__gemma-4-E4B-it-int4-ov",
+  "--device",
+  "GPU.0",
+  "--cache-dir",
+  "C:\\src\\llmzoo-walk\\ovcache\\gemma-4-E4B-it_gpu0",
+  "--prompt-file",
+  "C:\\src\\llmzoo-walk\\pc\\short-chat.txt",
+  "--out",
+  "C:\\src\\llmzoo-walk\\runs\\walk-first\\gemma-4-E4B-it\\openvino-genai_igpu_gpu\\run1.json"
+ ],
+ "pid": 2632,
+ "versions": {
+  "python": "3.12.10",
+  "openvino": "2026.4.1",
+  "openvino-genai": "2026.4.1.0",
+  "openvino-tokenizers": "2026.4.1.0",
+  "numpy": "2.5.4"
+ },
+ "available_devices": {
+  "CPU": "Intel(R) Core(TM) Ultra 9 386H",
+  "GPU.0": "Intel(R) Graphics (iGPU)",
+  "GPU.1": "NVIDIA GeForce RTX 5080 Laptop GPU (dGPU)",
+  "NPU": "Intel(R) AI Boost"
+ },
+ "prompt_sha256": "870aafb98e570e8fa1343ec051180237f4587233f49c0cc1391724e086d42d50",
+ "pipeline": "vlm",
+ "load_s": 64.57923019998998,
+ "pipeline_errors_before": [],
+ "templated_prompt": "<bos><|turn>user\nExplain what on-device AI means in simple terms.<turn|>\n<|turn>model\n",
+ "templated_prompt_sha256": "70b30bff1ab92ec74814a888864b33ac65c53a053b6d35e8dfa13b353830ffb2",
+ "gens": [
+  {
+   "gen": 1,
+   "regime": "cold",
+   "prompt_tokens": 20,
+   "generated_tokens": 128,
+   "stop": "length",
+   "ttft_ms": 746.544189453125,
+   "tpot_ms": 74.40480041503906,
+   "prefill_tps": 26.790108720356987,
+   "decode_tps": 13.439993043753601,
+   "generate_duration_ms": 10200.423828125,
+   "generation_wall_s": 10.23560390000057,
+   "text": "Imagine you have a really smart assistant, but instead of that assistant living on a powerful computer in the cloud (like Google's or Amazon's servers), **the assistant is living right inside your phone, your smart speaker, or your camera.**\n\nThat's the simplest way to describe **On-Device AI**.\n\nHere is a breakdown using simple analogies:\n\n---\n\n### 🧠 The \"Cloud\" vs. The \"Device\"\n\nTo understand why this is a big deal, you need to know the two ways AI usually works:\n\n**1. Cloud AI (The Traditional Way):**\n* **Analogy",
+   "text_sha256": "f442dfdc9e3f1d4394ed1a99869da2c0310995da3d38c1a1a903c8ce41290303"
+  },
+  {
+   "gen": 2,
+   "regime": "warm",
+   "prompt_tokens": 20,
+   "generated_tokens": 128,
+   "stop": "length",
+   "ttft_ms": 284.27191162109375,
+   "tpot_ms": 72.72528076171875,
+   "prefill_tps": 70.35517468450423,
+   "decode_tps": 13.75037661630289,
+   "generate_duration_ms": 9522.41796875,
+   "generation_wall_s": 9.52256130000751,
+   "text": "Imagine you have a really smart assistant, but instead of that assistant living on a powerful computer in the cloud (like Google's or Amazon's servers), **the assistant is living right inside your phone, your smart speaker, or your camera.**\n\n**That's what On-Device AI means.**\n\nHere is a breakdown using simple analogies:\n\n---\n\n### 🧠 The Simple Analogy: The Brain vs. The Cloud\n\nThink of it like this:\n\n* **Cloud AI (The Internet Brain):** When you use a service like Google Translate or ChatGPT, the heavy lifting (the \"thinking\") happens on massive",
+   "text_sha256": "5e5bf2dfc2bf6de50dcca919bee772ed6aff9dc9019d2203a47c4ed3da80d619"
+  }
+ ],
+ "status": "OK",
+ "peak_working_set_bytes": 8132440064,
+ "peak_pagefile_bytes": 8526766080,
+ "ended": "2026-11-08T05:11:28.080959+09:00"
+}

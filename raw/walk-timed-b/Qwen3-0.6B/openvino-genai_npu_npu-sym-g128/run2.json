@@ -1,0 +1,72 @@
+{
+ "runner": "run_ovgenai.py",
+ "started": "2026-11-09T00:46:38.433105+09:00",
+ "argv": [
+  "--model-dir",
+  "C:\\src\\llmzoo-walk\\models\\z2-npu\\Qwen3-0.6B-int4-sym-g128-ov",
+  "--device",
+  "NPU",
+  "--cache-dir",
+  "C:\\src\\llmzoo-walk\\ovcache\\Qwen3-0.6B_npu_sym_g128",
+  "--prompt-file",
+  "C:\\src\\llmzoo-walk\\pc\\short-chat.txt",
+  "--out",
+  "C:\\src\\llmzoo-walk\\runs\\walk-timed-b\\Qwen3-0.6B\\openvino-genai_npu_npu-sym-g128\\run2.json"
+ ],
+ "pid": 26160,
+ "versions": {
+  "python": "3.12.10",
+  "openvino": "2026.4.1",
+  "openvino-genai": "2026.4.1.0",
+  "openvino-tokenizers": "2026.4.1.0",
+  "numpy": "2.5.4"
+ },
+ "available_devices": {
+  "CPU": "Intel(R) Core(TM) Ultra 9 386H",
+  "GPU.0": "Intel(R) Graphics (iGPU)",
+  "GPU.1": "NVIDIA GeForce RTX 5080 Laptop GPU (dGPU)",
+  "NPU": "Intel(R) AI Boost"
+ },
+ "prompt_sha256": "870aafb98e570e8fa1343ec051180237f4587233f49c0cc1391724e086d42d50",
+ "pipeline": "llm",
+ "load_s": 0.8651979999849573,
+ "pipeline_errors_before": [],
+ "templated_prompt": "<|im_start|>user\nExplain what on-device AI means in simple terms.<|im_end|>\n<|im_start|>assistant\n",
+ "templated_prompt_sha256": "9d2fe60da55b75283dbd26cd6f8db55bf12e5c3c0c1f37670067623f6461074d",
+ "gens": [
+  {
+   "gen": 1,
+   "regime": "cold",
+   "prompt_tokens": 19,
+   "generated_tokens": 128,
+   "stop": "length",
+   "ttft_ms": 267.67529296875,
+   "tpot_ms": 14.364029884338379,
+   "prefill_tps": 70.98152313302286,
+   "decode_tps": 69.61834582997743,
+   "generate_duration_ms": 2093.075927734375,
+   "generation_wall_s": 2.0931518000143114,
+   "text": "<think>\nOkay, so the user is asking for an explanation of on-device AI in simple terms. Let me start by breaking down the term. On-device AI refers to AI systems that run on a device or computer without requiring an external server or cloud. That makes sense. Now, I need to explain this in simple language.\n\nFirst, I should define what on-device AI is. Maybe start with a simple example. Like, if you have a smartphone or tablet, and you want to use AI features without connecting to the internet. That way, the user can use their device's AI without needing an app or a cloud service.\n\nThen",
+   "text_sha256": "9b0948033e5d616219ddedadbea51163eb7234e2af3c2ddc9bab9f2fb52b6795"
+  },
+  {
+   "gen": 2,
+   "regime": "warm",
+   "prompt_tokens": 19,
+   "generated_tokens": 128,
+   "stop": "length",
+   "ttft_ms": 177.60301208496094,
+   "tpot_ms": 13.888628959655762,
+   "prefill_tps": 106.98016760498896,
+   "decode_tps": 72.00134749836283,
+   "generate_duration_ms": 1941.97802734375,
+   "generation_wall_s": 1.942058199987514,
+   "text": "<think>\nOkay, so the user is asking for an explanation of on-device AI in simple terms. Let me start by breaking down the term. On-device AI refers to AI systems that run on a device or computer without requiring an external server or cloud. That makes sense. Now, I need to explain this in simple language.\n\nFirst, I should define what on-device AI is. Maybe start with a simple example. Like, if you have a smartphone or tablet, and you want to use AI features without connecting to the internet. That way, the user can use their device's AI without needing an app or a cloud service.\n\nThen",
+   "text_sha256": "9b0948033e5d616219ddedadbea51163eb7234e2af3c2ddc9bab9f2fb52b6795"
+  }
+ ],
+ "status": "OK",
+ "peak_working_set_bytes": 1617973248,
+ "peak_pagefile_bytes": 1243049984,
+ "ended": "2026-11-09T00:46:44.876069+09:00"
+}

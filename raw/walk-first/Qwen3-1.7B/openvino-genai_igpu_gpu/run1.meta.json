@@ -1,0 +1,76 @@
+{
+    "cell":  "Qwen3-1.7B\\openvino-genai_igpu_gpu",
+    "run":  1,
+    "mode":  "first",
+    "sitting":  "walk-first",
+    "start":  "2026-11-07T23:17:56.7230615+09:00",
+    "osBuild":  "26200.9711",
+    "gate":  null,
+    "before":  {
+                   "load":  {
+                                "cpu":  51.1,
+                                "build_ms":  3969,
+                                "top":  [
+                                            "cl 27316 1.68 core",
+                                            "cl 21900 1.26 core",
+                                            "python 33828 1 core",
+                                            "python 2768 1 core",
+                                            "System 4 0.99 core"
+                                        ]
+                            },
+                   "nvidia":  "P0, 1590 MHz, 14001 MHz, 18.87 W, 0 %, 0 MiB, 56",
+                   "availGB":  11.8
+               },
+    "command":  "C:\\src\\llmzoo-walk\\.venv-ovgenai\\Scripts\\python.exe -u C:\\src\\llmzoo-walk\\pc\\run_ovgenai.py --model-dir C:\\src\\llmzoo-walk\\models\\OpenVINO__Qwen3-1.7B-int4-ov --device GPU.0 --cache-dir C:\\src\\llmzoo-walk\\ovcache\\Qwen3-1.7B_gpu0 --prompt-file C:\\src\\llmzoo-walk\\pc\\short-chat.txt --out C:\\src\\llmzoo-walk\\runs\\walk-first\\Qwen3-1.7B\\openvino-genai_igpu_gpu\\run1.json",
+    "engine":  {
+                   "exitCode":  0,
+                   "timedOut":  false,
+                   "yielded":  false,
+                   "suspendedSeconds":  0,
+                   "suspensions":  0,
+                   "enginePid":  22180,
+                   "elapsedSeconds":  29.499,
+                   "peakWorkingSetBytes":  1909940224,
+                   "gpuMiBPeak":  {
+                                      "0x00000000_0x00012C48":  {
+                                                                    "shared":  0,
+                                                                    "dedicated":  0
+                                                                },
+                                      "0x00000000_0x0001260E":  {
+                                                                    "shared":  1259,
+                                                                    "dedicated":  0
+                                                                },
+                                      "0x00000000_0x00013E4C":  {
+                                                                    "shared":  0,
+                                                                    "dedicated":  0
+                                                                }
+                                  },
+                   "watchPeakWorkingSetBytes":  0,
+                   "watchGpuMiBPeak":  {
+
+                                       },
+                   "nvidiaSamples":  [
+                                         "5s P0, 23092 MHz, 14001 MHz, 19.20 W, 0 %, 0 MiB, 56",
+                                         "10s P0, 6112 MHz, 14001 MHz, 19.14 W, 0 %, 0 MiB, 56",
+                                         "15s P0, 840 MHz, 14001 MHz, 19.24 W, 0 %, 0 MiB, 56",
+                                         "20s P0, 120 MHz, 14001 MHz, 19.10 W, 0 %, 0 MiB, 56",
+                                         "25s P0, 18007 MHz, 14001 MHz, 19.13 W, 0 %, 0 MiB, 56"
+                                     ]
+               },
+    "after":  {
+                  "load":  {
+                               "cpu":  50.1,
+                               "build_ms":  4250,
+                               "top":  [
+                                           "cl 14560 2.69 core",
+                                           "System 4 1.14 core",
+                                           "cl 33008 1.01 core",
+                                           "python 33828 0.96 core",
+                                           "python 2768 0.74 core"
+                                       ]
+                           },
+                  "nvidia":  "P0, 855 MHz, 14001 MHz, 19.17 W, 0 %, 0 MiB, 56"
+              },
+    "end":  "2026-11-07T23:18:27.7937842+09:00",
+    "tries":  1
+}

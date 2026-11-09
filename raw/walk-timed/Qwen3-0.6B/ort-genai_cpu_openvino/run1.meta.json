@@ -1,0 +1,84 @@
+{
+    "cell":  "Qwen3-0.6B\\ort-genai_cpu_openvino",
+    "run":  1,
+    "mode":  "timed",
+    "sitting":  "walk-timed",
+    "start":  "2026-11-08T07:50:53.0898742+09:00",
+    "osBuild":  "26200.9711",
+    "gate":  {
+                 "quietGate":  "quiet",
+                 "cpuReads":  [
+                                  2.7,
+                                  1.4,
+                                  4.2
+                              ],
+                 "nvidiaMiB":  0,
+                 "availGB":  20.3,
+                 "ramNeedGB":  2.6,
+                 "gpuEngines":  null
+             },
+    "before":  {
+                   "load":  {
+                                "cpu":  3,
+                                "build_ms":  0,
+                                "top":  [
+                                            "System 4 0.4 core",
+                                            "svchost 5480 0.02 core",
+                                            "WmiPrvSE 7560 0.02 core",
+                                            "NVDisplay.Container 3412 0.02 core",
+                                            "powershell 20356 0.02 core"
+                                        ]
+                            },
+                   "nvidia":  "P0, 1095 MHz, 14001 MHz, 19.13 W, 0 %, 0 MiB, 55",
+                   "availGB":  20.3
+               },
+    "command":  "C:\\src\\llmzoo-walk\\.venv-genai\\Scripts\\python.exe -u C:\\src\\llmzoo-walk\\pc\\run_genai.py --model-dir C:\\src\\llmzoo-walk\\models\\onnx-community__Qwen3-0.6B-ONNX\\onnxruntime\\cpu_and_mobile\\cpu-int4-kld-block-128 --ep openvino --ov-device CPU --prompt-file C:\\src\\llmzoo-walk\\pc\\short-chat.txt --out C:\\src\\llmzoo-walk\\runs\\walk-timed\\Qwen3-0.6B\\ort-genai_cpu_openvino\\run1.json",
+    "engine":  {
+                   "exitCode":  0,
+                   "timedOut":  false,
+                   "yielded":  false,
+                   "suspendedSeconds":  0,
+                   "suspensions":  0,
+                   "enginePid":  17268,
+                   "elapsedSeconds":  11.689,
+                   "peakWorkingSetBytes":  2050379776,
+                   "gpuMiBPeak":  {
+                                      "0x00000000_0x00012C48":  {
+                                                                    "shared":  0,
+                                                                    "dedicated":  0
+                                                                },
+                                      "0x00000000_0x0001260E":  {
+                                                                    "shared":  23,
+                                                                    "dedicated":  0
+                                                                },
+                                      "0x00000000_0x00013E4C":  {
+                                                                    "shared":  0,
+                                                                    "dedicated":  0
+                                                                }
+                                  },
+                   "watchPeakWorkingSetBytes":  0,
+                   "watchGpuMiBPeak":  {
+
+                                       },
+                   "nvidiaSamples":  [
+                                         "5s P0, 2985 MHz, 14001 MHz, 19.37 W, 0 %, 0 MiB, 56",
+                                         "10s P0, 11677 MHz, 14001 MHz, 19.30 W, 0 %, 0 MiB, 56"
+                                     ]
+               },
+    "after":  {
+                  "load":  {
+                               "cpu":  1.7,
+                               "build_ms":  0,
+                               "top":  [
+                                           "System 4 0.12 core",
+                                           "svchost 5480 0.08 core",
+                                           "NVDisplay.Container 3412 0.03 core",
+                                           "MsMpEng 5548 0.02 core",
+                                           "SoundTune 13836 0.02 core"
+                                       ]
+                           },
+                  "nvidia":  "P0, 120 MHz, 14001 MHz, 19.25 W, 0 %, 0 MiB, 56"
+              },
+    "end":  "2026-11-08T07:51:06.7217853+09:00",
+    "tries":  1
+}

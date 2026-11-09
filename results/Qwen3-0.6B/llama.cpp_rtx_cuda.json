@@ -1,0 +1,173 @@
+{
+ "model": "Qwen3-0.6B",
+ "cell": "llama.cpp_rtx_cuda",
+ "runtime": "llama.cpp",
+ "device": "rtx",
+ "device_name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+ "backend": "cuda",
+ "backend_detail": "llama.cpp CUDA 13.4 asset + the release's CUDA runtime zip",
+ "source": "edge-llm-bench",
+ "bench_arm": "llama.cpp-cuda",
+ "bench_commit": "e9be97795e96b82e81ec8608ce1f04c2bf16a88a",
+ "shelf": {
+  "repo": "unsloth/Qwen3-0.6B-GGUF",
+  "files": [
+   "Qwen3-0.6B-Q4_K_M.gguf"
+  ],
+  "quant": "Q4_K_M"
+ },
+ "workload": {
+  "task": "short-chat",
+  "prompt": "prompts/text/short-chat.txt of edge-llm-bench",
+  "output_budget_tokens": 128,
+  "context_tokens": 2048,
+  "regime": "cold (first conversation of a fresh engine process)",
+  "counting": "runs=3 per sitting; run 1 of a LiteRT-LM, Vulkan or CUDA row is the cache build (firstEver) and is not counted; a text-check failure is not counted"
+ },
+ "status": "measured",
+ "table": {
+  "sitting": "2026-11-08-windows-gpu-q06-r2",
+  "decode_tps": 501.1,
+  "cold_spread_pct": 1.8,
+  "cold_n": 2,
+  "prefill_tps": 811.3499999999999,
+  "ttft_ms": null,
+  "peak_working_set_mb": 815.0078125,
+  "text_check": "2/2 PASS",
+  "decode_tps_warm": null
+ },
+ "sittings": [
+  {
+   "campaign": "2026-11-07-windows-qwen3-s1",
+   "first_record_jst": "2026-11-07 03:06 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "b11721-win-cuda-13.4-x64",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 516.95,
+   "cold_spread_pct": 7.29,
+   "counted": false,
+   "prefill_tps_cold_median": 908.7,
+   "ttft_ms_cold_median": null,
+   "peak_working_set_mb_median": 838.736328125,
+   "decode_tps_warm_median": null,
+   "text_check": "2/2 PASS",
+   "quant": "Q4_K_M",
+   "records": [
+    "results/raw/2026-11-07-windows-qwen3-s1/llama.cpp-cuda_unsloth_Qwen3-0.6B-GGUF_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-07-windows-qwen3",
+   "first_record_jst": "2026-11-07 04:07 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "b11721-win-cuda-13.4-x64",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 484.4,
+   "cold_spread_pct": 0.21,
+   "counted": true,
+   "prefill_tps_cold_median": 854.8,
+   "ttft_ms_cold_median": null,
+   "peak_working_set_mb_median": 839.0703125,
+   "decode_tps_warm_median": null,
+   "text_check": "2/2 PASS",
+   "quant": "Q4_K_M",
+   "records": [
+    "results/raw/2026-11-07-windows-qwen3/llama.cpp-cuda_unsloth_Qwen3-0.6B-GGUF_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-07-windows-e4b-s1",
+   "first_record_jst": "2026-11-07 07:02 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "b11721-win-cuda-13.4-x64",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 488.3,
+   "cold_spread_pct": 2.79,
+   "counted": true,
+   "prefill_tps_cold_median": 849.3,
+   "ttft_ms_cold_median": null,
+   "peak_working_set_mb_median": 838.962890625,
+   "decode_tps_warm_median": null,
+   "text_check": "2/2 PASS",
+   "quant": "Q4_K_M",
+   "records": [
+    "results/raw/2026-11-07-windows-e4b-s1/llama.cpp-cuda_unsloth_Qwen3-0.6B-GGUF_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-07-windows-e4b",
+   "first_record_jst": "2026-11-07 08:21 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "b11721-win-cuda-13.4-x64",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 472.29999999999995,
+   "cold_spread_pct": 6.18,
+   "counted": false,
+   "prefill_tps_cold_median": 725.3,
+   "ttft_ms_cold_median": null,
+   "peak_working_set_mb_median": 838.90234375,
+   "decode_tps_warm_median": null,
+   "text_check": "2/2 PASS",
+   "quant": "Q4_K_M",
+   "records": [
+    "results/raw/2026-11-07-windows-e4b/llama.cpp-cuda_unsloth_Qwen3-0.6B-GGUF_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-08-windows-gpu-q06",
+   "first_record_jst": "2026-11-08 15:05 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "b11721-win-cuda-13.4-x64",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 497.79999999999995,
+   "cold_spread_pct": 5.87,
+   "counted": false,
+   "prefill_tps_cold_median": 821.25,
+   "ttft_ms_cold_median": null,
+   "peak_working_set_mb_median": 814.544921875,
+   "decode_tps_warm_median": null,
+   "text_check": "2/2 PASS",
+   "quant": "Q4_K_M",
+   "records": [
+    "results/raw/2026-11-08-windows-gpu-q06/llama.cpp-cuda_unsloth_Qwen3-0.6B-GGUF_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-08-windows-gpu-q06-r2",
+   "first_record_jst": "2026-11-09 00:18 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "b11721-win-cuda-13.4-x64",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 501.1,
+   "cold_spread_pct": 1.8,
+   "counted": true,
+   "prefill_tps_cold_median": 811.3499999999999,
+   "ttft_ms_cold_median": null,
+   "peak_working_set_mb_median": 815.0078125,
+   "decode_tps_warm_median": null,
+   "text_check": "2/2 PASS",
+   "quant": "Q4_K_M",
+   "records": [
+    "results/raw/2026-11-08-windows-gpu-q06-r2/llama.cpp-cuda_unsloth_Qwen3-0.6B-GGUF_short-chat.jsonl"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,22 @@
+[2026-11-08T05:18:16.7650228+09:00] chain start: plan C:\src\llmzoo-walk\pc\plans\walk-foundry2.json mode first, 9 units, pid 31640
+[2026-11-08T05:18:26.9015712+09:00] adapters: 0x00000000_0x00012C48=nvidia, 0x00000000_0x0001260E=intel-gpu, 0x00000000_0x00012BB8=?, 0x00000000_0x00013E4C=npu?
+[2026-11-08T05:18:47.3385083+09:00] Qwen3-0.6B\foundry_rtx_cuda run 1 start (daemon 34012, load exit 0 in 7.537 s)
+[2026-11-08T05:18:57.7155198+09:00] Qwen3-0.6B\foundry_rtx_cuda run 1 end: exit 0, OK, 5.57 s
+[2026-11-08T05:19:17.4244712+09:00] Qwen3-0.6B\foundry_auto_webgpu run 1 start (daemon 10404, load exit 0 in 8.94 s)
+[2026-11-08T05:19:26.9796350+09:00] Qwen3-0.6B\foundry_auto_webgpu run 1 end: exit 0, OK, 4.765 s
+[2026-11-08T05:19:44.8001641+09:00] Qwen3-0.6B\foundry_cpu_cpu run 1 start (daemon 35464, load exit 0 in 7.148 s)
+[2026-11-08T05:20:00.2231298+09:00] Qwen3-0.6B\foundry_cpu_cpu run 1 end: exit 0, OK, 9.882 s
+[2026-11-08T05:20:20.5693026+09:00] Qwen3-1.7B\foundry_rtx_cuda run 1 start (daemon 6380, load exit 0 in 9.775 s)
+[2026-11-08T05:20:29.6309467+09:00] Qwen3-1.7B\foundry_rtx_cuda run 1 end: exit 0, OK, 4.214 s
+[2026-11-08T05:20:49.9060233+09:00] Qwen3-1.7B\foundry_auto_webgpu run 1 start (daemon 22912, load exit 0 in 9.705 s)
+[2026-11-08T05:20:58.9679178+09:00] Qwen3-1.7B\foundry_auto_webgpu run 1 end: exit 0, OK, 4.168 s
+[2026-11-08T05:21:19.2535990+09:00] Qwen3-1.7B\foundry_cpu_cpu run 1 start (daemon 29304, load exit 0 in 9.639 s)
+[2026-11-08T05:21:44.0117919+09:00] Qwen3-1.7B\foundry_cpu_cpu run 1 end: exit 0, OK, 19.64 s
+[2026-11-08T05:21:44.0453706+09:00] another lane holds busy.txt (another lane's lock 2026-11-08T05:21:41.0460485+09:00): waiting before Qwen3-4B\foundry_rtx_cuda run 1
+[2026-11-08T05:46:42.9648025+09:00] Qwen3-4B\foundry_rtx_cuda run 1 start (daemon 3580, load exit 0 in 17.629 s)
+[2026-11-08T05:46:53.0481483+09:00] Qwen3-4B\foundry_rtx_cuda run 1 end: exit 0, OK, 5.235 s
+[2026-11-08T05:47:20.0694075+09:00] Qwen3-4B\foundry_auto_webgpu run 1 start (daemon 21192, load exit 0 in 16.472 s)
+[2026-11-08T05:47:30.0795835+09:00] Qwen3-4B\foundry_auto_webgpu run 1 end: exit 0, OK, 5.185 s
+[2026-11-08T05:47:58.3192362+09:00] Qwen3-4B\foundry_cpu_cpu run 1 start (daemon 5608, load exit 0 in 17.784 s)
+[2026-11-08T05:48:43.3050047+09:00] Qwen3-4B\foundry_cpu_cpu run 1 end: exit 0, OK, 39.689 s
+[2026-11-08T05:48:43.3148230+09:00] chain done: OK

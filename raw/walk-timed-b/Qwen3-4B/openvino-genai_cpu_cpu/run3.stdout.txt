@@ -1,0 +1,3 @@
+ENGINE_PID 6248
+{"gen": 1, "generated_tokens": 128, "stop": "length", "ttft_ms": 11018.4580078125, "decode_tps": 14.981360737592446}
+{"gen": 2, "generated_tokens": 128, "stop": "length", "ttft_ms": 410.8213195800781, "decode_tps": 15.331964664144794}

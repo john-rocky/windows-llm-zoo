@@ -1,0 +1,25 @@
+{
+ "sitting": "walk-npu-vlm",
+ "units": [
+  {
+   "model": "gemma-4-E2B-it",
+   "cell": "gemma-4-E2B-it\\openvino-genai_npu_npu",
+   "kind": "python",
+   "venv": "ovgenai",
+   "script": "run_ovgenai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\OpenVINO__gemma-4-E2B-it-int4-cw-ov",
+    "--device",
+    "NPU",
+    "--cache-dir",
+    "{ROOT}\\ovcache\\gemma-4-E2B-it_npu"
+   ],
+   "runs": 1,
+   "engines_gate": false,
+   "timeout_min": 30,
+   "ram_need_gb": 6.8,
+   "note": "OpenVINO GenAI 2026.4.1 on NPU (CACHE_DIR)"
+  }
+ ]
+}

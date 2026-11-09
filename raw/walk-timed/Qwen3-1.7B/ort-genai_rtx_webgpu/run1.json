@@ -1,0 +1,84 @@
+{
+ "runner": "run_genai.py",
+ "started": "2026-11-08T08:02:21.664837+09:00",
+ "argv": [
+  "--model-dir",
+  "C:\\src\\llmzoo-walk\\models\\onnx-community__Qwen3-1.7B-ONNX\\onnxruntime\\webgpu\\webgpu-int4-kld-block-32",
+  "--ep",
+  "webgpu",
+  "--ep-option",
+  "adapterIndex=0",
+  "--prompt-file",
+  "C:\\src\\llmzoo-walk\\pc\\short-chat.txt",
+  "--out",
+  "C:\\src\\llmzoo-walk\\runs\\walk-timed\\Qwen3-1.7B\\ort-genai_rtx_webgpu\\run1.json"
+ ],
+ "pid": 27556,
+ "cuda_dll_dirs": [],
+ "versions": {
+  "python": "3.12.10",
+  "onnxruntime-genai": "0.19.0",
+  "onnxruntime": "1.31.1",
+  "onnxruntime-ep-openvino": "1.8.1",
+  "onnxruntime-ep-webgpu": "0.5.0",
+  "numpy": "2.5.4"
+ },
+ "prompt_sha256": "870aafb98e570e8fa1343ec051180237f4587233f49c0cc1391724e086d42d50",
+ "load_s": 3.400268800003687,
+ "device_type": "WebGPU",
+ "chat_template": "tokenizer.apply_chat_template",
+ "templated_prompt": "<|im_start|>user\nExplain what on-device AI means in simple terms.<|im_end|>\n<|im_start|>assistant\n",
+ "templated_prompt_sha256": "9d2fe60da55b75283dbd26cd6f8db55bf12e5c3c0c1f37670067623f6461074d",
+ "genai_config_providers": {
+  "decoder": [
+   {
+    "webgpu": {
+     "enableGraphCapture": "0",
+     "validationMode": "basic"
+    }
+   }
+  ]
+ },
+ "gens": [
+  {
+   "prompt_tokens": 19,
+   "generated_tokens": 128,
+   "stop": "length",
+   "sequence_length": 147,
+   "generator_s": 0.028960199997527525,
+   "prefill_ms": 487.84339998383075,
+   "first_step_ms": 0.2945000014733523,
+   "ttft_ms": 488.1378999853041,
+   "prefill_tps": 38.946924362674054,
+   "decode_tps": 43.193613333526145,
+   "decode_s": 2.9402494998357724,
+   "generation_wall_s": 3.4336194999923464,
+   "text": "<think>\nOkay, the user wants an explanation of on-device AI in simple terms. Let me break this down.\n\nFirst, I need to define what on-device AI is. Maybe start by explaining AI in general, then narrow it down to on-device.\n\nSo, AI is a type of computer program that can learn from data and perform tasks without explicit programming. But the user wants it in simple terms, so maybe avoid technical jargon.\n\nOn-device AI means that the AI is run on the device itself, rather than being sent to a remote server. So, for example, if you have a smartphone, on-device AI would mean that",
+   "text_sha256": "badeca3418b2c62550c1eaa1cff14d9c355aa42badf1c9adcaa72cf5b4b6cc6d",
+   "gen": 1,
+   "regime": "cold"
+  },
+  {
+   "prompt_tokens": 19,
+   "generated_tokens": 128,
+   "stop": "length",
+   "sequence_length": 147,
+   "generator_s": 0.003101699985563755,
+   "prefill_ms": 35.18120001535863,
+   "first_step_ms": 0.24279998615384102,
+   "ttft_ms": 35.42400000151247,
+   "prefill_tps": 540.0611687976932,
+   "decode_tps": 48.23814358965154,
+   "decode_s": 2.632771299831802,
+   "generation_wall_s": 2.6739218000147957,
+   "text": "<think>\nOkay, the user wants an explanation of on-device AI in simple terms. Let me break this down.\n\nFirst, I need to define what on-device AI is. Maybe start by explaining AI in general, then narrow it down to on-device.\n\nSo, AI is a type of computer program that can learn from data and perform tasks without explicit programming. But the user wants it in simple terms, so maybe avoid technical jargon.\n\nOn-device AI means that the AI is run on the device itself, rather than being sent to a remote server. So, for example, if you have a smartphone, on-device AI would mean that",
+   "text_sha256": "badeca3418b2c62550c1eaa1cff14d9c355aa42badf1c9adcaa72cf5b4b6cc6d",
+   "gen": 2,
+   "regime": "warm"
+  }
+ ],
+ "status": "OK",
+ "peak_working_set_bytes": 2267332608,
+ "peak_pagefile_bytes": 2956255232,
+ "ended": "2026-11-08T08:02:32.259802+09:00"
+}

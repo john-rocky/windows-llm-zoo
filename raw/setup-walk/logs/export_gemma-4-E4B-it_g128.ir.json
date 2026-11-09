@@ -1,0 +1,186 @@
+{
+ "folder": "C:\\src\\llmzoo-walk\\models\\z2-npu\\gemma-4-E4B-it-int4-sym-g128-ov",
+ "bytes": 6443811004,
+ "files": [
+  {
+   "path": "chat_template.jinja",
+   "size": 18955,
+   "sha256": "c0e1a4e78b51cbe4924a195b1939a1e0728e86054736d92f370692d1709abb4c"
+  },
+  {
+   "path": "config.json",
+   "size": 5373,
+   "sha256": "359a6e553e238fc247654e04685e734bdec91852c585ce1ad8e698824cda8c38"
+  },
+  {
+   "path": "generation_config.json",
+   "size": 217,
+   "sha256": "11ac297a138fea798d38247c93a19df7286de99f8f1db2610c8e0a3f5ff1fa3f"
+  },
+  {
+   "path": "openvino_config.json",
+   "size": 1306,
+   "sha256": "e49bd45f40558a47440a06dac7c64cae5c1c3f70dc097314040bce43dd8899dc"
+  },
+  {
+   "path": "openvino_detokenizer.bin",
+   "size": 4413547,
+   "sha256": "461919bda7b546453e903052588c578e3e94e9e8215b7cec07cb00cb97459d13"
+  },
+  {
+   "path": "openvino_detokenizer.xml",
+   "size": 30093,
+   "sha256": "35ba693fe7f8d5ba401494520c5f940305afc6cd4018da91828252045232bd5c"
+  },
+  {
+   "path": "openvino_language_model.bin",
+   "size": 2722545193,
+   "sha256": "f6709d2206ec1ecf976aa3b030c69fb743041b5c2219d33080134f63104142a6"
+  },
+  {
+   "path": "openvino_language_model.xml",
+   "size": 4778960,
+   "sha256": "9d0a138557798114c06b210e1c8637b130eb21d4d10c91393efe5296ea877974"
+  },
+  {
+   "path": "openvino_text_embeddings_model.bin",
+   "size": 671612936,
+   "sha256": "f4ba107d403f58e4190d0bfef396c9e4eda6762021e4f429c10a53bb4f87aee2"
+  },
+  {
+   "path": "openvino_text_embeddings_model.xml",
+   "size": 7281,
+   "sha256": "744e733016b0da441834889c942ac40807dce3665e3483e602d0ad4c96466aed"
+  },
+  {
+   "path": "openvino_text_embeddings_per_layer_model.bin",
+   "size": 2819096656,
+   "sha256": "e666691fa271c8b6e26aa6eff33f3030148c0bfe43d3a1514b9b997a9a594c5e"
+  },
+  {
+   "path": "openvino_text_embeddings_per_layer_model.xml",
+   "size": 18486,
+   "sha256": "3c57e336f25c34077e1520a18011571c75fca1b175d0dc36faa8c9a3469487cf"
+  },
+  {
+   "path": "openvino_tokenizer.bin",
+   "size": 17263228,
+   "sha256": "dfeed825ec79b2d2e24902d8e8a36dfd86137153933827a09cb196cbd09ee7c1"
+  },
+  {
+   "path": "openvino_tokenizer.xml",
+   "size": 47604,
+   "sha256": "1419d4e09133a47682401e568f457d698ddcced19678fcc129508a5a7a1107f6"
+  },
+  {
+   "path": "openvino_vision_embeddings_model.bin",
+   "size": 169812532,
+   "sha256": "6c7609d984db75c39461f74b418cf3eac65b90da8678a08bc4e158e2f4524c3d"
+  },
+  {
+   "path": "openvino_vision_embeddings_model.xml",
+   "size": 1996179,
+   "sha256": "43e3fea1c92aca7df283c52c1168e270b34d74ead6da80f58f78f86cb8db5431"
+  },
+  {
+   "path": "preprocessor_config.json",
+   "size": 426,
+   "sha256": "4270f4ef5eedfb67d9b0946b129c7e8e5a0a7d128cb65cf3542fabd34ceb8f0a"
+  },
+  {
+   "path": "processor_config.json",
+   "size": 1764,
+   "sha256": "24d00232e58cfa179fe8b3911c788d4aad9a6279d778ebe4c72e82623b6197f9"
+  },
+  {
+   "path": "tokenizer.json",
+   "size": 32156428,
+   "sha256": "91d9cf86906f78e197021fda88214d448e5c120665d0243a8e776e046986c6bc"
+  },
+  {
+   "path": "tokenizer_config.json",
+   "size": 3840,
+   "sha256": "93edd59056163b255509636d000efc9527f42ff607c8e45b5b0cf5ef973dab3c"
+  }
+ ],
+ "rt_info": {
+  "openvino_detokenizer.xml": {
+   "transformers_version": "5.5.4"
+  },
+  "openvino_language_model.xml": {
+   "Runtime_version": "2026.4.1-22982-e213a147257-releases/2026/4",
+   "all_layers": "False",
+   "awq": "False",
+   "backup_mode": "int8_asym",
+   "compression_format": "dequantize",
+   "gptq": "False",
+   "group_size": "128",
+   "mode": "int4_sym",
+   "ratio": "1.0",
+   "scale_estimation": "False",
+   "sensitivity_metric": "weight_quantization_error",
+   "nncf_version": "3.4.0",
+   "optimum_intel_version": "2.2.0",
+   "optimum_version": "2.3.0",
+   "pytorch_version": "2.14.0",
+   "transformers_version": "5.5.4"
+  },
+  "openvino_text_embeddings_model.xml": {
+   "Runtime_version": "2026.4.1-22982-e213a147257-releases/2026/4",
+   "all_layers": "False",
+   "awq": "False",
+   "backup_mode": "int8_asym",
+   "compression_format": "dequantize",
+   "gptq": "False",
+   "group_size": "-1",
+   "mode": "int8_sym",
+   "ratio": "1.0",
+   "scale_estimation": "False",
+   "sensitivity_metric": "weight_quantization_error",
+   "nncf_version": "3.4.0",
+   "optimum_intel_version": "2.2.0",
+   "optimum_version": "2.3.0",
+   "pytorch_version": "2.14.0",
+   "transformers_version": "5.5.4"
+  },
+  "openvino_text_embeddings_per_layer_model.xml": {
+   "Runtime_version": "2026.4.1-22982-e213a147257-releases/2026/4",
+   "all_layers": "False",
+   "awq": "False",
+   "backup_mode": "int8_asym",
+   "compression_format": "dequantize",
+   "gptq": "False",
+   "group_size": "-1",
+   "mode": "int8_sym",
+   "ratio": "1.0",
+   "scale_estimation": "False",
+   "sensitivity_metric": "weight_quantization_error",
+   "nncf_version": "3.4.0",
+   "optimum_intel_version": "2.2.0",
+   "optimum_version": "2.3.0",
+   "pytorch_version": "2.14.0",
+   "transformers_version": "5.5.4"
+  },
+  "openvino_tokenizer.xml": {
+   "transformers_version": "5.5.4"
+  },
+  "openvino_vision_embeddings_model.xml": {
+   "Runtime_version": "2026.4.1-22982-e213a147257-releases/2026/4",
+   "all_layers": "False",
+   "awq": "False",
+   "backup_mode": "int8_asym",
+   "compression_format": "dequantize",
+   "gptq": "False",
+   "group_size": "-1",
+   "mode": "int8_sym",
+   "ratio": "1.0",
+   "scale_estimation": "False",
+   "sensitivity_metric": "weight_quantization_error",
+   "nncf_version": "3.4.0",
+   "optimum_intel_version": "2.2.0",
+   "optimum_version": "2.3.0",
+   "pytorch_version": "2.14.0",
+   "transformers_version": "5.5.4"
+  }
+ }
+}

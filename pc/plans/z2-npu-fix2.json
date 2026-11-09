@@ -1,0 +1,28 @@
+{
+ "sitting": "z2-npu-fix2",
+ "units": [
+  {
+   "model": "Qwen3-0.6B",
+   "cell": "Qwen3-0.6B\\ort-genai_npu_openvino",
+   "kind": "python",
+   "venv": "genai",
+   "script": "run_genai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\onnx-community__Qwen3-0.6B-ONNX\\onnxruntime\\cpu_and_mobile\\cpu-int4-kld-block-128",
+    "--ep",
+    "openvino",
+    "--ov-device",
+    "NPU",
+    "--ov-bounds",
+    "2048"
+   ],
+   "runs": 1,
+   "engines_gate": false,
+   "timeout_min": 30,
+   "ram_need_gb": 2.6,
+   "note": "OpenVINO EP 1.8.1 plugin, device_type NPU, on the CPU package (probe); probe: NPU fix 2 of 3: reshape_input with batch 1 and the other dimensions bounded to 2048 (the EP docs' NPU route for dynamic shapes)"
+  }
+ ],
+ "probe": "NPU fix 2 of 3: reshape_input with batch 1 and the other dimensions bounded to 2048 (the EP docs' NPU route for dynamic shapes)"
+}

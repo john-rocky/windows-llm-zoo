@@ -1,0 +1,3 @@
+ENGINE_PID 472
+{"gen": 1, "generated_tokens": 128, "chunks": 127, "delta_fields": {"reasoning_content": 127}, "stop": "length", "ttft_ms": 1062.388699996518, "decode_tps": 77.6010437954446}
+{"gen": 2, "generated_tokens": 128, "chunks": 127, "delta_fields": {"reasoning_content": 127}, "stop": "length", "ttft_ms": 255.12600000365637, "decode_tps": 80.03172305051007}

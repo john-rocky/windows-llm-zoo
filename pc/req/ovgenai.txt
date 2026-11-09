@@ -1,0 +1,5 @@
+# OpenVINO GenAI 2026.4.1 (its OpenVINO runtime and tokenizers of the same release)
+openvino-genai==2026.4.1.0
+openvino==2026.4.1
+openvino-tokenizers==2026.4.1.0
+numpy==2.5.4

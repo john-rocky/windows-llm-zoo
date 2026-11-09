@@ -1,0 +1,6 @@
+■ Downloading model (qwen3-0.6b-cuda-gpu:2, 492.0 MB)
+qwen3-0.6b-cuda-gpu:2: 0%
+qwen3-0.6b-cuda-gpu:2: 28%
+qwen3-0.6b-cuda-gpu:2: 53%
+qwen3-0.6b-cuda-gpu:2: 76%
+● success: Downloaded 'qwen3-0.6b-cuda-gpu:2' to the local cache.

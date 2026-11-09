@@ -1,0 +1,70 @@
+{
+ "runner": "run_ovgenai.py",
+ "started": "2026-11-09T08:28:44.561487+09:00",
+ "argv": [
+  "--model-dir",
+  "C:\\src\\llmzoo-walk\\models\\OpenVINO__Qwen3-4B-int4-ov",
+  "--device",
+  "CPU",
+  "--prompt-file",
+  "C:\\src\\llmzoo-walk\\pc\\short-chat.txt",
+  "--out",
+  "C:\\src\\llmzoo-walk\\runs\\walk-timed-b-rerun\\Qwen3-4B\\openvino-genai_cpu_cpu\\run3.json"
+ ],
+ "pid": 11104,
+ "versions": {
+  "python": "3.12.10",
+  "openvino": "2026.4.1",
+  "openvino-genai": "2026.4.1.0",
+  "openvino-tokenizers": "2026.4.1.0",
+  "numpy": "2.5.4"
+ },
+ "available_devices": {
+  "CPU": "Intel(R) Core(TM) Ultra 9 386H",
+  "GPU.0": "Intel(R) Graphics (iGPU)",
+  "GPU.1": "NVIDIA GeForce RTX 5080 Laptop GPU (dGPU)",
+  "NPU": "Intel(R) AI Boost"
+ },
+ "prompt_sha256": "870aafb98e570e8fa1343ec051180237f4587233f49c0cc1391724e086d42d50",
+ "pipeline": "llm",
+ "load_s": 1.9696015999943484,
+ "pipeline_errors_before": [],
+ "templated_prompt": "<|im_start|>user\nExplain what on-device AI means in simple terms.<|im_end|>\n<|im_start|>assistant\n",
+ "templated_prompt_sha256": "9d2fe60da55b75283dbd26cd6f8db55bf12e5c3c0c1f37670067623f6461074d",
+ "gens": [
+  {
+   "gen": 1,
+   "regime": "cold",
+   "prompt_tokens": 19,
+   "generated_tokens": 128,
+   "stop": "length",
+   "ttft_ms": 11018.48046875,
+   "tpot_ms": 71.20740509033203,
+   "prefill_tps": 1.7243757026104225,
+   "decode_tps": 14.043483240702615,
+   "generate_duration_ms": 20062.626953125,
+   "generation_wall_s": 20.06274740002118,
+   "text": "<think>\nOkay, the user wants me to explain what on-device AI is in simple terms. Let me start by recalling what I know about AI and on-device processing.\n\nFirst, I need to break down the term \"on-device AI.\" The key here is \"on-device,\" which means the AI processing happens on the device itself, like a smartphone or a computer, rather than relying on a cloud server. But I should make sure I'm not mixing up concepts. \n\nSo, traditional AI models often require sending data to the cloud for processing. For example, when you use a voice assistant like Siri, your voice data might be sent",
+   "text_sha256": "a39189accbe4afbbf9c80d92fbc77c038de83b2ea2edda3950166e9f2bd62907"
+  },
+  {
+   "gen": 2,
+   "regime": "warm",
+   "prompt_tokens": 19,
+   "generated_tokens": 128,
+   "stop": "length",
+   "ttft_ms": 462.4090881347656,
+   "tpot_ms": 70.54722595214844,
+   "prefill_tps": 41.089157820493774,
+   "decode_tps": 14.174901798098924,
+   "generate_duration_ms": 9422.4560546875,
+   "generation_wall_s": 9.422555700002704,
+   "text": "<think>\nOkay, the user wants me to explain what on-device AI is in simple terms. Let me start by recalling what I know about AI and on-device processing.\n\nFirst, I need to break down the term \"on-device AI.\" The key here is \"on-device,\" which means the AI processing happens on the device itself, like a smartphone or a computer, rather than relying on a cloud server. But I should make sure I'm not mixing up concepts. \n\nSo, traditional AI models often require sending data to the cloud for processing. For example, when you use a voice assistant like Siri, your voice data might be sent",
+   "text_sha256": "a39189accbe4afbbf9c80d92fbc77c038de83b2ea2edda3950166e9f2bd62907"
+  }
+ ],
+ "status": "OK",
+ "peak_working_set_bytes": 4985069568,
+ "peak_pagefile_bytes": 3332341760,
+ "ended": "2026-11-09T08:29:17.529859+09:00"
+}

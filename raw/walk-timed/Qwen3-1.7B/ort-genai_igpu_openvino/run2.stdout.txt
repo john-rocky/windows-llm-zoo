@@ -1,0 +1,3 @@
+ENGINE_PID 21720
+{"gen": 1, "generated_tokens": 128, "stop": "length", "ttft_ms": 696.4235999912489, "decode_tps": 26.158320827275457}
+{"gen": 2, "generated_tokens": 128, "stop": "length", "ttft_ms": 113.50350003340282, "decode_tps": 28.988810043679}

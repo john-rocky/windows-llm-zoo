@@ -1,0 +1,754 @@
+{
+ "model": "Qwen3-0.6B",
+ "cell": "foundry_cpu_cpu",
+ "runtime": "foundry",
+ "runtime_detail": "Foundry Local 0.13.0 (REST, streamed; pc/run_foundry.py)",
+ "device": "cpu",
+ "device_name": "Intel(R) Core(TM) Ultra 9 386H",
+ "backend": "cpu",
+ "backend_detail": "Foundry Local catalog variant qwen3-0.6b-generic-cpu:4",
+ "source": "windows-llm-zoo (Z2)",
+ "shelf": {
+  "repo": "Foundry Local catalog",
+  "folder": "qwen3-0.6b-generic-cpu:4",
+  "quant": "MatMulNBits b128 asym acc4: int8 x105, int4 x92; embeddings int8 b128 asym [model.onnx]",
+  "quant_source": "the graph (pc/onnx_quant.py)"
+ },
+ "unit": {
+  "kind": "foundry",
+  "venv": "genai",
+  "script": null,
+  "args": [],
+  "model_id": "qwen3-0.6b-generic-cpu:4",
+  "path": "/v1",
+  "engines_gate": false
+ },
+ "workload": {
+  "task": "short-chat",
+  "prompt": "prompts/text/short-chat.txt of edge-llm-bench (pc/short-chat.txt)",
+  "chat_template": "the package's own, one user turn",
+  "output_budget_tokens": 128,
+  "sampling": "greedy",
+  "regime": "cold (first generation of a fresh engine process; Foundry: of a fresh daemon)",
+  "counting": "runs=3 per sitting; run 1 of a GPU or NPU cell is not counted; a text-check failure is not counted"
+ },
+ "status": "measured",
+ "table": {
+  "sitting": "walk-timed-b",
+  "decode_tps": 47.59,
+  "cold_spread_pct": 0.64,
+  "cold_n": 3,
+  "prefill_tps": 93.4,
+  "ttft_ms": 203.4,
+  "peak_working_set_mb": 1295,
+  "text_check": "6/6 PASS",
+  "decode_tps_warm": 46.14,
+  "gpu_adapter_used": [],
+  "generated_tokens": [
+   128
+  ],
+  "stop": [
+   "length"
+  ],
+  "same_cold_text": true,
+  "os_build": [
+   "26200.9711"
+  ]
+ },
+ "first_error": null,
+ "why_not_measured": null,
+ "sittings": [
+  {
+   "sitting": "walk-first",
+   "mode": "first",
+   "runs": [
+    {
+     "run": 1,
+     "status": "OK",
+     "counted": false,
+     "why": "text check FAIL",
+     "exit_code": 0,
+     "timed_out": false,
+     "elapsed_s": 19.801,
+     "suspended_s": 0,
+     "gate": null,
+     "before": {
+      "load": {
+       "cpu": 3.3,
+       "build_ms": 0,
+       "top": [
+        "System 4 0.22 core",
+        "curl 23128 0.2 core",
+        "WmiPrvSE 31556 0.02 core",
+        "WUDFHost 1836 0.02 core",
+        "WUDFHost 9528 0.02 core"
+       ]
+      },
+      "nvidia": "P0, 0 MHz, 14001 MHz, 21.31 W, 0 %, 0 MiB, 45",
+      "availGB": 14.7
+     },
+     "start": "2026-11-07T19:43:57.5432350+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 0,
+       "dedicated": 0
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 23,
+       "dedicated": 0
+      },
+      "0x00000000_0x00013E4C (npu?)": {
+       "shared": 0,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": null,
+     "peak_working_set_mb": 1317,
+     "peak_working_set_of": "foundrylocald (the daemon)",
+     "gens": [
+      {
+       "regime": "cold",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 27.411529288464763,
+       "prefill_tps": 2.82662512460432,
+       "ttft_ms": 6721.796899990295,
+       "text_sha256": "43ef16559faccb43826f593835bd2a656d47239f8dfffc5e92b3577420e3c246",
+       "text_check": "FAIL",
+       "text_flags": [
+        "text-empty-or-degenerate"
+       ],
+       "text": "\nOn-device AI (on-device AI)"
+      },
+      {
+       "regime": "warm",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 8.14832975031625,
+       "prefill_tps": 1.6909545439294065,
+       "ttft_ms": 11236.257099997601,
+       "text_sha256": "43ef16559faccb43826f593835bd2a656d47239f8dfffc5e92b3577420e3c246",
+       "text_check": "FAIL",
+       "text_flags": [
+        "text-empty-or-degenerate"
+       ],
+       "text": "\nOn-device AI (on-device AI)"
+      }
+     ],
+     "load_s": null,
+     "versions": null
+    }
+   ],
+   "cold_n": 0,
+   "text_check": "0/2 PASS",
+   "host_env": [
+    {
+     "read": "2026-11-07T19:36:14.0602178+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    },
+    {
+     "read": "2026-11-07T23:47:21.5196137+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    },
+    {
+     "read": "2026-11-08T02:07:11.6245753+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    },
+    {
+     "read": "2026-11-08T03:03:36.6039915+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    },
+    {
+     "read": "2026-11-08T03:42:51.6052743+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    },
+    {
+     "read": "2026-11-08T04:40:06.6871579+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    }
+   ],
+   "counts": false,
+   "unit_args": null,
+   "unit_note": "Foundry Local catalog variant qwen3-0.6b-generic-cpu:4",
+   "unit_model_id": "qwen3-0.6b-generic-cpu:4"
+  },
+  {
+   "sitting": "walk-foundry2",
+   "mode": "first",
+   "runs": [
+    {
+     "run": 1,
+     "status": "OK",
+     "counted": false,
+     "why": "first pass (untimed)",
+     "exit_code": 0,
+     "timed_out": false,
+     "elapsed_s": 9.882,
+     "suspended_s": 0,
+     "gate": null,
+     "before": {
+      "load": {
+       "cpu": 33,
+       "build_ms": 1016,
+       "top": [
+        "python 32632 2.92 core",
+        "System 4 1.27 core",
+        "cl 34016 1 core",
+        "WmiPrvSE 7560 0.03 core",
+        "NVDisplay.Container 3412 0.03 core"
+       ]
+      },
+      "nvidia": "P0, 2272 MHz, 14001 MHz, 18.94 W, 0 %, 0 MiB, 54",
+      "availGB": 14.3
+     },
+     "start": "2026-11-08T05:19:28.9699990+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 0,
+       "dedicated": 0
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 23,
+       "dedicated": 0
+      },
+      "0x00000000_0x00013E4C (npu?)": {
+       "shared": 0,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": null,
+     "peak_working_set_mb": 1310,
+     "peak_working_set_of": "foundrylocald (the daemon)",
+     "gens": [
+      {
+       "regime": "cold",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 27.387832256596642,
+       "prefill_tps": 76.76497836511905,
+       "ttft_ms": 247.5086999911582,
+       "text_sha256": "8a6da6dfa0fd6fd74323d2778358ea6574c1b2f3a2408d9d99af45afe96f7a94",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "\nOkay, the user is asking for a simple explanation of what on-device AI means. Let me start by breaking down the term.\n\nOn-device AI refers to AI systems that run on a device, like a smartphone or a tablet. These systems are designed to perform tasks on the device itself, rather than relying on cloud servers.\n\nSo, the user wants a simple explanation. I should start by defining on-device AI. Then, explain that these systems run on a device, not on a cloud server. Finally, mention that these systems are designed to perform tasks on the device itself.\n\nOn-device AI (on-device AI)"
+      },
+      {
+       "regime": "warm",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 28.722906945605903,
+       "prefill_tps": 91.06224104652352,
+       "ttft_ms": 208.6484999890672,
+       "text_sha256": "8a6da6dfa0fd6fd74323d2778358ea6574c1b2f3a2408d9d99af45afe96f7a94",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "\nOkay, the user is asking for a simple explanation of what on-device AI means. Let me start by breaking down the term.\n\nOn-device AI refers to AI systems that run on a device, like a smartphone or a tablet. These systems are designed to perform tasks on the device itself, rather than relying on cloud servers.\n\nSo, the user wants a simple explanation. I should start by defining on-device AI. Then, explain that these systems run on a device, not on a cloud server. Finally, mention that these systems are designed to perform tasks on the device itself.\n\nOn-device AI (on-device AI)"
+      }
+     ],
+     "load_s": null,
+     "versions": null
+    }
+   ],
+   "cold_n": 0,
+   "text_check": "2/2 PASS",
+   "host_env": [
+    {
+     "read": "2026-11-08T05:18:16.7748406+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    }
+   ],
+   "counts": false,
+   "unit_args": null,
+   "unit_note": "Foundry Local catalog variant qwen3-0.6b-generic-cpu:4",
+   "unit_model_id": "qwen3-0.6b-generic-cpu:4"
+  },
+  {
+   "sitting": "walk-timed-b",
+   "mode": "timed",
+   "runs": [
+    {
+     "run": 1,
+     "status": "OK",
+     "counted": true,
+     "why": "",
+     "exit_code": 0,
+     "timed_out": false,
+     "elapsed_s": 8.085,
+     "suspended_s": 0,
+     "gate": {
+      "quietGate": "quiet",
+      "cpuReads": [
+       3.6,
+       0.7,
+       0.3
+      ],
+      "nvidiaMiB": 0,
+      "availGB": 23.9,
+      "ramNeedGB": 2.7,
+      "gpuEngines": null
+     },
+     "before": {
+      "load": {
+       "cpu": 2.4,
+       "build_ms": 0,
+       "top": [
+        "System 4 0.36 core",
+        "WUDFHost 9528 0.02 core",
+        "powershell 16780 0.02 core"
+       ]
+      },
+      "nvidia": "P0, 3412 MHz, 14001 MHz, 19.77 W, 0 %, 0 MiB, 59",
+      "availGB": 24
+     },
+     "start": "2026-11-08T23:37:59.4200492+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 0,
+       "dedicated": 0
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 23,
+       "dedicated": 0
+      },
+      "0x00000000_0x00013E4C (npu?)": {
+       "shared": 0,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": null,
+     "peak_working_set_mb": 1295,
+     "peak_working_set_of": "foundrylocald (the daemon)",
+     "gens": [
+      {
+       "regime": "cold",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 47.59331821780059,
+       "prefill_tps": 80.00266114572698,
+       "ttft_ms": 237.49209998641163,
+       "text_sha256": "8a6da6dfa0fd6fd74323d2778358ea6574c1b2f3a2408d9d99af45afe96f7a94",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "\nOkay, the user is asking for a simple explanation of what on-device AI means. Let me start by breaking down the term.\n\nOn-device AI refers to AI systems that run on a device, like a smartphone or a tablet. These systems are designed to perform tasks on the device itself, rather than relying on cloud servers.\n\nSo, the user wants a simple explanation. I should start by defining on-device AI. Then, explain that these systems run on a device, not on a cloud server. Finally, mention that these systems are designed to perform tasks on the device itself.\n\nOn-device AI (on-device AI)"
+      },
+      {
+       "regime": "warm",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 46.137383767721445,
+       "prefill_tps": 106.38494440939785,
+       "ttft_ms": 178.5966999887023,
+       "text_sha256": "8a6da6dfa0fd6fd74323d2778358ea6574c1b2f3a2408d9d99af45afe96f7a94",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "\nOkay, the user is asking for a simple explanation of what on-device AI means. Let me start by breaking down the term.\n\nOn-device AI refers to AI systems that run on a device, like a smartphone or a tablet. These systems are designed to perform tasks on the device itself, rather than relying on cloud servers.\n\nSo, the user wants a simple explanation. I should start by defining on-device AI. Then, explain that these systems run on a device, not on a cloud server. Finally, mention that these systems are designed to perform tasks on the device itself.\n\nOn-device AI (on-device AI)"
+      }
+     ],
+     "load_s": null,
+     "versions": null
+    },
+    {
+     "run": 2,
+     "status": "OK",
+     "counted": true,
+     "why": "",
+     "exit_code": 0,
+     "timed_out": false,
+     "elapsed_s": 8.03,
+     "suspended_s": 0,
+     "gate": {
+      "quietGate": "quiet",
+      "cpuReads": [
+       0.4,
+       0.7,
+       0.4
+      ],
+      "nvidiaMiB": 0,
+      "availGB": 24,
+      "ramNeedGB": 2.7,
+      "gpuEngines": null
+     },
+     "before": {
+      "load": {
+       "cpu": 2.1,
+       "build_ms": 0,
+       "top": [
+        "System 4 0.31 core",
+        "powershell 16780 0.02 core",
+        "svchost 5260 0.02 core"
+       ]
+      },
+      "nvidia": "P0, 6442 MHz, 14001 MHz, 17.91 W, 0 %, 0 MiB, 49",
+      "availGB": 24
+     },
+     "start": "2026-11-08T23:39:21.8722116+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 0,
+       "dedicated": 0
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 23,
+       "dedicated": 0
+      },
+      "0x00000000_0x00013E4C (npu?)": {
+       "shared": 0,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": null,
+     "peak_working_set_mb": 1282,
+     "peak_working_set_of": "foundrylocald (the daemon)",
+     "gens": [
+      {
+       "regime": "cold",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 47.68645355642799,
+       "prefill_tps": 93.39257371725036,
+       "ttft_ms": 203.44230000046082,
+       "text_sha256": "8a6da6dfa0fd6fd74323d2778358ea6574c1b2f3a2408d9d99af45afe96f7a94",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "\nOkay, the user is asking for a simple explanation of what on-device AI means. Let me start by breaking down the term.\n\nOn-device AI refers to AI systems that run on a device, like a smartphone or a tablet. These systems are designed to perform tasks on the device itself, rather than relying on cloud servers.\n\nSo, the user wants a simple explanation. I should start by defining on-device AI. Then, explain that these systems run on a device, not on a cloud server. Finally, mention that these systems are designed to perform tasks on the device itself.\n\nOn-device AI (on-device AI)"
+      },
+      {
+       "regime": "warm",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 46.41653747683071,
+       "prefill_tps": 102.44940348145215,
+       "ttft_ms": 185.4573999880813,
+       "text_sha256": "8a6da6dfa0fd6fd74323d2778358ea6574c1b2f3a2408d9d99af45afe96f7a94",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "\nOkay, the user is asking for a simple explanation of what on-device AI means. Let me start by breaking down the term.\n\nOn-device AI refers to AI systems that run on a device, like a smartphone or a tablet. These systems are designed to perform tasks on the device itself, rather than relying on cloud servers.\n\nSo, the user wants a simple explanation. I should start by defining on-device AI. Then, explain that these systems run on a device, not on a cloud server. Finally, mention that these systems are designed to perform tasks on the device itself.\n\nOn-device AI (on-device AI)"
+      }
+     ],
+     "load_s": null,
+     "versions": null
+    },
+    {
+     "run": 3,
+     "status": "OK",
+     "counted": true,
+     "why": "",
+     "exit_code": 0,
+     "timed_out": false,
+     "elapsed_s": 8.092,
+     "suspended_s": 0,
+     "gate": {
+      "quietGate": "quiet",
+      "cpuReads": [
+       2.5,
+       0.3,
+       0.4
+      ],
+      "nvidiaMiB": 0,
+      "availGB": 24,
+      "ramNeedGB": 2.7,
+      "gpuEngines": null
+     },
+     "before": {
+      "load": {
+       "cpu": 2.1,
+       "build_ms": 0,
+       "top": [
+        "System 4 0.3 core",
+        "conhost 27312 0.02 core",
+        "powershell 16780 0.02 core",
+        "NVDisplay.Container 3412 0.02 core"
+       ]
+      },
+      "nvidia": "P0, 6165 MHz, 14001 MHz, 17.38 W, 0 %, 0 MiB, 45",
+      "availGB": 24
+     },
+     "start": "2026-11-08T23:40:42.2739596+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 0,
+       "dedicated": 0
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 23,
+       "dedicated": 0
+      },
+      "0x00000000_0x00013E4C (npu?)": {
+       "shared": 0,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": null,
+     "peak_working_set_mb": 1309,
+     "peak_working_set_of": "foundrylocald (the daemon)",
+     "gens": [
+      {
+       "regime": "cold",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 47.381572980212056,
+       "prefill_tps": 96.76824617302607,
+       "ttft_ms": 196.34539997787215,
+       "text_sha256": "8a6da6dfa0fd6fd74323d2778358ea6574c1b2f3a2408d9d99af45afe96f7a94",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "\nOkay, the user is asking for a simple explanation of what on-device AI means. Let me start by breaking down the term.\n\nOn-device AI refers to AI systems that run on a device, like a smartphone or a tablet. These systems are designed to perform tasks on the device itself, rather than relying on cloud servers.\n\nSo, the user wants a simple explanation. I should start by defining on-device AI. Then, explain that these systems run on a device, not on a cloud server. Finally, mention that these systems are designed to perform tasks on the device itself.\n\nOn-device AI (on-device AI)"
+      },
+      {
+       "regime": "warm",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 45.82223976880822,
+       "prefill_tps": 100.80222657033089,
+       "ttft_ms": 188.4878999844659,
+       "text_sha256": "8a6da6dfa0fd6fd74323d2778358ea6574c1b2f3a2408d9d99af45afe96f7a94",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "\nOkay, the user is asking for a simple explanation of what on-device AI means. Let me start by breaking down the term.\n\nOn-device AI refers to AI systems that run on a device, like a smartphone or a tablet. These systems are designed to perform tasks on the device itself, rather than relying on cloud servers.\n\nSo, the user wants a simple explanation. I should start by defining on-device AI. Then, explain that these systems run on a device, not on a cloud server. Finally, mention that these systems are designed to perform tasks on the device itself.\n\nOn-device AI (on-device AI)"
+      }
+     ],
+     "load_s": null,
+     "versions": null
+    }
+   ],
+   "cold_n": 3,
+   "text_check": "6/6 PASS",
+   "host_env": [
+    {
+     "read": "2026-11-08T18:27:37.4700974+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "osCaption": "Microsoft Windows 11 Home",
+     "ramGB": 31.5,
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    }
+   ],
+   "cold_spread_pct": 0.64,
+   "decode_tps": 47.59,
+   "prefill_tps": 93.4,
+   "ttft_ms": 203.4,
+   "decode_tps_warm": 46.14,
+   "peak_working_set_mb": 1295,
+   "gpu_adapter_used": [],
+   "generated_tokens": [
+    128
+   ],
+   "stop": [
+    "length"
+   ],
+   "same_cold_text": true,
+   "os_build": [
+    "26200.9711"
+   ],
+   "counts": true,
+   "unit_args": [],
+   "unit_note": "Foundry Local catalog variant qwen3-0.6b-generic-cpu:4",
+   "unit_model_id": "qwen3-0.6b-generic-cpu:4"
+  }
+ ]
+}

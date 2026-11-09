@@ -1,0 +1,693 @@
+{
+ "model": "gemma-4-E4B-it",
+ "cell": "ort-genai_rtx_webgpu",
+ "runtime": "ort-genai",
+ "runtime_detail": "ONNX Runtime GenAI 0.19.0 (Python, pc/run_genai.py)",
+ "device": "rtx",
+ "device_name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+ "backend": "webgpu",
+ "backend_detail": "WebGPU EP 0.5.0 plugin, adapterIndex 0",
+ "source": "windows-llm-zoo (Z2)",
+ "shelf": {
+  "repo": "mlboydaisuke/gemma-4-E4B-it-Foundry-Local",
+  "folder": "cuda-int4-8k (overlay gemma-4-E4B-it_webgpu_a0: adapterIndex=0)",
+  "quant": "MatMulNBits b32 sym accNone: int4 x343 [decoder/model.onnx]",
+  "quant_source": "the graph (pc/onnx_quant.py)"
+ },
+ "unit": {
+  "kind": "python",
+  "venv": "genai",
+  "script": "run_genai.py",
+  "args": [
+   "--model-dir",
+   "{ROOT}\\overlays\\gemma-4-E4B-it_webgpu_a0",
+   "--ep",
+   "follow_config"
+  ],
+  "model_id": null,
+  "path": null,
+  "engines_gate": false
+ },
+ "workload": {
+  "task": "short-chat",
+  "prompt": "prompts/text/short-chat.txt of edge-llm-bench (pc/short-chat.txt)",
+  "chat_template": "the package's own, one user turn",
+  "output_budget_tokens": 128,
+  "sampling": "greedy",
+  "regime": "cold (first generation of a fresh engine process; Foundry: of a fresh daemon)",
+  "counting": "runs=3 per sitting; run 1 of a GPU or NPU cell is not counted; a text-check failure is not counted"
+ },
+ "status": "measured",
+ "table": {
+  "sitting": "walk-timed-b",
+  "decode_tps": 17.3,
+  "cold_spread_pct": 0.26,
+  "cold_n": 2,
+  "prefill_tps": 22.0,
+  "ttft_ms": 914.8,
+  "peak_working_set_mb": 5764,
+  "text_check": "6/6 PASS",
+  "decode_tps_warm": 18.56,
+  "gpu_adapter_used": [
+   "nvidia"
+  ],
+  "generated_tokens": [
+   128
+  ],
+  "stop": [
+   "length"
+  ],
+  "same_cold_text": true,
+  "os_build": [
+   "26200.9711"
+  ]
+ },
+ "first_error": null,
+ "why_not_measured": null,
+ "sittings": [
+  {
+   "sitting": "walk-first",
+   "mode": "first",
+   "runs": [
+    {
+     "run": 1,
+     "status": "OK",
+     "counted": false,
+     "why": "first pass (untimed)",
+     "exit_code": 0,
+     "timed_out": false,
+     "elapsed_s": 68.926,
+     "suspended_s": 0,
+     "gate": null,
+     "before": {
+      "load": {
+       "cpu": 43,
+       "build_ms": 0,
+       "top": [
+        "python 8836 6.41 core",
+        "System 4 0.36 core",
+        "svchost 5260 0.05 core",
+        "WmiPrvSE 7560 0.03 core",
+        "ipf_helper 10044 0.02 core"
+       ]
+      },
+      "nvidia": "P0, 2370 MHz, 14001 MHz, 19.39 W, 0 %, 0 MiB, 57",
+      "availGB": 21.6
+     },
+     "start": "2026-11-08T04:47:18.6617232+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 2730,
+       "dedicated": 7527
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 23,
+       "dedicated": 0
+      },
+      "0x00000000_0x00012BB8 (?)": {
+       "shared": 0,
+       "dedicated": 0
+      },
+      "0x00000000_0x00013E4C (npu?)": {
+       "shared": 0,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": "nvidia",
+     "peak_working_set_mb": 5702,
+     "gens": [
+      {
+       "regime": "cold",
+       "prompt_tokens": 20,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 8.452240045252093,
+       "prefill_tps": 16.423778148927124,
+       "ttft_ms": 1218.096800002968,
+       "text_sha256": "dd560bb150802430c2375464d71c99153dab3b6492ffccb73329fd26ce407f0f",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "Imagine your smartphone or a smart device (like a smart speaker or fitness tracker) is like a very smart assistant.\n\n**\"On-device AI\" simply means that the \"brain\" or the \"thinking part\" of that assistant is actually *inside* the device itself, not constantly needing to talk to the internet.**\n\nHere is a breakdown using simple analogies:\n\n---\n\n### 🧠 The Old Way (Cloud AI) vs. The New Way (On-Device AI)\n\n**1. The Old Way (Cloud AI - Like sending a text to a friend):**\n* **What happens:** You ask your phone"
+      },
+      {
+       "regime": "warm",
+       "prompt_tokens": 20,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 8.619451735293806,
+       "prefill_tps": 86.05577963833818,
+       "ttft_ms": 232.74849998415448,
+       "text_sha256": "dd560bb150802430c2375464d71c99153dab3b6492ffccb73329fd26ce407f0f",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "Imagine your smartphone or a smart device (like a smart speaker or fitness tracker) is like a very smart assistant.\n\n**\"On-device AI\" simply means that the \"brain\" or the \"thinking part\" of that assistant is actually *inside* the device itself, not constantly needing to talk to the internet.**\n\nHere is a breakdown using simple analogies:\n\n---\n\n### 🧠 The Old Way (Cloud AI) vs. The New Way (On-Device AI)\n\n**1. The Old Way (Cloud AI - Like sending a text to a friend):**\n* **What happens:** You ask your phone"
+      }
+     ],
+     "load_s": 30.518989299991517,
+     "versions": {
+      "python": "3.12.10",
+      "onnxruntime-genai": "0.19.0",
+      "onnxruntime": "1.31.1",
+      "onnxruntime-ep-openvino": "1.8.1",
+      "onnxruntime-ep-webgpu": "0.5.0",
+      "numpy": "2.5.4"
+     }
+    }
+   ],
+   "cold_n": 0,
+   "text_check": "2/2 PASS",
+   "host_env": [
+    {
+     "read": "2026-11-07T19:36:14.0602178+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    },
+    {
+     "read": "2026-11-07T23:47:21.5196137+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    },
+    {
+     "read": "2026-11-08T02:07:11.6245753+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    },
+    {
+     "read": "2026-11-08T03:03:36.6039915+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    },
+    {
+     "read": "2026-11-08T03:42:51.6052743+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    },
+    {
+     "read": "2026-11-08T04:40:06.6871579+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    }
+   ],
+   "counts": false,
+   "unit_args": [
+    "--model-dir",
+    "{ROOT}\\overlays\\gemma-4-E4B-it_webgpu_a0",
+    "--ep",
+    "follow_config"
+   ],
+   "unit_note": "WebGPU EP 0.5.0 plugin, adapterIndex 0"
+  },
+  {
+   "sitting": "walk-timed-b",
+   "mode": "timed",
+   "runs": [
+    {
+     "run": 1,
+     "status": "OK",
+     "counted": false,
+     "why": "run 1 of a GPU / NPU cell (first process in the sitting)",
+     "exit_code": 0,
+     "timed_out": false,
+     "elapsed_s": 39.071,
+     "suspended_s": 0,
+     "gate": {
+      "quietGate": "quiet",
+      "cpuReads": [
+       2.6,
+       0.8,
+       0.4
+      ],
+      "nvidiaMiB": 0,
+      "availGB": 24.4,
+      "ramNeedGB": 10.1,
+      "gpuEngines": null
+     },
+     "before": {
+      "load": {
+       "cpu": 5.5,
+       "build_ms": 0,
+       "top": [
+        "System 4 0.78 core",
+        "NahimicSvc32 2536 0.03 core",
+        "svchost 11488 0.02 core",
+        "MsMpEng 5548 0.02 core",
+        "powershell 23944 0.02 core"
+       ]
+      },
+      "nvidia": "P0, 705 MHz, 14001 MHz, 18.13 W, 0 %, 0 MiB, 49",
+      "availGB": 24.4
+     },
+     "start": "2026-11-08T20:16:52.9983983+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 2756,
+       "dedicated": 7528
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 23,
+       "dedicated": 0
+      },
+      "0x00000000_0x00012BB8 (?)": {
+       "shared": 0,
+       "dedicated": 0
+      },
+      "0x00000000_0x00013E4C (npu?)": {
+       "shared": 0,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": "nvidia",
+     "peak_working_set_mb": 5927,
+     "gens": [
+      {
+       "regime": "cold",
+       "prompt_tokens": 20,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 17.649339994526102,
+       "prefill_tps": 20.158766412252234,
+       "ttft_ms": 992.5323000352364,
+       "text_sha256": "dd560bb150802430c2375464d71c99153dab3b6492ffccb73329fd26ce407f0f",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "Imagine your smartphone or a smart device (like a smart speaker or fitness tracker) is like a very smart assistant.\n\n**\"On-device AI\" simply means that the \"brain\" or the \"thinking part\" of that assistant is actually *inside* the device itself, not constantly needing to talk to the internet.**\n\nHere is a breakdown using simple analogies:\n\n---\n\n### 🧠 The Old Way (Cloud AI) vs. The New Way (On-Device AI)\n\n**1. The Old Way (Cloud AI - Like sending a text to a friend):**\n* **What happens:** You ask your phone"
+      },
+      {
+       "regime": "warm",
+       "prompt_tokens": 20,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 18.25215836812745,
+       "prefill_tps": 88.11756645169584,
+       "ttft_ms": 227.3686000262387,
+       "text_sha256": "dd560bb150802430c2375464d71c99153dab3b6492ffccb73329fd26ce407f0f",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "Imagine your smartphone or a smart device (like a smart speaker or fitness tracker) is like a very smart assistant.\n\n**\"On-device AI\" simply means that the \"brain\" or the \"thinking part\" of that assistant is actually *inside* the device itself, not constantly needing to talk to the internet.**\n\nHere is a breakdown using simple analogies:\n\n---\n\n### 🧠 The Old Way (Cloud AI) vs. The New Way (On-Device AI)\n\n**1. The Old Way (Cloud AI - Like sending a text to a friend):**\n* **What happens:** You ask your phone"
+      }
+     ],
+     "load_s": 17.713206299988087,
+     "versions": {
+      "python": "3.12.10",
+      "onnxruntime-genai": "0.19.0",
+      "onnxruntime": "1.31.1",
+      "onnxruntime-ep-openvino": "1.8.1",
+      "onnxruntime-ep-webgpu": "0.5.0",
+      "numpy": "2.5.4"
+     }
+    },
+    {
+     "run": 2,
+     "status": "OK",
+     "counted": true,
+     "why": "",
+     "exit_code": 0,
+     "timed_out": false,
+     "elapsed_s": 34.42,
+     "suspended_s": 0,
+     "gate": {
+      "quietGate": "quiet",
+      "cpuReads": [
+       0.7,
+       0.6,
+       0.3
+      ],
+      "nvidiaMiB": 0,
+      "availGB": 24.6,
+      "ramNeedGB": 10.1,
+      "gpuEngines": null
+     },
+     "before": {
+      "load": {
+       "cpu": 3,
+       "build_ms": 0,
+       "top": [
+        "System 4 0.45 core",
+        "WmiPrvSE 7560 0.02 core",
+        "powershell 16780 0.02 core"
+       ]
+      },
+      "nvidia": "P0, 225 MHz, 14001 MHz, 17.62 W, 0 %, 0 MiB, 47",
+      "availGB": 24.6
+     },
+     "start": "2026-11-08T20:18:11.4510934+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 2750,
+       "dedicated": 7528
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 23,
+       "dedicated": 0
+      },
+      "0x00000000_0x00012BB8 (?)": {
+       "shared": 0,
+       "dedicated": 0
+      },
+      "0x00000000_0x00013E4C (npu?)": {
+       "shared": 0,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": "nvidia",
+     "peak_working_set_mb": 5795,
+     "gens": [
+      {
+       "regime": "cold",
+       "prompt_tokens": 20,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 17.276196498669073,
+       "prefill_tps": 23.306301907425564,
+       "ttft_ms": 858.5615000047255,
+       "text_sha256": "dd560bb150802430c2375464d71c99153dab3b6492ffccb73329fd26ce407f0f",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "Imagine your smartphone or a smart device (like a smart speaker or fitness tracker) is like a very smart assistant.\n\n**\"On-device AI\" simply means that the \"brain\" or the \"thinking part\" of that assistant is actually *inside* the device itself, not constantly needing to talk to the internet.**\n\nHere is a breakdown using simple analogies:\n\n---\n\n### 🧠 The Old Way (Cloud AI) vs. The New Way (On-Device AI)\n\n**1. The Old Way (Cloud AI - Like sending a text to a friend):**\n* **What happens:** You ask your phone"
+      },
+      {
+       "regime": "warm",
+       "prompt_tokens": 20,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 18.71538455104951,
+       "prefill_tps": 75.29043284963778,
+       "ttft_ms": 266.09029999235645,
+       "text_sha256": "dd560bb150802430c2375464d71c99153dab3b6492ffccb73329fd26ce407f0f",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "Imagine your smartphone or a smart device (like a smart speaker or fitness tracker) is like a very smart assistant.\n\n**\"On-device AI\" simply means that the \"brain\" or the \"thinking part\" of that assistant is actually *inside* the device itself, not constantly needing to talk to the internet.**\n\nHere is a breakdown using simple analogies:\n\n---\n\n### 🧠 The Old Way (Cloud AI) vs. The New Way (On-Device AI)\n\n**1. The Old Way (Cloud AI - Like sending a text to a friend):**\n* **What happens:** You ask your phone"
+      }
+     ],
+     "load_s": 12.811300400004257,
+     "versions": {
+      "python": "3.12.10",
+      "onnxruntime-genai": "0.19.0",
+      "onnxruntime": "1.31.1",
+      "onnxruntime-ep-openvino": "1.8.1",
+      "onnxruntime-ep-webgpu": "0.5.0",
+      "numpy": "2.5.4"
+     }
+    },
+    {
+     "run": 3,
+     "status": "OK",
+     "counted": true,
+     "why": "",
+     "exit_code": 0,
+     "timed_out": false,
+     "elapsed_s": 33.957,
+     "suspended_s": 0,
+     "gate": {
+      "quietGate": "quiet",
+      "cpuReads": [
+       1.1,
+       0.3,
+       0.4
+      ],
+      "nvidiaMiB": 0,
+      "availGB": 24.6,
+      "ramNeedGB": 10.1,
+      "gpuEngines": null
+     },
+     "before": {
+      "load": {
+       "cpu": 6.4,
+       "build_ms": 0,
+       "top": [
+        "System 4 0.48 core",
+        "taskhostw 28196 0.22 core",
+        "MsMpEng 5548 0.08 core",
+        "svchost 1628 0.06 core",
+        "services 1472 0.03 core"
+       ]
+      },
+      "nvidia": "P0, 300 MHz, 14001 MHz, 17.55 W, 0 %, 0 MiB, 45",
+      "availGB": 24.5
+     },
+     "start": "2026-11-08T20:19:25.2139794+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 2730,
+       "dedicated": 7528
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 23,
+       "dedicated": 0
+      },
+      "0x00000000_0x00012BB8 (?)": {
+       "shared": 0,
+       "dedicated": 0
+      },
+      "0x00000000_0x00013E4C (npu?)": {
+       "shared": 0,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": "nvidia",
+     "peak_working_set_mb": 5734,
+     "gens": [
+      {
+       "regime": "cold",
+       "prompt_tokens": 20,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 17.32147974937308,
+       "prefill_tps": 20.606127170020955,
+       "ttft_ms": 970.9406000038143,
+       "text_sha256": "dd560bb150802430c2375464d71c99153dab3b6492ffccb73329fd26ce407f0f",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "Imagine your smartphone or a smart device (like a smart speaker or fitness tracker) is like a very smart assistant.\n\n**\"On-device AI\" simply means that the \"brain\" or the \"thinking part\" of that assistant is actually *inside* the device itself, not constantly needing to talk to the internet.**\n\nHere is a breakdown using simple analogies:\n\n---\n\n### 🧠 The Old Way (Cloud AI) vs. The New Way (On-Device AI)\n\n**1. The Old Way (Cloud AI - Like sending a text to a friend):**\n* **What happens:** You ask your phone"
+      },
+      {
+       "regime": "warm",
+       "prompt_tokens": 20,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 18.396002963609217,
+       "prefill_tps": 88.5209564526186,
+       "ttft_ms": 226.3342999794986,
+       "text_sha256": "dd560bb150802430c2375464d71c99153dab3b6492ffccb73329fd26ce407f0f",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "Imagine your smartphone or a smart device (like a smart speaker or fitness tracker) is like a very smart assistant.\n\n**\"On-device AI\" simply means that the \"brain\" or the \"thinking part\" of that assistant is actually *inside* the device itself, not constantly needing to talk to the internet.**\n\nHere is a breakdown using simple analogies:\n\n---\n\n### 🧠 The Old Way (Cloud AI) vs. The New Way (On-Device AI)\n\n**1. The Old Way (Cloud AI - Like sending a text to a friend):**\n* **What happens:** You ask your phone"
+      }
+     ],
+     "load_s": 13.294487999984995,
+     "versions": {
+      "python": "3.12.10",
+      "onnxruntime-genai": "0.19.0",
+      "onnxruntime": "1.31.1",
+      "onnxruntime-ep-openvino": "1.8.1",
+      "onnxruntime-ep-webgpu": "0.5.0",
+      "numpy": "2.5.4"
+     }
+    }
+   ],
+   "cold_n": 2,
+   "text_check": "6/6 PASS",
+   "host_env": [
+    {
+     "read": "2026-11-08T18:27:37.4700974+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "osCaption": "Microsoft Windows 11 Home",
+     "ramGB": 31.5,
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    }
+   ],
+   "cold_spread_pct": 0.26,
+   "decode_tps": 17.3,
+   "prefill_tps": 22.0,
+   "ttft_ms": 914.8,
+   "decode_tps_warm": 18.56,
+   "peak_working_set_mb": 5764,
+   "gpu_adapter_used": [
+    "nvidia"
+   ],
+   "generated_tokens": [
+    128
+   ],
+   "stop": [
+    "length"
+   ],
+   "same_cold_text": true,
+   "os_build": [
+    "26200.9711"
+   ],
+   "counts": true,
+   "unit_args": [
+    "--model-dir",
+    "{ROOT}\\overlays\\gemma-4-E4B-it_webgpu_a0",
+    "--ep",
+    "follow_config"
+   ],
+   "unit_note": "WebGPU EP 0.5.0 plugin, adapterIndex 0"
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+■ Downloading model (qwen3-4b-cuda-gpu:2, 2.6 GB)
+qwen3-4b-cuda-gpu:2: 0%
+qwen3-4b-cuda-gpu:2: 15%
+qwen3-4b-cuda-gpu:2: 25%
+qwen3-4b-cuda-gpu:2: 45%
+qwen3-4b-cuda-gpu:2: 50%
+qwen3-4b-cuda-gpu:2: 67%
+qwen3-4b-cuda-gpu:2: 75%
+qwen3-4b-cuda-gpu:2: 95%
+qwen3-4b-cuda-gpu:2: 96%
+qwen3-4b-cuda-gpu:2: 97%
+qwen3-4b-cuda-gpu:2: 99%
+● success: Downloaded 'qwen3-4b-cuda-gpu:2' to the local cache.

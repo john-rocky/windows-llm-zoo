@@ -1,0 +1,76 @@
+{
+ "runner": "run_foundry.py",
+ "started": "2026-11-08T19:49:59.420068+09:00",
+ "argv": [
+  "--model",
+  "gemma-4-e2b-it-cuda-gpu:3",
+  "--path",
+  "/v1",
+  "--prompt-file",
+  "C:\\src\\llmzoo-walk\\pc\\short-chat.txt",
+  "--out",
+  "C:\\src\\llmzoo-walk\\runs\\walk-timed-b\\gemma-4-E2B-it\\foundry_rtx_cuda\\run1.json"
+ ],
+ "prompt_sha256": "870aafb98e570e8fa1343ec051180237f4587233f49c0cc1391724e086d42d50",
+ "daemon_json": {
+  "pid": 2348,
+  "web_urls": [
+   "http://127.0.0.1:56092"
+  ],
+  "protocol_version": 3,
+  "daemon_version": "0.13.0",
+  "package_version": "0.13.0",
+  "sdk_version": "2.3.0",
+  "started_at": "2026-11-08T10:49:29.3192519+00:00",
+  "log_file": "C:\\Users\\USER\\.foundry\\logs\\foundrylocald-2026-11-08.log",
+  "sdk_package_version": "2.3.0",
+  "runtime_package_version": "2.3.0",
+  "ort_package_version": "1.31.0",
+  "ort_gen_ai_package_version": "0.18.0",
+  "native_runtime_version": null,
+  "native_ort_version": null,
+  "foundry_local_core_version": "2.3.0",
+  "ort_version": "1.31.0",
+  "ort_gen_ai_version": "0.18.0",
+  "foundry_local_runtime_version": "2.3.0"
+ },
+ "url": "http://127.0.0.1:56092/v1",
+ "gens": [
+  {
+   "prompt_tokens": 20,
+   "generated_tokens": 128,
+   "chunks": 128,
+   "delta_fields": {
+    "content": 128
+   },
+   "stop": "length",
+   "ttft_ms": 1574.2528999981005,
+   "prefill_tps": 12.704439039003283,
+   "decode_tps": 30.612058707081317,
+   "request_wall_s": 5.727250199997798,
+   "text": "Imagine a computer or a device (like your smartphone, a smart camera, or a smart speaker) that can **think and learn right there on itself, without needing to constantly send everything to a big, distant internet server.**\n\nThat's essentially what **on-device AI** means.\n\nHere’s a breakdown using simple analogies:\n\n---\n\n### The Traditional Way (Cloud AI)\n\nThink of this like asking a very smart, very powerful **consultant** (the cloud server) for every single question.\n\n* **You ask:** \"What is this picture?\"\n* **Your phone sends the picture** over",
+   "text_sha256": "72775321de91ea7dc14ffa341847c32f70120fd24753c4722d3f7d57c1f8964f",
+   "gen": 1,
+   "regime": "cold"
+  },
+  {
+   "prompt_tokens": 20,
+   "generated_tokens": 128,
+   "chunks": 128,
+   "delta_fields": {
+    "content": 128
+   },
+   "stop": "length",
+   "ttft_ms": 67.2869999834802,
+   "prefill_tps": 297.2342355122126,
+   "decode_tps": 39.18457939323626,
+   "request_wall_s": 3.309985100000631,
+   "text": "Imagine a computer or a device (like your smartphone, a smart camera, or a smart speaker) that can **think and learn right there on itself, without needing to constantly send everything to a big, distant internet server.**\n\nThat's essentially what **on-device AI** means.\n\nHere’s a breakdown using simple analogies:\n\n---\n\n### The Traditional Way (Cloud AI)\n\nThink of this like asking a very smart, very powerful **consultant** (the cloud server) for every single question.\n\n* **You ask:** \"What is this picture?\"\n* **Your phone sends the picture** over",
+   "text_sha256": "72775321de91ea7dc14ffa341847c32f70120fd24753c4722d3f7d57c1f8964f",
+   "gen": 2,
+   "regime": "warm"
+  }
+ ],
+ "status": "OK",
+ "ended": "2026-11-08T19:50:08.473340+09:00"
+}

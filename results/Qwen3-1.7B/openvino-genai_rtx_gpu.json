@@ -1,0 +1,1335 @@
+{
+ "model": "Qwen3-1.7B",
+ "cell": "openvino-genai_rtx_gpu",
+ "runtime": "openvino-genai",
+ "runtime_detail": "OpenVINO GenAI 2026.4.1 (Python, pc/run_ovgenai.py)",
+ "device": "rtx",
+ "device_name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+ "backend": "gpu",
+ "backend_detail": "OpenVINO GenAI 2026.4.1 on GPU.1 (CACHE_DIR) = the RTX as OpenVINO lists it, outside the GPU plugin's documented Intel GPUs (probe)",
+ "source": "windows-llm-zoo (Z2)",
+ "shelf": {
+  "repo": "OpenVINO/Qwen3-1.7B-int4-ov",
+  "folder": "",
+  "quant": "int4_asym g128 r0.8",
+  "quant_source": "the IR's rt_info (tools/ir_quant.py)"
+ },
+ "unit": {
+  "kind": "python",
+  "venv": "ovgenai",
+  "script": "run_ovgenai.py",
+  "args": [
+   "--model-dir",
+   "{ROOT}\\models\\OpenVINO__Qwen3-1.7B-int4-ov",
+   "--device",
+   "GPU.1",
+   "--cache-dir",
+   "{ROOT}\\ovcache\\Qwen3-1.7B_gpu1"
+  ],
+  "model_id": null,
+  "path": null,
+  "engines_gate": true
+ },
+ "workload": {
+  "task": "short-chat",
+  "prompt": "prompts/text/short-chat.txt of edge-llm-bench (pc/short-chat.txt)",
+  "chat_template": "the package's own, one user turn",
+  "output_budget_tokens": 128,
+  "sampling": "greedy",
+  "regime": "cold (first generation of a fresh engine process; Foundry: of a fresh daemon)",
+  "counting": "runs=3 per sitting; run 1 of a GPU or NPU cell is not counted; a text-check failure is not counted"
+ },
+ "status": "out",
+ "table": null,
+ "first_error": null,
+ "why_not_measured": "cold spread over 5 % in every timed sitting",
+ "sittings": [
+  {
+   "sitting": "walk-first",
+   "mode": "first",
+   "runs": [
+    {
+     "run": 1,
+     "status": "OK",
+     "counted": false,
+     "why": "first pass (untimed)",
+     "exit_code": 0,
+     "timed_out": false,
+     "elapsed_s": 72.258,
+     "suspended_s": 0,
+     "gate": null,
+     "before": {
+      "load": {
+       "cpu": 1.7,
+       "build_ms": 0,
+       "top": [
+        "System 4 0.17 core",
+        "powershell 31628 0.03 core",
+        "WUDFHost 9528 0.02 core",
+        "taskhostw 21056 0.02 core",
+        "msedge 15520 0.02 core"
+       ]
+      },
+      "nvidia": "P0, 0 MHz, 14001 MHz, 22.84 W, 0 %, 0 MiB, 53",
+      "availGB": 19.5
+     },
+     "start": "2026-11-07T23:49:34.1592509+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 1248,
+       "dedicated": 1464
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 25,
+       "dedicated": 0
+      },
+      "0x00000000_0x00013E4C (npu?)": {
+       "shared": 0,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": "nvidia",
+     "peak_working_set_mb": 2031,
+     "gens": [
+      {
+       "regime": "cold",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 6.539564133500268,
+       "prefill_tps": 39.951226279697345,
+       "ttft_ms": 475.57989501953125,
+       "text_sha256": "69b3d52eb6c1cccca401a102fe28721109f0b75cde6f9dacad441f369f23b00c",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "<think>\nOkay, the user is asking for a simple explanation of what on-device AI means. Let me start by recalling what I know about on-device AI. From what I remember, on-device AI refers to AI models that run on the device itself, rather than being sent to the cloud. So, the user might be confused about how AI works and the difference between on-device and cloud-based AI.\n\nFirst, I need to break down the key points. On-device AI means that the AI model is installed on the device, like a smartphone or a computer, instead of being stored in the cloud. This is important because it affects how"
+      },
+      {
+       "regime": "warm",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 5.369932605444824,
+       "prefill_tps": 48.62041888598771,
+       "ttft_ms": 390.7823181152344,
+       "text_sha256": "69b3d52eb6c1cccca401a102fe28721109f0b75cde6f9dacad441f369f23b00c",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "<think>\nOkay, the user is asking for a simple explanation of what on-device AI means. Let me start by recalling what I know about on-device AI. From what I remember, on-device AI refers to AI models that run on the device itself, rather than being sent to the cloud. So, the user might be confused about how AI works and the difference between on-device and cloud-based AI.\n\nFirst, I need to break down the key points. On-device AI means that the AI model is installed on the device, like a smartphone or a computer, instead of being stored in the cloud. This is important because it affects how"
+      }
+     ],
+     "load_s": 25.679732100004912,
+     "versions": {
+      "python": "3.12.10",
+      "openvino": "2026.4.1",
+      "openvino-genai": "2026.4.1.0",
+      "openvino-tokenizers": "2026.4.1.0",
+      "numpy": "2.5.4"
+     }
+    }
+   ],
+   "cold_n": 0,
+   "text_check": "2/2 PASS",
+   "host_env": [
+    {
+     "read": "2026-11-07T19:36:14.0602178+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    },
+    {
+     "read": "2026-11-07T23:47:21.5196137+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    },
+    {
+     "read": "2026-11-08T02:07:11.6245753+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    },
+    {
+     "read": "2026-11-08T03:03:36.6039915+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    },
+    {
+     "read": "2026-11-08T03:42:51.6052743+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    },
+    {
+     "read": "2026-11-08T04:40:06.6871579+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    }
+   ],
+   "counts": false,
+   "unit_args": [
+    "--model-dir",
+    "{ROOT}\\models\\OpenVINO__Qwen3-1.7B-int4-ov",
+    "--device",
+    "GPU.1",
+    "--cache-dir",
+    "{ROOT}\\ovcache\\Qwen3-1.7B_gpu1"
+   ],
+   "unit_note": "OpenVINO GenAI 2026.4.1 on GPU.1 (CACHE_DIR) = the RTX as OpenVINO lists it, outside the GPU plugin's documented Intel GPUs (probe)"
+  },
+  {
+   "sitting": "walk-timed",
+   "mode": "timed",
+   "runs": [
+    {
+     "run": 1,
+     "status": "OK",
+     "counted": false,
+     "why": "run 1 of a GPU / NPU cell (first process in the sitting)",
+     "exit_code": 0,
+     "timed_out": false,
+     "elapsed_s": 54.737,
+     "suspended_s": 0,
+     "gate": {
+      "quietGate": "quiet",
+      "cpuReads": [
+       3.2,
+       0.5,
+       0.6
+      ],
+      "nvidiaMiB": 0,
+      "availGB": 5.1,
+      "ramNeedGB": 3.4,
+      "gpuEngines": 0
+     },
+     "before": {
+      "load": {
+       "cpu": 0.3,
+       "build_ms": 0,
+       "top": [
+        "System 4 0.02 core",
+        "svchost 5260 0.02 core",
+        "powershell 25860 0.02 core"
+       ]
+      },
+      "nvidia": "P0, 2287 MHz, 14001 MHz, 19.37 W, 0 %, 0 MiB, 57",
+      "availGB": 5
+     },
+     "start": "2026-11-08T08:37:00.4720181+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 1248,
+       "dedicated": 1452
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 25,
+       "dedicated": 0
+      },
+      "0x00000000_0x00013E4C (npu?)": {
+       "shared": 0,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": "nvidia",
+     "peak_working_set_mb": 1923,
+     "gens": [
+      {
+       "regime": "cold",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 9.697201423122312,
+       "prefill_tps": 40.802676155169344,
+       "ttft_ms": 465.6557312011719,
+       "text_sha256": "69b3d52eb6c1cccca401a102fe28721109f0b75cde6f9dacad441f369f23b00c",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "<think>\nOkay, the user is asking for a simple explanation of what on-device AI means. Let me start by recalling what I know about on-device AI. From what I remember, on-device AI refers to AI models that run on the device itself, rather than being sent to the cloud. So, the user might be confused about how AI works and the difference between on-device and cloud-based AI.\n\nFirst, I need to break down the key points. On-device AI means that the AI model is installed on the device, like a smartphone or a computer, instead of being stored in the cloud. This is important because it affects how"
+      },
+      {
+       "regime": "warm",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 6.359654081242213,
+       "prefill_tps": 40.07856942516898,
+       "ttft_ms": 474.0688171386719,
+       "text_sha256": "69b3d52eb6c1cccca401a102fe28721109f0b75cde6f9dacad441f369f23b00c",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "<think>\nOkay, the user is asking for a simple explanation of what on-device AI means. Let me start by recalling what I know about on-device AI. From what I remember, on-device AI refers to AI models that run on the device itself, rather than being sent to the cloud. So, the user might be confused about how AI works and the difference between on-device and cloud-based AI.\n\nFirst, I need to break down the key points. On-device AI means that the AI model is installed on the device, like a smartphone or a computer, instead of being stored in the cloud. This is important because it affects how"
+      }
+     ],
+     "load_s": 17.741061499982607,
+     "versions": {
+      "python": "3.12.10",
+      "openvino": "2026.4.1",
+      "openvino-genai": "2026.4.1.0",
+      "openvino-tokenizers": "2026.4.1.0",
+      "numpy": "2.5.4"
+     }
+    },
+    {
+     "run": 2,
+     "status": "OK",
+     "counted": true,
+     "why": "",
+     "exit_code": 0,
+     "timed_out": false,
+     "elapsed_s": 52.48,
+     "suspended_s": 0,
+     "gate": {
+      "quietGate": "quiet",
+      "cpuReads": [
+       0.9,
+       0.7,
+       0.4
+      ],
+      "nvidiaMiB": 0,
+      "availGB": 4.8,
+      "ramNeedGB": 3.4,
+      "gpuEngines": 0
+     },
+     "before": {
+      "load": {
+       "cpu": 2.6,
+       "build_ms": 0,
+       "top": [
+        "System 4 0.2 core",
+        "svchost 5480 0.08 core",
+        "svchost 5260 0.02 core",
+        "WmiPrvSE 7560 0.02 core",
+        "WUDFHost 1836 0.02 core"
+       ]
+      },
+      "nvidia": "P0, 172 MHz, 14001 MHz, 18.28 W, 0 %, 0 MiB, 51",
+      "availGB": 4.8
+     },
+     "start": "2026-11-08T08:38:34.8704548+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 1248,
+       "dedicated": 1452
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 25,
+       "dedicated": 0
+      },
+      "0x00000000_0x00013E4C (npu?)": {
+       "shared": 0,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": "nvidia",
+     "peak_working_set_mb": 1926,
+     "gens": [
+      {
+       "regime": "cold",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 8.885710169735693,
+       "prefill_tps": 48.998735822667946,
+       "ttft_ms": 387.7651062011719,
+       "text_sha256": "69b3d52eb6c1cccca401a102fe28721109f0b75cde6f9dacad441f369f23b00c",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "<think>\nOkay, the user is asking for a simple explanation of what on-device AI means. Let me start by recalling what I know about on-device AI. From what I remember, on-device AI refers to AI models that run on the device itself, rather than being sent to the cloud. So, the user might be confused about how AI works and the difference between on-device and cloud-based AI.\n\nFirst, I need to break down the key points. On-device AI means that the AI model is installed on the device, like a smartphone or a computer, instead of being stored in the cloud. This is important because it affects how"
+      },
+      {
+       "regime": "warm",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 6.545241072626149,
+       "prefill_tps": 41.43065772313717,
+       "ttft_ms": 458.59759521484375,
+       "text_sha256": "69b3d52eb6c1cccca401a102fe28721109f0b75cde6f9dacad441f369f23b00c",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "<think>\nOkay, the user is asking for a simple explanation of what on-device AI means. Let me start by recalling what I know about on-device AI. From what I remember, on-device AI refers to AI models that run on the device itself, rather than being sent to the cloud. So, the user might be confused about how AI works and the difference between on-device and cloud-based AI.\n\nFirst, I need to break down the key points. On-device AI means that the AI model is installed on the device, like a smartphone or a computer, instead of being stored in the cloud. This is important because it affects how"
+      }
+     ],
+     "load_s": 15.061942999978783,
+     "versions": {
+      "python": "3.12.10",
+      "openvino": "2026.4.1",
+      "openvino-genai": "2026.4.1.0",
+      "openvino-tokenizers": "2026.4.1.0",
+      "numpy": "2.5.4"
+     }
+    },
+    {
+     "run": 3,
+     "status": "OK",
+     "counted": true,
+     "why": "",
+     "exit_code": 0,
+     "timed_out": false,
+     "elapsed_s": 54.958,
+     "suspended_s": 0,
+     "gate": {
+      "quietGate": "quiet",
+      "cpuReads": [
+       1.6,
+       0.3,
+       0.9
+      ],
+      "nvidiaMiB": 0,
+      "availGB": 4.9,
+      "ramNeedGB": 3.4,
+      "gpuEngines": 0
+     },
+     "before": {
+      "load": {
+       "cpu": 0.8,
+       "build_ms": 0,
+       "top": [
+        "svchost 5480 0.06 core",
+        "powershell 25860 0.03 core",
+        "WmiPrvSE 7560 0.02 core",
+        "MsMpEng 5548 0.02 core"
+       ]
+      },
+      "nvidia": "P0, 420 MHz, 14001 MHz, 18.06 W, 0 %, 0 MiB, 50",
+      "availGB": 4.9
+     },
+     "start": "2026-11-08T08:40:07.6387136+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 1248,
+       "dedicated": 1452
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 25,
+       "dedicated": 0
+      },
+      "0x00000000_0x00013E4C (npu?)": {
+       "shared": 0,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": "nvidia",
+     "peak_working_set_mb": 1924,
+     "gens": [
+      {
+       "regime": "cold",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 8.048514602884907,
+       "prefill_tps": 47.26408345064734,
+       "ttft_ms": 401.99658203125,
+       "text_sha256": "69b3d52eb6c1cccca401a102fe28721109f0b75cde6f9dacad441f369f23b00c",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "<think>\nOkay, the user is asking for a simple explanation of what on-device AI means. Let me start by recalling what I know about on-device AI. From what I remember, on-device AI refers to AI models that run on the device itself, rather than being sent to the cloud. So, the user might be confused about how AI works and the difference between on-device and cloud-based AI.\n\nFirst, I need to break down the key points. On-device AI means that the AI model is installed on the device, like a smartphone or a computer, instead of being stored in the cloud. This is important because it affects how"
+      },
+      {
+       "regime": "warm",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 6.155850782237154,
+       "prefill_tps": 39.076921705751516,
+       "ttft_ms": 486.2204895019531,
+       "text_sha256": "69b3d52eb6c1cccca401a102fe28721109f0b75cde6f9dacad441f369f23b00c",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "<think>\nOkay, the user is asking for a simple explanation of what on-device AI means. Let me start by recalling what I know about on-device AI. From what I remember, on-device AI refers to AI models that run on the device itself, rather than being sent to the cloud. So, the user might be confused about how AI works and the difference between on-device and cloud-based AI.\n\nFirst, I need to break down the key points. On-device AI means that the AI model is installed on the device, like a smartphone or a computer, instead of being stored in the cloud. This is important because it affects how"
+      }
+     ],
+     "load_s": 14.864649899973301,
+     "versions": {
+      "python": "3.12.10",
+      "openvino": "2026.4.1",
+      "openvino-genai": "2026.4.1.0",
+      "openvino-tokenizers": "2026.4.1.0",
+      "numpy": "2.5.4"
+     }
+    }
+   ],
+   "cold_n": 2,
+   "text_check": "6/6 PASS",
+   "host_env": [
+    {
+     "read": "2026-11-08T07:40:42.2173137+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    }
+   ],
+   "cold_spread_pct": 9.89,
+   "decode_tps": 8.47,
+   "prefill_tps": 48.1,
+   "ttft_ms": 394.9,
+   "decode_tps_warm": 6.35,
+   "peak_working_set_mb": 1925,
+   "gpu_adapter_used": [
+    "nvidia"
+   ],
+   "generated_tokens": [
+    128
+   ],
+   "stop": [
+    "length"
+   ],
+   "same_cold_text": true,
+   "os_build": [
+    "26200.9711"
+   ],
+   "counts": false,
+   "unit_args": [
+    "--model-dir",
+    "{ROOT}\\models\\OpenVINO__Qwen3-1.7B-int4-ov",
+    "--device",
+    "GPU.1",
+    "--cache-dir",
+    "{ROOT}\\ovcache\\Qwen3-1.7B_gpu1"
+   ],
+   "unit_note": "OpenVINO GenAI 2026.4.1 on GPU.1 (CACHE_DIR) = the RTX as OpenVINO lists it, outside the GPU plugin's documented Intel GPUs (probe)"
+  },
+  {
+   "sitting": "walk-timed-b",
+   "mode": "timed",
+   "runs": [
+    {
+     "run": 1,
+     "status": "OK",
+     "counted": false,
+     "why": "run 1 of a GPU / NPU cell (first process in the sitting)",
+     "exit_code": 0,
+     "timed_out": false,
+     "elapsed_s": 59.242,
+     "suspended_s": 0,
+     "gate": {
+      "quietGate": "quiet",
+      "cpuReads": [
+       2.3,
+       0.7,
+       0.3
+      ],
+      "nvidiaMiB": 0,
+      "availGB": 18.4,
+      "ramNeedGB": 3.4,
+      "gpuEngines": 0
+     },
+     "before": {
+      "load": {
+       "cpu": 0.5,
+       "build_ms": 0,
+       "top": [
+        "System 4 0.03 core",
+        "powershell 20844 0.02 core",
+        "svchost 1628 0.02 core",
+        "SearchIndexer 9480 0.02 core"
+       ]
+      },
+      "nvidia": "P0, 1552 MHz, 14001 MHz, 18.17 W, 0 %, 0 MiB, 50",
+      "availGB": 18.4
+     },
+     "start": "2026-11-08T18:40:41.0543174+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 1248,
+       "dedicated": 1454
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 25,
+       "dedicated": 0
+      },
+      "0x00000000_0x00013E4C (npu?)": {
+       "shared": 0,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": "nvidia",
+     "peak_working_set_mb": 1957,
+     "gens": [
+      {
+       "regime": "cold",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 10.115066287516314,
+       "prefill_tps": 40.44918270616046,
+       "ttft_ms": 469.7251892089844,
+       "text_sha256": "69b3d52eb6c1cccca401a102fe28721109f0b75cde6f9dacad441f369f23b00c",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "<think>\nOkay, the user is asking for a simple explanation of what on-device AI means. Let me start by recalling what I know about on-device AI. From what I remember, on-device AI refers to AI models that run on the device itself, rather than being sent to the cloud. So, the user might be confused about how AI works and the difference between on-device and cloud-based AI.\n\nFirst, I need to break down the key points. On-device AI means that the AI model is installed on the device, like a smartphone or a computer, instead of being stored in the cloud. This is important because it affects how"
+      },
+      {
+       "regime": "warm",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 6.306845308008691,
+       "prefill_tps": 50.368982210686305,
+       "ttft_ms": 377.2162780761719,
+       "text_sha256": "69b3d52eb6c1cccca401a102fe28721109f0b75cde6f9dacad441f369f23b00c",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "<think>\nOkay, the user is asking for a simple explanation of what on-device AI means. Let me start by recalling what I know about on-device AI. From what I remember, on-device AI refers to AI models that run on the device itself, rather than being sent to the cloud. So, the user might be confused about how AI works and the difference between on-device and cloud-based AI.\n\nFirst, I need to break down the key points. On-device AI means that the AI model is installed on the device, like a smartphone or a computer, instead of being stored in the cloud. This is important because it affects how"
+      }
+     ],
+     "load_s": 23.201591099990765,
+     "versions": {
+      "python": "3.12.10",
+      "openvino": "2026.4.1",
+      "openvino-genai": "2026.4.1.0",
+      "openvino-tokenizers": "2026.4.1.0",
+      "numpy": "2.5.4"
+     }
+    },
+    {
+     "run": 2,
+     "status": "OK",
+     "counted": true,
+     "why": "",
+     "exit_code": 0,
+     "timed_out": false,
+     "elapsed_s": 52.283,
+     "suspended_s": 0,
+     "gate": {
+      "quietGate": "quiet",
+      "cpuReads": [
+       2.2,
+       0.8,
+       0.3
+      ],
+      "nvidiaMiB": 0,
+      "availGB": 18.4,
+      "ramNeedGB": 3.4,
+      "gpuEngines": 0
+     },
+     "before": {
+      "load": {
+       "cpu": 0.6,
+       "build_ms": 0,
+       "top": [
+        "powershell 20844 0.02 core",
+        "svchost 5260 0.02 core",
+        "WmiPrvSE 7560 0.02 core",
+        "MsMpEng 5548 0.02 core",
+        "NVDisplay.Container 3412 0.02 core"
+       ]
+      },
+      "nvidia": "P0, 420 MHz, 14001 MHz, 19.06 W, 0 %, 0 MiB, 55",
+      "availGB": 18.4
+     },
+     "start": "2026-11-08T18:42:20.4799808+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 1248,
+       "dedicated": 1454
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 25,
+       "dedicated": 0
+      },
+      "0x00000000_0x00013E4C (npu?)": {
+       "shared": 0,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": "nvidia",
+     "peak_working_set_mb": 1928,
+     "gens": [
+      {
+       "regime": "cold",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 8.816601082971783,
+       "prefill_tps": 45.82341375423703,
+       "ttft_ms": 414.63519287109375,
+       "text_sha256": "69b3d52eb6c1cccca401a102fe28721109f0b75cde6f9dacad441f369f23b00c",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "<think>\nOkay, the user is asking for a simple explanation of what on-device AI means. Let me start by recalling what I know about on-device AI. From what I remember, on-device AI refers to AI models that run on the device itself, rather than being sent to the cloud. So, the user might be confused about how AI works and the difference between on-device and cloud-based AI.\n\nFirst, I need to break down the key points. On-device AI means that the AI model is installed on the device, like a smartphone or a computer, instead of being stored in the cloud. This is important because it affects how"
+      },
+      {
+       "regime": "warm",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 6.595152759964154,
+       "prefill_tps": 37.418047053348026,
+       "ttft_ms": 507.7763671875,
+       "text_sha256": "69b3d52eb6c1cccca401a102fe28721109f0b75cde6f9dacad441f369f23b00c",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "<think>\nOkay, the user is asking for a simple explanation of what on-device AI means. Let me start by recalling what I know about on-device AI. From what I remember, on-device AI refers to AI models that run on the device itself, rather than being sent to the cloud. So, the user might be confused about how AI works and the difference between on-device and cloud-based AI.\n\nFirst, I need to break down the key points. On-device AI means that the AI model is installed on the device, like a smartphone or a computer, instead of being stored in the cloud. This is important because it affects how"
+      }
+     ],
+     "load_s": 15.061719600023935,
+     "versions": {
+      "python": "3.12.10",
+      "openvino": "2026.4.1",
+      "openvino-genai": "2026.4.1.0",
+      "openvino-tokenizers": "2026.4.1.0",
+      "numpy": "2.5.4"
+     }
+    },
+    {
+     "run": 3,
+     "status": "OK",
+     "counted": true,
+     "why": "",
+     "exit_code": 0,
+     "timed_out": false,
+     "elapsed_s": 59.089,
+     "suspended_s": 0,
+     "gate": {
+      "quietGate": "quiet",
+      "cpuReads": [
+       0.6,
+       0.1,
+       0.5
+      ],
+      "nvidiaMiB": 0,
+      "availGB": 18.4,
+      "ramNeedGB": 3.4,
+      "gpuEngines": 0
+     },
+     "before": {
+      "load": {
+       "cpu": 1.4,
+       "build_ms": 0,
+       "top": [
+        "svchost 5480 0.12 core",
+        "System 4 0.06 core",
+        "WmiPrvSE 7560 0.02 core",
+        "powershell 16780 0.02 core",
+        "LEDKeeper2 8936 0.02 core"
+       ]
+      },
+      "nvidia": "P0, 997 MHz, 14001 MHz, 18.41 W, 0 %, 0 MiB, 51",
+      "availGB": 18.4
+     },
+     "start": "2026-11-08T18:43:52.6293042+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 1248,
+       "dedicated": 1454
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 25,
+       "dedicated": 0
+      },
+      "0x00000000_0x00013E4C (npu?)": {
+       "shared": 0,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": "nvidia",
+     "peak_working_set_mb": 1923,
+     "gens": [
+      {
+       "regime": "cold",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 8.3663575048886,
+       "prefill_tps": 47.34388351521218,
+       "ttft_ms": 401.3190002441406,
+       "text_sha256": "69b3d52eb6c1cccca401a102fe28721109f0b75cde6f9dacad441f369f23b00c",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "<think>\nOkay, the user is asking for a simple explanation of what on-device AI means. Let me start by recalling what I know about on-device AI. From what I remember, on-device AI refers to AI models that run on the device itself, rather than being sent to the cloud. So, the user might be confused about how AI works and the difference between on-device and cloud-based AI.\n\nFirst, I need to break down the key points. On-device AI means that the AI model is installed on the device, like a smartphone or a computer, instead of being stored in the cloud. This is important because it affects how"
+      },
+      {
+       "regime": "warm",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 5.011683042554111,
+       "prefill_tps": 35.949280491253866,
+       "ttft_ms": 528.5223999023438,
+       "text_sha256": "69b3d52eb6c1cccca401a102fe28721109f0b75cde6f9dacad441f369f23b00c",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "<think>\nOkay, the user is asking for a simple explanation of what on-device AI means. Let me start by recalling what I know about on-device AI. From what I remember, on-device AI refers to AI models that run on the device itself, rather than being sent to the cloud. So, the user might be confused about how AI works and the difference between on-device and cloud-based AI.\n\nFirst, I need to break down the key points. On-device AI means that the AI model is installed on the device, like a smartphone or a computer, instead of being stored in the cloud. This is important because it affects how"
+      }
+     ],
+     "load_s": 15.08260120000341,
+     "versions": {
+      "python": "3.12.10",
+      "openvino": "2026.4.1",
+      "openvino-genai": "2026.4.1.0",
+      "openvino-tokenizers": "2026.4.1.0",
+      "numpy": "2.5.4"
+     }
+    }
+   ],
+   "cold_n": 2,
+   "text_check": "6/6 PASS",
+   "host_env": [
+    {
+     "read": "2026-11-08T18:27:37.4700974+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "osCaption": "Microsoft Windows 11 Home",
+     "ramGB": 31.5,
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    }
+   ],
+   "cold_spread_pct": 5.24,
+   "decode_tps": 8.59,
+   "prefill_tps": 46.6,
+   "ttft_ms": 408.0,
+   "decode_tps_warm": 5.8,
+   "peak_working_set_mb": 1925,
+   "gpu_adapter_used": [
+    "nvidia"
+   ],
+   "generated_tokens": [
+    128
+   ],
+   "stop": [
+    "length"
+   ],
+   "same_cold_text": true,
+   "os_build": [
+    "26200.9711"
+   ],
+   "counts": false,
+   "unit_args": [
+    "--model-dir",
+    "{ROOT}\\models\\OpenVINO__Qwen3-1.7B-int4-ov",
+    "--device",
+    "GPU.1",
+    "--cache-dir",
+    "{ROOT}\\ovcache\\Qwen3-1.7B_gpu1"
+   ],
+   "unit_note": "OpenVINO GenAI 2026.4.1 on GPU.1 (CACHE_DIR) = the RTX as OpenVINO lists it, outside the GPU plugin's documented Intel GPUs (probe); rerun: cold spread 9.89 % in walk-timed"
+  },
+  {
+   "sitting": "walk-timed-b-rerun",
+   "mode": "timed",
+   "runs": [
+    {
+     "run": 1,
+     "status": "OK",
+     "counted": false,
+     "why": "run 1 of a GPU / NPU cell (first process in the sitting)",
+     "exit_code": 0,
+     "timed_out": false,
+     "elapsed_s": 51.602,
+     "suspended_s": 0,
+     "gate": {
+      "quietGate": "quiet",
+      "cpuReads": [
+       2.6,
+       0.9,
+       0.8
+      ],
+      "nvidiaMiB": 0,
+      "availGB": 25,
+      "ramNeedGB": 3.4,
+      "gpuEngines": 0
+     },
+     "before": {
+      "load": {
+       "cpu": 1.3,
+       "build_ms": 0,
+       "top": [
+        "System 4 0.17 core",
+        "MsiTrueColor 13352 0.02 core",
+        "svchost 5260 0.02 core",
+        "powershell 25684 0.02 core"
+       ]
+      },
+      "nvidia": "P0, 1882 MHz, 14001 MHz, 18.39 W, 0 %, 0 MiB, 52",
+      "availGB": 25
+     },
+     "start": "2026-11-09T08:21:56.6638541+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 1248,
+       "dedicated": 1454
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 25,
+       "dedicated": 0
+      },
+      "0x00000000_0x00013E4C (npu?)": {
+       "shared": 0,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": "nvidia",
+     "peak_working_set_mb": 1924,
+     "gens": [
+      {
+       "regime": "cold",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 9.931778128659385,
+       "prefill_tps": 31.53960540842794,
+       "ttft_ms": 602.4171752929688,
+       "text_sha256": "69b3d52eb6c1cccca401a102fe28721109f0b75cde6f9dacad441f369f23b00c",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "<think>\nOkay, the user is asking for a simple explanation of what on-device AI means. Let me start by recalling what I know about on-device AI. From what I remember, on-device AI refers to AI models that run on the device itself, rather than being sent to the cloud. So, the user might be confused about how AI works and the difference between on-device and cloud-based AI.\n\nFirst, I need to break down the key points. On-device AI means that the AI model is installed on the device, like a smartphone or a computer, instead of being stored in the cloud. This is important because it affects how"
+      },
+      {
+       "regime": "warm",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 7.518023306835865,
+       "prefill_tps": 50.96731909930274,
+       "ttft_ms": 372.78790283203125,
+       "text_sha256": "69b3d52eb6c1cccca401a102fe28721109f0b75cde6f9dacad441f369f23b00c",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "<think>\nOkay, the user is asking for a simple explanation of what on-device AI means. Let me start by recalling what I know about on-device AI. From what I remember, on-device AI refers to AI models that run on the device itself, rather than being sent to the cloud. So, the user might be confused about how AI works and the difference between on-device and cloud-based AI.\n\nFirst, I need to break down the key points. On-device AI means that the AI model is installed on the device, like a smartphone or a computer, instead of being stored in the cloud. This is important because it affects how"
+      }
+     ],
+     "load_s": 18.128854299982777,
+     "versions": {
+      "python": "3.12.10",
+      "openvino": "2026.4.1",
+      "openvino-genai": "2026.4.1.0",
+      "openvino-tokenizers": "2026.4.1.0",
+      "numpy": "2.5.4"
+     }
+    },
+    {
+     "run": 2,
+     "status": "OK",
+     "counted": true,
+     "why": "",
+     "exit_code": 0,
+     "timed_out": false,
+     "elapsed_s": 60.492,
+     "suspended_s": 0,
+     "gate": {
+      "quietGate": "quiet",
+      "cpuReads": [
+       0.6,
+       0.7,
+       0.4
+      ],
+      "nvidiaMiB": 0,
+      "availGB": 25,
+      "ramNeedGB": 3.4,
+      "gpuEngines": 0
+     },
+     "before": {
+      "load": {
+       "cpu": 0.9,
+       "build_ms": 0,
+       "top": [
+        "svchost 5480 0.06 core",
+        "svchost 5260 0.03 core",
+        "System 4 0.02 core",
+        "MsMpEng 5548 0.02 core",
+        "conhost 35168 0.02 core"
+       ]
+      },
+      "nvidia": "P0, 412 MHz, 14001 MHz, 18.00 W, 0 %, 0 MiB, 49",
+      "availGB": 25
+     },
+     "start": "2026-11-09T08:23:28.6498473+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 1248,
+       "dedicated": 1454
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 25,
+       "dedicated": 0
+      },
+      "0x00000000_0x00013E4C (npu?)": {
+       "shared": 0,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": "nvidia",
+     "peak_working_set_mb": 1926,
+     "gens": [
+      {
+       "regime": "cold",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 9.180748865066764,
+       "prefill_tps": 39.703013054844945,
+       "ttft_ms": 478.5531005859375,
+       "text_sha256": "69b3d52eb6c1cccca401a102fe28721109f0b75cde6f9dacad441f369f23b00c",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "<think>\nOkay, the user is asking for a simple explanation of what on-device AI means. Let me start by recalling what I know about on-device AI. From what I remember, on-device AI refers to AI models that run on the device itself, rather than being sent to the cloud. So, the user might be confused about how AI works and the difference between on-device and cloud-based AI.\n\nFirst, I need to break down the key points. On-device AI means that the AI model is installed on the device, like a smartphone or a computer, instead of being stored in the cloud. This is important because it affects how"
+      },
+      {
+       "regime": "warm",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 4.490991394436518,
+       "prefill_tps": 35.8172466228033,
+       "ttft_ms": 530.470703125,
+       "text_sha256": "69b3d52eb6c1cccca401a102fe28721109f0b75cde6f9dacad441f369f23b00c",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "<think>\nOkay, the user is asking for a simple explanation of what on-device AI means. Let me start by recalling what I know about on-device AI. From what I remember, on-device AI refers to AI models that run on the device itself, rather than being sent to the cloud. So, the user might be confused about how AI works and the difference between on-device and cloud-based AI.\n\nFirst, I need to break down the key points. On-device AI means that the AI model is installed on the device, like a smartphone or a computer, instead of being stored in the cloud. This is important because it affects how"
+      }
+     ],
+     "load_s": 14.622721700026887,
+     "versions": {
+      "python": "3.12.10",
+      "openvino": "2026.4.1",
+      "openvino-genai": "2026.4.1.0",
+      "openvino-tokenizers": "2026.4.1.0",
+      "numpy": "2.5.4"
+     }
+    },
+    {
+     "run": 3,
+     "status": "OK",
+     "counted": true,
+     "why": "",
+     "exit_code": 0,
+     "timed_out": false,
+     "elapsed_s": 57.044,
+     "suspended_s": 0,
+     "gate": {
+      "quietGate": "quiet",
+      "cpuReads": [
+       2.9,
+       0.8,
+       0.9
+      ],
+      "nvidiaMiB": 0,
+      "availGB": 25,
+      "ramNeedGB": 3.4,
+      "gpuEngines": 0
+     },
+     "before": {
+      "load": {
+       "cpu": 5.4,
+       "build_ms": 0,
+       "top": [
+        "System 4 0.72 core",
+        "svchost 5480 0.06 core",
+        "NVDisplay.Container 3412 0.03 core",
+        "MsMpEng 5548 0.02 core",
+        "powershell 21940 0.02 core"
+       ]
+      },
+      "nvidia": "P0, 1147 MHz, 14001 MHz, 17.80 W, 0 %, 0 MiB, 48",
+      "availGB": 25
+     },
+     "start": "2026-11-09T08:25:09.4394302+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 1248,
+       "dedicated": 1454
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 25,
+       "dedicated": 0
+      },
+      "0x00000000_0x00013E4C (npu?)": {
+       "shared": 0,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": "nvidia",
+     "peak_working_set_mb": 1923,
+     "gens": [
+      {
+       "regime": "cold",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 7.96293425184432,
+       "prefill_tps": 48.05806192452704,
+       "ttft_ms": 395.3551025390625,
+       "text_sha256": "69b3d52eb6c1cccca401a102fe28721109f0b75cde6f9dacad441f369f23b00c",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "<think>\nOkay, the user is asking for a simple explanation of what on-device AI means. Let me start by recalling what I know about on-device AI. From what I remember, on-device AI refers to AI models that run on the device itself, rather than being sent to the cloud. So, the user might be confused about how AI works and the difference between on-device and cloud-based AI.\n\nFirst, I need to break down the key points. On-device AI means that the AI model is installed on the device, like a smartphone or a computer, instead of being stored in the cloud. This is important because it affects how"
+      },
+      {
+       "regime": "warm",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 5.527261588348894,
+       "prefill_tps": 45.39637575353228,
+       "ttft_ms": 418.5356140136719,
+       "text_sha256": "69b3d52eb6c1cccca401a102fe28721109f0b75cde6f9dacad441f369f23b00c",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "<think>\nOkay, the user is asking for a simple explanation of what on-device AI means. Let me start by recalling what I know about on-device AI. From what I remember, on-device AI refers to AI models that run on the device itself, rather than being sent to the cloud. So, the user might be confused about how AI works and the difference between on-device and cloud-based AI.\n\nFirst, I need to break down the key points. On-device AI means that the AI model is installed on the device, like a smartphone or a computer, instead of being stored in the cloud. This is important because it affects how"
+      }
+     ],
+     "load_s": 14.44461790000787,
+     "versions": {
+      "python": "3.12.10",
+      "openvino": "2026.4.1",
+      "openvino-genai": "2026.4.1.0",
+      "openvino-tokenizers": "2026.4.1.0",
+      "numpy": "2.5.4"
+     }
+    }
+   ],
+   "cold_n": 2,
+   "text_check": "6/6 PASS",
+   "host_env": [
+    {
+     "read": "2026-11-09T04:31:48.4055690+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "osCaption": "Microsoft Windows 11 Home",
+     "ramGB": 31.5,
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    }
+   ],
+   "cold_spread_pct": 14.21,
+   "decode_tps": 8.57,
+   "prefill_tps": 43.9,
+   "ttft_ms": 437.0,
+   "decode_tps_warm": 5.01,
+   "peak_working_set_mb": 1924,
+   "gpu_adapter_used": [
+    "nvidia"
+   ],
+   "generated_tokens": [
+    128
+   ],
+   "stop": [
+    "length"
+   ],
+   "same_cold_text": true,
+   "os_build": [
+    "26200.9711"
+   ],
+   "counts": false,
+   "unit_args": [
+    "--model-dir",
+    "{ROOT}\\models\\OpenVINO__Qwen3-1.7B-int4-ov",
+    "--device",
+    "GPU.1",
+    "--cache-dir",
+    "{ROOT}\\ovcache\\Qwen3-1.7B_gpu1"
+   ],
+   "unit_note": "OpenVINO GenAI 2026.4.1 on GPU.1 (CACHE_DIR) = the RTX as OpenVINO lists it, outside the GPU plugin's documented Intel GPUs (probe); rerun: cold spread 9.89 % in walk-timed; rerun: cold spread 5.24 % in walk-timed-b"
+  }
+ ]
+}

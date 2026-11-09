@@ -1,0 +1,3 @@
+ENGINE_PID 27732
+[ERROR] 16:07:23.011 [IE::FrontEnd::importNetwork]   Upper bounds are not specified for node 'decoder/model/layers.0/self_attn/v_proj/MatMul_node_109_Q4' (type 'MatMul'): input '0' bounds are '[9223372036854775807, 9223372036854775807, 2560]'
+[ERROR] 16:07:23.054 [IE::FrontEnd::importNetwork]   Upper bounds are not specified for node 'decoder/model/layers.0/self_attn/v_proj/MatMul_node_109_Q4' (type 'MatMul'): input '0' bounds are '[9223372036854775807, 9223372036854775807, 2560]'

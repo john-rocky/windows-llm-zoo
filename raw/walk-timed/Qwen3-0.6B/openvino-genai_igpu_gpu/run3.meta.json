@@ -1,0 +1,83 @@
+{
+    "cell":  "Qwen3-0.6B\\openvino-genai_igpu_gpu",
+    "run":  3,
+    "mode":  "timed",
+    "sitting":  "walk-timed",
+    "start":  "2026-11-08T07:54:34.9779374+09:00",
+    "osBuild":  "26200.9711",
+    "gate":  {
+                 "quietGate":  "quiet",
+                 "cpuReads":  [
+                                  0.6,
+                                  0.3,
+                                  0
+                              ],
+                 "nvidiaMiB":  0,
+                 "availGB":  20.3,
+                 "ramNeedGB":  2.5,
+                 "gpuEngines":  0
+             },
+    "before":  {
+                   "load":  {
+                                "cpu":  2.1,
+                                "build_ms":  0,
+                                "top":  [
+                                            "System 4 0.25 core",
+                                            "powershell 28276 0.02 core",
+                                            "WUDFHost 1836 0.02 core",
+                                            "LEDKeeper2 8936 0.02 core",
+                                            "powershell 12740 0.02 core"
+                                        ]
+                            },
+                   "nvidia":  "P0, 337 MHz, 14001 MHz, 17.72 W, 0 %, 0 MiB, 48",
+                   "availGB":  20.3
+               },
+    "command":  "C:\\src\\llmzoo-walk\\.venv-ovgenai\\Scripts\\python.exe -u C:\\src\\llmzoo-walk\\pc\\run_ovgenai.py --model-dir C:\\src\\llmzoo-walk\\models\\OpenVINO__Qwen3-0.6B-int4-ov --device GPU.0 --cache-dir C:\\src\\llmzoo-walk\\ovcache\\Qwen3-0.6B_gpu0 --prompt-file C:\\src\\llmzoo-walk\\pc\\short-chat.txt --out C:\\src\\llmzoo-walk\\runs\\walk-timed\\Qwen3-0.6B\\openvino-genai_igpu_gpu\\run3.json",
+    "engine":  {
+                   "exitCode":  0,
+                   "timedOut":  false,
+                   "yielded":  false,
+                   "suspendedSeconds":  0,
+                   "suspensions":  0,
+                   "enginePid":  13944,
+                   "elapsedSeconds":  9.124,
+                   "peakWorkingSetBytes":  840814592,
+                   "gpuMiBPeak":  {
+                                      "0x00000000_0x00012C48":  {
+                                                                    "shared":  0,
+                                                                    "dedicated":  0
+                                                                },
+                                      "0x00000000_0x0001260E":  {
+                                                                    "shared":  509,
+                                                                    "dedicated":  0
+                                                                },
+                                      "0x00000000_0x00013E4C":  {
+                                                                    "shared":  0,
+                                                                    "dedicated":  0
+                                                                }
+                                  },
+                   "watchPeakWorkingSetBytes":  0,
+                   "watchGpuMiBPeak":  {
+
+                                       },
+                   "nvidiaSamples":  [
+                                         "5s P0, 20032 MHz, 14001 MHz, 17.92 W, 0 %, 0 MiB, 49"
+                                     ]
+               },
+    "after":  {
+                  "load":  {
+                               "cpu":  1.2,
+                               "build_ms":  0,
+                               "top":  [
+                                           "svchost 5080 0.06 core",
+                                           "System 4 0.02 core",
+                                           "svchost 5260 0.02 core",
+                                           "svchost 5480 0.02 core",
+                                           "SearchIndexer 9480 0.02 core"
+                                       ]
+                           },
+                  "nvidia":  "P0, 1882 MHz, 14001 MHz, 18.01 W, 0 %, 0 MiB, 50"
+              },
+    "end":  "2026-11-08T07:54:46.0460173+09:00",
+    "tries":  1
+}

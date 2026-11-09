@@ -1,0 +1,1189 @@
+{
+ "sitting": "walk-timed",
+ "units": [
+  {
+   "model": "Qwen3-0.6B",
+   "cell": "Qwen3-0.6B\\ort-genai_rtx_cuda",
+   "kind": "python",
+   "venv": "genai-cuda",
+   "script": "run_genai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\onnx-community__Qwen3-0.6B-ONNX\\onnxruntime\\cuda\\cuda-int4-kld-block-128",
+    "--ep",
+    "follow_config"
+   ],
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 15,
+   "ram_need_gb": 2.6,
+   "note": "onnx-community GenAI folder as published"
+  },
+  {
+   "model": "Qwen3-0.6B",
+   "cell": "Qwen3-0.6B\\ort-genai_rtx_webgpu",
+   "kind": "python",
+   "venv": "genai",
+   "script": "run_genai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\onnx-community__Qwen3-0.6B-ONNX\\onnxruntime\\webgpu\\webgpu-int4-kld-block-32",
+    "--ep",
+    "webgpu",
+    "--ep-option",
+    "adapterIndex=0"
+   ],
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 15,
+   "ram_need_gb": 2.6,
+   "note": "WebGPU EP 0.5.0 plugin, adapterIndex 0"
+  },
+  {
+   "model": "Qwen3-0.6B",
+   "cell": "Qwen3-0.6B\\ort-genai_igpu_webgpu",
+   "kind": "python",
+   "venv": "genai",
+   "script": "run_genai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\onnx-community__Qwen3-0.6B-ONNX\\onnxruntime\\webgpu\\webgpu-int4-kld-block-32",
+    "--ep",
+    "webgpu",
+    "--ep-option",
+    "adapterIndex=1"
+   ],
+   "runs": 3,
+   "engines_gate": true,
+   "timeout_min": 15,
+   "ram_need_gb": 2.6,
+   "note": "WebGPU EP 0.5.0 plugin, adapterIndex 1"
+  },
+  {
+   "model": "Qwen3-0.6B",
+   "cell": "Qwen3-0.6B\\ort-genai_igpu_openvino",
+   "kind": "python",
+   "venv": "genai",
+   "script": "run_genai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\onnx-community__Qwen3-0.6B-ONNX\\onnxruntime\\cpu_and_mobile\\cpu-int4-kld-block-128",
+    "--ep",
+    "openvino",
+    "--ov-device",
+    "GPU"
+   ],
+   "runs": 3,
+   "engines_gate": true,
+   "timeout_min": 15,
+   "ram_need_gb": 2.6,
+   "note": "OpenVINO EP 1.8.1 plugin, device_type GPU, on the CPU package"
+  },
+  {
+   "model": "Qwen3-0.6B",
+   "cell": "Qwen3-0.6B\\ort-genai_cpu_cpu",
+   "kind": "python",
+   "venv": "genai",
+   "script": "run_genai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\onnx-community__Qwen3-0.6B-ONNX\\onnxruntime\\cpu_and_mobile\\cpu-int4-kld-block-128",
+    "--ep",
+    "follow_config"
+   ],
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 15,
+   "ram_need_gb": 2.6,
+   "note": "onnx-community GenAI folder as published"
+  },
+  {
+   "model": "Qwen3-0.6B",
+   "cell": "Qwen3-0.6B\\ort-genai_cpu_openvino",
+   "kind": "python",
+   "venv": "genai",
+   "script": "run_genai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\onnx-community__Qwen3-0.6B-ONNX\\onnxruntime\\cpu_and_mobile\\cpu-int4-kld-block-128",
+    "--ep",
+    "openvino",
+    "--ov-device",
+    "CPU"
+   ],
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 15,
+   "ram_need_gb": 2.6,
+   "note": "OpenVINO EP 1.8.1 plugin, device_type CPU, on the CPU package"
+  },
+  {
+   "model": "Qwen3-0.6B",
+   "cell": "Qwen3-0.6B\\openvino-genai_igpu_gpu",
+   "kind": "python",
+   "venv": "ovgenai",
+   "script": "run_ovgenai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\OpenVINO__Qwen3-0.6B-int4-ov",
+    "--device",
+    "GPU.0",
+    "--cache-dir",
+    "{ROOT}\\ovcache\\Qwen3-0.6B_gpu0"
+   ],
+   "runs": 3,
+   "engines_gate": true,
+   "timeout_min": 15,
+   "ram_need_gb": 2.5,
+   "note": "OpenVINO GenAI 2026.4.1 on GPU.0 (CACHE_DIR)"
+  },
+  {
+   "model": "Qwen3-0.6B",
+   "cell": "Qwen3-0.6B\\openvino-genai_cpu_cpu",
+   "kind": "python",
+   "venv": "ovgenai",
+   "script": "run_ovgenai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\OpenVINO__Qwen3-0.6B-int4-ov",
+    "--device",
+    "CPU"
+   ],
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 15,
+   "ram_need_gb": 2.5,
+   "note": "OpenVINO GenAI 2026.4.1 on CPU"
+  },
+  {
+   "model": "Qwen3-0.6B",
+   "cell": "Qwen3-0.6B\\openvino-genai_rtx_gpu",
+   "kind": "python",
+   "venv": "ovgenai",
+   "script": "run_ovgenai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\OpenVINO__Qwen3-0.6B-int4-ov",
+    "--device",
+    "GPU.1",
+    "--cache-dir",
+    "{ROOT}\\ovcache\\Qwen3-0.6B_gpu1"
+   ],
+   "runs": 3,
+   "engines_gate": true,
+   "timeout_min": 15,
+   "ram_need_gb": 2.5,
+   "note": "OpenVINO GenAI 2026.4.1 on GPU.1 (CACHE_DIR) = the RTX as OpenVINO lists it, outside the GPU plugin's documented Intel GPUs (probe)"
+  },
+  {
+   "model": "Qwen3-1.7B",
+   "cell": "Qwen3-1.7B\\ort-genai_rtx_cuda",
+   "kind": "python",
+   "venv": "genai-cuda",
+   "script": "run_genai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\onnx-community__Qwen3-1.7B-ONNX\\onnxruntime\\cuda\\cuda-int4-kld-block-128",
+    "--ep",
+    "follow_config"
+   ],
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 15,
+   "ram_need_gb": 3.5,
+   "note": "onnx-community GenAI folder as published"
+  },
+  {
+   "model": "Qwen3-1.7B",
+   "cell": "Qwen3-1.7B\\ort-genai_rtx_webgpu",
+   "kind": "python",
+   "venv": "genai",
+   "script": "run_genai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\onnx-community__Qwen3-1.7B-ONNX\\onnxruntime\\webgpu\\webgpu-int4-kld-block-32",
+    "--ep",
+    "webgpu",
+    "--ep-option",
+    "adapterIndex=0"
+   ],
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 15,
+   "ram_need_gb": 3.7,
+   "note": "WebGPU EP 0.5.0 plugin, adapterIndex 0"
+  },
+  {
+   "model": "Qwen3-1.7B",
+   "cell": "Qwen3-1.7B\\ort-genai_igpu_webgpu",
+   "kind": "python",
+   "venv": "genai",
+   "script": "run_genai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\onnx-community__Qwen3-1.7B-ONNX\\onnxruntime\\webgpu\\webgpu-int4-kld-block-32",
+    "--ep",
+    "webgpu",
+    "--ep-option",
+    "adapterIndex=1"
+   ],
+   "runs": 3,
+   "engines_gate": true,
+   "timeout_min": 15,
+   "ram_need_gb": 3.7,
+   "note": "WebGPU EP 0.5.0 plugin, adapterIndex 1"
+  },
+  {
+   "model": "Qwen3-1.7B",
+   "cell": "Qwen3-1.7B\\ort-genai_igpu_openvino",
+   "kind": "python",
+   "venv": "genai",
+   "script": "run_genai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\onnx-community__Qwen3-1.7B-ONNX\\onnxruntime\\cpu_and_mobile\\cpu-int4-kld-block-128",
+    "--ep",
+    "openvino",
+    "--ov-device",
+    "GPU"
+   ],
+   "runs": 3,
+   "engines_gate": true,
+   "timeout_min": 15,
+   "ram_need_gb": 3.6,
+   "note": "OpenVINO EP 1.8.1 plugin, device_type GPU, on the CPU package"
+  },
+  {
+   "model": "Qwen3-1.7B",
+   "cell": "Qwen3-1.7B\\ort-genai_cpu_cpu",
+   "kind": "python",
+   "venv": "genai",
+   "script": "run_genai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\onnx-community__Qwen3-1.7B-ONNX\\onnxruntime\\cpu_and_mobile\\cpu-int4-kld-block-128",
+    "--ep",
+    "follow_config"
+   ],
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 15,
+   "ram_need_gb": 3.6,
+   "note": "onnx-community GenAI folder as published"
+  },
+  {
+   "model": "Qwen3-1.7B",
+   "cell": "Qwen3-1.7B\\ort-genai_cpu_openvino",
+   "kind": "python",
+   "venv": "genai",
+   "script": "run_genai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\onnx-community__Qwen3-1.7B-ONNX\\onnxruntime\\cpu_and_mobile\\cpu-int4-kld-block-128",
+    "--ep",
+    "openvino",
+    "--ov-device",
+    "CPU"
+   ],
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 15,
+   "ram_need_gb": 3.6,
+   "note": "OpenVINO EP 1.8.1 plugin, device_type CPU, on the CPU package"
+  },
+  {
+   "model": "Qwen3-1.7B",
+   "cell": "Qwen3-1.7B\\openvino-genai_igpu_gpu",
+   "kind": "python",
+   "venv": "ovgenai",
+   "script": "run_ovgenai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\OpenVINO__Qwen3-1.7B-int4-ov",
+    "--device",
+    "GPU.0",
+    "--cache-dir",
+    "{ROOT}\\ovcache\\Qwen3-1.7B_gpu0"
+   ],
+   "runs": 3,
+   "engines_gate": true,
+   "timeout_min": 15,
+   "ram_need_gb": 3.4,
+   "note": "OpenVINO GenAI 2026.4.1 on GPU.0 (CACHE_DIR)"
+  },
+  {
+   "model": "Qwen3-1.7B",
+   "cell": "Qwen3-1.7B\\openvino-genai_cpu_cpu",
+   "kind": "python",
+   "venv": "ovgenai",
+   "script": "run_ovgenai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\OpenVINO__Qwen3-1.7B-int4-ov",
+    "--device",
+    "CPU"
+   ],
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 15,
+   "ram_need_gb": 3.4,
+   "note": "OpenVINO GenAI 2026.4.1 on CPU"
+  },
+  {
+   "model": "Qwen3-1.7B",
+   "cell": "Qwen3-1.7B\\openvino-genai_rtx_gpu",
+   "kind": "python",
+   "venv": "ovgenai",
+   "script": "run_ovgenai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\OpenVINO__Qwen3-1.7B-int4-ov",
+    "--device",
+    "GPU.1",
+    "--cache-dir",
+    "{ROOT}\\ovcache\\Qwen3-1.7B_gpu1"
+   ],
+   "runs": 3,
+   "engines_gate": true,
+   "timeout_min": 15,
+   "ram_need_gb": 3.4,
+   "note": "OpenVINO GenAI 2026.4.1 on GPU.1 (CACHE_DIR) = the RTX as OpenVINO lists it, outside the GPU plugin's documented Intel GPUs (probe)"
+  },
+  {
+   "model": "Qwen3-4B",
+   "cell": "Qwen3-4B\\ort-genai_rtx_cuda",
+   "kind": "python",
+   "venv": "genai-cuda",
+   "script": "run_genai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\onnx-community__Qwen3-4B-ONNX\\onnxruntime\\cuda\\cuda-int4-kld-block-128",
+    "--ep",
+    "follow_config"
+   ],
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 15,
+   "ram_need_gb": 5.2,
+   "note": "onnx-community GenAI folder as published"
+  },
+  {
+   "model": "Qwen3-4B",
+   "cell": "Qwen3-4B\\ort-genai_rtx_webgpu",
+   "kind": "python",
+   "venv": "genai",
+   "script": "run_genai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\onnx-community__Qwen3-4B-ONNX\\onnxruntime\\webgpu\\webgpu-int4-kld-block-32",
+    "--ep",
+    "webgpu",
+    "--ep-option",
+    "adapterIndex=0"
+   ],
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 15,
+   "ram_need_gb": 5.4,
+   "note": "WebGPU EP 0.5.0 plugin, adapterIndex 0"
+  },
+  {
+   "model": "Qwen3-4B",
+   "cell": "Qwen3-4B\\ort-genai_igpu_webgpu",
+   "kind": "python",
+   "venv": "genai",
+   "script": "run_genai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\onnx-community__Qwen3-4B-ONNX\\onnxruntime\\webgpu\\webgpu-int4-kld-block-32",
+    "--ep",
+    "webgpu",
+    "--ep-option",
+    "adapterIndex=1"
+   ],
+   "runs": 3,
+   "engines_gate": true,
+   "timeout_min": 15,
+   "ram_need_gb": 5.4,
+   "note": "WebGPU EP 0.5.0 plugin, adapterIndex 1"
+  },
+  {
+   "model": "Qwen3-4B",
+   "cell": "Qwen3-4B\\ort-genai_igpu_openvino",
+   "kind": "python",
+   "venv": "genai",
+   "script": "run_genai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\onnx-community__Qwen3-4B-ONNX\\onnxruntime\\cpu_and_mobile\\cpu-int4-kld-block-128",
+    "--ep",
+    "openvino",
+    "--ov-device",
+    "GPU"
+   ],
+   "runs": 3,
+   "engines_gate": true,
+   "timeout_min": 15,
+   "ram_need_gb": 5.2,
+   "note": "OpenVINO EP 1.8.1 plugin, device_type GPU, on the CPU package"
+  },
+  {
+   "model": "Qwen3-4B",
+   "cell": "Qwen3-4B\\ort-genai_cpu_cpu",
+   "kind": "python",
+   "venv": "genai",
+   "script": "run_genai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\onnx-community__Qwen3-4B-ONNX\\onnxruntime\\cpu_and_mobile\\cpu-int4-kld-block-128",
+    "--ep",
+    "follow_config"
+   ],
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 15,
+   "ram_need_gb": 5.2,
+   "note": "onnx-community GenAI folder as published"
+  },
+  {
+   "model": "Qwen3-4B",
+   "cell": "Qwen3-4B\\ort-genai_cpu_openvino",
+   "kind": "python",
+   "venv": "genai",
+   "script": "run_genai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\onnx-community__Qwen3-4B-ONNX\\onnxruntime\\cpu_and_mobile\\cpu-int4-kld-block-128",
+    "--ep",
+    "openvino",
+    "--ov-device",
+    "CPU"
+   ],
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 15,
+   "ram_need_gb": 5.2,
+   "note": "OpenVINO EP 1.8.1 plugin, device_type CPU, on the CPU package"
+  },
+  {
+   "model": "Qwen3-4B",
+   "cell": "Qwen3-4B\\openvino-genai_igpu_gpu",
+   "kind": "python",
+   "venv": "ovgenai",
+   "script": "run_ovgenai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\OpenVINO__Qwen3-4B-int4-ov",
+    "--device",
+    "GPU.0",
+    "--cache-dir",
+    "{ROOT}\\ovcache\\Qwen3-4B_gpu0"
+   ],
+   "runs": 3,
+   "engines_gate": true,
+   "timeout_min": 15,
+   "ram_need_gb": 4.6,
+   "note": "OpenVINO GenAI 2026.4.1 on GPU.0 (CACHE_DIR)"
+  },
+  {
+   "model": "Qwen3-4B",
+   "cell": "Qwen3-4B\\openvino-genai_cpu_cpu",
+   "kind": "python",
+   "venv": "ovgenai",
+   "script": "run_ovgenai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\OpenVINO__Qwen3-4B-int4-ov",
+    "--device",
+    "CPU"
+   ],
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 15,
+   "ram_need_gb": 4.6,
+   "note": "OpenVINO GenAI 2026.4.1 on CPU"
+  },
+  {
+   "model": "Qwen3-4B",
+   "cell": "Qwen3-4B\\openvino-genai_rtx_gpu",
+   "kind": "python",
+   "venv": "ovgenai",
+   "script": "run_ovgenai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\OpenVINO__Qwen3-4B-int4-ov",
+    "--device",
+    "GPU.1",
+    "--cache-dir",
+    "{ROOT}\\ovcache\\Qwen3-4B_gpu1"
+   ],
+   "runs": 3,
+   "engines_gate": true,
+   "timeout_min": 15,
+   "ram_need_gb": 4.6,
+   "note": "OpenVINO GenAI 2026.4.1 on GPU.1 (CACHE_DIR) = the RTX as OpenVINO lists it, outside the GPU plugin's documented Intel GPUs (probe)"
+  },
+  {
+   "model": "gemma-4-E2B-it",
+   "cell": "gemma-4-E2B-it\\ort-genai_rtx_cuda",
+   "kind": "python",
+   "venv": "genai-cuda",
+   "script": "run_genai.py",
+   "args": [
+    "--model-dir",
+    "{HOME}\\.foundry\\cache\\models\\Microsoft\\gemma-4-e2b-it-cuda-gpu-3\\v3",
+    "--ep",
+    "follow_config"
+   ],
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 15,
+   "ram_need_gb": 8.9,
+   "note": "Foundry Local catalog package files (Microsoft), run outside Foundry"
+  },
+  {
+   "model": "gemma-4-E2B-it",
+   "cell": "gemma-4-E2B-it\\ort-genai_rtx_webgpu",
+   "kind": "python",
+   "venv": "genai",
+   "script": "run_genai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\overlays\\gemma-4-E2B-it_webgpu_a0",
+    "--ep",
+    "follow_config"
+   ],
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 15,
+   "ram_need_gb": 10.2,
+   "note": "WebGPU EP 0.5.0 plugin, adapterIndex 0"
+  },
+  {
+   "model": "gemma-4-E2B-it",
+   "cell": "gemma-4-E2B-it\\ort-genai_igpu_webgpu",
+   "kind": "python",
+   "venv": "genai",
+   "script": "run_genai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\overlays\\gemma-4-E2B-it_webgpu_a1",
+    "--ep",
+    "follow_config"
+   ],
+   "runs": 3,
+   "engines_gate": true,
+   "timeout_min": 15,
+   "ram_need_gb": 10.2,
+   "note": "WebGPU EP 0.5.0 plugin, adapterIndex 1"
+  },
+  {
+   "model": "gemma-4-E2B-it",
+   "cell": "gemma-4-E2B-it\\ort-genai_igpu_openvino",
+   "kind": "python",
+   "venv": "genai",
+   "script": "run_genai.py",
+   "args": [
+    "--model-dir",
+    "{HOME}\\.foundry\\cache\\models\\Microsoft\\gemma-4-e2b-it-generic-cpu-3\\v3",
+    "--ep",
+    "openvino",
+    "--ov-device",
+    "GPU"
+   ],
+   "runs": 3,
+   "engines_gate": true,
+   "timeout_min": 15,
+   "ram_need_gb": 9.1,
+   "note": "OpenVINO EP 1.8.1 plugin, device_type GPU, on the CPU package"
+  },
+  {
+   "model": "gemma-4-E2B-it",
+   "cell": "gemma-4-E2B-it\\ort-genai_cpu_openvino",
+   "kind": "python",
+   "venv": "genai",
+   "script": "run_genai.py",
+   "args": [
+    "--model-dir",
+    "{HOME}\\.foundry\\cache\\models\\Microsoft\\gemma-4-e2b-it-generic-cpu-3\\v3",
+    "--ep",
+    "openvino",
+    "--ov-device",
+    "CPU"
+   ],
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 15,
+   "ram_need_gb": 9.1,
+   "note": "OpenVINO EP 1.8.1 plugin, device_type CPU, on the CPU package"
+  },
+  {
+   "model": "gemma-4-E2B-it",
+   "cell": "gemma-4-E2B-it\\foundry_rtx_cuda",
+   "kind": "foundry",
+   "venv": "genai",
+   "model_id": "gemma-4-e2b-it-cuda-gpu:3",
+   "path": "/v1",
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 15,
+   "ram_need_gb": 8.9,
+   "note": "Foundry Local catalog variant gemma-4-e2b-it-cuda-gpu:3",
+   "args": []
+  },
+  {
+   "model": "gemma-4-E2B-it",
+   "cell": "gemma-4-E2B-it\\openvino-genai_igpu_gpu",
+   "kind": "python",
+   "venv": "ovgenai",
+   "script": "run_ovgenai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\OpenVINO__gemma-4-E2B-it-int4-ov",
+    "--device",
+    "GPU.0",
+    "--cache-dir",
+    "{ROOT}\\ovcache\\gemma-4-E2B-it_gpu0"
+   ],
+   "runs": 3,
+   "engines_gate": true,
+   "timeout_min": 15,
+   "ram_need_gb": 6.9,
+   "note": "OpenVINO GenAI 2026.4.1 on GPU.0 (CACHE_DIR)"
+  },
+  {
+   "model": "gemma-4-E2B-it",
+   "cell": "gemma-4-E2B-it\\openvino-genai_cpu_cpu",
+   "kind": "python",
+   "venv": "ovgenai",
+   "script": "run_ovgenai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\OpenVINO__gemma-4-E2B-it-int4-ov",
+    "--device",
+    "CPU"
+   ],
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 15,
+   "ram_need_gb": 6.9,
+   "note": "OpenVINO GenAI 2026.4.1 on CPU"
+  },
+  {
+   "model": "gemma-4-E2B-it",
+   "cell": "gemma-4-E2B-it\\openvino-genai_rtx_gpu",
+   "kind": "python",
+   "venv": "ovgenai",
+   "script": "run_ovgenai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\OpenVINO__gemma-4-E2B-it-int4-ov",
+    "--device",
+    "GPU.1",
+    "--cache-dir",
+    "{ROOT}\\ovcache\\gemma-4-E2B-it_gpu1"
+   ],
+   "runs": 3,
+   "engines_gate": true,
+   "timeout_min": 15,
+   "ram_need_gb": 6.9,
+   "note": "OpenVINO GenAI 2026.4.1 on GPU.1 (CACHE_DIR) = the RTX as OpenVINO lists it, outside the GPU plugin's documented Intel GPUs (probe)"
+  },
+  {
+   "model": "gemma-4-E4B-it",
+   "cell": "gemma-4-E4B-it\\ort-genai_rtx_cuda",
+   "kind": "python",
+   "venv": "genai-cuda",
+   "script": "run_genai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\mlboydaisuke__gemma-4-E4B-it-Foundry-Local\\cuda-int4-8k",
+    "--ep",
+    "follow_config"
+   ],
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 15,
+   "ram_need_gb": 10.1,
+   "note": "mlboydaisuke package as published"
+  },
+  {
+   "model": "gemma-4-E4B-it",
+   "cell": "gemma-4-E4B-it\\ort-genai_rtx_webgpu",
+   "kind": "python",
+   "venv": "genai",
+   "script": "run_genai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\overlays\\gemma-4-E4B-it_webgpu_a0",
+    "--ep",
+    "follow_config"
+   ],
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 15,
+   "ram_need_gb": 10.1,
+   "note": "WebGPU EP 0.5.0 plugin, adapterIndex 0"
+  },
+  {
+   "model": "gemma-4-E4B-it",
+   "cell": "gemma-4-E4B-it\\ort-genai_igpu_webgpu",
+   "kind": "python",
+   "venv": "genai",
+   "script": "run_genai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\overlays\\gemma-4-E4B-it_webgpu_a1",
+    "--ep",
+    "follow_config"
+   ],
+   "runs": 3,
+   "engines_gate": true,
+   "timeout_min": 15,
+   "ram_need_gb": 10.1,
+   "note": "WebGPU EP 0.5.0 plugin, adapterIndex 1"
+  },
+  {
+   "model": "gemma-4-E4B-it",
+   "cell": "gemma-4-E4B-it\\ort-genai_igpu_openvino",
+   "kind": "python",
+   "venv": "genai",
+   "script": "run_genai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\mlboydaisuke__gemma-4-E4B-it-Foundry-Local\\cpu-int4",
+    "--ep",
+    "openvino",
+    "--ov-device",
+    "GPU"
+   ],
+   "runs": 3,
+   "engines_gate": true,
+   "timeout_min": 15,
+   "ram_need_gb": 10.3,
+   "note": "OpenVINO EP 1.8.1 plugin, device_type GPU, on the CPU package"
+  },
+  {
+   "model": "gemma-4-E4B-it",
+   "cell": "gemma-4-E4B-it\\ort-genai_cpu_cpu",
+   "kind": "python",
+   "venv": "genai",
+   "script": "run_genai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\mlboydaisuke__gemma-4-E4B-it-Foundry-Local\\cpu-int4",
+    "--ep",
+    "follow_config"
+   ],
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 15,
+   "ram_need_gb": 10.3,
+   "note": "mlboydaisuke package as published"
+  },
+  {
+   "model": "gemma-4-E4B-it",
+   "cell": "gemma-4-E4B-it\\ort-genai_cpu_openvino",
+   "kind": "python",
+   "venv": "genai",
+   "script": "run_genai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\mlboydaisuke__gemma-4-E4B-it-Foundry-Local\\cpu-int4",
+    "--ep",
+    "openvino",
+    "--ov-device",
+    "CPU"
+   ],
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 15,
+   "ram_need_gb": 10.3,
+   "note": "OpenVINO EP 1.8.1 plugin, device_type CPU, on the CPU package"
+  },
+  {
+   "model": "gemma-4-E4B-it",
+   "cell": "gemma-4-E4B-it\\foundry_rtx_cuda",
+   "kind": "foundry",
+   "venv": "genai",
+   "model_id": "z2-gemma-4-e4b-it-cuda-int4-8k:1",
+   "path": "/catalogs/local/v1",
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 15,
+   "ram_need_gb": 10.1,
+   "note": "local model z2-gemma-4-e4b-it-cuda-int4-8k:1 = mlboydaisuke/gemma-4-E4B-it-Foundry-Local cuda-int4-8k",
+   "args": []
+  },
+  {
+   "model": "gemma-4-E4B-it",
+   "cell": "gemma-4-E4B-it\\foundry_cpu_cpu",
+   "kind": "foundry",
+   "venv": "genai",
+   "model_id": "z2-gemma-4-e4b-it-cpu-int4:1",
+   "path": "/catalogs/local/v1",
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 15,
+   "ram_need_gb": 10.3,
+   "note": "local model z2-gemma-4-e4b-it-cpu-int4:1 = mlboydaisuke/gemma-4-E4B-it-Foundry-Local cpu-int4",
+   "args": []
+  },
+  {
+   "model": "gemma-4-E4B-it",
+   "cell": "gemma-4-E4B-it\\openvino-genai_igpu_gpu",
+   "kind": "python",
+   "venv": "ovgenai",
+   "script": "run_ovgenai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\OpenVINO__gemma-4-E4B-it-int4-ov",
+    "--device",
+    "GPU.0",
+    "--cache-dir",
+    "{ROOT}\\ovcache\\gemma-4-E4B-it_gpu0"
+   ],
+   "runs": 3,
+   "engines_gate": true,
+   "timeout_min": 15,
+   "ram_need_gb": 9.3,
+   "note": "OpenVINO GenAI 2026.4.1 on GPU.0 (CACHE_DIR)"
+  },
+  {
+   "model": "gemma-4-E4B-it",
+   "cell": "gemma-4-E4B-it\\openvino-genai_cpu_cpu",
+   "kind": "python",
+   "venv": "ovgenai",
+   "script": "run_ovgenai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\OpenVINO__gemma-4-E4B-it-int4-ov",
+    "--device",
+    "CPU"
+   ],
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 15,
+   "ram_need_gb": 9.3,
+   "note": "OpenVINO GenAI 2026.4.1 on CPU"
+  },
+  {
+   "model": "gemma-4-E4B-it",
+   "cell": "gemma-4-E4B-it\\openvino-genai_rtx_gpu",
+   "kind": "python",
+   "venv": "ovgenai",
+   "script": "run_ovgenai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\OpenVINO__gemma-4-E4B-it-int4-ov",
+    "--device",
+    "GPU.1",
+    "--cache-dir",
+    "{ROOT}\\ovcache\\gemma-4-E4B-it_gpu1"
+   ],
+   "runs": 3,
+   "engines_gate": true,
+   "timeout_min": 15,
+   "ram_need_gb": 9.3,
+   "note": "OpenVINO GenAI 2026.4.1 on GPU.1 (CACHE_DIR) = the RTX as OpenVINO lists it, outside the GPU plugin's documented Intel GPUs (probe)"
+  },
+  {
+   "model": "Qwen3-0.6B",
+   "cell": "Qwen3-0.6B\\foundry_rtx_cuda",
+   "kind": "foundry",
+   "venv": "genai",
+   "model_id": "qwen3-0.6b-cuda-gpu:2",
+   "path": "/v1",
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 15,
+   "ram_need_gb": 2.6,
+   "note": "Foundry Local catalog variant qwen3-0.6b-cuda-gpu:2",
+   "args": []
+  },
+  {
+   "model": "Qwen3-0.6B",
+   "cell": "Qwen3-0.6B\\foundry_auto_webgpu",
+   "kind": "foundry",
+   "venv": "genai",
+   "model_id": "qwen3-0.6b-generic-gpu:2",
+   "path": "/v1",
+   "runs": 3,
+   "engines_gate": true,
+   "timeout_min": 15,
+   "ram_need_gb": 2.6,
+   "note": "Foundry Local catalog variant qwen3-0.6b-generic-gpu:2",
+   "args": []
+  },
+  {
+   "model": "Qwen3-0.6B",
+   "cell": "Qwen3-0.6B\\foundry_cpu_cpu",
+   "kind": "foundry",
+   "venv": "genai",
+   "model_id": "qwen3-0.6b-generic-cpu:4",
+   "path": "/v1",
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 15,
+   "ram_need_gb": 2.7,
+   "note": "Foundry Local catalog variant qwen3-0.6b-generic-cpu:4",
+   "args": []
+  },
+  {
+   "model": "Qwen3-1.7B",
+   "cell": "Qwen3-1.7B\\foundry_rtx_cuda",
+   "kind": "foundry",
+   "venv": "genai",
+   "model_id": "qwen3-1.7b-cuda-gpu:2",
+   "path": "/v1",
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 15,
+   "ram_need_gb": 3.5,
+   "note": "Foundry Local catalog variant qwen3-1.7b-cuda-gpu:2",
+   "args": []
+  },
+  {
+   "model": "Qwen3-1.7B",
+   "cell": "Qwen3-1.7B\\foundry_auto_webgpu",
+   "kind": "foundry",
+   "venv": "genai",
+   "model_id": "qwen3-1.7b-generic-gpu:2",
+   "path": "/v1",
+   "runs": 3,
+   "engines_gate": true,
+   "timeout_min": 15,
+   "ram_need_gb": 3.7,
+   "note": "Foundry Local catalog variant qwen3-1.7b-generic-gpu:2",
+   "args": []
+  },
+  {
+   "model": "Qwen3-1.7B",
+   "cell": "Qwen3-1.7B\\foundry_cpu_cpu",
+   "kind": "foundry",
+   "venv": "genai",
+   "model_id": "qwen3-1.7b-generic-cpu:2",
+   "path": "/v1",
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 15,
+   "ram_need_gb": 3.6,
+   "note": "Foundry Local catalog variant qwen3-1.7b-generic-cpu:2",
+   "args": []
+  },
+  {
+   "model": "Qwen3-4B",
+   "cell": "Qwen3-4B\\foundry_rtx_cuda",
+   "kind": "foundry",
+   "venv": "genai",
+   "model_id": "qwen3-4b-cuda-gpu:2",
+   "path": "/v1",
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 15,
+   "ram_need_gb": 5.2,
+   "note": "Foundry Local catalog variant qwen3-4b-cuda-gpu:2",
+   "args": []
+  },
+  {
+   "model": "Qwen3-4B",
+   "cell": "Qwen3-4B\\foundry_auto_webgpu",
+   "kind": "foundry",
+   "venv": "genai",
+   "model_id": "qwen3-4b-generic-gpu:2",
+   "path": "/v1",
+   "runs": 3,
+   "engines_gate": true,
+   "timeout_min": 15,
+   "ram_need_gb": 5.4,
+   "note": "Foundry Local catalog variant qwen3-4b-generic-gpu:2",
+   "args": []
+  },
+  {
+   "model": "Qwen3-4B",
+   "cell": "Qwen3-4B\\foundry_cpu_cpu",
+   "kind": "foundry",
+   "venv": "genai",
+   "model_id": "qwen3-4b-generic-cpu:3",
+   "path": "/v1",
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 15,
+   "ram_need_gb": 5.2,
+   "note": "Foundry Local catalog variant qwen3-4b-generic-cpu:3",
+   "args": []
+  },
+  {
+   "model": "gemma-4-E2B-it",
+   "cell": "gemma-4-E2B-it\\foundry_auto_webgpu",
+   "kind": "foundry",
+   "venv": "genai",
+   "model_id": "gemma-4-e2b-it-generic-gpu:3",
+   "path": "/v1",
+   "runs": 3,
+   "engines_gate": true,
+   "timeout_min": 15,
+   "ram_need_gb": 10.2,
+   "daemon_env": {
+    "CUDA_VISIBLE_DEVICES": "-1"
+   },
+   "note": "Foundry Local catalog variant gemma-4-e2b-it-generic-gpu:3; fix 1 of 3 after its load error (WebGPU and CUDA): the daemon started with CUDA_VISIBLE_DEVICES=-1",
+   "args": []
+  },
+  {
+   "model": "gemma-4-E2B-it",
+   "cell": "gemma-4-E2B-it\\openvino-genai_npu_npu",
+   "kind": "python",
+   "venv": "ovgenai",
+   "script": "run_ovgenai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\OpenVINO__gemma-4-E2B-it-int4-cw-ov",
+    "--device",
+    "NPU",
+    "--cache-dir",
+    "{ROOT}\\ovcache\\gemma-4-E2B-it_npu"
+   ],
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 30,
+   "ram_need_gb": 6.8,
+   "note": "OpenVINO GenAI 2026.4.1 on NPU (CACHE_DIR)"
+  },
+  {
+   "model": "Qwen3-0.6B",
+   "cell": "Qwen3-0.6B\\openvino-genai_npu_npu-sym-g128",
+   "kind": "python",
+   "venv": "ovgenai",
+   "script": "run_ovgenai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\z2-npu\\Qwen3-0.6B-int4-sym-g128-ov",
+    "--device",
+    "NPU",
+    "--cache-dir",
+    "{ROOT}\\ovcache\\Qwen3-0.6B_npu_sym_g128"
+   ],
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 30,
+   "ram_need_gb": 2.5,
+   "note": "OpenVINO GenAI 2026.4.1 on NPU (CACHE_DIR); the IR exported here by pc/export_npu.ps1 in the NPU form of the OpenVINO GenAI NPU docs (int4, --sym, --ratio 1.0, --group-size 128) from Qwen/Qwen3-0.6B@c1899de289a0 with optimum-intel 2.2.0, nncf 3.4.0, transformers 5.5.4 (OpenVINO's int4-ov is not in the NPU form)"
+  },
+  {
+   "model": "Qwen3-1.7B",
+   "cell": "Qwen3-1.7B\\openvino-genai_npu_npu-sym-g128",
+   "kind": "python",
+   "venv": "ovgenai",
+   "script": "run_ovgenai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\z2-npu\\Qwen3-1.7B-int4-sym-g128-ov",
+    "--device",
+    "NPU",
+    "--cache-dir",
+    "{ROOT}\\ovcache\\Qwen3-1.7B_npu_sym_g128"
+   ],
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 30,
+   "ram_need_gb": 3.4,
+   "note": "OpenVINO GenAI 2026.4.1 on NPU (CACHE_DIR); the IR exported here by pc/export_npu.ps1 in the NPU form of the OpenVINO GenAI NPU docs (int4, --sym, --ratio 1.0, --group-size 128) from Qwen/Qwen3-1.7B@70d244cc86cc with optimum-intel 2.2.0, nncf 3.4.0, transformers 5.5.4 (OpenVINO's int4-ov is not in the NPU form)"
+  },
+  {
+   "model": "Qwen3-4B",
+   "cell": "Qwen3-4B\\openvino-genai_npu_npu-sym-g128",
+   "kind": "python",
+   "venv": "ovgenai",
+   "script": "run_ovgenai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\z2-npu\\Qwen3-4B-int4-sym-g128-ov",
+    "--device",
+    "NPU",
+    "--cache-dir",
+    "{ROOT}\\ovcache\\Qwen3-4B_npu_sym_g128"
+   ],
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 30,
+   "ram_need_gb": 4.6,
+   "note": "OpenVINO GenAI 2026.4.1 on NPU (CACHE_DIR); the IR exported here by pc/export_npu.ps1 in the NPU form of the OpenVINO GenAI NPU docs (int4, --sym, --ratio 1.0, --group-size 128) from Qwen/Qwen3-4B@1cfa9a720891 with optimum-intel 2.2.0, nncf 3.4.0, transformers 5.5.4 (OpenVINO's int4-ov, int4_sym g128 r1.0 + AWQ, gave degenerate tokens on the NPU)"
+  },
+  {
+   "model": "gemma-4-E4B-it",
+   "cell": "gemma-4-E4B-it\\openvino-genai_npu_npu-sym-cw",
+   "kind": "python",
+   "venv": "ovgenai",
+   "script": "run_ovgenai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\z2-npu\\gemma-4-E4B-it-int4-sym-cw-ov",
+    "--device",
+    "NPU",
+    "--cache-dir",
+    "{ROOT}\\ovcache\\gemma-4-E4B-it_npu_sym_cw"
+   ],
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 30,
+   "ram_need_gb": 9.3,
+   "note": "OpenVINO GenAI 2026.4.1 on NPU (CACHE_DIR); the IR exported here by pc/export_npu.ps1 in the NPU form of the OpenVINO GenAI NPU docs (int4, --sym, --ratio 1.0, --group-size -1) from google/gemma-4-E4B-it@4ecc2ba63bca with optimum-intel 2.2.0, nncf 3.4.0, transformers 5.5.4 (OpenVINO's int4-ov is not in the NPU form; the group 128 export ended the NPU load with 0xC0000005)"
+  },
+  {
+   "model": "gemma-4-E2B-it",
+   "cell": "gemma-4-E2B-it\\ort-genai_cpu_cpu",
+   "kind": "python",
+   "venv": "genai",
+   "script": "run_genai.py",
+   "args": [
+    "--model-dir",
+    "{HOME}\\.foundry\\cache\\models\\Microsoft\\gemma-4-e2b-it-generic-cpu-3\\v3",
+    "--ep",
+    "follow_config"
+   ],
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 60,
+   "ram_need_gb": 9.1,
+   "note": "Foundry Local catalog package files (Microsoft), run outside Foundry; the first pass stopped it at 15 running minutes, sharing the CPU: once more with 60"
+  },
+  {
+   "model": "gemma-4-E2B-it",
+   "cell": "gemma-4-E2B-it\\foundry_cpu_cpu",
+   "kind": "foundry",
+   "venv": "genai",
+   "model_id": "gemma-4-e2b-it-generic-cpu:3",
+   "path": "/v1",
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 60,
+   "ram_need_gb": 9.1,
+   "note": "Foundry Local catalog variant gemma-4-e2b-it-generic-cpu:3; in the first pass another lane's timing lock stopped it again and again at up to 15 running minutes (not finished): here it is suspended under a lock, limit 60 running minutes; timed without a finished first pass: in the first pass it loaded in 19 to 21 s each of the six times it reached the generation, and another lane's lock stopped every try before the end"
+  }
+ ],
+ "added_by_hand": [
+  "gemma-4-E2B-it\\ort-genai_cpu_cpu (the unit of pc/plans/walk-e2bcpu.json, whose first pass passed at 07:11, after this plan was written at 05:54; the slow E2B CPU cells go last)",
+  "gemma-4-E2B-it\\foundry_cpu_cpu (the unit of pc/plans/walk-foundry-cpu.json, timed without a finished first pass; see its note)"
+ ],
+ "from_first_pass": [
+  "walk-first",
+  "walk-foundry2",
+  "walk-foundry-fix1",
+  "walk-foundry-fix2",
+  "walk-foundry-fix3",
+  "walk-npu-sym",
+  "walk-npu-asym",
+  "walk-npu-e4bpub",
+  "walk-npu-vlm",
+  "walk-npu-fix1",
+  "walk-npu-fix2",
+  "walk-npu-fix3",
+  "walk-npuexp",
+  "walk-npuexp2",
+  "walk-npuexp3",
+  "walk-npuexp4",
+  "walk-e2bcpu",
+  "walk-foundry-cpu"
+ ]
+}

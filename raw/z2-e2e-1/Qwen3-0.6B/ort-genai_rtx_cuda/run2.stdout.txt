@@ -1,0 +1,2 @@
+{"gen": 1, "generated_tokens": 128, "stop": "length", "ttft_ms": 294.64040001039393, "decode_tps": 210.60996626446556}
+{"gen": 2, "generated_tokens": 128, "stop": "length", "ttft_ms": 7.897200004663318, "decode_tps": 226.29892911226028}

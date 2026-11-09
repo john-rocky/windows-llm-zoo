@@ -1,0 +1,26 @@
+{
+    "group":  128,
+    "venv_exit":  0,
+    "models":  [
+                   {
+                       "model":  "Qwen3-4B",
+                       "repo":  "Qwen/Qwen3-4B",
+                       "source":  "C:\\src\\llmzoo-walk\\hf\\Qwen__Qwen3-4B",
+                       "out":  "C:\\src\\llmzoo-walk\\models\\z2-npu\\Qwen3-4B-int4-sym-g128-ov",
+                       "group":  128,
+                       "command":  "optimum-cli export openvino --model C:\\src\\llmzoo-walk\\hf\\Qwen__Qwen3-4B --task text-generation-with-past --weight-format int4 --sym --ratio 1.0 --group-size 128 C:\\src\\llmzoo-walk\\models\\z2-npu\\Qwen3-4B-int4-sym-g128-ov",
+                       "exit":  "0",
+                       "running_s":  218.1,
+                       "peak_ws_mb":  10066,
+                       "peak_private_mb":  9763,
+                       "avail_gb_start":  21.2,
+                       "avail_gb_min":  2.8,
+                       "commit_free_gb_min":  29.1,
+                       "stdout":  "C:\\src\\llmzoo-walk\\logs\\export_Qwen3-4B_g128.out.txt",
+                       "stderr":  "C:\\src\\llmzoo-walk\\logs\\export_Qwen3-4B_g128.err.txt",
+                       "ir_info":  "C:\\src\\llmzoo-walk\\logs\\export_Qwen3-4B_g128.ir.json",
+                       "end":  "2026-11-08T00:31:07.4747089+09:00"
+                   }
+               ],
+    "fetch_exit":  0
+}

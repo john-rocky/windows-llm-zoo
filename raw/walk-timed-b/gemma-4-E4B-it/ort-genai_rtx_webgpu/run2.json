@@ -1,0 +1,102 @@
+{
+ "runner": "run_genai.py",
+ "started": "2026-11-08T20:18:11.593844+09:00",
+ "argv": [
+  "--model-dir",
+  "C:\\src\\llmzoo-walk\\overlays\\gemma-4-E4B-it_webgpu_a0",
+  "--ep",
+  "follow_config",
+  "--prompt-file",
+  "C:\\src\\llmzoo-walk\\pc\\short-chat.txt",
+  "--out",
+  "C:\\src\\llmzoo-walk\\runs\\walk-timed-b\\gemma-4-E4B-it\\ort-genai_rtx_webgpu\\run2.json"
+ ],
+ "pid": 26372,
+ "cuda_dll_dirs": [],
+ "versions": {
+  "python": "3.12.10",
+  "onnxruntime-genai": "0.19.0",
+  "onnxruntime": "1.31.1",
+  "onnxruntime-ep-openvino": "1.8.1",
+  "onnxruntime-ep-webgpu": "0.5.0",
+  "numpy": "2.5.4"
+ },
+ "prompt_sha256": "870aafb98e570e8fa1343ec051180237f4587233f49c0cc1391724e086d42d50",
+ "load_s": 12.811300400004257,
+ "device_type": "WebGPU",
+ "chat_template": "tokenizer.apply_chat_template",
+ "templated_prompt": "<bos><|turn>user\nExplain what on-device AI means in simple terms.<turn|>\n<|turn>model\n",
+ "templated_prompt_sha256": "70b30bff1ab92ec74814a888864b33ac65c53a053b6d35e8dfa13b353830ffb2",
+ "genai_config_providers": {
+  "decoder": [
+   {
+    "WebGPU": {
+     "adapterIndex": "0"
+    }
+   }
+  ],
+  "vision": [
+   {
+    "WebGPU": {
+     "adapterIndex": "0"
+    }
+   }
+  ],
+  "embedding": [
+   {
+    "WebGPU": {
+     "adapterIndex": "0"
+    }
+   }
+  ],
+  "speech": [
+   {
+    "WebGPU": {
+     "adapterIndex": "0"
+    }
+   }
+  ]
+ },
+ "gens": [
+  {
+   "prompt_tokens": 20,
+   "generated_tokens": 128,
+   "stop": "length",
+   "sequence_length": 148,
+   "generator_s": 0.03129780001472682,
+   "prefill_ms": 858.1370000028983,
+   "first_step_ms": 0.4245000018272549,
+   "ttft_ms": 858.5615000047255,
+   "prefill_tps": 23.306301907425564,
+   "decode_tps": 17.276196498669073,
+   "decode_s": 7.351155100011965,
+   "generation_wall_s": 8.217155299993465,
+   "text": "Imagine your smartphone or a smart device (like a smart speaker or fitness tracker) is like a very smart assistant.\n\n**\"On-device AI\" simply means that the \"brain\" or the \"thinking part\" of that assistant is actually *inside* the device itself, not constantly needing to talk to the internet.**\n\nHere is a breakdown using simple analogies:\n\n---\n\n### 🧠 The Old Way (Cloud AI) vs. The New Way (On-Device AI)\n\n**1. The Old Way (Cloud AI - Like sending a text to a friend):**\n* **What happens:** You ask your phone",
+   "text_sha256": "dd560bb150802430c2375464d71c99153dab3b6492ffccb73329fd26ce407f0f",
+   "gen": 1,
+   "regime": "cold"
+  },
+  {
+   "prompt_tokens": 20,
+   "generated_tokens": 128,
+   "stop": "length",
+   "sequence_length": 148,
+   "generator_s": 0.004967999993823469,
+   "prefill_ms": 265.6379999825731,
+   "first_step_ms": 0.4523000097833574,
+   "ttft_ms": 266.09029999235645,
+   "prefill_tps": 75.29043284963778,
+   "decode_tps": 18.71538455104951,
+   "decode_s": 6.785861100186594,
+   "generation_wall_s": 7.06027349998476,
+   "text": "Imagine your smartphone or a smart device (like a smart speaker or fitness tracker) is like a very smart assistant.\n\n**\"On-device AI\" simply means that the \"brain\" or the \"thinking part\" of that assistant is actually *inside* the device itself, not constantly needing to talk to the internet.**\n\nHere is a breakdown using simple analogies:\n\n---\n\n### 🧠 The Old Way (Cloud AI) vs. The New Way (On-Device AI)\n\n**1. The Old Way (Cloud AI - Like sending a text to a friend):**\n* **What happens:** You ask your phone",
+   "text_sha256": "dd560bb150802430c2375464d71c99153dab3b6492ffccb73329fd26ce407f0f",
+   "gen": 2,
+   "regime": "warm"
+  }
+ ],
+ "status": "OK",
+ "peak_working_set_bytes": 6076989440,
+ "peak_pagefile_bytes": 9088929792,
+ "ended": "2026-11-08T20:18:42.970609+09:00"
+}

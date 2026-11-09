@@ -1,0 +1,1348 @@
+[
+ {
+  "repo": "onnx-community/Qwen3-0.6B-ONNX",
+  "folder": "onnxruntime/cuda/cuda-int4-kld-block-128",
+  "revision": "da1453100cf3ff33ef56d17983fc7a8648706db6",
+  "license": null,
+  "created": "2025-04-28T22:23:09.000Z",
+  "bytes": 516098246,
+  "files": [
+   {
+    "path": "onnxruntime/cuda/cuda-int4-kld-block-128/chat_template.jinja",
+    "size": 4168,
+    "sha256": null,
+    "blob": "01be9b307daa2d425f7c168c9fb145a286e0afb4"
+   },
+   {
+    "path": "onnxruntime/cuda/cuda-int4-kld-block-128/config.json",
+    "size": 8957,
+    "sha256": null,
+    "blob": "5ce6a48070938679a140360cd6e1f6f211460077"
+   },
+   {
+    "path": "onnxruntime/cuda/cuda-int4-kld-block-128/genai_config.json",
+    "size": 1765,
+    "sha256": null,
+    "blob": "c6c4604bdbd0f14b762b3513f7780cd628bf8aa8"
+   },
+   {
+    "path": "onnxruntime/cuda/cuda-int4-kld-block-128/model.onnx",
+    "size": 504660045,
+    "sha256": "40d04ddc791196a0be2a8a17a88e7a9cdc3fde42ff6c6412b9170bd11208e03a",
+    "blob": "94ce96ade46c773aa554782488fb1c20413628be"
+   },
+   {
+    "path": "onnxruntime/cuda/cuda-int4-kld-block-128/tokenizer.json",
+    "size": 11422648,
+    "sha256": "979d160e081df25a1bf7f4e2e8f4c441b5dfdc9a8e84aec9f32e80445e1b59b8",
+    "blob": "939a6799f0af4756b416ce8e90d880bd8fe2b6d9"
+   },
+   {
+    "path": "onnxruntime/cuda/cuda-int4-kld-block-128/tokenizer_config.json",
+    "size": 663,
+    "sha256": null,
+    "blob": "eeb7009b684350496c7020a205e8ee025d9ee159"
+   }
+  ]
+ },
+ {
+  "repo": "onnx-community/Qwen3-0.6B-ONNX",
+  "folder": "onnxruntime/webgpu/webgpu-int4-kld-block-32",
+  "revision": "da1453100cf3ff33ef56d17983fc7a8648706db6",
+  "license": null,
+  "created": "2025-04-28T22:23:09.000Z",
+  "bytes": 554759306,
+  "files": [
+   {
+    "path": "onnxruntime/webgpu/webgpu-int4-kld-block-32/chat_template.jinja",
+    "size": 4168,
+    "sha256": null,
+    "blob": "01be9b307daa2d425f7c168c9fb145a286e0afb4"
+   },
+   {
+    "path": "onnxruntime/webgpu/webgpu-int4-kld-block-32/config.json",
+    "size": 9033,
+    "sha256": null,
+    "blob": "d0a1f0936e40260ebc455b29c1f8e02364852e4e"
+   },
+   {
+    "path": "onnxruntime/webgpu/webgpu-int4-kld-block-32/genai_config.json",
+    "size": 1752,
+    "sha256": null,
+    "blob": "51c41d433774036fecd682183abe686f19f9441e"
+   },
+   {
+    "path": "onnxruntime/webgpu/webgpu-int4-kld-block-32/model.onnx",
+    "size": 543321042,
+    "sha256": "5e9fb386cb1a14009b02b43b0e0f0043e248ad5a6d3c3521c9a516062509909a",
+    "blob": "42a4ca9dd404a8b7f801fcbc5dcb18f7c60221ad"
+   },
+   {
+    "path": "onnxruntime/webgpu/webgpu-int4-kld-block-32/tokenizer.json",
+    "size": 11422648,
+    "sha256": "979d160e081df25a1bf7f4e2e8f4c441b5dfdc9a8e84aec9f32e80445e1b59b8",
+    "blob": "939a6799f0af4756b416ce8e90d880bd8fe2b6d9"
+   },
+   {
+    "path": "onnxruntime/webgpu/webgpu-int4-kld-block-32/tokenizer_config.json",
+    "size": 663,
+    "sha256": null,
+    "blob": "eeb7009b684350496c7020a205e8ee025d9ee159"
+   }
+  ]
+ },
+ {
+  "repo": "onnx-community/Qwen3-0.6B-ONNX",
+  "folder": "onnxruntime/cpu_and_mobile/cpu-int4-kld-block-128",
+  "revision": "da1453100cf3ff33ef56d17983fc7a8648706db6",
+  "license": null,
+  "created": "2025-04-28T22:23:09.000Z",
+  "bytes": 536027089,
+  "files": [
+   {
+    "path": "onnxruntime/cpu_and_mobile/cpu-int4-kld-block-128/chat_template.jinja",
+    "size": 4168,
+    "sha256": null,
+    "blob": "01be9b307daa2d425f7c168c9fb145a286e0afb4"
+   },
+   {
+    "path": "onnxruntime/cpu_and_mobile/cpu-int4-kld-block-128/config.json",
+    "size": 8957,
+    "sha256": null,
+    "blob": "5ce6a48070938679a140360cd6e1f6f211460077"
+   },
+   {
+    "path": "onnxruntime/cpu_and_mobile/cpu-int4-kld-block-128/genai_config.json",
+    "size": 1520,
+    "sha256": null,
+    "blob": "b8d270f5c99efc2536bc8292be160c9df8be56ae"
+   },
+   {
+    "path": "onnxruntime/cpu_and_mobile/cpu-int4-kld-block-128/model.onnx",
+    "size": 524589133,
+    "sha256": "35fe34321ea9b1eaa43dfa648dd199903d01d93f97dc2b24fe1d16079ebea957",
+    "blob": "caebbdd596ad553b14b6029929aee9357e01d749"
+   },
+   {
+    "path": "onnxruntime/cpu_and_mobile/cpu-int4-kld-block-128/tokenizer.json",
+    "size": 11422648,
+    "sha256": "979d160e081df25a1bf7f4e2e8f4c441b5dfdc9a8e84aec9f32e80445e1b59b8",
+    "blob": "939a6799f0af4756b416ce8e90d880bd8fe2b6d9"
+   },
+   {
+    "path": "onnxruntime/cpu_and_mobile/cpu-int4-kld-block-128/tokenizer_config.json",
+    "size": 663,
+    "sha256": null,
+    "blob": "eeb7009b684350496c7020a205e8ee025d9ee159"
+   }
+  ]
+ },
+ {
+  "repo": "onnx-community/Qwen3-1.7B-ONNX",
+  "folder": "onnxruntime/cuda/cuda-int4-kld-block-128",
+  "revision": "cc6a06a21d614e9b8e92a6adfab1074d4e7d2438",
+  "license": null,
+  "created": "2025-04-28T23:47:52.000Z",
+  "bytes": 1382766014,
+  "files": [
+   {
+    "path": "onnxruntime/cuda/cuda-int4-kld-block-128/chat_template.jinja",
+    "size": 4168,
+    "sha256": null,
+    "blob": "01be9b307daa2d425f7c168c9fb145a286e0afb4"
+   },
+   {
+    "path": "onnxruntime/cuda/cuda-int4-kld-block-128/config.json",
+    "size": 8697,
+    "sha256": null,
+    "blob": "a78f2f2d598ca55c0edfd7cef64698b392c8c6c7"
+   },
+   {
+    "path": "onnxruntime/cuda/cuda-int4-kld-block-128/genai_config.json",
+    "size": 1765,
+    "sha256": null,
+    "blob": "3fef1e774664284309105876918a609fff4322c7"
+   },
+   {
+    "path": "onnxruntime/cuda/cuda-int4-kld-block-128/model.onnx",
+    "size": 1371328073,
+    "sha256": "94ee37f1fabe304cd3046803830724f9be8b520dd0400bcd421185c644041096",
+    "blob": "0d5781ddc4ca495e8ac491e68eaae39dd34c12b6"
+   },
+   {
+    "path": "onnxruntime/cuda/cuda-int4-kld-block-128/tokenizer.json",
+    "size": 11422648,
+    "sha256": "979d160e081df25a1bf7f4e2e8f4c441b5dfdc9a8e84aec9f32e80445e1b59b8",
+    "blob": "939a6799f0af4756b416ce8e90d880bd8fe2b6d9"
+   },
+   {
+    "path": "onnxruntime/cuda/cuda-int4-kld-block-128/tokenizer_config.json",
+    "size": 663,
+    "sha256": null,
+    "blob": "eeb7009b684350496c7020a205e8ee025d9ee159"
+   }
+  ]
+ },
+ {
+  "repo": "onnx-community/Qwen3-1.7B-ONNX",
+  "folder": "onnxruntime/webgpu/webgpu-int4-kld-block-32",
+  "revision": "cc6a06a21d614e9b8e92a6adfab1074d4e7d2438",
+  "license": null,
+  "created": "2025-04-28T23:47:52.000Z",
+  "bytes": 1490095316,
+  "files": [
+   {
+    "path": "onnxruntime/webgpu/webgpu-int4-kld-block-32/chat_template.jinja",
+    "size": 4168,
+    "sha256": null,
+    "blob": "01be9b307daa2d425f7c168c9fb145a286e0afb4"
+   },
+   {
+    "path": "onnxruntime/webgpu/webgpu-int4-kld-block-32/config.json",
+    "size": 8707,
+    "sha256": null,
+    "blob": "ce329a9f6964b3f64dc28c886cd872bf00f2666a"
+   },
+   {
+    "path": "onnxruntime/webgpu/webgpu-int4-kld-block-32/genai_config.json",
+    "size": 1752,
+    "sha256": null,
+    "blob": "8800f18062765ec065fea5d21da78355990dd74a"
+   },
+   {
+    "path": "onnxruntime/webgpu/webgpu-int4-kld-block-32/model.onnx",
+    "size": 1478657378,
+    "sha256": "46d813105b1ae677c28f2e83a79de0d2db1b84ec6a5e344a6fcfa8ce3eba90bf",
+    "blob": "f97d586d8c19cfd0f9826f857d66185138f62988"
+   },
+   {
+    "path": "onnxruntime/webgpu/webgpu-int4-kld-block-32/tokenizer.json",
+    "size": 11422648,
+    "sha256": "979d160e081df25a1bf7f4e2e8f4c441b5dfdc9a8e84aec9f32e80445e1b59b8",
+    "blob": "939a6799f0af4756b416ce8e90d880bd8fe2b6d9"
+   },
+   {
+    "path": "onnxruntime/webgpu/webgpu-int4-kld-block-32/tokenizer_config.json",
+    "size": 663,
+    "sha256": null,
+    "blob": "eeb7009b684350496c7020a205e8ee025d9ee159"
+   }
+  ]
+ },
+ {
+  "repo": "onnx-community/Qwen3-1.7B-ONNX",
+  "folder": "onnxruntime/cpu_and_mobile/cpu-int4-kld-block-128",
+  "revision": "cc6a06a21d614e9b8e92a6adfab1074d4e7d2438",
+  "license": null,
+  "created": "2025-04-28T23:47:52.000Z",
+  "bytes": 1420381385,
+  "files": [
+   {
+    "path": "onnxruntime/cpu_and_mobile/cpu-int4-kld-block-128/chat_template.jinja",
+    "size": 4168,
+    "sha256": null,
+    "blob": "01be9b307daa2d425f7c168c9fb145a286e0afb4"
+   },
+   {
+    "path": "onnxruntime/cpu_and_mobile/cpu-int4-kld-block-128/config.json",
+    "size": 8697,
+    "sha256": null,
+    "blob": "a78f2f2d598ca55c0edfd7cef64698b392c8c6c7"
+   },
+   {
+    "path": "onnxruntime/cpu_and_mobile/cpu-int4-kld-block-128/genai_config.json",
+    "size": 1520,
+    "sha256": null,
+    "blob": "e551fa928570f785db8f8dbf68ad969e51e0913b"
+   },
+   {
+    "path": "onnxruntime/cpu_and_mobile/cpu-int4-kld-block-128/model.onnx",
+    "size": 1408943689,
+    "sha256": "9fddc5a0a7f9c51132c376db8fe44774b17a8e42d721c4d289ade16af87da0bd",
+    "blob": "c9aa0d006d3d3f523736121762d470307d46c861"
+   },
+   {
+    "path": "onnxruntime/cpu_and_mobile/cpu-int4-kld-block-128/tokenizer.json",
+    "size": 11422648,
+    "sha256": "979d160e081df25a1bf7f4e2e8f4c441b5dfdc9a8e84aec9f32e80445e1b59b8",
+    "blob": "939a6799f0af4756b416ce8e90d880bd8fe2b6d9"
+   },
+   {
+    "path": "onnxruntime/cpu_and_mobile/cpu-int4-kld-block-128/tokenizer_config.json",
+    "size": 663,
+    "sha256": null,
+    "blob": "eeb7009b684350496c7020a205e8ee025d9ee159"
+   }
+  ]
+ },
+ {
+  "repo": "onnx-community/Qwen3-4B-ONNX",
+  "folder": "onnxruntime/cuda/cuda-int4-kld-block-128",
+  "revision": "98ddba15d05dede4435afb63f13280abcdbc2a48",
+  "license": null,
+  "created": "2025-06-17T18:08:22.000Z",
+  "bytes": 2823667280,
+  "files": [
+   {
+    "path": "onnxruntime/cuda/cuda-int4-kld-block-128/chat_template.jinja",
+    "size": 4168,
+    "sha256": null,
+    "blob": "01be9b307daa2d425f7c168c9fb145a286e0afb4"
+   },
+   {
+    "path": "onnxruntime/cuda/cuda-int4-kld-block-128/config.json",
+    "size": 9567,
+    "sha256": null,
+    "blob": "2b73e84798ff50e4ceb545af109727875ca42372"
+   },
+   {
+    "path": "onnxruntime/cuda/cuda-int4-kld-block-128/genai_config.json",
+    "size": 1765,
+    "sha256": null,
+    "blob": "c38ece60184ba3e5dfcd2c7d8410bc58c5c66972"
+   },
+   {
+    "path": "onnxruntime/cuda/cuda-int4-kld-block-128/model.onnx",
+    "size": 501109,
+    "sha256": "b074fc8192970b977761284deb5c7d3db3e47ab92bccbbad44c552f9c2370b29",
+    "blob": "4a9b33b2b937da8f872750d8ec3dcbe0f261d44e"
+   },
+   {
+    "path": "onnxruntime/cuda/cuda-int4-kld-block-128/model.onnx.data",
+    "size": 2811727360,
+    "sha256": "35d01a337b4ec19f5a7e363c6260cf6ddd53102e17169f96099bd29d3fbcd24a",
+    "blob": "9322bf85a55bd82d2e8f58b3b7a24793ac917082"
+   },
+   {
+    "path": "onnxruntime/cuda/cuda-int4-kld-block-128/tokenizer.json",
+    "size": 11422648,
+    "sha256": "979d160e081df25a1bf7f4e2e8f4c441b5dfdc9a8e84aec9f32e80445e1b59b8",
+    "blob": "939a6799f0af4756b416ce8e90d880bd8fe2b6d9"
+   },
+   {
+    "path": "onnxruntime/cuda/cuda-int4-kld-block-128/tokenizer_config.json",
+    "size": 663,
+    "sha256": null,
+    "blob": "eeb7009b684350496c7020a205e8ee025d9ee159"
+   }
+  ]
+ },
+ {
+  "repo": "onnx-community/Qwen3-4B-ONNX",
+  "folder": "onnxruntime/webgpu/webgpu-int4-kld-block-32",
+  "revision": "98ddba15d05dede4435afb63f13280abcdbc2a48",
+  "license": null,
+  "created": "2025-06-17T18:08:22.000Z",
+  "bytes": 3082644649,
+  "files": [
+   {
+    "path": "onnxruntime/webgpu/webgpu-int4-kld-block-32/chat_template.jinja",
+    "size": 4168,
+    "sha256": null,
+    "blob": "01be9b307daa2d425f7c168c9fb145a286e0afb4"
+   },
+   {
+    "path": "onnxruntime/webgpu/webgpu-int4-kld-block-32/config.json",
+    "size": 9347,
+    "sha256": null,
+    "blob": "2ddcf997f1bb80d577c43f74f922c933ece59c71"
+   },
+   {
+    "path": "onnxruntime/webgpu/webgpu-int4-kld-block-32/genai_config.json",
+    "size": 1752,
+    "sha256": null,
+    "blob": "30193c2eac570a79504f26ea2ea9338a17dff715"
+   },
+   {
+    "path": "onnxruntime/webgpu/webgpu-int4-kld-block-32/model.onnx",
+    "size": 501431,
+    "sha256": "bcaf3e1fc7ee93a7dc2eb4d973ea2fbdcabe8f3fb00b589b86d07ab46ab7245a",
+    "blob": "514400250215fa1de6c17a63b038d87254580783"
+   },
+   {
+    "path": "onnxruntime/webgpu/webgpu-int4-kld-block-32/model.onnx.data",
+    "size": 3070704640,
+    "sha256": "18bef60545f9e8703ac0471a433d15ff0a527e172d967e6441283ac08520f9ce",
+    "blob": "2a6a97642883a8085eb66437105a2c5a3d592101"
+   },
+   {
+    "path": "onnxruntime/webgpu/webgpu-int4-kld-block-32/tokenizer.json",
+    "size": 11422648,
+    "sha256": "979d160e081df25a1bf7f4e2e8f4c441b5dfdc9a8e84aec9f32e80445e1b59b8",
+    "blob": "939a6799f0af4756b416ce8e90d880bd8fe2b6d9"
+   },
+   {
+    "path": "onnxruntime/webgpu/webgpu-int4-kld-block-32/tokenizer_config.json",
+    "size": 663,
+    "sha256": null,
+    "blob": "eeb7009b684350496c7020a205e8ee025d9ee159"
+   }
+  ]
+ },
+ {
+  "repo": "onnx-community/Qwen3-4B-ONNX",
+  "folder": "onnxruntime/cpu_and_mobile/cpu-int4-kld-block-128",
+  "revision": "98ddba15d05dede4435afb63f13280abcdbc2a48",
+  "license": null,
+  "created": "2025-06-17T18:08:22.000Z",
+  "bytes": 2897393080,
+  "files": [
+   {
+    "path": "onnxruntime/cpu_and_mobile/cpu-int4-kld-block-128/chat_template.jinja",
+    "size": 4168,
+    "sha256": null,
+    "blob": "01be9b307daa2d425f7c168c9fb145a286e0afb4"
+   },
+   {
+    "path": "onnxruntime/cpu_and_mobile/cpu-int4-kld-block-128/config.json",
+    "size": 9567,
+    "sha256": null,
+    "blob": "2b73e84798ff50e4ceb545af109727875ca42372"
+   },
+   {
+    "path": "onnxruntime/cpu_and_mobile/cpu-int4-kld-block-128/genai_config.json",
+    "size": 1520,
+    "sha256": null,
+    "blob": "b2655e52da5f4c5ed8962401153bd54b4ef8af7d"
+   },
+   {
+    "path": "onnxruntime/cpu_and_mobile/cpu-int4-kld-block-128/model.onnx",
+    "size": 519634,
+    "sha256": "b4547cf9327bd532cb81703cf013f958117ba5a3e5a81c7c79a33aba534ff337",
+    "blob": "e95283a89f00e88b23d84c3883b7b8ef8c7adc7f"
+   },
+   {
+    "path": "onnxruntime/cpu_and_mobile/cpu-int4-kld-block-128/model.onnx.data",
+    "size": 2885434880,
+    "sha256": "d6003acd70841b99a44ce4c21d13dc42244e3ec3b7c12d70919f9b55440bbc45",
+    "blob": "60c78f8e72fb4e3f38e0e647558e84813a4d49dd"
+   },
+   {
+    "path": "onnxruntime/cpu_and_mobile/cpu-int4-kld-block-128/tokenizer.json",
+    "size": 11422648,
+    "sha256": "979d160e081df25a1bf7f4e2e8f4c441b5dfdc9a8e84aec9f32e80445e1b59b8",
+    "blob": "939a6799f0af4756b416ce8e90d880bd8fe2b6d9"
+   },
+   {
+    "path": "onnxruntime/cpu_and_mobile/cpu-int4-kld-block-128/tokenizer_config.json",
+    "size": 663,
+    "sha256": null,
+    "blob": "eeb7009b684350496c7020a205e8ee025d9ee159"
+   }
+  ]
+ },
+ {
+  "repo": "mlboydaisuke/gemma-4-E4B-it-Foundry-Local",
+  "folder": "cuda-int4-8k",
+  "revision": "9d1751f435ea791ba14be320ff14ed6b8cf1aa61",
+  "license": "apache-2.0",
+  "created": "2026-11-06T11:46:35.000Z",
+  "bytes": 7216677601,
+  "files": [
+   {
+    "path": "cuda-int4-8k/audio_encoder/model.onnx",
+    "size": 1235179,
+    "sha256": "76c47e0ebb34950d0a8095dc3f8bd05723ecfab0f40a834b54616983e8a3f293",
+    "blob": "60a187045663c3d9989bcb4ed8dc1100ef08e8b2"
+   },
+   {
+    "path": "cuda-int4-8k/audio_encoder/model.onnx.data",
+    "size": 338212096,
+    "sha256": "c36365010ba042705451761b595231412dda89091defa935db829393cab38bf7",
+    "blob": "0d3560375d3abbae3534dc18118ee6ab8d16a2d1"
+   },
+   {
+    "path": "cuda-int4-8k/audio_feature_extraction.json",
+    "size": 952,
+    "sha256": null,
+    "blob": "4555e7032da2c4c76408b0702e32d986082ebf41"
+   },
+   {
+    "path": "cuda-int4-8k/chat_template.jinja",
+    "size": 18569,
+    "sha256": null,
+    "blob": "fbe3b59b625cd1b8850ea592d4203df6ec04684b"
+   },
+   {
+    "path": "cuda-int4-8k/decoder/model.onnx",
+    "size": 1028264,
+    "sha256": "5d2c060565572be342b96fd603f76c1c7b60696f5c6d3cc8d97f8425b05cb457",
+    "blob": "71c921b138add7eaa223e078285725475317787b"
+   },
+   {
+    "path": "cuda-int4-8k/decoder/model.onnx.data",
+    "size": 2799146496,
+    "sha256": "ae39387ffa60e38abda3c5992dadf91ceab905f5384aa10f7c6b94edc12a5de4",
+    "blob": "a6368db0610fa1a27cb09a806cff4b0a8eaaf9e6"
+   },
+   {
+    "path": "cuda-int4-8k/embedding/model.onnx",
+    "size": 15765,
+    "sha256": "48fe2af851404a0f4a0783f5110f254edb2fb7a644df1e596ab33a6eedbd87a5",
+    "blob": "4c44673e947452d6c61937230c877b65f3a54b8d"
+   },
+   {
+    "path": "cuda-int4-8k/embedding/model.onnx.data",
+    "size": 3846932992,
+    "sha256": "57ce316b0cae4b23032234ecfcd2534d60f575aa121a7787079d0110c245da99",
+    "blob": "5010928d32c0cf9d2cd91b459f0f0e41d87a9dd2"
+   },
+   {
+    "path": "cuda-int4-8k/export_info.json",
+    "size": 555,
+    "sha256": null,
+    "blob": "52aca78d4d4fa1bd5231e7bbb58010774bd79551"
+   },
+   {
+    "path": "cuda-int4-8k/genai_config.json",
+    "size": 4283,
+    "sha256": null,
+    "blob": "d196f61f69994f6869ef624881eedc2edfdd6caa"
+   },
+   {
+    "path": "cuda-int4-8k/image_processor.json",
+    "size": 770,
+    "sha256": null,
+    "blob": "b04aae9291e3f42358c2009ccc83bc5925b76f31"
+   },
+   {
+    "path": "cuda-int4-8k/quant_info.json",
+    "size": 2011,
+    "sha256": null,
+    "blob": "693147b3f47b663259a6e5a1d3da4af71c5b90c1"
+   },
+   {
+    "path": "cuda-int4-8k/tokenizer.json",
+    "size": 32156428,
+    "sha256": "91d9cf86906f78e197021fda88214d448e5c120665d0243a8e776e046986c6bc",
+    "blob": "0e3703ae5fe4459202ad171ccb127b4fcfb7f275"
+   },
+   {
+    "path": "cuda-int4-8k/tokenizer_config.json",
+    "size": 22216,
+    "sha256": null,
+    "blob": "724ff0d0bc837e31bcdcdbb90f459eec6a0ab94a"
+   },
+   {
+    "path": "cuda-int4-8k/vision_encoder/model.onnx",
+    "size": 1182945,
+    "sha256": "e93e62590d563bfebedf54429a20ee8e3cb5cab05a7b267a575fbc9ec4487c23",
+    "blob": "d1d7e07586918daa05487c8e40e92d782468435b"
+   },
+   {
+    "path": "cuda-int4-8k/vision_encoder/model.onnx.data",
+    "size": 196718080,
+    "sha256": "d237bf91d2c20d40d7758cf59d6f38653828101b35f3474c3423018b2f3b560b",
+    "blob": "d5213463b410aaf52a5ce5348a0460698086857a"
+   }
+  ]
+ },
+ {
+  "repo": "mlboydaisuke/gemma-4-E4B-it-Foundry-Local",
+  "folder": "cpu-int4",
+  "revision": "9d1751f435ea791ba14be320ff14ed6b8cf1aa61",
+  "license": "apache-2.0",
+  "created": "2026-11-06T11:46:35.000Z",
+  "bytes": 7459026598,
+  "files": [
+   {
+    "path": "cpu-int4/audio_encoder/model.onnx",
+    "size": 1162623,
+    "sha256": "f69ce49a821a837189fbe393216878c4089c0a3edd12acdc0a2b1f38aa835047",
+    "blob": "69d44d7ffff8ef7c096f2efa83f462a21677654a"
+   },
+   {
+    "path": "cpu-int4/audio_encoder/model.onnx.data",
+    "size": 319677440,
+    "sha256": "f8f84acbfce388ad2977c57a14885f8cc00933167c52f3ee57c35f0ac8d36503",
+    "blob": "6c7e783ed59859030eab5a2e026b4f12b7fb39c8"
+   },
+   {
+    "path": "cpu-int4/audio_feature_extraction.json",
+    "size": 952,
+    "sha256": null,
+    "blob": "4555e7032da2c4c76408b0702e32d986082ebf41"
+   },
+   {
+    "path": "cpu-int4/chat_template.jinja",
+    "size": 18569,
+    "sha256": null,
+    "blob": "fbe3b59b625cd1b8850ea592d4203df6ec04684b"
+   },
+   {
+    "path": "cpu-int4/decoder/model.onnx",
+    "size": 1007847,
+    "sha256": "a8975d3be0889b398e619d27a6b746d131810e5d1d95d851fffcdec06525fa3b",
+    "blob": "3be5f9e29225f1b43d52006a75786a0b592c0172"
+   },
+   {
+    "path": "cpu-int4/decoder/model.onnx.data",
+    "size": 3290115072,
+    "sha256": "a4aea9eb6d8b31086d3d98f3c644172d5c0796bf7325f4060216d64e76e33c99",
+    "blob": "46b5044926f7d4321c6a69b8025113b1f09d14b1"
+   },
+   {
+    "path": "cpu-int4/embedding/model.onnx",
+    "size": 15252,
+    "sha256": "7451ed7795e45be9b60a1259e6cb1ccd191530d3923d9c62b1946c4e72234266",
+    "blob": "c3dfa2d46fc89710e8788b571f1d371bcda921d6"
+   },
+   {
+    "path": "cpu-int4/embedding/model.onnx.data",
+    "size": 3627119616,
+    "sha256": "799e08a6216c39b1d75584abf886a768467e0ea3f2ba99ebf8ad696a2fcfcfde",
+    "blob": "f8f7ea627f3cb2f7ef6a41ec0c919dfd66e18354"
+   },
+   {
+    "path": "cpu-int4/export_info.json",
+    "size": 584,
+    "sha256": null,
+    "blob": "a916489f4b9c8ccb5a9ddddfc86ed00e0d69278a"
+   },
+   {
+    "path": "cpu-int4/export_info_audio_encoder_vision_encoder.json",
+    "size": 479,
+    "sha256": null,
+    "blob": "bc6d4fb7516dcfa5c80395a9461ce320032b8118"
+   },
+   {
+    "path": "cpu-int4/export_info_decoder.json",
+    "size": 454,
+    "sha256": null,
+    "blob": "1d9367e226fede1849c8ed97accd2c1c8e82ee91"
+   },
+   {
+    "path": "cpu-int4/export_info_embedding.json",
+    "size": 454,
+    "sha256": null,
+    "blob": "693fbfb0f3e05baeb86ee4a420ac137eb4069759"
+   },
+   {
+    "path": "cpu-int4/genai_config.json",
+    "size": 3279,
+    "sha256": null,
+    "blob": "3e3af2a7fec94f880515ab3e4342118940fedf43"
+   },
+   {
+    "path": "cpu-int4/image_processor.json",
+    "size": 770,
+    "sha256": null,
+    "blob": "b04aae9291e3f42358c2009ccc83bc5925b76f31"
+   },
+   {
+    "path": "cpu-int4/quant_info.json",
+    "size": 2112,
+    "sha256": null,
+    "blob": "1a0f85f6347607b28e04d96417319eea901deb34"
+   },
+   {
+    "path": "cpu-int4/tokenizer.json",
+    "size": 32156428,
+    "sha256": "91d9cf86906f78e197021fda88214d448e5c120665d0243a8e776e046986c6bc",
+    "blob": "0e3703ae5fe4459202ad171ccb127b4fcfb7f275"
+   },
+   {
+    "path": "cpu-int4/tokenizer_config.json",
+    "size": 22216,
+    "sha256": null,
+    "blob": "724ff0d0bc837e31bcdcdbb90f459eec6a0ab94a"
+   },
+   {
+    "path": "cpu-int4/vision_encoder/model.onnx",
+    "size": 1156819,
+    "sha256": "a5fe2e2cd45872b1900510261fd784c1763ba37c4201f4f41b7a02911f6d4b36",
+    "blob": "536730b12f0bc6dd19af18ff09570297d59c998e"
+   },
+   {
+    "path": "cpu-int4/vision_encoder/model.onnx.data",
+    "size": 186565632,
+    "sha256": "7af7bdc07583e02b45a22733642816378e37cddb86a0aee7077a250fafc530c7",
+    "blob": "3d61dff04f2c04216f56373fe5ec6b96cb7275d2"
+   }
+  ]
+ },
+ {
+  "repo": "OpenVINO/Qwen3-0.6B-int4-ov",
+  "folder": "",
+  "revision": "f864c6106efb6c7f7b4ef274a78a98e37210dddd",
+  "license": "apache-2.0",
+  "created": "2025-04-30T11:38:55.000Z",
+  "bytes": 454748065,
+  "files": [
+   {
+    "path": "added_tokens.json",
+    "size": 707,
+    "sha256": null,
+    "blob": "b54f9135e44c1e81047e8d05cb027af8bc039eed"
+   },
+   {
+    "path": "config.json",
+    "size": 766,
+    "sha256": null,
+    "blob": "e95fbd56c5438342b6a312af95934dfaf31b5130"
+   },
+   {
+    "path": "generation_config.json",
+    "size": 214,
+    "sha256": null,
+    "blob": "e4f1d3193e99a3e5d7047edf56e93a6e933fa31b"
+   },
+   {
+    "path": "merges.txt",
+    "size": 1671853,
+    "sha256": null,
+    "blob": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7"
+   },
+   {
+    "path": "openvino_detokenizer.bin",
+    "size": 2189717,
+    "sha256": "d73093f72c80ebcaffb76a192727170ecd3c6a06c4df52df0e76b3f70ad9d7f7",
+    "blob": "eb36928fe402b744812cc08132e3d3f5026c5759"
+   },
+   {
+    "path": "openvino_detokenizer.xml",
+    "size": 11369,
+    "sha256": null,
+    "blob": "59eaf61da220451abf37b09fad4a7fa56cb76854"
+   },
+   {
+    "path": "openvino_model.bin",
+    "size": 428151524,
+    "sha256": "28613e994a6e1aaf54a6fe8677eda35e8e86684e653dde09f3ba960b8e53e152",
+    "blob": "525cee1042d539dc928f6ecf2c05ca9f023fced2"
+   },
+   {
+    "path": "openvino_model.xml",
+    "size": 2895946,
+    "sha256": null,
+    "blob": "bb19bf51fb52e75ed9782c5e2b94f2c0c3f2e7be"
+   },
+   {
+    "path": "openvino_tokenizer.bin",
+    "size": 5588868,
+    "sha256": "1e31f7285e95a4d08f1e5516c5099f96e169253100b4919db936990fa1923395",
+    "blob": "e33580af6eea9a03e7d5084b138abdad4545bce2"
+   },
+   {
+    "path": "openvino_tokenizer.xml",
+    "size": 27295,
+    "sha256": null,
+    "blob": "759c22a415316adcc7ea3be0f434438e2d7fa08f"
+   },
+   {
+    "path": "special_tokens_map.json",
+    "size": 613,
+    "sha256": null,
+    "blob": "ac23c0aaa2434523c494330aeb79c58395378103"
+   },
+   {
+    "path": "tokenizer.json",
+    "size": 11422654,
+    "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+    "blob": "cd71f61a15a522601badb3dc960d800d9cb3766c"
+   },
+   {
+    "path": "tokenizer_config.json",
+    "size": 9706,
+    "sha256": null,
+    "blob": "7345216a0785dc7086e8c245b2a9d3896ce2b756"
+   },
+   {
+    "path": "vocab.json",
+    "size": 2776833,
+    "sha256": null,
+    "blob": "4783fe10ac3adce15ac8f358ef5462739852c569"
+   }
+  ]
+ },
+ {
+  "repo": "OpenVINO/Qwen3-1.7B-int4-ov",
+  "folder": "",
+  "revision": "6f32d81e9deebeca30bb5490a7176cf4fa8c79e3",
+  "license": "apache-2.0",
+  "created": "2025-04-30T12:18:17.000Z",
+  "bytes": 1208321205,
+  "files": [
+   {
+    "path": "added_tokens.json",
+    "size": 707,
+    "sha256": null,
+    "blob": "b54f9135e44c1e81047e8d05cb027af8bc039eed"
+   },
+   {
+    "path": "config.json",
+    "size": 766,
+    "sha256": null,
+    "blob": "9f2628a2f749ee1b9e954990260eb0eedf4b4f8b"
+   },
+   {
+    "path": "generation_config.json",
+    "size": 214,
+    "sha256": null,
+    "blob": "e4f1d3193e99a3e5d7047edf56e93a6e933fa31b"
+   },
+   {
+    "path": "merges.txt",
+    "size": 1671853,
+    "sha256": null,
+    "blob": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7"
+   },
+   {
+    "path": "openvino_detokenizer.bin",
+    "size": 2189717,
+    "sha256": "d73093f72c80ebcaffb76a192727170ecd3c6a06c4df52df0e76b3f70ad9d7f7",
+    "blob": "eb36928fe402b744812cc08132e3d3f5026c5759"
+   },
+   {
+    "path": "openvino_detokenizer.xml",
+    "size": 11369,
+    "sha256": null,
+    "blob": "59eaf61da220451abf37b09fad4a7fa56cb76854"
+   },
+   {
+    "path": "openvino_model.bin",
+    "size": 1181738708,
+    "sha256": "2f15d719cab2e475444ff84d77d432ecf757e0ec5b93dc1b48710802f96ef34f",
+    "blob": "a48abecf9a49df4ec074994eb19f531dc95eff95"
+   },
+   {
+    "path": "openvino_model.xml",
+    "size": 2881902,
+    "sha256": null,
+    "blob": "4659f6d553ed21d04ff2d9047f984c6d8f5509c7"
+   },
+   {
+    "path": "openvino_tokenizer.bin",
+    "size": 5588868,
+    "sha256": "1e31f7285e95a4d08f1e5516c5099f96e169253100b4919db936990fa1923395",
+    "blob": "e33580af6eea9a03e7d5084b138abdad4545bce2"
+   },
+   {
+    "path": "openvino_tokenizer.xml",
+    "size": 27295,
+    "sha256": null,
+    "blob": "759c22a415316adcc7ea3be0f434438e2d7fa08f"
+   },
+   {
+    "path": "special_tokens_map.json",
+    "size": 613,
+    "sha256": null,
+    "blob": "ac23c0aaa2434523c494330aeb79c58395378103"
+   },
+   {
+    "path": "tokenizer.json",
+    "size": 11422654,
+    "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+    "blob": "cd71f61a15a522601badb3dc960d800d9cb3766c"
+   },
+   {
+    "path": "tokenizer_config.json",
+    "size": 9706,
+    "sha256": null,
+    "blob": "7345216a0785dc7086e8c245b2a9d3896ce2b756"
+   },
+   {
+    "path": "vocab.json",
+    "size": 2776833,
+    "sha256": null,
+    "blob": "4783fe10ac3adce15ac8f358ef5462739852c569"
+   }
+  ]
+ },
+ {
+  "repo": "OpenVINO/Qwen3-4B-int4-ov",
+  "folder": "",
+  "revision": "b467368d16b75df14055562fe927ae8e1f15f7ef",
+  "license": "apache-2.0",
+  "created": "2025-04-30T13:05:41.000Z",
+  "bytes": 2290762484,
+  "files": [
+   {
+    "path": "added_tokens.json",
+    "size": 707,
+    "sha256": null,
+    "blob": "b54f9135e44c1e81047e8d05cb027af8bc039eed"
+   },
+   {
+    "path": "chat_template.jinja",
+    "size": 4168,
+    "sha256": null,
+    "blob": "01be9b307daa2d425f7c168c9fb145a286e0afb4"
+   },
+   {
+    "path": "config.json",
+    "size": 1535,
+    "sha256": null,
+    "blob": "8b3a6370cf7d473a5c9975714ba9c870ac6bdace"
+   },
+   {
+    "path": "generation_config.json",
+    "size": 214,
+    "sha256": null,
+    "blob": "be89f8af8cb53cdfeaa15cc2c340fe0ce5b01378"
+   },
+   {
+    "path": "merges.txt",
+    "size": 1671853,
+    "sha256": null,
+    "blob": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7"
+   },
+   {
+    "path": "openvino_config.json",
+    "size": 516,
+    "sha256": null,
+    "blob": "ce5fb40a662c297f7dba19b57cf09fd5e2667d0c"
+   },
+   {
+    "path": "openvino_detokenizer.bin",
+    "size": 2189717,
+    "sha256": "d73093f72c80ebcaffb76a192727170ecd3c6a06c4df52df0e76b3f70ad9d7f7",
+    "blob": "eb36928fe402b744812cc08132e3d3f5026c5759"
+   },
+   {
+    "path": "openvino_detokenizer.xml",
+    "size": 11650,
+    "sha256": null,
+    "blob": "1c894a2e9308e044486cb454d679050bb8713688"
+   },
+   {
+    "path": "openvino_model.bin",
+    "size": 2263625445,
+    "sha256": "074214fa29ab1b479536fc7184ef3036e7b355a5835e8590b61b70a8de1df2f9",
+    "blob": "ec05778b2d8fe865f7f775caf21c5e128bdb14aa"
+   },
+   {
+    "path": "openvino_model.xml",
+    "size": 3433696,
+    "sha256": null,
+    "blob": "aab6b029bef6fd50eccdb582a65a5cba5b8eae71"
+   },
+   {
+    "path": "openvino_tokenizer.bin",
+    "size": 5588835,
+    "sha256": "63c613e041e2d7f84f7376d6b628b72c8af29259b4d1b27540035f0d9ef034b3",
+    "blob": "bfc087c2f2b009c12a1aaaf0be4a626ce4aff436"
+   },
+   {
+    "path": "openvino_tokenizer.xml",
+    "size": 28644,
+    "sha256": null,
+    "blob": "b112357339bdc8dd87df4509b38978fc179879e0"
+   },
+   {
+    "path": "special_tokens_map.json",
+    "size": 613,
+    "sha256": null,
+    "blob": "ac23c0aaa2434523c494330aeb79c58395378103"
+   },
+   {
+    "path": "tokenizer.json",
+    "size": 11422654,
+    "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+    "blob": "cd71f61a15a522601badb3dc960d800d9cb3766c"
+   },
+   {
+    "path": "tokenizer_config.json",
+    "size": 5404,
+    "sha256": null,
+    "blob": "ddaf69808214a44fdd26d3785b66c1367c78277a"
+   },
+   {
+    "path": "vocab.json",
+    "size": 2776833,
+    "sha256": null,
+    "blob": "4783fe10ac3adce15ac8f358ef5462739852c569"
+   }
+  ]
+ },
+ {
+  "repo": "OpenVINO/gemma-4-E2B-it-int4-ov",
+  "folder": "",
+  "revision": "81a7dc381261ebcea9aac4849aac35496475b389",
+  "license": "apache-2.0",
+  "created": "2026-05-22T15:19:15.000Z",
+  "bytes": 4361124337,
+  "files": [
+   {
+    "path": "chat_template.jinja",
+    "size": 16804,
+    "sha256": null,
+    "blob": "dc032e46e28e0d325b18d26da1279cdda3afa8d7"
+   },
+   {
+    "path": "config.json",
+    "size": 4983,
+    "sha256": null,
+    "blob": "5527366e599b35eb6d2a199929f10da447601800"
+   },
+   {
+    "path": "generation_config.json",
+    "size": 203,
+    "sha256": null,
+    "blob": "3110a9b48870623bd8c401021f4578766fea3975"
+   },
+   {
+    "path": "openvino_config.json",
+    "size": 1424,
+    "sha256": null,
+    "blob": "b5cdca97442a8df3e33a76704394613ef0720190"
+   },
+   {
+    "path": "openvino_detokenizer.bin",
+    "size": 4413547,
+    "sha256": "461919bda7b546453e903052588c578e3e94e9e8215b7cec07cb00cb97459d13",
+    "blob": "b3be3f533cdab9aa6f894014f84045678d255c5e"
+   },
+   {
+    "path": "openvino_detokenizer.xml",
+    "size": 27924,
+    "sha256": null,
+    "blob": "a37da03b1b813f4fc724fbec8f3f369461847042"
+   },
+   {
+    "path": "openvino_language_model.bin",
+    "size": 1379621905,
+    "sha256": "7d0fee33a0b161dcd84d60183836eca354d979b7b9647444d078abb505109e29",
+    "blob": "97d9a9d7b946c20eb9d923df2715944a263d1109"
+   },
+   {
+    "path": "openvino_language_model.xml",
+    "size": 4054588,
+    "sha256": null,
+    "blob": "8f020281d306e4b59ce9a303f087abc3cda5ee28"
+   },
+   {
+    "path": "openvino_text_embeddings_model.bin",
+    "size": 403177480,
+    "sha256": "b20cc0dcc75b63fcf23004a756891545a258f8a58060391695a552f114cb9ca9",
+    "blob": "5383e890e1f2865cd386d427b74e62a9c822163c"
+   },
+   {
+    "path": "openvino_text_embeddings_model.xml",
+    "size": 7118,
+    "sha256": null,
+    "blob": "7388a370be9b128afa20cac9bcae56442a813d7d"
+   },
+   {
+    "path": "openvino_text_embeddings_per_layer_model.bin",
+    "size": 2349334608,
+    "sha256": "b07a583a8f4c57d06e538015c6000818bc28ce85679d7f388317594f7771d915",
+    "blob": "a1668386e51271fb72a47edd5d1cfe32efd03042"
+   },
+   {
+    "path": "openvino_text_embeddings_per_layer_model.xml",
+    "size": 17926,
+    "sha256": null,
+    "blob": "0f49141ecd0ca9a5f2ea3db188f95c6ba750eebc"
+   },
+   {
+    "path": "openvino_tokenizer.bin",
+    "size": 17270350,
+    "sha256": "72cc61385a142c29a1ea37125b9d7a4c5775fe8386a5f6db1dd1108ea5ec1361",
+    "blob": "210c9f4c0d4ba02774da7eeb03bf46ef4a7d492f"
+   },
+   {
+    "path": "openvino_tokenizer.xml",
+    "size": 44893,
+    "sha256": null,
+    "blob": "9325acbadfc31a9b538742915dc071d44a9dc637"
+   },
+   {
+    "path": "openvino_vision_embeddings_model.bin",
+    "size": 169024052,
+    "sha256": "1e067fb34e4c29047c2169d594ef151127cbb87860f6e7bc7a673852ab82112e",
+    "blob": "abf4b42fa40e7fc4b1e1e384f624fc3f3f8b8833"
+   },
+   {
+    "path": "openvino_vision_embeddings_model.xml",
+    "size": 1932102,
+    "sha256": null,
+    "blob": "d29c2a363a9d781801be2d082e917bfb6149254b"
+   },
+   {
+    "path": "preprocessor_config.json",
+    "size": 403,
+    "sha256": null,
+    "blob": "1b1350e0e5b403afff731268757135c2fb1c1423"
+   },
+   {
+    "path": "processor_config.json",
+    "size": 1689,
+    "sha256": null,
+    "blob": "5465974d23e1eca2c46c2809b26c997946ce0d90"
+   },
+   {
+    "path": "tokenizer.json",
+    "size": 32169626,
+    "sha256": "cc8d3a0ce36466ccc1278bf987df5f71db1719b9ca6b4118264f45cb627bfe0f",
+    "blob": "1ff9f3e3439a939b971f9919e821bf87e835a503"
+   },
+   {
+    "path": "tokenizer_config.json",
+    "size": 2712,
+    "sha256": null,
+    "blob": "2d61cccb08b9cbe518e73cc8eb0ea8a0bc74dab8"
+   }
+  ]
+ },
+ {
+  "repo": "OpenVINO/gemma-4-E2B-it-int4-cw-ov",
+  "folder": "",
+  "revision": "8c813bae3fe671dcccf74d5d1aff1cf4045d0de2",
+  "license": "apache-2.0",
+  "created": "2026-10-15T12:26:08.000Z",
+  "bytes": 4325688073,
+  "files": [
+   {
+    "path": "chat_template.jinja",
+    "size": 16804,
+    "sha256": null,
+    "blob": "dc032e46e28e0d325b18d26da1279cdda3afa8d7"
+   },
+   {
+    "path": "config.json",
+    "size": 4983,
+    "sha256": null,
+    "blob": "5527366e599b35eb6d2a199929f10da447601800"
+   },
+   {
+    "path": "generation_config.json",
+    "size": 203,
+    "sha256": null,
+    "blob": "3110a9b48870623bd8c401021f4578766fea3975"
+   },
+   {
+    "path": "openvino_config.json",
+    "size": 1422,
+    "sha256": null,
+    "blob": "f684a14c6e95a63c85c2e8da4b653ac0cf17c9e0"
+   },
+   {
+    "path": "openvino_detokenizer.bin",
+    "size": 4413547,
+    "sha256": "461919bda7b546453e903052588c578e3e94e9e8215b7cec07cb00cb97459d13",
+    "blob": "b3be3f533cdab9aa6f894014f84045678d255c5e"
+   },
+   {
+    "path": "openvino_detokenizer.xml",
+    "size": 27924,
+    "sha256": null,
+    "blob": "a37da03b1b813f4fc724fbec8f3f369461847042"
+   },
+   {
+    "path": "openvino_language_model.bin",
+    "size": 1344865617,
+    "sha256": "fe2ae1e95855a428fe09eee7f0acac4e87f84fe2d118722316aac22f17df1f6b",
+    "blob": "41b7d8b5ab4db60d820131e23532da21e5bef163"
+   },
+   {
+    "path": "openvino_language_model.xml",
+    "size": 3374614,
+    "sha256": null,
+    "blob": "536c52e738d4e2f32f250485949f4bc0c32acc73"
+   },
+   {
+    "path": "openvino_text_embeddings_model.bin",
+    "size": 403177480,
+    "sha256": "b20cc0dcc75b63fcf23004a756891545a258f8a58060391695a552f114cb9ca9",
+    "blob": "5383e890e1f2865cd386d427b74e62a9c822163c"
+   },
+   {
+    "path": "openvino_text_embeddings_model.xml",
+    "size": 7118,
+    "sha256": null,
+    "blob": "fae343d2ee3ad65df462482d0026b06807f7bf67"
+   },
+   {
+    "path": "openvino_text_embeddings_per_layer_model.bin",
+    "size": 2349334608,
+    "sha256": "b07a583a8f4c57d06e538015c6000818bc28ce85679d7f388317594f7771d915",
+    "blob": "a1668386e51271fb72a47edd5d1cfe32efd03042"
+   },
+   {
+    "path": "openvino_text_embeddings_per_layer_model.xml",
+    "size": 17926,
+    "sha256": null,
+    "blob": "005483636cc874ec4a79de8b9467f59b3dad37a3"
+   },
+   {
+    "path": "openvino_tokenizer.bin",
+    "size": 17270350,
+    "sha256": "72cc61385a142c29a1ea37125b9d7a4c5775fe8386a5f6db1dd1108ea5ec1361",
+    "blob": "210c9f4c0d4ba02774da7eeb03bf46ef4a7d492f"
+   },
+   {
+    "path": "openvino_tokenizer.xml",
+    "size": 44893,
+    "sha256": null,
+    "blob": "9325acbadfc31a9b538742915dc071d44a9dc637"
+   },
+   {
+    "path": "openvino_vision_embeddings_model.bin",
+    "size": 169024052,
+    "sha256": "1e067fb34e4c29047c2169d594ef151127cbb87860f6e7bc7a673852ab82112e",
+    "blob": "abf4b42fa40e7fc4b1e1e384f624fc3f3f8b8833"
+   },
+   {
+    "path": "openvino_vision_embeddings_model.xml",
+    "size": 1932102,
+    "sha256": null,
+    "blob": "b23ee09ed6c676defa97b312dd44c307d09710f2"
+   },
+   {
+    "path": "preprocessor_config.json",
+    "size": 403,
+    "sha256": null,
+    "blob": "1b1350e0e5b403afff731268757135c2fb1c1423"
+   },
+   {
+    "path": "processor_config.json",
+    "size": 1689,
+    "sha256": null,
+    "blob": "5465974d23e1eca2c46c2809b26c997946ce0d90"
+   },
+   {
+    "path": "tokenizer.json",
+    "size": 32169626,
+    "sha256": "cc8d3a0ce36466ccc1278bf987df5f71db1719b9ca6b4118264f45cb627bfe0f",
+    "blob": "1ff9f3e3439a939b971f9919e821bf87e835a503"
+   },
+   {
+    "path": "tokenizer_config.json",
+    "size": 2712,
+    "sha256": null,
+    "blob": "2d61cccb08b9cbe518e73cc8eb0ea8a0bc74dab8"
+   }
+  ]
+ },
+ {
+  "repo": "OpenVINO/gemma-4-E4B-it-int4-ov",
+  "folder": "",
+  "revision": "c157bc8d31bae5041874d4378667bc19ae0ee5c6",
+  "license": "apache-2.0",
+  "created": "2026-04-20T14:59:02.000Z",
+  "bytes": 6537239662,
+  "files": [
+   {
+    "path": "chat_template.jinja",
+    "size": 18569,
+    "sha256": null,
+    "blob": "fbe3b59b625cd1b8850ea592d4203df6ec04684b"
+   },
+   {
+    "path": "config.json",
+    "size": 5174,
+    "sha256": null,
+    "blob": "fd1a183a1c15c6d82c741b65a141a44cdabf2a47"
+   },
+   {
+    "path": "generation_config.json",
+    "size": 203,
+    "sha256": null,
+    "blob": "3110a9b48870623bd8c401021f4578766fea3975"
+   },
+   {
+    "path": "openvino_config.json",
+    "size": 1160,
+    "sha256": null,
+    "blob": "ed05d9c1bbea918b257cb5ef0f39a9aadd307a73"
+   },
+   {
+    "path": "openvino_detokenizer.bin",
+    "size": 4413547,
+    "sha256": "461919bda7b546453e903052588c578e3e94e9e8215b7cec07cb00cb97459d13",
+    "blob": "b3be3f533cdab9aa6f894014f84045678d255c5e"
+   },
+   {
+    "path": "openvino_detokenizer.xml",
+    "size": 29792,
+    "sha256": null,
+    "blob": "d02c5545b3853f852cea982fc529e2f25888a8da"
+   },
+   {
+    "path": "openvino_language_model.bin",
+    "size": 2815657513,
+    "sha256": "ad62540973a8d53e853e68bfb3f6bf6d917893d1612b9c67b2612d8d6e55067d",
+    "blob": "b7ac097046f7b7896bc1b5b72b92c73cbe0baa70"
+   },
+   {
+    "path": "openvino_language_model.xml",
+    "size": 5142009,
+    "sha256": null,
+    "blob": "40cd1eeda6078cd716b5c4243fbba4ecd14ecf1f"
+   },
+   {
+    "path": "openvino_text_embeddings_model.bin",
+    "size": 671612936,
+    "sha256": "f4ba107d403f58e4190d0bfef396c9e4eda6762021e4f429c10a53bb4f87aee2",
+    "blob": "7ed1e1ba3984d6e2da593c75bfa0fe06553789f5"
+   },
+   {
+    "path": "openvino_text_embeddings_model.xml",
+    "size": 7079,
+    "sha256": null,
+    "blob": "e08c426611f4d78abddd608c15f6eea30d2f0468"
+   },
+   {
+    "path": "openvino_text_embeddings_per_layer_model.bin",
+    "size": 2819096656,
+    "sha256": "e666691fa271c8b6e26aa6eff33f3030148c0bfe43d3a1514b9b997a9a594c5e",
+    "blob": "c379ec76440ea0b4293ed0646cd6b440cc5f18ae"
+   },
+   {
+    "path": "openvino_text_embeddings_per_layer_model.xml",
+    "size": 17900,
+    "sha256": null,
+    "blob": "b84485afce78d2d837c13aab947177b1d8ce5698"
+   },
+   {
+    "path": "openvino_tokenizer.bin",
+    "size": 17270350,
+    "sha256": "72cc61385a142c29a1ea37125b9d7a4c5775fe8386a5f6db1dd1108ea5ec1361",
+    "blob": "210c9f4c0d4ba02774da7eeb03bf46ef4a7d492f"
+   },
+   {
+    "path": "openvino_tokenizer.xml",
+    "size": 46761,
+    "sha256": null,
+    "blob": "db3eb865a2c7efd01e3cab6152c8fb9cc8584889"
+   },
+   {
+    "path": "openvino_vision_embeddings_model.bin",
+    "size": 169812532,
+    "sha256": "6c7609d984db75c39461f74b418cf3eac65b90da8678a08bc4e158e2f4524c3d",
+    "blob": "085a72778fab1e9d8aff025025058f575960755a"
+   },
+   {
+    "path": "openvino_vision_embeddings_model.xml",
+    "size": 1932063,
+    "sha256": null,
+    "blob": "e8484fbf1455d32b190b19218ed8671736d28d2e"
+   },
+   {
+    "path": "preprocessor_config.json",
+    "size": 403,
+    "sha256": null,
+    "blob": "1b1350e0e5b403afff731268757135c2fb1c1423"
+   },
+   {
+    "path": "processor_config.json",
+    "size": 1689,
+    "sha256": null,
+    "blob": "5465974d23e1eca2c46c2809b26c997946ce0d90"
+   },
+   {
+    "path": "tokenizer.json",
+    "size": 32169626,
+    "sha256": "cc8d3a0ce36466ccc1278bf987df5f71db1719b9ca6b4118264f45cb627bfe0f",
+    "blob": "1ff9f3e3439a939b971f9919e821bf87e835a503"
+   },
+   {
+    "path": "tokenizer_config.json",
+    "size": 3700,
+    "sha256": null,
+    "blob": "02ed6fb805b5351225132f7787df11acbe40579a"
+   }
+  ]
+ }
+]

@@ -1,0 +1,70 @@
+{
+    "cell":  "gemma-4-E2B-it\\ort-genai_rtx_cuda",
+    "run":  1,
+    "mode":  "first",
+    "sitting":  "walk-first",
+    "start":  "2026-11-08T00:15:49.8396140+09:00",
+    "osBuild":  "26200.9711",
+    "gate":  null,
+    "before":  {
+                   "load":  {
+                                "cpu":  22.6,
+                                "build_ms":  0,
+                                "top":  [
+                                            "python 34156 2.01 core",
+                                            "python 29920 0.68 core",
+                                            "System 4 0.51 core",
+                                            "MsMpEng 5548 0.25 core",
+                                            "powershell 31628 0.09 core"
+                                        ]
+                            },
+                   "nvidia":  "P0, 405 MHz, 14001 MHz, 18.57 W, 0 %, 0 MiB, 52",
+                   "availGB":  23.4
+               },
+    "command":  "C:\\src\\llmzoo-walk\\.venv-genai-cuda\\Scripts\\python.exe -u C:\\src\\llmzoo-walk\\pc\\run_genai.py --model-dir C:\\Users\\USER\\.foundry\\cache\\models\\Microsoft\\gemma-4-e2b-it-cuda-gpu-3\\v3 --ep follow_config --prompt-file C:\\src\\llmzoo-walk\\pc\\short-chat.txt --out C:\\src\\llmzoo-walk\\runs\\walk-first\\gemma-4-E2B-it\\ort-genai_rtx_cuda\\run1.json",
+    "engine":  {
+                   "exitCode":  -1073741819,
+                   "timedOut":  false,
+                   "yielded":  false,
+                   "suspendedSeconds":  0,
+                   "suspensions":  0,
+                   "enginePid":  24496,
+                   "elapsedSeconds":  35.917,
+                   "peakWorkingSetBytes":  1349648384,
+                   "gpuMiBPeak":  {
+                                      "0x00000000_0x00012C48":  {
+                                                                    "shared":  204,
+                                                                    "dedicated":  8622
+                                                                }
+                                  },
+                   "watchPeakWorkingSetBytes":  0,
+                   "watchGpuMiBPeak":  {
+
+                                       },
+                   "nvidiaSamples":  [
+                                         "5s P4, 1492 MHz, 9001 MHz, 15.73 W, 0 %, 328 MiB, 52",
+                                         "10s P4, 1485 MHz, 9001 MHz, 14.58 W, 12 %, 7835 MiB, 52",
+                                         "15s P5, 405 MHz, 810 MHz, 16.05 W, 20 %, 11251 MiB, 52",
+                                         "20s P2, 2752 MHz, 11001 MHz, 73.16 W, 42 %, 8622 MiB, 58",
+                                         "25s P0, 2767 MHz, 14001 MHz, 79.44 W, 42 %, 8622 MiB, 60",
+                                         "30s P0, 5197 MHz, 14001 MHz, 19.13 W, 0 %, 0 MiB, 55",
+                                         "35s P0, 2092 MHz, 14001 MHz, 19.04 W, 0 %, 0 MiB, 55"
+                                     ]
+               },
+    "after":  {
+                  "load":  {
+                               "cpu":  27.5,
+                               "build_ms":  0,
+                               "top":  [
+                                           "python 34156 2 core",
+                                           "python 29920 0.99 core",
+                                           "MsMpEng 5548 0.66 core",
+                                           "System 4 0.44 core",
+                                           "python 29828 0.21 core"
+                                       ]
+                           },
+                  "nvidia":  "P0, 2175 MHz, 14001 MHz, 19.14 W, 0 %, 0 MiB, 55"
+              },
+    "end":  "2026-11-08T00:16:27.7447882+09:00",
+    "tries":  1
+}

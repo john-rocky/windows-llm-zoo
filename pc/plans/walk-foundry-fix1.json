@@ -1,0 +1,20 @@
+{
+ "sitting": "walk-foundry-fix1",
+ "probe": "Foundry WebGPU fix 1 of 3: the daemon starts with CUDA_VISIBLE_DEVICES=-1",
+ "units": [
+  {
+   "model": "gemma-4-E2B-it",
+   "cell": "gemma-4-E2B-it\\foundry_auto_webgpu",
+   "kind": "foundry",
+   "venv": "genai",
+   "model_id": "gemma-4-e2b-it-generic-gpu:3",
+   "path": "/v1",
+   "runs": 1,
+   "engines_gate": true,
+   "timeout_min": 15,
+   "ram_need_gb": 10.2,
+   "daemon_env": { "CUDA_VISIBLE_DEVICES": "-1" },
+   "note": "Foundry Local catalog variant gemma-4-e2b-it-generic-gpu:3; fix 1 of 3 after its load error (WebGPU and CUDA): the daemon started with CUDA_VISIBLE_DEVICES=-1"
+  }
+ ]
+}

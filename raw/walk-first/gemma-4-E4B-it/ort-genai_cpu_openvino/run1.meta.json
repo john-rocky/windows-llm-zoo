@@ -1,0 +1,133 @@
+{
+    "cell":  "gemma-4-E4B-it\\ort-genai_cpu_openvino",
+    "run":  1,
+    "mode":  "first",
+    "sitting":  "walk-first",
+    "start":  "2026-11-08T04:53:37.6265661+09:00",
+    "osBuild":  "26200.9711",
+    "gate":  null,
+    "before":  {
+                   "load":  {
+                                "cpu":  2.1,
+                                "build_ms":  0,
+                                "top":  [
+                                            "python 21700 0.23 core",
+                                            "NVDisplay.Container 3412 0.05 core",
+                                            "System 4 0.03 core",
+                                            "svchost 5480 0.03 core"
+                                        ]
+                            },
+                   "nvidia":  "P4, 1740 MHz, 9001 MHz, 92.11 W, 89 %, 11748 MiB, 67",
+                   "availGB":  22
+               },
+    "command":  "C:\\src\\llmzoo-walk\\.venv-genai\\Scripts\\python.exe -u C:\\src\\llmzoo-walk\\pc\\run_genai.py --model-dir C:\\src\\llmzoo-walk\\models\\mlboydaisuke__gemma-4-E4B-it-Foundry-Local\\cpu-int4 --ep openvino --ov-device CPU --prompt-file C:\\src\\llmzoo-walk\\pc\\short-chat.txt --out C:\\src\\llmzoo-walk\\runs\\walk-first\\gemma-4-E4B-it\\ort-genai_cpu_openvino\\run1.json",
+    "engine":  {
+                   "exitCode":  0,
+                   "timedOut":  false,
+                   "yielded":  false,
+                   "suspendedSeconds":  615.4,
+                   "suspensions":  1,
+                   "enginePid":  29516,
+                   "elapsedSeconds":  690.89,
+                   "peakWorkingSetBytes":  10057588736,
+                   "gpuMiBPeak":  {
+                                      "0x00000000_0x00012C48":  {
+                                                                    "shared":  0,
+                                                                    "dedicated":  0
+                                                                },
+                                      "0x00000000_0x0001260E":  {
+                                                                    "shared":  23,
+                                                                    "dedicated":  0
+                                                                },
+                                      "0x00000000_0x00013E4C":  {
+                                                                    "shared":  0,
+                                                                    "dedicated":  0
+                                                                }
+                                  },
+                   "watchPeakWorkingSetBytes":  0,
+                   "watchGpuMiBPeak":  {
+
+                                       },
+                   "nvidiaSamples":  [
+                                         "5s P2, 1635 MHz, 11001 MHz, 94.11 W, 88 %, 11748 MiB, 69",
+                                         "10s P2, 1635 MHz, 11001 MHz, 95.23 W, 100 %, 11748 MiB, 71",
+                                         "15s P4, 1620 MHz, 9001 MHz, 94.08 W, 90 %, 11756 MiB, 71",
+                                         "20s P4, 1672 MHz, 9001 MHz, 93.82 W, 94 %, 11756 MiB, 72",
+                                         "25s P4, 1672 MHz, 9001 MHz, 86.64 W, 84 %, 11756 MiB, 73",
+                                         "30s P4, 1672 MHz, 9001 MHz, 78.29 W, 89 %, 11756 MiB, 74",
+                                         "35s P2, 1642 MHz, 11001 MHz, 93.67 W, 88 %, 11756 MiB, 74",
+                                         "656s P8, 180 MHz, 405 MHz, 10.54 W, 0 %, 12773 MiB, 46",
+                                         "657s P8, 180 MHz, 405 MHz, 9.23 W, 0 %, 12773 MiB, 46",
+                                         "658s P8, 180 MHz, 405 MHz, 8.98 W, 0 %, 12773 MiB, 46",
+                                         "658s P8, 180 MHz, 405 MHz, 8.98 W, 0 %, 12773 MiB, 46",
+                                         "659s P8, 180 MHz, 405 MHz, 8.77 W, 0 %, 12773 MiB, 46",
+                                         "660s P8, 180 MHz, 405 MHz, 8.77 W, 0 %, 12773 MiB, 46",
+                                         "660s P8, 180 MHz, 405 MHz, 7.94 W, 0 %, 12773 MiB, 46",
+                                         "661s P8, 180 MHz, 405 MHz, 6.45 W, 0 %, 12773 MiB, 46",
+                                         "661s P8, 180 MHz, 405 MHz, 6.45 W, 0 %, 12773 MiB, 46",
+                                         "662s P8, 180 MHz, 405 MHz, 4.93 W, 0 %, 12773 MiB, 47",
+                                         "662s P8, 180 MHz, 405 MHz, 4.93 W, 0 %, 12773 MiB, 47",
+                                         "663s P8, 180 MHz, 405 MHz, 4.93 W, 0 %, 12773 MiB, 47",
+                                         "664s P8, 180 MHz, 405 MHz, 4.94 W, 0 %, 12773 MiB, 47",
+                                         "664s P8, 180 MHz, 405 MHz, 4.94 W, 0 %, 12773 MiB, 47",
+                                         "665s P8, 180 MHz, 405 MHz, 4.99 W, 0 %, 12773 MiB, 47",
+                                         "665s P8, 180 MHz, 405 MHz, 4.99 W, 0 %, 12773 MiB, 47",
+                                         "666s P8, 180 MHz, 405 MHz, 4.97 W, 0 %, 12773 MiB, 47",
+                                         "667s P8, 180 MHz, 405 MHz, 4.97 W, 0 %, 12773 MiB, 47",
+                                         "667s P8, 1305 MHz, 405 MHz, 10.25 W, 0 %, 12773 MiB, 48",
+                                         "668s P8, 180 MHz, 405 MHz, 9.04 W, 0 %, 12773 MiB, 47",
+                                         "669s P8, 180 MHz, 405 MHz, 8.90 W, 0 %, 12773 MiB, 47",
+                                         "669s P8, 180 MHz, 405 MHz, 8.90 W, 0 %, 12773 MiB, 47",
+                                         "670s P8, 180 MHz, 405 MHz, 8.87 W, 0 %, 12773 MiB, 48",
+                                         "670s P8, 180 MHz, 405 MHz, 8.87 W, 0 %, 12773 MiB, 48",
+                                         "671s P8, 180 MHz, 405 MHz, 8.15 W, 0 %, 12773 MiB, 48",
+                                         "672s P8, 180 MHz, 405 MHz, 6.60 W, 0 %, 12773 MiB, 48",
+                                         "672s P8, 180 MHz, 405 MHz, 6.60 W, 0 %, 12773 MiB, 48",
+                                         "673s P8, 180 MHz, 405 MHz, 5.01 W, 0 %, 12773 MiB, 48",
+                                         "673s P8, 180 MHz, 405 MHz, 5.01 W, 0 %, 12773 MiB, 48",
+                                         "674s P8, 180 MHz, 405 MHz, 5.01 W, 0 %, 12773 MiB, 48",
+                                         "675s P8, 180 MHz, 405 MHz, 5.00 W, 0 %, 12773 MiB, 48",
+                                         "675s P8, 180 MHz, 405 MHz, 5.00 W, 0 %, 12773 MiB, 48",
+                                         "676s P8, 180 MHz, 405 MHz, 5.02 W, 0 %, 12773 MiB, 48",
+                                         "676s P8, 180 MHz, 405 MHz, 5.02 W, 0 %, 12773 MiB, 48",
+                                         "677s P8, 180 MHz, 405 MHz, 5.05 W, 0 %, 12773 MiB, 48",
+                                         "677s P8, 180 MHz, 405 MHz, 5.05 W, 0 %, 12773 MiB, 48",
+                                         "678s P8, 690 MHz, 405 MHz, 12.34 W, 0 %, 12773 MiB, 49",
+                                         "679s P8, 180 MHz, 405 MHz, 9.23 W, 0 %, 12773 MiB, 49",
+                                         "680s P8, 180 MHz, 405 MHz, 9.06 W, 0 %, 12773 MiB, 49",
+                                         "680s P8, 180 MHz, 405 MHz, 9.06 W, 0 %, 12773 MiB, 49",
+                                         "681s P8, 180 MHz, 405 MHz, 9.09 W, 0 %, 12773 MiB, 49",
+                                         "682s P8, 180 MHz, 405 MHz, 8.12 W, 0 %, 12773 MiB, 49",
+                                         "682s P8, 180 MHz, 405 MHz, 8.12 W, 0 %, 12773 MiB, 49",
+                                         "683s P8, 180 MHz, 405 MHz, 5.46 W, 0 %, 12773 MiB, 49",
+                                         "683s P8, 180 MHz, 405 MHz, 5.46 W, 0 %, 12773 MiB, 49",
+                                         "684s P8, 180 MHz, 405 MHz, 5.34 W, 0 %, 12773 MiB, 49",
+                                         "685s P8, 180 MHz, 405 MHz, 5.16 W, 0 %, 12773 MiB, 49",
+                                         "685s P8, 180 MHz, 405 MHz, 5.16 W, 0 %, 12773 MiB, 49",
+                                         "686s P8, 180 MHz, 405 MHz, 5.07 W, 0 %, 12773 MiB, 49",
+                                         "686s P8, 180 MHz, 405 MHz, 5.07 W, 0 %, 12773 MiB, 49",
+                                         "687s P8, 180 MHz, 405 MHz, 5.23 W, 0 %, 12773 MiB, 49",
+                                         "688s P8, 180 MHz, 405 MHz, 5.18 W, 0 %, 12773 MiB, 49",
+                                         "688s P8, 180 MHz, 405 MHz, 5.18 W, 0 %, 12773 MiB, 49",
+                                         "689s P8, 2430 MHz, 405 MHz, 12.54 W, 0 %, 12773 MiB, 50",
+                                         "690s P8, 180 MHz, 405 MHz, 9.25 W, 0 %, 12773 MiB, 50",
+                                         "690s P8, 180 MHz, 405 MHz, 9.26 W, 0 %, 12773 MiB, 50"
+                                     ]
+               },
+    "after":  {
+                  "load":  {
+                               "cpu":  12.4,
+                               "build_ms":  0,
+                               "top":  [
+                                           "python 18428 0.77 core",
+                                           "MsMpEng 5548 0.35 core",
+                                           "System 4 0.33 core",
+                                           "powershell 8668 0.2 core",
+                                           "sshd 22360 0.08 core"
+                                       ]
+                           },
+                  "nvidia":  "P8, 180 MHz, 405 MHz, 9.09 W, 0 %, 12773 MiB, 50"
+              },
+    "end":  "2026-11-08T05:05:09.5763088+09:00",
+    "tries":  1
+}

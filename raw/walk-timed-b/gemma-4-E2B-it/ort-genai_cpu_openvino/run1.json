@@ -1,0 +1,80 @@
+{
+ "runner": "run_genai.py",
+ "started": "2026-11-08T19:45:17.771349+09:00",
+ "argv": [
+  "--model-dir",
+  "C:\\Users\\USER\\.foundry\\cache\\models\\Microsoft\\gemma-4-e2b-it-generic-cpu-3\\v3",
+  "--ep",
+  "openvino",
+  "--ov-device",
+  "CPU",
+  "--prompt-file",
+  "C:\\src\\llmzoo-walk\\pc\\short-chat.txt",
+  "--out",
+  "C:\\src\\llmzoo-walk\\runs\\walk-timed-b\\gemma-4-E2B-it\\ort-genai_cpu_openvino\\run1.json"
+ ],
+ "pid": 808,
+ "cuda_dll_dirs": [],
+ "versions": {
+  "python": "3.12.10",
+  "onnxruntime-genai": "0.19.0",
+  "onnxruntime": "1.31.1",
+  "onnxruntime-ep-openvino": "1.8.1",
+  "onnxruntime-ep-webgpu": "0.5.0",
+  "numpy": "2.5.4"
+ },
+ "prompt_sha256": "870aafb98e570e8fa1343ec051180237f4587233f49c0cc1391724e086d42d50",
+ "load_s": 12.734689599979902,
+ "device_type": "OpenVINO",
+ "chat_template": "tokenizer.apply_chat_template",
+ "templated_prompt": "<bos><|turn>user\nExplain what on-device AI means in simple terms.<turn|>\n<|turn>model\n",
+ "templated_prompt_sha256": "70b30bff1ab92ec74814a888864b33ac65c53a053b6d35e8dfa13b353830ffb2",
+ "genai_config_providers": {
+  "decoder": [],
+  "vision": [],
+  "embedding": [],
+  "speech": []
+ },
+ "gens": [
+  {
+   "prompt_tokens": 20,
+   "generated_tokens": 128,
+   "stop": "length",
+   "sequence_length": 148,
+   "generator_s": 0.022602500015636906,
+   "prefill_ms": 1657.0330999966245,
+   "first_step_ms": 0.3575000155251473,
+   "ttft_ms": 1657.3906000121497,
+   "prefill_tps": 12.069764931093253,
+   "decode_tps": 9.041012989275915,
+   "decode_s": 14.047098499984713,
+   "generation_wall_s": 15.710521300003165,
+   "text": "Imagine a computer or a device (like your smartphone, a smart camera, or a smart speaker) that can **think and learn right there on itself, without needing to constantly send everything to a big, distant internet server.**\n\nThat's essentially what **on-device AI** means.\n\nHere’s a breakdown using simple analogies:\n\n---\n\n### The Traditional Way (Cloud AI)\n\nThink of this like asking a very smart, very knowledgeable **professor** (the cloud server) for an answer.\n\n* **You ask a question:** \"What is this picture?\"\n* **You send the picture:** You upload",
+   "text_sha256": "a654127bdb11991c46b5fdf975cf4498ec82319571ee06c4865aa1b6ebfb97cc",
+   "gen": 1,
+   "regime": "cold"
+  },
+  {
+   "prompt_tokens": 20,
+   "generated_tokens": 128,
+   "stop": "length",
+   "sequence_length": 148,
+   "generator_s": 0.03386070000124164,
+   "prefill_ms": 446.4788000041153,
+   "first_step_ms": 0.4850999976042658,
+   "ttft_ms": 446.9639000017196,
+   "prefill_tps": 44.794960029044276,
+   "decode_tps": 9.103593257064055,
+   "decode_s": 13.950535400013905,
+   "generation_wall_s": 14.403529200004414,
+   "text": "Imagine a computer or a device (like your smartphone, a smart camera, or a smart speaker) that can **think and learn right there on itself, without needing to constantly send everything to a big, distant internet server.**\n\nThat's essentially what **on-device AI** means.\n\nHere’s a breakdown using simple analogies:\n\n---\n\n### The Traditional Way (Cloud AI)\n\nThink of this like asking a very smart, very knowledgeable **professor** (the cloud server) for an answer.\n\n* **You ask a question:** \"What is this picture?\"\n* **You send the picture:** You upload",
+   "text_sha256": "a654127bdb11991c46b5fdf975cf4498ec82319571ee06c4865aa1b6ebfb97cc",
+   "gen": 2,
+   "regime": "warm"
+  }
+ ],
+ "status": "OK",
+ "peak_working_set_bytes": 8846667776,
+ "peak_pagefile_bytes": 7855087616,
+ "ended": "2026-11-08T19:46:03.427286+09:00"
+}

@@ -1,0 +1,7 @@
+[2026-11-07T23:18:26.2526638+09:00] chain start: plan C:\src\llmzoo-walk\pc\plans\walk-npuexp.json mode first, 2 units, pid 3388
+[2026-11-07T23:18:30.6523738+09:00] adapters: 0x00000000_0x00012C48=nvidia, 0x00000000_0x0001260E=intel-gpu, 0x00000000_0x00012BB8=?, 0x00000000_0x00013E4C=npu?
+[2026-11-07T23:18:32.6906797+09:00] Qwen3-0.6B\openvino-genai_npu_npu-sym-g128 run 1 start
+[2026-11-07T23:18:49.5155264+09:00] Qwen3-0.6B\openvino-genai_npu_npu-sym-g128 run 1 end: exit 0, OK, 15.46 s
+[2026-11-07T23:18:51.0438011+09:00] Qwen3-1.7B\openvino-genai_npu_npu-sym-g128 run 1 start
+[2026-11-07T23:19:12.1119563+09:00] Qwen3-1.7B\openvino-genai_npu_npu-sym-g128 run 1 end: exit 0, OK, 19.935 s
+[2026-11-07T23:19:12.1239741+09:00] chain done: OK

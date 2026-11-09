@@ -1,0 +1,8 @@
+■ Downloading model (qwen3-1.7b-cuda-gpu:2, 1.3 GB)
+qwen3-1.7b-cuda-gpu:2: 0%
+qwen3-1.7b-cuda-gpu:2: 26%
+qwen3-1.7b-cuda-gpu:2: 51%
+qwen3-1.7b-cuda-gpu:2: 75%
+qwen3-1.7b-cuda-gpu:2: 96%
+qwen3-1.7b-cuda-gpu:2: 99%
+● success: Downloaded 'qwen3-1.7b-cuda-gpu:2' to the local cache.

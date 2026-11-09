@@ -1,0 +1,625 @@
+{
+ "model": "gemma-4-E2B-it",
+ "cell": "openvino-genai_npu_npu",
+ "runtime": "openvino-genai",
+ "runtime_detail": "OpenVINO GenAI 2026.4.1 (Python, pc/run_ovgenai.py)",
+ "device": "npu",
+ "device_name": "Intel(R) NPU",
+ "backend": "npu",
+ "backend_detail": "OpenVINO GenAI 2026.4.1 on NPU (CACHE_DIR)",
+ "source": "windows-llm-zoo (Z2)",
+ "shelf": {
+  "repo": "OpenVINO/gemma-4-E2B-it-int4-cw-ov",
+  "folder": "",
+  "quant": "int4_sym g-1 r1.0",
+  "quant_source": "the IR's rt_info (tools/ir_quant.py)"
+ },
+ "unit": {
+  "kind": "python",
+  "venv": "ovgenai",
+  "script": "run_ovgenai.py",
+  "args": [
+   "--model-dir",
+   "{ROOT}\\models\\OpenVINO__gemma-4-E2B-it-int4-cw-ov",
+   "--device",
+   "NPU",
+   "--cache-dir",
+   "{ROOT}\\ovcache\\gemma-4-E2B-it_npu"
+  ],
+  "model_id": null,
+  "path": null,
+  "engines_gate": false
+ },
+ "workload": {
+  "task": "short-chat",
+  "prompt": "prompts/text/short-chat.txt of edge-llm-bench (pc/short-chat.txt)",
+  "chat_template": "the package's own, one user turn",
+  "output_budget_tokens": 128,
+  "sampling": "greedy",
+  "regime": "cold (first generation of a fresh engine process; Foundry: of a fresh daemon)",
+  "counting": "runs=3 per sitting; run 1 of a GPU or NPU cell is not counted; a text-check failure is not counted"
+ },
+ "status": "measured",
+ "table": {
+  "sitting": "walk-timed-b",
+  "decode_tps": 18.26,
+  "cold_spread_pct": 0.67,
+  "cold_n": 2,
+  "prefill_tps": 26.3,
+  "ttft_ms": 761.5,
+  "peak_working_set_mb": 4125,
+  "text_check": "6/6 PASS",
+  "decode_tps_warm": 18.67,
+  "gpu_adapter_used": [],
+  "generated_tokens": [
+   128
+  ],
+  "stop": [
+   "length"
+  ],
+  "same_cold_text": false,
+  "os_build": [
+   "26200.9711"
+  ]
+ },
+ "first_error": "Traceback (most recent call last):\n  File \"C:\\src\\llmzoo-walk\\pc\\run_ovgenai.py\", line 122, in main\n    res = pipe.generate([prompt], cfg)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Check 'num_inputs == 4 || num_inputs == 3' failed at C:\\Jenkins\\workspace\\private-ci\\ie\\build-windows-vs2022\\b\\repos\\openvino.genai\\src\\cpp\\src\\llm\\pipeline_stateful.cpp:416:\nModel should have 3 or 4 inputs: either (input_ids, attention_mask, beam_idx) or (input_ids, attention_mask, position_ids, beam_idx) but you have '5' inputs\n\n",
+ "why_not_measured": null,
+ "sittings": [
+  {
+   "sitting": "walk-npu-sym",
+   "mode": "first",
+   "runs": [
+    {
+     "run": 1,
+     "status": "ERROR",
+     "counted": false,
+     "why": "runner error",
+     "exit_code": 1,
+     "timed_out": false,
+     "elapsed_s": 10086.13,
+     "suspended_s": 9861.1,
+     "gate": null,
+     "before": {
+      "load": {
+       "cpu": 46.4,
+       "build_ms": 0,
+       "top": [
+        "python 29028 5.44 core",
+        "python 15160 0.98 core",
+        "System 4 0.9 core",
+        "svchost 5260 0.02 core",
+        "ipf_helper 10044 0.02 core"
+       ]
+      },
+      "nvidia": "P0, 1305 MHz, 14001 MHz, 18.87 W, 0 %, 0 MiB, 54",
+      "availGB": 22.4
+     },
+     "start": "2026-11-07T20:19:12.1795856+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 0,
+       "dedicated": 0
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 21,
+       "dedicated": 0
+      },
+      "0x00000000_0x00013E4C (npu?)": {
+       "shared": 1475,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": null,
+     "peak_working_set_mb": 2922,
+     "error": "Traceback (most recent call last):\n  File \"C:\\src\\llmzoo-walk\\pc\\run_ovgenai.py\", line 122, in main\n    res = pipe.generate([prompt], cfg)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Check 'num_inputs == 4 || num_inputs == 3' failed at C:\\Jenkins\\workspace\\private-ci\\ie\\build-windows-vs2022\\b\\repos\\openvino.genai\\src\\cpp\\src\\llm\\pipeline_stateful.cpp:416:\nModel should have 3 or 4 inputs: either (input_ids, attention_mask, beam_idx) or (input_ids, attention_mask, position_ids, beam_idx) but you have '5' inputs\n\n"
+    }
+   ],
+   "cold_n": 0,
+   "text_check": "0/0 PASS",
+   "host_env": [
+    {
+     "read": "2026-11-07T20:11:24.7306651+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    }
+   ],
+   "counts": false,
+   "unit_args": [
+    "--model-dir",
+    "{ROOT}\\models\\OpenVINO__gemma-4-E2B-it-int4-cw-ov",
+    "--device",
+    "NPU",
+    "--cache-dir",
+    "{ROOT}\\ovcache\\gemma-4-E2B-it_npu"
+   ],
+   "unit_note": "OpenVINO GenAI 2026.4.1 on NPU (CACHE_DIR)"
+  },
+  {
+   "sitting": "walk-npu-vlm",
+   "mode": "first",
+   "runs": [
+    {
+     "run": 1,
+     "status": "OK",
+     "counted": false,
+     "why": "first pass (untimed)",
+     "exit_code": 0,
+     "timed_out": false,
+     "elapsed_s": 1665.406,
+     "suspended_s": 1636,
+     "gate": null,
+     "before": {
+      "load": {
+       "cpu": 53.5,
+       "build_ms": 5203,
+       "top": [
+        "cl 25040 3.63 core",
+        "python 3928 1.18 core",
+        "python 33828 1.03 core",
+        "cl 8336 1.01 core",
+        "cl 10216 0.48 core"
+       ]
+      },
+      "nvidia": "P8, 180 MHz, 405 MHz, 7.75 W, 0 %, 1440 MiB, 54",
+      "availGB": 15.1
+     },
+     "start": "2026-11-07T23:19:16.2517840+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 0,
+       "dedicated": 0
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 29,
+       "dedicated": 0
+      },
+      "0x00000000_0x00013E4C (npu?)": {
+       "shared": 2159,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": null,
+     "peak_working_set_mb": 4121,
+     "gens": [
+      {
+       "regime": "cold",
+       "prompt_tokens": 20,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 0.07724282345149448,
+       "prefill_tps": 18.9021130356512,
+       "ttft_ms": 1058.082763671875,
+       "text_sha256": "ca715e898bd1109328747f51fb5fbbe6c884867e7e54674b8a3bc1f872c72768",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "Imagine you have a calculator. You can use it right there on your phone or computer without needing to call a separate calculator app or a website.\n\n**On-device AI is essentially putting the \"smart\" intelligence of Artificial Intelligence (AI) directly onto your device.**\n\nHere's the breakdown using simple analogies:\n\n### The Traditional Way (Cloud-Based AI)\n\nThink of this like using **Google Maps** or **Google Photos**.\n\n* **The Brain (AI):** Lives on Google's massive servers (the cloud).\n* **The Action:** Your phone sends a picture to Google's servers, the"
+      },
+      {
+       "regime": "warm",
+       "prompt_tokens": 20,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 16.773787169521956,
+       "prefill_tps": 41.20925935637445,
+       "ttft_ms": 485.32781982421875,
+       "text_sha256": "ca715e898bd1109328747f51fb5fbbe6c884867e7e54674b8a3bc1f872c72768",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "Imagine you have a calculator. You can use it right there on your phone or computer without needing to call a separate calculator app or a website.\n\n**On-device AI is essentially putting the \"smart\" intelligence of Artificial Intelligence (AI) directly onto your device.**\n\nHere's the breakdown using simple analogies:\n\n### The Traditional Way (Cloud-Based AI)\n\nThink of this like using **Google Maps** or **Google Photos**.\n\n* **The Brain (AI):** Lives on Google's massive servers (the cloud).\n* **The Action:** Your phone sends a picture to Google's servers, the"
+      }
+     ],
+     "load_s": 7.534358600009,
+     "versions": {
+      "python": "3.12.10",
+      "openvino": "2026.4.1",
+      "openvino-genai": "2026.4.1.0",
+      "openvino-tokenizers": "2026.4.1.0",
+      "numpy": "2.5.4"
+     }
+    }
+   ],
+   "cold_n": 0,
+   "text_check": "2/2 PASS",
+   "host_env": [
+    {
+     "read": "2026-11-07T23:19:12.8923514+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    }
+   ],
+   "counts": false,
+   "unit_args": [
+    "--model-dir",
+    "{ROOT}\\models\\OpenVINO__gemma-4-E2B-it-int4-cw-ov",
+    "--device",
+    "NPU",
+    "--cache-dir",
+    "{ROOT}\\ovcache\\gemma-4-E2B-it_npu"
+   ],
+   "unit_note": "OpenVINO GenAI 2026.4.1 on NPU (CACHE_DIR)"
+  },
+  {
+   "sitting": "walk-timed-b",
+   "mode": "timed",
+   "runs": [
+    {
+     "run": 1,
+     "status": "OK",
+     "counted": false,
+     "why": "run 1 of a GPU / NPU cell (first process in the sitting)",
+     "exit_code": 0,
+     "timed_out": false,
+     "elapsed_s": 31.879,
+     "suspended_s": 0,
+     "gate": {
+      "quietGate": "quiet",
+      "cpuReads": [
+       3.6,
+       0.3,
+       0.1
+      ],
+      "nvidiaMiB": 0,
+      "availGB": 24.2,
+      "ramNeedGB": 6.8,
+      "gpuEngines": null
+     },
+     "before": {
+      "load": {
+       "cpu": 2.9,
+       "build_ms": 0,
+       "top": [
+        "System 4 0.44 core",
+        "WmiPrvSE 7560 0.02 core",
+        "powershell 16780 0.02 core"
+       ]
+      },
+      "nvidia": "P0, 322 MHz, 14001 MHz, 18.24 W, 0 %, 0 MiB, 51",
+      "availGB": 24.2
+     },
+     "start": "2026-11-09T00:43:05.2586079+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 0,
+       "dedicated": 0
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 29,
+       "dedicated": 0
+      },
+      "0x00000000_0x00013E4C (npu?)": {
+       "shared": 2159,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": null,
+     "peak_working_set_mb": 4119,
+     "gens": [
+      {
+       "regime": "cold",
+       "prompt_tokens": 20,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 17.9590096347171,
+       "prefill_tps": 21.374691134147582,
+       "ttft_ms": 935.68603515625,
+       "text_sha256": "ca715e898bd1109328747f51fb5fbbe6c884867e7e54674b8a3bc1f872c72768",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "Imagine you have a calculator. You can use it right there on your phone or computer without needing to call a separate calculator app or a website.\n\n**On-device AI is essentially putting the \"smart\" intelligence of Artificial Intelligence (AI) directly onto your device.**\n\nHere's the breakdown using simple analogies:\n\n### The Traditional Way (Cloud-Based AI)\n\nThink of this like using **Google Maps** or **Google Photos**.\n\n* **The Brain (AI):** Lives on Google's massive servers (the cloud).\n* **The Action:** Your phone sends a picture to Google's servers, the"
+      },
+      {
+       "regime": "warm",
+       "prompt_tokens": 20,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 18.79673882203021,
+       "prefill_tps": 40.24726372219758,
+       "ttft_ms": 496.9281921386719,
+       "text_sha256": "ca715e898bd1109328747f51fb5fbbe6c884867e7e54674b8a3bc1f872c72768",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "Imagine you have a calculator. You can use it right there on your phone or computer without needing to call a separate calculator app or a website.\n\n**On-device AI is essentially putting the \"smart\" intelligence of Artificial Intelligence (AI) directly onto your device.**\n\nHere's the breakdown using simple analogies:\n\n### The Traditional Way (Cloud-Based AI)\n\nThink of this like using **Google Maps** or **Google Photos**.\n\n* **The Brain (AI):** Lives on Google's massive servers (the cloud).\n* **The Action:** Your phone sends a picture to Google's servers, the"
+      }
+     ],
+     "load_s": 9.822743400000036,
+     "versions": {
+      "python": "3.12.10",
+      "openvino": "2026.4.1",
+      "openvino-genai": "2026.4.1.0",
+      "openvino-tokenizers": "2026.4.1.0",
+      "numpy": "2.5.4"
+     }
+    },
+    {
+     "run": 2,
+     "status": "OK",
+     "counted": true,
+     "why": "",
+     "exit_code": 0,
+     "timed_out": false,
+     "elapsed_s": 23.483,
+     "suspended_s": 0,
+     "gate": {
+      "quietGate": "quiet",
+      "cpuReads": [
+       0.3,
+       0.4,
+       0.2
+      ],
+      "nvidiaMiB": 0,
+      "availGB": 24.2,
+      "ramNeedGB": 6.8,
+      "gpuEngines": null
+     },
+     "before": {
+      "load": {
+       "cpu": 2.5,
+       "build_ms": 0,
+       "top": [
+        "System 4 0.34 core",
+        "WmiPrvSE 7560 0.03 core",
+        "WUDFHost 1836 0.02 core",
+        "svchost 2388 0.02 core"
+       ]
+      },
+      "nvidia": "P0, 142 MHz, 14001 MHz, 18.61 W, 0 %, 0 MiB, 54",
+      "availGB": 24.2
+     },
+     "start": "2026-11-09T00:44:16.5196144+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 0,
+       "dedicated": 0
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 29,
+       "dedicated": 0
+      },
+      "0x00000000_0x00013E4C (npu?)": {
+       "shared": 2159,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": null,
+     "peak_working_set_mb": 4122,
+     "gens": [
+      {
+       "regime": "cold",
+       "prompt_tokens": 20,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 18.32079036922881,
+       "prefill_tps": 25.365861210777087,
+       "ttft_ms": 788.4613037109375,
+       "text_sha256": "ae2262752291fb4a843de761c2f8a91a8014b086d40ab2efd2e639cdb25e8b0d",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "Imagine you have a calculator. You can use it right there on your phone or computer without needing to call a separate calculator app or a website.\n\n**On-device AI is essentially putting the \"smart\" intelligence of Artificial Intelligence (AI) directly onto your device.**\n\nHere's the breakdown using simple terms:\n\n### The Traditional Way (Cloud AI)\n\nWith traditional AI (like Siri or Google Assistant), when you want something smart to happen, your phone has to send the data to a powerful remote server (a big data center in the cloud) to do the heavy lifting.\n\n* **Example:** Your phone sends your"
+      },
+      {
+       "regime": "warm",
+       "prompt_tokens": 20,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 18.789186097475927,
+       "prefill_tps": 43.26730474321525,
+       "ttft_ms": 462.2427978515625,
+       "text_sha256": "ca715e898bd1109328747f51fb5fbbe6c884867e7e54674b8a3bc1f872c72768",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "Imagine you have a calculator. You can use it right there on your phone or computer without needing to call a separate calculator app or a website.\n\n**On-device AI is essentially putting the \"smart\" intelligence of Artificial Intelligence (AI) directly onto your device.**\n\nHere's the breakdown using simple analogies:\n\n### The Traditional Way (Cloud-Based AI)\n\nThink of this like using **Google Maps** or **Google Photos**.\n\n* **The Brain (AI):** Lives on Google's massive servers (the cloud).\n* **The Action:** Your phone sends a picture to Google's servers, the"
+      }
+     ],
+     "load_s": 3.5700226000044495,
+     "versions": {
+      "python": "3.12.10",
+      "openvino": "2026.4.1",
+      "openvino-genai": "2026.4.1.0",
+      "openvino-tokenizers": "2026.4.1.0",
+      "numpy": "2.5.4"
+     }
+    },
+    {
+     "run": 3,
+     "status": "OK",
+     "counted": true,
+     "why": "",
+     "exit_code": 0,
+     "timed_out": false,
+     "elapsed_s": 21.067,
+     "suspended_s": 0,
+     "gate": {
+      "quietGate": "quiet",
+      "cpuReads": [
+       1,
+       0.4,
+       0.5
+      ],
+      "nvidiaMiB": 0,
+      "availGB": 24.2,
+      "ramNeedGB": 6.8,
+      "gpuEngines": null
+     },
+     "before": {
+      "load": {
+       "cpu": 2.3,
+       "build_ms": 0,
+       "top": [
+        "System 4 0.34 core",
+        "WUDFHost 9528 0.02 core",
+        "WUDFHost 1836 0.02 core"
+       ]
+      },
+      "nvidia": "P0, 157 MHz, 14001 MHz, 18.43 W, 0 %, 0 MiB, 52",
+      "availGB": 24.2
+     },
+     "start": "2026-11-09T00:45:19.3049348+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 0,
+       "dedicated": 0
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 29,
+       "dedicated": 0
+      },
+      "0x00000000_0x00013E4C (npu?)": {
+       "shared": 2159,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": null,
+     "peak_working_set_mb": 4128,
+     "gens": [
+      {
+       "regime": "cold",
+       "prompt_tokens": 20,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 18.1990757171079,
+       "prefill_tps": 27.229292363308627,
+       "ttft_ms": 734.5031127929688,
+       "text_sha256": "ca715e898bd1109328747f51fb5fbbe6c884867e7e54674b8a3bc1f872c72768",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "Imagine you have a calculator. You can use it right there on your phone or computer without needing to call a separate calculator app or a website.\n\n**On-device AI is essentially putting the \"smart\" intelligence of Artificial Intelligence (AI) directly onto your device.**\n\nHere's the breakdown using simple analogies:\n\n### The Traditional Way (Cloud-Based AI)\n\nThink of this like using **Google Maps** or **Google Photos**.\n\n* **The Brain (AI):** Lives on Google's massive servers (the cloud).\n* **The Action:** Your phone sends a picture to Google's servers, the"
+      },
+      {
+       "regime": "warm",
+       "prompt_tokens": 20,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 18.551107968433453,
+       "prefill_tps": 44.89915434536477,
+       "ttft_ms": 445.44268798828125,
+       "text_sha256": "ae2262752291fb4a843de761c2f8a91a8014b086d40ab2efd2e639cdb25e8b0d",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "Imagine you have a calculator. You can use it right there on your phone or computer without needing to call a separate calculator app or a website.\n\n**On-device AI is essentially putting the \"smart\" intelligence of Artificial Intelligence (AI) directly onto your device.**\n\nHere's the breakdown using simple terms:\n\n### The Traditional Way (Cloud AI)\n\nWith traditional AI (like Siri or Google Assistant), when you want something smart to happen, your phone has to send the data to a powerful remote server (a big data center in the cloud) to do the heavy lifting.\n\n* **Example:** Your phone sends your"
+      }
+     ],
+     "load_s": 2.1320596000005025,
+     "versions": {
+      "python": "3.12.10",
+      "openvino": "2026.4.1",
+      "openvino-genai": "2026.4.1.0",
+      "openvino-tokenizers": "2026.4.1.0",
+      "numpy": "2.5.4"
+     }
+    }
+   ],
+   "cold_n": 2,
+   "text_check": "6/6 PASS",
+   "host_env": [
+    {
+     "read": "2026-11-08T18:27:37.4700974+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "osCaption": "Microsoft Windows 11 Home",
+     "ramGB": 31.5,
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    }
+   ],
+   "cold_spread_pct": 0.67,
+   "decode_tps": 18.26,
+   "prefill_tps": 26.3,
+   "ttft_ms": 761.5,
+   "decode_tps_warm": 18.67,
+   "peak_working_set_mb": 4125,
+   "gpu_adapter_used": [],
+   "generated_tokens": [
+    128
+   ],
+   "stop": [
+    "length"
+   ],
+   "same_cold_text": false,
+   "os_build": [
+    "26200.9711"
+   ],
+   "counts": true,
+   "unit_args": [
+    "--model-dir",
+    "{ROOT}\\models\\OpenVINO__gemma-4-E2B-it-int4-cw-ov",
+    "--device",
+    "NPU",
+    "--cache-dir",
+    "{ROOT}\\ovcache\\gemma-4-E2B-it_npu"
+   ],
+   "unit_note": "OpenVINO GenAI 2026.4.1 on NPU (CACHE_DIR)"
+  }
+ ]
+}

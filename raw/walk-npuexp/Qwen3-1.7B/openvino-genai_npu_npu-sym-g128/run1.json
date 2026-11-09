@@ -1,0 +1,72 @@
+{
+ "runner": "run_ovgenai.py",
+ "started": "2026-11-07T23:18:51.297821+09:00",
+ "argv": [
+  "--model-dir",
+  "C:\\src\\llmzoo-walk\\models\\z2-npu\\Qwen3-1.7B-int4-sym-g128-ov",
+  "--device",
+  "NPU",
+  "--cache-dir",
+  "C:\\src\\llmzoo-walk\\ovcache\\Qwen3-1.7B_npu_sym_g128",
+  "--prompt-file",
+  "C:\\src\\llmzoo-walk\\pc\\short-chat.txt",
+  "--out",
+  "C:\\src\\llmzoo-walk\\runs\\walk-npuexp\\Qwen3-1.7B\\openvino-genai_npu_npu-sym-g128\\run1.json"
+ ],
+ "pid": 10800,
+ "versions": {
+  "python": "3.12.10",
+  "openvino": "2026.4.1",
+  "openvino-genai": "2026.4.1.0",
+  "openvino-tokenizers": "2026.4.1.0",
+  "numpy": "2.5.4"
+ },
+ "available_devices": {
+  "CPU": "Intel(R) Core(TM) Ultra 9 386H",
+  "GPU.0": "Intel(R) Graphics (iGPU)",
+  "GPU.1": "NVIDIA GeForce RTX 5080 Laptop GPU (dGPU)",
+  "NPU": "Intel(R) AI Boost"
+ },
+ "prompt_sha256": "870aafb98e570e8fa1343ec051180237f4587233f49c0cc1391724e086d42d50",
+ "pipeline": "llm",
+ "load_s": 5.067922799993539,
+ "pipeline_errors_before": [],
+ "templated_prompt": "<|im_start|>user\nExplain what on-device AI means in simple terms.<|im_end|>\n<|im_start|>assistant\n",
+ "templated_prompt_sha256": "9d2fe60da55b75283dbd26cd6f8db55bf12e5c3c0c1f37670067623f6461074d",
+ "gens": [
+  {
+   "gen": 1,
+   "regime": "cold",
+   "prompt_tokens": 19,
+   "generated_tokens": 128,
+   "stop": "length",
+   "ttft_ms": 2258.28955078125,
+   "tpot_ms": 27.953659057617188,
+   "prefill_tps": 8.413447245251167,
+   "decode_tps": 35.773492047636125,
+   "generate_duration_ms": 5809.22216796875,
+   "generation_wall_s": 5.8093221000017365,
+   "text": "<think>\nOkay, the user is asking for a simple explanation of what on-device AI means. Let me start by recalling what on-device AI is. From what I know, it's related to processing data locally on the device rather than sending it to the cloud. But I need to make sure I explain it in simple terms.\n\nFirst, maybe start with the basic concept. On-device AI means that the AI is run on the device itself, like a smartphone or a computer, instead of relying on the cloud. So, when you use an app, instead of sending your data to a server, the app does the processing locally. That",
+   "text_sha256": "21ee9b4301c1b6087a7a1454963aca3942c2cefe082fc4f47b1860a361ff0cc1"
+  },
+  {
+   "gen": 2,
+   "regime": "warm",
+   "prompt_tokens": 19,
+   "generated_tokens": 128,
+   "stop": "length",
+   "ttft_ms": 1961.872314453125,
+   "tpot_ms": 27.28497886657715,
+   "prefill_tps": 9.68462619102522,
+   "decode_tps": 36.65020247550766,
+   "generate_duration_ms": 5427.76416015625,
+   "generation_wall_s": 5.427844500009087,
+   "text": "<think>\nOkay, the user is asking for a simple explanation of what on-device AI means. Let me start by recalling what on-device AI is. From what I know, it's related to processing data locally on the device rather than sending it to the cloud. But I need to make sure I explain it in simple terms.\n\nFirst, maybe start with the basic concept. On-device AI means that the AI is run on the device itself, like a smartphone or a computer, instead of relying on the cloud. So, when you use an app, instead of sending your data to a server, the app does the processing locally. That",
+   "text_sha256": "21ee9b4301c1b6087a7a1454963aca3942c2cefe082fc4f47b1860a361ff0cc1"
+  }
+ ],
+ "status": "OK",
+ "peak_working_set_bytes": 3146612736,
+ "peak_pagefile_bytes": 1708474368,
+ "ended": "2026-11-07T23:19:09.588209+09:00"
+}

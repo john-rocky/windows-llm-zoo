@@ -1,0 +1,72 @@
+{
+ "runner": "run_ovgenai.py",
+ "started": "2026-11-08T20:10:50.769712+09:00",
+ "argv": [
+  "--model-dir",
+  "C:\\src\\llmzoo-walk\\models\\OpenVINO__gemma-4-E2B-it-int4-ov",
+  "--device",
+  "GPU.1",
+  "--cache-dir",
+  "C:\\src\\llmzoo-walk\\ovcache\\gemma-4-E2B-it_gpu1",
+  "--prompt-file",
+  "C:\\src\\llmzoo-walk\\pc\\short-chat.txt",
+  "--out",
+  "C:\\src\\llmzoo-walk\\runs\\walk-timed-b\\gemma-4-E2B-it\\openvino-genai_rtx_gpu\\run2.json"
+ ],
+ "pid": 32980,
+ "versions": {
+  "python": "3.12.10",
+  "openvino": "2026.4.1",
+  "openvino-genai": "2026.4.1.0",
+  "openvino-tokenizers": "2026.4.1.0",
+  "numpy": "2.5.4"
+ },
+ "available_devices": {
+  "CPU": "Intel(R) Core(TM) Ultra 9 386H",
+  "GPU.0": "Intel(R) Graphics (iGPU)",
+  "GPU.1": "NVIDIA GeForce RTX 5080 Laptop GPU (dGPU)",
+  "NPU": "Intel(R) AI Boost"
+ },
+ "prompt_sha256": "870aafb98e570e8fa1343ec051180237f4587233f49c0cc1391724e086d42d50",
+ "pipeline": "vlm",
+ "load_s": 25.117946199985454,
+ "pipeline_errors_before": [],
+ "templated_prompt": "<bos><|turn>user\nExplain what on-device AI means in simple terms.<turn|>\n<|turn>model\n",
+ "templated_prompt_sha256": "70b30bff1ab92ec74814a888864b33ac65c53a053b6d35e8dfa13b353830ffb2",
+ "gens": [
+  {
+   "gen": 1,
+   "regime": "cold",
+   "prompt_tokens": 20,
+   "generated_tokens": 128,
+   "stop": "length",
+   "ttft_ms": 660.3512573242188,
+   "tpot_ms": 158.15716552734375,
+   "prefill_tps": 30.28691136447767,
+   "decode_tps": 6.322824493380986,
+   "generate_duration_ms": 20747.841796875,
+   "generation_wall_s": 20.7480624000018,
+   "text": "Imagine a computer or a device (like your smartphone or a smart camera) having a tiny, smart brain right inside itself. **On-device AI** means that the Artificial Intelligence (AI) is running directly on that device, rather than needing to constantly send all the information to a giant, remote computer (like a massive cloud server) to do the thinking.\n\nHere’s a simple breakdown using analogies:\n\n---\n\n### The Traditional Way (Cloud AI)\n\nThink of this like sending a complex math problem to a specialist:\n\n* **The Brain (The AI Model):** A huge, powerful computer farm (the cloud",
+   "text_sha256": "df3f9b3d5c85602b11cac621d642e49f4d72c16e7fef3e41b954ea85660a3ad6"
+  },
+  {
+   "gen": 2,
+   "regime": "warm",
+   "prompt_tokens": 20,
+   "generated_tokens": 128,
+   "stop": "length",
+   "ttft_ms": 400.30230712890625,
+   "tpot_ms": 186.92465209960938,
+   "prefill_tps": 49.96224014656892,
+   "decode_tps": 5.349749157040639,
+   "generate_duration_ms": 24140.755859375,
+   "generation_wall_s": 24.140911599999527,
+   "text": "Imagine a computer or a device (like your smartphone or a smart camera) having a tiny, smart brain right inside itself. **On-device AI** means that the Artificial Intelligence (AI) is running directly on that device, rather than needing to constantly send all the information to a giant, remote computer (like a massive cloud server) to do the thinking.\n\nHere’s a simple breakdown using analogies:\n\n---\n\n### The Traditional Way (Cloud AI)\n\nThink of this like sending a complex math problem to a specialist:\n\n* **The Brain (The AI Model):** A huge, powerful computer farm (the cloud",
+   "text_sha256": "df3f9b3d5c85602b11cac621d642e49f4d72c16e7fef3e41b954ea85660a3ad6"
+  }
+ ],
+ "status": "OK",
+ "peak_working_set_bytes": 2782969856,
+ "peak_pagefile_bytes": 8130916352,
+ "ended": "2026-11-08T20:12:02.614548+09:00"
+}

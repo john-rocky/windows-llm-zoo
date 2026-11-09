@@ -1,0 +1,3 @@
+ENGINE_PID 8048
+{"gen": 1, "generated_tokens": 128, "chunks": 127, "delta_fields": {"reasoning_content": 127}, "stop": "length", "ttft_ms": 741.9611999939661, "decode_tps": 100.30325814521893}
+{"gen": 2, "generated_tokens": 128, "chunks": 127, "delta_fields": {"reasoning_content": 127}, "stop": "length", "ttft_ms": 229.14330000639893, "decode_tps": 105.98936657544192}

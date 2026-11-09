@@ -1,0 +1,25 @@
+[2026-11-08T07:34:28.0515233+09:00] job z2-walk-timed-bench: 2 launches
+[2026-11-08T07:34:28.0515233+09:00] GPU reads while a GPU run's engine runs: none (-GpuSampleSeconds 0)
+[2026-11-08T07:34:43.0004647+09:00] Processor Information counters loaded in 5043 ms (the job's first read)
+[2026-11-08T07:34:43.0322997+09:00] purged gemma-4-E2B-it.litertlm_1793871636_2588147712.xnnpack_cache (752 MB)
+[2026-11-08T07:34:52.8105313+09:00] r00_run1 GpuPreference on the tool: GpuPreference=1;
+[2026-11-08T07:34:52.8262798+09:00] r00_run1 start: C:\Users\USER\bench\engines\litert\litert_lm_advanced_main_windows.exe --backend=gpu --model_path=C:\Users\USER\models\Qwen3-0.6B_dynamic_wi4b32_afp32.litertlm --input_prompt_file=C:\Users\USER\bench\jobs\20261108-073423-7dbb8c\prompts\short-chat.txt --max_num_tokens=2048 --max_output_tokens=128 --num_iterations=2 --async=false --benchmark --benchmark_prefill_tokens=0 --benchmark_decode_tokens=0 --use_session=false --preferred_device_substr=Intel
+[2026-11-08T07:35:04.3269999+09:00] r00_run1 GpuPreference removed after the run: none left
+[2026-11-08T07:35:06.7630737+09:00] r00_run1 exit=0 timedOut=False elapsed=11.5 peakMB=1452
+[2026-11-08T07:35:46.0467946+09:00] r00_run2 GpuPreference on the tool: GpuPreference=1;
+[2026-11-08T07:35:46.0467946+09:00] r00_run2 start: C:\Users\USER\bench\engines\litert\litert_lm_advanced_main_windows.exe --backend=gpu --model_path=C:\Users\USER\models\Qwen3-0.6B_dynamic_wi4b32_afp32.litertlm --input_prompt_file=C:\Users\USER\bench\jobs\20261108-073423-7dbb8c\prompts\short-chat.txt --max_num_tokens=2048 --max_output_tokens=128 --num_iterations=2 --async=false --benchmark --benchmark_prefill_tokens=0 --benchmark_decode_tokens=0 --use_session=false --preferred_device_substr=Intel
+[2026-11-08T07:35:51.7861619+09:00] r00_run2 GpuPreference removed after the run: none left
+[2026-11-08T07:35:54.0356377+09:00] r00_run2 exit=0 timedOut=False elapsed=5.7 peakMB=1319
+[2026-11-08T07:36:30.7223643+09:00] host not quiet: cpu 36 %, gpu memory 0 MiB, gpu engines 0 %
+[2026-11-08T07:37:09.9506801+09:00] r00_run3 GpuPreference on the tool: GpuPreference=1;
+[2026-11-08T07:37:09.9506801+09:00] r00_run3 start: C:\Users\USER\bench\engines\litert\litert_lm_advanced_main_windows.exe --backend=gpu --model_path=C:\Users\USER\models\Qwen3-0.6B_dynamic_wi4b32_afp32.litertlm --input_prompt_file=C:\Users\USER\bench\jobs\20261108-073423-7dbb8c\prompts\short-chat.txt --max_num_tokens=2048 --max_output_tokens=128 --num_iterations=2 --async=false --benchmark --benchmark_prefill_tokens=0 --benchmark_decode_tokens=0 --use_session=false --preferred_device_substr=Intel
+[2026-11-08T07:37:15.6911282+09:00] r00_run3 GpuPreference removed after the run: none left
+[2026-11-08T07:37:17.9306335+09:00] r00_run3 exit=0 timedOut=False elapsed=5.7 peakMB=1320
+[2026-11-08T07:37:56.4068410+09:00] r01_run1 start: C:\Users\USER\bench\engines\llama-cpu\llama-cli.exe -m C:\Users\USER\models\gemma-4-E4B-it-Q4_K_M.gguf -c 2048 -f C:\Users\USER\bench\jobs\20261108-073423-7dbb8c\prompts\short-chat.txt -n 128 --temp 0 --top-p 1 -st --chat-template-kwargs "{\"enable_thinking\":false}"
+[2026-11-08T07:38:15.2059279+09:00] r01_run1 exit=0 timedOut=False elapsed=15 peakMB=5258
+[2026-11-08T07:38:53.6634326+09:00] r01_run2 start: C:\Users\USER\bench\engines\llama-cpu\llama-cli.exe -m C:\Users\USER\models\gemma-4-E4B-it-Q4_K_M.gguf -c 2048 -f C:\Users\USER\bench\jobs\20261108-073423-7dbb8c\prompts\short-chat.txt -n 128 --temp 0 --top-p 1 -st --chat-template-kwargs "{\"enable_thinking\":false}"
+[2026-11-08T07:39:07.8872438+09:00] r01_run2 exit=0 timedOut=False elapsed=10.5 peakMB=5257
+[2026-11-08T07:39:51.9040729+09:00] r01_run3 start: C:\Users\USER\bench\engines\llama-cpu\llama-cli.exe -m C:\Users\USER\models\gemma-4-E4B-it-Q4_K_M.gguf -c 2048 -f C:\Users\USER\bench\jobs\20261108-073423-7dbb8c\prompts\short-chat.txt -n 128 --temp 0 --top-p 1 -st --chat-template-kwargs "{\"enable_thinking\":false}"
+[2026-11-08T07:40:06.0781549+09:00] r01_run3 exit=0 timedOut=False elapsed=10.4 peakMB=5258
+[2026-11-08T07:40:36.0846259+09:00] purged Qwen3-0.6B_dynamic_wi4b32_afp32.litertlm_1793983021_343490560_mldrift_program_cache.bin at the end: written under the igpu adapter
+[2026-11-08T07:40:36.1643870+09:00] purged Qwen3-0.6B_dynamic_wi4b32_afp32.litertlm_1793983021_343490560_mldrift_weight_cache.bin at the end: written under the igpu adapter

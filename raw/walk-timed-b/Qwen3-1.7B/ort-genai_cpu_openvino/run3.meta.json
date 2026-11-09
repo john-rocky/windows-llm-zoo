@@ -1,0 +1,83 @@
+{
+    "cell":  "Qwen3-1.7B\\ort-genai_cpu_openvino",
+    "run":  3,
+    "mode":  "timed",
+    "sitting":  "walk-timed-b",
+    "start":  "2026-11-08T18:40:06.8839961+09:00",
+    "osBuild":  "26200.9711",
+    "gate":  {
+                 "quietGate":  "quiet",
+                 "cpuReads":  [
+                                  1.1,
+                                  1.1,
+                                  0.4
+                              ],
+                 "nvidiaMiB":  0,
+                 "availGB":  18.4,
+                 "ramNeedGB":  3.6,
+                 "gpuEngines":  null
+             },
+    "before":  {
+                   "load":  {
+                                "cpu":  2.1,
+                                "build_ms":  0,
+                                "top":  [
+                                            "System 4 0.31 core",
+                                            "NVDisplay.Container 3412 0.02 core",
+                                            "powershell 16780 0.02 core"
+                                        ]
+                            },
+                   "nvidia":  "P0, 795 MHz, 14001 MHz, 17.51 W, 0 %, 0 MiB, 46",
+                   "availGB":  18.4
+               },
+    "command":  "C:\\src\\llmzoo-walk\\.venv-genai\\Scripts\\python.exe -u C:\\src\\llmzoo-walk\\pc\\run_genai.py --model-dir C:\\src\\llmzoo-walk\\models\\onnx-community__Qwen3-1.7B-ONNX\\onnxruntime\\cpu_and_mobile\\cpu-int4-kld-block-128 --ep openvino --ov-device CPU --prompt-file C:\\src\\llmzoo-walk\\pc\\short-chat.txt --out C:\\src\\llmzoo-walk\\runs\\walk-timed-b\\Qwen3-1.7B\\ort-genai_cpu_openvino\\run3.json",
+    "engine":  {
+                   "exitCode":  0,
+                   "timedOut":  false,
+                   "yielded":  false,
+                   "suspendedSeconds":  0,
+                   "suspensions":  0,
+                   "enginePid":  29808,
+                   "elapsedSeconds":  25.27,
+                   "peakWorkingSetBytes":  4093952000,
+                   "gpuMiBPeak":  {
+                                      "0x00000000_0x00012C48":  {
+                                                                    "shared":  0,
+                                                                    "dedicated":  0
+                                                                },
+                                      "0x00000000_0x0001260E":  {
+                                                                    "shared":  23,
+                                                                    "dedicated":  0
+                                                                },
+                                      "0x00000000_0x00013E4C":  {
+                                                                    "shared":  0,
+                                                                    "dedicated":  0
+                                                                }
+                                  },
+                   "watchPeakWorkingSetBytes":  0,
+                   "watchGpuMiBPeak":  {
+
+                                       },
+                   "nvidiaSamples":  [
+                                         "5s P0, 2722 MHz, 14001 MHz, 17.70 W, 0 %, 0 MiB, 47",
+                                         "10s P0, 22582 MHz, 14001 MHz, 17.80 W, 0 %, 0 MiB, 47",
+                                         "15s P0, 2790 MHz, 14001 MHz, 17.71 W, 0 %, 0 MiB, 48",
+                                         "20s P0, 2122 MHz, 14001 MHz, 18.11 W, 0 %, 0 MiB, 49"
+                                     ]
+               },
+    "after":  {
+                  "load":  {
+                               "cpu":  2,
+                               "build_ms":  0,
+                               "top":  [
+                                           "System 4 0.27 core",
+                                           "NVDisplay.Container 3412 0.02 core",
+                                           "svchost 5260 0.02 core",
+                                           "powershell 16780 0.02 core"
+                                       ]
+                           },
+                  "nvidia":  "P0, 67 MHz, 14001 MHz, 18.15 W, 0 %, 0 MiB, 50"
+              },
+    "end":  "2026-11-08T18:40:34.0964318+09:00",
+    "tries":  1
+}

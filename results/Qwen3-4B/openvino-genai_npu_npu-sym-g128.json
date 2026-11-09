@@ -1,0 +1,534 @@
+{
+ "model": "Qwen3-4B",
+ "cell": "openvino-genai_npu_npu-sym-g128",
+ "runtime": "openvino-genai",
+ "runtime_detail": "OpenVINO GenAI 2026.4.1 (Python, pc/run_ovgenai.py)",
+ "device": "npu",
+ "device_name": "Intel(R) NPU",
+ "backend": "npu-sym-g128",
+ "backend_detail": "OpenVINO GenAI 2026.4.1 on NPU (CACHE_DIR); the IR exported here by pc/export_npu.ps1 in the NPU form of the OpenVINO GenAI NPU docs (int4, --sym, --ratio 1.0, --group-size 128) from Qwen/Qwen3-4B@1cfa9a720891 with optimum-intel 2.2.0, nncf 3.4.0, transformers 5.5.4 (OpenVINO's int4-ov, int4_sym g128 r1.0 + AWQ, gave degenerate tokens on the NPU)",
+ "source": "windows-llm-zoo (Z2)",
+ "shelf": {
+  "repo": "Qwen/Qwen3-4B",
+  "folder": "revision 1cfa9a720891, exported here (Qwen3-4B-int4-sym-g128-ov)",
+  "quant": "int4_sym g128 r1.0",
+  "quant_source": "the IR's rt_info"
+ },
+ "unit": {
+  "kind": "python",
+  "venv": "ovgenai",
+  "script": "run_ovgenai.py",
+  "args": [
+   "--model-dir",
+   "{ROOT}\\models\\z2-npu\\Qwen3-4B-int4-sym-g128-ov",
+   "--device",
+   "NPU",
+   "--cache-dir",
+   "{ROOT}\\ovcache\\Qwen3-4B_npu_sym_g128"
+  ],
+  "model_id": null,
+  "path": null,
+  "engines_gate": false
+ },
+ "workload": {
+  "task": "short-chat",
+  "prompt": "prompts/text/short-chat.txt of edge-llm-bench (pc/short-chat.txt)",
+  "chat_template": "the package's own, one user turn",
+  "output_budget_tokens": 128,
+  "sampling": "greedy",
+  "regime": "cold (first generation of a fresh engine process; Foundry: of a fresh daemon)",
+  "counting": "runs=3 per sitting; run 1 of a GPU or NPU cell is not counted; a text-check failure is not counted"
+ },
+ "status": "measured",
+ "table": {
+  "sitting": "walk-timed-b",
+  "decode_tps": 21.72,
+  "cold_spread_pct": 0.07,
+  "cold_n": 2,
+  "prefill_tps": 18.5,
+  "ttft_ms": 1026.3,
+  "peak_working_set_mb": 5560,
+  "text_check": "6/6 PASS",
+  "decode_tps_warm": 22.03,
+  "gpu_adapter_used": [],
+  "generated_tokens": [
+   128
+  ],
+  "stop": [
+   "length"
+  ],
+  "same_cold_text": true,
+  "os_build": [
+   "26200.9711"
+  ]
+ },
+ "first_error": null,
+ "why_not_measured": null,
+ "sittings": [
+  {
+   "sitting": "walk-npuexp2",
+   "mode": "first",
+   "runs": [
+    {
+     "run": 1,
+     "status": "OK",
+     "counted": false,
+     "why": "first pass (untimed)",
+     "exit_code": 0,
+     "timed_out": false,
+     "elapsed_s": 27.191,
+     "suspended_s": 0,
+     "gate": null,
+     "before": {
+      "load": {
+       "cpu": 79.2,
+       "build_ms": 0,
+       "top": [
+        "python 22896 8.84 core",
+        "python 22728 2.08 core",
+        "python 34156 0.96 core",
+        "System 4 0.4 core",
+        "powershell 28528 0.08 core"
+       ]
+      },
+      "nvidia": "P0, 52 MHz, 14001 MHz, 19.32 W, 0 %, 0 MiB, 56",
+      "availGB": 13.5
+     },
+     "start": "2026-11-08T00:35:11.4410853+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 0,
+       "dedicated": 0
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 21,
+       "dedicated": 0
+      },
+      "0x00000000_0x00013E4C (npu?)": {
+       "shared": 3168,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": null,
+     "peak_working_set_mb": 5561,
+     "gens": [
+      {
+       "regime": "cold",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 20.110857357401244,
+       "prefill_tps": 13.77700003629067,
+       "ttft_ms": 1379.110107421875,
+       "text_sha256": "1f677333d48daa1f212b520052c178ecbf50f9d032d98963af1f9754fba5f9e0",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "<think>\nOkay, the user wants me to explain what on-device AI is in simple terms. Let me start by recalling what I know about AI and on-device processing.\n\nFirst, I need to break down the concept. On-device AI refers to AI models that run directly on a user's device, like a smartphone or a computer, instead of relying on cloud servers. That makes sense because it reduces latency and data transfer.\n\nWait, the user is asking for a simple explanation. So I should avoid technical jargon. Maybe start with the basics: AI is a type of software that can learn and make decisions. Now, when you use"
+      },
+      {
+       "regime": "warm",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 20.71191847083997,
+       "prefill_tps": 17.031973358653104,
+       "ttft_ms": 1115.5489501953125,
+       "text_sha256": "1f677333d48daa1f212b520052c178ecbf50f9d032d98963af1f9754fba5f9e0",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "<think>\nOkay, the user wants me to explain what on-device AI is in simple terms. Let me start by recalling what I know about AI and on-device processing.\n\nFirst, I need to break down the concept. On-device AI refers to AI models that run directly on a user's device, like a smartphone or a computer, instead of relying on cloud servers. That makes sense because it reduces latency and data transfer.\n\nWait, the user is asking for a simple explanation. So I should avoid technical jargon. Maybe start with the basics: AI is a type of software that can learn and make decisions. Now, when you use"
+      }
+     ],
+     "load_s": 7.081697299989173,
+     "versions": {
+      "python": "3.12.10",
+      "openvino": "2026.4.1",
+      "openvino-genai": "2026.4.1.0",
+      "openvino-tokenizers": "2026.4.1.0",
+      "numpy": "2.5.4"
+     }
+    }
+   ],
+   "cold_n": 0,
+   "text_check": "2/2 PASS",
+   "host_env": [
+    {
+     "read": "2026-11-08T00:34:58.2303750+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    }
+   ],
+   "counts": false,
+   "unit_args": [
+    "--model-dir",
+    "{ROOT}\\models\\z2-npu\\Qwen3-4B-int4-sym-g128-ov",
+    "--device",
+    "NPU",
+    "--cache-dir",
+    "{ROOT}\\ovcache\\Qwen3-4B_npu_sym_g128"
+   ],
+   "unit_note": "OpenVINO GenAI 2026.4.1 on NPU (CACHE_DIR); the IR exported here by pc/export_npu.ps1 in the NPU form of the OpenVINO GenAI NPU docs (int4, --sym, --ratio 1.0, --group-size 128) from Qwen/Qwen3-4B@1cfa9a720891 with optimum-intel 2.2.0, nncf 3.4.0, transformers 5.5.4 (OpenVINO's int4-ov, int4_sym g128 r1.0 + AWQ, gave degenerate tokens on the NPU)"
+  },
+  {
+   "sitting": "walk-timed-b",
+   "mode": "timed",
+   "runs": [
+    {
+     "run": 1,
+     "status": "OK",
+     "counted": false,
+     "why": "run 1 of a GPU / NPU cell (first process in the sitting)",
+     "exit_code": 0,
+     "timed_out": false,
+     "elapsed_s": 28.682,
+     "suspended_s": 0,
+     "gate": {
+      "quietGate": "quiet",
+      "cpuReads": [
+       2.7,
+       0.7,
+       0.4
+      ],
+      "nvidiaMiB": 0,
+      "availGB": 24.2,
+      "ramNeedGB": 4.6,
+      "gpuEngines": null
+     },
+     "before": {
+      "load": {
+       "cpu": 2.5,
+       "build_ms": 0,
+       "top": [
+        "System 4 0.36 core",
+        "WmiPrvSE 7560 0.03 core",
+        "ipf_uf 5216 0.02 core"
+       ]
+      },
+      "nvidia": "P0, 3225 MHz, 14001 MHz, 19.06 W, 0 %, 0 MiB, 55",
+      "availGB": 24.3
+     },
+     "start": "2026-11-09T00:50:04.3603073+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 0,
+       "dedicated": 0
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 21,
+       "dedicated": 0
+      },
+      "0x00000000_0x00013E4C (npu?)": {
+       "shared": 3168,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": null,
+     "peak_working_set_mb": 5563,
+     "gens": [
+      {
+       "regime": "cold",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 21.37616568615923,
+       "prefill_tps": 17.82550547094869,
+       "ttft_ms": 1065.888427734375,
+       "text_sha256": "1f677333d48daa1f212b520052c178ecbf50f9d032d98963af1f9754fba5f9e0",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "<think>\nOkay, the user wants me to explain what on-device AI is in simple terms. Let me start by recalling what I know about AI and on-device processing.\n\nFirst, I need to break down the concept. On-device AI refers to AI models that run directly on a user's device, like a smartphone or a computer, instead of relying on cloud servers. That makes sense because it reduces latency and data transfer.\n\nWait, the user is asking for a simple explanation. So I should avoid technical jargon. Maybe start with the basics: AI is a type of software that can learn and make decisions. Now, when you use"
+      },
+      {
+       "regime": "warm",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 22.108121519778177,
+       "prefill_tps": 20.201536439711525,
+       "ttft_ms": 940.5225219726562,
+       "text_sha256": "1f677333d48daa1f212b520052c178ecbf50f9d032d98963af1f9754fba5f9e0",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "<think>\nOkay, the user wants me to explain what on-device AI is in simple terms. Let me start by recalling what I know about AI and on-device processing.\n\nFirst, I need to break down the concept. On-device AI refers to AI models that run directly on a user's device, like a smartphone or a computer, instead of relying on cloud servers. That makes sense because it reduces latency and data transfer.\n\nWait, the user is asking for a simple explanation. So I should avoid technical jargon. Maybe start with the basics: AI is a type of software that can learn and make decisions. Now, when you use"
+      }
+     ],
+     "load_s": 10.618109400005778,
+     "versions": {
+      "python": "3.12.10",
+      "openvino": "2026.4.1",
+      "openvino-genai": "2026.4.1.0",
+      "openvino-tokenizers": "2026.4.1.0",
+      "numpy": "2.5.4"
+     }
+    },
+    {
+     "run": 2,
+     "status": "OK",
+     "counted": true,
+     "why": "",
+     "exit_code": 0,
+     "timed_out": false,
+     "elapsed_s": 21.783,
+     "suspended_s": 0,
+     "gate": {
+      "quietGate": "quiet",
+      "cpuReads": [
+       0.9,
+       0.6,
+       0.1
+      ],
+      "nvidiaMiB": 0,
+      "availGB": 24.2,
+      "ramNeedGB": 4.6,
+      "gpuEngines": null
+     },
+     "before": {
+      "load": {
+       "cpu": 2.9,
+       "build_ms": 0,
+       "top": [
+        "System 4 0.37 core",
+        "WUDFHost 1836 0.06 core",
+        "powershell 5476 0.02 core",
+        "WmiPrvSE 7560 0.02 core"
+       ]
+      },
+      "nvidia": "P0, 165 MHz, 14001 MHz, 18.36 W, 0 %, 0 MiB, 51",
+      "availGB": 24.2
+     },
+     "start": "2026-11-09T00:51:12.3760412+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 0,
+       "dedicated": 0
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 21,
+       "dedicated": 0
+      },
+      "0x00000000_0x00013E4C (npu?)": {
+       "shared": 3168,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": null,
+     "peak_working_set_mb": 5562,
+     "gens": [
+      {
+       "regime": "cold",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 21.729457380276777,
+       "prefill_tps": 18.50702895647077,
+       "ttft_ms": 1026.636962890625,
+       "text_sha256": "1f677333d48daa1f212b520052c178ecbf50f9d032d98963af1f9754fba5f9e0",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "<think>\nOkay, the user wants me to explain what on-device AI is in simple terms. Let me start by recalling what I know about AI and on-device processing.\n\nFirst, I need to break down the concept. On-device AI refers to AI models that run directly on a user's device, like a smartphone or a computer, instead of relying on cloud servers. That makes sense because it reduces latency and data transfer.\n\nWait, the user is asking for a simple explanation. So I should avoid technical jargon. Maybe start with the basics: AI is a type of software that can learn and make decisions. Now, when you use"
+      },
+      {
+       "regime": "warm",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 22.07977081995693,
+       "prefill_tps": 20.375675202458464,
+       "ttft_ms": 932.4844360351562,
+       "text_sha256": "1f677333d48daa1f212b520052c178ecbf50f9d032d98963af1f9754fba5f9e0",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "<think>\nOkay, the user wants me to explain what on-device AI is in simple terms. Let me start by recalling what I know about AI and on-device processing.\n\nFirst, I need to break down the concept. On-device AI refers to AI models that run directly on a user's device, like a smartphone or a computer, instead of relying on cloud servers. That makes sense because it reduces latency and data transfer.\n\nWait, the user is asking for a simple explanation. So I should avoid technical jargon. Maybe start with the basics: AI is a type of software that can learn and make decisions. Now, when you use"
+      }
+     ],
+     "load_s": 3.6195079000026453,
+     "versions": {
+      "python": "3.12.10",
+      "openvino": "2026.4.1",
+      "openvino-genai": "2026.4.1.0",
+      "openvino-tokenizers": "2026.4.1.0",
+      "numpy": "2.5.4"
+     }
+    },
+    {
+     "run": 3,
+     "status": "OK",
+     "counted": true,
+     "why": "",
+     "exit_code": 0,
+     "timed_out": false,
+     "elapsed_s": 22.291,
+     "suspended_s": 0,
+     "gate": {
+      "quietGate": "quiet",
+      "cpuReads": [
+       1.5,
+       0.3,
+       0
+      ],
+      "nvidiaMiB": 0,
+      "availGB": 24.2,
+      "ramNeedGB": 4.6,
+      "gpuEngines": null
+     },
+     "before": {
+      "load": {
+       "cpu": 2.8,
+       "build_ms": 0,
+       "top": [
+        "System 4 0.36 core",
+        "svchost 17248 0.03 core",
+        "MsMpEng 5548 0.02 core",
+        "svchost 18472 0.02 core",
+        "powershell 16780 0.02 core"
+       ]
+      },
+      "nvidia": "P0, 165 MHz, 14001 MHz, 17.67 W, 0 %, 0 MiB, 47",
+      "availGB": 24.2
+     },
+     "start": "2026-11-09T00:52:13.4589899+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 0,
+       "dedicated": 0
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 21,
+       "dedicated": 0
+      },
+      "0x00000000_0x00013E4C (npu?)": {
+       "shared": 3168,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": null,
+     "peak_working_set_mb": 5558,
+     "gens": [
+      {
+       "regime": "cold",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 21.713748020330133,
+       "prefill_tps": 18.518730035446005,
+       "ttft_ms": 1025.98828125,
+       "text_sha256": "1f677333d48daa1f212b520052c178ecbf50f9d032d98963af1f9754fba5f9e0",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "<think>\nOkay, the user wants me to explain what on-device AI is in simple terms. Let me start by recalling what I know about AI and on-device processing.\n\nFirst, I need to break down the concept. On-device AI refers to AI models that run directly on a user's device, like a smartphone or a computer, instead of relying on cloud servers. That makes sense because it reduces latency and data transfer.\n\nWait, the user is asking for a simple explanation. So I should avoid technical jargon. Maybe start with the basics: AI is a type of software that can learn and make decisions. Now, when you use"
+      },
+      {
+       "regime": "warm",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 21.979311892190832,
+       "prefill_tps": 20.202922238063444,
+       "ttft_ms": 940.4580078125,
+       "text_sha256": "1f677333d48daa1f212b520052c178ecbf50f9d032d98963af1f9754fba5f9e0",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "<think>\nOkay, the user wants me to explain what on-device AI is in simple terms. Let me start by recalling what I know about AI and on-device processing.\n\nFirst, I need to break down the concept. On-device AI refers to AI models that run directly on a user's device, like a smartphone or a computer, instead of relying on cloud servers. That makes sense because it reduces latency and data transfer.\n\nWait, the user is asking for a simple explanation. So I should avoid technical jargon. Maybe start with the basics: AI is a type of software that can learn and make decisions. Now, when you use"
+      }
+     ],
+     "load_s": 3.600949200015748,
+     "versions": {
+      "python": "3.12.10",
+      "openvino": "2026.4.1",
+      "openvino-genai": "2026.4.1.0",
+      "openvino-tokenizers": "2026.4.1.0",
+      "numpy": "2.5.4"
+     }
+    }
+   ],
+   "cold_n": 2,
+   "text_check": "6/6 PASS",
+   "host_env": [
+    {
+     "read": "2026-11-08T18:27:37.4700974+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "osCaption": "Microsoft Windows 11 Home",
+     "ramGB": 31.5,
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    }
+   ],
+   "cold_spread_pct": 0.07,
+   "decode_tps": 21.72,
+   "prefill_tps": 18.5,
+   "ttft_ms": 1026.3,
+   "decode_tps_warm": 22.03,
+   "peak_working_set_mb": 5560,
+   "gpu_adapter_used": [],
+   "generated_tokens": [
+    128
+   ],
+   "stop": [
+    "length"
+   ],
+   "same_cold_text": true,
+   "os_build": [
+    "26200.9711"
+   ],
+   "counts": true,
+   "unit_args": [
+    "--model-dir",
+    "{ROOT}\\models\\z2-npu\\Qwen3-4B-int4-sym-g128-ov",
+    "--device",
+    "NPU",
+    "--cache-dir",
+    "{ROOT}\\ovcache\\Qwen3-4B_npu_sym_g128"
+   ],
+   "unit_note": "OpenVINO GenAI 2026.4.1 on NPU (CACHE_DIR); the IR exported here by pc/export_npu.ps1 in the NPU form of the OpenVINO GenAI NPU docs (int4, --sym, --ratio 1.0, --group-size 128) from Qwen/Qwen3-4B@1cfa9a720891 with optimum-intel 2.2.0, nncf 3.4.0, transformers 5.5.4 (OpenVINO's int4-ov, int4_sym g128 r1.0 + AWQ, gave degenerate tokens on the NPU)"
+  }
+ ]
+}

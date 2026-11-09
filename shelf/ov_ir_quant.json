@@ -1,0 +1,116 @@
+{
+ "OpenVINO/Qwen3-0.6B-int4-ov": {
+  "revision": "f864c6106efb6c7f7b4ef274a78a98e37210dddd",
+  "xml": "openvino_model.xml",
+  "label": "int4_asym g128 r0.8",
+  "rt_info": {
+   "Runtime_version": "2025.1.0-18503-6fec06580ab-releases/2025/1",
+   "awq": "False",
+   "backup_mode": "int8_asym",
+   "gptq": "False",
+   "group_size": "128",
+   "mode": "int4_asym",
+   "ratio": "0.8",
+   "scale_estimation": "False",
+   "sensitivity_metric": "weight_quantization_error",
+   "nncf_version": "2.15.0",
+   "optimum_intel_version": "1.23.0.dev0+6b993b8",
+   "transformers_version": "4.51.3"
+  }
+ },
+ "OpenVINO/Qwen3-1.7B-int4-ov": {
+  "revision": "6f32d81e9deebeca30bb5490a7176cf4fa8c79e3",
+  "xml": "openvino_model.xml",
+  "label": "int4_asym g128 r0.8",
+  "rt_info": {
+   "Runtime_version": "2025.1.0-18503-6fec06580ab-releases/2025/1",
+   "awq": "False",
+   "backup_mode": "int8_asym",
+   "gptq": "False",
+   "group_size": "128",
+   "mode": "int4_asym",
+   "ratio": "0.8",
+   "scale_estimation": "False",
+   "sensitivity_metric": "weight_quantization_error",
+   "nncf_version": "2.15.0",
+   "optimum_intel_version": "1.23.0.dev0+6b993b8",
+   "transformers_version": "4.51.3"
+  }
+ },
+ "OpenVINO/Qwen3-4B-int4-ov": {
+  "revision": "b467368d16b75df14055562fe927ae8e1f15f7ef",
+  "xml": "openvino_model.xml",
+  "label": "int4_sym g128 r1.0 + AWQ",
+  "rt_info": {
+   "Runtime_version": "2026.0.0-20961-f08e8b36350-releases/2026/0",
+   "awq": "True",
+   "backup_mode": "int8_asym",
+   "gptq": "False",
+   "group_size": "128",
+   "mode": "int4_sym",
+   "ratio": "1.0",
+   "scale_estimation": "False",
+   "sensitivity_metric": "weight_quantization_error",
+   "nncf_version": "3.0.0.dev0+e82af6e7f",
+   "optimum_intel_version": "1.27.0.dev0+2c48d64",
+   "transformers_version": "4.57.6"
+  }
+ },
+ "OpenVINO/gemma-4-E2B-it-int4-ov": {
+  "revision": "81a7dc381261ebcea9aac4849aac35496475b389",
+  "xml": "openvino_language_model.xml",
+  "label": "int4_asym g128 r1.0",
+  "rt_info": {
+   "Runtime_version": "2026.4.0-22955-227c33757d1-releases/2026/4",
+   "awq": "False",
+   "backup_mode": "int8_asym",
+   "gptq": "False",
+   "group_size": "128",
+   "mode": "int4_asym",
+   "ratio": "1.0",
+   "scale_estimation": "False",
+   "sensitivity_metric": "weight_quantization_error",
+   "nncf_version": "3.4.0.dev0+17aa59f9e",
+   "optimum_intel_version": "2.2.0.dev0+37e03a5",
+   "transformers_version": "5.5.4"
+  }
+ },
+ "OpenVINO/gemma-4-E2B-it-int4-cw-ov": {
+  "revision": "8c813bae3fe671dcccf74d5d1aff1cf4045d0de2",
+  "xml": "openvino_language_model.xml",
+  "label": "int4_sym g-1 r1.0",
+  "rt_info": {
+   "Runtime_version": "2026.4.0-22955-227c33757d1-releases/2026/4",
+   "awq": "False",
+   "backup_mode": "int8_asym",
+   "gptq": "False",
+   "group_size": "-1",
+   "mode": "int4_sym",
+   "ratio": "1.0",
+   "scale_estimation": "False",
+   "sensitivity_metric": "weight_quantization_error",
+   "nncf_version": "3.4.0.dev0+17aa59f9e",
+   "optimum_intel_version": "2.2.0.dev0+37e03a5",
+   "transformers_version": "5.5.4"
+  }
+ },
+ "OpenVINO/gemma-4-E4B-it-int4-ov": {
+  "revision": "c157bc8d31bae5041874d4378667bc19ae0ee5c6",
+  "xml": "openvino_language_model.xml",
+  "label": "int4_asym g64 r1.0 + AWQ, scale estimation",
+  "rt_info": {
+   "Runtime_version": "2026.4.0-22959-99c81491cc3-releases/2026/4",
+   "awq": "True",
+   "backup_mode": "int8_asym",
+   "gptq": "False",
+   "group_size": "64",
+   "mode": "int4_asym",
+   "ratio": "1.0",
+   "scale_estimation": "True",
+   "sensitivity_metric": "max_activation_variance",
+   "nncf_version": "3.3.0",
+   "optimum_intel_version": "2.3.0.dev0",
+   "transformers_version": "5.5.4"
+  }
+ }
+}

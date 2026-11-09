@@ -1,0 +1,81 @@
+{
+    "cell":  "Qwen3-0.6B\\ort-genai_igpu_webgpu",
+    "run":  2,
+    "mode":  "timed",
+    "sitting":  "walk-timed",
+    "start":  "2026-11-08T07:45:20.3078706+09:00",
+    "osBuild":  "26200.9711",
+    "gate":  {
+                 "quietGate":  "quiet",
+                 "cpuReads":  [
+                                  0.4,
+                                  0.4,
+                                  1.6
+                              ],
+                 "nvidiaMiB":  0,
+                 "availGB":  20.3,
+                 "ramNeedGB":  2.6,
+                 "gpuEngines":  0
+             },
+    "before":  {
+                   "load":  {
+                                "cpu":  2.3,
+                                "build_ms":  0,
+                                "top":  [
+                                            "System 4 0.3 core",
+                                            "powershell 25860 0.03 core",
+                                            "svchost 5260 0.02 core",
+                                            "svchost 17248 0.02 core"
+                                        ]
+                            },
+                   "nvidia":  "P0, 352 MHz, 14001 MHz, 18.05 W, 0 %, 0 MiB, 51",
+                   "availGB":  20.2
+               },
+    "command":  "C:\\src\\llmzoo-walk\\.venv-genai\\Scripts\\python.exe -u C:\\src\\llmzoo-walk\\pc\\run_genai.py --model-dir C:\\src\\llmzoo-walk\\models\\onnx-community__Qwen3-0.6B-ONNX\\onnxruntime\\webgpu\\webgpu-int4-kld-block-32 --ep webgpu --ep-option adapterIndex=1 --prompt-file C:\\src\\llmzoo-walk\\pc\\short-chat.txt --out C:\\src\\llmzoo-walk\\runs\\walk-timed\\Qwen3-0.6B\\ort-genai_igpu_webgpu\\run2.json",
+    "engine":  {
+                   "exitCode":  0,
+                   "timedOut":  false,
+                   "yielded":  false,
+                   "suspendedSeconds":  0,
+                   "suspensions":  0,
+                   "enginePid":  14768,
+                   "elapsedSeconds":  8.812,
+                   "peakWorkingSetBytes":  1456521216,
+                   "gpuMiBPeak":  {
+                                      "0x00000000_0x00012C48":  {
+                                                                    "shared":  9,
+                                                                    "dedicated":  13
+                                                                },
+                                      "0x00000000_0x0001260E":  {
+                                                                    "shared":  1033,
+                                                                    "dedicated":  0
+                                                                },
+                                      "0x00000000_0x00012BB8":  {
+                                                                    "shared":  0,
+                                                                    "dedicated":  0
+                                                                }
+                                  },
+                   "watchPeakWorkingSetBytes":  0,
+                   "watchGpuMiBPeak":  {
+
+                                       },
+                   "nvidiaSamples":  [
+                                         "5s P4, 1485 MHz, 9001 MHz, 13.31 W, 0 %, 14 MiB, 50"
+                                     ]
+               },
+    "after":  {
+                  "load":  {
+                               "cpu":  1.5,
+                               "build_ms":  0,
+                               "top":  [
+                                           "System 4 0.17 core",
+                                           "powershell 25860 0.03 core",
+                                           "NVDisplay.Container 3412 0.02 core",
+                                           "svchost 5260 0.02 core"
+                                       ]
+                           },
+                  "nvidia":  "P0, 26340 MHz, 14001 MHz, 18.42 W, 0 %, 0 MiB, 51"
+              },
+    "end":  "2026-11-08T07:45:31.0173504+09:00",
+    "tries":  1
+}

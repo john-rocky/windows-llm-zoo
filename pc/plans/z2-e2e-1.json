@@ -1,0 +1,23 @@
+{
+ "sitting": "z2-e2e-1",
+ "units": [
+  {
+   "model": "Qwen3-0.6B",
+   "cell": "Qwen3-0.6B\\ort-genai_rtx_cuda",
+   "kind": "python",
+   "venv": "genai-cuda",
+   "script": "run_genai.py",
+   "args": [
+    "--model-dir",
+    "C:\\src\\llmzoo\\models\\onnx-community__Qwen3-0.6B-ONNX\\onnxruntime\\cuda\\cuda-int4-kld-block-128",
+    "--ep",
+    "follow_config"
+   ],
+   "runs": 3,
+   "engines_gate": false,
+   "timeout_min": 15,
+   "ram_need_gb": 2.6,
+   "note": "onnx-community GenAI folder as published"
+  }
+ ]
+}

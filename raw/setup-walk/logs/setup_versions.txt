@@ -1,0 +1,29 @@
+== .venv-genai
+3.12.10
+flatbuffers 25.12.19
+numpy 2.5.4
+onnxruntime 1.31.1
+onnxruntime-ep-openvino 1.8.1
+onnxruntime-ep-webgpu 0.5.0
+onnxruntime-genai 0.19.0
+packaging 26.3
+protobuf 7.36.2
+== .venv-genai-cuda
+3.12.10
+flatbuffers 25.12.19
+numpy 2.5.4
+nvidia-cublas 13.10.0.20
+nvidia-cuda-nvrtc 13.5.37
+nvidia-cuda-runtime 13.5.37
+nvidia-cudnn-cu13 9.28.0.42
+onnxruntime-genai-cuda 0.19.0
+onnxruntime-gpu 1.31.1
+packaging 26.3
+protobuf 7.36.2
+== .venv-ovgenai
+3.12.10
+numpy 2.5.4
+openvino 2026.4.1
+openvino-genai 2026.4.1.0
+openvino-telemetry 2025.2.0
+openvino-tokenizers 2026.4.1.0

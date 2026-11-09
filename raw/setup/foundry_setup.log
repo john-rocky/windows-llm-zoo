@@ -1,0 +1,156 @@
+[2026-11-07T15:28:38.1404107+09:00] foundry_setup start: steps status,download, free C: 602 GB
+
+--- foundry --version  [2026-11-07T15:28:38.1723186+09:00]
+0.13.0
+[exit=0, 0.2 s]
+
+--- foundry server start  [2026-11-07T15:28:38.3804111+09:00]
+■ Starting Foundry Local server
+OpenVINOExecutionProvider: 0%
+NvTensorRTRTXExecutionProvider: 0%
+CUDAExecutionProvider: 0%
+WebGpuExecutionProvider: 0%
+● success: Server ready (http://127.0.0.1:63823)
+  Public API: http://127.0.0.1:63823/v1/
+  Local API (BYOM): http://127.0.0.1:63823/catalogs/local/v1/
+[exit=0, 22.5 s]
+[2026-11-07T15:29:04.7432503+09:00] foundry status -o json -> foundry_status.json (exit 0)
+[2026-11-07T15:29:04.9448732+09:00] foundry config show -o json -> foundry_config.json (exit 0)
+[2026-11-07T15:29:05.0573087+09:00] foundry model list --variants -o json -> foundry_variants.json (exit 0)
+[2026-11-07T15:29:05.3132006+09:00] cached before Z2: 
+[2026-11-07T15:29:05.4067290+09:00] foundry model list --variants -o json -> foundry_variants.json (exit 0)
+[2026-11-07T15:32:50.9900165+09:00] download gemma-4-e2b-it-cuda-gpu:3 try 1 exit 0 in 225 s
+[2026-11-07T15:38:56.7059794+09:00] download gemma-4-e2b-it-generic-gpu:3 try 1 exit 0 in 366 s
+[2026-11-07T15:44:58.1173511+09:00] download gemma-4-e2b-it-generic-cpu:3 try 1 exit 0 in 361 s
+[2026-11-07T15:45:33.4066954+09:00] download qwen3-0.6b-cuda-gpu:2 try 1 exit 0 in 35 s
+[2026-11-07T15:46:23.5632748+09:00] download qwen3-0.6b-generic-gpu:2 try 1 exit 0 in 50 s
+[2026-11-07T15:46:58.7100740+09:00] download qwen3-0.6b-generic-cpu:4 try 1 exit 0 in 35 s
+[2026-11-07T15:48:28.9193020+09:00] download qwen3-1.7b-cuda-gpu:2 try 1 exit 0 in 90 s
+[2026-11-07T15:49:54.1091204+09:00] download qwen3-1.7b-generic-gpu:2 try 1 exit 0 in 85 s
+[2026-11-07T15:51:09.3379406+09:00] download qwen3-1.7b-generic-cpu:2 try 1 exit 0 in 75 s
+[2026-11-07T15:53:49.6467480+09:00] download qwen3-4b-cuda-gpu:2 try 1 exit 0 in 160 s
+[2026-11-07T15:55:25.0194401+09:00] download qwen3-4b-generic-gpu:2 try 1 exit 0 in 95 s
+[2026-11-07T15:57:00.3011092+09:00] download qwen3-4b-generic-cpu:3 try 1 exit 0 in 95 s
+
+--- foundry server stop  [2026-11-07T15:57:00.3371563+09:00]
+● success: Server stopped.
+[exit=0, 2.7 s]
+[2026-11-07T15:57:03.1335262+09:00] foundry_setup done (free C: 532 GB)
+[2026-11-07T15:57:50.3361860+09:00] foundry_setup start: steps register,paths, free C: 530.3 GB
+
+--- foundry --version  [2026-11-07T15:57:50.3521595+09:00]
+0.13.0
+[exit=0, 0.2 s]
+
+--- foundry server start  [2026-11-07T15:57:50.5201781+09:00]
+■ Starting Foundry Local server
+OpenVINOExecutionProvider: 0%
+NvTensorRTRTXExecutionProvider: 0%
+CUDAExecutionProvider: 0%
+WebGpuExecutionProvider: 0%
+● success: Server ready (http://127.0.0.1:50909)
+  Public API: http://127.0.0.1:50909/v1/
+  Local API (BYOM): http://127.0.0.1:50909/catalogs/local/v1/
+[exit=0, 10.5 s]
+
+--- foundry model unregister z2-gemma-4-e4b-it-cuda-int4-8k:1  [2026-11-07T15:58:01.0778494+09:00]
+● error: No local registration matches 'z2-gemma-4-e4b-it-cuda-int4-8k:1'.
+Hint: Pass a registered local alias or exact canonical model ID.
+[exit=3, 2.4 s]
+
+--- foundry model register C:\src\llmzoo\models\mlboydaisuke__gemma-4-E4B-it-Foundry-Local\cuda-int4-8k z2-gemma-4-e4b-it-cuda-int4-8k:1 --task vision-language-chat --display-name z2-gemma-4-e4b-it-cuda-int4-8k --device gpu --execution-provider CUDAExecutionProvider  [2026-11-07T15:58:03.4531973+09:00]
+● success: Registered local model.
+■ note: ID: z2-gemma-4-e4b-it-cuda-int4-8k:1
+■ note: Alias: z2-gemma-4-e4b-it-cuda-int4-8k
+■ note: Folder: 
+C:\src\llmzoo\models\mlboydaisuke__gemma-4-E4B-it-Foundry-Local\cuda-int4-8k
+■ note: Task: vision-language-chat
+■ note: Files were not copied; the original folder is retained and must remain 
+available.
+■ note: Next: foundry run z2-gemma-4-e4b-it-cuda-int4-8k:1
+[exit=0, 0.5 s]
+
+--- foundry model unregister z2-gemma-4-e4b-it-cpu-int4:1  [2026-11-07T15:58:03.9692941+09:00]
+● error: No local registration matches 'z2-gemma-4-e4b-it-cpu-int4:1'.
+Hint: Pass a registered local alias or exact canonical model ID.
+[exit=3, 0.1 s]
+
+--- foundry model register C:\src\llmzoo\models\mlboydaisuke__gemma-4-E4B-it-Foundry-Local\cpu-int4 z2-gemma-4-e4b-it-cpu-int4:1 --task vision-language-chat --display-name z2-gemma-4-e4b-it-cpu-int4 --device cpu --execution-provider CPUExecutionProvider  [2026-11-07T15:58:04.0798938+09:00]
+● success: Registered local model.
+■ note: ID: z2-gemma-4-e4b-it-cpu-int4:1
+■ note: Alias: z2-gemma-4-e4b-it-cpu-int4
+■ note: Folder: C:\src\llmzoo\models\mlboydaisuke__gemma-4-E4B-it-Foundry-Local\cpu-int4
+■ note: Task: vision-language-chat
+■ note: Files were not copied; the original folder is retained and must remain 
+available.
+■ note: Next: foundry run z2-gemma-4-e4b-it-cpu-int4:1
+[exit=0, 0.3 s]
+
+--- foundry model list --search e4b --variants  [2026-11-07T15:58:04.3749965+09:00]
++------------------------------------------------------------------------------+
+| Model     | Source | Variant  | Type     | Device | Executio | Size | Cached |
+| Name      |        |          |          |        | n        |      |        |
+|           |        |          |          |        | Provider |      |        |
+|-----------+--------+----------+----------+--------+----------+------+--------|
+| z2-gemma- | Local  | z2-gemma | Multimod | GPU    | CUDAExec | —    | ●      |
+| 4-e4b-it- |        | -4-e4b-i | al       |        | utionPro |      |        |
+| cuda-int4 |        | t-cuda-i |          |        | vider    |      |        |
+| -8k       |        | nt4-8k   |          |        |          |      |        |
+| z2-gemma- | Local  | z2-gemma | Multimod | CPU    | CPUExecu | —    | ●      |
+| 4-e4b-it- |        | -4-e4b-i | al       |        | tionProv |      |        |
+| cpu-int4  |        | t-cpu-in |          |        | ider     |      |        |
+|           |        | t4       |          |        |          |      |        |
++------------------------------------------------------------------------------+
+Device: NPU / GPU / CPU = exact hardware target for this variant.
+Execution Provider: runtime backend used by this variant.
+Cached: this specific variant is downloaded on this machine.
+[exit=0, 0.2 s]
+
+--- foundry cache ls --search e4b --variants  [2026-11-07T15:58:04.5525112+09:00]
++------------------------------------------------------------------------------+
+| Alias     | Source | Variant  | Type     | Device | Executio | Size | Loaded |
+|           |        |          |          |        | n        |      |        |
+|           |        |          |          |        | Provider |      |        |
+|-----------+--------+----------+----------+--------+----------+------+--------|
+| z2-gemma- | Local  | z2-gemma | Multimod | GPU    | CUDAExec | —    | ○      |
+| 4-e4b-it- |        | -4-e4b-i | al       |        | utionPro |      |        |
+| cuda-int4 |        | t-cuda-i |          |        | vider    |      |        |
+| -8k       |        | nt4-8k   |          |        |          |      |        |
+| z2-gemma- | Local  | z2-gemma | Multimod | CPU    | CPUExecu | —    | ○      |
+| 4-e4b-it- |        | -4-e4b-i | al       |        | tionProv |      |        |
+| cpu-int4  |        | t-cpu-in |          |        | ider     |      |        |
+|           |        | t4       |          |        |          |      |        |
++------------------------------------------------------------------------------+
+[exit=0, 0.1 s]
+[2026-11-07T15:58:04.9235968+09:00] foundry cache ls --variants -o json -> foundry_cache_ls.json (exit 0)
+[2026-11-07T15:58:05.2089281+09:00] foundry model list --variants -o json -> foundry_variants.json (exit 0)
+[2026-11-07T15:58:51.2419182+09:00] paths: 14 packages -> foundry_paths.json
+
+--- foundry server stop  [2026-11-07T15:58:51.2444088+09:00]
+● success: Server stopped.
+[exit=0, 3.9 s]
+[2026-11-07T15:58:55.2879978+09:00] foundry_setup done (free C: 532.5 GB)
+[2026-11-07T16:04:15.1923013+09:00] foundry_setup start: steps paths, free C: 528.4 GB
+
+--- foundry --version  [2026-11-07T16:04:15.2580716+09:00]
+0.13.0
+[exit=0, 0.2 s]
+
+--- foundry server start  [2026-11-07T16:04:15.4412573+09:00]
+■ Starting Foundry Local server
+OpenVINOExecutionProvider: 0%
+NvTensorRTRTXExecutionProvider: 0%
+CUDAExecutionProvider: 0%
+WebGpuExecutionProvider: 0%
+● success: Server ready (http://127.0.0.1:50996)
+  Public API: http://127.0.0.1:50996/v1/
+  Local API (BYOM): http://127.0.0.1:50996/catalogs/local/v1/
+[exit=0, 11.3 s]
+[2026-11-07T16:04:28.8447870+09:00] foundry cache ls --variants -o json -> foundry_cache_ls.json (exit 0)
+[2026-11-07T16:04:29.2303829+09:00] foundry model list --variants -o json -> foundry_variants.json (exit 0)
+[2026-11-07T16:07:47.9314158+09:00] paths: 14 packages -> foundry_paths.json
+
+--- foundry server stop  [2026-11-07T16:07:47.9371055+09:00]
+● success: Server stopped.
+[exit=0, 2.8 s]
+[2026-11-07T16:07:50.8613650+09:00] foundry_setup done (free C: 522.2 GB)

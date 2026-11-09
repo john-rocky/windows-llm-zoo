@@ -1,0 +1,116 @@
+{
+ "sitting": "z2-npu-fix1",
+ "units": [
+  {
+   "model": "Qwen3-0.6B",
+   "cell": "Qwen3-0.6B\\ort-genai_npu_openvino",
+   "kind": "python",
+   "venv": "genai",
+   "script": "run_genai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\onnx-community__Qwen3-0.6B-ONNX\\onnxruntime\\cpu_and_mobile\\cpu-int4-kld-block-128",
+    "--ep",
+    "openvino",
+    "--ov-device",
+    "NPU",
+    "--ep-option",
+    "enable_causallm=True"
+   ],
+   "runs": 1,
+   "engines_gate": false,
+   "timeout_min": 30,
+   "ram_need_gb": 2.6,
+   "note": "OpenVINO EP 1.8.1 plugin, device_type NPU, on the CPU package (probe); probe: NPU fix 1 of 3: enable_causallm=True (the EP's stateful LLM mode)"
+  },
+  {
+   "model": "Qwen3-1.7B",
+   "cell": "Qwen3-1.7B\\ort-genai_npu_openvino",
+   "kind": "python",
+   "venv": "genai",
+   "script": "run_genai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\onnx-community__Qwen3-1.7B-ONNX\\onnxruntime\\cpu_and_mobile\\cpu-int4-kld-block-128",
+    "--ep",
+    "openvino",
+    "--ov-device",
+    "NPU",
+    "--ep-option",
+    "enable_causallm=True"
+   ],
+   "runs": 1,
+   "engines_gate": false,
+   "timeout_min": 30,
+   "ram_need_gb": 3.6,
+   "note": "OpenVINO EP 1.8.1 plugin, device_type NPU, on the CPU package (probe); probe: NPU fix 1 of 3: enable_causallm=True (the EP's stateful LLM mode)"
+  },
+  {
+   "model": "Qwen3-4B",
+   "cell": "Qwen3-4B\\ort-genai_npu_openvino",
+   "kind": "python",
+   "venv": "genai",
+   "script": "run_genai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\onnx-community__Qwen3-4B-ONNX\\onnxruntime\\cpu_and_mobile\\cpu-int4-kld-block-128",
+    "--ep",
+    "openvino",
+    "--ov-device",
+    "NPU",
+    "--ep-option",
+    "enable_causallm=True"
+   ],
+   "runs": 1,
+   "engines_gate": false,
+   "timeout_min": 30,
+   "ram_need_gb": 5.2,
+   "note": "OpenVINO EP 1.8.1 plugin, device_type NPU, on the CPU package (probe); probe: NPU fix 1 of 3: enable_causallm=True (the EP's stateful LLM mode)"
+  },
+  {
+   "model": "gemma-4-E4B-it",
+   "cell": "gemma-4-E4B-it\\ort-genai_npu_openvino",
+   "kind": "python",
+   "venv": "genai",
+   "script": "run_genai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\mlboydaisuke__gemma-4-E4B-it-Foundry-Local\\cpu-int4",
+    "--ep",
+    "openvino",
+    "--ov-device",
+    "NPU",
+    "--ep-option",
+    "enable_causallm=True"
+   ],
+   "runs": 1,
+   "engines_gate": false,
+   "timeout_min": 30,
+   "ram_need_gb": 10.3,
+   "note": "OpenVINO EP 1.8.1 plugin, device_type NPU, on the CPU package (probe); probe: NPU fix 1 of 3: enable_causallm=True (the EP's stateful LLM mode)"
+  },
+  {
+   "model": "gemma-4-E2B-it",
+   "cell": "gemma-4-E2B-it\\ort-genai_npu_openvino",
+   "kind": "python",
+   "venv": "genai",
+   "script": "run_genai.py",
+   "args": [
+    "--model-dir",
+    "{HOME}\\.foundry\\cache\\models\\Microsoft\\gemma-4-e2b-it-generic-cpu-3\\v3",
+    "--ep",
+    "openvino",
+    "--ov-device",
+    "NPU",
+    "--ep-option",
+    "enable_causallm=True"
+   ],
+   "runs": 1,
+   "engines_gate": false,
+   "timeout_min": 30,
+   "ram_need_gb": 9.1,
+   "note": "OpenVINO EP 1.8.1 plugin, device_type NPU, on the CPU package (probe); probe: NPU fix 1 of 3: enable_causallm=True (the EP's stateful LLM mode)"
+  }
+ ],
+ "probe": "NPU fix 1 of 3: enable_causallm=True (the EP's stateful LLM mode)"
+}

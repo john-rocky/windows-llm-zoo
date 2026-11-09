@@ -1,0 +1,23 @@
+{
+ "sitting": "walk-e2bcpu",
+ "units": [
+  {
+   "model": "gemma-4-E2B-it",
+   "cell": "gemma-4-E2B-it\\ort-genai_cpu_cpu",
+   "kind": "python",
+   "venv": "genai",
+   "script": "run_genai.py",
+   "args": [
+    "--model-dir",
+    "{HOME}\\.foundry\\cache\\models\\Microsoft\\gemma-4-e2b-it-generic-cpu-3\\v3",
+    "--ep",
+    "follow_config"
+   ],
+   "runs": 1,
+   "engines_gate": false,
+   "timeout_min": 60,
+   "ram_need_gb": 9.1,
+   "note": "Foundry Local catalog package files (Microsoft), run outside Foundry; the first pass stopped it at 15 running minutes, sharing the CPU: once more with 60"
+  }
+ ]
+}

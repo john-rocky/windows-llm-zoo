@@ -1,0 +1,85 @@
+{
+ "model": "gemma-4-E4B-it",
+ "cell": "litert-lm_cpu_cpu",
+ "runtime": "litert-lm",
+ "device": "cpu",
+ "device_name": "Intel(R) Core(TM) Ultra 9 386H",
+ "backend": "cpu",
+ "backend_detail": "LiteRT-LM CPU (XNNPACK), engine default threads (4)",
+ "source": "edge-llm-bench",
+ "bench_arm": "litert-lm-cpu",
+ "bench_commit": "e9be97795e96b82e81ec8608ce1f04c2bf16a88a",
+ "shelf": {
+  "repo": "litert-community/gemma-4-E4B-it-litert-lm",
+  "files": [
+   "gemma-4-E4B-it.litertlm"
+  ],
+  "quant": "wNa8o8 (int2/int4/int8 + int8 activations, QAT)"
+ },
+ "workload": {
+  "task": "short-chat",
+  "prompt": "prompts/text/short-chat.txt of edge-llm-bench",
+  "output_budget_tokens": 128,
+  "context_tokens": 2048,
+  "regime": "cold (first conversation of a fresh engine process)",
+  "counting": "runs=3 per sitting; run 1 of a LiteRT-LM, Vulkan or CUDA row is the cache build (firstEver) and is not counted; a text-check failure is not counted"
+ },
+ "status": "measured",
+ "table": {
+  "sitting": "2026-11-07-windows-e4b",
+  "decode_tps": 9.100000000000001,
+  "cold_spread_pct": 0.66,
+  "cold_n": 2,
+  "prefill_tps": 18.605,
+  "ttft_ms": 1185.0,
+  "peak_working_set_mb": 2694.3125,
+  "text_check": "5/5 PASS",
+  "decode_tps_warm": 8.17
+ },
+ "sittings": [
+  {
+   "campaign": "2026-11-07-windows-e4b-s1",
+   "first_record_jst": "2026-11-07 07:54 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "v0.19.0",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 9.075,
+   "cold_spread_pct": 2.75,
+   "counted": true,
+   "prefill_tps_cold_median": 18.689999999999998,
+   "ttft_ms_cold_median": 1180.0,
+   "peak_working_set_mb_median": 2694.53515625,
+   "decode_tps_warm_median": 8.16,
+   "text_check": "5/5 PASS",
+   "quant": "wNa8o8 (int2/int4/int8 + int8 activations, QAT)",
+   "records": [
+    "results/raw/2026-11-07-windows-e4b-s1/litert-lm-cpu_litert-community_gemma-4-E4B-it-litert-lm_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-07-windows-e4b",
+   "first_record_jst": "2026-11-07 09:16 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "v0.19.0",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 9.100000000000001,
+   "cold_spread_pct": 0.66,
+   "counted": true,
+   "prefill_tps_cold_median": 18.605,
+   "ttft_ms_cold_median": 1185.0,
+   "peak_working_set_mb_median": 2694.3125,
+   "decode_tps_warm_median": 8.17,
+   "text_check": "5/5 PASS",
+   "quant": "wNa8o8 (int2/int4/int8 + int8 activations, QAT)",
+   "records": [
+    "results/raw/2026-11-07-windows-e4b/litert-lm-cpu_litert-community_gemma-4-E4B-it-litert-lm_short-chat.jsonl"
+   ]
+  }
+ ]
+}

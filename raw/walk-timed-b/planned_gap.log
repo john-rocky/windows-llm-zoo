@@ -1,0 +1,15 @@
+[2026-11-08T18:50:02.5160524+09:00] armed for another-lanes-fixed-slot: chain 16780 (walk-timed-b), from 11/08/2026 20:58:00 suspend at a free point, lock off by 11/08/2026 21:08:00, window.txt until 11/08/2026 21:25:00, give up at 11/08/2026 21:45:00
+[2026-11-08T19:41:18.3204378+09:00] armed for another-lanes-timing-block: chain 16780 (walk-timed-b), from 11/08/2026 19:40:00 suspend at a free point, lock off by 11/08/2026 19:50:00, window.txt until 11/08/2026 20:00:00, give up at 11/08/2026 20:05:00
+[2026-11-08T19:50:00.0725637+09:00] no free point yet at 11/08/2026 19:50:00 (a run is going): waiting for its end
+[2026-11-08T19:51:49.6539258+09:00] armed for another-lanes-timing-block: chain 16780 (walk-timed-b), from 11/08/2026 19:45:00 suspend at a free point, lock off by 11/08/2026 20:05:00, window.txt until 11/08/2026 20:15:00, give up at 11/08/2026 20:20:00
+[2026-11-08T19:51:49.6699458+09:00] armed for another-lanes-fixed-slot: chain 16780 (walk-timed-b), from 11/08/2026 20:58:00 suspend at a free point, lock off by 11/08/2026 21:08:00, window.txt until 11/08/2026 21:25:00, give up at 11/08/2026 21:45:00
+[2026-11-08T19:51:50.1452091+09:00] chain suspended (2 process(es)) between two runs, after: [2026-11-08T19:51:44.5520315+09:00] gemma-4-E2B-it\foundry_rtx_cuda run 2 end: exit 0, OK, 9.318 s
+[2026-11-08T19:51:50.1452091+09:00] lock released
+[2026-11-08T19:51:50.1452091+09:00] lock released
+[2026-11-08T19:51:50.1613178+09:00] window.txt: Z2 open until 2026-11-08T20:15:00.1613178+09:00
+[2026-11-08T19:51:50.1613178+09:00] window.txt: Z2 open until 2026-11-08T20:15:00.0000000+09:00
+[2026-11-08T19:52:10.1837051+09:00] lock taken by: another lane's lock
+[2026-11-08T20:00:31.0667030+09:00] the lock was given back: taking the lock back
+[2026-11-08T20:00:31.1246246+09:00] lock: TAKEN (sitting walk-timed-b (after a planned gap for another-lanes-timing-block))
+[2026-11-08T20:01:50.4721026+09:00] gate: PASS (cpu 0.5 % build 0 ms rtx 0 MiB | cpu 1 % build 0 ms rtx 0 MiB | cpu 0.9 % build 0 ms rtx 0 MiB)
+[2026-11-08T20:01:50.4862554+09:00] lock taken back, gate PASS: chain resumed (2 process(es))

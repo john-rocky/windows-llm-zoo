@@ -1,0 +1,4 @@
+[2026-11-08T07:11:32.6662332+09:00] chain start: plan C:\src\llmzoo-walk\pc\plans\walk-foundry-cpu.json mode first, 1 units, pid 276
+[2026-11-08T07:11:40.6229056+09:00] adapters: 0x00000000_0x00012C48=nvidia, 0x00000000_0x0001260E=intel-gpu, 0x00000000_0x00012BB8=?, 0x00000000_0x00013E4C=npu?
+[2026-11-08T07:11:40.6390418+09:00] gemma-4-E2B-it\foundry_cpu_cpu run 1 on disk, skipped
+[2026-11-08T07:11:40.6549437+09:00] chain done: OK

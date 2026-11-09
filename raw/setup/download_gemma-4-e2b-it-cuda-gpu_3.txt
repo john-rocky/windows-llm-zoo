@@ -1,0 +1,16 @@
+■ Downloading model (gemma-4-e2b-it-cuda-gpu:3, 5.8 GB)
+gemma-4-e2b-it-cuda-gpu:3: 0%
+gemma-4-e2b-it-cuda-gpu:3: 16%
+gemma-4-e2b-it-cuda-gpu:3: 25%
+gemma-4-e2b-it-cuda-gpu:3: 42%
+gemma-4-e2b-it-cuda-gpu:3: 50%
+gemma-4-e2b-it-cuda-gpu:3: 64%
+gemma-4-e2b-it-cuda-gpu:3: 74%
+gemma-4-e2b-it-cuda-gpu:3: 75%
+gemma-4-e2b-it-cuda-gpu:3: 85%
+gemma-4-e2b-it-cuda-gpu:3: 95%
+gemma-4-e2b-it-cuda-gpu:3: 96%
+gemma-4-e2b-it-cuda-gpu:3: 97%
+gemma-4-e2b-it-cuda-gpu:3: 98%
+gemma-4-e2b-it-cuda-gpu:3: 99%
+● success: Downloaded 'gemma-4-e2b-it-cuda-gpu:3' to the local cache.

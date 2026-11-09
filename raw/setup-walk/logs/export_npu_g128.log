@@ -1,0 +1,97 @@
+[2026-11-07T19:31:12.2626340+09:00] export_npu start (group 128, only '')
+[2026-11-07T19:31:16.7480439+09:00]   Using CPython 3.12.10 interpreter at: C:\Users\USER\AppData\Local\Programs\Python\Python312\python.exe
+[2026-11-07T19:31:16.7500526+09:00]   Creating virtual environment at: C:\src\llmzoo-walk\.venv-ovexport
+[2026-11-07T19:31:16.7520603+09:00]   Activate with: C:\src\llmzoo-walk\.venv-ovexport\Scripts\activate
+[2026-11-07T19:31:17.1233274+09:00]   Using Python 3.12.10 environment at: C:\src\llmzoo-walk\.venv-ovexport
+[2026-11-07T19:31:17.6392888+09:00]   Resolved 60 packages in 495ms
+[2026-11-07T19:31:17.9416273+09:00]   Downloading torch (118.4MiB)
+[2026-11-07T19:31:17.9416273+09:00]   Downloading torchvision (1.3MiB)
+[2026-11-07T19:31:18.0869640+09:00]   Downloading transformers (9.8MiB)
+[2026-11-07T19:31:18.6779456+09:00]    Downloaded torchvision
+[2026-11-07T19:31:22.2561899+09:00]    Downloaded transformers
+[2026-11-07T19:31:52.9897438+09:00]    Downloaded torch
+[2026-11-07T19:31:52.9979870+09:00]   Prepared 10 packages in 35.06s
+[2026-11-07T19:32:44.4601189+09:00]   Installed 60 packages in 51.46s
+[2026-11-07T19:32:44.4661344+09:00]    + annotated-doc==0.0.5
+[2026-11-07T19:32:44.4681396+09:00]    + anyio==4.16.0
+[2026-11-07T19:32:44.4701450+09:00]    + certifi==2026.10.23
+[2026-11-07T19:32:44.4721487+09:00]    + charset-normalizer==3.5.2
+[2026-11-07T19:32:44.4736058+09:00]    + click==8.5.1
+[2026-11-07T19:32:44.4776141+09:00]    + cloudpickle==3.1.2
+[2026-11-07T19:32:44.4806633+09:00]    + colorama==0.4.6
+[2026-11-07T19:32:44.4832679+09:00]    + filelock==4.2.9
+[2026-11-07T19:32:44.4832679+09:00]    + fsspec==2026.9.0
+[2026-11-07T19:32:44.5289608+09:00]    + h11==0.16.0
+[2026-11-07T19:32:44.5309658+09:00]    + hf-xet==1.8.0
+[2026-11-07T19:32:44.5329701+09:00]    + httpcore==1.0.9
+[2026-11-07T19:32:44.5349744+09:00]    + httpx==0.28.1
+[2026-11-07T19:32:44.5369796+09:00]    + huggingface-hub==1.21.0
+[2026-11-07T19:32:44.5387247+09:00]    + idna==3.20
+[2026-11-07T19:32:44.5427335+09:00]    + jinja2==3.1.6
+[2026-11-07T19:32:44.5447379+09:00]    + joblib==1.6.0
+[2026-11-07T19:32:44.5467420+09:00]    + markdown-it-py==4.2.0
+[2026-11-07T19:32:44.5487462+09:00]    + markupsafe==3.0.4
+[2026-11-07T19:32:44.5507532+09:00]    + mdurl==0.1.2
+[2026-11-07T19:32:44.5527636+09:00]    + ml-dtypes==0.6.0
+[2026-11-07T19:32:44.5545110+09:00]    + mpmath==1.3.0
+[2026-11-07T19:32:44.5565165+09:00]    + narwhals==2.28.0
+[2026-11-07T19:32:44.5585212+09:00]    + networkx==3.6.1
+[2026-11-07T19:32:44.5605261+09:00]    + ninja==1.13.2
+[2026-11-07T19:32:44.5625302+09:00]    + nncf==3.4.0
+[2026-11-07T19:32:44.5645341+09:00]    + numpy==2.4.6
+[2026-11-07T19:32:44.5665384+09:00]    + onnx==1.23.2
+[2026-11-07T19:32:44.5685425+09:00]    + openvino==2026.4.1
+[2026-11-07T19:32:44.5702876+09:00]    + openvino-telemetry==2025.2.0
+[2026-11-07T19:32:44.5730041+09:00]    + openvino-tokenizers==2026.4.1.0
+[2026-11-07T19:32:44.5730041+09:00]    + optimum==2.3.0
+[2026-11-07T19:32:44.5770158+09:00]    + optimum-intel==2.2.0
+[2026-11-07T19:32:44.5790200+09:00]    + packaging==26.3
+[2026-11-07T19:32:44.5801777+09:00]    + pillow==13.0.0
+[2026-11-07T19:32:44.5841861+09:00]    + protobuf==7.36.2
+[2026-11-07T19:32:44.5859307+09:00]    + psutil==7.2.2
+[2026-11-07T19:32:44.5859307+09:00]    + pydot==4.0.1
+[2026-11-07T19:32:44.5899418+09:00]    + pygments==2.21.0
+[2026-11-07T19:32:44.5899418+09:00]    + pyparsing==3.3.3
+[2026-11-07T19:32:44.5919473+09:00]    + pyyaml==6.0.3
+[2026-11-07T19:32:44.5949840+09:00]    + regex==2026.11.7
+[2026-11-07T19:32:44.5969887+09:00]    + requests==2.34.2
+[2026-11-07T19:32:44.5989931+09:00]    + rich==15.0.0
+[2026-11-07T19:32:44.6009972+09:00]    + safetensors==0.8.0
+[2026-11-07T19:32:44.6020006+09:00]    + scikit-learn==1.9.1
+[2026-11-07T19:32:44.6040044+09:00]    + scipy==1.18.1
+[2026-11-07T19:32:44.6060082+09:00]    + setuptools==84.2.1
+[2026-11-07T19:32:44.6080124+09:00]    + shellingham==1.5.4
+[2026-11-07T19:32:44.6100177+09:00]    + sympy==1.14.0
+[2026-11-07T19:32:44.6120217+09:00]    + tabulate==0.10.0
+[2026-11-07T19:32:44.6140252+09:00]    + threadpoolctl==3.8.0
+[2026-11-07T19:32:44.6160296+09:00]    + tokenizers==0.22.2
+[2026-11-07T19:32:44.6197842+09:00]    + torch==2.14.0
+[2026-11-07T19:32:44.6237929+09:00]    + torchvision==0.29.0
+[2026-11-07T19:32:44.6237929+09:00]    + tqdm==4.70.1
+[2026-11-07T19:32:44.6278024+09:00]    + transformers==5.5.4
+[2026-11-07T19:32:44.6289946+09:00]    + typer==0.25.1
+[2026-11-07T19:32:44.6309993+09:00]    + typing-extensions==4.16.0
+[2026-11-07T19:32:44.6330045+09:00]    + urllib3==2.8.0
+[2026-11-07T19:32:44.6350092+09:00] venv ovexport: uv pip install exit 0
+[2026-11-07T19:50:40.5443533+09:00] fetch exit 0
+[2026-11-07T19:50:40.6806393+09:00] Qwen3-0.6B start: optimum-cli export openvino --model C:\src\llmzoo-walk\hf\Qwen__Qwen3-0.6B --weight-format int4 --sym --ratio 1.0 --group-size 128 C:\src\llmzoo-walk\models\z2-npu\Qwen3-0.6B-int4-sym-g128-ov (available RAM 2.6 GB, running-time limit 30 min)
+[2026-11-07T19:53:34.1901606+09:00] Qwen3-0.6B end: exit 1, 172 s running, peak working set 438 MB, private 1355 MB, lowest available RAM 2.6 GB, 0 xml
+[2026-11-07T19:53:34.2914422+09:00] Qwen3-1.7B start: optimum-cli export openvino --model C:\src\llmzoo-walk\hf\Qwen__Qwen3-1.7B --weight-format int4 --sym --ratio 1.0 --group-size 128 C:\src\llmzoo-walk\models\z2-npu\Qwen3-1.7B-int4-sym-g128-ov (available RAM 4.4 GB, running-time limit 45 min)
+[2026-11-07T19:53:52.8683625+09:00] Qwen3-1.7B end: exit 1, 15 s running, peak working set 0 MB, private 0 MB, lowest available RAM 4.4 GB, 0 xml
+[2026-11-07T19:53:52.8761220+09:00] gemma-4-E4B-it start: optimum-cli export openvino --model C:\src\llmzoo-walk\hf\google__gemma-4-E4B-it --weight-format int4 --sym --ratio 1.0 --group-size 128 C:\src\llmzoo-walk\models\z2-npu\gemma-4-E4B-it-int4-sym-g128-ov (available RAM 11.5 GB, running-time limit 180 min)
+[2026-11-07T19:54:10.5017850+09:00] gemma-4-E4B-it end: exit 1, 15 s running, peak working set 0 MB, private 0 MB, lowest available RAM 11.5 GB, 0 xml
+[2026-11-07T19:54:10.5290010+09:00] export_npu done
+[2026-11-07T20:34:10.4110317+09:00] export_npu start (group 128, only '')
+[2026-11-07T20:34:14.8357754+09:00]   Using Python 3.12.10 environment at: C:\src\llmzoo-walk\.venv-ovexport
+[2026-11-07T20:34:15.1698968+09:00]   Checked 10 packages in 383ms
+[2026-11-07T20:34:15.1859905+09:00] venv ovexport: uv pip install exit 0
+[2026-11-07T22:42:36.6946777+09:00] fetch exit 0
+[2026-11-07T22:42:36.7422466+09:00] Qwen3-0.6B start: optimum-cli export openvino --model C:\src\llmzoo-walk\hf\Qwen__Qwen3-0.6B --task text-generation-with-past --weight-format int4 --sym --ratio 1.0 --group-size 128 C:\src\llmzoo-walk\models\z2-npu\Qwen3-0.6B-int4-sym-g128-ov (available RAM 18.2 GB, running-time limit 30 min)
+[2026-11-07T23:05:54.9092717+09:00]   ir_info: 12 files, 0.38 GiB
+[2026-11-07T23:05:54.9175764+09:00] Qwen3-0.6B end: exit 0, 86 s running, peak working set 2471 MB, private 3351 MB, lowest available RAM 9.4 GB, 3 xml
+[2026-11-07T23:05:54.9991301+09:00] Qwen3-1.7B start: optimum-cli export openvino --model C:\src\llmzoo-walk\hf\Qwen__Qwen3-1.7B --task text-generation-with-past --weight-format int4 --sym --ratio 1.0 --group-size 128 C:\src\llmzoo-walk\models\z2-npu\Qwen3-1.7B-int4-sym-g128-ov (available RAM 11.1 GB, running-time limit 45 min)
+[2026-11-07T23:07:30.6158690+09:00]   ir_info: 12 files, 0.99 GiB
+[2026-11-07T23:07:30.6428419+09:00] Qwen3-1.7B end: exit 0, 91 s running, peak working set 4945 MB, private 5076 MB, lowest available RAM 6 GB, 3 xml
+[2026-11-07T23:07:30.6462926+09:00] gemma-4-E4B-it start: optimum-cli export openvino --model C:\src\llmzoo-walk\hf\google__gemma-4-E4B-it --task image-text-to-text --weight-format int4 --sym --ratio 1.0 --group-size 128 C:\src\llmzoo-walk\models\z2-npu\gemma-4-E4B-it-int4-sym-g128-ov (available RAM 11.9 GB, running-time limit 180 min)
+[2026-11-07T23:11:32.3594793+09:00] gemma-4-E4B-it end: exit -1, 237 s running, peak working set 12235 MB, private 31766 MB, lowest available RAM 0.9 GB, 0 xml
+[2026-11-07T23:11:32.4062136+09:00] export_npu done

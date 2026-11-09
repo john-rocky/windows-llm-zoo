@@ -1,0 +1,34 @@
+[2026-11-08T20:12:20.0201596+09:00] slot for another lane's timing block (back by 20:56): release at 2026-11-08T20:30:35.0000000+09:00 without window.txt, give up at 2026-11-08T20:35:00.0000000+09:00, the lock stays off when given back after 2026-11-08T20:55:00.0000000+09:00; chain 16780 (walk-timed-b)
+[2026-11-08T20:15:47.2392035+09:00] not yet: after gemma-4-E4B-it\ort-genai_rtx_cuda run 2, the next run end in about 207 s
+[2026-11-08T20:17:34.3428512+09:00] not yet: after gemma-4-E4B-it\ort-genai_rtx_webgpu run 1, the next run end in about 114 s
+[2026-11-08T20:18:47.8980255+09:00] not yet: after gemma-4-E4B-it\ort-genai_rtx_webgpu run 2, the next run end in about 236 s
+[2026-11-08T20:20:56.5962260+09:00] not yet: after gemma-4-E4B-it\ort-genai_igpu_webgpu run 1, the next run end in about 122 s
+[2026-11-08T20:22:15.7802903+09:00] not yet: after gemma-4-E4B-it\ort-genai_igpu_webgpu run 2, the next run end in about 422 s
+[2026-11-08T20:25:25.9406499+09:00] chain suspended (2 process(es)) between two runs (the next run end in about 300 s), after: [2026-11-08T20:25:24.9696699+09:00] gemma-4-E4B-it\ort-genai_igpu_openvino run 1 end: exit 0, OK, 100.698 s
+[2026-11-08T20:30:35.1608732+09:00] lock released
+[2026-11-08T20:30:35.1608732+09:00] lock released for another lane's timing block (back by 20:56), no window.txt
+[2026-11-08T20:31:40.2493705+09:00] lock taken by: another lane's lock
+[2026-11-08T20:35:35.5894613+09:00] the lock was given back: taking the lock back
+[2026-11-08T20:35:35.6368856+09:00] lock: TAKEN (sitting walk-timed-b (after the slot for another lane's timing block (back by 20:56)))
+[2026-11-08T20:36:55.0305835+09:00] gate: PASS (cpu 0.5 % build 0 ms rtx 0 MiB | cpu 1 % build 0 ms rtx 0 MiB | cpu 0.7 % build 0 ms rtx 0 MiB)
+[2026-11-08T20:36:55.0479059+09:00] lock taken back, gate PASS: chain resumed (2 process(es))
+[2026-11-08T20:36:55.0579964+09:00] slot for another lane's two sittings (until 21:57): release at 2026-11-08T21:07:00.0000000+09:00 without window.txt, give up at 2026-11-08T21:13:00.0000000+09:00; chain 16780 (walk-timed-b)
+[2026-11-08T20:39:35.1385248+09:00] slot for another lane's two sittings (until 21:57): release at 2026-11-08T21:07:00.0000000+09:00 without window.txt, give up at 2026-11-08T21:13:00.0000000+09:00; chain 16780 (walk-timed-b)
+[2026-11-08T20:52:40.1117743+09:00] not yet: after gemma-4-E4B-it\foundry_rtx_cuda run 2, the next run end in about 252 s
+[2026-11-08T20:55:23.5296895+09:00] not yet: after gemma-4-E4B-it\foundry_cpu_cpu run 1, the next run end in about 111 s
+[2026-11-08T20:57:10.7952818+09:00] not yet: after gemma-4-E4B-it\foundry_cpu_cpu run 2, the next run end in about 246 s
+[2026-11-08T20:59:39.6302772+09:00] not yet: after gemma-4-E4B-it\openvino-genai_igpu_gpu run 1, the next run end in about 135 s
+[2026-11-08T21:00:43.2344941+09:00] not yet: after gemma-4-E4B-it\openvino-genai_igpu_gpu run 2, the next run end in about 245 s
+[2026-11-08T21:02:43.9765988+09:00] not yet: after gemma-4-E4B-it\openvino-genai_cpu_cpu run 1, the next run end in about 110 s
+[2026-11-08T21:04:08.8657793+09:00] chain suspended (2 process(es)) between two runs (the next run end in about 484 s), after: [2026-11-08T21:04:08.1011992+09:00] gemma-4-E4B-it\openvino-genai_cpu_cpu run 2 end: exit 0, OK, 44.92 s
+[2026-11-08T21:04:21.9005785+09:00] the chain is suspended already (by the planner this one replaces): the first slot starts at its release
+[2026-11-08T21:04:21.9164755+09:00] slot for another lane's two sittings (until 21:57), then another lane's untimed walk: release at 2026-11-08T21:07:00.0000000+09:00 without window.txt, give up at 2026-11-08T21:13:00.0000000+09:00; chain 16780 (walk-timed-b)
+[2026-11-08T21:07:00.4802953+09:00] lock released
+[2026-11-08T21:07:00.5019208+09:00] lock released for another lane's two sittings (until 21:57), then another lane's untimed walk, no window.txt
+[2026-11-08T21:07:00.5079724+09:00] no retake before 2026-11-08T22:05:00.0000000+09:00 unless no lock came by give_up_at
+[2026-11-08T21:07:05.5297923+09:00] lock taken by: another lane's lock
+[2026-11-08T22:54:16.7063806+09:00] the lock was given back (free for 60 s): taking the lock back
+[2026-11-08T22:54:16.7698032+09:00] lock: TAKEN (sitting walk-timed-b (after the slot for another lane's two sittings (until 21:57), then another lane's untimed walk))
+[2026-11-08T22:55:35.9456609+09:00] gate: PASS (cpu 0.4 % build 0 ms rtx 0 MiB | cpu 0.9 % build 0 ms rtx 0 MiB | cpu 1.1 % build 0 ms rtx 0 MiB)
+[2026-11-08T22:55:36.3108067+09:00] lock taken back, gate PASS: chain resumed (2 process(es))
+[2026-11-08T22:55:36.3108067+09:00] slots done

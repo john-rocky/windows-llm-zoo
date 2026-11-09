@@ -1,0 +1,135 @@
+{
+    "cell":  "gemma-4-E2B-it\\foundry_auto_webgpu",
+    "run":  1,
+    "mode":  "first",
+    "sitting":  "walk-foundry-fix3",
+    "start":  "2026-11-08T05:50:51.5414888+09:00",
+    "osBuild":  "26200.9711",
+    "gate":  null,
+    "before":  {
+                   "load":  {
+                                "cpu":  34.5,
+                                "build_ms":  1438,
+                                "top":  [
+                                            "python 32632 3.95 core",
+                                            "cl 34016 1.41 core",
+                                            "powershell 27552 0.05 core",
+                                            "WmiPrvSE 7560 0.02 core",
+                                            "System 4 0.02 core"
+                                        ]
+                            },
+                   "nvidia":  "P0, 9465 MHz, 14001 MHz, 18.72 W, 0 %, 0 MiB, 53",
+                   "availGB":  12.3
+               },
+    "foreignDaemon":  "none",
+    "daemonStop0":  "stopped",
+    "serverStart":  {
+                        "code":  0,
+                        "s":  7.75,
+                        "text":  "■ Starting Foundry Local server\nOpenVINOExecutionProvider: 0%\nNvTensorRTRTXExecutionProvider: 0%\nCUDAExecutionProvider: 0%\nWebGpuExecutionProvider: 0%\n● success: Server ready (http://127.0.0.1:64614)\n  Public API: http://127.0.0.1:64614/v1/\n  Local API (BYOM): http://127.0.0.1:64614/catalogs/local/v1/"
+                    },
+    "daemonPid":  13940,
+    "preFoundry":  [
+                       {
+                           "command":  "model unregister z2-gemma-4-e2b-it-webgpu:1",
+                           "result":  {
+                                          "code":  0,
+                                          "s":  0.829,
+                                          "text":  "● success: Removed registration IDs: z2-gemma-4-e2b-it-webgpu:1.\n■ note: Model files and original folders were preserved."
+                                      }
+                       },
+                       {
+                           "command":  "model register C:\\Users\\USER\\.foundry\\cache\\models\\Microsoft\\gemma-4-e2b-it-generic-gpu-3\\v3 z2-gemma-4-e2b-it-webgpu:1 --task vision-language-chat --display-name z2-gemma-4-e2b-it-webgpu --device gpu",
+                           "result":  {
+                                          "code":  0,
+                                          "s":  0.213,
+                                          "text":  "● success: Registered local model.\n■ note: ID: z2-gemma-4-e2b-it-webgpu:1\n■ note: Alias: z2-gemma-4-e2b-it-webgpu\n■ note: Folder: \nC:\\Users\\USER\\.foundry\\cache\\models\\Microsoft\\gemma-4-e2b-it-generic-gpu-3\\v3\n■ note: Task: vision-language-chat\n■ note: Files were not copied; the original folder is retained and must remain \navailable.\n■ note: Next: foundry run z2-gemma-4-e2b-it-webgpu:1"
+                                      }
+                       }
+                   ],
+    "modelLoad":  {
+                      "code":  0,
+                      "s":  33.169,
+                      "text":  "■ Loading model (z2-gemma-4-e2b-it-webgpu:1)\n● success: Loaded \u0027z2-gemma-4-e2b-it-webgpu\u0027 (GPU variant \u0027z2-gemma-4-e2b-it-webgpu:1\u0027) \ninto memory."
+                  },
+    "daemonPeakAfterLoadBytes":  2770788352,
+    "gpuAfterLoad":  {
+                         "0x00000000_0x0001260E":  {
+                                                       "shared":  23,
+                                                       "dedicated":  0
+                                                   },
+                         "0x00000000_0x00012C48":  {
+                                                       "shared":  43,
+                                                       "dedicated":  7301
+                                                   },
+                         "0x00000000_0x00012BB8":  {
+                                                       "shared":  0,
+                                                       "dedicated":  0
+                                                   },
+                         "0x00000000_0x00013E4C":  {
+                                                       "shared":  0,
+                                                       "dedicated":  0
+                                                   }
+                     },
+    "command":  "C:\\src\\llmzoo-walk\\.venv-genai\\Scripts\\python.exe -u C:\\src\\llmzoo-walk\\pc\\run_foundry.py --model z2-gemma-4-e2b-it-webgpu:1 --path /catalogs/local/v1 --prompt-file C:\\src\\llmzoo-walk\\pc\\short-chat.txt --out C:\\src\\llmzoo-walk\\runs\\walk-foundry-fix3\\gemma-4-E2B-it\\foundry_auto_webgpu\\run1.json",
+    "engine":  {
+                   "exitCode":  0,
+                   "timedOut":  false,
+                   "yielded":  false,
+                   "suspendedSeconds":  0,
+                   "suspensions":  0,
+                   "enginePid":  11456,
+                   "elapsedSeconds":  16.305,
+                   "peakWorkingSetBytes":  24088576,
+                   "gpuMiBPeak":  {
+
+                                  },
+                   "watchPeakWorkingSetBytes":  2770788352,
+                   "watchGpuMiBPeak":  {
+                                           "0x00000000_0x00012C48":  {
+                                                                         "shared":  59,
+                                                                         "dedicated":  7354
+                                                                     },
+                                           "0x00000000_0x0001260E":  {
+                                                                         "shared":  23,
+                                                                         "dedicated":  0
+                                                                     },
+                                           "0x00000000_0x00012BB8":  {
+                                                                         "shared":  0,
+                                                                         "dedicated":  0
+                                                                     },
+                                           "0x00000000_0x00013E4C":  {
+                                                                         "shared":  0,
+                                                                         "dedicated":  0
+                                                                     }
+                                       },
+                   "nvidiaSamples":  [
+                                         "5s P4, 2722 MHz, 9001 MHz, 52.13 W, 17 %, 7353 MiB, 55",
+                                         "10s P4, 2760 MHz, 9001 MHz, 53.55 W, 13 %, 7353 MiB, 56",
+                                         "15s P4, 2737 MHz, 9001 MHz, 53.57 W, 18 %, 7353 MiB, 57"
+                                     ]
+               },
+    "daemonPeakWorkingSetBytes":  2770788352,
+    "modelUnload":  {
+                        "code":  0,
+                        "s":  2.868,
+                        "text":  "● success: Unloaded \u0027z2-gemma-4-e2b-it-webgpu:1\u0027 from memory."
+                    },
+    "daemonStop":  "stopped",
+    "after":  {
+                  "load":  {
+                               "cpu":  26.5,
+                               "build_ms":  1000,
+                               "top":  [
+                                           "python 32632 3 core",
+                                           "cl 34016 1 core",
+                                           "System 4 0.2 core",
+                                           "powershell 27552 0.02 core",
+                                           "NVDisplay.Container 3412 0.02 core"
+                                       ]
+                           },
+                  "nvidia":  "P0, 975 MHz, 14001 MHz, 18.68 W, 0 %, 0 MiB, 53"
+              },
+    "end":  "2026-11-08T05:51:59.7633704+09:00",
+    "tries":  1
+}

@@ -1,0 +1,9 @@
+[2026-11-07T23:51:52.7155029+09:00] export_npu start (group 128, only 'Qwen3-4B,gemma-4-E4B-it')
+[2026-11-07T23:51:54.9803487+09:00]   Using Python 3.12.10 environment at: C:\src\llmzoo-walk\.venv-ovexport
+[2026-11-07T23:51:55.0612553+09:00]   Checked 10 packages in 102ms
+[2026-11-07T23:51:55.0782136+09:00] venv ovexport: uv pip install exit 0
+[2026-11-08T00:27:23.6349689+09:00] fetch exit 0
+[2026-11-08T00:27:24.2047770+09:00] Qwen3-4B start: optimum-cli export openvino --model C:\src\llmzoo-walk\hf\Qwen__Qwen3-4B --task text-generation-with-past --weight-format int4 --sym --ratio 1.0 --group-size 128 C:\src\llmzoo-walk\models\z2-npu\Qwen3-4B-int4-sym-g128-ov (available RAM 21.2 GB, running-time limit 60 min)
+[2026-11-08T00:31:07.4595539+09:00]   ir_info: 12 files, 2.13 GiB
+[2026-11-08T00:31:07.4706749+09:00] Qwen3-4B end: exit 0, 218 s running, peak working set 10066 MB, private 9763 MB, lowest available RAM 2.8 GB, lowest free commit 29.1 GB, 3 xml
+[2026-11-08T00:31:08.0794500+09:00] gemma-4-E4B-it waits for 50 GB of free commit (now 32.8 GB)

@@ -1,0 +1,1043 @@
+{
+ "model": "gemma-4-E2B-it",
+ "cell": "ort-genai_rtx_webgpu",
+ "runtime": "ort-genai",
+ "runtime_detail": "ONNX Runtime GenAI 0.19.0 (Python, pc/run_genai.py)",
+ "device": "rtx",
+ "device_name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+ "backend": "webgpu",
+ "backend_detail": "WebGPU EP 0.5.0 plugin, adapterIndex 0; rerun: cold spread 7.78 % in walk-timed-b",
+ "source": "windows-llm-zoo (Z2)",
+ "shelf": {
+  "repo": "Foundry Local catalog",
+  "folder": "gemma-4-e2b-it-generic-gpu:3 (overlay gemma-4-E2B-it_webgpu_a0: adapterIndex=0)",
+  "quant": "MatMulNBits b32 asym accNone: int4 x277 [decoder/model.onnx]",
+  "quant_source": "the graph (pc/onnx_quant.py)"
+ },
+ "unit": {
+  "kind": "python",
+  "venv": "genai",
+  "script": "run_genai.py",
+  "args": [
+   "--model-dir",
+   "{ROOT}\\overlays\\gemma-4-E2B-it_webgpu_a0",
+   "--ep",
+   "follow_config"
+  ],
+  "model_id": null,
+  "path": null,
+  "engines_gate": false
+ },
+ "workload": {
+  "task": "short-chat",
+  "prompt": "prompts/text/short-chat.txt of edge-llm-bench (pc/short-chat.txt)",
+  "chat_template": "the package's own, one user turn",
+  "output_budget_tokens": 128,
+  "sampling": "greedy",
+  "regime": "cold (first generation of a fresh engine process; Foundry: of a fresh daemon)",
+  "counting": "runs=3 per sitting; run 1 of a GPU or NPU cell is not counted; a text-check failure is not counted"
+ },
+ "status": "measured",
+ "table": {
+  "sitting": "walk-timed-b-rerun",
+  "decode_tps": 20.27,
+  "cold_spread_pct": 0.61,
+  "cold_n": 2,
+  "prefill_tps": 20.2,
+  "ttft_ms": 992.6,
+  "peak_working_set_mb": 2479,
+  "text_check": "6/6 PASS",
+  "decode_tps_warm": 21.96,
+  "gpu_adapter_used": [
+   "nvidia"
+  ],
+  "generated_tokens": [
+   128
+  ],
+  "stop": [
+   "length"
+  ],
+  "same_cold_text": true,
+  "os_build": [
+   "26200.9711"
+  ]
+ },
+ "first_error": null,
+ "why_not_measured": null,
+ "sittings": [
+  {
+   "sitting": "walk-first",
+   "mode": "first",
+   "runs": [
+    {
+     "run": 1,
+     "status": "OK",
+     "counted": false,
+     "why": "first pass (untimed)",
+     "exit_code": 0,
+     "timed_out": false,
+     "elapsed_s": 77.629,
+     "suspended_s": 0,
+     "gate": null,
+     "before": {
+      "load": {
+       "cpu": 80.2,
+       "build_ms": 0,
+       "top": [
+        "python 21796 8.92 core",
+        "python 34156 1.94 core",
+        "System 4 1.68 core",
+        "WmiPrvSE 7560 0.09 core",
+        "powershell 28528 0.09 core"
+       ]
+      },
+      "nvidia": "P0, 0 MHz, 14001 MHz, 22.62 W, 0 %, 0 MiB, 52",
+      "availGB": 14.8
+     },
+     "start": "2026-11-08T00:21:10.0971514+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 806,
+       "dedicated": 7458
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 23,
+       "dedicated": 0
+      },
+      "0x00000000_0x00012BB8 (?)": {
+       "shared": 0,
+       "dedicated": 0
+      },
+      "0x00000000_0x00013E4C (npu?)": {
+       "shared": 0,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": "nvidia",
+     "peak_working_set_mb": 2397,
+     "gens": [
+      {
+       "regime": "cold",
+       "prompt_tokens": 20,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 10.63785179191847,
+       "prefill_tps": 9.120653615191609,
+       "ttft_ms": 2193.687499995576,
+       "text_sha256": "c8310efb34ed71f90b65634bef88178d81c23789f96bba68b6172d41f52d3471",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "Imagine a computer or a device (like your smartphone or a smart camera) that can **think, learn, and make decisions right there, without needing to constantly send information to a big, distant computer (like a massive cloud server).**\n\n**Here's a breakdown using simple analogies:**\n\n### The Traditional Way (Cloud AI)\n\nThink of asking a super-smart librarian in a distant city.\n\n* **You have a question:** \"What is the capital of France?\"\n* **You send the question:** You have to physically travel (send data over the internet) to the library.\n* **The librarian thinks"
+      },
+      {
+       "regime": "warm",
+       "prompt_tokens": 20,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 7.769582329909969,
+       "prefill_tps": 125.6364270241068,
+       "ttft_ms": 159.61879999667872,
+       "text_sha256": "c8310efb34ed71f90b65634bef88178d81c23789f96bba68b6172d41f52d3471",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "Imagine a computer or a device (like your smartphone or a smart camera) that can **think, learn, and make decisions right there, without needing to constantly send information to a big, distant computer (like a massive cloud server).**\n\n**Here's a breakdown using simple analogies:**\n\n### The Traditional Way (Cloud AI)\n\nThink of asking a super-smart librarian in a distant city.\n\n* **You have a question:** \"What is the capital of France?\"\n* **You send the question:** You have to physically travel (send data over the internet) to the library.\n* **The librarian thinks"
+      }
+     ],
+     "load_s": 38.00069590000203,
+     "versions": {
+      "python": "3.12.10",
+      "onnxruntime-genai": "0.19.0",
+      "onnxruntime": "1.31.1",
+      "onnxruntime-ep-openvino": "1.8.1",
+      "onnxruntime-ep-webgpu": "0.5.0",
+      "numpy": "2.5.4"
+     }
+    }
+   ],
+   "cold_n": 0,
+   "text_check": "2/2 PASS",
+   "host_env": [
+    {
+     "read": "2026-11-07T19:36:14.0602178+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    },
+    {
+     "read": "2026-11-07T23:47:21.5196137+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    },
+    {
+     "read": "2026-11-08T02:07:11.6245753+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    },
+    {
+     "read": "2026-11-08T03:03:36.6039915+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    },
+    {
+     "read": "2026-11-08T03:42:51.6052743+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    },
+    {
+     "read": "2026-11-08T04:40:06.6871579+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    }
+   ],
+   "counts": false,
+   "unit_args": [
+    "--model-dir",
+    "{ROOT}\\overlays\\gemma-4-E2B-it_webgpu_a0",
+    "--ep",
+    "follow_config"
+   ],
+   "unit_note": "WebGPU EP 0.5.0 plugin, adapterIndex 0"
+  },
+  {
+   "sitting": "walk-timed-b",
+   "mode": "timed",
+   "runs": [
+    {
+     "run": 1,
+     "status": "OK",
+     "counted": false,
+     "why": "run 1 of a GPU / NPU cell (first process in the sitting)",
+     "exit_code": 0,
+     "timed_out": false,
+     "elapsed_s": 46.046,
+     "suspended_s": 0,
+     "gate": {
+      "quietGate": "quiet",
+      "cpuReads": [
+       3.9,
+       0.5,
+       0.9
+      ],
+      "nvidiaMiB": 0,
+      "availGB": 24.2,
+      "ramNeedGB": 10.2,
+      "gpuEngines": null
+     },
+     "before": {
+      "load": {
+       "cpu": 2.2,
+       "build_ms": 0,
+       "top": [
+        "System 4 0.33 core",
+        "powershell 16780 0.02 core",
+        "svchost 18472 0.02 core"
+       ]
+      },
+      "nvidia": "P0, 5752 MHz, 14001 MHz, 18.01 W, 0 %, 0 MiB, 50",
+      "availGB": 24.2
+     },
+     "start": "2026-11-08T19:33:03.1494010+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 807,
+       "dedicated": 7459
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 23,
+       "dedicated": 0
+      },
+      "0x00000000_0x00012BB8 (?)": {
+       "shared": 0,
+       "dedicated": 0
+      },
+      "0x00000000_0x00013E4C (npu?)": {
+       "shared": 0,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": "nvidia",
+     "peak_working_set_mb": 2667,
+     "gens": [
+      {
+       "regime": "cold",
+       "prompt_tokens": 20,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 20.55400986922015,
+       "prefill_tps": 20.259588128840548,
+       "ttft_ms": 987.5829999800771,
+       "text_sha256": "c8310efb34ed71f90b65634bef88178d81c23789f96bba68b6172d41f52d3471",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "Imagine a computer or a device (like your smartphone or a smart camera) that can **think, learn, and make decisions right there, without needing to constantly send information to a big, distant computer (like a massive cloud server).**\n\n**Here's a breakdown using simple analogies:**\n\n### The Traditional Way (Cloud AI)\n\nThink of asking a super-smart librarian in a distant city.\n\n* **You have a question:** \"What is the capital of France?\"\n* **You send the question:** You have to physically travel (send data over the internet) to the library.\n* **The librarian thinks"
+      },
+      {
+       "regime": "warm",
+       "prompt_tokens": 20,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 22.046083466168472,
+       "prefill_tps": 132.62397192303814,
+       "ttft_ms": 151.20480000041425,
+       "text_sha256": "c8310efb34ed71f90b65634bef88178d81c23789f96bba68b6172d41f52d3471",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "Imagine a computer or a device (like your smartphone or a smart camera) that can **think, learn, and make decisions right there, without needing to constantly send information to a big, distant computer (like a massive cloud server).**\n\n**Here's a breakdown using simple analogies:**\n\n### The Traditional Way (Cloud AI)\n\nThink of asking a super-smart librarian in a distant city.\n\n* **You have a question:** \"What is the capital of France?\"\n* **You send the question:** You have to physically travel (send data over the internet) to the library.\n* **The librarian thinks"
+      }
+     ],
+     "load_s": 28.707697999983793,
+     "versions": {
+      "python": "3.12.10",
+      "onnxruntime-genai": "0.19.0",
+      "onnxruntime": "1.31.1",
+      "onnxruntime-ep-openvino": "1.8.1",
+      "onnxruntime-ep-webgpu": "0.5.0",
+      "numpy": "2.5.4"
+     }
+    },
+    {
+     "run": 2,
+     "status": "OK",
+     "counted": true,
+     "why": "",
+     "exit_code": 0,
+     "timed_out": false,
+     "elapsed_s": 28.965,
+     "suspended_s": 0,
+     "gate": {
+      "quietGate": "quiet",
+      "cpuReads": [
+       1.4,
+       1.7,
+       1.1
+      ],
+      "nvidiaMiB": 0,
+      "availGB": 24.4,
+      "ramNeedGB": 10.2,
+      "gpuEngines": null
+     },
+     "before": {
+      "load": {
+       "cpu": 2.1,
+       "build_ms": 0,
+       "top": [
+        "System 4 0.31 core",
+        "WmiPrvSE 20560 0.02 core",
+        "services 1472 0.02 core"
+       ]
+      },
+      "nvidia": "P0, 37 MHz, 14001 MHz, 17.50 W, 0 %, 0 MiB, 46",
+      "availGB": 24.4
+     },
+     "start": "2026-11-08T19:34:28.5387837+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 806,
+       "dedicated": 7459
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 23,
+       "dedicated": 0
+      },
+      "0x00000000_0x00012BB8 (?)": {
+       "shared": 0,
+       "dedicated": 0
+      },
+      "0x00000000_0x00013E4C (npu?)": {
+       "shared": 0,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": "nvidia",
+     "peak_working_set_mb": 2535,
+     "gens": [
+      {
+       "regime": "cold",
+       "prompt_tokens": 20,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 20.605709536689314,
+       "prefill_tps": 21.5225133560502,
+       "ttft_ms": 929.680900007952,
+       "text_sha256": "c8310efb34ed71f90b65634bef88178d81c23789f96bba68b6172d41f52d3471",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "Imagine a computer or a device (like your smartphone or a smart camera) that can **think, learn, and make decisions right there, without needing to constantly send information to a big, distant computer (like a massive cloud server).**\n\n**Here's a breakdown using simple analogies:**\n\n### The Traditional Way (Cloud AI)\n\nThink of asking a super-smart librarian in a distant city.\n\n* **You have a question:** \"What is the capital of France?\"\n* **You send the question:** You have to physically travel (send data over the internet) to the library.\n* **The librarian thinks"
+      },
+      {
+       "regime": "warm",
+       "prompt_tokens": 20,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 22.192343522661652,
+       "prefill_tps": 130.81231835616177,
+       "ttft_ms": 153.41199995600618,
+       "text_sha256": "c8310efb34ed71f90b65634bef88178d81c23789f96bba68b6172d41f52d3471",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "Imagine a computer or a device (like your smartphone or a smart camera) that can **think, learn, and make decisions right there, without needing to constantly send information to a big, distant computer (like a massive cloud server).**\n\n**Here's a breakdown using simple analogies:**\n\n### The Traditional Way (Cloud AI)\n\nThink of asking a super-smart librarian in a distant city.\n\n* **You have a question:** \"What is the capital of France?\"\n* **You send the question:** You have to physically travel (send data over the internet) to the library.\n* **The librarian thinks"
+      }
+     ],
+     "load_s": 11.549016800010577,
+     "versions": {
+      "python": "3.12.10",
+      "onnxruntime-genai": "0.19.0",
+      "onnxruntime": "1.31.1",
+      "onnxruntime-ep-openvino": "1.8.1",
+      "onnxruntime-ep-webgpu": "0.5.0",
+      "numpy": "2.5.4"
+     }
+    },
+    {
+     "run": 3,
+     "status": "OK",
+     "counted": true,
+     "why": "",
+     "exit_code": 0,
+     "timed_out": false,
+     "elapsed_s": 32.815,
+     "suspended_s": 0,
+     "gate": {
+      "quietGate": "quiet",
+      "cpuReads": [
+       0.5,
+       0.5,
+       0.4
+      ],
+      "nvidiaMiB": 0,
+      "availGB": 24.4,
+      "ramNeedGB": 10.2,
+      "gpuEngines": null
+     },
+     "before": {
+      "load": {
+       "cpu": 5,
+       "build_ms": 0,
+       "top": [
+        "System 4 0.44 core",
+        "svchost 7640 0.14 core",
+        "svchost 2388 0.06 core",
+        "svchost 1740 0.03 core",
+        "WmiPrvSE 7560 0.02 core"
+       ]
+      },
+      "nvidia": "P0, 5722 MHz, 14001 MHz, 17.30 W, 0 %, 0 MiB, 45",
+      "availGB": 24.4
+     },
+     "start": "2026-11-08T19:35:36.7772114+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 171,
+       "dedicated": 7459
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 23,
+       "dedicated": 0
+      },
+      "0x00000000_0x00012BB8 (?)": {
+       "shared": 0,
+       "dedicated": 0
+      },
+      "0x00000000_0x00013E4C (npu?)": {
+       "shared": 0,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": "nvidia",
+     "peak_working_set_mb": 2183,
+     "gens": [
+      {
+       "regime": "cold",
+       "prompt_tokens": 20,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 19.063203269960507,
+       "prefill_tps": 20.30093703057867,
+       "ttft_ms": 985.621399973752,
+       "text_sha256": "c8310efb34ed71f90b65634bef88178d81c23789f96bba68b6172d41f52d3471",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "Imagine a computer or a device (like your smartphone or a smart camera) that can **think, learn, and make decisions right there, without needing to constantly send information to a big, distant computer (like a massive cloud server).**\n\n**Here's a breakdown using simple analogies:**\n\n### The Traditional Way (Cloud AI)\n\nThink of asking a super-smart librarian in a distant city.\n\n* **You have a question:** \"What is the capital of France?\"\n* **You send the question:** You have to physically travel (send data over the internet) to the library.\n* **The librarian thinks"
+      },
+      {
+       "regime": "warm",
+       "prompt_tokens": 20,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 21.678020828378923,
+       "prefill_tps": 122.45620201505848,
+       "ttft_ms": 163.76539997872896,
+       "text_sha256": "c8310efb34ed71f90b65634bef88178d81c23789f96bba68b6172d41f52d3471",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "Imagine a computer or a device (like your smartphone or a smart camera) that can **think, learn, and make decisions right there, without needing to constantly send information to a big, distant computer (like a massive cloud server).**\n\n**Here's a breakdown using simple analogies:**\n\n### The Traditional Way (Cloud AI)\n\nThink of asking a super-smart librarian in a distant city.\n\n* **You have a question:** \"What is the capital of France?\"\n* **You send the question:** You have to physically travel (send data over the internet) to the library.\n* **The librarian thinks"
+      }
+     ],
+     "load_s": 13.328441099991323,
+     "versions": {
+      "python": "3.12.10",
+      "onnxruntime-genai": "0.19.0",
+      "onnxruntime": "1.31.1",
+      "onnxruntime-ep-openvino": "1.8.1",
+      "onnxruntime-ep-webgpu": "0.5.0",
+      "numpy": "2.5.4"
+     }
+    }
+   ],
+   "cold_n": 2,
+   "text_check": "6/6 PASS",
+   "host_env": [
+    {
+     "read": "2026-11-08T18:27:37.4700974+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "osCaption": "Microsoft Windows 11 Home",
+     "ramGB": 31.5,
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    }
+   ],
+   "cold_spread_pct": 7.78,
+   "decode_tps": 19.83,
+   "prefill_tps": 20.9,
+   "ttft_ms": 957.7,
+   "decode_tps_warm": 21.94,
+   "peak_working_set_mb": 2359,
+   "gpu_adapter_used": [
+    "nvidia"
+   ],
+   "generated_tokens": [
+    128
+   ],
+   "stop": [
+    "length"
+   ],
+   "same_cold_text": true,
+   "os_build": [
+    "26200.9711"
+   ],
+   "counts": false,
+   "unit_args": [
+    "--model-dir",
+    "{ROOT}\\overlays\\gemma-4-E2B-it_webgpu_a0",
+    "--ep",
+    "follow_config"
+   ],
+   "unit_note": "WebGPU EP 0.5.0 plugin, adapterIndex 0"
+  },
+  {
+   "sitting": "walk-timed-b-rerun",
+   "mode": "timed",
+   "runs": [
+    {
+     "run": 1,
+     "status": "OK",
+     "counted": false,
+     "why": "run 1 of a GPU / NPU cell (first process in the sitting)",
+     "exit_code": 0,
+     "timed_out": false,
+     "elapsed_s": 45.207,
+     "suspended_s": 0,
+     "gate": {
+      "quietGate": "quiet",
+      "cpuReads": [
+       2.6,
+       0.1,
+       0.8
+      ],
+      "nvidiaMiB": 0,
+      "availGB": 25,
+      "ramNeedGB": 10.2,
+      "gpuEngines": null
+     },
+     "before": {
+      "load": {
+       "cpu": 2,
+       "build_ms": 0,
+       "top": [
+        "System 4 0.31 core",
+        "NVDisplay.Container 3412 0.02 core"
+       ]
+      },
+      "nvidia": "P0, 2160 MHz, 14001 MHz, 18.25 W, 0 %, 0 MiB, 51",
+      "availGB": 24.9
+     },
+     "start": "2026-11-09T08:29:27.5472042+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 806,
+       "dedicated": 7459
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 23,
+       "dedicated": 0
+      },
+      "0x00000000_0x00012BB8 (?)": {
+       "shared": 0,
+       "dedicated": 0
+      },
+      "0x00000000_0x00013E4C (npu?)": {
+       "shared": 0,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": "nvidia",
+     "peak_working_set_mb": 2368,
+     "gens": [
+      {
+       "regime": "cold",
+       "prompt_tokens": 20,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 20.619152562889262,
+       "prefill_tps": 19.791804075284016,
+       "ttft_ms": 1010.923299996648,
+       "text_sha256": "c8310efb34ed71f90b65634bef88178d81c23789f96bba68b6172d41f52d3471",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "Imagine a computer or a device (like your smartphone or a smart camera) that can **think, learn, and make decisions right there, without needing to constantly send information to a big, distant computer (like a massive cloud server).**\n\n**Here's a breakdown using simple analogies:**\n\n### The Traditional Way (Cloud AI)\n\nThink of asking a super-smart librarian in a distant city.\n\n* **You have a question:** \"What is the capital of France?\"\n* **You send the question:** You have to physically travel (send data over the internet) to the library.\n* **The librarian thinks"
+      },
+      {
+       "regime": "warm",
+       "prompt_tokens": 20,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 22.23072240899151,
+       "prefill_tps": 130.18561866279947,
+       "ttft_ms": 154.1461999877356,
+       "text_sha256": "c8310efb34ed71f90b65634bef88178d81c23789f96bba68b6172d41f52d3471",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "Imagine a computer or a device (like your smartphone or a smart camera) that can **think, learn, and make decisions right there, without needing to constantly send information to a big, distant computer (like a massive cloud server).**\n\n**Here's a breakdown using simple analogies:**\n\n### The Traditional Way (Cloud AI)\n\nThink of asking a super-smart librarian in a distant city.\n\n* **You have a question:** \"What is the capital of France?\"\n* **You send the question:** You have to physically travel (send data over the internet) to the library.\n* **The librarian thinks"
+      }
+     ],
+     "load_s": 28.323253800015664,
+     "versions": {
+      "python": "3.12.10",
+      "onnxruntime-genai": "0.19.0",
+      "onnxruntime": "1.31.1",
+      "onnxruntime-ep-openvino": "1.8.1",
+      "onnxruntime-ep-webgpu": "0.5.0",
+      "numpy": "2.5.4"
+     }
+    },
+    {
+     "run": 2,
+     "status": "OK",
+     "counted": true,
+     "why": "",
+     "exit_code": 0,
+     "timed_out": false,
+     "elapsed_s": 31.019,
+     "suspended_s": 0,
+     "gate": {
+      "quietGate": "quiet",
+      "cpuReads": [
+       3.3,
+       2.3,
+       0.5
+      ],
+      "nvidiaMiB": 0,
+      "availGB": 25,
+      "ramNeedGB": 10.2,
+      "gpuEngines": null
+     },
+     "before": {
+      "load": {
+       "cpu": 3.2,
+       "build_ms": 0,
+       "top": [
+        "System 4 0.42 core",
+        "powershell 20668 0.02 core",
+        "powershell 35152 0.02 core",
+        "MpDefenderCoreService 5404 0.02 core",
+        "MsMpEng 5548 0.02 core"
+       ]
+      },
+      "nvidia": "P0, 112 MHz, 14001 MHz, 19.10 W, 0 %, 0 MiB, 55",
+      "availGB": 25
+     },
+     "start": "2026-11-09T08:30:52.0120664+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 173,
+       "dedicated": 7459
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 23,
+       "dedicated": 0
+      },
+      "0x00000000_0x00012BB8 (?)": {
+       "shared": 0,
+       "dedicated": 0
+      },
+      "0x00000000_0x00013E4C (npu?)": {
+       "shared": 0,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": "nvidia",
+     "peak_working_set_mb": 2517,
+     "gens": [
+      {
+       "regime": "cold",
+       "prompt_tokens": 20,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 20.20851142091,
+       "prefill_tps": 21.112491047182612,
+       "ttft_ms": 947.7326999767683,
+       "text_sha256": "c8310efb34ed71f90b65634bef88178d81c23789f96bba68b6172d41f52d3471",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "Imagine a computer or a device (like your smartphone or a smart camera) that can **think, learn, and make decisions right there, without needing to constantly send information to a big, distant computer (like a massive cloud server).**\n\n**Here's a breakdown using simple analogies:**\n\n### The Traditional Way (Cloud AI)\n\nThink of asking a super-smart librarian in a distant city.\n\n* **You have a question:** \"What is the capital of France?\"\n* **You send the question:** You have to physically travel (send data over the internet) to the library.\n* **The librarian thinks"
+      },
+      {
+       "regime": "warm",
+       "prompt_tokens": 20,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 22.120442253787818,
+       "prefill_tps": 134.80168312536773,
+       "ttft_ms": 148.76470001763664,
+       "text_sha256": "c8310efb34ed71f90b65634bef88178d81c23789f96bba68b6172d41f52d3471",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "Imagine a computer or a device (like your smartphone or a smart camera) that can **think, learn, and make decisions right there, without needing to constantly send information to a big, distant computer (like a massive cloud server).**\n\n**Here's a breakdown using simple analogies:**\n\n### The Traditional Way (Cloud AI)\n\nThink of asking a super-smart librarian in a distant city.\n\n* **You have a question:** \"What is the capital of France?\"\n* **You send the question:** You have to physically travel (send data over the internet) to the library.\n* **The librarian thinks"
+      }
+     ],
+     "load_s": 12.909300000028452,
+     "versions": {
+      "python": "3.12.10",
+      "onnxruntime-genai": "0.19.0",
+      "onnxruntime": "1.31.1",
+      "onnxruntime-ep-openvino": "1.8.1",
+      "onnxruntime-ep-webgpu": "0.5.0",
+      "numpy": "2.5.4"
+     }
+    },
+    {
+     "run": 3,
+     "status": "OK",
+     "counted": true,
+     "why": "",
+     "exit_code": 0,
+     "timed_out": false,
+     "elapsed_s": 30.879,
+     "suspended_s": 0,
+     "gate": {
+      "quietGate": "quiet",
+      "cpuReads": [
+       1.5,
+       1.7,
+       0.3
+      ],
+      "nvidiaMiB": 0,
+      "availGB": 24.8,
+      "ramNeedGB": 10.2,
+      "gpuEngines": null
+     },
+     "before": {
+      "load": {
+       "cpu": 2.5,
+       "build_ms": 0,
+       "top": [
+        "System 4 0.34 core",
+        "svchost 1740 0.02 core",
+        "LEDKeeper2 8936 0.02 core",
+        "MsMpEng 5548 0.02 core",
+        "NVDisplay.Container 3412 0.02 core"
+       ]
+      },
+      "nvidia": "P0, 4425 MHz, 14001 MHz, 18.02 W, 0 %, 0 MiB, 49",
+      "availGB": 24.8
+     },
+     "start": "2026-11-09T08:56:13.8704682+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 233,
+       "dedicated": 7459
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 23,
+       "dedicated": 0
+      },
+      "0x00000000_0x00012BB8 (?)": {
+       "shared": 0,
+       "dedicated": 0
+      },
+      "0x00000000_0x00013E4C (npu?)": {
+       "shared": 0,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": "nvidia",
+     "peak_working_set_mb": 2442,
+     "gens": [
+      {
+       "regime": "cold",
+       "prompt_tokens": 20,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 20.332306738315225,
+       "prefill_tps": 19.28494323185993,
+       "ttft_ms": 1037.49390001758,
+       "text_sha256": "c8310efb34ed71f90b65634bef88178d81c23789f96bba68b6172d41f52d3471",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "Imagine a computer or a device (like your smartphone or a smart camera) that can **think, learn, and make decisions right there, without needing to constantly send information to a big, distant computer (like a massive cloud server).**\n\n**Here's a breakdown using simple analogies:**\n\n### The Traditional Way (Cloud AI)\n\nThink of asking a super-smart librarian in a distant city.\n\n* **You have a question:** \"What is the capital of France?\"\n* **You send the question:** You have to physically travel (send data over the internet) to the library.\n* **The librarian thinks"
+      },
+      {
+       "regime": "warm",
+       "prompt_tokens": 20,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 21.806624962951236,
+       "prefill_tps": 132.47243911315806,
+       "ttft_ms": 151.37229999527335,
+       "text_sha256": "c8310efb34ed71f90b65634bef88178d81c23789f96bba68b6172d41f52d3471",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "Imagine a computer or a device (like your smartphone or a smart camera) that can **think, learn, and make decisions right there, without needing to constantly send information to a big, distant computer (like a massive cloud server).**\n\n**Here's a breakdown using simple analogies:**\n\n### The Traditional Way (Cloud AI)\n\nThink of asking a super-smart librarian in a distant city.\n\n* **You have a question:** \"What is the capital of France?\"\n* **You send the question:** You have to physically travel (send data over the internet) to the library.\n* **The librarian thinks"
+      }
+     ],
+     "load_s": 13.275303999980679,
+     "versions": {
+      "python": "3.12.10",
+      "onnxruntime-genai": "0.19.0",
+      "onnxruntime": "1.31.1",
+      "onnxruntime-ep-openvino": "1.8.1",
+      "onnxruntime-ep-webgpu": "0.5.0",
+      "numpy": "2.5.4"
+     }
+    }
+   ],
+   "cold_n": 2,
+   "text_check": "6/6 PASS",
+   "host_env": [
+    {
+     "read": "2026-11-09T04:31:48.4055690+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "osCaption": "Microsoft Windows 11 Home",
+     "ramGB": 31.5,
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    }
+   ],
+   "cold_spread_pct": 0.61,
+   "decode_tps": 20.27,
+   "prefill_tps": 20.2,
+   "ttft_ms": 992.6,
+   "decode_tps_warm": 21.96,
+   "peak_working_set_mb": 2479,
+   "gpu_adapter_used": [
+    "nvidia"
+   ],
+   "generated_tokens": [
+    128
+   ],
+   "stop": [
+    "length"
+   ],
+   "same_cold_text": true,
+   "os_build": [
+    "26200.9711"
+   ],
+   "counts": true,
+   "unit_args": [
+    "--model-dir",
+    "{ROOT}\\overlays\\gemma-4-E2B-it_webgpu_a0",
+    "--ep",
+    "follow_config"
+   ],
+   "unit_note": "WebGPU EP 0.5.0 plugin, adapterIndex 0; rerun: cold spread 7.78 % in walk-timed-b"
+  }
+ ]
+}

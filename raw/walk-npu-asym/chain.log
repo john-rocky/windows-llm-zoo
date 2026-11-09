@@ -1,0 +1,25 @@
+[2026-11-07T20:33:43.2025516+09:00] chain start: plan C:\src\llmzoo-walk\pc\plans\walk-npu-asym.json mode first, 2 units, pid 33380
+[2026-11-07T20:33:54.1888091+09:00] adapters: 0x00000000_0x00012C48=nvidia, 0x00000000_0x0001260E=intel-gpu, 0x00000000_0x00012BB8=?, 0x00000000_0x00013E4C=npu?
+[2026-11-07T20:33:54.2381811+09:00] another lane holds busy.txt (another lane's lock 2026-11-07T20:32:18.8160139+09:00): waiting before Qwen3-1.7B\openvino-genai_npu_npu run 1
+[2026-11-07T21:21:58.7009359+09:00] Qwen3-1.7B\openvino-genai_npu_npu run 1 start
+[2026-11-07T21:21:59.1734663+09:00] C:\src\llmzoo-walk\runs\walk-npu-asym\Qwen3-1.7B\openvino-genai_npu_npu\run1 suspended (3 processes) while another lane holds busy.txt (another lane's lock 2026-11-07T21:21:58.7246277+09:00)
+[2026-11-07T21:23:29.1977247+09:00] C:\src\llmzoo-walk\runs\walk-npu-asym\Qwen3-1.7B\openvino-genai_npu_npu\run1 resumed (3 processes) after 90 s
+[2026-11-07T21:23:43.2187298+09:00] C:\src\llmzoo-walk\runs\walk-npu-asym\Qwen3-1.7B\openvino-genai_npu_npu\run1 suspended (3 processes) while another lane holds busy.txt (another lane's lock 2026-11-07T21:23:42.4854499+09:00)
+[2026-11-07T21:48:29.2920274+09:00] C:\src\llmzoo-walk\runs\walk-npu-asym\Qwen3-1.7B\openvino-genai_npu_npu\run1 resumed (3 processes) after 1486 s
+[2026-11-07T21:48:34.0330727+09:00] C:\src\llmzoo-walk\runs\walk-npu-asym\Qwen3-1.7B\openvino-genai_npu_npu\run1 suspended (3 processes) while another lane holds busy.txt (another lane's lock 2026-11-07T21:48:32.6123708+09:00)
+[2026-11-07T22:42:35.8873114+09:00] C:\src\llmzoo-walk\runs\walk-npu-asym\Qwen3-1.7B\openvino-genai_npu_npu\run1 resumed (3 processes) after 3242 s
+[2026-11-07T22:42:41.6348795+09:00] C:\src\llmzoo-walk\runs\walk-npu-asym\Qwen3-1.7B\openvino-genai_npu_npu\run1 suspended (3 processes) while another lane holds busy.txt (another lane's lock 2026-11-07T22:42:39.8015505+09:00)
+[2026-11-07T22:44:11.6900817+09:00] C:\src\llmzoo-walk\runs\walk-npu-asym\Qwen3-1.7B\openvino-genai_npu_npu\run1 resumed (3 processes) after 90 s
+[2026-11-07T22:44:14.4725839+09:00] C:\src\llmzoo-walk\runs\walk-npu-asym\Qwen3-1.7B\openvino-genai_npu_npu\run1 suspended (3 processes) while another lane holds busy.txt (another lane's lock 2026-11-07T22:44:13.4942020+09:00)
+[2026-11-07T23:04:30.2733656+09:00] C:\src\llmzoo-walk\runs\walk-npu-asym\Qwen3-1.7B\openvino-genai_npu_npu\run1 resumed (3 processes) after 1216 s
+[2026-11-07T23:19:31.9647391+09:00] C:\src\llmzoo-walk\runs\walk-npu-asym\Qwen3-1.7B\openvino-genai_npu_npu\run1 suspended (3 processes) while another lane holds busy.txt (another lane's lock 2026-11-07T23:19:31.4062111+09:00)
+[2026-11-07T23:46:48.1844478+09:00] C:\src\llmzoo-walk\runs\walk-npu-asym\Qwen3-1.7B\openvino-genai_npu_npu\run1 resumed (3 processes) after 1636 s
+[2026-11-07T23:47:20.2215666+09:00] C:\src\llmzoo-walk\runs\walk-npu-asym\Qwen3-1.7B\openvino-genai_npu_npu\run1 suspended (3 processes) while another lane holds busy.txt (another lane's lock 2026-11-07T23:47:19.4756283+09:00)
+[2026-11-07T23:49:35.3175868+09:00] C:\src\llmzoo-walk\runs\walk-npu-asym\Qwen3-1.7B\openvino-genai_npu_npu\run1 resumed (3 processes) after 135 s
+[2026-11-07T23:53:44.3348068+09:00] C:\src\llmzoo-walk\runs\walk-npu-asym\Qwen3-1.7B\openvino-genai_npu_npu\run1 suspended (3 processes) while another lane holds busy.txt (another lane's lock 2026-11-07T23:53:42.5861561+09:00)
+[2026-11-07T23:56:14.4268190+09:00] C:\src\llmzoo-walk\runs\walk-npu-asym\Qwen3-1.7B\openvino-genai_npu_npu\run1 resumed (3 processes) after 150 s
+[2026-11-08T00:02:27.7929717+09:00] C:\src\llmzoo-walk\runs\walk-npu-asym\Qwen3-1.7B\openvino-genai_npu_npu\run1 suspended (3 processes) while another lane holds busy.txt (another lane's lock 2026-11-08T00:02:27.2714139+09:00)
+[2026-11-08T00:11:13.0873058+09:00] C:\src\llmzoo-walk\runs\walk-npu-asym\Qwen3-1.7B\openvino-genai_npu_npu\run1 resumed (3 processes) after 525 s
+[2026-11-08T00:14:52.9848175+09:00] Qwen3-1.7B\openvino-genai_npu_npu run 1 end: exit , no runner JSON, 10372.945 s
+[2026-11-08T00:14:52.9888385+09:00] gemma-4-E4B-it\openvino-genai_npu_npu run 1 on disk, skipped
+[2026-11-08T00:14:53.0006254+09:00] chain done: OK

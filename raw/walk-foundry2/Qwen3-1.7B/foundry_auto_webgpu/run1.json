@@ -1,0 +1,76 @@
+{
+ "runner": "run_foundry.py",
+ "started": "2026-11-08T05:20:50.077238+09:00",
+ "argv": [
+  "--model",
+  "qwen3-1.7b-generic-gpu:2",
+  "--path",
+  "/v1",
+  "--prompt-file",
+  "C:\\src\\llmzoo-walk\\pc\\short-chat.txt",
+  "--out",
+  "C:\\src\\llmzoo-walk\\runs\\walk-foundry2\\Qwen3-1.7B\\foundry_auto_webgpu\\run1.json"
+ ],
+ "prompt_sha256": "870aafb98e570e8fa1343ec051180237f4587233f49c0cc1391724e086d42d50",
+ "daemon_json": {
+  "pid": 22912,
+  "web_urls": [
+   "http://127.0.0.1:62946"
+  ],
+  "protocol_version": 3,
+  "daemon_version": "0.13.0",
+  "package_version": "0.13.0",
+  "sdk_version": "2.3.0",
+  "started_at": "2026-11-07T20:20:40.144193+00:00",
+  "log_file": "C:\\Users\\USER\\.foundry\\logs\\foundrylocald-2026-11-07.log",
+  "sdk_package_version": "2.3.0",
+  "runtime_package_version": "2.3.0",
+  "ort_package_version": "1.31.0",
+  "ort_gen_ai_package_version": "0.18.0",
+  "native_runtime_version": null,
+  "native_ort_version": null,
+  "foundry_local_core_version": "2.3.0",
+  "ort_version": "1.31.0",
+  "ort_gen_ai_version": "0.18.0",
+  "foundry_local_runtime_version": "2.3.0"
+ },
+ "url": "http://127.0.0.1:62946/v1",
+ "gens": [
+  {
+   "prompt_tokens": 19,
+   "generated_tokens": 128,
+   "chunks": 127,
+   "delta_fields": {
+    "reasoning_content": 127
+   },
+   "stop": "length",
+   "ttft_ms": 842.2006000037072,
+   "prefill_tps": 22.559945932021854,
+   "decode_tps": 90.55562343257078,
+   "request_wall_s": 2.235372900002403,
+   "text": "\nOkay, the user wants an explanation of on-device AI in simple terms. Let me break this down.\n\nFirst, I need to define what on-device AI is. Maybe start by explaining AI in general, then narrow it down to on-device.\n\nSo, AI is a type of computer program that can learn from data and perform tasks without explicit programming. But the user wants it in simple terms, so maybe avoid technical jargon.\n\nOn-device AI means that the AI is run on the device itself, rather than being sent to a remote server. So, for example, if you have a smartphone, on-device AI would mean that",
+   "text_sha256": "f47e78c9ddcd4a27df794edf9b0e7b654732b88d252a7017a7d81d817ff6cae9",
+   "gen": 1,
+   "regime": "cold"
+  },
+  {
+   "prompt_tokens": 19,
+   "generated_tokens": 128,
+   "chunks": 127,
+   "delta_fields": {
+    "reasoning_content": 127
+   },
+   "stop": "length",
+   "ttft_ms": 241.52580001100432,
+   "prefill_tps": 78.66654410888745,
+   "decode_tps": 99.67491737668074,
+   "request_wall_s": 1.5072119000105886,
+   "text": "\nOkay, the user wants an explanation of on-device AI in simple terms. Let me break this down.\n\nFirst, I need to define what on-device AI is. Maybe start by explaining AI in general, then narrow it down to on-device.\n\nSo, AI is a type of computer program that can learn from data and perform tasks without explicit programming. But the user wants it in simple terms, so maybe avoid technical jargon.\n\nOn-device AI means that the AI is run on the device itself, rather than being sent to a remote server. So, for example, if you have a smartphone, on-device AI would mean that",
+   "text_sha256": "f47e78c9ddcd4a27df794edf9b0e7b654732b88d252a7017a7d81d817ff6cae9",
+   "gen": 2,
+   "regime": "warm"
+  }
+ ],
+ "status": "OK",
+ "ended": "2026-11-08T05:20:53.897494+09:00"
+}

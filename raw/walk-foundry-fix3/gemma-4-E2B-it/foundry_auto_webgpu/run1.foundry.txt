@@ -1,0 +1,46 @@
+
+--- foundry server stop  [2026-11-08T05:50:51.5826946+09:00]
+● success: Server stopped.
+[exit=0, 0.67 s]
+
+--- foundry server start  [2026-11-08T05:50:52.2767229+09:00]
+■ Starting Foundry Local server
+OpenVINOExecutionProvider: 0%
+NvTensorRTRTXExecutionProvider: 0%
+CUDAExecutionProvider: 0%
+WebGpuExecutionProvider: 0%
+● success: Server ready (http://127.0.0.1:64614)
+  Public API: http://127.0.0.1:64614/v1/
+  Local API (BYOM): http://127.0.0.1:64614/catalogs/local/v1/
+[exit=0, 7.75 s]
+
+--- foundry model unregister z2-gemma-4-e2b-it-webgpu:1  [2026-11-08T05:51:00.0623333+09:00]
+● success: Removed registration IDs: z2-gemma-4-e2b-it-webgpu:1.
+■ note: Model files and original folders were preserved.
+[exit=0, 0.83 s]
+
+--- foundry model register C:\Users\USER\.foundry\cache\models\Microsoft\gemma-4-e2b-it-generic-gpu-3\v3 z2-gemma-4-e2b-it-webgpu:1 --task vision-language-chat --display-name z2-gemma-4-e2b-it-webgpu --device gpu  [2026-11-08T05:51:00.8926637+09:00]
+● success: Registered local model.
+■ note: ID: z2-gemma-4-e2b-it-webgpu:1
+■ note: Alias: z2-gemma-4-e2b-it-webgpu
+■ note: Folder: 
+C:\Users\USER\.foundry\cache\models\Microsoft\gemma-4-e2b-it-generic-gpu-3\v3
+■ note: Task: vision-language-chat
+■ note: Files were not copied; the original folder is retained and must remain 
+available.
+■ note: Next: foundry run z2-gemma-4-e2b-it-webgpu:1
+[exit=0, 0.21 s]
+
+--- foundry model load z2-gemma-4-e2b-it-webgpu:1  [2026-11-08T05:51:01.1084922+09:00]
+■ Loading model (z2-gemma-4-e2b-it-webgpu:1)
+● success: Loaded 'z2-gemma-4-e2b-it-webgpu' (GPU variant 'z2-gemma-4-e2b-it-webgpu:1') 
+into memory.
+[exit=0, 33.17 s]
+
+--- foundry model unload z2-gemma-4-e2b-it-webgpu:1  [2026-11-08T05:51:50.7332277+09:00]
+● success: Unloaded 'z2-gemma-4-e2b-it-webgpu:1' from memory.
+[exit=0, 2.87 s]
+
+--- foundry server stop  [2026-11-08T05:51:53.5948390+09:00]
+● success: Server stopped.
+[exit=0, 4.18 s]

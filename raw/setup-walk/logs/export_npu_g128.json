@@ -1,0 +1,61 @@
+{
+    "group":  128,
+    "venv_exit":  0,
+    "models":  [
+                   {
+                       "model":  "Qwen3-0.6B",
+                       "repo":  "Qwen/Qwen3-0.6B",
+                       "source":  "C:\\src\\llmzoo-walk\\hf\\Qwen__Qwen3-0.6B",
+                       "out":  "C:\\src\\llmzoo-walk\\models\\z2-npu\\Qwen3-0.6B-int4-sym-g128-ov",
+                       "group":  128,
+                       "command":  "optimum-cli export openvino --model C:\\src\\llmzoo-walk\\hf\\Qwen__Qwen3-0.6B --task text-generation-with-past --weight-format int4 --sym --ratio 1.0 --group-size 128 C:\\src\\llmzoo-walk\\models\\z2-npu\\Qwen3-0.6B-int4-sym-g128-ov",
+                       "exit":  "0",
+                       "running_s":  86,
+                       "peak_ws_mb":  2471,
+                       "peak_private_mb":  3351,
+                       "avail_gb_start":  18.2,
+                       "avail_gb_min":  9.4,
+                       "stdout":  "C:\\src\\llmzoo-walk\\logs\\export_Qwen3-0.6B_g128.out.txt",
+                       "stderr":  "C:\\src\\llmzoo-walk\\logs\\export_Qwen3-0.6B_g128.err.txt",
+                       "ir_info":  "C:\\src\\llmzoo-walk\\logs\\export_Qwen3-0.6B_g128.ir.json",
+                       "end":  "2026-11-07T23:05:54.9216086+09:00"
+                   },
+                   {
+                       "model":  "Qwen3-1.7B",
+                       "repo":  "Qwen/Qwen3-1.7B",
+                       "source":  "C:\\src\\llmzoo-walk\\hf\\Qwen__Qwen3-1.7B",
+                       "out":  "C:\\src\\llmzoo-walk\\models\\z2-npu\\Qwen3-1.7B-int4-sym-g128-ov",
+                       "group":  128,
+                       "command":  "optimum-cli export openvino --model C:\\src\\llmzoo-walk\\hf\\Qwen__Qwen3-1.7B --task text-generation-with-past --weight-format int4 --sym --ratio 1.0 --group-size 128 C:\\src\\llmzoo-walk\\models\\z2-npu\\Qwen3-1.7B-int4-sym-g128-ov",
+                       "exit":  "0",
+                       "running_s":  90.6,
+                       "peak_ws_mb":  4945,
+                       "peak_private_mb":  5076,
+                       "avail_gb_start":  11.1,
+                       "avail_gb_min":  6,
+                       "stdout":  "C:\\src\\llmzoo-walk\\logs\\export_Qwen3-1.7B_g128.out.txt",
+                       "stderr":  "C:\\src\\llmzoo-walk\\logs\\export_Qwen3-1.7B_g128.err.txt",
+                       "ir_info":  "C:\\src\\llmzoo-walk\\logs\\export_Qwen3-1.7B_g128.ir.json",
+                       "end":  "2026-11-07T23:07:30.6452755+09:00"
+                   },
+                   {
+                       "model":  "gemma-4-E4B-it",
+                       "repo":  "google/gemma-4-E4B-it",
+                       "source":  "C:\\src\\llmzoo-walk\\hf\\google__gemma-4-E4B-it",
+                       "out":  "C:\\src\\llmzoo-walk\\models\\z2-npu\\gemma-4-E4B-it-int4-sym-g128-ov",
+                       "group":  128,
+                       "command":  "optimum-cli export openvino --model C:\\src\\llmzoo-walk\\hf\\google__gemma-4-E4B-it --task image-text-to-text --weight-format int4 --sym --ratio 1.0 --group-size 128 C:\\src\\llmzoo-walk\\models\\z2-npu\\gemma-4-E4B-it-int4-sym-g128-ov",
+                       "exit":  "-1",
+                       "running_s":  236.9,
+                       "peak_ws_mb":  12235,
+                       "peak_private_mb":  31766,
+                       "avail_gb_start":  11.9,
+                       "avail_gb_min":  0.9,
+                       "stdout":  "C:\\src\\llmzoo-walk\\logs\\export_gemma-4-E4B-it_g128.out.txt",
+                       "stderr":  "C:\\src\\llmzoo-walk\\logs\\export_gemma-4-E4B-it_g128.err.txt",
+                       "ir_info":  null,
+                       "end":  "2026-11-07T23:11:32.3753041+09:00"
+                   }
+               ],
+    "fetch_exit":  0
+}

@@ -1,0 +1,19 @@
+■ Downloading model (gemma-4-e2b-it-generic-cpu:3, 5.9 GB)
+gemma-4-e2b-it-generic-cpu:3: 0%
+gemma-4-e2b-it-generic-cpu:3: 8%
+gemma-4-e2b-it-generic-cpu:3: 17%
+gemma-4-e2b-it-generic-cpu:3: 25%
+gemma-4-e2b-it-generic-cpu:3: 34%
+gemma-4-e2b-it-generic-cpu:3: 44%
+gemma-4-e2b-it-generic-cpu:3: 50%
+gemma-4-e2b-it-generic-cpu:3: 61%
+gemma-4-e2b-it-generic-cpu:3: 71%
+gemma-4-e2b-it-generic-cpu:3: 75%
+gemma-4-e2b-it-generic-cpu:3: 83%
+gemma-4-e2b-it-generic-cpu:3: 90%
+gemma-4-e2b-it-generic-cpu:3: 95%
+gemma-4-e2b-it-generic-cpu:3: 96%
+gemma-4-e2b-it-generic-cpu:3: 97%
+gemma-4-e2b-it-generic-cpu:3: 98%
+gemma-4-e2b-it-generic-cpu:3: 99%
+● success: Downloaded 'gemma-4-e2b-it-generic-cpu:3' to the local cache.

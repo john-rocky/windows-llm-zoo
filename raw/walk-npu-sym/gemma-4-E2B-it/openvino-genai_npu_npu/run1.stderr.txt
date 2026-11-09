@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\src\llmzoo-walk\pc\run_ovgenai.py", line 122, in main
+    res = pipe.generate([prompt], cfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Check 'num_inputs == 4 || num_inputs == 3' failed at C:\Jenkins\workspace\private-ci\ie\build-windows-vs2022\b\repos\openvino.genai\src\cpp\src\llm\pipeline_stateful.cpp:416:
+Model should have 3 or 4 inputs: either (input_ids, attention_mask, beam_idx) or (input_ids, attention_mask, position_ids, beam_idx) but you have '5' inputs
+
+

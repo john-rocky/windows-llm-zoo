@@ -1,0 +1,14 @@
+[2026-11-09T08:26:56.0018708+09:00] slot for another lane's job: release at 2026-11-09T08:34:00.0000000+09:00 without window.txt, give up at 2026-11-09T08:40:00.0000000+09:00; chain 35152 (walk-timed-b-rerun)
+[2026-11-09T08:26:56.0498598+09:00] not yet: after Qwen3-4B\openvino-genai_cpu_cpu run 1, the next run end in about 92 s
+[2026-11-09T08:28:07.5120353+09:00] not yet: after Qwen3-4B\openvino-genai_cpu_cpu run 2, the next run end in about 231 s
+[2026-11-09T08:30:15.0303258+09:00] not yet: after gemma-4-E2B-it\ort-genai_rtx_webgpu run 1, the next run end in about 123 s
+[2026-11-09T08:31:25.8248107+09:00] chain suspended (2 process(es)) between two runs (the next run end in about 273 s), after: [2026-11-09T08:31:24.9728542+09:00] gemma-4-E2B-it\ort-genai_rtx_webgpu run 2 end: exit 0, OK, 31.019 s
+[2026-11-09T08:34:00.4188801+09:00] lock released
+[2026-11-09T08:34:00.4188801+09:00] lock released for another lane's job, no window.txt
+[2026-11-09T08:34:05.4290921+09:00] lock taken by: another lane's lock
+[2026-11-09T08:34:50.5112089+09:00] free for 15 s, then lock taken by: another lane's lock
+[2026-11-09T08:54:17.6619377+09:00] the lock was given back (free for 60 s): taking the lock back
+[2026-11-09T08:54:17.7099422+09:00] lock: TAKEN (sitting walk-timed-b-rerun (after the slot for another lane's job))
+[2026-11-09T08:55:36.9762415+09:00] gate: PASS (cpu 0.3 % build 0 ms rtx 0 MiB | cpu 0.9 % build 0 ms rtx 0 MiB | cpu 4.4 % build 0 ms rtx 0 MiB)
+[2026-11-09T08:55:37.0060433+09:00] lock taken back, gate PASS: chain resumed (2 process(es))
+[2026-11-09T08:55:37.0060433+09:00] slots done

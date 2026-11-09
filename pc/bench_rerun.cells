@@ -1,0 +1,5 @@
+# Z2: the two cells of the bench's Windows column that read out (cold spread over 5 % in both sittings of
+# 2026-11-07), rows copied as written from edge-llm-bench matrices/dashboard-windows-v1.cells, run by the bench's
+# executor in a Z2 timed sitting with BENCH_RAW_ROOT=raw/bench (never the bench's summary).
+windows litert-lm litert-community/Qwen3-0.6B short-chat backend=gpu adapter=igpu file=Qwen3-0.6B_dynamic_wi4b32_afp32.litertlm context-tokens=2048 runs=3
+windows llama.cpp unsloth/gemma-4-E4B-it-GGUF short-chat file=gemma-4-E4B-it-Q4_K_M.gguf context-tokens=2048 runs=3

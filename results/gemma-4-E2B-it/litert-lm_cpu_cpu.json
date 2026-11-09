@@ -1,0 +1,415 @@
+{
+ "model": "gemma-4-E2B-it",
+ "cell": "litert-lm_cpu_cpu",
+ "runtime": "litert-lm",
+ "device": "cpu",
+ "device_name": "Intel(R) Core(TM) Ultra 9 386H",
+ "backend": "cpu",
+ "backend_detail": "LiteRT-LM CPU (XNNPACK), engine default threads (4)",
+ "source": "edge-llm-bench",
+ "bench_arm": "litert-lm-cpu",
+ "bench_commit": "e9be97795e96b82e81ec8608ce1f04c2bf16a88a",
+ "shelf": {
+  "repo": "litert-community/gemma-4-E2B-it-litert-lm",
+  "files": [
+   "gemma-4-E2B-it.litertlm"
+  ],
+  "quant": "wNa8o8 (int2/int4/int8 + int8 activations, QAT)"
+ },
+ "workload": {
+  "task": "short-chat",
+  "prompt": "prompts/text/short-chat.txt of edge-llm-bench",
+  "output_budget_tokens": 128,
+  "context_tokens": 2048,
+  "regime": "cold (first conversation of a fresh engine process)",
+  "counting": "runs=3 per sitting; run 1 of a LiteRT-LM, Vulkan or CUDA row is the cache build (firstEver) and is not counted; a text-check failure is not counted"
+ },
+ "status": "measured",
+ "table": {
+  "sitting": "2026-11-07-windows-wait-session-2",
+  "decode_tps": 18.22,
+  "cold_spread_pct": 1.65,
+  "cold_n": 2,
+  "prefill_tps": 53.239999999999995,
+  "ttft_ms": 430.0,
+  "peak_working_set_mb": 1199.1875,
+  "text_check": "5/5 PASS",
+  "decode_tps_warm": 12.5
+ },
+ "sittings": [
+  {
+   "campaign": "2026-11-05-windows-s1",
+   "first_record_jst": "2026-11-05 21:29 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200"
+   ],
+   "engine": "v0.19.0",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 20.884999999999998,
+   "cold_spread_pct": 0.91,
+   "counted": true,
+   "prefill_tps_cold_median": 46.79,
+   "ttft_ms_cold_median": 475.0,
+   "peak_working_set_mb_median": 1199.89453125,
+   "decode_tps_warm_median": 21.22,
+   "text_check": "5/5 PASS",
+   "quant": "wNa8o8 (int2/int4/int8 + int8 activations, QAT)",
+   "records": [
+    "results/raw/2026-11-05-windows-s1/litert-lm-cpu_litert-community_gemma-4-E2B-it-litert-lm_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-05-windows",
+   "first_record_jst": "2026-11-05 21:42 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200"
+   ],
+   "engine": "v0.19.0",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 20.740000000000002,
+   "cold_spread_pct": 1.74,
+   "counted": true,
+   "prefill_tps_cold_median": 46.65,
+   "ttft_ms_cold_median": 480.0,
+   "peak_working_set_mb_median": 1200.25390625,
+   "decode_tps_warm_median": 21.02,
+   "text_check": "5/5 PASS",
+   "quant": "wNa8o8 (int2/int4/int8 + int8 activations, QAT)",
+   "records": [
+    "results/raw/2026-11-05-windows/litert-lm-cpu_litert-community_gemma-4-E2B-it-litert-lm_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-06-windows-drift-s1",
+   "first_record_jst": "2026-11-06 17:18 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200"
+   ],
+   "engine": "v0.19.0",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 26.64,
+   "cold_spread_pct": 1.95,
+   "counted": true,
+   "prefill_tps_cold_median": 48.614999999999995,
+   "ttft_ms_cold_median": 450.0,
+   "peak_working_set_mb_median": 1198.921875,
+   "decode_tps_warm_median": 27.02,
+   "text_check": "5/5 PASS",
+   "quant": "wNa8o8 (int2/int4/int8 + int8 activations, QAT)",
+   "records": [
+    "results/raw/2026-11-06-windows-drift-s1/litert-lm-cpu_litert-community_gemma-4-E2B-it-litert-lm_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-06-windows-drift2-s1",
+   "first_record_jst": "2026-11-06 18:39 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "v0.19.0",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 17.825,
+   "cold_spread_pct": 2.97,
+   "counted": true,
+   "prefill_tps_cold_median": 53.620000000000005,
+   "ttft_ms_cold_median": 430.0,
+   "peak_working_set_mb_median": 1199.7265625,
+   "decode_tps_warm_median": 12.61,
+   "text_check": "5/5 PASS",
+   "quant": "wNa8o8 (int2/int4/int8 + int8 activations, QAT)",
+   "records": [
+    "results/raw/2026-11-06-windows-drift2-s1/litert-lm-cpu_litert-community_gemma-4-E2B-it-litert-lm_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-06-windows-drift2",
+   "first_record_jst": "2026-11-06 18:56 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "v0.19.0",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 18.145000000000003,
+   "cold_spread_pct": 0.28,
+   "counted": true,
+   "prefill_tps_cold_median": 53.650000000000006,
+   "ttft_ms_cold_median": 430.0,
+   "peak_working_set_mb_median": 1199.35546875,
+   "decode_tps_warm_median": 12.48,
+   "text_check": "5/5 PASS",
+   "quant": "wNa8o8 (int2/int4/int8 + int8 activations, QAT)",
+   "records": [
+    "results/raw/2026-11-06-windows-drift2/litert-lm-cpu_litert-community_gemma-4-E2B-it-litert-lm_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-06-windows-drift3-s1",
+   "first_record_jst": "2026-11-06 21:32 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "v0.19.0",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 18.035,
+   "cold_spread_pct": 1.28,
+   "counted": true,
+   "prefill_tps_cold_median": 52.955,
+   "ttft_ms_cold_median": 430.0,
+   "peak_working_set_mb_median": 1199.11328125,
+   "decode_tps_warm_median": 12.47,
+   "text_check": "5/5 PASS",
+   "quant": "wNa8o8 (int2/int4/int8 + int8 activations, QAT)",
+   "records": [
+    "results/raw/2026-11-06-windows-drift3-s1/litert-lm-cpu_litert-community_gemma-4-E2B-it-litert-lm_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-06-windows-drift3",
+   "first_record_jst": "2026-11-06 21:46 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "v0.19.0",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 18.03,
+   "cold_spread_pct": 1.55,
+   "counted": true,
+   "prefill_tps_cold_median": 53.33,
+   "ttft_ms_cold_median": 430.0,
+   "peak_working_set_mb_median": 1198.67578125,
+   "decode_tps_warm_median": 12.49,
+   "text_check": "5/5 PASS",
+   "quant": "wNa8o8 (int2/int4/int8 + int8 activations, QAT)",
+   "records": [
+    "results/raw/2026-11-06-windows-drift3/litert-lm-cpu_litert-community_gemma-4-E2B-it-litert-lm_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-06-windows-cuda-s1",
+   "first_record_jst": "2026-11-07 00:03 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "v0.19.0",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 17.380000000000003,
+   "cold_spread_pct": 4.26,
+   "counted": true,
+   "prefill_tps_cold_median": 49.57,
+   "ttft_ms_cold_median": 465.0,
+   "peak_working_set_mb_median": 1199.703125,
+   "decode_tps_warm_median": 12.46,
+   "text_check": "5/5 PASS",
+   "quant": "wNa8o8 (int2/int4/int8 + int8 activations, QAT)",
+   "records": [
+    "results/raw/2026-11-06-windows-cuda-s1/litert-lm-cpu_litert-community_gemma-4-E2B-it-litert-lm_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-06-windows-cuda",
+   "first_record_jst": "2026-11-07 00:19 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "v0.19.0",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 17.2,
+   "cold_spread_pct": 0.58,
+   "counted": true,
+   "prefill_tps_cold_median": 51.099999999999994,
+   "ttft_ms_cold_median": 450.0,
+   "peak_working_set_mb_median": 1199.58984375,
+   "decode_tps_warm_median": 12.6,
+   "text_check": "5/5 PASS",
+   "quant": "wNa8o8 (int2/int4/int8 + int8 activations, QAT)",
+   "records": [
+    "results/raw/2026-11-06-windows-cuda/litert-lm-cpu_litert-community_gemma-4-E2B-it-litert-lm_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-07-windows-qwen3-s1",
+   "first_record_jst": "2026-11-07 03:22 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "v0.19.0",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 17.97,
+   "cold_spread_pct": 0.11,
+   "counted": true,
+   "prefill_tps_cold_median": 53.845,
+   "ttft_ms_cold_median": 425.0,
+   "peak_working_set_mb_median": 1199.39453125,
+   "decode_tps_warm_median": 12.35,
+   "text_check": "5/5 PASS",
+   "quant": "wNa8o8 (int2/int4/int8 + int8 activations, QAT)",
+   "records": [
+    "results/raw/2026-11-07-windows-qwen3-s1/litert-lm-cpu_litert-community_gemma-4-E2B-it-litert-lm_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-07-windows-qwen3",
+   "first_record_jst": "2026-11-07 04:25 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "v0.19.0",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 18.07,
+   "cold_spread_pct": 1.11,
+   "counted": true,
+   "prefill_tps_cold_median": 53.57,
+   "ttft_ms_cold_median": 430.0,
+   "peak_working_set_mb_median": 1199.04296875,
+   "decode_tps_warm_median": 12.44,
+   "text_check": "5/5 PASS",
+   "quant": "wNa8o8 (int2/int4/int8 + int8 activations, QAT)",
+   "records": [
+    "results/raw/2026-11-07-windows-qwen3/litert-lm-cpu_litert-community_gemma-4-E2B-it-litert-lm_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-07-windows-e4b-s1",
+   "first_record_jst": "2026-11-07 07:17 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "v0.19.0",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 17.71,
+   "cold_spread_pct": 1.13,
+   "counted": true,
+   "prefill_tps_cold_median": 53.065,
+   "ttft_ms_cold_median": 430.0,
+   "peak_working_set_mb_median": 1199.7578125,
+   "decode_tps_warm_median": 12.38,
+   "text_check": "5/5 PASS",
+   "quant": "wNa8o8 (int2/int4/int8 + int8 activations, QAT)",
+   "records": [
+    "results/raw/2026-11-07-windows-e4b-s1/litert-lm-cpu_litert-community_gemma-4-E2B-it-litert-lm_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-07-windows-e4b",
+   "first_record_jst": "2026-11-07 08:39 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "v0.19.0",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 18.04,
+   "cold_spread_pct": 0.33,
+   "counted": true,
+   "prefill_tps_cold_median": 53.05,
+   "ttft_ms_cold_median": 430.0,
+   "peak_working_set_mb_median": 1199.265625,
+   "decode_tps_warm_median": 12.26,
+   "text_check": "5/5 PASS",
+   "quant": "wNa8o8 (int2/int4/int8 + int8 activations, QAT)",
+   "records": [
+    "results/raw/2026-11-07-windows-e4b/litert-lm-cpu_litert-community_gemma-4-E2B-it-litert-lm_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-07-windows-wait-poll-1",
+   "first_record_jst": "2026-11-07 16:18 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "v0.19.0",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 17.884999999999998,
+   "cold_spread_pct": 0.06,
+   "counted": true,
+   "prefill_tps_cold_median": 51.84,
+   "ttft_ms_cold_median": 440.0,
+   "peak_working_set_mb_median": 1198.6015625,
+   "decode_tps_warm_median": 12.23,
+   "text_check": "5/5 PASS",
+   "quant": "wNa8o8 (int2/int4/int8 + int8 activations, QAT)",
+   "records": [
+    "results/raw/2026-11-07-windows-wait-poll-1/litert-lm-cpu_litert-community_gemma-4-E2B-it-litert-lm_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-07-windows-wait-session-1",
+   "first_record_jst": "2026-11-07 16:33 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "v0.19.0",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 17.869999999999997,
+   "cold_spread_pct": 1.12,
+   "counted": true,
+   "prefill_tps_cold_median": 52.650000000000006,
+   "ttft_ms_cold_median": 435.0,
+   "peak_working_set_mb_median": 1198.78125,
+   "decode_tps_warm_median": 12.37,
+   "text_check": "5/5 PASS",
+   "quant": "wNa8o8 (int2/int4/int8 + int8 activations, QAT)",
+   "records": [
+    "results/raw/2026-11-07-windows-wait-session-1/litert-lm-cpu_litert-community_gemma-4-E2B-it-litert-lm_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-07-windows-wait-poll-2",
+   "first_record_jst": "2026-11-07 16:46 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "v0.19.0",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 18.08,
+   "cold_spread_pct": 1.22,
+   "counted": true,
+   "prefill_tps_cold_median": 51.695,
+   "ttft_ms_cold_median": 440.0,
+   "peak_working_set_mb_median": 1199.375,
+   "decode_tps_warm_median": 12.3,
+   "text_check": "5/5 PASS",
+   "quant": "wNa8o8 (int2/int4/int8 + int8 activations, QAT)",
+   "records": [
+    "results/raw/2026-11-07-windows-wait-poll-2/litert-lm-cpu_litert-community_gemma-4-E2B-it-litert-lm_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-07-windows-wait-session-2",
+   "first_record_jst": "2026-11-07 17:02 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "v0.19.0",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 18.22,
+   "cold_spread_pct": 1.65,
+   "counted": true,
+   "prefill_tps_cold_median": 53.239999999999995,
+   "ttft_ms_cold_median": 430.0,
+   "peak_working_set_mb_median": 1199.1875,
+   "decode_tps_warm_median": 12.5,
+   "text_check": "5/5 PASS",
+   "quant": "wNa8o8 (int2/int4/int8 + int8 activations, QAT)",
+   "records": [
+    "results/raw/2026-11-07-windows-wait-session-2/litert-lm-cpu_litert-community_gemma-4-E2B-it-litert-lm_short-chat.jsonl"
+   ]
+  }
+ ]
+}

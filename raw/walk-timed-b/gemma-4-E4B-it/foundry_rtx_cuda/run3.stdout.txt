@@ -1,0 +1,3 @@
+ENGINE_PID 8704
+{"gen": 1, "generated_tokens": 128, "chunks": 128, "delta_fields": {"content": 128}, "stop": "length", "ttft_ms": 1194.668299984187, "decode_tps": 25.798025874119723}
+{"gen": 2, "generated_tokens": 128, "chunks": 128, "delta_fields": {"content": 128}, "stop": "length", "ttft_ms": 81.96640000096522, "decode_tps": 32.93819515961181}

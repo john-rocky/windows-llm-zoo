@@ -1,0 +1,415 @@
+{
+ "model": "gemma-4-E2B-it",
+ "cell": "litert-lm_npu_npu",
+ "runtime": "litert-lm",
+ "device": "npu",
+ "device_name": "Intel(R) NPU",
+ "backend": "npu",
+ "backend_detail": "LiteRT-LM NPU, the Intel dispatch (OpenVINO) with the repo's Panther Lake bundle",
+ "source": "edge-llm-bench",
+ "bench_arm": "litert-lm-npu",
+ "bench_commit": "e9be97795e96b82e81ec8608ce1f04c2bf16a88a",
+ "shelf": {
+  "repo": "litert-community/gemma-4-E2B-it-litert-lm",
+  "files": [
+   "gemma-4-E2B-it_intel_PTL.litertlm"
+  ],
+  "quant": "Intel PTL NPU bundle, AOT, context 4096 (recipe not stated by the repo)"
+ },
+ "workload": {
+  "task": "short-chat",
+  "prompt": "prompts/text/short-chat.txt of edge-llm-bench",
+  "output_budget_tokens": 128,
+  "context_tokens": "fixed by the bundle",
+  "regime": "cold (first conversation of a fresh engine process)",
+  "counting": "runs=3 per sitting; run 1 of a LiteRT-LM, Vulkan or CUDA row is the cache build (firstEver) and is not counted; a text-check failure is not counted"
+ },
+ "status": "measured",
+ "table": {
+  "sitting": "2026-11-07-windows-wait-session-2",
+  "decode_tps": 53.614999999999995,
+  "cold_spread_pct": 0.65,
+  "cold_n": 2,
+  "prefill_tps": 387.93,
+  "ttft_ms": 70.0,
+  "peak_working_set_mb": 2482.33984375,
+  "text_check": "5/5 PASS",
+  "decode_tps_warm": 53.52
+ },
+ "sittings": [
+  {
+   "campaign": "2026-11-05-windows-s1",
+   "first_record_jst": "2026-11-05 21:34 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200"
+   ],
+   "engine": "v0.19.0",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 52.144999999999996,
+   "cold_spread_pct": 0.44,
+   "counted": true,
+   "prefill_tps_cold_median": 390.93,
+   "ttft_ms_cold_median": 70.0,
+   "peak_working_set_mb_median": 2484.421875,
+   "decode_tps_warm_median": 52.83,
+   "text_check": "5/5 PASS",
+   "quant": "Intel PTL NPU bundle, AOT, context 4096 (recipe not stated by the repo)",
+   "records": [
+    "results/raw/2026-11-05-windows-s1/litert-lm-npu_litert-community_gemma-4-E2B-it-litert-lm_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-05-windows",
+   "first_record_jst": "2026-11-05 21:48 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200"
+   ],
+   "engine": "v0.19.0",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 52.239999999999995,
+   "cold_spread_pct": 1.03,
+   "counted": true,
+   "prefill_tps_cold_median": 384.94,
+   "ttft_ms_cold_median": 70.0,
+   "peak_working_set_mb_median": 2484.6796875,
+   "decode_tps_warm_median": 52.4,
+   "text_check": "5/5 PASS",
+   "quant": "Intel PTL NPU bundle, AOT, context 4096 (recipe not stated by the repo)",
+   "records": [
+    "results/raw/2026-11-05-windows/litert-lm-npu_litert-community_gemma-4-E2B-it-litert-lm_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-06-windows-drift-s1",
+   "first_record_jst": "2026-11-06 17:23 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200"
+   ],
+   "engine": "v0.19.0",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 52.325,
+   "cold_spread_pct": 0.36,
+   "counted": true,
+   "prefill_tps_cold_median": 368.405,
+   "ttft_ms_cold_median": 75.0,
+   "peak_working_set_mb_median": 2481.69921875,
+   "decode_tps_warm_median": 52.47,
+   "text_check": "5/5 PASS",
+   "quant": "Intel PTL NPU bundle, AOT, context 4096 (recipe not stated by the repo)",
+   "records": [
+    "results/raw/2026-11-06-windows-drift-s1/litert-lm-npu_litert-community_gemma-4-E2B-it-litert-lm_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-06-windows-drift2-s1",
+   "first_record_jst": "2026-11-06 18:46 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "v0.19.0",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 53.595,
+   "cold_spread_pct": 0.24,
+   "counted": true,
+   "prefill_tps_cold_median": 372.79999999999995,
+   "ttft_ms_cold_median": 70.0,
+   "peak_working_set_mb_median": 2482.45703125,
+   "decode_tps_warm_median": 53.53,
+   "text_check": "5/5 PASS",
+   "quant": "Intel PTL NPU bundle, AOT, context 4096 (recipe not stated by the repo)",
+   "records": [
+    "results/raw/2026-11-06-windows-drift2-s1/litert-lm-npu_litert-community_gemma-4-E2B-it-litert-lm_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-06-windows-drift2",
+   "first_record_jst": "2026-11-06 19:02 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "v0.19.0",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 53.79,
+   "cold_spread_pct": 0.26,
+   "counted": true,
+   "prefill_tps_cold_median": 368.985,
+   "ttft_ms_cold_median": 70.0,
+   "peak_working_set_mb_median": 2482.44921875,
+   "decode_tps_warm_median": 53.69,
+   "text_check": "5/5 PASS",
+   "quant": "Intel PTL NPU bundle, AOT, context 4096 (recipe not stated by the repo)",
+   "records": [
+    "results/raw/2026-11-06-windows-drift2/litert-lm-npu_litert-community_gemma-4-E2B-it-litert-lm_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-06-windows-drift3-s1",
+   "first_record_jst": "2026-11-06 21:38 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "v0.19.0",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 53.105000000000004,
+   "cold_spread_pct": 0.51,
+   "counted": true,
+   "prefill_tps_cold_median": 352.775,
+   "ttft_ms_cold_median": 80.0,
+   "peak_working_set_mb_median": 2482.65625,
+   "decode_tps_warm_median": 52.51,
+   "text_check": "5/5 PASS",
+   "quant": "Intel PTL NPU bundle, AOT, context 4096 (recipe not stated by the repo)",
+   "records": [
+    "results/raw/2026-11-06-windows-drift3-s1/litert-lm-npu_litert-community_gemma-4-E2B-it-litert-lm_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-06-windows-drift3",
+   "first_record_jst": "2026-11-06 21:52 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "v0.19.0",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 53.165,
+   "cold_spread_pct": 0.21,
+   "counted": true,
+   "prefill_tps_cold_median": 372.865,
+   "ttft_ms_cold_median": 70.0,
+   "peak_working_set_mb_median": 2482.8125,
+   "decode_tps_warm_median": 52.82,
+   "text_check": "5/5 PASS",
+   "quant": "Intel PTL NPU bundle, AOT, context 4096 (recipe not stated by the repo)",
+   "records": [
+    "results/raw/2026-11-06-windows-drift3/litert-lm-npu_litert-community_gemma-4-E2B-it-litert-lm_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-06-windows-cuda-s1",
+   "first_record_jst": "2026-11-07 00:09 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "v0.19.0",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 53.730000000000004,
+   "cold_spread_pct": 1.08,
+   "counted": true,
+   "prefill_tps_cold_median": 385.8,
+   "ttft_ms_cold_median": 70.0,
+   "peak_working_set_mb_median": 2482.5078125,
+   "decode_tps_warm_median": 53.22,
+   "text_check": "5/5 PASS",
+   "quant": "Intel PTL NPU bundle, AOT, context 4096 (recipe not stated by the repo)",
+   "records": [
+    "results/raw/2026-11-06-windows-cuda-s1/litert-lm-npu_litert-community_gemma-4-E2B-it-litert-lm_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-06-windows-cuda",
+   "first_record_jst": "2026-11-07 00:25 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "v0.19.0",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 53.36,
+   "cold_spread_pct": 0.11,
+   "counted": true,
+   "prefill_tps_cold_median": 389.955,
+   "ttft_ms_cold_median": 70.0,
+   "peak_working_set_mb_median": 2482.6796875,
+   "decode_tps_warm_median": 52.58,
+   "text_check": "5/5 PASS",
+   "quant": "Intel PTL NPU bundle, AOT, context 4096 (recipe not stated by the repo)",
+   "records": [
+    "results/raw/2026-11-06-windows-cuda/litert-lm-npu_litert-community_gemma-4-E2B-it-litert-lm_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-07-windows-qwen3-s1",
+   "first_record_jst": "2026-11-07 03:27 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "v0.19.0",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 53.09,
+   "cold_spread_pct": 0.6,
+   "counted": true,
+   "prefill_tps_cold_median": 366.845,
+   "ttft_ms_cold_median": 70.0,
+   "peak_working_set_mb_median": 2482.53125,
+   "decode_tps_warm_median": 52.86,
+   "text_check": "5/5 PASS",
+   "quant": "Intel PTL NPU bundle, AOT, context 4096 (recipe not stated by the repo)",
+   "records": [
+    "results/raw/2026-11-07-windows-qwen3-s1/litert-lm-npu_litert-community_gemma-4-E2B-it-litert-lm_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-07-windows-qwen3",
+   "first_record_jst": "2026-11-07 04:30 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "v0.19.0",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 53.754999999999995,
+   "cold_spread_pct": 1.36,
+   "counted": true,
+   "prefill_tps_cold_median": 389.225,
+   "ttft_ms_cold_median": 70.0,
+   "peak_working_set_mb_median": 2482.73828125,
+   "decode_tps_warm_median": 53.12,
+   "text_check": "5/5 PASS",
+   "quant": "Intel PTL NPU bundle, AOT, context 4096 (recipe not stated by the repo)",
+   "records": [
+    "results/raw/2026-11-07-windows-qwen3/litert-lm-npu_litert-community_gemma-4-E2B-it-litert-lm_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-07-windows-e4b-s1",
+   "first_record_jst": "2026-11-07 07:24 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "v0.19.0",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 53.195,
+   "cold_spread_pct": 0.17,
+   "counted": true,
+   "prefill_tps_cold_median": 379.72,
+   "ttft_ms_cold_median": 70.0,
+   "peak_working_set_mb_median": 2482.6015625,
+   "decode_tps_warm_median": 52.83,
+   "text_check": "5/5 PASS",
+   "quant": "Intel PTL NPU bundle, AOT, context 4096 (recipe not stated by the repo)",
+   "records": [
+    "results/raw/2026-11-07-windows-e4b-s1/litert-lm-npu_litert-community_gemma-4-E2B-it-litert-lm_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-07-windows-e4b",
+   "first_record_jst": "2026-11-07 08:44 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "v0.19.0",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 53.295,
+   "cold_spread_pct": 0.09,
+   "counted": true,
+   "prefill_tps_cold_median": 369.835,
+   "ttft_ms_cold_median": 75.0,
+   "peak_working_set_mb_median": 2482.46875,
+   "decode_tps_warm_median": 52.96,
+   "text_check": "5/5 PASS",
+   "quant": "Intel PTL NPU bundle, AOT, context 4096 (recipe not stated by the repo)",
+   "records": [
+    "results/raw/2026-11-07-windows-e4b/litert-lm-npu_litert-community_gemma-4-E2B-it-litert-lm_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-07-windows-wait-poll-1",
+   "first_record_jst": "2026-11-07 16:24 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "v0.19.0",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 53.245000000000005,
+   "cold_spread_pct": 0.02,
+   "counted": true,
+   "prefill_tps_cold_median": 367.36,
+   "ttft_ms_cold_median": 70.0,
+   "peak_working_set_mb_median": 2482.28125,
+   "decode_tps_warm_median": 53.05,
+   "text_check": "5/5 PASS",
+   "quant": "Intel PTL NPU bundle, AOT, context 4096 (recipe not stated by the repo)",
+   "records": [
+    "results/raw/2026-11-07-windows-wait-poll-1/litert-lm-npu_litert-community_gemma-4-E2B-it-litert-lm_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-07-windows-wait-session-1",
+   "first_record_jst": "2026-11-07 16:38 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "v0.19.0",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 52.75,
+   "cold_spread_pct": 0.23,
+   "counted": true,
+   "prefill_tps_cold_median": 373.5,
+   "ttft_ms_cold_median": 70.0,
+   "peak_working_set_mb_median": 2482.328125,
+   "decode_tps_warm_median": 52.51,
+   "text_check": "5/5 PASS",
+   "quant": "Intel PTL NPU bundle, AOT, context 4096 (recipe not stated by the repo)",
+   "records": [
+    "results/raw/2026-11-07-windows-wait-session-1/litert-lm-npu_litert-community_gemma-4-E2B-it-litert-lm_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-07-windows-wait-poll-2",
+   "first_record_jst": "2026-11-07 16:53 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "v0.19.0",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 53.760000000000005,
+   "cold_spread_pct": 0.63,
+   "counted": true,
+   "prefill_tps_cold_median": 389.425,
+   "ttft_ms_cold_median": 70.0,
+   "peak_working_set_mb_median": 2482.18359375,
+   "decode_tps_warm_median": 53.65,
+   "text_check": "5/5 PASS",
+   "quant": "Intel PTL NPU bundle, AOT, context 4096 (recipe not stated by the repo)",
+   "records": [
+    "results/raw/2026-11-07-windows-wait-poll-2/litert-lm-npu_litert-community_gemma-4-E2B-it-litert-lm_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-07-windows-wait-session-2",
+   "first_record_jst": "2026-11-07 17:08 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "v0.19.0",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 53.614999999999995,
+   "cold_spread_pct": 0.65,
+   "counted": true,
+   "prefill_tps_cold_median": 387.93,
+   "ttft_ms_cold_median": 70.0,
+   "peak_working_set_mb_median": 2482.33984375,
+   "decode_tps_warm_median": 53.52,
+   "text_check": "5/5 PASS",
+   "quant": "Intel PTL NPU bundle, AOT, context 4096 (recipe not stated by the repo)",
+   "records": [
+    "results/raw/2026-11-07-windows-wait-session-2/litert-lm-npu_litert-community_gemma-4-E2B-it-litert-lm_short-chat.jsonl"
+   ]
+  }
+ ]
+}

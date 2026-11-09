@@ -1,0 +1,81 @@
+{
+    "cell":  "Qwen3-0.6B\\ort-genai_cpu_cpu",
+    "run":  2,
+    "mode":  "timed",
+    "sitting":  "walk-timed",
+    "start":  "2026-11-08T07:49:48.0888244+09:00",
+    "osBuild":  "26200.9711",
+    "gate":  {
+                 "quietGate":  "quiet",
+                 "cpuReads":  [
+                                  0.6,
+                                  0.6,
+                                  0.5
+                              ],
+                 "nvidiaMiB":  0,
+                 "availGB":  20.3,
+                 "ramNeedGB":  2.6,
+                 "gpuEngines":  null
+             },
+    "before":  {
+                   "load":  {
+                                "cpu":  2.7,
+                                "build_ms":  0,
+                                "top":  [
+                                            "System 4 0.34 core",
+                                            "svchost 5260 0.03 core",
+                                            "WUDFHost 1836 0.02 core",
+                                            "WmiPrvSE 31056 0.02 core",
+                                            "services 1472 0.02 core"
+                                        ]
+                            },
+                   "nvidia":  "P0, 720 MHz, 14001 MHz, 18.61 W, 0 %, 0 MiB, 53",
+                   "availGB":  20.3
+               },
+    "command":  "C:\\src\\llmzoo-walk\\.venv-genai\\Scripts\\python.exe -u C:\\src\\llmzoo-walk\\pc\\run_genai.py --model-dir C:\\src\\llmzoo-walk\\models\\onnx-community__Qwen3-0.6B-ONNX\\onnxruntime\\cpu_and_mobile\\cpu-int4-kld-block-128 --ep follow_config --prompt-file C:\\src\\llmzoo-walk\\pc\\short-chat.txt --out C:\\src\\llmzoo-walk\\runs\\walk-timed\\Qwen3-0.6B\\ort-genai_cpu_cpu\\run2.json",
+    "engine":  {
+                   "exitCode":  0,
+                   "timedOut":  false,
+                   "yielded":  false,
+                   "suspendedSeconds":  0,
+                   "suspensions":  0,
+                   "enginePid":  21128,
+                   "elapsedSeconds":  9.098,
+                   "peakWorkingSetBytes":  1437290496,
+                   "gpuMiBPeak":  {
+                                      "0x00000000_0x00012C48":  {
+                                                                    "shared":  0,
+                                                                    "dedicated":  0
+                                                                },
+                                      "0x00000000_0x0001260E":  {
+                                                                    "shared":  23,
+                                                                    "dedicated":  0
+                                                                },
+                                      "0x00000000_0x00013E4C":  {
+                                                                    "shared":  0,
+                                                                    "dedicated":  0
+                                                                }
+                                  },
+                   "watchPeakWorkingSetBytes":  0,
+                   "watchGpuMiBPeak":  {
+
+                                       },
+                   "nvidiaSamples":  [
+                                         "5s P0, 2955 MHz, 14001 MHz, 18.84 W, 0 %, 0 MiB, 54"
+                                     ]
+               },
+    "after":  {
+                  "load":  {
+                               "cpu":  0.7,
+                               "build_ms":  0,
+                               "top":  [
+                                           "svchost 5480 0.08 core",
+                                           "conhost 35036 0.02 core",
+                                           "powershell 13760 0.02 core"
+                                       ]
+                           },
+                  "nvidia":  "P0, 11730 MHz, 14001 MHz, 18.79 W, 0 %, 0 MiB, 54"
+              },
+    "end":  "2026-11-08T07:49:59.1326707+09:00",
+    "tries":  1
+}

@@ -1,0 +1,72 @@
+{
+ "runner": "run_ovgenai.py",
+ "started": "2026-11-08T23:23:42.825091+09:00",
+ "argv": [
+  "--model-dir",
+  "C:\\src\\llmzoo-walk\\models\\OpenVINO__gemma-4-E4B-it-int4-ov",
+  "--device",
+  "GPU.1",
+  "--cache-dir",
+  "C:\\src\\llmzoo-walk\\ovcache\\gemma-4-E4B-it_gpu1",
+  "--prompt-file",
+  "C:\\src\\llmzoo-walk\\pc\\short-chat.txt",
+  "--out",
+  "C:\\src\\llmzoo-walk\\runs\\walk-timed-b\\gemma-4-E4B-it\\openvino-genai_rtx_gpu\\run1.json"
+ ],
+ "pid": 6520,
+ "versions": {
+  "python": "3.12.10",
+  "openvino": "2026.4.1",
+  "openvino-genai": "2026.4.1.0",
+  "openvino-tokenizers": "2026.4.1.0",
+  "numpy": "2.5.4"
+ },
+ "available_devices": {
+  "CPU": "Intel(R) Core(TM) Ultra 9 386H",
+  "GPU.0": "Intel(R) Graphics (iGPU)",
+  "GPU.1": "NVIDIA GeForce RTX 5080 Laptop GPU (dGPU)",
+  "NPU": "Intel(R) AI Boost"
+ },
+ "prompt_sha256": "870aafb98e570e8fa1343ec051180237f4587233f49c0cc1391724e086d42d50",
+ "pipeline": "vlm",
+ "load_s": 47.71176170001854,
+ "pipeline_errors_before": [],
+ "templated_prompt": "<bos><|turn>user\nExplain what on-device AI means in simple terms.<turn|>\n<|turn>model\n",
+ "templated_prompt_sha256": "70b30bff1ab92ec74814a888864b33ac65c53a053b6d35e8dfa13b353830ffb2",
+ "gens": [
+  {
+   "gen": 1,
+   "regime": "cold",
+   "prompt_tokens": 20,
+   "generated_tokens": 128,
+   "stop": "length",
+   "ttft_ms": 1625.6220703125,
+   "tpot_ms": 241.64703369140625,
+   "prefill_tps": 12.302982572176397,
+   "decode_tps": 4.138267226888634,
+   "generate_duration_ms": 32316.31640625,
+   "generation_wall_s": 32.317170099995565,
+   "text": "Imagine you have a tiny, super-smart computer chip inside your phone, smart speaker, or even your car.\n\n**On-device AI simply means that the \"thinking\" or the \"intelligence\" (the AI) is happening right there on that device, instead of being sent off to a giant computer in the cloud (like Google's or Amazon's servers) to be processed.**\n\nHere is a breakdown using simple analogies:\n\n---\n\n### 🧠 The \"Cloud\" Way (The Old Way)\n\nThink of it like ordering food delivery:\n\n1. **You (Your Phone) send an order:** You",
+   "text_sha256": "f42deaeac611b2390b53db7b903ed4c0a812b262b005d7c07c7d0d9f172d56b3"
+  },
+  {
+   "gen": 2,
+   "regime": "warm",
+   "prompt_tokens": 20,
+   "generated_tokens": 128,
+   "stop": "length",
+   "ttft_ms": 774.2709350585938,
+   "tpot_ms": 281.44720458984375,
+   "prefill_tps": 25.830751348669025,
+   "decode_tps": 3.553064246835606,
+   "generate_duration_ms": 36519.09765625,
+   "generation_wall_s": 36.51924880000297,
+   "text": "Imagine you have a tiny, super-smart computer chip inside your phone, smart speaker, or even your car.\n\n**On-device AI simply means that the \"thinking\" or the \"intelligence\" (the AI) is happening right there on that device, instead of being sent off to a giant computer in the cloud (like Google's or Amazon's servers) to be processed.**\n\nHere is a breakdown using simple analogies:\n\n---\n\n### 🧠 The \"Cloud\" Way (The Old Way)\n\nThink of it like ordering food delivery:\n\n1. **You (Your Phone) send an order:** You",
+   "text_sha256": "f42deaeac611b2390b53db7b903ed4c0a812b262b005d7c07c7d0d9f172d56b3"
+  }
+ ],
+ "status": "OK",
+ "peak_working_set_bytes": 5462634496,
+ "peak_pagefile_bytes": 13701971968,
+ "ended": "2026-11-08T23:25:41.176075+09:00"
+}

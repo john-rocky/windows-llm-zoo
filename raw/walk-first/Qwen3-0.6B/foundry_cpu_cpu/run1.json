@@ -1,0 +1,70 @@
+{
+ "runner": "run_foundry.py",
+ "started": "2026-11-07T19:44:08.889211+09:00",
+ "argv": [
+  "--model",
+  "qwen3-0.6b-generic-cpu:4",
+  "--path",
+  "/v1",
+  "--prompt-file",
+  "C:\\src\\llmzoo-walk\\pc\\short-chat.txt",
+  "--out",
+  "C:\\src\\llmzoo-walk\\runs\\walk-first\\Qwen3-0.6B\\foundry_cpu_cpu\\run1.json"
+ ],
+ "prompt_sha256": "870aafb98e570e8fa1343ec051180237f4587233f49c0cc1391724e086d42d50",
+ "daemon_json": {
+  "pid": 22164,
+  "web_urls": [
+   "http://127.0.0.1:53525"
+  ],
+  "protocol_version": 3,
+  "daemon_version": "0.13.0",
+  "package_version": "0.13.0",
+  "sdk_version": "2.3.0",
+  "started_at": "2026-11-07T10:44:02.6263431+00:00",
+  "log_file": "C:\\Users\\USER\\.foundry\\logs\\foundrylocald-2026-11-07.log",
+  "sdk_package_version": "2.3.0",
+  "runtime_package_version": "2.3.0",
+  "ort_package_version": "1.31.0",
+  "ort_gen_ai_package_version": "0.18.0",
+  "native_runtime_version": null,
+  "native_ort_version": null,
+  "foundry_local_core_version": "2.3.0",
+  "ort_version": "1.31.0",
+  "ort_gen_ai_version": "0.18.0",
+  "foundry_local_runtime_version": "2.3.0"
+ },
+ "url": "http://127.0.0.1:53525/v1",
+ "gens": [
+  {
+   "prompt_tokens": 19,
+   "generated_tokens": 128,
+   "chunks": 9,
+   "stop": "length",
+   "ttft_ms": 6721.796899990295,
+   "prefill_tps": 2.82662512460432,
+   "decode_tps": 27.411529288464763,
+   "request_wall_s": 7.0151393999985885,
+   "text": "\nOn-device AI (on-device AI)",
+   "text_sha256": "43ef16559faccb43826f593835bd2a656d47239f8dfffc5e92b3577420e3c246",
+   "gen": 1,
+   "regime": "cold"
+  },
+  {
+   "prompt_tokens": 19,
+   "generated_tokens": 128,
+   "chunks": 9,
+   "stop": "length",
+   "ttft_ms": 11236.257099997601,
+   "prefill_tps": 1.6909545439294065,
+   "decode_tps": 8.14832975031625,
+   "request_wall_s": 12.223378800001228,
+   "text": "\nOn-device AI (on-device AI)",
+   "text_sha256": "43ef16559faccb43826f593835bd2a656d47239f8dfffc5e92b3577420e3c246",
+   "gen": 2,
+   "regime": "warm"
+  }
+ ],
+ "status": "OK",
+ "ended": "2026-11-07T19:44:28.202631+09:00"
+}

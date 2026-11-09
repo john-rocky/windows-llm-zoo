@@ -1,0 +1,90 @@
+[2026-11-07 15:32:35 JST] sitting z2-e2e-1 start (anchors=0)
+[2026-11-07 15:32:38 JST] lock: TAKEN 2026-11-07T15:32:38.1279174+09:00
+[2026-11-07 15:32:59 JST] gate: PASS 2026-11-07T15:32:59.4274050+09:00
+[2026-11-07 15:33:22 JST] chain: STARTED 19280 (1 process(es) with chain.ps1)
+[2026-11-07T15:33:02.6893961+09:00] chain start: plan C:\src\llmzoo\pc\plans\z2-e2e-1.json mode timed, 1 units, pid 19280
+[2026-11-07T15:33:08.1490570+09:00] adapters: 0x00000000_0x00012C48=nvidia, 0x00000000_0x0001260E=intel-gpu, 0x00000000_0x00012BB8=?, 0x00000000_0x00013E4C=npu?
+[2026-11-07T15:33:13.9473397+09:00] host not quiet: cpu 4.9 %, nvidia 0 MiB, free RAM 5.5 GB
+[2026-11-07T15:33:49.4022146+09:00] host not quiet: cpu 5.4 %, nvidia 0 MiB, free RAM 5.5 GB
+[2026-11-07 15:40:01 JST] sitting z2-e2e-1 start (anchors=0)
+[2026-11-07 15:40:04 JST] lock: TAKEN 2026-11-07T15:40:04.1606625+09:00
+[2026-11-07 15:40:24 JST] gate: PASS 2026-11-07T15:40:24.2831249+09:00
+[2026-11-07 15:40:48 JST] chain: STARTED 7656 (1 process(es) with chain.ps1)
+[2026-11-07T15:33:02.6893961+09:00] chain start: plan C:\src\llmzoo\pc\plans\z2-e2e-1.json mode timed, 1 units, pid 19280
+[2026-11-07T15:33:08.1490570+09:00] adapters: 0x00000000_0x00012C48=nvidia, 0x00000000_0x0001260E=intel-gpu, 0x00000000_0x00012BB8=?, 0x00000000_0x00013E4C=npu?
+[2026-11-07T15:33:13.9473397+09:00] host not quiet: cpu 4.9 %, nvidia 0 MiB, free RAM 5.5 GB
+[2026-11-07T15:33:49.4022146+09:00] host not quiet: cpu 5.4 %, nvidia 0 MiB, free RAM 5.5 GB
+[2026-11-07T15:40:28.3519570+09:00] chain start: plan C:\src\llmzoo\pc\plans\z2-e2e-1.json mode timed, 1 units, pid 7656
+[2026-11-07T15:40:34.1762914+09:00] adapters: 0x00000000_0x00012C48=nvidia, 0x00000000_0x0001260E=intel-gpu, 0x00000000_0x00012BB8=?, 0x00000000_0x00013E4C=npu?
+[2026-11-07T15:40:41.9486286+09:00] Qwen3-0.6B\ort-genai_rtx_cuda run 1 start
+[2026-11-07T15:40:47.4157981+09:00] chain error: Test-Path : 引数が空の配列であるため、パラメーター 'Path' にバインドできません。
+発生場所 C:\src\llmzoo\pc\zlib.ps1:122 文字:25
++     if (-not (Test-Path $Smi)) { return "" }
++                         ~~~~
+    + CategoryInfo          : InvalidData: (:) [Test-Path]、ParameterBindingValidationException
+    + FullyQualifiedErrorId : ParameterArgumentValidationErrorEmptyArrayNotAllowed,Microsoft.PowerShell.Commands.TestP 
+   athCommand
+ 
+
+[2026-11-07T15:40:47.4315105+09:00] chain done: FAIL 引数が空の配列であるため、パラメーター 'Path' にバインドできません。
+DONE FAIL 引数が空の配列であるため、パラメーター 'Path' にバインドできません。 2026-11-07T15:40:47.4315105+09:00
+[2026-11-07 15:40:49 JST] chain wait: DONE FAIL 引数が空の配列であるため、パラメーター 'Path' にバインドできません。 2026-11-07T15:40:47.4315105+09:00
+[2026-11-07 15:40:50 JST] lock after the chain: busy: Z2 2026-11-07T15:40:34.2240849+09:00 sitting z2-e2e-1 unit Qwen3-0.6B\ort-genai_rtx_cuda (0 min)
+[2026-11-07 15:40:51 JST] release: RELEASED 2026-11-07T15:40:51.9205895+09:00
+[2026-11-07 15:40:52 JST] pulled runs\z2-e2e-1 -> raw/z2-e2e-1
+[2026-11-07 15:40:52 JST] sitting z2-e2e-1 end
+[2026-11-07 15:41:59 JST] sitting z2-e2e-1 start (anchors=0)
+[2026-11-07 15:42:02 JST] lock: TAKEN 2026-11-07T15:42:02.2670710+09:00
+[2026-11-07 15:42:23 JST] gate: PASS 2026-11-07T15:42:23.1898114+09:00
+[2026-11-07 15:42:47 JST] chain: STARTED 29336 (1 process(es) with chain.ps1)
+[2026-11-07T15:33:02.6893961+09:00] chain start: plan C:\src\llmzoo\pc\plans\z2-e2e-1.json mode timed, 1 units, pid 19280
+[2026-11-07T15:33:08.1490570+09:00] adapters: 0x00000000_0x00012C48=nvidia, 0x00000000_0x0001260E=intel-gpu, 0x00000000_0x00012BB8=?, 0x00000000_0x00013E4C=npu?
+[2026-11-07T15:33:13.9473397+09:00] host not quiet: cpu 4.9 %, nvidia 0 MiB, free RAM 5.5 GB
+[2026-11-07T15:33:49.4022146+09:00] host not quiet: cpu 5.4 %, nvidia 0 MiB, free RAM 5.5 GB
+[2026-11-07T15:40:28.3519570+09:00] chain start: plan C:\src\llmzoo\pc\plans\z2-e2e-1.json mode timed, 1 units, pid 7656
+[2026-11-07T15:40:34.1762914+09:00] adapters: 0x00000000_0x00012C48=nvidia, 0x00000000_0x0001260E=intel-gpu, 0x00000000_0x00012BB8=?, 0x00000000_0x00013E4C=npu?
+[2026-11-07T15:40:41.9486286+09:00] Qwen3-0.6B\ort-genai_rtx_cuda run 1 start
+[2026-11-07T15:40:47.4157981+09:00] chain error: Test-Path : 引数が空の配列であるため、パラメーター 'Path' にバインドできません。
+発生場所 C:\src\llmzoo\pc\zlib.ps1:122 文字:25
++     if (-not (Test-Path $Smi)) { return "" }
++                         ~~~~
+    + CategoryInfo          : InvalidData: (:) [Test-Path]、ParameterBindingValidationException
+    + FullyQualifiedErrorId : ParameterArgumentValidationErrorEmptyArrayNotAllowed,Microsoft.PowerShell.Commands.TestP 
+   athCommand
+ 
+
+[2026-11-07T15:40:47.4315105+09:00] chain done: FAIL 引数が空の配列であるため、パラメーター 'Path' にバインドできません。
+[2026-11-07T15:42:28.0611427+09:00] chain start: plan C:\src\llmzoo\pc\plans\z2-e2e-1.json mode timed, 1 units, pid 29336
+[2026-11-07T15:42:28.6942315+09:00] adapters: 0x00000000_0x00012C48=nvidia, 0x00000000_0x0001260E=intel-gpu, 0x00000000_0x00012BB8=?, 0x00000000_0x00013E4C=npu?
+[2026-11-07T15:42:34.7338241+09:00] Qwen3-0.6B\ort-genai_rtx_cuda run 1 start
+[2026-11-07T15:42:45.5970522+09:00] Qwen3-0.6B\ort-genai_rtx_cuda run 1 end: exit 1, no runner JSON, 8.892 s
+[2026-11-07T15:43:23.1312329+09:00] Qwen3-0.6B\ort-genai_rtx_cuda run 2 start
+[2026-11-07T15:43:29.6915098+09:00] Qwen3-0.6B\ort-genai_rtx_cuda run 2 end: exit 1, no runner JSON, 4.613 s
+[2026-11-07T15:44:07.1523856+09:00] Qwen3-0.6B\ort-genai_rtx_cuda run 3 start
+[2026-11-07T15:44:13.6546420+09:00] Qwen3-0.6B\ort-genai_rtx_cuda run 3 end: exit 1, no runner JSON, 4.596 s
+[2026-11-07T15:44:13.6546420+09:00] chain done: OK
+DONE OK 2026-11-07T15:44:13.6546420+09:00
+[2026-11-07 15:44:18 JST] chain wait: DONE OK 2026-11-07T15:44:13.6546420+09:00
+[2026-11-07 15:44:19 JST] lock after the chain: busy: Z2 2026-11-07T15:42:28.7100500+09:00 sitting z2-e2e-1 unit Qwen3-0.6B\ort-genai_rtx_cuda (2 min)
+[2026-11-07 15:44:21 JST] release: RELEASED 2026-11-07T15:44:21.8334258+09:00
+[2026-11-07 15:44:22 JST] pulled runs\z2-e2e-1 -> raw/z2-e2e-1
+[2026-11-07 15:44:22 JST] sitting z2-e2e-1 end
+[2026-11-07 15:44:57 JST] sitting z2-e2e-1 start (anchors=0)
+[2026-11-07 15:44:59 JST] lock: TAKEN 2026-11-07T15:44:59.2752523+09:00
+[2026-11-07 15:45:21 JST] gate: PASS 2026-11-07T15:45:21.2051673+09:00
+[2026-11-07 15:45:43 JST] chain: STARTED 24376 (1 process(es) with chain.ps1)
+[2026-11-07T15:45:23.8631013+09:00] chain start: plan C:\src\llmzoo\pc\plans\z2-e2e-1.json mode timed, 1 units, pid 24376
+[2026-11-07T15:45:28.9100583+09:00] adapters: 0x00000000_0x00012C48=nvidia, 0x00000000_0x0001260E=intel-gpu, 0x00000000_0x00012BB8=?, 0x00000000_0x00013E4C=npu?
+[2026-11-07T15:45:36.1112299+09:00] Qwen3-0.6B\ort-genai_rtx_cuda run 1 start
+[2026-11-07T15:45:41.9982470+09:00] Qwen3-0.6B\ort-genai_rtx_cuda run 1 end: exit 0, OK, 3.739 s
+[2026-11-07T15:46:19.3683607+09:00] Qwen3-0.6B\ort-genai_rtx_cuda run 2 start
+[2026-11-07T15:46:24.6263675+09:00] Qwen3-0.6B\ort-genai_rtx_cuda run 2 end: exit 0, OK, 3.187 s
+[2026-11-07T15:47:02.0114043+09:00] Qwen3-0.6B\ort-genai_rtx_cuda run 3 start
+[2026-11-07T15:47:07.7466278+09:00] Qwen3-0.6B\ort-genai_rtx_cuda run 3 end: exit 0, OK, 3.666 s
+[2026-11-07T15:47:07.7466278+09:00] chain done: OK
+DONE OK 2026-11-07T15:47:07.7466278+09:00
+[2026-11-07 15:47:15 JST] chain wait: DONE OK 2026-11-07T15:47:07.7466278+09:00
+[2026-11-07 15:47:16 JST] lock after the chain: busy: Z2 2026-11-07T15:45:28.9540164+09:00 sitting z2-e2e-1 unit Qwen3-0.6B\ort-genai_rtx_cuda (2 min)
+[2026-11-07 15:47:18 JST] release: RELEASED 2026-11-07T15:47:18.6533109+09:00
+[2026-11-07 15:47:19 JST] pulled runs\z2-e2e-1 -> raw/z2-e2e-1
+[2026-11-07 15:47:19 JST] sitting z2-e2e-1 end

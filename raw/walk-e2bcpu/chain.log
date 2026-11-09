@@ -1,0 +1,12 @@
+[2026-11-08T05:52:00.3414196+09:00] chain start: plan C:\src\llmzoo-walk\pc\plans\walk-e2bcpu.json mode first, 1 units, pid 5692
+[2026-11-08T05:52:04.9138260+09:00] adapters: 0x00000000_0x00012C48=nvidia, 0x00000000_0x0001260E=intel-gpu, 0x00000000_0x00012BB8=?, 0x00000000_0x00013E4C=npu?
+[2026-11-08T05:52:07.1380739+09:00] gemma-4-E2B-it\ort-genai_cpu_cpu run 1 start
+[2026-11-08T06:02:03.7275765+09:00] C:\src\llmzoo-walk\runs\walk-e2bcpu\gemma-4-E2B-it\ort-genai_cpu_cpu\run1 suspended (3 processes) while another lane holds busy.txt (another lane's lock 2026-11-08T06:02:02.2291359+09:00)
+[2026-11-08T06:23:49.4813676+09:00] C:\src\llmzoo-walk\runs\walk-e2bcpu\gemma-4-E2B-it\ort-genai_cpu_cpu\run1 resumed (3 processes) after 1306 s
+[2026-11-08T06:28:39.4957627+09:00] C:\src\llmzoo-walk\runs\walk-e2bcpu\gemma-4-E2B-it\ort-genai_cpu_cpu\run1 suspended (3 processes) while another lane holds busy.txt (another lane's lock 2026-11-08T06:28:37.7398861+09:00)
+[2026-11-08T06:32:24.5690844+09:00] C:\src\llmzoo-walk\runs\walk-e2bcpu\gemma-4-E2B-it\ort-genai_cpu_cpu\run1 resumed (3 processes) after 225 s
+[2026-11-08T06:47:17.3903868+09:00] C:\src\llmzoo-walk\runs\walk-e2bcpu\gemma-4-E2B-it\ort-genai_cpu_cpu\run1 suspended (3 processes) while another lane holds busy.txt (another lane's lock 2026-11-08T06:47:16.8982277+09:00)
+[2026-11-08T07:09:48.0442146+09:00] C:\src\llmzoo-walk\runs\walk-e2bcpu\gemma-4-E2B-it\ort-genai_cpu_cpu\run1 resume waits for 12 GB of free RAM (now 11.5 GB)
+[2026-11-08T07:11:18.0614066+09:00] C:\src\llmzoo-walk\runs\walk-e2bcpu\gemma-4-E2B-it\ort-genai_cpu_cpu\run1 resumed (3 processes) after 1441 s
+[2026-11-08T07:11:32.1405299+09:00] gemma-4-E2B-it\ort-genai_cpu_cpu run 1 end: exit 0, OK, 4762.978 s
+[2026-11-08T07:11:32.1564016+09:00] chain done: OK

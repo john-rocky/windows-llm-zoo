@@ -1,0 +1,107 @@
+{
+    "cell":  "Qwen3-4B\\foundry_rtx_cuda",
+    "run":  1,
+    "mode":  "first",
+    "sitting":  "walk-foundry2",
+    "start":  "2026-11-08T05:46:17.9004167+09:00",
+    "osBuild":  "26200.9711",
+    "gate":  null,
+    "before":  {
+                   "load":  {
+                                "cpu":  1,
+                                "build_ms":  62,
+                                "top":  [
+                                            "cl 34016 0.06 core",
+                                            "WmiPrvSE 7560 0.03 core",
+                                            "MsMpEng 5548 0.03 core",
+                                            "powershell 31640 0.02 core",
+                                            "powershell 32904 0.02 core"
+                                        ]
+                            },
+                   "nvidia":  "P0, 0 MHz, 14001 MHz, 21.17 W, 0 %, 0 MiB, 45",
+                   "availGB":  13.2
+               },
+    "foreignDaemon":  "none",
+    "daemonStop0":  "stopped",
+    "serverStart":  {
+                        "code":  0,
+                        "s":  6.754,
+                        "text":  "■ Starting Foundry Local server\nOpenVINOExecutionProvider: 0%\nNvTensorRTRTXExecutionProvider: 0%\nCUDAExecutionProvider: 0%\nWebGpuExecutionProvider: 0%\n● success: Server ready (http://127.0.0.1:64528)\n  Public API: http://127.0.0.1:64528/v1/\n  Local API (BYOM): http://127.0.0.1:64528/catalogs/local/v1/"
+                    },
+    "daemonPid":  3580,
+    "modelLoad":  {
+                      "code":  0,
+                      "s":  17.629,
+                      "text":  "■ Loading model (qwen3-4b-cuda-gpu:2, 2.6 GB)\n● success: Loaded \u0027qwen3-4b\u0027 (GPU variant \u0027qwen3-4b-cuda-gpu:2\u0027) into memory."
+                  },
+    "daemonPeakAfterLoadBytes":  1389125632,
+    "gpuAfterLoad":  {
+                         "0x00000000_0x00012C48":  {
+                                                       "shared":  74,
+                                                       "dedicated":  4306
+                                                   },
+                         "0x00000000_0x0001260E":  {
+                                                       "shared":  23,
+                                                       "dedicated":  0
+                                                   },
+                         "0x00000000_0x00013E4C":  {
+                                                       "shared":  0,
+                                                       "dedicated":  0
+                                                   }
+                     },
+    "command":  "C:\\src\\llmzoo-walk\\.venv-genai\\Scripts\\python.exe -u C:\\src\\llmzoo-walk\\pc\\run_foundry.py --model qwen3-4b-cuda-gpu:2 --path /v1 --prompt-file C:\\src\\llmzoo-walk\\pc\\short-chat.txt --out C:\\src\\llmzoo-walk\\runs\\walk-foundry2\\Qwen3-4B\\foundry_rtx_cuda\\run1.json",
+    "engine":  {
+                   "exitCode":  0,
+                   "timedOut":  false,
+                   "yielded":  false,
+                   "suspendedSeconds":  0,
+                   "suspensions":  0,
+                   "enginePid":  32836,
+                   "elapsedSeconds":  5.235,
+                   "peakWorkingSetBytes":  23957504,
+                   "gpuMiBPeak":  {
+
+                                  },
+                   "watchPeakWorkingSetBytes":  1424420864,
+                   "watchGpuMiBPeak":  {
+                                           "0x00000000_0x00012C48":  {
+                                                                         "shared":  76,
+                                                                         "dedicated":  4382
+                                                                     },
+                                           "0x00000000_0x0001260E":  {
+                                                                         "shared":  23,
+                                                                         "dedicated":  0
+                                                                     },
+                                           "0x00000000_0x00013E4C":  {
+                                                                         "shared":  0,
+                                                                         "dedicated":  0
+                                                                     }
+                                       },
+                   "nvidiaSamples":  [
+
+                                     ]
+               },
+    "daemonPeakWorkingSetBytes":  1424420864,
+    "modelUnload":  {
+                        "code":  0,
+                        "s":  0.248,
+                        "text":  "● success: Unloaded \u0027qwen3-4b-cuda-gpu:2\u0027 from memory."
+                    },
+    "daemonStop":  "stopped",
+    "after":  {
+                  "load":  {
+                               "cpu":  27.2,
+                               "build_ms":  984,
+                               "top":  [
+                                           "python 32632 3.18 core",
+                                           "cl 34016 0.98 core",
+                                           "System 4 0.14 core",
+                                           "igfxShaderDistributionService 5184 0.05 core",
+                                           "Memory Compression 3708 0.02 core"
+                                       ]
+                           },
+                  "nvidia":  "P0, 2235 MHz, 14001 MHz, 18.58 W, 0 %, 0 MiB, 52"
+              },
+    "end":  "2026-11-08T05:46:53.0064929+09:00",
+    "tries":  1
+}

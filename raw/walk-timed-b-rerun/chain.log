@@ -1,0 +1,110 @@
+[2026-11-09T04:31:48.3934098+09:00] chain start: plan C:\src\llmzoo-walk\pc\plans\walk-timed-b-rerun.json mode timed, 12 units, pid 35152
+[2026-11-09T04:31:48.4055690+09:00] after a duty gap the lock is taken back once it has been free 180 s after another lane's return (the plan's retake_free_sec)
+[2026-11-09T04:31:59.1885223+09:00] adapters: 0x00000000_0x00012C48=nvidia, 0x00000000_0x0001260E=intel-gpu, 0x00000000_0x00012BB8=?, 0x00000000_0x00013E4C=npu?
+[2026-11-09T04:31:59.4559433+09:00] duty: held 88 min, others waiting (1 notes of other lanes): release for 16.5 min
+[2026-11-09T04:31:59.4657841+09:00] lock released
+[2026-11-09T04:31:59.4854826+09:00] window.txt: Z2 open until 2026-11-09T04:48:29.4764168+09:00
+[2026-11-09T04:48:31.1937594+09:00] waiting for the lock: another lane's lock
+[2026-11-09T04:57:42.1061681+09:00] waiting for the lock: another lane's lock
+[2026-11-09T05:11:28.5518863+09:00] waiting for the lock: another lane's lock
+[2026-11-09T05:41:52.3134282+09:00] waiting for the lock: another lane's lock
+[2026-11-09T05:56:08.8949977+09:00] waiting for the lock: another lane's lock
+[2026-11-09T06:05:54.9795328+09:00] waiting for the lock: another lane's lock
+[2026-11-09T06:21:16.3474009+09:00] waiting for the lock: another lane's lock
+[2026-11-09T06:22:16.4538868+09:00] waiting for the lock: another lane's lock
+[2026-11-09T07:10:02.7440925+09:00] waiting for the lock: another lane's lock
+[2026-11-09T07:27:04.3406329+09:00] waiting for the lock: another lane's lock
+[2026-11-09T07:38:50.5246097+09:00] waiting for the lock: another lane's lock
+[2026-11-09T07:45:01.1920342+09:00] waiting for the lock: another lane's lock
+[2026-11-09T07:46:26.3059052+09:00] waiting for the lock: another lane's lock
+[2026-11-09T07:47:21.3801672+09:00] waiting for the lock: another lane's lock
+[2026-11-09T07:52:11.7526517+09:00] waiting for the lock: another lane's lock
+[2026-11-09T07:53:26.8535136+09:00] waiting for the lock: another lane's lock
+[2026-11-09T07:54:01.9113703+09:00] waiting for the lock: another lane's lock
+[2026-11-09T07:54:51.9670065+09:00] waiting for the lock: another lane's lock
+[2026-11-09T07:57:27.2254087+09:00] waiting for the lock: another lane's lock
+[2026-11-09T07:58:52.3681078+09:00] waiting for the lock: another lane's lock
+[2026-11-09T08:05:53.0998268+09:00] waiting for the lock: another lane's lock
+[2026-11-09T08:06:28.1575252+09:00] waiting for the lock: another lane's lock
+[2026-11-09T08:09:03.4332748+09:00] waiting for the lock: another lane's lock
+[2026-11-09T08:12:13.7215081+09:00] lock: TAKEN (sitting walk-timed-b-rerun (after a duty gap))
+[2026-11-09T08:13:33.2110817+09:00] gate: PASS (cpu 0.4 % build 0 ms rtx 0 MiB | cpu 1.9 % build 0 ms rtx 0 MiB | cpu 1.1 % build 0 ms rtx 0 MiB)
+[2026-11-09T08:13:39.4128408+09:00] Qwen3-0.6B\ort-genai_cpu_cpu run 1 start
+[2026-11-09T08:13:53.0014661+09:00] Qwen3-0.6B\ort-genai_cpu_cpu run 1 end: exit 0, OK, 11.523 s
+[2026-11-09T08:14:30.4617023+09:00] Qwen3-0.6B\ort-genai_cpu_cpu run 2 start
+[2026-11-09T08:14:40.4803861+09:00] Qwen3-0.6B\ort-genai_cpu_cpu run 2 end: exit 0, OK, 8.054 s
+[2026-11-09T08:15:17.8341969+09:00] Qwen3-0.6B\ort-genai_cpu_cpu run 3 start
+[2026-11-09T08:15:27.8715313+09:00] Qwen3-0.6B\ort-genai_cpu_cpu run 3 end: exit 0, OK, 8.07 s
+[2026-11-09T08:15:33.3717918+09:00] Qwen3-0.6B\ort-genai_cpu_openvino run 1 start
+[2026-11-09T08:15:47.2607309+09:00] Qwen3-0.6B\ort-genai_cpu_openvino run 1 end: exit 0, OK, 11.929 s
+[2026-11-09T08:16:24.6491567+09:00] Qwen3-0.6B\ort-genai_cpu_openvino run 2 start
+[2026-11-09T08:16:37.8678882+09:00] Qwen3-0.6B\ort-genai_cpu_openvino run 2 end: exit 0, OK, 11.261 s
+[2026-11-09T08:17:15.2879768+09:00] Qwen3-0.6B\ort-genai_cpu_openvino run 3 start
+[2026-11-09T08:17:28.5310301+09:00] Qwen3-0.6B\ort-genai_cpu_openvino run 3 end: exit 0, OK, 11.273 s
+[2026-11-09T08:17:41.3483655+09:00] Qwen3-0.6B\openvino-genai_rtx_gpu run 1 start
+[2026-11-09T08:18:45.4376959+09:00] Qwen3-0.6B\openvino-genai_rtx_gpu run 1 end: exit 0, OK, 62.171 s
+[2026-11-09T08:19:23.7326019+09:00] Qwen3-0.6B\openvino-genai_rtx_gpu run 2 start
+[2026-11-09T08:20:18.2194306+09:00] Qwen3-0.6B\openvino-genai_rtx_gpu run 2 end: exit 0, OK, 52.575 s
+[2026-11-09T08:20:56.5862997+09:00] Qwen3-0.6B\openvino-genai_rtx_gpu run 3 start
+[2026-11-09T08:21:50.3031201+09:00] Qwen3-0.6B\openvino-genai_rtx_gpu run 3 end: exit 0, OK, 51.815 s
+[2026-11-09T08:21:56.6736917+09:00] Qwen3-1.7B\openvino-genai_rtx_gpu run 1 start
+[2026-11-09T08:22:50.3600584+09:00] Qwen3-1.7B\openvino-genai_rtx_gpu run 1 end: exit 0, OK, 51.602 s
+[2026-11-09T08:23:28.6498473+09:00] Qwen3-1.7B\openvino-genai_rtx_gpu run 2 start
+[2026-11-09T08:24:31.0342041+09:00] Qwen3-1.7B\openvino-genai_rtx_gpu run 2 end: exit 0, OK, 60.492 s
+[2026-11-09T08:25:09.4394302+09:00] Qwen3-1.7B\openvino-genai_rtx_gpu run 3 start
+[2026-11-09T08:26:08.3930570+09:00] Qwen3-1.7B\openvino-genai_rtx_gpu run 3 end: exit 0, OK, 57.044 s
+[2026-11-09T08:26:14.3594495+09:00] Qwen3-4B\openvino-genai_cpu_cpu run 1 start
+[2026-11-09T08:26:53.5509071+09:00] Qwen3-4B\openvino-genai_cpu_cpu run 1 end: exit 0, OK, 37.23 s
+[2026-11-09T08:27:30.9133910+09:00] Qwen3-4B\openvino-genai_cpu_cpu run 2 start
+[2026-11-09T08:28:06.9877965+09:00] Qwen3-4B\openvino-genai_cpu_cpu run 2 end: exit 0, OK, 34.104 s
+[2026-11-09T08:28:44.4183166+09:00] Qwen3-4B\openvino-genai_cpu_cpu run 3 start
+[2026-11-09T08:29:21.5771462+09:00] Qwen3-4B\openvino-genai_cpu_cpu run 3 end: exit 0, OK, 35.181 s
+[2026-11-09T08:29:27.5472042+09:00] gemma-4-E2B-it\ort-genai_rtx_webgpu run 1 start
+[2026-11-09T08:30:14.6504053+09:00] gemma-4-E2B-it\ort-genai_rtx_webgpu run 1 end: exit 0, OK, 45.207 s
+[2026-11-09T08:30:52.0120664+09:00] gemma-4-E2B-it\ort-genai_rtx_webgpu run 2 start
+[2026-11-09T08:31:24.9728542+09:00] gemma-4-E2B-it\ort-genai_rtx_webgpu run 2 end: exit 0, OK, 31.019 s
+[2026-11-09T08:31:25.8248107+09:00] slot: chain suspended (2 process(es)) between two runs (the next run end in about 273 s), after: [2026-11-09T08:31:24.9728542+09:00] gemma-4-E2B-it\ort-genai_rtx_webgpu run 2 end: exit 0, OK, 31.019 s
+[2026-11-09T08:34:00.4188801+09:00] slot: lock released for another lane's job, no window.txt
+[2026-11-09T08:34:05.4290921+09:00] slot: lock taken by: another lane's lock
+[2026-11-09T08:34:50.5112089+09:00] slot: free for 15 s, then lock taken by: another lane's lock
+[2026-11-09T08:54:17.6619377+09:00] slot: the lock was given back (free for 60 s): taking the lock back
+[2026-11-09T08:55:37.0060433+09:00] slot: lock taken back, gate PASS: chain resumed (2 process(es))
+[2026-11-09T08:56:13.8704682+09:00] gemma-4-E2B-it\ort-genai_rtx_webgpu run 3 start
+[2026-11-09T08:56:46.6568524+09:00] gemma-4-E2B-it\ort-genai_rtx_webgpu run 3 end: exit 0, OK, 30.879 s
+[2026-11-09T08:56:53.5930660+09:00] gemma-4-E2B-it\ort-genai_igpu_webgpu run 1 start
+[2026-11-09T08:57:34.8573789+09:00] gemma-4-E2B-it\ort-genai_igpu_webgpu run 1 end: exit 0, OK, 39.373 s
+[2026-11-09T08:58:13.2052806+09:00] gemma-4-E2B-it\ort-genai_igpu_webgpu run 2 start
+[2026-11-09T08:58:52.9070647+09:00] gemma-4-E2B-it\ort-genai_igpu_webgpu run 2 end: exit 0, OK, 37.799 s
+[2026-11-09T08:59:30.6821628+09:00] gemma-4-E2B-it\ort-genai_igpu_webgpu run 3 start
+[2026-11-09T09:00:10.8155208+09:00] gemma-4-E2B-it\ort-genai_igpu_webgpu run 3 end: exit 0, OK, 38.242 s
+[2026-11-09T09:00:17.1749883+09:00] gemma-4-E4B-it\ort-genai_igpu_webgpu run 1 start
+[2026-11-09T09:01:13.8759048+09:00] gemma-4-E4B-it\ort-genai_igpu_webgpu run 1 end: exit 0, OK, 54.797 s
+[2026-11-09T09:01:52.2188897+09:00] gemma-4-E4B-it\ort-genai_igpu_webgpu run 2 start
+[2026-11-09T09:02:35.3382525+09:00] gemma-4-E4B-it\ort-genai_igpu_webgpu run 2 end: exit 0, OK, 41.163 s
+[2026-11-09T09:03:13.6684876+09:00] gemma-4-E4B-it\ort-genai_igpu_webgpu run 3 start
+[2026-11-09T09:03:57.0479183+09:00] gemma-4-E4B-it\ort-genai_igpu_webgpu run 3 end: exit 0, OK, 41.406 s
+[2026-11-09T09:04:03.0344878+09:00] gemma-4-E4B-it\ort-genai_cpu_cpu run 1 start
+[2026-11-09T09:05:01.4363118+09:00] gemma-4-E4B-it\ort-genai_cpu_cpu run 1 end: exit 0, OK, 56.424 s
+[2026-11-09T09:05:38.8373319+09:00] gemma-4-E4B-it\ort-genai_cpu_cpu run 2 start
+[2026-11-09T09:06:21.4359587+09:00] gemma-4-E4B-it\ort-genai_cpu_cpu run 2 end: exit 0, OK, 40.642 s
+[2026-11-09T09:06:58.8623555+09:00] gemma-4-E4B-it\ort-genai_cpu_cpu run 3 start
+[2026-11-09T09:07:43.0738040+09:00] gemma-4-E4B-it\ort-genai_cpu_cpu run 3 end: exit 0, OK, 42.244 s
+[2026-11-09T09:08:34.6045189+09:00] gemma-4-E4B-it\foundry_cpu_cpu run 1 start (daemon 31004, load exit 0 in 35.348 s)
+[2026-11-09T09:09:03.7212055+09:00] gemma-4-E4B-it\foundry_cpu_cpu run 1 end: exit 0, OK, 22.804 s
+[2026-11-09T09:10:16.6157879+09:00] gemma-4-E4B-it\foundry_cpu_cpu run 2 start (daemon 32064, load exit 0 in 27.255 s)
+[2026-11-09T09:10:44.5199101+09:00] gemma-4-E4B-it\foundry_cpu_cpu run 2 end: exit 0, OK, 21.667 s
+[2026-11-09T09:11:57.1577892+09:00] gemma-4-E4B-it\foundry_cpu_cpu run 3 start (daemon 12296, load exit 0 in 27.013 s)
+[2026-11-09T09:12:25.2730777+09:00] gemma-4-E4B-it\foundry_cpu_cpu run 3 end: exit 0, OK, 22.22 s
+[2026-11-09T09:12:31.2281886+09:00] gemma-4-E4B-it\openvino-genai_cpu_cpu run 1 start
+[2026-11-09T09:13:24.0511396+09:00] gemma-4-E4B-it\openvino-genai_cpu_cpu run 1 end: exit 0, OK, 51.734 s
+[2026-11-09T09:14:01.4342546+09:00] gemma-4-E4B-it\openvino-genai_cpu_cpu run 2 start
+[2026-11-09T09:14:49.9391285+09:00] gemma-4-E4B-it\openvino-genai_cpu_cpu run 2 end: exit 0, OK, 46.518 s
+[2026-11-09T09:15:27.3046502+09:00] gemma-4-E4B-it\openvino-genai_cpu_cpu run 3 start
+[2026-11-09T09:16:14.2419873+09:00] gemma-4-E4B-it\openvino-genai_cpu_cpu run 3 end: exit 0, OK, 44.957 s
+[2026-11-09T09:16:43.2424065+09:00] Qwen3-4B\foundry_rtx_cuda run 1 start (daemon 22712, load exit 0 in 14.853 s)
+[2026-11-09T09:16:54.3030870+09:00] Qwen3-4B\foundry_rtx_cuda run 1 end: exit 0, OK, 6.238 s
+[2026-11-09T09:17:49.3506104+09:00] Qwen3-4B\foundry_rtx_cuda run 2 start (daemon 16980, load exit 0 in 9.573 s)
+[2026-11-09T09:17:58.7952203+09:00] Qwen3-4B\foundry_rtx_cuda run 2 end: exit 0, OK, 4.632 s
+[2026-11-09T09:18:53.9284052+09:00] Qwen3-4B\foundry_rtx_cuda run 3 start (daemon 27776, load exit 0 in 9.574 s)
+[2026-11-09T09:19:03.3516707+09:00] Qwen3-4B\foundry_rtx_cuda run 3 end: exit 0, OK, 4.622 s
+[2026-11-09T09:19:03.3516707+09:00] chain done: OK

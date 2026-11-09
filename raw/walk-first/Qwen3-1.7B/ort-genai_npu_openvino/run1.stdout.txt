@@ -1,0 +1,12 @@
+ENGINE_PID 35748
+[ERROR] 23:14:44.212 [IE::FrontEnd::importNetwork]   Upper bounds are not specified for node '/model/embed_tokens/GatherBlockQuantized/output_0' (type 'Gather'): input '1' bounds are '[9223372036854775807, 9223372036854775807]'
+[ERROR] 23:14:44.214 [IE::FrontEnd::importNetwork]   Upper bounds are not specified for node 'Multiply_32' (type 'Multiply'): input '0' bounds are '[9223372036854775807, 9223372036854775807, 2048]'
+[ERROR] 23:14:44.215 [IE::FrontEnd::importNetwork]   Upper bounds are not specified for node 'Multiply_32' (type 'Multiply'): input '1' bounds are '[9223372036854775807, 9223372036854775807, 2048]'
+[ERROR] 23:14:44.216 [IE::FrontEnd::importNetwork]   Upper bounds are not specified for node 'ReduceMean_33' (type 'ReduceMean'): input '0' bounds are '[9223372036854775807, 9223372036854775807, 2048]'
+[ERROR] 23:14:44.216 [IE::FrontEnd::importNetwork]   Upper bounds are not specified for node 'Add_36' (type 'Add'): input '0' bounds are '[9223372036854775807, 9223372036854775807, 1]'
+[ERROR] 23:14:44.217 [IE::FrontEnd::importNetwork]   Upper bounds are not specified for node 'Sqrt_37' (type 'Sqrt'): input '0' bounds are '[9223372036854775807, 9223372036854775807, 1]'
+[ERROR] 23:14:44.217 [IE::FrontEnd::importNetwork]   Upper bounds are not specified for node 'Divide_39' (type 'Divide'): input '1' bounds are '[9223372036854775807, 9223372036854775807, 1]'
+[ERROR] 23:14:44.217 [IE::FrontEnd::importNetwork]   Upper bounds are not specified for node 'Multiply_40' (type 'Multiply'): input '0' bounds are '[9223372036854775807, 9223372036854775807, 2048]'
+[ERROR] 23:14:44.217 [IE::FrontEnd::importNetwork]   Upper bounds are not specified for node 'Multiply_40' (type 'Multiply'): input '1' bounds are '[9223372036854775807, 9223372036854775807, 1]'
+[ERROR] 23:14:44.218 [IE::FrontEnd::importNetwork]   Upper bounds are not specified for node '/model/layers.0/input_layernorm/LayerNorm' (type 'Multiply'): input '0' bounds are '[9223372036854775807, 9223372036854775807, 2048]'
+[ERROR] 23:14:44.218 [IE::FrontEnd::importNetwork]   Upper bounds are not specified for node '/model/layers.0/attn/q_proj/MatMulNBits' (type 'MatMul'): input '0' bounds are '[9223372036854775807, 9223372036854775807, 2048]'

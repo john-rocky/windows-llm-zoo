@@ -1,0 +1,92 @@
+{
+ "folder": "C:\\src\\llmzoo-walk\\models\\z2-npu\\Qwen3-0.6B-int4-sym-g128-ov",
+ "bytes": 405414622,
+ "files": [
+  {
+   "path": "chat_template.jinja",
+   "size": 4256,
+   "sha256": "51fa65c79bb57f058dc7ef8734884bd325fe9d45bb03a61bfef59785d3bc2da9"
+  },
+  {
+   "path": "config.json",
+   "size": 1479,
+   "sha256": "0a6f4d52f35e10fbb9e3dfaa767c912645f87991700e6c640172a1e899f52ef5"
+  },
+  {
+   "path": "generation_config.json",
+   "size": 226,
+   "sha256": "794dfd689d4f990e532ddf9b69dfc26e638593b1b04267a1096a9e79e5e6e1ce"
+  },
+  {
+   "path": "openvino_config.json",
+   "size": 495,
+   "sha256": "664cd1708a185ffc3a4ac61e9011422090458c3497a71c0cada1828ea36f35ee"
+  },
+  {
+   "path": "openvino_detokenizer.bin",
+   "size": 2189717,
+   "sha256": "d73093f72c80ebcaffb76a192727170ecd3c6a06c4df52df0e76b3f70ad9d7f7"
+  },
+  {
+   "path": "openvino_detokenizer.xml",
+   "size": 11898,
+   "sha256": "0f7cf2b8252e0b34b7602ccefe2b05b6b6265b441e04cdc9b119ec2c92592e68"
+  },
+  {
+   "path": "openvino_model.bin",
+   "size": 383383261,
+   "sha256": "2e129cffb1a7239007a3df27e0f3f7bb12f65a40e5c9b1e24a250d952da47837"
+  },
+  {
+   "path": "openvino_model.xml",
+   "size": 2780025,
+   "sha256": "8964576229b2ceea9edc943fcdb9f8ac8764d41dca713e520f2cbd48e83f8b14"
+  },
+  {
+   "path": "openvino_tokenizer.bin",
+   "size": 5588840,
+   "sha256": "d5eeca04c9a556df749ce59a0d3eef5916e730db32e6d0e96aa4ac566d3abeef"
+  },
+  {
+   "path": "openvino_tokenizer.xml",
+   "size": 31082,
+   "sha256": "21849e04479d6d9b1cc6bd552ed7a63f27a99f1979942eeb4af22e72a572757b"
+  },
+  {
+   "path": "tokenizer.json",
+   "size": 11422650,
+   "sha256": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506"
+  },
+  {
+   "path": "tokenizer_config.json",
+   "size": 693,
+   "sha256": "84a39062f428b12ec62ac4f2fb4d1db8ba59fc3f1a0f00d6056536d3e04d7c7f"
+  }
+ ],
+ "rt_info": {
+  "openvino_detokenizer.xml": {
+   "transformers_version": "5.5.4"
+  },
+  "openvino_model.xml": {
+   "Runtime_version": "2026.4.1-22982-e213a147257-releases/2026/4",
+   "all_layers": "False",
+   "awq": "False",
+   "backup_mode": "int8_asym",
+   "compression_format": "dequantize",
+   "gptq": "False",
+   "group_size": "128",
+   "mode": "int4_sym",
+   "ratio": "1.0",
+   "scale_estimation": "False",
+   "sensitivity_metric": "weight_quantization_error",
+   "nncf_version": "3.4.0",
+   "optimum_intel_version": "2.2.0",
+   "optimum_version": "2.3.0",
+   "pytorch_version": "2.14.0",
+   "transformers_version": "5.5.4"
+  },
+  "openvino_tokenizer.xml": {
+   "transformers_version": "5.5.4"
+  }
+ }
+}

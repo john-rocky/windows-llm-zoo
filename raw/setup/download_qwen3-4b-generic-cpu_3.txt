@@ -1,0 +1,8 @@
+■ Downloading model (qwen3-4b-generic-cpu:3, 2.7 GB)
+qwen3-4b-generic-cpu:3: 0%
+qwen3-4b-generic-cpu:3: 25%
+qwen3-4b-generic-cpu:3: 50%
+qwen3-4b-generic-cpu:3: 75%
+qwen3-4b-generic-cpu:3: 96%
+qwen3-4b-generic-cpu:3: 98%
+● success: Downloaded 'qwen3-4b-generic-cpu:3' to the local cache.

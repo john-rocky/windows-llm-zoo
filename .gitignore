@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+raw/**/*.bin
+# written by tools/table.py from results/ (a table across runtimes is not committed)
+RESULTS_LLM_WINDOWS.md
+# working notes kept out of this repository
+FACTS.md
+ROUND*.md
+GO_STEPS_*.md
+fable_read_*.md
+LANE_CLOSE_*.md
+*_deleted_paths.txt
+drafts/

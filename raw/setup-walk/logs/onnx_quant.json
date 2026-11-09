@@ -1,0 +1,1149 @@
+{
+ "C:\\src\\llmzoo-walk\\models\\mlboydaisuke__gemma-4-E4B-it-Foundry-Local\\cpu-int4": {
+  "audio_encoder/model.onnx": {
+   "nodes": [
+    {
+     "op": "MatMulNBits",
+     "bits": 8,
+     "block_size": 128,
+     "accuracy_level": 4,
+     "zero_point": "sym",
+     "count": 135
+    }
+   ],
+   "float_initializers": {
+    "fp32": 770
+   }
+  },
+  "decoder/model.onnx": {
+   "nodes": [
+    {
+     "op": "MatMulNBits",
+     "bits": 4,
+     "block_size": 32,
+     "accuracy_level": 4,
+     "zero_point": "sym",
+     "count": 343
+    }
+   ],
+   "float_initializers": {
+    "fp32": 667
+   }
+  },
+  "embedding/model.onnx": {
+   "nodes": [
+    {
+     "op": "GatherBlockQuantized",
+     "bits": 8,
+     "block_size": 128,
+     "accuracy_level": null,
+     "zero_point": "sym",
+     "count": 2
+    },
+    {
+     "op": "MatMulNBits",
+     "bits": 8,
+     "block_size": 128,
+     "accuracy_level": 4,
+     "zero_point": "sym",
+     "count": 1
+    }
+   ],
+   "float_initializers": {
+    "fp32": 10
+   }
+  },
+  "vision_encoder/model.onnx": {
+   "nodes": [
+    {
+     "op": "MatMulNBits",
+     "bits": 8,
+     "block_size": 128,
+     "accuracy_level": 4,
+     "zero_point": "sym",
+     "count": 114
+    },
+    {
+     "op": "GatherBlockQuantized",
+     "bits": 8,
+     "block_size": 128,
+     "accuracy_level": null,
+     "zero_point": "sym",
+     "count": 66
+    }
+   ],
+   "float_initializers": {
+    "fp32": 698
+   }
+  }
+ },
+ "C:\\src\\llmzoo-walk\\models\\mlboydaisuke__gemma-4-E4B-it-Foundry-Local\\cuda-int4-8k": {
+  "audio_encoder/model.onnx": {
+   "nodes": [
+    {
+     "op": "MatMulNBits",
+     "bits": 8,
+     "block_size": 32,
+     "accuracy_level": null,
+     "zero_point": "asym",
+     "count": 135
+    }
+   ],
+   "float_initializers": {
+    "fp16": 767,
+    "fp32": 3
+   }
+  },
+  "decoder/model.onnx": {
+   "nodes": [
+    {
+     "op": "MatMulNBits",
+     "bits": 4,
+     "block_size": 32,
+     "accuracy_level": null,
+     "zero_point": "sym",
+     "count": 343
+    }
+   ],
+   "float_initializers": {
+    "fp16": 667
+   }
+  },
+  "embedding/model.onnx": {
+   "nodes": [
+    {
+     "op": "GatherBlockQuantized",
+     "bits": 8,
+     "block_size": 32,
+     "accuracy_level": null,
+     "zero_point": "asym",
+     "count": 2
+    },
+    {
+     "op": "MatMulNBits",
+     "bits": 8,
+     "block_size": 32,
+     "accuracy_level": null,
+     "zero_point": "asym",
+     "count": 1
+    }
+   ],
+   "float_initializers": {
+    "fp16": 10
+   }
+  },
+  "vision_encoder/model.onnx": {
+   "nodes": [
+    {
+     "op": "MatMulNBits",
+     "bits": 8,
+     "block_size": 32,
+     "accuracy_level": null,
+     "zero_point": "asym",
+     "count": 114
+    },
+    {
+     "op": "GatherBlockQuantized",
+     "bits": 8,
+     "block_size": 32,
+     "accuracy_level": null,
+     "zero_point": "asym",
+     "count": 66
+    }
+   ],
+   "float_initializers": {
+    "fp16": 698
+   }
+  }
+ },
+ "C:\\src\\llmzoo-walk\\models\\onnx-community__Qwen3-0.6B-ONNX\\onnxruntime\\cpu_and_mobile\\cpu-int4-kld-block-128": {
+  "model.onnx": {
+   "nodes": [
+    {
+     "op": "MatMulNBits",
+     "bits": 8,
+     "block_size": 128,
+     "accuracy_level": 4,
+     "zero_point": "asym",
+     "count": 105
+    },
+    {
+     "op": "MatMulNBits",
+     "bits": 4,
+     "block_size": 128,
+     "accuracy_level": 4,
+     "zero_point": "asym",
+     "count": 92
+    },
+    {
+     "op": "GatherBlockQuantized",
+     "bits": 8,
+     "block_size": 128,
+     "accuracy_level": null,
+     "zero_point": "asym",
+     "count": 1
+    }
+   ],
+   "float_initializers": {
+    "fp32": 312
+   }
+  }
+ },
+ "C:\\src\\llmzoo-walk\\models\\onnx-community__Qwen3-0.6B-ONNX\\onnxruntime\\cuda\\cuda-int4-kld-block-128": {
+  "model.onnx": {
+   "nodes": [
+    {
+     "op": "MatMulNBits",
+     "bits": 8,
+     "block_size": 128,
+     "accuracy_level": 0,
+     "zero_point": "asym",
+     "count": 105
+    },
+    {
+     "op": "MatMulNBits",
+     "bits": 4,
+     "block_size": 128,
+     "accuracy_level": 0,
+     "zero_point": "asym",
+     "count": 92
+    },
+    {
+     "op": "GatherBlockQuantized",
+     "bits": 8,
+     "block_size": 128,
+     "accuracy_level": null,
+     "zero_point": "asym",
+     "count": 1
+    }
+   ],
+   "float_initializers": {
+    "fp16": 312
+   }
+  }
+ },
+ "C:\\src\\llmzoo-walk\\models\\onnx-community__Qwen3-0.6B-ONNX\\onnxruntime\\webgpu\\webgpu-int4-kld-block-32": {
+  "model.onnx": {
+   "nodes": [
+    {
+     "op": "MatMulNBits",
+     "bits": 8,
+     "block_size": 32,
+     "accuracy_level": 4,
+     "zero_point": "asym",
+     "count": 106
+    },
+    {
+     "op": "MatMulNBits",
+     "bits": 4,
+     "block_size": 32,
+     "accuracy_level": 4,
+     "zero_point": "asym",
+     "count": 91
+    },
+    {
+     "op": "GatherBlockQuantized",
+     "bits": 8,
+     "block_size": 32,
+     "accuracy_level": null,
+     "zero_point": "asym",
+     "count": 1
+    }
+   ],
+   "float_initializers": {
+    "fp16": 312
+   }
+  }
+ },
+ "C:\\src\\llmzoo-walk\\models\\onnx-community__Qwen3-1.7B-ONNX\\onnxruntime\\cpu_and_mobile\\cpu-int4-kld-block-128": {
+  "model.onnx": {
+   "nodes": [
+    {
+     "op": "MatMulNBits",
+     "bits": 8,
+     "block_size": 128,
+     "accuracy_level": 4,
+     "zero_point": "asym",
+     "count": 101
+    },
+    {
+     "op": "MatMulNBits",
+     "bits": 4,
+     "block_size": 128,
+     "accuracy_level": 4,
+     "zero_point": "asym",
+     "count": 96
+    },
+    {
+     "op": "GatherBlockQuantized",
+     "bits": 8,
+     "block_size": 128,
+     "accuracy_level": null,
+     "zero_point": "asym",
+     "count": 1
+    }
+   ],
+   "float_initializers": {
+    "fp32": 312
+   }
+  }
+ },
+ "C:\\src\\llmzoo-walk\\models\\onnx-community__Qwen3-1.7B-ONNX\\onnxruntime\\cuda\\cuda-int4-kld-block-128": {
+  "model.onnx": {
+   "nodes": [
+    {
+     "op": "MatMulNBits",
+     "bits": 8,
+     "block_size": 128,
+     "accuracy_level": 0,
+     "zero_point": "asym",
+     "count": 101
+    },
+    {
+     "op": "MatMulNBits",
+     "bits": 4,
+     "block_size": 128,
+     "accuracy_level": 0,
+     "zero_point": "asym",
+     "count": 96
+    },
+    {
+     "op": "GatherBlockQuantized",
+     "bits": 8,
+     "block_size": 128,
+     "accuracy_level": null,
+     "zero_point": "asym",
+     "count": 1
+    }
+   ],
+   "float_initializers": {
+    "fp16": 312
+   }
+  }
+ },
+ "C:\\src\\llmzoo-walk\\models\\onnx-community__Qwen3-1.7B-ONNX\\onnxruntime\\webgpu\\webgpu-int4-kld-block-32": {
+  "model.onnx": {
+   "nodes": [
+    {
+     "op": "MatMulNBits",
+     "bits": 8,
+     "block_size": 32,
+     "accuracy_level": 4,
+     "zero_point": "asym",
+     "count": 101
+    },
+    {
+     "op": "MatMulNBits",
+     "bits": 4,
+     "block_size": 32,
+     "accuracy_level": 4,
+     "zero_point": "asym",
+     "count": 96
+    },
+    {
+     "op": "GatherBlockQuantized",
+     "bits": 8,
+     "block_size": 32,
+     "accuracy_level": null,
+     "zero_point": "asym",
+     "count": 1
+    }
+   ],
+   "float_initializers": {
+    "fp16": 312
+   }
+  }
+ },
+ "C:\\src\\llmzoo-walk\\models\\onnx-community__Qwen3-4B-ONNX\\onnxruntime\\cpu_and_mobile\\cpu-int4-kld-block-128": {
+  "model.onnx": {
+   "nodes": [
+    {
+     "op": "MatMulNBits",
+     "bits": 4,
+     "block_size": 128,
+     "accuracy_level": 4,
+     "zero_point": "asym",
+     "count": 143
+    },
+    {
+     "op": "MatMulNBits",
+     "bits": 8,
+     "block_size": 128,
+     "accuracy_level": 4,
+     "zero_point": "asym",
+     "count": 110
+    },
+    {
+     "op": "GatherBlockQuantized",
+     "bits": 8,
+     "block_size": 128,
+     "accuracy_level": null,
+     "zero_point": "asym",
+     "count": 1
+    }
+   ],
+   "float_initializers": {
+    "fp32": 400
+   }
+  }
+ },
+ "C:\\src\\llmzoo-walk\\models\\onnx-community__Qwen3-4B-ONNX\\onnxruntime\\cuda\\cuda-int4-kld-block-128": {
+  "model.onnx": {
+   "nodes": [
+    {
+     "op": "MatMulNBits",
+     "bits": 4,
+     "block_size": 128,
+     "accuracy_level": 0,
+     "zero_point": "asym",
+     "count": 143
+    },
+    {
+     "op": "MatMulNBits",
+     "bits": 8,
+     "block_size": 128,
+     "accuracy_level": 0,
+     "zero_point": "asym",
+     "count": 110
+    },
+    {
+     "op": "GatherBlockQuantized",
+     "bits": 8,
+     "block_size": 128,
+     "accuracy_level": null,
+     "zero_point": "asym",
+     "count": 1
+    }
+   ],
+   "float_initializers": {
+    "fp16": 400
+   }
+  }
+ },
+ "C:\\src\\llmzoo-walk\\models\\onnx-community__Qwen3-4B-ONNX\\onnxruntime\\webgpu\\webgpu-int4-kld-block-32": {
+  "model.onnx": {
+   "nodes": [
+    {
+     "op": "MatMulNBits",
+     "bits": 4,
+     "block_size": 32,
+     "accuracy_level": 4,
+     "zero_point": "asym",
+     "count": 146
+    },
+    {
+     "op": "MatMulNBits",
+     "bits": 8,
+     "block_size": 32,
+     "accuracy_level": 4,
+     "zero_point": "asym",
+     "count": 107
+    },
+    {
+     "op": "GatherBlockQuantized",
+     "bits": 8,
+     "block_size": 32,
+     "accuracy_level": null,
+     "zero_point": "asym",
+     "count": 1
+    }
+   ],
+   "float_initializers": {
+    "fp16": 400
+   }
+  }
+ },
+ "C:\\Users\\USER\\.foundry\\cache\\models\\Microsoft\\gemma-4-e2b-it-cuda-gpu-3\\v3": {
+  "audio_encoder/model.onnx": {
+   "nodes": [
+    {
+     "op": "MatMulNBits",
+     "bits": 8,
+     "block_size": 32,
+     "accuracy_level": null,
+     "zero_point": "asym",
+     "count": 135
+    }
+   ],
+   "float_initializers": {
+    "fp16": 767,
+    "fp32": 3
+   }
+  },
+  "decoder/model.onnx": {
+   "nodes": [
+    {
+     "op": "MatMulNBits",
+     "bits": 8,
+     "block_size": 32,
+     "accuracy_level": null,
+     "zero_point": "asym",
+     "count": 141
+    },
+    {
+     "op": "MatMulNBits",
+     "bits": 4,
+     "block_size": 32,
+     "accuracy_level": null,
+     "zero_point": "asym",
+     "count": 135
+    }
+   ],
+   "float_initializers": {
+    "fp16": 542
+   }
+  },
+  "embedding/model.onnx": {
+   "nodes": [
+    {
+     "op": "GatherBlockQuantized",
+     "bits": 8,
+     "block_size": 32,
+     "accuracy_level": null,
+     "zero_point": "asym",
+     "count": 2
+    },
+    {
+     "op": "MatMulNBits",
+     "bits": 8,
+     "block_size": 32,
+     "accuracy_level": null,
+     "zero_point": "asym",
+     "count": 1
+    }
+   ],
+   "float_initializers": {
+    "fp16": 10
+   }
+  },
+  "vision_encoder/model.onnx": {
+   "nodes": [
+    {
+     "op": "MatMulNBits",
+     "bits": 8,
+     "block_size": 32,
+     "accuracy_level": null,
+     "zero_point": "asym",
+     "count": 114
+    },
+    {
+     "op": "GatherBlockQuantized",
+     "bits": 8,
+     "block_size": 32,
+     "accuracy_level": null,
+     "zero_point": "asym",
+     "count": 66
+    }
+   ],
+   "float_initializers": {
+    "fp16": 698
+   }
+  }
+ },
+ "C:\\Users\\USER\\.foundry\\cache\\models\\Microsoft\\gemma-4-e2b-it-generic-cpu-3\\v3": {
+  "audio_encoder/model.onnx": {
+   "nodes": [
+    {
+     "op": "MatMulNBits",
+     "bits": 8,
+     "block_size": 128,
+     "accuracy_level": 4,
+     "zero_point": "sym",
+     "count": 135
+    }
+   ],
+   "float_initializers": {
+    "fp32": 770
+   }
+  },
+  "decoder/model.onnx": {
+   "nodes": [
+    {
+     "op": "MatMulNBits",
+     "bits": 8,
+     "block_size": 32,
+     "accuracy_level": null,
+     "zero_point": "asym",
+     "count": 141
+    },
+    {
+     "op": "MatMulNBits",
+     "bits": 4,
+     "block_size": 32,
+     "accuracy_level": null,
+     "zero_point": "asym",
+     "count": 135
+    }
+   ],
+   "float_initializers": {
+    "fp32": 542
+   }
+  },
+  "embedding/model.onnx": {
+   "nodes": [
+    {
+     "op": "GatherBlockQuantized",
+     "bits": 8,
+     "block_size": 128,
+     "accuracy_level": null,
+     "zero_point": "sym",
+     "count": 2
+    },
+    {
+     "op": "MatMulNBits",
+     "bits": 8,
+     "block_size": 128,
+     "accuracy_level": 4,
+     "zero_point": "sym",
+     "count": 1
+    }
+   ],
+   "float_initializers": {
+    "fp32": 10
+   }
+  },
+  "vision_encoder/model.onnx": {
+   "nodes": [
+    {
+     "op": "MatMulNBits",
+     "bits": 8,
+     "block_size": 128,
+     "accuracy_level": 4,
+     "zero_point": "sym",
+     "count": 114
+    },
+    {
+     "op": "GatherBlockQuantized",
+     "bits": 8,
+     "block_size": 128,
+     "accuracy_level": null,
+     "zero_point": "sym",
+     "count": 66
+    }
+   ],
+   "float_initializers": {
+    "fp32": 698
+   }
+  }
+ },
+ "C:\\Users\\USER\\.foundry\\cache\\models\\Microsoft\\gemma-4-e2b-it-generic-gpu-3\\v3": {
+  "audio_encoder/model.onnx": {
+   "nodes": [
+    {
+     "op": "MatMulNBits",
+     "bits": 4,
+     "block_size": 32,
+     "accuracy_level": null,
+     "zero_point": "asym",
+     "count": 135
+    }
+   ],
+   "float_initializers": {
+    "fp16": 767,
+    "fp32": 3
+   }
+  },
+  "decoder/model.onnx": {
+   "nodes": [
+    {
+     "op": "MatMulNBits",
+     "bits": 4,
+     "block_size": 32,
+     "accuracy_level": null,
+     "zero_point": "asym",
+     "count": 277
+    }
+   ],
+   "float_initializers": {
+    "fp16": 582
+   }
+  },
+  "embedding/model.onnx": {
+   "nodes": [],
+   "float_initializers": {
+    "fp16": 4
+   }
+  },
+  "vision_encoder/model.onnx": {
+   "nodes": [
+    {
+     "op": "MatMulNBits",
+     "bits": 4,
+     "block_size": 32,
+     "accuracy_level": null,
+     "zero_point": "asym",
+     "count": 114
+    }
+   ],
+   "float_initializers": {
+    "fp16": 698
+   }
+  }
+ },
+ "C:\\Users\\USER\\.foundry\\cache\\models\\Microsoft\\Phi-4-mini-instruct-cuda-gpu-5\\v5": {
+  "model.onnx": {
+   "nodes": [
+    {
+     "op": "MatMulNBits",
+     "bits": 4,
+     "block_size": 32,
+     "accuracy_level": 4,
+     "zero_point": "asym",
+     "count": 128
+    },
+    {
+     "op": "MatMulNBits",
+     "bits": 8,
+     "block_size": 32,
+     "accuracy_level": 4,
+     "zero_point": "asym",
+     "count": 33
+    }
+   ],
+   "float_initializers": {
+    "fp16": 163,
+    "fp32": 64
+   }
+  }
+ },
+ "C:\\Users\\USER\\.foundry\\cache\\models\\Microsoft\\phi-4-mini-instruct-openvino-gpu-2\\v2": {
+  "openvino_model_dy.onnx": {
+   "nodes": [],
+   "float_initializers": {}
+  }
+ },
+ "C:\\Users\\USER\\.foundry\\cache\\models\\Microsoft\\phi-4-mini-instruct-openvino-npu-4\\v4": {
+  "openvino_model_dy.onnx": {
+   "nodes": [],
+   "float_initializers": {}
+  }
+ },
+ "C:\\Users\\USER\\.foundry\\cache\\models\\Microsoft\\qwen2.5-0.5b-instruct-cuda-gpu-4\\v4": {
+  "model.onnx": {
+   "nodes": [
+    {
+     "op": "MatMulNBits",
+     "bits": 4,
+     "block_size": 32,
+     "accuracy_level": 0,
+     "zero_point": "sym",
+     "count": 121
+    }
+   ],
+   "float_initializers": {
+    "fp16": 197
+   }
+  }
+ },
+ "C:\\Users\\USER\\.foundry\\cache\\models\\Microsoft\\qwen2.5-0.5b-instruct-openvino-gpu-2\\v2": {
+  "openvino_model_dy.onnx": {
+   "nodes": [],
+   "float_initializers": {}
+  }
+ },
+ "C:\\Users\\USER\\.foundry\\cache\\models\\Microsoft\\qwen2.5-0.5b-instruct-openvino-npu-5\\v5": {
+  "openvino_model_dy.onnx": {
+   "nodes": [],
+   "float_initializers": {}
+  }
+ },
+ "C:\\Users\\USER\\.foundry\\cache\\models\\Microsoft\\qwen3-0.6b-cuda-gpu-2\\v2": {
+  "model.onnx": {
+   "nodes": [
+    {
+     "op": "MatMulNBits",
+     "bits": 8,
+     "block_size": 128,
+     "accuracy_level": 0,
+     "zero_point": "asym",
+     "count": 105
+    },
+    {
+     "op": "MatMulNBits",
+     "bits": 4,
+     "block_size": 128,
+     "accuracy_level": 0,
+     "zero_point": "asym",
+     "count": 92
+    },
+    {
+     "op": "GatherBlockQuantized",
+     "bits": 8,
+     "block_size": 128,
+     "accuracy_level": null,
+     "zero_point": "asym",
+     "count": 1
+    }
+   ],
+   "float_initializers": {
+    "fp16": 312
+   }
+  }
+ },
+ "C:\\Users\\USER\\.foundry\\cache\\models\\Microsoft\\qwen3-0.6b-generic-cpu-4\\v4": {
+  "model.onnx": {
+   "nodes": [
+    {
+     "op": "MatMulNBits",
+     "bits": 8,
+     "block_size": 128,
+     "accuracy_level": 4,
+     "zero_point": "asym",
+     "count": 105
+    },
+    {
+     "op": "MatMulNBits",
+     "bits": 4,
+     "block_size": 128,
+     "accuracy_level": 4,
+     "zero_point": "asym",
+     "count": 92
+    },
+    {
+     "op": "GatherBlockQuantized",
+     "bits": 8,
+     "block_size": 128,
+     "accuracy_level": null,
+     "zero_point": "asym",
+     "count": 1
+    }
+   ],
+   "float_initializers": {
+    "fp32": 312
+   }
+  }
+ },
+ "C:\\Users\\USER\\.foundry\\cache\\models\\Microsoft\\qwen3-0.6b-generic-gpu-2\\v2": {
+  "model.onnx": {
+   "nodes": [
+    {
+     "op": "MatMulNBits",
+     "bits": 8,
+     "block_size": 32,
+     "accuracy_level": 4,
+     "zero_point": "asym",
+     "count": 106
+    },
+    {
+     "op": "MatMulNBits",
+     "bits": 4,
+     "block_size": 32,
+     "accuracy_level": 4,
+     "zero_point": "asym",
+     "count": 91
+    },
+    {
+     "op": "GatherBlockQuantized",
+     "bits": 8,
+     "block_size": 32,
+     "accuracy_level": null,
+     "zero_point": "asym",
+     "count": 1
+    }
+   ],
+   "float_initializers": {
+    "fp16": 312
+   }
+  }
+ },
+ "C:\\Users\\USER\\.foundry\\cache\\models\\Microsoft\\qwen3-1.7b-cuda-gpu-2\\v2": {
+  "model.onnx": {
+   "nodes": [
+    {
+     "op": "MatMulNBits",
+     "bits": 8,
+     "block_size": 128,
+     "accuracy_level": 0,
+     "zero_point": "asym",
+     "count": 101
+    },
+    {
+     "op": "MatMulNBits",
+     "bits": 4,
+     "block_size": 128,
+     "accuracy_level": 0,
+     "zero_point": "asym",
+     "count": 96
+    },
+    {
+     "op": "GatherBlockQuantized",
+     "bits": 8,
+     "block_size": 128,
+     "accuracy_level": null,
+     "zero_point": "asym",
+     "count": 1
+    }
+   ],
+   "float_initializers": {
+    "fp16": 312
+   }
+  }
+ },
+ "C:\\Users\\USER\\.foundry\\cache\\models\\Microsoft\\qwen3-1.7b-generic-cpu-2\\v2": {
+  "model.onnx": {
+   "nodes": [
+    {
+     "op": "MatMulNBits",
+     "bits": 8,
+     "block_size": 128,
+     "accuracy_level": 4,
+     "zero_point": "asym",
+     "count": 101
+    },
+    {
+     "op": "MatMulNBits",
+     "bits": 4,
+     "block_size": 128,
+     "accuracy_level": 4,
+     "zero_point": "asym",
+     "count": 96
+    },
+    {
+     "op": "GatherBlockQuantized",
+     "bits": 8,
+     "block_size": 128,
+     "accuracy_level": null,
+     "zero_point": "asym",
+     "count": 1
+    }
+   ],
+   "float_initializers": {
+    "fp32": 312
+   }
+  }
+ },
+ "C:\\Users\\USER\\.foundry\\cache\\models\\Microsoft\\qwen3-1.7b-generic-gpu-2\\v2": {
+  "model.onnx": {
+   "nodes": [
+    {
+     "op": "MatMulNBits",
+     "bits": 8,
+     "block_size": 32,
+     "accuracy_level": 4,
+     "zero_point": "asym",
+     "count": 101
+    },
+    {
+     "op": "MatMulNBits",
+     "bits": 4,
+     "block_size": 32,
+     "accuracy_level": 4,
+     "zero_point": "asym",
+     "count": 96
+    },
+    {
+     "op": "GatherBlockQuantized",
+     "bits": 8,
+     "block_size": 32,
+     "accuracy_level": null,
+     "zero_point": "asym",
+     "count": 1
+    }
+   ],
+   "float_initializers": {
+    "fp16": 312
+   }
+  }
+ },
+ "C:\\Users\\USER\\.foundry\\cache\\models\\Microsoft\\qwen3-4b-cuda-gpu-2\\v2": {
+  "model.onnx": {
+   "nodes": [
+    {
+     "op": "MatMulNBits",
+     "bits": 4,
+     "block_size": 128,
+     "accuracy_level": 0,
+     "zero_point": "asym",
+     "count": 143
+    },
+    {
+     "op": "MatMulNBits",
+     "bits": 8,
+     "block_size": 128,
+     "accuracy_level": 0,
+     "zero_point": "asym",
+     "count": 110
+    },
+    {
+     "op": "GatherBlockQuantized",
+     "bits": 8,
+     "block_size": 128,
+     "accuracy_level": null,
+     "zero_point": "asym",
+     "count": 1
+    }
+   ],
+   "float_initializers": {
+    "fp16": 400
+   }
+  }
+ },
+ "C:\\Users\\USER\\.foundry\\cache\\models\\Microsoft\\qwen3-4b-generic-cpu-3\\v3": {
+  "model.onnx": {
+   "nodes": [
+    {
+     "op": "MatMulNBits",
+     "bits": 4,
+     "block_size": 128,
+     "accuracy_level": 4,
+     "zero_point": "asym",
+     "count": 143
+    },
+    {
+     "op": "MatMulNBits",
+     "bits": 8,
+     "block_size": 128,
+     "accuracy_level": 4,
+     "zero_point": "asym",
+     "count": 110
+    },
+    {
+     "op": "GatherBlockQuantized",
+     "bits": 8,
+     "block_size": 128,
+     "accuracy_level": null,
+     "zero_point": "asym",
+     "count": 1
+    }
+   ],
+   "float_initializers": {
+    "fp32": 400
+   }
+  }
+ },
+ "C:\\Users\\USER\\.foundry\\cache\\models\\Microsoft\\qwen3-4b-generic-gpu-2\\v2": {
+  "model.onnx": {
+   "nodes": [
+    {
+     "op": "MatMulNBits",
+     "bits": 4,
+     "block_size": 32,
+     "accuracy_level": 4,
+     "zero_point": "asym",
+     "count": 146
+    },
+    {
+     "op": "MatMulNBits",
+     "bits": 8,
+     "block_size": 32,
+     "accuracy_level": 4,
+     "zero_point": "asym",
+     "count": 107
+    },
+    {
+     "op": "GatherBlockQuantized",
+     "bits": 8,
+     "block_size": 32,
+     "accuracy_level": null,
+     "zero_point": "asym",
+     "count": 1
+    }
+   ],
+   "float_initializers": {
+    "fp16": 400
+   }
+  }
+ },
+ "C:\\Users\\USER\\.foundry\\cache\\models\\Microsoft\\qwen3.5-0.8b-cuda-gpu-4\\v4": {
+  "embedding.onnx": {
+   "nodes": [],
+   "float_initializers": {
+    "fp16": 1
+   }
+  },
+  "text.onnx": {
+   "nodes": [
+    {
+     "op": "MatMulNBits",
+     "bits": 8,
+     "block_size": 32,
+     "accuracy_level": 4,
+     "zero_point": "asym",
+     "count": 145
+    },
+    {
+     "op": "MatMulNBits",
+     "bits": 4,
+     "block_size": 32,
+     "accuracy_level": 4,
+     "zero_point": "asym",
+     "count": 42
+    }
+   ],
+   "float_initializers": {
+    "fp32": 38,
+    "fp16": 286
+   }
+  },
+  "vision.onnx": {
+   "nodes": [],
+   "float_initializers": {
+    "fp16": 106,
+    "fp32": 51
+   }
+  }
+ },
+ "C:\\Users\\USER\\.foundry\\cache\\models\\Microsoft\\qwen3.5-0.8b-generic-cpu-3\\v3": {
+  "embedding.onnx": {
+   "nodes": [
+    {
+     "op": "GatherBlockQuantized",
+     "bits": 4,
+     "block_size": 128,
+     "accuracy_level": null,
+     "zero_point": "sym",
+     "count": 1
+    }
+   ],
+   "float_initializers": {
+    "fp32": 1
+   }
+  },
+  "text.onnx": {
+   "nodes": [
+    {
+     "op": "MatMulNBits",
+     "bits": 8,
+     "block_size": 32,
+     "accuracy_level": 4,
+     "zero_point": "asym",
+     "count": 145
+    },
+    {
+     "op": "MatMulNBits",
+     "bits": 4,
+     "block_size": 32,
+     "accuracy_level": 4,
+     "zero_point": "asym",
+     "count": 42
+    }
+   ],
+   "float_initializers": {
+    "fp32": 324
+   }
+  },
+  "vision.onnx": {
+   "nodes": [
+    {
+     "op": "MatMulNBits",
+     "bits": 4,
+     "block_size": 128,
+     "accuracy_level": 4,
+     "zero_point": "sym",
+     "count": 50
+    },
+    {
+     "op": "GatherBlockQuantized",
+     "bits": 4,
+     "block_size": 128,
+     "accuracy_level": null,
+     "zero_point": "sym",
+     "count": 4
+    }
+   ],
+   "float_initializers": {
+    "fp32": 157
+   }
+  }
+ }
+}

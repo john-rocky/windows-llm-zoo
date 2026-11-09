@@ -1,0 +1,37 @@
+{
+ "sitting": "overlays",
+ "overlays": [
+  {
+   "dst": "{ROOT}\\overlays\\gemma-4-E2B-it_webgpu_a0",
+   "src": "{HOME}\\.foundry\\cache\\models\\Microsoft\\gemma-4-e2b-it-generic-gpu-3\\v3",
+   "place": "@webgpu",
+   "webgpu_option": [
+    "adapterIndex=0"
+   ]
+  },
+  {
+   "dst": "{ROOT}\\overlays\\gemma-4-E4B-it_webgpu_a0",
+   "src": "{ROOT}\\models\\mlboydaisuke__gemma-4-E4B-it-Foundry-Local\\cuda-int4-8k",
+   "place": "decoder=webgpu,embedding=webgpu,vision=webgpu,speech=webgpu",
+   "webgpu_option": [
+    "adapterIndex=0"
+   ]
+  },
+  {
+   "dst": "{ROOT}\\overlays\\gemma-4-E2B-it_webgpu_a1",
+   "src": "{HOME}\\.foundry\\cache\\models\\Microsoft\\gemma-4-e2b-it-generic-gpu-3\\v3",
+   "place": "@webgpu",
+   "webgpu_option": [
+    "adapterIndex=1"
+   ]
+  },
+  {
+   "dst": "{ROOT}\\overlays\\gemma-4-E4B-it_webgpu_a1",
+   "src": "{ROOT}\\models\\mlboydaisuke__gemma-4-E4B-it-Foundry-Local\\cuda-int4-8k",
+   "place": "decoder=webgpu,embedding=webgpu,vision=webgpu,speech=webgpu",
+   "webgpu_option": [
+    "adapterIndex=1"
+   ]
+  }
+ ]
+}

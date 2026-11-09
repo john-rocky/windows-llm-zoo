@@ -1,0 +1,151 @@
+{
+ "model": "Qwen3-0.6B",
+ "cell": "llama.cpp_rtx_vulkan",
+ "runtime": "llama.cpp",
+ "device": "rtx",
+ "device_name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+ "backend": "vulkan",
+ "backend_detail": "llama.cpp Vulkan asset, GGML_VK_VISIBLE_DEVICES=0 (the RTX)",
+ "source": "edge-llm-bench",
+ "bench_arm": "llama.cpp-gpu",
+ "bench_commit": "e9be97795e96b82e81ec8608ce1f04c2bf16a88a",
+ "shelf": {
+  "repo": "unsloth/Qwen3-0.6B-GGUF",
+  "files": [
+   "Qwen3-0.6B-Q4_K_M.gguf"
+  ],
+  "quant": "Q4_K_M"
+ },
+ "workload": {
+  "task": "short-chat",
+  "prompt": "prompts/text/short-chat.txt of edge-llm-bench",
+  "output_budget_tokens": 128,
+  "context_tokens": 2048,
+  "regime": "cold (first conversation of a fresh engine process)",
+  "counting": "runs=3 per sitting; run 1 of a LiteRT-LM, Vulkan or CUDA row is the cache build (firstEver) and is not counted; a text-check failure is not counted"
+ },
+ "status": "measured",
+ "table": {
+  "sitting": "2026-11-08-windows-gpu-q06",
+  "decode_tps": 475.45000000000005,
+  "cold_spread_pct": 0.15,
+  "cold_n": 2,
+  "prefill_tps": 1518.1,
+  "ttft_ms": null,
+  "peak_working_set_mb": 724.068359375,
+  "text_check": "2/2 PASS",
+  "decode_tps_warm": null
+ },
+ "sittings": [
+  {
+   "campaign": "2026-11-07-windows-qwen3-s1",
+   "first_record_jst": "2026-11-07 03:04 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "b11721-win-vulkan-x64",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 477.45000000000005,
+   "cold_spread_pct": 2.24,
+   "counted": true,
+   "prefill_tps_cold_median": 1578.1,
+   "ttft_ms_cold_median": null,
+   "peak_working_set_mb_median": 724.130859375,
+   "decode_tps_warm_median": null,
+   "text_check": "2/2 PASS",
+   "quant": "Q4_K_M",
+   "records": [
+    "results/raw/2026-11-07-windows-qwen3-s1/llama.cpp-gpu_unsloth_Qwen3-0.6B-GGUF_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-07-windows-qwen3",
+   "first_record_jst": "2026-11-07 04:05 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "b11721-win-vulkan-x64",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 486.0,
+   "cold_spread_pct": 0.7,
+   "counted": true,
+   "prefill_tps_cold_median": 1509.15,
+   "ttft_ms_cold_median": null,
+   "peak_working_set_mb_median": 724.326171875,
+   "decode_tps_warm_median": null,
+   "text_check": "2/2 PASS",
+   "quant": "Q4_K_M",
+   "records": [
+    "results/raw/2026-11-07-windows-qwen3/llama.cpp-gpu_unsloth_Qwen3-0.6B-GGUF_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-07-windows-e4b-s1",
+   "first_record_jst": "2026-11-07 07:00 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "b11721-win-vulkan-x64",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 484.75,
+   "cold_spread_pct": 0.43,
+   "counted": true,
+   "prefill_tps_cold_median": 1589.85,
+   "ttft_ms_cold_median": null,
+   "peak_working_set_mb_median": 724.474609375,
+   "decode_tps_warm_median": null,
+   "text_check": "2/2 PASS",
+   "quant": "Q4_K_M",
+   "records": [
+    "results/raw/2026-11-07-windows-e4b-s1/llama.cpp-gpu_unsloth_Qwen3-0.6B-GGUF_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-07-windows-e4b",
+   "first_record_jst": "2026-11-07 08:18 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "b11721-win-vulkan-x64",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 481.5,
+   "cold_spread_pct": 0.58,
+   "counted": true,
+   "prefill_tps_cold_median": 1518.6,
+   "ttft_ms_cold_median": null,
+   "peak_working_set_mb_median": 724.4453125,
+   "decode_tps_warm_median": null,
+   "text_check": "2/2 PASS",
+   "quant": "Q4_K_M",
+   "records": [
+    "results/raw/2026-11-07-windows-e4b/llama.cpp-gpu_unsloth_Qwen3-0.6B-GGUF_short-chat.jsonl"
+   ]
+  },
+  {
+   "campaign": "2026-11-08-windows-gpu-q06",
+   "first_record_jst": "2026-11-08 15:03 JST",
+   "os": [
+    "Microsoft Windows 11 Home 10.0.26200.9711"
+   ],
+   "engine": "b11721-win-vulkan-x64",
+   "runs_in_sitting": 3,
+   "cold_n": 2,
+   "decode_tps_cold_median": 475.45000000000005,
+   "cold_spread_pct": 0.15,
+   "counted": true,
+   "prefill_tps_cold_median": 1518.1,
+   "ttft_ms_cold_median": null,
+   "peak_working_set_mb_median": 724.068359375,
+   "decode_tps_warm_median": null,
+   "text_check": "2/2 PASS",
+   "quant": "Q4_K_M",
+   "records": [
+    "results/raw/2026-11-08-windows-gpu-q06/llama.cpp-gpu_unsloth_Qwen3-0.6B-GGUF_short-chat.jsonl"
+   ]
+  }
+ ]
+}

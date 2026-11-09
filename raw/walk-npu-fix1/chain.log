@@ -1,0 +1,13 @@
+[2026-11-07T23:16:59.8586038+09:00] chain start: plan C:\src\llmzoo-walk\pc\plans\walk-npu-fix1.json mode first, 5 units, pid 4940
+[2026-11-07T23:17:09.7411956+09:00] adapters: 0x00000000_0x00012C48=nvidia, 0x00000000_0x0001260E=intel-gpu, 0x00000000_0x00012BB8=?, 0x00000000_0x00013E4C=npu?
+[2026-11-07T23:17:11.7104118+09:00] Qwen3-0.6B\ort-genai_npu_openvino run 1 start
+[2026-11-07T23:17:18.0909088+09:00] Qwen3-0.6B\ort-genai_npu_openvino run 1 end: exit 1, ERROR, 4.855 s
+[2026-11-07T23:17:19.7701174+09:00] Qwen3-1.7B\ort-genai_npu_openvino run 1 start
+[2026-11-07T23:17:27.8479993+09:00] Qwen3-1.7B\ort-genai_npu_openvino run 1 end: exit 1, ERROR, 6.88 s
+[2026-11-07T23:17:29.3521726+09:00] Qwen3-4B\ort-genai_npu_openvino run 1 start
+[2026-11-07T23:17:34.2789998+09:00] Qwen3-4B\ort-genai_npu_openvino run 1 end: exit 1, ERROR, 3.779 s
+[2026-11-07T23:17:35.9211336+09:00] gemma-4-E2B-it\ort-genai_npu_openvino run 1 start
+[2026-11-07T23:17:45.6770109+09:00] gemma-4-E2B-it\ort-genai_npu_openvino run 1 end: exit 1, ERROR, 8.585 s
+[2026-11-07T23:17:47.2827121+09:00] gemma-4-E4B-it\ort-genai_npu_openvino run 1 start
+[2026-11-07T23:17:58.3469551+09:00] gemma-4-E4B-it\ort-genai_npu_openvino run 1 end: exit 1, ERROR, 9.435 s
+[2026-11-07T23:17:58.3558810+09:00] chain done: OK

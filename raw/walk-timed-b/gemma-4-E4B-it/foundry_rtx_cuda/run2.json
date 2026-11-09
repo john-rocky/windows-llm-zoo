@@ -1,0 +1,76 @@
+{
+ "runner": "run_foundry.py",
+ "started": "2026-11-08T20:52:24.139937+09:00",
+ "argv": [
+  "--model",
+  "z2-gemma-4-e4b-it-cuda-int4-8k:1",
+  "--path",
+  "/catalogs/local/v1",
+  "--prompt-file",
+  "C:\\src\\llmzoo-walk\\pc\\short-chat.txt",
+  "--out",
+  "C:\\src\\llmzoo-walk\\runs\\walk-timed-b\\gemma-4-E4B-it\\foundry_rtx_cuda\\run2.json"
+ ],
+ "prompt_sha256": "870aafb98e570e8fa1343ec051180237f4587233f49c0cc1391724e086d42d50",
+ "daemon_json": {
+  "pid": 33604,
+  "web_urls": [
+   "http://127.0.0.1:59367"
+  ],
+  "protocol_version": 3,
+  "daemon_version": "0.13.0",
+  "package_version": "0.13.0",
+  "sdk_version": "2.3.0",
+  "started_at": "2026-11-08T11:51:56.4285422+00:00",
+  "log_file": "C:\\Users\\USER\\.foundry\\logs\\foundrylocald-2026-11-08.log",
+  "sdk_package_version": "2.3.0",
+  "runtime_package_version": "2.3.0",
+  "ort_package_version": "1.31.0",
+  "ort_gen_ai_package_version": "0.18.0",
+  "native_runtime_version": null,
+  "native_ort_version": null,
+  "foundry_local_core_version": "2.3.0",
+  "ort_version": "1.31.0",
+  "ort_gen_ai_version": "0.18.0",
+  "foundry_local_runtime_version": "2.3.0"
+ },
+ "url": "http://127.0.0.1:59367/catalogs/local/v1",
+ "gens": [
+  {
+   "prompt_tokens": 20,
+   "generated_tokens": 128,
+   "chunks": 128,
+   "delta_fields": {
+    "content": 128
+   },
+   "stop": "length",
+   "ttft_ms": 1178.5879000090063,
+   "prefill_tps": 16.96945980851082,
+   "decode_tps": 25.654031867542166,
+   "request_wall_s": 6.131031900004018,
+   "text": "Imagine your smartphone or a smart device (like a smart speaker or fitness tracker) is like a very smart assistant.\n\n**\"On-device AI\" simply means that the \"brain\" or the \"thinking part\" of that assistant is actually *inside* the device itself, not constantly needing to talk to the internet.**\n\nHere is a breakdown using simple analogies:\n\n---\n\n### 🧠 The \"Cloud\" vs. The \"Device\"\n\nTo understand it, it helps to compare it to two places where AI can run:\n\n**1. Cloud AI (The Old Way):**\n* **Analogy:** Sending a",
+   "text_sha256": "cb677b66676546773844ff2dac3c05d2c798649b4d703d16063dbe53fe504964",
+   "gen": 1,
+   "regime": "cold"
+  },
+  {
+   "prompt_tokens": 20,
+   "generated_tokens": 128,
+   "chunks": 128,
+   "delta_fields": {
+    "content": 128
+   },
+   "stop": "length",
+   "ttft_ms": 80.85950001259334,
+   "prefill_tps": 247.34261276516835,
+   "decode_tps": 32.60572251498642,
+   "request_wall_s": 3.9776453000085894,
+   "text": "Imagine your smartphone or a smart device (like a smart speaker or fitness tracker) is like a very smart assistant.\n\n**\"On-device AI\" simply means that the \"brain\" or the \"thinking part\" of that assistant is actually *inside* the device itself, not constantly needing to talk to the internet.**\n\nHere is a breakdown using simple analogies:\n\n---\n\n### 🧠 The \"Cloud\" vs. The \"Device\"\n\nTo understand it, it helps to compare it to two places where AI can run:\n\n**1. Cloud AI (The Old Way):**\n* **Analogy:** Sending a",
+   "text_sha256": "cb677b66676546773844ff2dac3c05d2c798649b4d703d16063dbe53fe504964",
+   "gen": 2,
+   "regime": "warm"
+  }
+ ],
+ "status": "OK",
+ "ended": "2026-11-08T20:52:34.283229+09:00"
+}

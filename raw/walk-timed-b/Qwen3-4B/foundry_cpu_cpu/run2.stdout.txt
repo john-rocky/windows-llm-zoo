@@ -1,0 +1,3 @@
+ENGINE_PID 24756
+{"gen": 1, "generated_tokens": 128, "chunks": 127, "delta_fields": {"reasoning_content": 127}, "stop": "length", "ttft_ms": 851.8997000064701, "decode_tps": 10.056237593271229}
+{"gen": 2, "generated_tokens": 128, "chunks": 127, "delta_fields": {"reasoning_content": 127}, "stop": "length", "ttft_ms": 833.542700012913, "decode_tps": 10.311385595471616}

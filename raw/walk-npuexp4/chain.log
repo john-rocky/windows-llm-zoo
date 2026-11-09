@@ -1,0 +1,15 @@
+[2026-11-08T03:53:53.3087978+09:00] chain start: plan C:\src\llmzoo-walk\pc\plans\walk-npuexp4.json mode first, 1 units, pid 6272
+[2026-11-08T03:54:03.8778590+09:00] adapters: 0x00000000_0x00012C48=nvidia, 0x00000000_0x0001260E=intel-gpu, 0x00000000_0x00012BB8=?, 0x00000000_0x00013E4C=npu?
+[2026-11-08T03:54:06.7259360+09:00] gemma-4-E4B-it\openvino-genai_npu_npu-sym-cw run 1 start
+[2026-11-08T03:56:48.9115103+09:00] C:\src\llmzoo-walk\runs\walk-npuexp4\gemma-4-E4B-it\openvino-genai_npu_npu-sym-cw\run1 suspended (3 processes) while another lane holds busy.txt (another lane's lock 2026-11-08T03:56:47.2975449+09:00)
+[2026-11-08T04:22:34.8877995+09:00] C:\src\llmzoo-walk\runs\walk-npuexp4\gemma-4-E4B-it\openvino-genai_npu_npu-sym-cw\run1 resumed (3 processes) after 1546 s
+[2026-11-08T04:22:36.1185297+09:00] C:\src\llmzoo-walk\runs\walk-npuexp4\gemma-4-E4B-it\openvino-genai_npu_npu-sym-cw\run1 suspended (3 processes) while another lane holds busy.txt (another lane's lock 2026-11-08T04:22:35.7354864+09:00)
+[2026-11-08T04:26:51.2391735+09:00] C:\src\llmzoo-walk\runs\walk-npuexp4\gemma-4-E4B-it\openvino-genai_npu_npu-sym-cw\run1 resumed (3 processes) after 255 s
+[2026-11-08T04:26:56.8226551+09:00] C:\src\llmzoo-walk\runs\walk-npuexp4\gemma-4-E4B-it\openvino-genai_npu_npu-sym-cw\run1 suspended (3 processes) while another lane holds busy.txt (another lane's lock 2026-11-08T04:26:55.6809892+09:00)
+[2026-11-08T04:31:11.9452091+09:00] C:\src\llmzoo-walk\runs\walk-npuexp4\gemma-4-E4B-it\openvino-genai_npu_npu-sym-cw\run1 resumed (3 processes) after 255 s
+[2026-11-08T04:33:46.7022485+09:00] C:\src\llmzoo-walk\runs\walk-npuexp4\gemma-4-E4B-it\openvino-genai_npu_npu-sym-cw\run1 suspended (3 processes) while another lane holds busy.txt (another lane's lock 2026-11-08T04:33:45.5619150+09:00)
+[2026-11-08T04:37:01.8288380+09:00] C:\src\llmzoo-walk\runs\walk-npuexp4\gemma-4-E4B-it\openvino-genai_npu_npu-sym-cw\run1 resumed (3 processes) after 195 s
+[2026-11-08T04:37:08.3496015+09:00] C:\src\llmzoo-walk\runs\walk-npuexp4\gemma-4-E4B-it\openvino-genai_npu_npu-sym-cw\run1 suspended (3 processes) while another lane holds busy.txt (another lane's lock 2026-11-08T04:37:06.5890480+09:00)
+[2026-11-08T04:39:23.4099937+09:00] C:\src\llmzoo-walk\runs\walk-npuexp4\gemma-4-E4B-it\openvino-genai_npu_npu-sym-cw\run1 resumed (3 processes) after 135 s
+[2026-11-08T04:40:20.2872589+09:00] gemma-4-E4B-it\openvino-genai_npu_npu-sym-cw run 1 end: exit 0, OK, 2771.915 s
+[2026-11-08T04:40:20.3154473+09:00] chain done: OK

@@ -1,0 +1,70 @@
+{
+ "runner": "run_ovgenai.py",
+ "started": "2026-11-08T20:06:02.677921+09:00",
+ "argv": [
+  "--model-dir",
+  "C:\\src\\llmzoo-walk\\models\\OpenVINO__gemma-4-E2B-it-int4-ov",
+  "--device",
+  "CPU",
+  "--prompt-file",
+  "C:\\src\\llmzoo-walk\\pc\\short-chat.txt",
+  "--out",
+  "C:\\src\\llmzoo-walk\\runs\\walk-timed-b\\gemma-4-E2B-it\\openvino-genai_cpu_cpu\\run1.json"
+ ],
+ "pid": 10756,
+ "versions": {
+  "python": "3.12.10",
+  "openvino": "2026.4.1",
+  "openvino-genai": "2026.4.1.0",
+  "openvino-tokenizers": "2026.4.1.0",
+  "numpy": "2.5.4"
+ },
+ "available_devices": {
+  "CPU": "Intel(R) Core(TM) Ultra 9 386H",
+  "GPU.0": "Intel(R) Graphics (iGPU)",
+  "GPU.1": "NVIDIA GeForce RTX 5080 Laptop GPU (dGPU)",
+  "NPU": "Intel(R) AI Boost"
+ },
+ "prompt_sha256": "870aafb98e570e8fa1343ec051180237f4587233f49c0cc1391724e086d42d50",
+ "pipeline": "vlm",
+ "load_s": 6.864938199985772,
+ "pipeline_errors_before": [],
+ "templated_prompt": "<bos><|turn>user\nExplain what on-device AI means in simple terms.<turn|>\n<|turn>model\n",
+ "templated_prompt_sha256": "70b30bff1ab92ec74814a888864b33ac65c53a053b6d35e8dfa13b353830ffb2",
+ "gens": [
+  {
+   "gen": 1,
+   "regime": "cold",
+   "prompt_tokens": 20,
+   "generated_tokens": 128,
+   "stop": "length",
+   "ttft_ms": 6719.49951171875,
+   "tpot_ms": 48.59840393066406,
+   "prefill_tps": 2.9764121516967403,
+   "decode_tps": 20.57680744879425,
+   "generate_duration_ms": 12892.4716796875,
+   "generation_wall_s": 12.892660899990005,
+   "text": "Imagine you have a super-smart computer program, like a tiny, specialized brain, that lives **directly on your device** (like your smartphone, computer, or smart watch).\n\n**On-device AI simply means that the \"thinking\" or \"intelligence\" is happening right where the data is, instead of sending everything to a giant, distant cloud server.**\n\nHere’s a breakdown using simple analogies:\n\n### 1. The Traditional Way (Cloud AI)\n\nThink of this like sending a physical letter to a massive central office:\n\n* **You take a photo** (the data).\n* **You send the",
+   "text_sha256": "7f7c45efec1626568667f80f29543c071cb3fe740eccf4d6ce4edf55903a403b"
+  },
+  {
+   "gen": 2,
+   "regime": "warm",
+   "prompt_tokens": 20,
+   "generated_tokens": 128,
+   "stop": "length",
+   "ttft_ms": 238.55902099609375,
+   "tpot_ms": 46.578155517578125,
+   "prefill_tps": 83.83669549150056,
+   "decode_tps": 21.46929153565581,
+   "generate_duration_ms": 6154.7919921875,
+   "generation_wall_s": 6.154937299987068,
+   "text": "Imagine you have a super-smart computer program, like a tiny, specialized brain, that lives **directly on your device** (like your smartphone, computer, or smart watch).\n\n**On-device AI simply means that the \"thinking\" or \"intelligence\" is happening right where the data is, instead of sending everything to a giant, distant cloud server.**\n\nHere’s a breakdown using simple analogies:\n\n### 1. The Traditional Way (Cloud AI)\n\nThink of this like sending a physical letter to a massive central office:\n\n* **You take a photo** (the data).\n* **You send the",
+   "text_sha256": "7f7c45efec1626568667f80f29543c071cb3fe740eccf4d6ce4edf55903a403b"
+  }
+ ],
+ "status": "OK",
+ "peak_working_set_bytes": 3368456192,
+ "peak_pagefile_bytes": 2596438016,
+ "ended": "2026-11-08T20:06:30.367699+09:00"
+}

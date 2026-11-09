@@ -1,0 +1,25 @@
+{
+ "sitting": "walk-npuexp2",
+ "units": [
+  {
+   "model": "Qwen3-4B",
+   "cell": "Qwen3-4B\\openvino-genai_npu_npu-sym-g128",
+   "kind": "python",
+   "venv": "ovgenai",
+   "script": "run_ovgenai.py",
+   "args": [
+    "--model-dir",
+    "{ROOT}\\models\\z2-npu\\Qwen3-4B-int4-sym-g128-ov",
+    "--device",
+    "NPU",
+    "--cache-dir",
+    "{ROOT}\\ovcache\\Qwen3-4B_npu_sym_g128"
+   ],
+   "runs": 1,
+   "engines_gate": false,
+   "timeout_min": 30,
+   "ram_need_gb": 4.6,
+   "note": "OpenVINO GenAI 2026.4.1 on NPU (CACHE_DIR); the IR exported here by pc/export_npu.ps1 in the NPU form of the OpenVINO GenAI NPU docs (int4, --sym, --ratio 1.0, --group-size 128) from Qwen/Qwen3-4B@1cfa9a720891 with optimum-intel 2.2.0, nncf 3.4.0, transformers 5.5.4 (OpenVINO's int4-ov, int4_sym g128 r1.0 + AWQ, gave degenerate tokens on the NPU)"
+  }
+ ]
+}

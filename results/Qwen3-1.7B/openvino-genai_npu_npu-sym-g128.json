@@ -1,0 +1,536 @@
+{
+ "model": "Qwen3-1.7B",
+ "cell": "openvino-genai_npu_npu-sym-g128",
+ "runtime": "openvino-genai",
+ "runtime_detail": "OpenVINO GenAI 2026.4.1 (Python, pc/run_ovgenai.py)",
+ "device": "npu",
+ "device_name": "Intel(R) NPU",
+ "backend": "npu-sym-g128",
+ "backend_detail": "OpenVINO GenAI 2026.4.1 on NPU (CACHE_DIR); the IR exported here by pc/export_npu.ps1 in the NPU form of the OpenVINO GenAI NPU docs (int4, --sym, --ratio 1.0, --group-size 128) from Qwen/Qwen3-1.7B@70d244cc86cc with optimum-intel 2.2.0, nncf 3.4.0, transformers 5.5.4 (OpenVINO's int4-ov is not in the NPU form)",
+ "source": "windows-llm-zoo (Z2)",
+ "shelf": {
+  "repo": "Qwen/Qwen3-1.7B",
+  "folder": "revision 70d244cc86cc, exported here (Qwen3-1.7B-int4-sym-g128-ov)",
+  "quant": "int4_sym g128 r1.0",
+  "quant_source": "the IR's rt_info"
+ },
+ "unit": {
+  "kind": "python",
+  "venv": "ovgenai",
+  "script": "run_ovgenai.py",
+  "args": [
+   "--model-dir",
+   "{ROOT}\\models\\z2-npu\\Qwen3-1.7B-int4-sym-g128-ov",
+   "--device",
+   "NPU",
+   "--cache-dir",
+   "{ROOT}\\ovcache\\Qwen3-1.7B_npu_sym_g128"
+  ],
+  "model_id": null,
+  "path": null,
+  "engines_gate": false
+ },
+ "workload": {
+  "task": "short-chat",
+  "prompt": "prompts/text/short-chat.txt of edge-llm-bench (pc/short-chat.txt)",
+  "chat_template": "the package's own, one user turn",
+  "output_budget_tokens": 128,
+  "sampling": "greedy",
+  "regime": "cold (first generation of a fresh engine process; Foundry: of a fresh daemon)",
+  "counting": "runs=3 per sitting; run 1 of a GPU or NPU cell is not counted; a text-check failure is not counted"
+ },
+ "status": "measured",
+ "table": {
+  "sitting": "walk-timed-b",
+  "decode_tps": 38.39,
+  "cold_spread_pct": 0.49,
+  "cold_n": 2,
+  "prefill_tps": 10.3,
+  "ttft_ms": 1846.6,
+  "peak_working_set_mb": 3001,
+  "text_check": "6/6 PASS",
+  "decode_tps_warm": 40.08,
+  "gpu_adapter_used": [],
+  "generated_tokens": [
+   128
+  ],
+  "stop": [
+   "length"
+  ],
+  "same_cold_text": true,
+  "os_build": [
+   "26200.9711"
+  ]
+ },
+ "first_error": null,
+ "why_not_measured": null,
+ "sittings": [
+  {
+   "sitting": "walk-npuexp",
+   "mode": "first",
+   "runs": [
+    {
+     "run": 1,
+     "status": "OK",
+     "counted": false,
+     "why": "first pass (untimed)",
+     "exit_code": 0,
+     "timed_out": false,
+     "elapsed_s": 19.935,
+     "suspended_s": 0,
+     "gate": null,
+     "before": {
+      "load": {
+       "cpu": 41.8,
+       "build_ms": 1547,
+       "top": [
+        "python 19828 2.76 core",
+        "System 4 1.08 core",
+        "cl 8336 1 core",
+        "python 33828 0.96 core",
+        "cl 28328 0.35 core"
+       ]
+      },
+      "nvidia": "P0, 630 MHz, 14001 MHz, 18.97 W, 0 %, 0 MiB, 56",
+      "availGB": 14.3
+     },
+     "start": "2026-11-07T23:18:51.0279271+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 0,
+       "dedicated": 0
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 21,
+       "dedicated": 0
+      },
+      "0x00000000_0x00013E4C (npu?)": {
+       "shared": 1674,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": null,
+     "peak_working_set_mb": 3001,
+     "gens": [
+      {
+       "regime": "cold",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 35.773492047636125,
+       "prefill_tps": 8.413447245251167,
+       "ttft_ms": 2258.28955078125,
+       "text_sha256": "21ee9b4301c1b6087a7a1454963aca3942c2cefe082fc4f47b1860a361ff0cc1",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "<think>\nOkay, the user is asking for a simple explanation of what on-device AI means. Let me start by recalling what on-device AI is. From what I know, it's related to processing data locally on the device rather than sending it to the cloud. But I need to make sure I explain it in simple terms.\n\nFirst, maybe start with the basic concept. On-device AI means that the AI is run on the device itself, like a smartphone or a computer, instead of relying on the cloud. So, when you use an app, instead of sending your data to a server, the app does the processing locally. That"
+      },
+      {
+       "regime": "warm",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 36.65020247550766,
+       "prefill_tps": 9.68462619102522,
+       "ttft_ms": 1961.872314453125,
+       "text_sha256": "21ee9b4301c1b6087a7a1454963aca3942c2cefe082fc4f47b1860a361ff0cc1",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "<think>\nOkay, the user is asking for a simple explanation of what on-device AI means. Let me start by recalling what on-device AI is. From what I know, it's related to processing data locally on the device rather than sending it to the cloud. But I need to make sure I explain it in simple terms.\n\nFirst, maybe start with the basic concept. On-device AI means that the AI is run on the device itself, like a smartphone or a computer, instead of relying on the cloud. So, when you use an app, instead of sending your data to a server, the app does the processing locally. That"
+      }
+     ],
+     "load_s": 5.067922799993539,
+     "versions": {
+      "python": "3.12.10",
+      "openvino": "2026.4.1",
+      "openvino-genai": "2026.4.1.0",
+      "openvino-tokenizers": "2026.4.1.0",
+      "numpy": "2.5.4"
+     }
+    }
+   ],
+   "cold_n": 0,
+   "text_check": "2/2 PASS",
+   "host_env": [
+    {
+     "read": "2026-11-07T23:18:26.2526638+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    }
+   ],
+   "counts": false,
+   "unit_args": [
+    "--model-dir",
+    "{ROOT}\\models\\z2-npu\\Qwen3-1.7B-int4-sym-g128-ov",
+    "--device",
+    "NPU",
+    "--cache-dir",
+    "{ROOT}\\ovcache\\Qwen3-1.7B_npu_sym_g128"
+   ],
+   "unit_note": "OpenVINO GenAI 2026.4.1 on NPU (CACHE_DIR); the IR exported here by pc/export_npu.ps1 in the NPU form of the OpenVINO GenAI NPU docs (int4, --sym, --ratio 1.0, --group-size 128) from Qwen/Qwen3-1.7B@70d244cc86cc with optimum-intel 2.2.0, nncf 3.4.0, transformers 5.5.4 (OpenVINO's int4-ov is not in the NPU form)"
+  },
+  {
+   "sitting": "walk-timed-b",
+   "mode": "timed",
+   "runs": [
+    {
+     "run": 1,
+     "status": "OK",
+     "counted": false,
+     "why": "run 1 of a GPU / NPU cell (first process in the sitting)",
+     "exit_code": 0,
+     "timed_out": false,
+     "elapsed_s": 20.169,
+     "suspended_s": 0,
+     "gate": {
+      "quietGate": "quiet",
+      "cpuReads": [
+       2.9,
+       0.2,
+       0.9
+      ],
+      "nvidiaMiB": 0,
+      "availGB": 24.2,
+      "ramNeedGB": 3.4,
+      "gpuEngines": null
+     },
+     "before": {
+      "load": {
+       "cpu": 2.9,
+       "build_ms": 0,
+       "top": [
+        "System 4 0.37 core",
+        "NVDisplay.Container 3412 0.03 core",
+        "svchost 5260 0.02 core",
+        "igfxShaderDistributionService 5184 0.02 core",
+        "MsMpEng 5548 0.02 core"
+       ]
+      },
+      "nvidia": "P0, 330 MHz, 14001 MHz, 17.73 W, 0 %, 0 MiB, 48",
+      "availGB": 24.2
+     },
+     "start": "2026-11-09T00:47:43.7876990+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 0,
+       "dedicated": 0
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 21,
+       "dedicated": 0
+      },
+      "0x00000000_0x00013E4C (npu?)": {
+       "shared": 1673,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": null,
+     "peak_working_set_mb": 3003,
+     "gens": [
+      {
+       "regime": "cold",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 38.059657828367705,
+       "prefill_tps": 10.432589724440698,
+       "ttft_ms": 1821.216064453125,
+       "text_sha256": "21ee9b4301c1b6087a7a1454963aca3942c2cefe082fc4f47b1860a361ff0cc1",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "<think>\nOkay, the user is asking for a simple explanation of what on-device AI means. Let me start by recalling what on-device AI is. From what I know, it's related to processing data locally on the device rather than sending it to the cloud. But I need to make sure I explain it in simple terms.\n\nFirst, maybe start with the basic concept. On-device AI means that the AI is run on the device itself, like a smartphone or a computer, instead of relying on the cloud. So, when you use an app, instead of sending your data to a server, the app does the processing locally. That"
+      },
+      {
+       "regime": "warm",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 39.25304161883459,
+       "prefill_tps": 10.99237529673262,
+       "ttft_ms": 1728.4708251953125,
+       "text_sha256": "21ee9b4301c1b6087a7a1454963aca3942c2cefe082fc4f47b1860a361ff0cc1",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "<think>\nOkay, the user is asking for a simple explanation of what on-device AI means. Let me start by recalling what on-device AI is. From what I know, it's related to processing data locally on the device rather than sending it to the cloud. But I need to make sure I explain it in simple terms.\n\nFirst, maybe start with the basic concept. On-device AI means that the AI is run on the device itself, like a smartphone or a computer, instead of relying on the cloud. So, when you use an app, instead of sending your data to a server, the app does the processing locally. That"
+      }
+     ],
+     "load_s": 5.6184497000067495,
+     "versions": {
+      "python": "3.12.10",
+      "openvino": "2026.4.1",
+      "openvino-genai": "2026.4.1.0",
+      "openvino-tokenizers": "2026.4.1.0",
+      "numpy": "2.5.4"
+     }
+    },
+    {
+     "run": 2,
+     "status": "OK",
+     "counted": true,
+     "why": "",
+     "exit_code": 0,
+     "timed_out": false,
+     "elapsed_s": 16.516,
+     "suspended_s": 0,
+     "gate": {
+      "quietGate": "quiet",
+      "cpuReads": [
+       0.7,
+       0.7,
+       0.4
+      ],
+      "nvidiaMiB": 0,
+      "availGB": 24.2,
+      "ramNeedGB": 3.4,
+      "gpuEngines": null
+     },
+     "before": {
+      "load": {
+       "cpu": 2.4,
+       "build_ms": 0,
+       "top": [
+        "System 4 0.34 core",
+        "WmiPrvSE 7560 0.02 core",
+        "NVDisplay.Container 3412 0.02 core",
+        "powershell 16780 0.02 core"
+       ]
+      },
+      "nvidia": "P0, 142 MHz, 14001 MHz, 18.26 W, 0 %, 0 MiB, 50",
+      "availGB": 24.2
+     },
+     "start": "2026-11-09T00:48:43.3025161+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 0,
+       "dedicated": 0
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 21,
+       "dedicated": 0
+      },
+      "0x00000000_0x00013E4C (npu?)": {
+       "shared": 1674,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": null,
+     "peak_working_set_mb": 3002,
+     "gens": [
+      {
+       "regime": "cold",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 38.47984473838281,
+       "prefill_tps": 10.259950879483217,
+       "ttft_ms": 1851.8607177734375,
+       "text_sha256": "21ee9b4301c1b6087a7a1454963aca3942c2cefe082fc4f47b1860a361ff0cc1",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "<think>\nOkay, the user is asking for a simple explanation of what on-device AI means. Let me start by recalling what on-device AI is. From what I know, it's related to processing data locally on the device rather than sending it to the cloud. But I need to make sure I explain it in simple terms.\n\nFirst, maybe start with the basic concept. On-device AI means that the AI is run on the device itself, like a smartphone or a computer, instead of relying on the cloud. So, when you use an app, instead of sending your data to a server, the app does the processing locally. That"
+      },
+      {
+       "regime": "warm",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 39.76668263033766,
+       "prefill_tps": 10.999569481282895,
+       "ttft_ms": 1727.34033203125,
+       "text_sha256": "21ee9b4301c1b6087a7a1454963aca3942c2cefe082fc4f47b1860a361ff0cc1",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "<think>\nOkay, the user is asking for a simple explanation of what on-device AI means. Let me start by recalling what on-device AI is. From what I know, it's related to processing data locally on the device rather than sending it to the cloud. But I need to make sure I explain it in simple terms.\n\nFirst, maybe start with the basic concept. On-device AI means that the AI is run on the device itself, like a smartphone or a computer, instead of relying on the cloud. So, when you use an app, instead of sending your data to a server, the app does the processing locally. That"
+      }
+     ],
+     "load_s": 1.8487982999940868,
+     "versions": {
+      "python": "3.12.10",
+      "openvino": "2026.4.1",
+      "openvino-genai": "2026.4.1.0",
+      "openvino-tokenizers": "2026.4.1.0",
+      "numpy": "2.5.4"
+     }
+    },
+    {
+     "run": 3,
+     "status": "OK",
+     "counted": true,
+     "why": "",
+     "exit_code": 0,
+     "timed_out": false,
+     "elapsed_s": 17.245,
+     "suspended_s": 0,
+     "gate": {
+      "quietGate": "quiet",
+      "cpuReads": [
+       0.5,
+       0.1,
+       0.2
+      ],
+      "nvidiaMiB": 0,
+      "availGB": 24.2,
+      "ramNeedGB": 3.4,
+      "gpuEngines": null
+     },
+     "before": {
+      "load": {
+       "cpu": 2.8,
+       "build_ms": 0,
+       "top": [
+        "System 4 0.37 core",
+        "NVDisplay.Container 3412 0.03 core",
+        "powershell 16780 0.02 core",
+        "powershell 22292 0.02 core",
+        "NVDisplay.Container 10624 0.02 core"
+       ]
+      },
+      "nvidia": "P0, 172 MHz, 14001 MHz, 18.50 W, 0 %, 0 MiB, 52",
+      "availGB": 24.2
+     },
+     "start": "2026-11-09T00:49:39.2018501+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 0,
+       "dedicated": 0
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 21,
+       "dedicated": 0
+      },
+      "0x00000000_0x00013E4C (npu?)": {
+       "shared": 1673,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": null,
+     "peak_working_set_mb": 3001,
+     "gens": [
+      {
+       "regime": "cold",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 38.29071814085289,
+       "prefill_tps": 10.31803694256031,
+       "ttft_ms": 1841.435546875,
+       "text_sha256": "21ee9b4301c1b6087a7a1454963aca3942c2cefe082fc4f47b1860a361ff0cc1",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "<think>\nOkay, the user is asking for a simple explanation of what on-device AI means. Let me start by recalling what on-device AI is. From what I know, it's related to processing data locally on the device rather than sending it to the cloud. But I need to make sure I explain it in simple terms.\n\nFirst, maybe start with the basic concept. On-device AI means that the AI is run on the device itself, like a smartphone or a computer, instead of relying on the cloud. So, when you use an app, instead of sending your data to a server, the app does the processing locally. That"
+      },
+      {
+       "regime": "warm",
+       "prompt_tokens": 19,
+       "generated_tokens": 128,
+       "stop": "length",
+       "decode_tps": 40.40221584601464,
+       "prefill_tps": 11.01235047614789,
+       "ttft_ms": 1725.3355712890625,
+       "text_sha256": "21ee9b4301c1b6087a7a1454963aca3942c2cefe082fc4f47b1860a361ff0cc1",
+       "text_check": "PASS",
+       "text_flags": [],
+       "text": "<think>\nOkay, the user is asking for a simple explanation of what on-device AI means. Let me start by recalling what on-device AI is. From what I know, it's related to processing data locally on the device rather than sending it to the cloud. But I need to make sure I explain it in simple terms.\n\nFirst, maybe start with the basic concept. On-device AI means that the AI is run on the device itself, like a smartphone or a computer, instead of relying on the cloud. So, when you use an app, instead of sending your data to a server, the app does the processing locally. That"
+      }
+     ],
+     "load_s": 2.096914800000377,
+     "versions": {
+      "python": "3.12.10",
+      "openvino": "2026.4.1",
+      "openvino-genai": "2026.4.1.0",
+      "openvino-tokenizers": "2026.4.1.0",
+      "numpy": "2.5.4"
+     }
+    }
+   ],
+   "cold_n": 2,
+   "text_check": "6/6 PASS",
+   "host_env": [
+    {
+     "read": "2026-11-08T18:27:37.4700974+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "osCaption": "Microsoft Windows 11 Home",
+     "ramGB": 31.5,
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    }
+   ],
+   "cold_spread_pct": 0.49,
+   "decode_tps": 38.39,
+   "prefill_tps": 10.3,
+   "ttft_ms": 1846.6,
+   "decode_tps_warm": 40.08,
+   "peak_working_set_mb": 3001,
+   "gpu_adapter_used": [],
+   "generated_tokens": [
+    128
+   ],
+   "stop": [
+    "length"
+   ],
+   "same_cold_text": true,
+   "os_build": [
+    "26200.9711"
+   ],
+   "counts": true,
+   "unit_args": [
+    "--model-dir",
+    "{ROOT}\\models\\z2-npu\\Qwen3-1.7B-int4-sym-g128-ov",
+    "--device",
+    "NPU",
+    "--cache-dir",
+    "{ROOT}\\ovcache\\Qwen3-1.7B_npu_sym_g128"
+   ],
+   "unit_note": "OpenVINO GenAI 2026.4.1 on NPU (CACHE_DIR); the IR exported here by pc/export_npu.ps1 in the NPU form of the OpenVINO GenAI NPU docs (int4, --sym, --ratio 1.0, --group-size 128) from Qwen/Qwen3-1.7B@70d244cc86cc with optimum-intel 2.2.0, nncf 3.4.0, transformers 5.5.4 (OpenVINO's int4-ov is not in the NPU form)"
+  }
+ ]
+}

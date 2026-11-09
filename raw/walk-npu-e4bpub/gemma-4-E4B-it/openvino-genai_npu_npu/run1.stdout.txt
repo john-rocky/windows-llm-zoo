@@ -1,0 +1,3 @@
+ENGINE_PID 34156
+[ERROR] 01:07:22.576 [vpux-compiler] MultiClusterStrategyAssignment Pass failed : Cannot get per cluster memory shapes. Shape [1, 1, 4, 1], Unsupported distribution: #VPU.DistributionInfo<mode = <SEGMENTED>, num_tiles = [1, 1, 3, 1], num_clusters = 3 : i64, alignment = [1, 1, 2, 1], uniform_distributed_segments = unit>
+[ERROR] 01:07:22.580 [vpux-compiler] Failed Pass MultiClusterStrategyAssignment on Operation loc(fused<{name = "main", type = "Func"}>["main"])

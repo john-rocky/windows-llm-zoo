@@ -1,0 +1,7 @@
+# Z2 session anchors: four rows of edge-llm-bench matrices/dashboard-windows-v1.cells, copied as written, run by the
+# bench's own executor (scripts/windows_ssh_executor.py) at the head and the tail of each Z2 timed sitting, with
+# BENCH_RAW_ROOT pointing into this repo (raw/anchors/) so they never reach the bench's summary.
+windows litert-lm litert-community/gemma-4-E2B-it-litert-lm short-chat backend=cpu file=gemma-4-E2B-it.litertlm context-tokens=2048 runs=3
+windows litert-lm litert-community/gemma-4-E2B-it-litert-lm short-chat backend=npu file=gemma-4-E2B-it_intel_PTL.litertlm runs=3
+windows llama.cpp unsloth/gemma-4-E2B-it-GGUF short-chat backend=cuda file=gemma-4-E2B-it-Q4_K_M.gguf context-tokens=2048 runs=3
+windows litert-lm litert-community/Qwen3-1.7B short-chat backend=gpu adapter=igpu file=Qwen3-1.7B_dynamic_wi4b32_afp32.litertlm context-tokens=2048 runs=3

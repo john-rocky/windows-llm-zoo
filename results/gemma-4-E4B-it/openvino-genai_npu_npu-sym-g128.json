@@ -1,0 +1,141 @@
+{
+ "model": "gemma-4-E4B-it",
+ "cell": "openvino-genai_npu_npu-sym-g128",
+ "runtime": "openvino-genai",
+ "runtime_detail": "OpenVINO GenAI 2026.4.1 (Python, pc/run_ovgenai.py)",
+ "device": "npu",
+ "device_name": "Intel(R) NPU",
+ "backend": "npu-sym-g128",
+ "backend_detail": "OpenVINO GenAI 2026.4.1 on NPU (CACHE_DIR); the IR exported here by pc/export_npu.ps1 in the NPU form of the OpenVINO GenAI NPU docs (int4, --sym, --ratio 1.0, --group-size 128) from google/gemma-4-E4B-it@4ecc2ba63bca with optimum-intel 2.2.0, nncf 3.4.0, transformers 5.5.4 (OpenVINO's int4-ov is not in the NPU form)",
+ "source": "windows-llm-zoo (Z2)",
+ "shelf": {
+  "repo": "google/gemma-4-E4B-it",
+  "folder": "revision 4ecc2ba63bca, exported here (gemma-4-E4B-it-int4-sym-g128-ov)",
+  "quant": "int4_sym g128 r1.0",
+  "quant_source": "the IR's rt_info"
+ },
+ "unit": {
+  "kind": "python",
+  "venv": "ovgenai",
+  "script": "run_ovgenai.py",
+  "args": [
+   "--model-dir",
+   "{ROOT}\\models\\z2-npu\\gemma-4-E4B-it-int4-sym-g128-ov",
+   "--device",
+   "NPU",
+   "--cache-dir",
+   "{ROOT}\\ovcache\\gemma-4-E4B-it_npu_sym_g128"
+  ],
+  "model_id": null,
+  "path": null,
+  "engines_gate": false
+ },
+ "workload": {
+  "task": "short-chat",
+  "prompt": "prompts/text/short-chat.txt of edge-llm-bench (pc/short-chat.txt)",
+  "chat_template": "the package's own, one user turn",
+  "output_budget_tokens": 128,
+  "sampling": "greedy",
+  "regime": "cold (first generation of a fresh engine process; Foundry: of a fresh daemon)",
+  "counting": "runs=3 per sitting; run 1 of a GPU or NPU cell is not counted; a text-check failure is not counted"
+ },
+ "status": "error",
+ "table": null,
+ "first_error": "the engine process ended with exit code 0xC0000005 after 578 s and wrote no runner JSON (see the run's stderr file)",
+ "why_not_measured": "the engine process ended with exit code 0xC0000005 after 578 s and wrote no runner JSON (see the run's stderr file)",
+ "sittings": [
+  {
+   "sitting": "walk-npuexp3",
+   "mode": "first",
+   "runs": [
+    {
+     "run": 1,
+     "status": "no runner JSON",
+     "counted": false,
+     "why": "runner error",
+     "exit_code": -1073741819,
+     "timed_out": false,
+     "elapsed_s": 577.815,
+     "suspended_s": 0,
+     "gate": null,
+     "before": {
+      "load": {
+       "cpu": 89.7,
+       "build_ms": 0,
+       "top": [
+        "python 23432 7.62 core",
+        "python 19760 5.41 core",
+        "System 4 1.24 core",
+        "svchost 5260 0.02 core",
+        "wininit 1412 0.02 core"
+       ]
+      },
+      "nvidia": "P0, 5250 MHz, 14001 MHz, 20.02 W, 0 %, 0 MiB, 59",
+      "availGB": 18
+     },
+     "start": "2026-11-08T02:37:51.2234843+09:00",
+     "os_build": "26200.9711",
+     "gpu_peak_mib": {
+      "0x00000000_0x00012C48 (nvidia)": {
+       "shared": 0,
+       "dedicated": 0
+      },
+      "0x00000000_0x0001260E (intel-gpu)": {
+       "shared": 21,
+       "dedicated": 0
+      },
+      "0x00000000_0x00013E4C (npu?)": {
+       "shared": 1961,
+       "dedicated": 0
+      }
+     },
+     "gpu_adapter_used": null,
+     "peak_working_set_mb": null,
+     "error": "the engine process ended with exit code 0xC0000005 after 578 s and wrote no runner JSON (see the run's stderr file)"
+    }
+   ],
+   "cold_n": 0,
+   "text_check": "0/0 PASS",
+   "host_env": [
+    {
+     "read": "2026-11-08T02:37:39.1374870+09:00",
+     "osBuild": "26200.9711",
+     "machine": "Stealth 16 AI+ B3WI",
+     "cpu": "Intel(R) Core(TM) Ultra 9 386H",
+     "osDisplayVersion": "25H2",
+     "gpus": [
+      {
+       "name": "Intel(R) Graphics",
+       "driverVersion": "32.0.101.8724",
+       "driverDate": "04/16/2026 09:00:00"
+      },
+      {
+       "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+       "driverVersion": "32.0.15.9174",
+       "driverDate": "12/30/2025 09:00:00"
+      }
+     ],
+     "npu": [
+      {
+       "name": "Intel(R) NPU",
+       "status": "OK",
+       "driverVersion": "32.0.100.4841"
+      }
+     ],
+     "nvidiaDriver": "591.74",
+     "powerScheme": "電源設定の GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (バランス)"
+    }
+   ],
+   "counts": false,
+   "unit_args": [
+    "--model-dir",
+    "{ROOT}\\models\\z2-npu\\gemma-4-E4B-it-int4-sym-g128-ov",
+    "--device",
+    "NPU",
+    "--cache-dir",
+    "{ROOT}\\ovcache\\gemma-4-E4B-it_npu_sym_g128"
+   ],
+   "unit_note": "OpenVINO GenAI 2026.4.1 on NPU (CACHE_DIR); the IR exported here by pc/export_npu.ps1 in the NPU form of the OpenVINO GenAI NPU docs (int4, --sym, --ratio 1.0, --group-size 128) from google/gemma-4-E4B-it@4ecc2ba63bca with optimum-intel 2.2.0, nncf 3.4.0, transformers 5.5.4 (OpenVINO's int4-ov is not in the NPU form)"
+  }
+ ]
+}

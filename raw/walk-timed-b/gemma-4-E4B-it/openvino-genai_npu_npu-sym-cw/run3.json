@@ -1,0 +1,72 @@
+{
+ "runner": "run_ovgenai.py",
+ "started": "2026-11-09T00:55:17.048383+09:00",
+ "argv": [
+  "--model-dir",
+  "C:\\src\\llmzoo-walk\\models\\z2-npu\\gemma-4-E4B-it-int4-sym-cw-ov",
+  "--device",
+  "NPU",
+  "--cache-dir",
+  "C:\\src\\llmzoo-walk\\ovcache\\gemma-4-E4B-it_npu_sym_cw",
+  "--prompt-file",
+  "C:\\src\\llmzoo-walk\\pc\\short-chat.txt",
+  "--out",
+  "C:\\src\\llmzoo-walk\\runs\\walk-timed-b\\gemma-4-E4B-it\\openvino-genai_npu_npu-sym-cw\\run3.json"
+ ],
+ "pid": 35344,
+ "versions": {
+  "python": "3.12.10",
+  "openvino": "2026.4.1",
+  "openvino-genai": "2026.4.1.0",
+  "openvino-tokenizers": "2026.4.1.0",
+  "numpy": "2.5.4"
+ },
+ "available_devices": {
+  "CPU": "Intel(R) Core(TM) Ultra 9 386H",
+  "GPU.0": "Intel(R) Graphics (iGPU)",
+  "GPU.1": "NVIDIA GeForce RTX 5080 Laptop GPU (dGPU)",
+  "NPU": "Intel(R) AI Boost"
+ },
+ "prompt_sha256": "870aafb98e570e8fa1343ec051180237f4587233f49c0cc1391724e086d42d50",
+ "pipeline": "vlm",
+ "load_s": 5.137335700012045,
+ "pipeline_errors_before": [],
+ "templated_prompt": "<bos><|turn>user\nExplain what on-device AI means in simple terms.<turn|>\n<|turn>model\n",
+ "templated_prompt_sha256": "70b30bff1ab92ec74814a888864b33ac65c53a053b6d35e8dfa13b353830ffb2",
+ "gens": [
+  {
+   "gen": 1,
+   "regime": "cold",
+   "prompt_tokens": 20,
+   "generated_tokens": 128,
+   "stop": "length",
+   "ttft_ms": 1135.1563720703125,
+   "tpot_ms": 75.11551666259766,
+   "prefill_tps": 17.618717995234217,
+   "decode_tps": 13.312828619575095,
+   "generate_duration_ms": 10676.1279296875,
+   "generation_wall_s": 10.676365799998166,
+   "text": "Imagine you have a small, smart assistant that lives *inside* your device (like your phone or laptop), rather than needing to constantly connect to a giant brain far away in the cloud.\n\n**That's essentially what On-Device AI means.**\n\nHere is a simple breakdown using different analogies:\n\n---\n\n### 🧠 The Simple Analogy (The Brain)\n\nImagine you have a small, specialized brain inside your phone.\n\n* **Without On-Device AI (Cloud-Based):** If you ask your phone a complex question, it has to send your question to a massive company headquarters (the cloud). That headquarters",
+   "text_sha256": "2ef9da116f53e90959e3c98982308c968eebd45e46b23a0637d71321fb039083"
+  },
+  {
+   "gen": 2,
+   "regime": "warm",
+   "prompt_tokens": 20,
+   "generated_tokens": 128,
+   "stop": "length",
+   "ttft_ms": 834.6666870117188,
+   "tpot_ms": 74.97474670410156,
+   "prefill_tps": 23.96166075778606,
+   "decode_tps": 13.3378243203227,
+   "generate_duration_ms": 10357.4111328125,
+   "generation_wall_s": 10.357568800012814,
+   "text": "Imagine you have a small, smart assistant that lives *inside* your device (like your phone or laptop), rather than needing to constantly connect to a giant brain far away in the cloud.\n\n**That's essentially what On-Device AI means.**\n\nHere is a simple breakdown using different analogies:\n\n---\n\n### 🧠 The Simple Analogy (The Brain)\n\nImagine you have a small, specialized brain inside your phone.\n\n* **Without On-Device AI (Cloud-Based):** If you ask your phone a complex question, it has to send your question to a massive company headquarters (the cloud). That headquarters",
+   "text_sha256": "2ef9da116f53e90959e3c98982308c968eebd45e46b23a0637d71321fb039083"
+  }
+ ],
+ "status": "OK",
+ "peak_working_set_bytes": 7377518592,
+ "peak_pagefile_bytes": 2888798208,
+ "ended": "2026-11-09T00:55:44.057110+09:00"
+}

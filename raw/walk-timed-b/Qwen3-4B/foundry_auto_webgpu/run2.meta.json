@@ -1,0 +1,116 @@
+{
+    "cell":  "Qwen3-4B\\foundry_auto_webgpu",
+    "run":  2,
+    "mode":  "timed",
+    "sitting":  "walk-timed-b",
+    "start":  "2026-11-09T00:32:27.7948010+09:00",
+    "osBuild":  "26200.9711",
+    "gate":  {
+                 "quietGate":  "quiet",
+                 "cpuReads":  [
+                                  0.6,
+                                  0.9,
+                                  0.3
+                              ],
+                 "nvidiaMiB":  0,
+                 "availGB":  24.2,
+                 "ramNeedGB":  5.4,
+                 "gpuEngines":  0
+             },
+    "before":  {
+                   "load":  {
+                                "cpu":  1.1,
+                                "build_ms":  0,
+                                "top":  [
+                                            "System 4 0.14 core",
+                                            "powershell 34044 0.02 core",
+                                            "svchost 5260 0.02 core"
+                                        ]
+                            },
+                   "nvidia":  "P0, 180 MHz, 14001 MHz, 18.46 W, 0 %, 0 MiB, 52",
+                   "availGB":  24.2
+               },
+    "foreignDaemon":  "none",
+    "daemonStop0":  "stopped",
+    "serverStart":  {
+                        "code":  0,
+                        "s":  9.283,
+                        "text":  "笆 Starting Foundry Local server\nOpenVINOExecutionProvider: 0%\nNvTensorRTRTXExecutionProvider: 0%\nCUDAExecutionProvider: 0%\nWebGpuExecutionProvider: 0%\n笳・success: Server ready (http://127.0.0.1:55436)\n  Public API: http://127.0.0.1:55436/v1/\n  Local API (BYOM): http://127.0.0.1:55436/catalogs/local/v1/"
+                    },
+    "daemonPid":  25472,
+    "modelLoad":  {
+                      "code":  0,
+                      "s":  14.064,
+                      "text":  "笆 Loading model (qwen3-4b-generic-gpu:2, 2.9 GB)\n笳・success: Loaded \u0027qwen3-4b\u0027 (GPU variant \u0027qwen3-4b-generic-gpu:2\u0027) into memory."
+                  },
+    "daemonPeakAfterLoadBytes":  1350742016,
+    "gpuAfterLoad":  {
+                         "0x00000000_0x00012C48":  {
+                                                       "shared":  74,
+                                                       "dedicated":  4548
+                                                   },
+                         "0x00000000_0x0001260E":  {
+                                                       "shared":  23,
+                                                       "dedicated":  0
+                                                   },
+                         "0x00000000_0x00013E4C":  {
+                                                       "shared":  0,
+                                                       "dedicated":  0
+                                                   }
+                     },
+    "command":  "C:\\src\\llmzoo-walk\\.venv-genai\\Scripts\\python.exe -u C:\\src\\llmzoo-walk\\pc\\run_foundry.py --model qwen3-4b-generic-gpu:2 --path /v1 --prompt-file C:\\src\\llmzoo-walk\\pc\\short-chat.txt --out C:\\src\\llmzoo-walk\\runs\\walk-timed-b\\Qwen3-4B\\foundry_auto_webgpu\\run2.json",
+    "engine":  {
+                   "exitCode":  0,
+                   "timedOut":  false,
+                   "yielded":  false,
+                   "suspendedSeconds":  0,
+                   "suspensions":  0,
+                   "enginePid":  22380,
+                   "elapsedSeconds":  4.658,
+                   "peakWorkingSetBytes":  24358912,
+                   "gpuMiBPeak":  {
+
+                                  },
+                   "watchPeakWorkingSetBytes":  1437028352,
+                   "watchGpuMiBPeak":  {
+                                           "0x00000000_0x00012C48":  {
+                                                                         "shared":  76,
+                                                                         "dedicated":  4624
+                                                                     },
+                                           "0x00000000_0x0001260E":  {
+                                                                         "shared":  23,
+                                                                         "dedicated":  0
+                                                                     },
+                                           "0x00000000_0x00013E4C":  {
+                                                                         "shared":  0,
+                                                                         "dedicated":  0
+                                                                     }
+                                       },
+                   "nvidiaSamples":  [
+
+                                     ]
+               },
+    "daemonPeakWorkingSetBytes":  1437028352,
+    "modelUnload":  {
+                        "code":  0,
+                        "s":  0.165,
+                        "text":  "笳・success: Unloaded \u0027qwen3-4b-generic-gpu:2\u0027 from memory."
+                    },
+    "daemonStop":  "stopped",
+    "after":  {
+                  "load":  {
+                               "cpu":  1,
+                               "build_ms":  0,
+                               "top":  [
+                                           "svchost 5088 0.05 core",
+                                           "System 4 0.03 core",
+                                           "LEDKeeper2 8936 0.02 core",
+                                           "svchost 5260 0.02 core",
+                                           "MsMpEng 5548 0.02 core"
+                                       ]
+                           },
+                  "nvidia":  "P0, 4057 MHz, 14001 MHz, 18.64 W, 0 %, 0 MiB, 52"
+              },
+    "end":  "2026-11-09T00:33:01.1619691+09:00",
+    "tries":  1
+}

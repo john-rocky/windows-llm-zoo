@@ -1,0 +1,118 @@
+{
+    "cell":  "Qwen3-1.7B\\foundry_auto_webgpu",
+    "run":  2,
+    "mode":  "timed",
+    "sitting":  "walk-timed-b",
+    "start":  "2026-11-08T23:46:15.4603146+09:00",
+    "osBuild":  "26200.9711",
+    "gate":  {
+                 "quietGate":  "quiet",
+                 "cpuReads":  [
+                                  1.2,
+                                  0.7,
+                                  0.3
+                              ],
+                 "nvidiaMiB":  0,
+                 "availGB":  24,
+                 "ramNeedGB":  3.7,
+                 "gpuEngines":  0
+             },
+    "before":  {
+                   "load":  {
+                                "cpu":  2.2,
+                                "build_ms":  0,
+                                "top":  [
+                                            "System 4 0.2 core",
+                                            "svchost 5480 0.06 core",
+                                            "powershell 23556 0.02 core",
+                                            "conhost 3608 0.02 core",
+                                            "NVDisplay.Container 3412 0.02 core"
+                                        ]
+                            },
+                   "nvidia":  "P0, 75 MHz, 14001 MHz, 18.31 W, 0 %, 0 MiB, 51",
+                   "availGB":  24
+               },
+    "foreignDaemon":  "none",
+    "daemonStop0":  "stopped",
+    "serverStart":  {
+                        "code":  0,
+                        "s":  9.102,
+                        "text":  "笆 Starting Foundry Local server\nOpenVINOExecutionProvider: 0%\nNvTensorRTRTXExecutionProvider: 0%\nCUDAExecutionProvider: 0%\nWebGpuExecutionProvider: 0%\n笳・success: Server ready (http://127.0.0.1:55180)\n  Public API: http://127.0.0.1:55180/v1/\n  Local API (BYOM): http://127.0.0.1:55180/catalogs/local/v1/"
+                    },
+    "daemonPid":  19184,
+    "modelLoad":  {
+                      "code":  0,
+                      "s":  19.478,
+                      "text":  "笆 Loading model (qwen3-1.7b-generic-gpu:2, 1.4 GB)\n笳・success: Loaded \u0027qwen3-1.7b\u0027 (GPU variant \u0027qwen3-1.7b-generic-gpu:2\u0027) into memory."
+                  },
+    "daemonPeakAfterLoadBytes":  2680184832,
+    "gpuAfterLoad":  {
+                         "0x00000000_0x00012C48":  {
+                                                       "shared":  74,
+                                                       "dedicated":  2500
+                                                   },
+                         "0x00000000_0x0001260E":  {
+                                                       "shared":  23,
+                                                       "dedicated":  0
+                                                   },
+                         "0x00000000_0x00013E4C":  {
+                                                       "shared":  0,
+                                                       "dedicated":  0
+                                                   }
+                     },
+    "command":  "C:\\src\\llmzoo-walk\\.venv-genai\\Scripts\\python.exe -u C:\\src\\llmzoo-walk\\pc\\run_foundry.py --model qwen3-1.7b-generic-gpu:2 --path /v1 --prompt-file C:\\src\\llmzoo-walk\\pc\\short-chat.txt --out C:\\src\\llmzoo-walk\\runs\\walk-timed-b\\Qwen3-1.7B\\foundry_auto_webgpu\\run2.json",
+    "engine":  {
+                   "exitCode":  0,
+                   "timedOut":  false,
+                   "yielded":  false,
+                   "suspendedSeconds":  0,
+                   "suspensions":  0,
+                   "enginePid":  34836,
+                   "elapsedSeconds":  3.613,
+                   "peakWorkingSetBytes":  24317952,
+                   "gpuMiBPeak":  {
+
+                                  },
+                   "watchPeakWorkingSetBytes":  2680184832,
+                   "watchGpuMiBPeak":  {
+                                           "0x00000000_0x00012C48":  {
+                                                                         "shared":  76,
+                                                                         "dedicated":  2576
+                                                                     },
+                                           "0x00000000_0x0001260E":  {
+                                                                         "shared":  23,
+                                                                         "dedicated":  0
+                                                                     },
+                                           "0x00000000_0x00013E4C":  {
+                                                                         "shared":  0,
+                                                                         "dedicated":  0
+                                                                     }
+                                       },
+                   "nvidiaSamples":  [
+
+                                     ]
+               },
+    "daemonPeakWorkingSetBytes":  2680184832,
+    "modelUnload":  {
+                        "code":  0,
+                        "s":  0.188,
+                        "text":  "笳・success: Unloaded \u0027qwen3-1.7b-generic-gpu:2\u0027 from memory."
+                    },
+    "daemonStop":  "stopped",
+    "after":  {
+                  "load":  {
+                               "cpu":  0.7,
+                               "build_ms":  0,
+                               "top":  [
+                                           "System 4 0.05 core",
+                                           "WmiPrvSE 7560 0.02 core",
+                                           "WUDFHost 1836 0.02 core",
+                                           "SoundTune 13836 0.02 core",
+                                           "WmiApSrv 34592 0.02 core"
+                                       ]
+                           },
+                  "nvidia":  "P0, 397 MHz, 14001 MHz, 18.37 W, 0 %, 0 MiB, 51"
+              },
+    "end":  "2026-11-08T23:46:53.0016618+09:00",
+    "tries":  1
+}

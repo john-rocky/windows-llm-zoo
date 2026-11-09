@@ -1,0 +1,29 @@
+
+--- foundry server stop  [2026-11-09T00:40:24.1533242+09:00]
+笳・success: Server stopped.
+[exit=0, 0.63 s]
+
+--- foundry server start  [2026-11-09T00:40:24.7910440+09:00]
+笆 Starting Foundry Local server
+OpenVINOExecutionProvider: 0%
+NvTensorRTRTXExecutionProvider: 0%
+CUDAExecutionProvider: 0%
+WebGpuExecutionProvider: 0%
+笳・success: Server ready (http://127.0.0.1:60855)
+  Public API: http://127.0.0.1:60855/v1/
+  Local API (BYOM): http://127.0.0.1:60855/catalogs/local/v1/
+[exit=0, 8.44 s]
+
+--- foundry model load gemma-4-e2b-it-generic-gpu:3  [2026-11-09T00:40:33.2301556+09:00]
+笆 Loading model (gemma-4-e2b-it-generic-gpu:3, 6.9 GB)
+笳・success: Loaded 'gemma-4-e2b-it' (GPU variant 'gemma-4-e2b-it-generic-gpu:3') into 
+memory.
+[exit=0, 29.37 s]
+
+--- foundry model unload gemma-4-e2b-it-generic-gpu:3  [2026-11-09T00:41:17.0886331+09:00]
+笳・success: Unloaded 'gemma-4-e2b-it-generic-gpu:3' from memory.
+[exit=0, 0.46 s]
+
+--- foundry server stop  [2026-11-09T00:41:17.5507057+09:00]
+笳・success: Server stopped.
+[exit=0, 3.68 s]

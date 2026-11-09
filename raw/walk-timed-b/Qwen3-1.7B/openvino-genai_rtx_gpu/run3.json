@@ -1,0 +1,72 @@
+{
+ "runner": "run_ovgenai.py",
+ "started": "2026-11-08T18:43:52.772799+09:00",
+ "argv": [
+  "--model-dir",
+  "C:\\src\\llmzoo-walk\\models\\OpenVINO__Qwen3-1.7B-int4-ov",
+  "--device",
+  "GPU.1",
+  "--cache-dir",
+  "C:\\src\\llmzoo-walk\\ovcache\\Qwen3-1.7B_gpu1",
+  "--prompt-file",
+  "C:\\src\\llmzoo-walk\\pc\\short-chat.txt",
+  "--out",
+  "C:\\src\\llmzoo-walk\\runs\\walk-timed-b\\Qwen3-1.7B\\openvino-genai_rtx_gpu\\run3.json"
+ ],
+ "pid": 34680,
+ "versions": {
+  "python": "3.12.10",
+  "openvino": "2026.4.1",
+  "openvino-genai": "2026.4.1.0",
+  "openvino-tokenizers": "2026.4.1.0",
+  "numpy": "2.5.4"
+ },
+ "available_devices": {
+  "CPU": "Intel(R) Core(TM) Ultra 9 386H",
+  "GPU.0": "Intel(R) Graphics (iGPU)",
+  "GPU.1": "NVIDIA GeForce RTX 5080 Laptop GPU (dGPU)",
+  "NPU": "Intel(R) AI Boost"
+ },
+ "prompt_sha256": "870aafb98e570e8fa1343ec051180237f4587233f49c0cc1391724e086d42d50",
+ "pipeline": "llm",
+ "load_s": 15.08260120000341,
+ "pipeline_errors_before": [],
+ "templated_prompt": "<|im_start|>user\nExplain what on-device AI means in simple terms.<|im_end|>\n<|im_start|>assistant\n",
+ "templated_prompt_sha256": "9d2fe60da55b75283dbd26cd6f8db55bf12e5c3c0c1f37670067623f6461074d",
+ "gens": [
+  {
+   "gen": 1,
+   "regime": "cold",
+   "prompt_tokens": 19,
+   "generated_tokens": 128,
+   "stop": "length",
+   "ttft_ms": 401.3190002441406,
+   "tpot_ms": 119.52632904052734,
+   "prefill_tps": 47.34388351521218,
+   "decode_tps": 8.3663575048886,
+   "generate_duration_ms": 15582.3681640625,
+   "generation_wall_s": 15.582475300005171,
+   "text": "<think>\nOkay, the user is asking for a simple explanation of what on-device AI means. Let me start by recalling what I know about on-device AI. From what I remember, on-device AI refers to AI models that run on the device itself, rather than being sent to the cloud. So, the user might be confused about how AI works and the difference between on-device and cloud-based AI.\n\nFirst, I need to break down the key points. On-device AI means that the AI model is installed on the device, like a smartphone or a computer, instead of being stored in the cloud. This is important because it affects how",
+   "text_sha256": "69b3d52eb6c1cccca401a102fe28721109f0b75cde6f9dacad441f369f23b00c"
+  },
+  {
+   "gen": 2,
+   "regime": "warm",
+   "prompt_tokens": 19,
+   "generated_tokens": 128,
+   "stop": "length",
+   "ttft_ms": 528.5223999023438,
+   "tpot_ms": 199.5337677001953,
+   "prefill_tps": 35.949280491253866,
+   "decode_tps": 5.011683042554111,
+   "generate_duration_ms": 25870.109375,
+   "generation_wall_s": 25.87019909999799,
+   "text": "<think>\nOkay, the user is asking for a simple explanation of what on-device AI means. Let me start by recalling what I know about on-device AI. From what I remember, on-device AI refers to AI models that run on the device itself, rather than being sent to the cloud. So, the user might be confused about how AI works and the difference between on-device and cloud-based AI.\n\nFirst, I need to break down the key points. On-device AI means that the AI model is installed on the device, like a smartphone or a computer, instead of being stored in the cloud. This is important because it affects how",
+   "text_sha256": "69b3d52eb6c1cccca401a102fe28721109f0b75cde6f9dacad441f369f23b00c"
+  }
+ ],
+ "status": "OK",
+ "peak_working_set_bytes": 2016112640,
+ "peak_pagefile_bytes": 4015763456,
+ "ended": "2026-11-08T18:44:50.825981+09:00"
+}
