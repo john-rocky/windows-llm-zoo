@@ -55,7 +55,7 @@ EOF
 EOF
     ;;
   push)
-    # mtools/variant_pkg.py = the overlay tool of john-rocky/gemma-4-e4b-on-foundry-local, vendored (README "Files")
+    # mtools/variant_pkg.py = the overlay tool of john-rocky/gemma-4-e4b-on-foundry-local, vendored (docs/files.md)
     COPYFILE_DISABLE=1 tar -cf - -C "$K" pc shelf mtools \
       | ssh winpc "New-Item -ItemType Directory -Force $RF | Out-Null; tar -xf - -C $RF"
     echo "pushed pc/, shelf/, mtools/ (variant_pkg.py sha256 $(shasum -a 256 "$K/mtools/variant_pkg.py" | cut -c1-16))"

@@ -130,7 +130,7 @@ def overlays():
         if e2b:  # the catalog's WebGPU package: the adapter index on the sessions it already puts on WebGPU
             out.append({"dst": overlay(f"gemma-4-E2B-it_webgpu_a{k}"), "src": e2b, "place": "@webgpu",
                         "webgpu_option": [f"adapterIndex={k}"]})
-        # step 11 of the john-rocky/gemma-4-e4b-on-foundry-local README: the CUDA int4 package with every session on WebGPU
+        # step 11 of the john-rocky/gemma-4-e4b-on-foundry-local docs/steps.md: the CUDA int4 package with every session on WebGPU
         out.append({"dst": overlay(f"gemma-4-E4B-it_webgpu_a{k}"), "src": hub(E4B_REPO, "cuda-int4-8k"),
                     "place": "decoder=webgpu,embedding=webgpu,vision=webgpu,speech=webgpu",
                     "webgpu_option": [f"adapterIndex={k}"]})

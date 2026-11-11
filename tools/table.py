@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """Write the table of RESULTS_LLM_WINDOWS.md (between its `<!-- table:begin -->` and `<!-- table:end -->` lines) from
-results/<model>/<cell>.json, plus the rows of the cells that are not measured, each with its reason (NOT_RUN below,
-the "測らない" cells of FACTS.md D).
+results/<model>/<cell>.json, plus the rows of the cells that are not measured, each with its reason (NOT_RUN below).
 
     python3 tools/table.py
 """
@@ -18,7 +17,7 @@ RUNTIME_NAME = {"litert-lm": "LiteRT-LM v0.19.0", "llama.cpp": "llama.cpp b11721
                 "foundry": "Foundry Local 0.13.0", "openvino-genai": "OpenVINO GenAI 2026.4.1"}
 ALL = ["Qwen3-0.6B", "Qwen3-1.7B", "Qwen3-4B", "gemma-4-E2B-it", "gemma-4-E4B-it"]
 QWEN = ALL[:3]
-# (runtime, device, backend, models, reason): cells nobody measures in this lane, with the reason read in r1
+# (runtime, device, backend, models, reason): cells that are not measured, with the reason
 NOT_RUN = [
     ("litert-lm", "npu", "npu", QWEN + ["gemma-4-E4B-it"],
      "no Intel NPU bundle in the litert-community repo (edge-llm-bench windows/README)"),
@@ -61,7 +60,7 @@ def record_path(d):
 
 
 def package(d):
-    """repo + folder or file + quantization (the quant-per-arm-rule), from the results JSON's shelf."""
+    """repo + folder or file + quantization, from the results JSON's shelf."""
     sh = d.get("shelf") or {}
     if not sh:
         return "—"
@@ -83,7 +82,7 @@ def row(d):
         dec, spread, check = "out", " (spread > 5 %)", "—"
     else:
         why = (d.get("why_not_measured") or st or "").replace("|", "/")
-        dec, spread, check = "未", f" ({why})", ("FAIL" if st == "output-check" else "—")
+        dec, spread, check = "not measured", f" ({why})", ("FAIL" if st == "output-check" else "—")
     mem = t.get("peak_working_set_mb")
     return (f"| {d['model']} | {RUNTIME_NAME.get(d['runtime'], d['runtime'])} | {DEVICE_NAME.get(d['device'], d['device'])} | "
             f"{d.get('backend')} | {package(d)} | {dec}{spread} | {fmt(t.get('prefill_tps'))} | {fmt(t.get('ttft_ms'), 0)} | "
@@ -96,7 +95,7 @@ def main():
         d = json.loads(p.read_text(encoding="utf-8"))
         cells[(d["model"], d["device"], d["runtime"], d["cell"])] = d
     lines = ["| model | runtime | device | backend / EP | package · quantization | decode tok/s (cold) | prefill tok/s | "
-             "TTFT ms | peak memory (MiB here, see above) | output check | sitting | record |", "|---|---|---|---|---|---|---|---|---|---|---|---|"]
+             "TTFT ms | peak memory (MiB) | output check | session | record |", "|---|---|---|---|---|---|---|---|---|---|---|---|"]
     for m in MODELS:
         for dev in DEVICES:
             for rt in RUNTIMES:
@@ -104,7 +103,7 @@ def main():
                     lines.append(row(cells[key]))
                 for r, d, b, ms, why in NOT_RUN:
                     if r == rt and d == dev and m in ms:
-                        lines.append(f"| {m} | {RUNTIME_NAME[r]} | {DEVICE_NAME[d]} | {b} | — | 未 ({why}) | — | — | — | — | — | — |")
+                        lines.append(f"| {m} | {RUNTIME_NAME[r]} | {DEVICE_NAME[d]} | {b} | — | not run ({why}) | — | — | — | — | — | — |")
     text = OUT.read_text(encoding="utf-8") if OUT.is_file() else "<!-- table:begin -->\n<!-- table:end -->\n"
     head, rest = text.split("<!-- table:begin -->", 1)
     _, tail = rest.split("<!-- table:end -->", 1)

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 406" width="860" height="406" role="img" aria-labelledby="t d" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title id="t">Results per model on one Windows laptop</title>
+<desc id="d">Qwen3 0.6B: 18 measured, 3 not counted. Qwen3 1.7B: 18 measured, 3 not counted. Qwen3 4B: 16 measured, 5 not counted. Gemma 4 E2B: 19 measured, 2 not counted. Gemma 4 E4B: 15 measured, 6 not counted.</desc>
+<text x="0" y="28" font-size="20" font-weight="600" fill="#0b0b0b">Results per model on one Windows laptop</text>
+<rect x="0" y="44" width="14" height="14" rx="4" fill="#2a78d6"/>
+<text x="20" y="56" font-size="14" font-weight="400" fill="#52514e">Measured, reply passed the text check</text>
+<rect x="0" y="66" width="14" height="14" rx="4" fill="#eb6834"/>
+<text x="20" y="78" font-size="14" font-weight="400" fill="#52514e">Not counted: error, time limit, timing spread over 5 % or failed text check</text>
+<text x="0" y="118" font-size="15" font-weight="400" fill="#0b0b0b">Qwen3 0.6B: 18 measured, 3 not counted</text>
+<rect x="0" y="126" width="735.143" height="24" rx="4" fill="#2a78d6"/>
+<rect x="737.143" y="126" width="120.857" height="24" rx="4" fill="#eb6834"/>
+<text x="0" y="180" font-size="15" font-weight="400" fill="#0b0b0b">Qwen3 1.7B: 18 measured, 3 not counted</text>
+<rect x="0" y="188" width="735.143" height="24" rx="4" fill="#2a78d6"/>
+<rect x="737.143" y="188" width="120.857" height="24" rx="4" fill="#eb6834"/>
+<text x="0" y="242" font-size="15" font-weight="400" fill="#0b0b0b">Qwen3 4B: 16 measured, 5 not counted</text>
+<rect x="0" y="250" width="653.238" height="24" rx="4" fill="#2a78d6"/>
+<rect x="655.238" y="250" width="202.762" height="24" rx="4" fill="#eb6834"/>
+<text x="0" y="304" font-size="15" font-weight="400" fill="#0b0b0b">Gemma 4 E2B: 19 measured, 2 not counted</text>
+<rect x="0" y="312" width="776.095" height="24" rx="4" fill="#2a78d6"/>
+<rect x="778.095" y="312" width="79.9048" height="24" rx="4" fill="#eb6834"/>
+<text x="0" y="366" font-size="15" font-weight="400" fill="#0b0b0b">Gemma 4 E4B: 15 measured, 6 not counted</text>
+<rect x="0" y="374" width="612.286" height="24" rx="4" fill="#2a78d6"/>
+<rect x="614.286" y="374" width="243.714" height="24" rx="4" fill="#eb6834"/>
+</svg>
